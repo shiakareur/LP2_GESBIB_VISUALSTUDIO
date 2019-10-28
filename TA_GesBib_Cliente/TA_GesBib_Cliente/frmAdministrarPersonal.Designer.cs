@@ -54,11 +54,11 @@
             this.label5 = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.gbDatosGenerales.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -87,62 +87,62 @@
             // 
             // textBox1
             // 
-            this.textBox1.Font = new System.Drawing.Font("Bahnschrift", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.Font = new System.Drawing.Font("Bahnschrift Light", 12F);
             this.textBox1.Location = new System.Drawing.Point(203, 118);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(425, 30);
+            this.textBox1.Size = new System.Drawing.Size(425, 27);
             this.textBox1.TabIndex = 35;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Bahnschrift", 15.75F, System.Drawing.FontStyle.Bold);
+            this.label1.Font = new System.Drawing.Font("Bahnschrift", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.AntiqueWhite;
             this.label1.Location = new System.Drawing.Point(52, 120);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(103, 25);
+            this.label1.Size = new System.Drawing.Size(93, 23);
             this.label1.TabIndex = 34;
             this.label1.Text = "Apellidos:";
             // 
             // dtpFechaNac
             // 
-            this.dtpFechaNac.Font = new System.Drawing.Font("Bahnschrift", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpFechaNac.Font = new System.Drawing.Font("Bahnschrift Light", 12F);
             this.dtpFechaNac.Location = new System.Drawing.Point(203, 164);
             this.dtpFechaNac.Name = "dtpFechaNac";
-            this.dtpFechaNac.Size = new System.Drawing.Size(425, 30);
+            this.dtpFechaNac.Size = new System.Drawing.Size(425, 27);
             this.dtpFechaNac.TabIndex = 22;
             // 
             // lblFechaNac
             // 
             this.lblFechaNac.AutoSize = true;
             this.lblFechaNac.BackColor = System.Drawing.Color.Transparent;
-            this.lblFechaNac.Font = new System.Drawing.Font("Bahnschrift", 15.75F, System.Drawing.FontStyle.Bold);
+            this.lblFechaNac.Font = new System.Drawing.Font("Bahnschrift", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblFechaNac.ForeColor = System.Drawing.Color.AntiqueWhite;
             this.lblFechaNac.Location = new System.Drawing.Point(52, 166);
             this.lblFechaNac.Name = "lblFechaNac";
-            this.lblFechaNac.Size = new System.Drawing.Size(113, 25);
+            this.lblFechaNac.Size = new System.Drawing.Size(100, 23);
             this.lblFechaNac.TabIndex = 21;
             this.lblFechaNac.Text = "Fecha Nac:";
             this.lblFechaNac.Click += new System.EventHandler(this.lblFechaNac_Click);
             // 
             // txtNombre
             // 
-            this.txtNombre.Font = new System.Drawing.Font("Bahnschrift", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNombre.Font = new System.Drawing.Font("Bahnschrift Light", 12F);
             this.txtNombre.Location = new System.Drawing.Point(203, 72);
             this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(425, 30);
+            this.txtNombre.Size = new System.Drawing.Size(425, 27);
             this.txtNombre.TabIndex = 20;
             // 
             // lblNombre
             // 
             this.lblNombre.AutoSize = true;
             this.lblNombre.BackColor = System.Drawing.Color.Transparent;
-            this.lblNombre.Font = new System.Drawing.Font("Bahnschrift", 15.75F, System.Drawing.FontStyle.Bold);
+            this.lblNombre.Font = new System.Drawing.Font("Bahnschrift", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNombre.ForeColor = System.Drawing.Color.AntiqueWhite;
             this.lblNombre.Location = new System.Drawing.Point(52, 74);
             this.lblNombre.Name = "lblNombre";
-            this.lblNombre.Size = new System.Drawing.Size(103, 25);
+            this.lblNombre.Size = new System.Drawing.Size(91, 23);
             this.lblNombre.TabIndex = 19;
             this.lblNombre.Text = "Nombres:";
             // 
@@ -150,31 +150,31 @@
             // 
             this.lblGenero.AutoSize = true;
             this.lblGenero.BackColor = System.Drawing.Color.Transparent;
-            this.lblGenero.Font = new System.Drawing.Font("Bahnschrift", 15.75F, System.Drawing.FontStyle.Bold);
+            this.lblGenero.Font = new System.Drawing.Font("Bahnschrift", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblGenero.ForeColor = System.Drawing.Color.AntiqueWhite;
             this.lblGenero.Location = new System.Drawing.Point(52, 207);
             this.lblGenero.Name = "lblGenero";
-            this.lblGenero.Size = new System.Drawing.Size(85, 25);
+            this.lblGenero.Size = new System.Drawing.Size(75, 23);
             this.lblGenero.TabIndex = 23;
             this.lblGenero.Text = "Género:";
             // 
             // txtDNI
             // 
-            this.txtDNI.Font = new System.Drawing.Font("Bahnschrift", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDNI.Font = new System.Drawing.Font("Bahnschrift Light", 12F);
             this.txtDNI.Location = new System.Drawing.Point(203, 28);
             this.txtDNI.Name = "txtDNI";
-            this.txtDNI.Size = new System.Drawing.Size(251, 30);
+            this.txtDNI.Size = new System.Drawing.Size(251, 27);
             this.txtDNI.TabIndex = 18;
             // 
             // lblDNI
             // 
             this.lblDNI.AutoSize = true;
             this.lblDNI.BackColor = System.Drawing.Color.Transparent;
-            this.lblDNI.Font = new System.Drawing.Font("Bahnschrift", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDNI.Font = new System.Drawing.Font("Bahnschrift", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDNI.ForeColor = System.Drawing.Color.AntiqueWhite;
             this.lblDNI.Location = new System.Drawing.Point(53, 31);
             this.lblDNI.Name = "lblDNI";
-            this.lblDNI.Size = new System.Drawing.Size(52, 25);
+            this.lblDNI.Size = new System.Drawing.Size(44, 23);
             this.lblDNI.TabIndex = 17;
             this.lblDNI.Text = "DNI:";
             // 
@@ -182,11 +182,11 @@
             // 
             this.rbMasculino.AutoSize = true;
             this.rbMasculino.BackColor = System.Drawing.Color.Transparent;
-            this.rbMasculino.Font = new System.Drawing.Font("Bahnschrift", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbMasculino.Font = new System.Drawing.Font("Bahnschrift Light", 12F);
             this.rbMasculino.ForeColor = System.Drawing.SystemColors.Window;
             this.rbMasculino.Location = new System.Drawing.Point(203, 205);
             this.rbMasculino.Name = "rbMasculino";
-            this.rbMasculino.Size = new System.Drawing.Size(115, 27);
+            this.rbMasculino.Size = new System.Drawing.Size(100, 23);
             this.rbMasculino.TabIndex = 24;
             this.rbMasculino.TabStop = true;
             this.rbMasculino.Text = "Masculino";
@@ -196,11 +196,11 @@
             // 
             this.rbFemenino.AutoSize = true;
             this.rbFemenino.BackColor = System.Drawing.Color.Transparent;
-            this.rbFemenino.Font = new System.Drawing.Font("Bahnschrift", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbFemenino.Font = new System.Drawing.Font("Bahnschrift Light", 12F);
             this.rbFemenino.ForeColor = System.Drawing.SystemColors.Window;
             this.rbFemenino.Location = new System.Drawing.Point(353, 205);
             this.rbFemenino.Name = "rbFemenino";
-            this.rbFemenino.Size = new System.Drawing.Size(112, 27);
+            this.rbFemenino.Size = new System.Drawing.Size(99, 23);
             this.rbFemenino.TabIndex = 25;
             this.rbFemenino.TabStop = true;
             this.rbFemenino.Text = "Femenino";
@@ -218,11 +218,11 @@
             // 
             this.lblCorreo.AutoSize = true;
             this.lblCorreo.BackColor = System.Drawing.Color.Transparent;
-            this.lblCorreo.Font = new System.Drawing.Font("Bahnschrift", 15.75F, System.Drawing.FontStyle.Bold);
+            this.lblCorreo.Font = new System.Drawing.Font("Bahnschrift", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCorreo.ForeColor = System.Drawing.Color.AntiqueWhite;
             this.lblCorreo.Location = new System.Drawing.Point(52, 73);
             this.lblCorreo.Name = "lblCorreo";
-            this.lblCorreo.Size = new System.Drawing.Size(81, 25);
+            this.lblCorreo.Size = new System.Drawing.Size(72, 23);
             this.lblCorreo.TabIndex = 32;
             this.lblCorreo.Text = "Correo:";
             // 
@@ -238,11 +238,11 @@
             // 
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Bahnschrift", 15.75F, System.Drawing.FontStyle.Bold);
+            this.label2.Font = new System.Drawing.Font("Bahnschrift", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.AntiqueWhite;
             this.label2.Location = new System.Drawing.Point(52, 116);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(69, 25);
+            this.label2.Size = new System.Drawing.Size(62, 23);
             this.label2.TabIndex = 36;
             this.label2.Text = "Clave:";
             // 
@@ -274,11 +274,11 @@
             // 
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Font = new System.Drawing.Font("Bahnschrift", 15.75F, System.Drawing.FontStyle.Bold);
+            this.label3.Font = new System.Drawing.Font("Bahnschrift", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.AntiqueWhite;
             this.label3.Location = new System.Drawing.Point(52, 33);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(106, 25);
+            this.label3.Size = new System.Drawing.Size(94, 23);
             this.label3.TabIndex = 40;
             this.label3.Text = "Fecha Ing:";
             this.label3.Click += new System.EventHandler(this.label3_Click);
@@ -312,11 +312,11 @@
             // 
             this.label6.AutoSize = true;
             this.label6.BackColor = System.Drawing.Color.Transparent;
-            this.label6.Font = new System.Drawing.Font("Bahnschrift", 15.75F, System.Drawing.FontStyle.Bold);
+            this.label6.Font = new System.Drawing.Font("Bahnschrift", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.AntiqueWhite;
             this.label6.Location = new System.Drawing.Point(52, 28);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(54, 25);
+            this.label6.Size = new System.Drawing.Size(48, 23);
             this.label6.TabIndex = 47;
             this.label6.Text = "Tipo:";
             // 
@@ -333,11 +333,11 @@
             // 
             this.label5.AutoSize = true;
             this.label5.BackColor = System.Drawing.Color.Transparent;
-            this.label5.Font = new System.Drawing.Font("Bahnschrift", 15.75F, System.Drawing.FontStyle.Bold);
+            this.label5.Font = new System.Drawing.Font("Bahnschrift", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.AntiqueWhite;
             this.label5.Location = new System.Drawing.Point(52, 104);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(134, 25);
+            this.label5.Size = new System.Drawing.Size(120, 23);
             this.label5.TabIndex = 45;
             this.label5.Text = "Día asignado:";
             // 
@@ -354,74 +354,96 @@
             // 
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.Color.Transparent;
-            this.label4.Font = new System.Drawing.Font("Bahnschrift", 15.75F, System.Drawing.FontStyle.Bold);
+            this.label4.Font = new System.Drawing.Font("Bahnschrift", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.AntiqueWhite;
             this.label4.Location = new System.Drawing.Point(52, 67);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(139, 25);
+            this.label4.Size = new System.Drawing.Size(124, 23);
             this.label4.TabIndex = 42;
             this.label4.Text = "Bib. asignada:";
             // 
-            // button1
+            // button5
             // 
-            this.button1.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(146, 12);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(106, 33);
-            this.button1.TabIndex = 40;
-            this.button1.Text = "NUEVO";
-            this.button1.UseVisualStyleBackColor = true;
+            this.button5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(184)))), ((int)(((byte)(163)))));
+            this.button5.FlatAppearance.BorderSize = 0;
+            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button5.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Bold);
+            this.button5.Image = global::TA_GesBib_Cliente.Properties.Resources.icons8_cancelar_2_30;
+            this.button5.Location = new System.Drawing.Point(679, 6);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(133, 40);
+            this.button5.TabIndex = 44;
+            this.button5.Text = "CANCELAR";
+            this.button5.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button5.UseVisualStyleBackColor = false;
+            // 
+            // button4
+            // 
+            this.button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(184)))), ((int)(((byte)(163)))));
+            this.button4.FlatAppearance.BorderSize = 0;
+            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button4.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Bold);
+            this.button4.Image = global::TA_GesBib_Cliente.Properties.Resources.icono_buscar;
+            this.button4.Location = new System.Drawing.Point(552, 6);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(112, 40);
+            this.button4.TabIndex = 43;
+            this.button4.Text = "BUSCAR";
+            this.button4.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button4.UseVisualStyleBackColor = false;
+            // 
+            // button3
+            // 
+            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(184)))), ((int)(((byte)(163)))));
+            this.button3.FlatAppearance.BorderSize = 0;
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Bold);
+            this.button3.Image = global::TA_GesBib_Cliente.Properties.Resources.icono_modificar;
+            this.button3.Location = new System.Drawing.Point(404, 6);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(133, 40);
+            this.button3.TabIndex = 42;
+            this.button3.Text = "MODIFICAR";
+            this.button3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button3.UseVisualStyleBackColor = false;
             // 
             // button2
             // 
-            this.button2.BackColor = System.Drawing.Color.Gainsboro;
+            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(184)))), ((int)(((byte)(163)))));
             this.button2.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.button2.FlatAppearance.BorderSize = 0;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Bold);
-            this.button2.Location = new System.Drawing.Point(285, 12);
+            this.button2.Image = global::TA_GesBib_Cliente.Properties.Resources.icono_guardar;
+            this.button2.Location = new System.Drawing.Point(268, 6);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(106, 33);
+            this.button2.Size = new System.Drawing.Size(119, 40);
             this.button2.TabIndex = 41;
             this.button2.Text = "GUARDAR";
+            this.button2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button2.UseVisualStyleBackColor = false;
             // 
-            // button3
+            // button1
             // 
-            this.button3.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Bold);
-            this.button3.Location = new System.Drawing.Point(425, 12);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(106, 33);
-            this.button3.TabIndex = 42;
-            this.button3.Text = "MODIFICAR";
-            this.button3.UseVisualStyleBackColor = true;
-            // 
-            // button4
-            // 
-            this.button4.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Bold);
-            this.button4.Location = new System.Drawing.Point(558, 13);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(106, 33);
-            this.button4.TabIndex = 43;
-            this.button4.Text = "BUSCAR";
-            this.button4.UseVisualStyleBackColor = true;
-            // 
-            // button5
-            // 
-            this.button5.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Bold);
-            this.button5.Location = new System.Drawing.Point(694, 13);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(106, 33);
-            this.button5.TabIndex = 44;
-            this.button5.Text = "CANCELAR";
-            this.button5.UseVisualStyleBackColor = true;
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(184)))), ((int)(((byte)(163)))));
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Image = global::TA_GesBib_Cliente.Properties.Resources.icono_crear_nuevo;
+            this.button1.Location = new System.Drawing.Point(146, 6);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(106, 40);
+            this.button1.TabIndex = 40;
+            this.button1.Text = "NUEVO";
+            this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button1.UseVisualStyleBackColor = false;
             // 
             // frmAdministrarPersonal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.CadetBlue;
-            this.ClientSize = new System.Drawing.Size(930, 650);
+            this.ClientSize = new System.Drawing.Size(930, 657);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);

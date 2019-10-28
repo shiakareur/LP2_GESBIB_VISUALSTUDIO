@@ -28,8 +28,9 @@ namespace TA_GesBib_Cliente
         }
 
         private void frmAdministrarPersonal_Load(object sender, EventArgs e)
-        {
-
+        {   
+           
+            //this.WindowState = FormWindowState.Maximized;
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)

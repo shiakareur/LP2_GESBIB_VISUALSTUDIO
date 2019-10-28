@@ -161,5 +161,20 @@
   <ItemGroup>
     <None Include="Resources\icono-configuracion_pequeño.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icono-crear-nuevo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icono-guardar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icono-modificar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icono-buscar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-cancelar-2-30.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -113,6 +113,16 @@ namespace TA_GesBib_Cliente.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icono_buscar {
+            get {
+                object obj = ResourceManager.GetObject("icono-buscar", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icono_cerrar_sesion {
             get {
                 object obj = ResourceManager.GetObject("icono-cerrar_sesion", resourceCulture);
@@ -153,6 +163,36 @@ namespace TA_GesBib_Cliente.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icono_crear_nuevo {
+            get {
+                object obj = ResourceManager.GetObject("icono-crear-nuevo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icono_guardar {
+            get {
+                object obj = ResourceManager.GetObject("icono-guardar", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icono_modificar {
+            get {
+                object obj = ResourceManager.GetObject("icono-modificar", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icono_personal {
             get {
                 object obj = ResourceManager.GetObject("icono-personal", resourceCulture);
@@ -176,6 +216,16 @@ namespace TA_GesBib_Cliente.Properties {
         internal static System.Drawing.Bitmap icono_usuario {
             get {
                 object obj = ResourceManager.GetObject("icono-usuario", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_cancelar_2_30 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-cancelar-2-30", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
