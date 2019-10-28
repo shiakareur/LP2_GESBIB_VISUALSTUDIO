@@ -1,0 +1,31 @@
+dimensiones botones 210 x 40
+---> padding left 15
+
+modificar es iwal que crear en gestor
+
+
+
+Pendientes ---> iamgen background
+
+
+
+Se creo nueva clase palce holder <--
+
+
+
+
+ public Panel PanelAviso { get => panelAviso; set => panelAviso = value; }
+        public Label LblBienvenido { get => lblBienvenido; set => lblBienvenido = value; }
+
+
+
+
+
+
+_____________________________videos
+
+https://www.youtube.com/watch?v=p-QrdRD_H_o <-- MENU LATERAL BASE DE GUIA
+
+
+https://www.youtube.com/watch?v=BDoAREFjlCw&t=457s color al seleccioanr
+https://www.youtube.com/watch?v=NiQRq_u3vQU cositas
