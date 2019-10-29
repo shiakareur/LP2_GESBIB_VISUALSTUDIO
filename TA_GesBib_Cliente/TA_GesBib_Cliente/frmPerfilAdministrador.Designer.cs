@@ -32,14 +32,14 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.btnAdministrarPersonal = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label6 = new System.Windows.Forms.Label();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.lblTipoPerfil = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lblNombreUsuario = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
-            this.btnAdministrarPersonal = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -47,7 +47,7 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(173)))), ((int)(((byte)(131)))));
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(175)))), ((int)(((byte)(169)))));
             this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel1.Controls.Add(this.button1);
@@ -72,7 +72,7 @@
             // button1
             // 
             this.button1.AutoSize = true;
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(184)))), ((int)(((byte)(163)))));
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(175)))), ((int)(((byte)(169)))));
             this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button1.FlatAppearance.BorderSize = 0;
@@ -90,7 +90,7 @@
             // 
             // button3
             // 
-            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(184)))), ((int)(((byte)(163)))));
+            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(175)))), ((int)(((byte)(169)))));
             this.button3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button3.FlatAppearance.BorderSize = 0;
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -104,6 +104,43 @@
             this.button3.Text = "CONFIGURACIÓN";
             this.button3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button3.UseVisualStyleBackColor = false;
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(175)))), ((int)(((byte)(169)))));
+            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button2.FlatAppearance.BorderSize = 0;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.Image = global::TA_GesBib_Cliente.Properties.Resources.icono_biblioteca;
+            this.button2.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.button2.Location = new System.Drawing.Point(25, 235);
+            this.button2.Margin = new System.Windows.Forms.Padding(4);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(200, 60);
+            this.button2.TabIndex = 57;
+            this.button2.Text = "ADMINISTRAR BIBLIOTECAS";
+            this.button2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button2.UseVisualStyleBackColor = false;
+            // 
+            // btnAdministrarPersonal
+            // 
+            this.btnAdministrarPersonal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(175)))), ((int)(((byte)(169)))));
+            this.btnAdministrarPersonal.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAdministrarPersonal.FlatAppearance.BorderSize = 0;
+            this.btnAdministrarPersonal.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAdministrarPersonal.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAdministrarPersonal.Image = global::TA_GesBib_Cliente.Properties.Resources.icono_personal2;
+            this.btnAdministrarPersonal.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnAdministrarPersonal.Location = new System.Drawing.Point(25, 176);
+            this.btnAdministrarPersonal.Margin = new System.Windows.Forms.Padding(4);
+            this.btnAdministrarPersonal.Name = "btnAdministrarPersonal";
+            this.btnAdministrarPersonal.Size = new System.Drawing.Size(200, 60);
+            this.btnAdministrarPersonal.TabIndex = 41;
+            this.btnAdministrarPersonal.Text = "ADMINISTRAR\r\nPERSONAL";
+            this.btnAdministrarPersonal.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnAdministrarPersonal.UseVisualStyleBackColor = false;
+            this.btnAdministrarPersonal.Click += new System.EventHandler(this.btnAdministrarPersonal_Click_1);
             // 
             // panel2
             // 
@@ -141,7 +178,7 @@
             // 
             this.lblTipoPerfil.AutoSize = true;
             this.lblTipoPerfil.Font = new System.Drawing.Font("Bahnschrift", 15.75F, System.Drawing.FontStyle.Bold);
-            this.lblTipoPerfil.ForeColor = System.Drawing.Color.AntiqueWhite;
+            this.lblTipoPerfil.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.lblTipoPerfil.Location = new System.Drawing.Point(92, 47);
             this.lblTipoPerfil.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblTipoPerfil.Name = "lblTipoPerfil";
@@ -165,7 +202,7 @@
             // 
             this.lblNombreUsuario.AutoSize = true;
             this.lblNombreUsuario.Font = new System.Drawing.Font("Bahnschrift", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNombreUsuario.ForeColor = System.Drawing.Color.AntiqueWhite;
+            this.lblNombreUsuario.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.lblNombreUsuario.Location = new System.Drawing.Point(93, 72);
             this.lblNombreUsuario.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblNombreUsuario.Name = "lblNombreUsuario";
@@ -173,43 +210,6 @@
             this.lblNombreUsuario.TabIndex = 0;
             this.lblNombreUsuario.Text = "Administrador";
             this.lblNombreUsuario.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // button2
-            // 
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(184)))), ((int)(((byte)(163)))));
-            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Image = global::TA_GesBib_Cliente.Properties.Resources.icono_biblioteca;
-            this.button2.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button2.Location = new System.Drawing.Point(25, 235);
-            this.button2.Margin = new System.Windows.Forms.Padding(4);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(200, 60);
-            this.button2.TabIndex = 57;
-            this.button2.Text = "ADMINISTRAR BIBLIOTECAS";
-            this.button2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button2.UseVisualStyleBackColor = false;
-            // 
-            // btnAdministrarPersonal
-            // 
-            this.btnAdministrarPersonal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(184)))), ((int)(((byte)(163)))));
-            this.btnAdministrarPersonal.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnAdministrarPersonal.FlatAppearance.BorderSize = 0;
-            this.btnAdministrarPersonal.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAdministrarPersonal.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAdministrarPersonal.Image = global::TA_GesBib_Cliente.Properties.Resources.icono_personal2;
-            this.btnAdministrarPersonal.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnAdministrarPersonal.Location = new System.Drawing.Point(25, 176);
-            this.btnAdministrarPersonal.Margin = new System.Windows.Forms.Padding(4);
-            this.btnAdministrarPersonal.Name = "btnAdministrarPersonal";
-            this.btnAdministrarPersonal.Size = new System.Drawing.Size(200, 60);
-            this.btnAdministrarPersonal.TabIndex = 41;
-            this.btnAdministrarPersonal.Text = "ADMINISTRAR\r\nPERSONAL";
-            this.btnAdministrarPersonal.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnAdministrarPersonal.UseVisualStyleBackColor = false;
-            this.btnAdministrarPersonal.Click += new System.EventHandler(this.btnAdministrarPersonal_Click_1);
             // 
             // frmPerfilAdministrador
             // 
