@@ -36,11 +36,12 @@ namespace TA_GesBib_Cliente
         //boton click cerrar
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            this.Dispose();
-                       
+            this.Visible = false;           
 
             this.var_perfilBibliotecario.LblBienvenido.Visible = true;
             this.var_perfilBibliotecario.PanelAviso.Visible = true;
+
+            
         }
 
         private void btnRegistrar_HE_Click(object sender, EventArgs e)
@@ -60,7 +61,8 @@ namespace TA_GesBib_Cliente
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
-            this.Dispose();
+            this.Visible = false;
+            //this.Dispose();
 
 
             this.var_perfilBibliotecario.LblBienvenido.Visible = true;

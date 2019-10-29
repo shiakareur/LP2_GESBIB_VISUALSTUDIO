@@ -58,10 +58,23 @@ namespace TA_GesBib_Cliente
 
         private void btnRegistrar_Click(object sender, EventArgs e)
         {
+            // aca se tiene q llamar a los estados para que pongan todos en blanco
+
+            //Componentes.Nuevo();
+
+
             if(var_frmRegistrar_Bibliotecario == null)
             {              
                 var_frmRegistrar_Bibliotecario = new frmRegistrar_Bibliotecario(this);
                 var_frmRegistrar_Bibliotecario.MdiParent = this;
+
+                //...add
+                var_frmRegistrar_Bibliotecario.StartPosition = FormStartPosition.Manual;
+                var_frmRegistrar_Bibliotecario.Left = 0;
+                var_frmRegistrar_Bibliotecario.Top =  0;
+                //...
+
+
                 var_frmRegistrar_Bibliotecario.Show();
             }
             else
@@ -87,6 +100,11 @@ namespace TA_GesBib_Cliente
             {             
                 var_frmSolicitar_Bibliotecario = new frmSolicitar_Bibliotecario(this);
                 var_frmSolicitar_Bibliotecario.MdiParent = this;
+                //...add
+                var_frmSolicitar_Bibliotecario.StartPosition = FormStartPosition.Manual;
+                var_frmSolicitar_Bibliotecario.Left = 0;
+                var_frmSolicitar_Bibliotecario.Top = 0;
+                //
                 var_frmSolicitar_Bibliotecario.Show();
             }
             else
