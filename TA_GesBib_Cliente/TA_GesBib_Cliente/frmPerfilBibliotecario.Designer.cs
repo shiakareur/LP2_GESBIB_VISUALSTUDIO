@@ -32,9 +32,9 @@
             this.label3 = new System.Windows.Forms.Label();
             this.lblTipoPerfil = new System.Windows.Forms.Label();
             this.lblNombreUsuario = new System.Windows.Forms.Label();
-            this.btnInasistencias = new System.Windows.Forms.Button();
-            this.btnHorasExtras = new System.Windows.Forms.Button();
-            this.btnDistribucionPersonal = new System.Windows.Forms.Button();
+            this.btnSolicitar = new System.Windows.Forms.Button();
+            this.btnRegistrar = new System.Windows.Forms.Button();
+            this.btnDistribuirPersonal = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.btnCerrarSesion = new System.Windows.Forms.Button();
             this.btnConfiguracion = new System.Windows.Forms.Button();
@@ -71,11 +71,11 @@
             // lblTipoPerfil
             // 
             this.lblTipoPerfil.AutoSize = true;
-            this.lblTipoPerfil.Font = new System.Drawing.Font("Yu Gothic UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTipoPerfil.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTipoPerfil.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(184)))), ((int)(((byte)(232)))));
             this.lblTipoPerfil.Location = new System.Drawing.Point(109, 29);
             this.lblTipoPerfil.Name = "lblTipoPerfil";
-            this.lblTipoPerfil.Size = new System.Drawing.Size(125, 21);
+            this.lblTipoPerfil.Size = new System.Drawing.Size(146, 20);
             this.lblTipoPerfil.TabIndex = 10;
             this.lblTipoPerfil.Text = "BIBLIOTECARIO";
             this.lblTipoPerfil.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -83,69 +83,70 @@
             // lblNombreUsuario
             // 
             this.lblNombreUsuario.AutoSize = true;
-            this.lblNombreUsuario.Font = new System.Drawing.Font("Yu Gothic UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNombreUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNombreUsuario.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(184)))), ((int)(((byte)(232)))));
             this.lblNombreUsuario.Location = new System.Drawing.Point(109, 60);
             this.lblNombreUsuario.Name = "lblNombreUsuario";
-            this.lblNombreUsuario.Size = new System.Drawing.Size(42, 21);
+            this.lblNombreUsuario.Size = new System.Drawing.Size(46, 20);
             this.lblNombreUsuario.TabIndex = 0;
             this.lblNombreUsuario.Text = "BOB";
             this.lblNombreUsuario.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // btnInasistencias
+            // btnSolicitar
             // 
-            this.btnInasistencias.BackColor = System.Drawing.Color.SteelBlue;
-            this.btnInasistencias.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.btnInasistencias.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnInasistencias.FlatAppearance.BorderSize = 0;
-            this.btnInasistencias.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnInasistencias.Font = new System.Drawing.Font("Yu Gothic UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnInasistencias.ForeColor = System.Drawing.Color.White;
-            this.btnInasistencias.Location = new System.Drawing.Point(0, 80);
-            this.btnInasistencias.Name = "btnInasistencias";
-            this.btnInasistencias.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
-            this.btnInasistencias.Size = new System.Drawing.Size(210, 40);
-            this.btnInasistencias.TabIndex = 10;
-            this.btnInasistencias.Text = "Inasistencias";
-            this.btnInasistencias.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnInasistencias.UseVisualStyleBackColor = false;
+            this.btnSolicitar.BackColor = System.Drawing.Color.SteelBlue;
+            this.btnSolicitar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnSolicitar.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnSolicitar.FlatAppearance.BorderSize = 0;
+            this.btnSolicitar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSolicitar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSolicitar.ForeColor = System.Drawing.Color.White;
+            this.btnSolicitar.Location = new System.Drawing.Point(0, 80);
+            this.btnSolicitar.Name = "btnSolicitar";
+            this.btnSolicitar.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
+            this.btnSolicitar.Size = new System.Drawing.Size(210, 40);
+            this.btnSolicitar.TabIndex = 10;
+            this.btnSolicitar.Text = "Solicitar";
+            this.btnSolicitar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSolicitar.UseVisualStyleBackColor = false;
+            this.btnSolicitar.Click += new System.EventHandler(this.btnSolicitar_Click);
             // 
-            // btnHorasExtras
+            // btnRegistrar
             // 
-            this.btnHorasExtras.BackColor = System.Drawing.Color.SteelBlue;
-            this.btnHorasExtras.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.btnHorasExtras.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnHorasExtras.FlatAppearance.BorderSize = 0;
-            this.btnHorasExtras.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnHorasExtras.Font = new System.Drawing.Font("Yu Gothic UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnHorasExtras.ForeColor = System.Drawing.Color.White;
-            this.btnHorasExtras.Location = new System.Drawing.Point(0, 40);
-            this.btnHorasExtras.Name = "btnHorasExtras";
-            this.btnHorasExtras.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
-            this.btnHorasExtras.Size = new System.Drawing.Size(210, 40);
-            this.btnHorasExtras.TabIndex = 10;
-            this.btnHorasExtras.Text = "Horas Extras";
-            this.btnHorasExtras.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnHorasExtras.UseVisualStyleBackColor = false;
+            this.btnRegistrar.BackColor = System.Drawing.Color.SteelBlue;
+            this.btnRegistrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnRegistrar.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnRegistrar.FlatAppearance.BorderSize = 0;
+            this.btnRegistrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRegistrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRegistrar.ForeColor = System.Drawing.Color.White;
+            this.btnRegistrar.Location = new System.Drawing.Point(0, 40);
+            this.btnRegistrar.Name = "btnRegistrar";
+            this.btnRegistrar.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
+            this.btnRegistrar.Size = new System.Drawing.Size(210, 40);
+            this.btnRegistrar.TabIndex = 10;
+            this.btnRegistrar.Text = "Registrar ";
+            this.btnRegistrar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnRegistrar.UseVisualStyleBackColor = false;
+            this.btnRegistrar.Click += new System.EventHandler(this.btnRegistrar_Click);
             // 
-            // btnDistribucionPersonal
+            // btnDistribuirPersonal
             // 
-            this.btnDistribucionPersonal.BackColor = System.Drawing.Color.SteelBlue;
-            this.btnDistribucionPersonal.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.btnDistribucionPersonal.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnDistribucionPersonal.FlatAppearance.BorderSize = 0;
-            this.btnDistribucionPersonal.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDistribucionPersonal.Font = new System.Drawing.Font("Yu Gothic UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDistribucionPersonal.ForeColor = System.Drawing.Color.White;
-            this.btnDistribucionPersonal.Location = new System.Drawing.Point(0, 0);
-            this.btnDistribucionPersonal.Name = "btnDistribucionPersonal";
-            this.btnDistribucionPersonal.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
-            this.btnDistribucionPersonal.Size = new System.Drawing.Size(210, 40);
-            this.btnDistribucionPersonal.TabIndex = 10;
-            this.btnDistribucionPersonal.Text = "Distribución Personal";
-            this.btnDistribucionPersonal.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDistribucionPersonal.UseVisualStyleBackColor = false;
-            this.btnDistribucionPersonal.Click += new System.EventHandler(this.btnDistribucionPersonal_Click);
+            this.btnDistribuirPersonal.BackColor = System.Drawing.Color.SteelBlue;
+            this.btnDistribuirPersonal.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnDistribuirPersonal.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnDistribuirPersonal.FlatAppearance.BorderSize = 0;
+            this.btnDistribuirPersonal.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDistribuirPersonal.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDistribuirPersonal.ForeColor = System.Drawing.Color.White;
+            this.btnDistribuirPersonal.Location = new System.Drawing.Point(0, 0);
+            this.btnDistribuirPersonal.Name = "btnDistribuirPersonal";
+            this.btnDistribuirPersonal.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
+            this.btnDistribuirPersonal.Size = new System.Drawing.Size(210, 40);
+            this.btnDistribuirPersonal.TabIndex = 10;
+            this.btnDistribuirPersonal.Text = "Distribuir Personal";
+            this.btnDistribuirPersonal.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnDistribuirPersonal.UseVisualStyleBackColor = false;
             // 
             // label2
             // 
@@ -165,7 +166,7 @@
             this.btnCerrarSesion.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnCerrarSesion.FlatAppearance.BorderSize = 0;
             this.btnCerrarSesion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCerrarSesion.Font = new System.Drawing.Font("Yu Gothic UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCerrarSesion.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCerrarSesion.ForeColor = System.Drawing.Color.White;
             this.btnCerrarSesion.Location = new System.Drawing.Point(0, 40);
             this.btnCerrarSesion.Name = "btnCerrarSesion";
@@ -175,6 +176,7 @@
             this.btnCerrarSesion.Text = "Cerrar Sesion";
             this.btnCerrarSesion.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnCerrarSesion.UseVisualStyleBackColor = false;
+            this.btnCerrarSesion.Click += new System.EventHandler(this.btnCerrarSesion_Click);
             // 
             // btnConfiguracion
             // 
@@ -183,7 +185,7 @@
             this.btnConfiguracion.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnConfiguracion.FlatAppearance.BorderSize = 0;
             this.btnConfiguracion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnConfiguracion.Font = new System.Drawing.Font("Yu Gothic UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnConfiguracion.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnConfiguracion.ForeColor = System.Drawing.Color.White;
             this.btnConfiguracion.Location = new System.Drawing.Point(0, 0);
             this.btnConfiguracion.Name = "btnConfiguracion";
@@ -238,18 +240,18 @@
             // 
             this.lblBienvenido.AutoSize = true;
             this.lblBienvenido.BackColor = System.Drawing.SystemColors.Window;
-            this.lblBienvenido.Font = new System.Drawing.Font("Yu Gothic UI", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBienvenido.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblBienvenido.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.lblBienvenido.Location = new System.Drawing.Point(383, 64);
+            this.lblBienvenido.Location = new System.Drawing.Point(368, 65);
             this.lblBienvenido.Name = "lblBienvenido";
-            this.lblBienvenido.Size = new System.Drawing.Size(440, 40);
+            this.lblBienvenido.Size = new System.Drawing.Size(449, 33);
             this.lblBienvenido.TabIndex = 56;
             this.lblBienvenido.Text = "Bienvenido, te informamos que ...";
             this.lblBienvenido.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.SteelBlue;
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(175)))), ((int)(((byte)(169)))));
             this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Controls.Add(this.panel4);
@@ -264,7 +266,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(250, 661);
+            this.panel1.Size = new System.Drawing.Size(250, 650);
             this.panel1.TabIndex = 55;
             this.panel1.TabStop = true;
             // 
@@ -287,9 +289,9 @@
             // panel3
             // 
             this.panel3.Controls.Add(this.btnVisualizarHorarios);
-            this.panel3.Controls.Add(this.btnInasistencias);
-            this.panel3.Controls.Add(this.btnHorasExtras);
-            this.panel3.Controls.Add(this.btnDistribucionPersonal);
+            this.panel3.Controls.Add(this.btnSolicitar);
+            this.panel3.Controls.Add(this.btnRegistrar);
+            this.panel3.Controls.Add(this.btnDistribuirPersonal);
             this.panel3.Location = new System.Drawing.Point(21, 117);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(210, 174);
@@ -302,7 +304,7 @@
             this.btnVisualizarHorarios.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnVisualizarHorarios.FlatAppearance.BorderSize = 0;
             this.btnVisualizarHorarios.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnVisualizarHorarios.Font = new System.Drawing.Font("Yu Gothic UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnVisualizarHorarios.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnVisualizarHorarios.ForeColor = System.Drawing.Color.White;
             this.btnVisualizarHorarios.Location = new System.Drawing.Point(0, 120);
             this.btnVisualizarHorarios.Name = "btnVisualizarHorarios";
@@ -326,12 +328,12 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::TA_GesBib_Cliente.Properties.Resources.biblioCentral_v1;
+            this.BackgroundImage = global::TA_GesBib_Cliente.Properties.Resources.biblio_ari_borroso;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1184, 661);
-            this.Controls.Add(this.panelAviso);
-            this.Controls.Add(this.lblBienvenido);
+            this.ClientSize = new System.Drawing.Size(1113, 650);
             this.Controls.Add(this.panel1);
+            this.Controls.Add(this.lblBienvenido);
+            this.Controls.Add(this.panelAviso);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -340,7 +342,6 @@
             this.Name = "frmPerfilBibliotecario";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Bibliotecario";
-            this.Load += new System.EventHandler(this.frmPerfilBibliotecario_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panelAviso.ResumeLayout(false);
             this.panelAviso.PerformLayout();
@@ -359,9 +360,9 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label lblTipoPerfil;
         private System.Windows.Forms.Label lblNombreUsuario;
-        private System.Windows.Forms.Button btnInasistencias;
-        private System.Windows.Forms.Button btnHorasExtras;
-        private System.Windows.Forms.Button btnDistribucionPersonal;
+        private System.Windows.Forms.Button btnSolicitar;
+        private System.Windows.Forms.Button btnRegistrar;
+        private System.Windows.Forms.Button btnDistribuirPersonal;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btnCerrarSesion;
         private System.Windows.Forms.Button btnConfiguracion;

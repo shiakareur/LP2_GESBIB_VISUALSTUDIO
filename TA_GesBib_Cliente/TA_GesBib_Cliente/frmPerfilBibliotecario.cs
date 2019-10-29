@@ -21,27 +21,89 @@ namespace TA_GesBib_Cliente
     //}else{
     //    form.Visible = true; //es xq en algun momento lo he puesto false
     //}
-    
-        
-
-
-
-
+      
+            
     public partial class frmPerfilBibliotecario : Form
     {
+        //se agrego
+
+        public Panel PanelAviso { get => panelAviso; set => panelAviso = value; }
+        public Label LblBienvenido { get => lblBienvenido; set => lblBienvenido = value; }
+                      
+
+        private frmLogin var_formLogin;
+
+        // aver lo de jin
+
+        private frmRegistrar_Bibliotecario var_frmRegistrar_Bibliotecario;
+        private frmSolicitar_Bibliotecario var_frmSolicitar_Bibliotecario;
+
         public frmPerfilBibliotecario()
         {
             InitializeComponent();
         }
 
-        private void frmPerfilBibliotecario_Load(object sender, EventArgs e)
+        //con paramtero this 
+        public frmPerfilBibliotecario(frmLogin formLogin)
         {
-
+            var_formLogin = formLogin;
+            InitializeComponent();
         }
 
-        private void btnDistribucionPersonal_Click(object sender, EventArgs e)
+        private void btnCerrarSesion_Click(object sender, EventArgs e)
         {
+            this.Dispose();            
+            this.var_formLogin.Visible = true;
+        }
 
+        private void btnRegistrar_Click(object sender, EventArgs e)
+        {
+            if(var_frmRegistrar_Bibliotecario == null)
+            {              
+                var_frmRegistrar_Bibliotecario = new frmRegistrar_Bibliotecario(this);
+                var_frmRegistrar_Bibliotecario.MdiParent = this;
+                var_frmRegistrar_Bibliotecario.Show();
+            }
+            else
+            {
+                var_frmRegistrar_Bibliotecario.Visible = true;
+            }
+
+            //....
+            if(var_frmSolicitar_Bibliotecario != null)
+            {
+                var_frmSolicitar_Bibliotecario.Visible = false;
+                //todos los demas formularios
+
+            }
+
+            lblBienvenido.Visible = false;
+            panelAviso.Visible = false;
+        }
+
+        private void btnSolicitar_Click(object sender, EventArgs e)
+        {
+            if (var_frmSolicitar_Bibliotecario == null)
+            {             
+                var_frmSolicitar_Bibliotecario = new frmSolicitar_Bibliotecario(this);
+                var_frmSolicitar_Bibliotecario.MdiParent = this;
+                var_frmSolicitar_Bibliotecario.Show();
+            }
+            else
+            {
+                var_frmSolicitar_Bibliotecario.Visible = true;
+            }
+
+            //....
+            if (var_frmRegistrar_Bibliotecario != null)
+            {
+                var_frmRegistrar_Bibliotecario.Visible = false;
+                //todos los demas formularios
+
+            }
+                       
+            lblBienvenido.Visible = false;
+            panelAviso.Visible = false;
         }
     }
 }

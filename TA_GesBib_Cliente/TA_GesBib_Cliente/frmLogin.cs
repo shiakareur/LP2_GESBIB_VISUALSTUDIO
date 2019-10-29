@@ -20,7 +20,7 @@ namespace TA_GesBib_Cliente
         private void btnAcceder_Click(object sender, EventArgs e)
         {
             //abrir diferentes usuarios
-            if (placeHolderUsuario.Text=="Administrador")
+            if (placeHolderUsuario.Text=="arianator")
             {
                 frmPerfilAdministrador formPAdmin = new frmPerfilAdministrador();
                 formPAdmin.Visible = true;

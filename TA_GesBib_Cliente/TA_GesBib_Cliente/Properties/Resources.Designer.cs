@@ -63,6 +63,16 @@ namespace TA_GesBib_Cliente.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap biblio_ari_borroso {
+            get {
+                object obj = ResourceManager.GetObject("biblio_ari_borroso", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap biblioCentral_v1 {
             get {
                 object obj = ResourceManager.GetObject("biblioCentral-v1", resourceCulture);
