@@ -123,5 +123,10 @@ namespace TA_GesBib_Cliente
             lblBienvenido.Visible = false;
             panelAviso.Visible = false;
         }
+
+        private void btnDistribuirPersonal_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

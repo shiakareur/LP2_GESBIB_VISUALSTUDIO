@@ -147,6 +147,7 @@
             this.btnDistribuirPersonal.Text = "Distribuir Personal";
             this.btnDistribuirPersonal.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnDistribuirPersonal.UseVisualStyleBackColor = false;
+            this.btnDistribuirPersonal.Click += new System.EventHandler(this.btnDistribuirPersonal_Click);
             // 
             // label2
             // 

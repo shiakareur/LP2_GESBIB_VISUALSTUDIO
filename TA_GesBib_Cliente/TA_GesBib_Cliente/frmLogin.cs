@@ -28,9 +28,9 @@ namespace TA_GesBib_Cliente
             }
             else
             {
-                frmPerfilBibliotecario formBibliotecario = new frmPerfilBibliotecario();
+                frmPerfilBibliotecario formBibliotecario = new frmPerfilBibliotecario(this);
                 formBibliotecario.Visible = true;
-                this.Visible = true;
+                this.Visible = false;
             }
             //frmPerfilAdministrador formPAdmin = new frmPerfilAdministrador();
             //formPAdmin.Visible = true;
