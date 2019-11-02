@@ -11,9 +11,6 @@ using System.Windows.Forms;
 namespace TA_GesBib_Cliente
 {
     //creo como atributos los formularios de mi menu d cada booton
-
-
-
     //al aser click pregunto si es null(para ver si ya lo he creado y no hacer otro)
     //if(form == null){
     //    //aca pongo visible false a todos  los demas que EXISTEN (OTRO if X CADA UNO)
@@ -26,60 +23,92 @@ namespace TA_GesBib_Cliente
     public partial class frmPerfilBibliotecario : Form
     {
         //se agrego
+        private frmLogin var_formLogin;
+        private frmRegHorasEx_Bibliotecario var_frmRegistrarHE_Bibliotecario;
+        private frmRegInasistencias_Bibliotecario var_frmRegistrarInasis_Bibliotecario;
+
+        private frmSolicitar_Bibliotecario var_frmSolicitar_Bibliotecario;
 
         public Panel PanelAviso { get => panelAviso; set => panelAviso = value; }
-        public Label LblBienvenido { get => lblBienvenido; set => lblBienvenido = value; }
-                      
-
-        private frmLogin var_formLogin;
-
-        // aver lo de jin
-
-        private frmRegistrar_Bibliotecario var_frmRegistrar_Bibliotecario;
-        private frmSolicitar_Bibliotecario var_frmSolicitar_Bibliotecario;
+        public Label LblBienvenido { get => lblBienvenido; set => lblBienvenido = value; }                   
+         
 
         public frmPerfilBibliotecario()
         {
             InitializeComponent();
+            customizeDesign();
         }
 
-        //con paramtero this 
-        public frmPerfilBibliotecario(frmLogin formLogin)
+        
+        public frmPerfilBibliotecario(frmLogin formLogin) //con paramtero this 
         {
             var_formLogin = formLogin;
             InitializeComponent();
+            customizeDesign();
         }
 
-        private void btnCerrarSesion_Click(object sender, EventArgs e)
+        //...................PANELES v2 ................................
+
+        private void customizeDesign()
         {
-            this.Dispose();            
-            this.var_formLogin.Visible = true;
+            panelBtn_Registrar.Visible = false;
+            panelBtn_Solicitar.Visible = false;
         }
+
+        private void hideSubMenu()
+        {
+            if (panelBtn_Registrar.Visible == true)
+                panelBtn_Registrar.Visible = false;
+
+            if (panelBtn_Solicitar.Visible == true)
+                panelBtn_Solicitar.Visible = false;
+        }
+
+        private void showSubMenu(Panel subMenu)
+        {
+            //alterna la visibilidad del submenu actual con el submenu anterior
+
+            if (subMenu.Visible == false)
+            {
+                hideSubMenu();
+                subMenu.Visible = true;
+            }
+            else
+                subMenu.Visible = false;
+        }
+        //...................PANELES v2 ................................
+
+
+      
 
         private void btnRegistrar_Click(object sender, EventArgs e)
         {
+
+            showSubMenu(panelBtn_Registrar);
+
             // aca se tiene q llamar a los estados para que pongan todos en blanco
+            //Componentes.Nuevo();           
 
-            //Componentes.Nuevo();
 
 
-            if(var_frmRegistrar_Bibliotecario == null)
-            {              
-                var_frmRegistrar_Bibliotecario = new frmRegistrar_Bibliotecario(this);
-                var_frmRegistrar_Bibliotecario.MdiParent = this;
+            /*
+            if (var_frmRegistrarHE_Bibliotecario == null)
+            {
+                var_frmRegistrarHE_Bibliotecario = new frmRegHorasEx_Bibliotecario(this);
+                var_frmRegistrarHE_Bibliotecario.MdiParent = this;
 
                 //...add
-                var_frmRegistrar_Bibliotecario.StartPosition = FormStartPosition.Manual;
-                var_frmRegistrar_Bibliotecario.Left = 0;
-                var_frmRegistrar_Bibliotecario.Top =  0;
+                var_frmRegistrarHE_Bibliotecario.StartPosition = FormStartPosition.Manual;
+                var_frmRegistrarHE_Bibliotecario.Left = 0;
+                var_frmRegistrarHE_Bibliotecario.Top =  0;
                 //...
 
 
-                var_frmRegistrar_Bibliotecario.Show();
+                var_frmRegistrarHE_Bibliotecario.Show();
             }
             else
             {
-                var_frmRegistrar_Bibliotecario.Visible = true;
+                var_frmRegistrarHE_Bibliotecario.Visible = true;
             }
 
             //....
@@ -92,10 +121,27 @@ namespace TA_GesBib_Cliente
 
             lblBienvenido.Visible = false;
             panelAviso.Visible = false;
+            */
+
+
+
+
+
+        }
+
+        private void btnDistribuir_Personal_Click(object sender, EventArgs e)
+        {
+
+            
+
         }
 
         private void btnSolicitar_Click(object sender, EventArgs e)
         {
+            showSubMenu(panelBtn_Solicitar);
+
+
+            /*
             if (var_frmSolicitar_Bibliotecario == null)
             {             
                 var_frmSolicitar_Bibliotecario = new frmSolicitar_Bibliotecario(this);
@@ -113,18 +159,114 @@ namespace TA_GesBib_Cliente
             }
 
             //....
-            if (var_frmRegistrar_Bibliotecario != null)
+            if (var_frmRegistrarHE_Bibliotecario != null)
             {
-                var_frmRegistrar_Bibliotecario.Visible = false;
+                var_frmRegistrarHE_Bibliotecario.Visible = false;
                 //todos los demas formularios
 
             }
                        
             lblBienvenido.Visible = false;
             panelAviso.Visible = false;
+            */
+
         }
 
-        private void btnDistribuirPersonal_Click(object sender, EventArgs e)
+     
+
+        private void btnReg_HE_Click(object sender, EventArgs e)
+        {
+
+            //aca llamamos al formulario de registrar Horas extras
+            if (var_frmRegistrarHE_Bibliotecario == null)
+            {
+                var_frmRegistrarHE_Bibliotecario = new frmRegHorasEx_Bibliotecario(this);
+                var_frmRegistrarHE_Bibliotecario.MdiParent = this;
+
+                //...add
+                var_frmRegistrarHE_Bibliotecario.StartPosition = FormStartPosition.Manual;
+                var_frmRegistrarHE_Bibliotecario.Left = 0;
+                var_frmRegistrarHE_Bibliotecario.Top = 0;
+                //...
+
+
+                var_frmRegistrarHE_Bibliotecario.Show();
+            }
+            else
+            {
+                var_frmRegistrarHE_Bibliotecario.Visible = true;
+            }
+
+            //....
+            if (var_frmSolicitar_Bibliotecario != null)
+            {
+                var_frmSolicitar_Bibliotecario.Visible = false;
+                //todos los demas formularios
+
+            }
+
+            lblBienvenido.Visible = false;
+            panelAviso.Visible = false;
+
+            //escondemos el submenu
+            hideSubMenu();
+
+        }
+
+        private void btnReg_Inas_Click(object sender, EventArgs e)
+        {
+
+            //aca llamamos al formulario de registrar Horas extras
+            if (var_frmRegistrarInasis_Bibliotecario == null)
+            {
+                var_frmRegistrarInasis_Bibliotecario = new frmRegInasistencias_Bibliotecario(this);
+                var_frmRegistrarInasis_Bibliotecario.MdiParent = this;
+
+                //...add
+                var_frmRegistrarInasis_Bibliotecario.StartPosition = FormStartPosition.Manual;
+                var_frmRegistrarInasis_Bibliotecario.Left = 0;
+                var_frmRegistrarInasis_Bibliotecario.Top = 0;
+                //...
+
+
+                var_frmRegistrarInasis_Bibliotecario.Show();
+            }
+            else
+            {
+                var_frmRegistrarInasis_Bibliotecario.Visible = true;
+            }
+
+            //....
+            if (var_frmSolicitar_Bibliotecario != null)
+            {
+                var_frmSolicitar_Bibliotecario.Visible = false;
+                //todos los demas formularios
+
+            }
+
+            lblBienvenido.Visible = false;
+            panelAviso.Visible = false;
+
+            //escondemos el submenu
+            hideSubMenu();
+
+
+        }
+
+        private void frmPerfilBibliotecario_Load(object sender, EventArgs e)
+        {
+            //escondemos los paneles
+            //panelBtn_Registrar.Hide();
+            //panelBtn_Solicitar.Hide();
+        }
+
+        private void btnCerrarSesion_Click(object sender, EventArgs e)
+        {
+            this.Dispose();
+            this.var_formLogin.Visible = true;
+        }
+
+        private void btnSolicitar_HLibres_Click(object sender, EventArgs e)
         {
 
         }
