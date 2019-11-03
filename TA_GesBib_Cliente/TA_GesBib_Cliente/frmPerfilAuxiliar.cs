@@ -88,13 +88,7 @@ namespace TA_GesBib_Cliente
             showSubMenu(panelBtn_Registrar);
 
         }
-
-        private void btnDistribuir_Personal_Click(object sender, EventArgs e)
-        {
-
-
-
-        }
+        
 
         private void btnSolicitar_Click(object sender, EventArgs e)
         {

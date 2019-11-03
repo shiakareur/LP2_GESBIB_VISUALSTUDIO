@@ -32,7 +32,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.lblTipoPerfil = new System.Windows.Forms.Label();
             this.lblNombreUsuario = new System.Windows.Forms.Label();
-            this.btnDistribuir_Personal = new System.Windows.Forms.Button();
             this.btnRegistrar = new System.Windows.Forms.Button();
             this.btnSolicitar = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
@@ -102,26 +101,6 @@
             this.lblNombreUsuario.TabIndex = 0;
             this.lblNombreUsuario.Text = "BOB";
             this.lblNombreUsuario.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // btnDistribuir_Personal
-            // 
-            this.btnDistribuir_Personal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(175)))), ((int)(((byte)(169)))));
-            this.btnDistribuir_Personal.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.btnDistribuir_Personal.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnDistribuir_Personal.FlatAppearance.BorderSize = 0;
-            this.btnDistribuir_Personal.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDistribuir_Personal.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDistribuir_Personal.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnDistribuir_Personal.Location = new System.Drawing.Point(0, 0);
-            this.btnDistribuir_Personal.Margin = new System.Windows.Forms.Padding(4);
-            this.btnDistribuir_Personal.Name = "btnDistribuir_Personal";
-            this.btnDistribuir_Personal.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
-            this.btnDistribuir_Personal.Size = new System.Drawing.Size(280, 49);
-            this.btnDistribuir_Personal.TabIndex = 10;
-            this.btnDistribuir_Personal.Text = "Distribuir Personal";
-            this.btnDistribuir_Personal.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDistribuir_Personal.UseVisualStyleBackColor = false;
-            this.btnDistribuir_Personal.Click += new System.EventHandler(this.btnDistribuir_Personal_Click);
             // 
             // btnRegistrar
             // 
@@ -319,7 +298,6 @@
             this.panel3.Controls.Add(this.panelBtn_Registrar);
             this.panel3.Controls.Add(this.btnRegistrar);
             this.panel3.Controls.Add(this.btnVisualizarHorarios);
-            this.panel3.Controls.Add(this.btnDistribuir_Personal);
             this.panel3.Location = new System.Drawing.Point(28, 144);
             this.panel3.Margin = new System.Windows.Forms.Padding(4);
             this.panel3.Name = "panel3";
@@ -493,7 +471,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label lblTipoPerfil;
         private System.Windows.Forms.Label lblNombreUsuario;
-        private System.Windows.Forms.Button btnDistribuir_Personal;
         private System.Windows.Forms.Button btnRegistrar;
         private System.Windows.Forms.Button btnSolicitar;
         private System.Windows.Forms.Label label2;
