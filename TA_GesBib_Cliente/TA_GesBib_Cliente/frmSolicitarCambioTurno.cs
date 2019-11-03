@@ -10,16 +10,17 @@ using System.Windows.Forms;
 
 namespace TA_GesBib_Cliente
 {
-    public partial class frmRegInasistencias_Bibliotecario : Form
+    public partial class frmSolicitarCambioTurno : Form
     {
         private frmPerfilBibliotecario var_perfilBibliotecario;
 
-        public frmRegInasistencias_Bibliotecario()
+        public frmSolicitarCambioTurno()
         {
             InitializeComponent();
         }
 
-        public frmRegInasistencias_Bibliotecario(frmPerfilBibliotecario formPerfBiblio)
+     
+        public frmSolicitarCambioTurno(frmPerfilBibliotecario formPerfBiblio)
         {
             var_perfilBibliotecario = formPerfBiblio;
             InitializeComponent();
@@ -28,7 +29,6 @@ namespace TA_GesBib_Cliente
         private void pictureBox1_Click(object sender, EventArgs e)
         {
             this.Visible = false;
-
             this.var_perfilBibliotecario.LblBienvenido.Visible = true;
             this.var_perfilBibliotecario.PanelAviso.Visible = true;
         }

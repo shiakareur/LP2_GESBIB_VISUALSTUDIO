@@ -76,35 +76,29 @@
     <Compile Include="frmPerfilBibliotecario.designer.cs">
       <DependentUpon>frmPerfilBibliotecario.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmRegHorasEx_Bibliotecario.cs">
+    <Compile Include="frmRegHE.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmRegHorasEx_Bibliotecario.Designer.cs">
-      <DependentUpon>frmRegHorasEx_Bibliotecario.cs</DependentUpon>
+    <Compile Include="frmRegHE.Designer.cs">
+      <DependentUpon>frmRegHE.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmRegInasistencias_Bibliotecario.cs">
+    <Compile Include="frmRegInasistencias.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmRegInasistencias_Bibliotecario.Designer.cs">
-      <DependentUpon>frmRegInasistencias_Bibliotecario.cs</DependentUpon>
+    <Compile Include="frmRegInasistencias.Designer.cs">
+      <DependentUpon>frmRegInasistencias.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmSolicitarCambioTurno_Bibliotecario.cs">
+    <Compile Include="frmSolicitarCambioTurno.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmSolicitarCambioTurno_Bibliotecario.Designer.cs">
-      <DependentUpon>frmSolicitarCambioTurno_Bibliotecario.cs</DependentUpon>
+    <Compile Include="frmSolicitarCambioTurno.Designer.cs">
+      <DependentUpon>frmSolicitarCambioTurno.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmSolicitarHL_Bibliotecario.cs">
+    <Compile Include="frmSolicitarHL.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmSolicitarHL_Bibliotecario.Designer.cs">
-      <DependentUpon>frmSolicitarHL_Bibliotecario.cs</DependentUpon>
-    </Compile>
-    <Compile Include="frmSolicitar_Bibliotecario.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmSolicitar_Bibliotecario.designer.cs">
-      <DependentUpon>frmSolicitar_Bibliotecario.cs</DependentUpon>
+    <Compile Include="frmSolicitarHL.Designer.cs">
+      <DependentUpon>frmSolicitarHL.cs</DependentUpon>
     </Compile>
     <Compile Include="PlaceHolderTextBox.cs">
       <SubType>Component</SubType>
@@ -126,20 +120,17 @@
     <EmbeddedResource Include="frmPerfilBibliotecario.resx">
       <DependentUpon>frmPerfilBibliotecario.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmRegHorasEx_Bibliotecario.resx">
-      <DependentUpon>frmRegHorasEx_Bibliotecario.cs</DependentUpon>
+    <EmbeddedResource Include="frmRegHE.resx">
+      <DependentUpon>frmRegHE.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmRegInasistencias_Bibliotecario.resx">
-      <DependentUpon>frmRegInasistencias_Bibliotecario.cs</DependentUpon>
+    <EmbeddedResource Include="frmRegInasistencias.resx">
+      <DependentUpon>frmRegInasistencias.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmSolicitarCambioTurno_Bibliotecario.resx">
-      <DependentUpon>frmSolicitarCambioTurno_Bibliotecario.cs</DependentUpon>
+    <EmbeddedResource Include="frmSolicitarCambioTurno.resx">
+      <DependentUpon>frmSolicitarCambioTurno.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmSolicitarHL_Bibliotecario.resx">
-      <DependentUpon>frmSolicitarHL_Bibliotecario.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmSolicitar_Bibliotecario.resx">
-      <DependentUpon>frmSolicitar_Bibliotecario.cs</DependentUpon>
+    <EmbeddedResource Include="frmSolicitarHL.resx">
+      <DependentUpon>frmSolicitarHL.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

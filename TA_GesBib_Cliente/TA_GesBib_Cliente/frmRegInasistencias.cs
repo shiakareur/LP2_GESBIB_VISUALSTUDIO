@@ -10,18 +10,16 @@ using System.Windows.Forms;
 
 namespace TA_GesBib_Cliente
 {
-    public partial class frmRegHorasEx_Bibliotecario : Form
+    public partial class frmRegInasistencias : Form
     {
-
         private frmPerfilBibliotecario var_perfilBibliotecario;
 
-        public frmRegHorasEx_Bibliotecario()
+        public frmRegInasistencias()
         {
             InitializeComponent();
         }
 
-        //se agrego
-        public frmRegHorasEx_Bibliotecario(frmPerfilBibliotecario formPerfBiblio)
+        public frmRegInasistencias(frmPerfilBibliotecario formPerfBiblio)
         {
             var_perfilBibliotecario = formPerfBiblio;
             InitializeComponent();

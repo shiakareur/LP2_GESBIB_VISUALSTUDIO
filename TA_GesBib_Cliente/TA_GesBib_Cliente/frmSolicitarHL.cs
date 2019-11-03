@@ -10,37 +10,25 @@ using System.Windows.Forms;
 
 namespace TA_GesBib_Cliente
 {
-    public partial class frmSolicitar_Bibliotecario : Form
+    public partial class frmSolicitarHL : Form
     {
 
         private frmPerfilBibliotecario var_perfilBibliotecario;
 
-
-        public frmSolicitar_Bibliotecario()
+        public frmSolicitarHL()
         {
             InitializeComponent();
         }
 
-        public frmSolicitar_Bibliotecario(frmPerfilBibliotecario formPerfilBiblio)
+        public frmSolicitarHL(frmPerfilBibliotecario formPerfBiblio)
         {
-            var_perfilBibliotecario = formPerfilBiblio;
+            var_perfilBibliotecario = formPerfBiblio;
             InitializeComponent();
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
             this.Visible = false;
-
-
-            this.var_perfilBibliotecario.LblBienvenido.Visible = true;
-            this.var_perfilBibliotecario.PanelAviso.Visible = true;
-        }
-
-        private void pictureBox2_Click(object sender, EventArgs e)
-        {
-            this.Visible = false;
-
-
             this.var_perfilBibliotecario.LblBienvenido.Visible = true;
             this.var_perfilBibliotecario.PanelAviso.Visible = true;
         }

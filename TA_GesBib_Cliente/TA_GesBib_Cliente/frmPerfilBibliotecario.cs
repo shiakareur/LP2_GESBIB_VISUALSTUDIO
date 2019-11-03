@@ -24,10 +24,12 @@ namespace TA_GesBib_Cliente
     {
         //se agrego
         private frmLogin var_formLogin;
-        private frmRegHorasEx_Bibliotecario var_frmRegistrarHE_Bibliotecario;
-        private frmRegInasistencias_Bibliotecario var_frmRegistrarInasis_Bibliotecario;
 
-        private frmSolicitar_Bibliotecario var_frmSolicitar_Bibliotecario;
+        private frmRegHE var_frmRegistrarHE_Bibliotecario;
+        private frmRegInasistencias var_frmRegistrarInasis_Bibliotecario;
+
+        private frmSolicitarHL var_frmSolicitarHL_Bibliotecario;
+        private frmSolicitarCambioTurno var_frmSolicitarCambioTurno_Bibliotecario;
 
         public Panel PanelAviso { get => panelAviso; set => panelAviso = value; }
         public Label LblBienvenido { get => lblBienvenido; set => lblBienvenido = value; }                   
@@ -78,55 +80,13 @@ namespace TA_GesBib_Cliente
         }
         //...................PANELES v2 ................................
 
-
-      
+                  
 
         private void btnRegistrar_Click(object sender, EventArgs e)
         {
 
-            showSubMenu(panelBtn_Registrar);
-
-            // aca se tiene q llamar a los estados para que pongan todos en blanco
-            //Componentes.Nuevo();           
-
-
-
-            /*
-            if (var_frmRegistrarHE_Bibliotecario == null)
-            {
-                var_frmRegistrarHE_Bibliotecario = new frmRegHorasEx_Bibliotecario(this);
-                var_frmRegistrarHE_Bibliotecario.MdiParent = this;
-
-                //...add
-                var_frmRegistrarHE_Bibliotecario.StartPosition = FormStartPosition.Manual;
-                var_frmRegistrarHE_Bibliotecario.Left = 0;
-                var_frmRegistrarHE_Bibliotecario.Top =  0;
-                //...
-
-
-                var_frmRegistrarHE_Bibliotecario.Show();
-            }
-            else
-            {
-                var_frmRegistrarHE_Bibliotecario.Visible = true;
-            }
-
-            //....
-            if(var_frmSolicitar_Bibliotecario != null)
-            {
-                var_frmSolicitar_Bibliotecario.Visible = false;
-                //todos los demas formularios
-
-            }
-
-            lblBienvenido.Visible = false;
-            panelAviso.Visible = false;
-            */
-
-
-
-
-
+            showSubMenu(panelBtn_Registrar);     
+                        
         }
 
         private void btnDistribuir_Personal_Click(object sender, EventArgs e)
@@ -139,37 +99,6 @@ namespace TA_GesBib_Cliente
         private void btnSolicitar_Click(object sender, EventArgs e)
         {
             showSubMenu(panelBtn_Solicitar);
-
-
-            /*
-            if (var_frmSolicitar_Bibliotecario == null)
-            {             
-                var_frmSolicitar_Bibliotecario = new frmSolicitar_Bibliotecario(this);
-                var_frmSolicitar_Bibliotecario.MdiParent = this;
-                //...add
-                var_frmSolicitar_Bibliotecario.StartPosition = FormStartPosition.Manual;
-                var_frmSolicitar_Bibliotecario.Left = 0;
-                var_frmSolicitar_Bibliotecario.Top = 0;
-                //
-                var_frmSolicitar_Bibliotecario.Show();
-            }
-            else
-            {
-                var_frmSolicitar_Bibliotecario.Visible = true;
-            }
-
-            //....
-            if (var_frmRegistrarHE_Bibliotecario != null)
-            {
-                var_frmRegistrarHE_Bibliotecario.Visible = false;
-                //todos los demas formularios
-
-            }
-                       
-            lblBienvenido.Visible = false;
-            panelAviso.Visible = false;
-            */
-
         }
 
      
@@ -180,7 +109,7 @@ namespace TA_GesBib_Cliente
             //aca llamamos al formulario de registrar Horas extras
             if (var_frmRegistrarHE_Bibliotecario == null)
             {
-                var_frmRegistrarHE_Bibliotecario = new frmRegHorasEx_Bibliotecario(this);
+                var_frmRegistrarHE_Bibliotecario = new frmRegHE(this);
                 var_frmRegistrarHE_Bibliotecario.MdiParent = this;
 
                 //...add
@@ -198,9 +127,9 @@ namespace TA_GesBib_Cliente
             }
 
             //....
-            if (var_frmSolicitar_Bibliotecario != null)
+            if (var_frmSolicitarHL_Bibliotecario != null)
             {
-                var_frmSolicitar_Bibliotecario.Visible = false;
+                var_frmSolicitarHL_Bibliotecario.Visible = false;
                 //todos los demas formularios
 
             }
@@ -219,7 +148,7 @@ namespace TA_GesBib_Cliente
             //aca llamamos al formulario de registrar Horas extras
             if (var_frmRegistrarInasis_Bibliotecario == null)
             {
-                var_frmRegistrarInasis_Bibliotecario = new frmRegInasistencias_Bibliotecario(this);
+                var_frmRegistrarInasis_Bibliotecario = new frmRegInasistencias(this);
                 var_frmRegistrarInasis_Bibliotecario.MdiParent = this;
 
                 //...add
@@ -237,9 +166,9 @@ namespace TA_GesBib_Cliente
             }
 
             //....
-            if (var_frmSolicitar_Bibliotecario != null)
+            if (var_frmSolicitarHL_Bibliotecario != null)
             {
-                var_frmSolicitar_Bibliotecario.Visible = false;
+                var_frmSolicitarHL_Bibliotecario.Visible = false;
                 //todos los demas formularios
 
             }
@@ -253,12 +182,48 @@ namespace TA_GesBib_Cliente
 
         }
 
-        private void frmPerfilBibliotecario_Load(object sender, EventArgs e)
+    
+
+      
+
+        private void btnSolicitar_HLibres_Click(object sender, EventArgs e)
         {
-            //escondemos los paneles
-            //panelBtn_Registrar.Hide();
-            //panelBtn_Solicitar.Hide();
+
+            //aca llamamos al formulario de solicitar horas libres
+            if (var_frmSolicitarHL_Bibliotecario == null)
+            {
+                var_frmSolicitarHL_Bibliotecario = new frmSolicitarHL(this);
+                var_frmSolicitarHL_Bibliotecario.MdiParent = this;
+
+                //...add
+                var_frmSolicitarHL_Bibliotecario.StartPosition = FormStartPosition.Manual;
+                var_frmSolicitarHL_Bibliotecario.Left = 0;
+                var_frmSolicitarHL_Bibliotecario.Top = 0;
+                //...
+
+
+                var_frmSolicitarHL_Bibliotecario.Show();
+            }
+            else
+            {
+                var_frmSolicitarHL_Bibliotecario.Visible = true;
+            }
+
+            //....
+            if (var_frmSolicitarCambioTurno_Bibliotecario != null)
+            {
+                var_frmSolicitarCambioTurno_Bibliotecario.Visible = false;
+                //todos los demas formularios
+
+            }
+
+            lblBienvenido.Visible = false;
+            panelAviso.Visible = false;
+
+            //escondemos el submenu
+            hideSubMenu();
         }
+
 
         private void btnCerrarSesion_Click(object sender, EventArgs e)
         {
@@ -266,9 +231,48 @@ namespace TA_GesBib_Cliente
             this.var_formLogin.Visible = true;
         }
 
-        private void btnSolicitar_HLibres_Click(object sender, EventArgs e)
+        private void frmPerfilBibliotecario_Load(object sender, EventArgs e)
         {
+            //escondemos los paneles
+            //panelBtn_Registrar.Hide();
+            //panelBtn_Solicitar.Hide();
+        }
 
+        private void btnSolicitar_CambioTurno_Click(object sender, EventArgs e)
+        {
+            //aca llamamos al formulario de solicitar cambio de turno
+            if (var_frmSolicitarCambioTurno_Bibliotecario == null)
+            {
+                var_frmSolicitarCambioTurno_Bibliotecario = new frmSolicitarCambioTurno(this);
+                var_frmSolicitarCambioTurno_Bibliotecario.MdiParent = this;
+
+                //...add
+                var_frmSolicitarCambioTurno_Bibliotecario.StartPosition = FormStartPosition.Manual;
+                var_frmSolicitarCambioTurno_Bibliotecario.Left = 0;
+                var_frmSolicitarCambioTurno_Bibliotecario.Top = 0;
+                //...
+
+
+                var_frmSolicitarCambioTurno_Bibliotecario.Show();
+            }
+            else
+            {
+                var_frmSolicitarCambioTurno_Bibliotecario.Visible = true;
+            }
+
+            //....
+            if (var_frmSolicitarHL_Bibliotecario != null)
+            {
+                var_frmSolicitarHL_Bibliotecario.Visible = false;
+                //todos los demas formularios
+
+            }
+
+            lblBienvenido.Visible = false;
+            panelAviso.Visible = false;
+
+            //escondemos el submenu
+            hideSubMenu();
         }
     }
 }
