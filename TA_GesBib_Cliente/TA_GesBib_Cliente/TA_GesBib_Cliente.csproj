@@ -46,6 +46,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="frmPerfilAuxiliar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPerfilAuxiliar.Designer.cs">
+      <DependentUpon>frmPerfilAuxiliar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPerfilPracticante.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPerfilPracticante.Designer.cs">
+      <DependentUpon>frmPerfilPracticante.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TipoPerfil.cs" />
     <Compile Include="frmAdministrarGestores.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -117,8 +130,14 @@
     <EmbeddedResource Include="frmPerfilAdministrador.resx">
       <DependentUpon>frmPerfilAdministrador.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmPerfilAuxiliar.resx">
+      <DependentUpon>frmPerfilAuxiliar.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmPerfilBibliotecario.resx">
       <DependentUpon>frmPerfilBibliotecario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPerfilPracticante.resx">
+      <DependentUpon>frmPerfilPracticante.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmRegHE.resx">
       <DependentUpon>frmRegHE.cs</DependentUpon>
