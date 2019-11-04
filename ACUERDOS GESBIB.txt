@@ -1,0 +1,4 @@
+1. TURNOS no se crean, solo el gestor lo asigna.
+2. Para ASIGNAR TURNOS crea formulario "Asignar Turno a Personal" donde primero busque al personal,  lo selecciona y se cargan sus datos, luego ingresa los datos del turno y da click en "asignar".
+
+

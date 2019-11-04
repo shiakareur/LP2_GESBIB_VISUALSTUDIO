@@ -57,7 +57,7 @@ namespace TA_GesBib_Cliente
             frmAdministrarPersonal formAdminPersonal = new frmAdministrarPersonal(this);
             formAdminPersonal.MdiParent = this;
             formAdminPersonal.Show();
-
+            formAdminPersonal.Location = new Point(0, 0);
             //formAdminGestores.Visible = true;
 
             //lblBienvenido.Visible = false;
@@ -71,10 +71,10 @@ namespace TA_GesBib_Cliente
 
         private void btnAdministrarPersonal_Click_1(object sender, EventArgs e)
         {
-            //frmAdministrarGestores formAdminGestores = new frmAdministrarGestores();
             frmAdministrarPersonal formAdminPersonal = new frmAdministrarPersonal(this);
             formAdminPersonal.MdiParent = this;
             formAdminPersonal.Show();
+            formAdminPersonal.Location = new Point(0, 0);
         }
 
         private void pictureBox4_Click(object sender, EventArgs e)
@@ -85,6 +85,22 @@ namespace TA_GesBib_Cliente
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void btnAdmGestores_Click(object sender, EventArgs e)
+        {
+            frmAdministrarGestores frmAdmGestores = new frmAdministrarGestores(this);
+            frmAdmGestores.MdiParent = this;
+            frmAdmGestores.Show();
+            frmAdmGestores.Location = new Point(0, 0);
+        }
+
+        private void btnAdmBibliotecas_Click(object sender, EventArgs e)
+        {
+            frmAdministrarBibliotecas frmAdmBibliotecas = new frmAdministrarBibliotecas(this);
+            frmAdmBibliotecas.MdiParent = this;
+            frmAdmBibliotecas.Show();
+            frmAdmBibliotecas.Location = new Point(0, 0);
         }
     }
 }

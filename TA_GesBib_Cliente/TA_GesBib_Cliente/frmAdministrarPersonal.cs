@@ -12,19 +12,158 @@ namespace TA_GesBib_Cliente
 {
     public partial class frmAdministrarPersonal : Form
     {
-
-        //SE AGREGO 
+        Estado estadoForm;
 
         private frmPerfilAdministrador var_formPerfilAdmin;
         public frmAdministrarPersonal()
         {
             InitializeComponent();
+
+            //Al abrir el form, este es el estado de los componentes
+            limpiarComponentes();
+            estadoComponentes(Estado.Inicial);
         }
 
         public frmAdministrarPersonal(frmPerfilAdministrador formPerfilAdmin)
         {
             var_formPerfilAdmin = formPerfilAdmin;
             InitializeComponent();
+            //Al abrir el form, este es el estado de los componentes
+            limpiarComponentes();
+            estadoComponentes(Estado.Inicial);
+        }
+
+        //Estados
+        public void estadoComponentes(Estado estado)
+        {
+            switch (estado)
+            {
+                case Estado.Inicial:
+
+                    //Etiquetas
+                    lblCodigo.Enabled = false;
+                    lblNombres.Enabled = false;
+                    lblApellidos.Enabled = false;
+                    lblFechaNac.Enabled = false;
+                    lblFechaIng.Enabled = false;
+                    lblCorreo.Enabled = false;
+                    lblClave.Enabled = false;
+                    lblTipo.Enabled = false;
+                    lblBibAsig.Enabled = false;
+                    lblDiaAsig.Enabled = false;
+                    //Botones
+                    btnNuevo.Enabled = true;
+                    btnModificar.Enabled = false;
+                    btnGuardar.Enabled = false;
+                    btnCancelar.Enabled = false;
+                    btnBuscar.Enabled = true;
+                    //Campos de Texto
+                    txtCodigo.Enabled = false;
+                    txtNombres.Enabled = false;
+                    txtApellidos.Enabled = false;
+                    dtpFechaNac.Enabled = false;
+                    dtpFechaIng.Enabled = false;
+                    txtCorreo.Enabled = false;
+                    txtClave.Enabled = false;
+                    rbBibliotecario.Enabled = false;
+                    rbAuxiliar.Enabled = false;
+                    rbPracticante.Enabled = false;
+                    cmbBibAisg.Enabled = false;
+                    cmbDiaAsig.Enabled = false;
+                    break;
+
+                case Estado.Nuevo:
+                    //Etiquetas
+                    lblCodigo.Enabled = true;
+                    lblNombres.Enabled = true;
+                    lblApellidos.Enabled = true;
+                    lblFechaNac.Enabled = true;
+                    lblFechaIng.Enabled = true;
+                    lblCorreo.Enabled = true;
+                    lblClave.Enabled = true;
+                    lblTipo.Enabled = true;
+                    lblBibAsig.Enabled = true;
+                    lblDiaAsig.Enabled = true;
+                    //Botones
+                    btnNuevo.Enabled = false;
+                    btnGuardar.Enabled = true;
+                    btnModificar.Enabled = false;
+                    btnCancelar.Enabled = true;
+                    btnBuscar.Enabled = false;
+                    //Campos de Texto
+                    txtCodigo.Enabled = true;
+                    txtNombres.Enabled = true;
+                    txtApellidos.Enabled = true;
+                    dtpFechaNac.Enabled = true;
+                    dtpFechaIng.Enabled = true;
+                    txtCorreo.Enabled = true;
+                    txtClave.Enabled = true;
+                    rbBibliotecario.Enabled = true;
+                    rbAuxiliar.Enabled = true;
+                    rbPracticante.Enabled = true;
+                    cmbBibAisg.Enabled = true;
+                    cmbDiaAsig.Enabled = true;
+                    break;
+                case Estado.Buscar:
+                    //Botones
+                    btnNuevo.Enabled = false;
+                    btnModificar.Enabled = true;
+                    btnGuardar.Enabled = false;
+                    btnCancelar.Enabled = true;
+                    btnBuscar.Enabled = false;
+                    break;
+                case Estado.Modificar:
+                    //Etiquetas
+                    lblCodigo.Enabled = true;
+                    lblNombres.Enabled = true;
+                    lblApellidos.Enabled = true;
+                    lblFechaNac.Enabled = true;
+                    lblFechaIng.Enabled = true;
+                    lblCorreo.Enabled = true;
+                    lblClave.Enabled = true;
+                    lblTipo.Enabled = true;
+                    lblBibAsig.Enabled = true;
+                    lblDiaAsig.Enabled = true;
+                    //Botones
+                    btnNuevo.Enabled = false;
+                    btnGuardar.Enabled = true;
+                    btnModificar.Enabled = false;
+                    btnCancelar.Enabled = true;
+                    btnBuscar.Enabled = false;
+                    //Campos de Texto
+                    txtCodigo.Enabled = true;
+                    txtNombres.Enabled = true;
+                    txtApellidos.Enabled = true;
+                    dtpFechaNac.Enabled = true;
+                    dtpFechaIng.Enabled = true;
+                    txtCorreo.Enabled = true;
+                    txtClave.Enabled = true;
+                    rbBibliotecario.Enabled = true;
+                    rbAuxiliar.Enabled = true;
+                    rbPracticante.Enabled = true;
+                    cmbBibAisg.Enabled = true;
+                    cmbDiaAsig.Enabled = true;
+                    break;
+            }
+        }
+
+        public void limpiarComponentes()
+        {
+            txtCodigo.Text = "";
+            txtNombres.Text = "";
+            txtApellidos.Text = "";
+            dtpFechaNac.Value = DateTime.Today;
+            dtpFechaIng.Value = DateTime.Today;
+            txtCorreo.Text = "";
+            txtClave.Text = "";
+            rbBibliotecario.Checked = false;
+            rbAuxiliar.Checked = false;
+            rbPracticante.Checked = false;
+
+            txtCorreo.Text = "";
+            cmbBibAisg.SelectedIndex = -1;
+            cmbDiaAsig.SelectedIndex = -1;
+
         }
 
         private void frmAdministrarPersonal_Load(object sender, EventArgs e)
@@ -48,6 +187,40 @@ namespace TA_GesBib_Cliente
         private void label3_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnGuardar_Click(object sender, EventArgs e)
+        {
+            //Volver al estado inicial
+            estadoComponentes(Estado.Inicial);
+        }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            //Volver al estado inicial
+            limpiarComponentes();
+            estadoComponentes(Estado.Inicial);
+        }
+
+        private void btnNuevo_Click(object sender, EventArgs e)
+        {
+            //Volver al estado inicial
+            limpiarComponentes();
+            estadoComponentes(Estado.Nuevo);
+        }
+
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
+            frmBuscarPersonalBiblioteca frmBuscarPersonalBib = new frmBuscarPersonalBiblioteca();
+            if (frmBuscarPersonalBib.ShowDialog() == DialogResult.OK)
+            {
+                estadoComponentes(Estado.Buscar);
+            }
+        }
+
+        private void btnCerrar_Click(object sender, EventArgs e)
+        {
+            this.Hide();
         }
     }
 }

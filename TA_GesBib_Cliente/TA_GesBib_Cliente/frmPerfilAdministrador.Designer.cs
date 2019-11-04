@@ -30,10 +30,12 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmPerfilAdministrador));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.button2 = new System.Windows.Forms.Button();
+            this.btnAdmGestores = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.btnAdministrarPersonal = new System.Windows.Forms.Button();
+            this.btnAdmBibliotecas = new System.Windows.Forms.Button();
+            this.btnAdmPersonal = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label6 = new System.Windows.Forms.Label();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
@@ -50,10 +52,12 @@
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(175)))), ((int)(((byte)(169)))));
             this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel1.Controls.Add(this.button2);
+            this.panel1.Controls.Add(this.btnAdmGestores);
             this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.button3);
-            this.panel1.Controls.Add(this.button2);
-            this.panel1.Controls.Add(this.btnAdministrarPersonal);
+            this.panel1.Controls.Add(this.btnAdmBibliotecas);
+            this.panel1.Controls.Add(this.btnAdmPersonal);
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Controls.Add(this.label6);
             this.panel1.Controls.Add(this.pictureBox4);
@@ -69,6 +73,42 @@
             this.panel1.TabStop = true;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(175)))), ((int)(((byte)(169)))));
+            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button2.FlatAppearance.BorderSize = 0;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.Image = global::TA_GesBib_Cliente.Properties.Resources.icono_ver_grande;
+            this.button2.Location = new System.Drawing.Point(25, 374);
+            this.button2.Margin = new System.Windows.Forms.Padding(4);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(200, 60);
+            this.button2.TabIndex = 61;
+            this.button2.Text = "VER COMO";
+            this.button2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button2.UseVisualStyleBackColor = false;
+            // 
+            // btnAdmGestores
+            // 
+            this.btnAdmGestores.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(175)))), ((int)(((byte)(169)))));
+            this.btnAdmGestores.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAdmGestores.FlatAppearance.BorderSize = 0;
+            this.btnAdmGestores.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAdmGestores.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAdmGestores.Image = global::TA_GesBib_Cliente.Properties.Resources.icono_1_usuario;
+            this.btnAdmGestores.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnAdmGestores.Location = new System.Drawing.Point(25, 176);
+            this.btnAdmGestores.Margin = new System.Windows.Forms.Padding(4);
+            this.btnAdmGestores.Name = "btnAdmGestores";
+            this.btnAdmGestores.Size = new System.Drawing.Size(200, 60);
+            this.btnAdmGestores.TabIndex = 60;
+            this.btnAdmGestores.Text = "ADMINISTRAR\r\nGESTORES";
+            this.btnAdmGestores.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnAdmGestores.UseVisualStyleBackColor = false;
+            this.btnAdmGestores.Click += new System.EventHandler(this.btnAdmGestores_Click);
+            // 
             // button1
             // 
             this.button1.AutoSize = true;
@@ -79,10 +119,10 @@
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.Image = global::TA_GesBib_Cliente.Properties.Resources.icono_cerrar_sesion_pequeño;
-            this.button1.Location = new System.Drawing.Point(25, 477);
+            this.button1.Location = new System.Drawing.Point(25, 519);
             this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(200, 56);
+            this.button1.Size = new System.Drawing.Size(200, 50);
             this.button1.TabIndex = 59;
             this.button1.Text = "CERRAR SESIÓN";
             this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -96,51 +136,52 @@
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.Image = global::TA_GesBib_Cliente.Properties.Resources.icono_configuracion_pequeño;
-            this.button3.Location = new System.Drawing.Point(25, 418);
+            this.button3.Location = new System.Drawing.Point(25, 470);
             this.button3.Margin = new System.Windows.Forms.Padding(4);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(200, 60);
+            this.button3.Size = new System.Drawing.Size(200, 50);
             this.button3.TabIndex = 58;
             this.button3.Text = "CONFIGURACIÓN";
             this.button3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button3.UseVisualStyleBackColor = false;
             // 
-            // button2
+            // btnAdmBibliotecas
             // 
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(175)))), ((int)(((byte)(169)))));
-            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Image = global::TA_GesBib_Cliente.Properties.Resources.icono_biblioteca;
-            this.button2.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button2.Location = new System.Drawing.Point(25, 235);
-            this.button2.Margin = new System.Windows.Forms.Padding(4);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(200, 60);
-            this.button2.TabIndex = 57;
-            this.button2.Text = "ADMINISTRAR BIBLIOTECAS";
-            this.button2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button2.UseVisualStyleBackColor = false;
+            this.btnAdmBibliotecas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(175)))), ((int)(((byte)(169)))));
+            this.btnAdmBibliotecas.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAdmBibliotecas.FlatAppearance.BorderSize = 0;
+            this.btnAdmBibliotecas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAdmBibliotecas.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAdmBibliotecas.Image = global::TA_GesBib_Cliente.Properties.Resources.icono_biblioteca;
+            this.btnAdmBibliotecas.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnAdmBibliotecas.Location = new System.Drawing.Point(25, 292);
+            this.btnAdmBibliotecas.Margin = new System.Windows.Forms.Padding(4);
+            this.btnAdmBibliotecas.Name = "btnAdmBibliotecas";
+            this.btnAdmBibliotecas.Size = new System.Drawing.Size(200, 60);
+            this.btnAdmBibliotecas.TabIndex = 57;
+            this.btnAdmBibliotecas.Text = "ADMINISTRAR BIBLIOTECAS";
+            this.btnAdmBibliotecas.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnAdmBibliotecas.UseVisualStyleBackColor = false;
+            this.btnAdmBibliotecas.Click += new System.EventHandler(this.btnAdmBibliotecas_Click);
             // 
-            // btnAdministrarPersonal
+            // btnAdmPersonal
             // 
-            this.btnAdministrarPersonal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(175)))), ((int)(((byte)(169)))));
-            this.btnAdministrarPersonal.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnAdministrarPersonal.FlatAppearance.BorderSize = 0;
-            this.btnAdministrarPersonal.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAdministrarPersonal.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAdministrarPersonal.Image = global::TA_GesBib_Cliente.Properties.Resources.icono_personal2;
-            this.btnAdministrarPersonal.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnAdministrarPersonal.Location = new System.Drawing.Point(25, 176);
-            this.btnAdministrarPersonal.Margin = new System.Windows.Forms.Padding(4);
-            this.btnAdministrarPersonal.Name = "btnAdministrarPersonal";
-            this.btnAdministrarPersonal.Size = new System.Drawing.Size(200, 60);
-            this.btnAdministrarPersonal.TabIndex = 41;
-            this.btnAdministrarPersonal.Text = "ADMINISTRAR\r\nPERSONAL";
-            this.btnAdministrarPersonal.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnAdministrarPersonal.UseVisualStyleBackColor = false;
-            this.btnAdministrarPersonal.Click += new System.EventHandler(this.btnAdministrarPersonal_Click_1);
+            this.btnAdmPersonal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(175)))), ((int)(((byte)(169)))));
+            this.btnAdmPersonal.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAdmPersonal.FlatAppearance.BorderSize = 0;
+            this.btnAdmPersonal.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAdmPersonal.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAdmPersonal.Image = global::TA_GesBib_Cliente.Properties.Resources.icono_personal2;
+            this.btnAdmPersonal.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnAdmPersonal.Location = new System.Drawing.Point(25, 233);
+            this.btnAdmPersonal.Margin = new System.Windows.Forms.Padding(4);
+            this.btnAdmPersonal.Name = "btnAdmPersonal";
+            this.btnAdmPersonal.Size = new System.Drawing.Size(200, 60);
+            this.btnAdmPersonal.TabIndex = 41;
+            this.btnAdmPersonal.Text = "ADMINISTRAR\r\nPERSONAL";
+            this.btnAdmPersonal.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnAdmPersonal.UseVisualStyleBackColor = false;
+            this.btnAdmPersonal.Click += new System.EventHandler(this.btnAdministrarPersonal_Click_1);
             // 
             // panel2
             // 
@@ -248,7 +289,9 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button btnAdmBibliotecas;
+        private System.Windows.Forms.Button btnAdmPersonal;
+        private System.Windows.Forms.Button btnAdmGestores;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button btnAdministrarPersonal;
     }
 }
