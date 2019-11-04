@@ -14,6 +14,8 @@ namespace TA_GesBib_Cliente
     {
 
         private frmPerfilBibliotecario var_perfilBibliotecario;
+        private Form var_perfilPersonal;
+        private TipoPerfil var_tipoPerfil=TipoPerfil.PerfilBibliotecario;
 
         public frmRegHE()
         {
@@ -26,12 +28,36 @@ namespace TA_GesBib_Cliente
             var_perfilBibliotecario = formPerfBiblio;
             InitializeComponent();
         }
+        public frmRegHE(Form formPerfilPersonal, TipoPerfil tipoPerfil)
+        {
+            var_perfilPersonal = formPerfilPersonal;
+            var_tipoPerfil = tipoPerfil;
+            InitializeComponent();
+        }
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            this.Visible = false;
-            this.var_perfilBibliotecario.LblBienvenido.Visible = true;
-            this.var_perfilBibliotecario.PanelAviso.Visible = true;
+            switch (var_tipoPerfil)
+            {
+                case TipoPerfil.PerfilBibliotecario:
+                    this.Visible = false;
+                    this.var_perfilBibliotecario.LblBienvenido.Visible = true;
+                    this.var_perfilBibliotecario.PanelAviso.Visible = true;
+                    break;
+                case TipoPerfil.PerfilAuxiliar:
+                    this.Visible = false;
+                    ((frmPerfilAuxiliar)this.var_perfilPersonal).LblBienvenido.Visible = true;
+                    ((frmPerfilAuxiliar)this.var_perfilPersonal).PanelAviso.Visible = true;
+                    break;
+                case TipoPerfil.PerfilPracticante:
+                    this.Visible = false;
+                    ((frmPerfilPracticante)this.var_perfilPersonal).LblBienvenido.Visible = true;
+                    ((frmPerfilPracticante)this.var_perfilPersonal).PanelAviso.Visible = true;
+                    break;
+                default:
+                    break;
+            }
+            
         }
     }
 }
