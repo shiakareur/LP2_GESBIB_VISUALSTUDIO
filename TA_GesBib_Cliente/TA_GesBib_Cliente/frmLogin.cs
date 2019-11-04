@@ -25,12 +25,14 @@ namespace TA_GesBib_Cliente
                 frmPerfilAdministrador formPAdmin = new frmPerfilAdministrador();
                 formPAdmin.Visible = true;
                 this.Visible = true;
-            } else if (placeHolderUsuario.Text == "practicante")
+            }
+            else if (placeHolderUsuario.Text == "practicante")
             {
                 frmPerfilPracticante frmPracticante = new frmPerfilPracticante(this);
                 frmPracticante.Visible = true;
                 this.Visible = true;
-            }else if (placeHolderUsuario.Text == "auxiliar")
+            }
+            else if (placeHolderUsuario.Text == "auxiliar")
             {
                 frmPerfilAuxiliar frmAuxiliar = new frmPerfilAuxiliar(this);
                 frmAuxiliar.Visible = true;
@@ -42,14 +44,7 @@ namespace TA_GesBib_Cliente
                 formBibliotecario.Visible = true;
                 this.Visible = false;
             }
-            //frmPerfilAdministrador formPAdmin = new frmPerfilAdministrador();
-            //formPAdmin.Visible = true;
-            //this.Visible = true;
-
-
-            //frmPerfilBibliotecario formBibliotecario = new frmPerfilBibliotecario();
-            //formBibliotecario.Visible = true;
-            //this.Visible = true;
+  
 
         }
 

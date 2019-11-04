@@ -50,38 +50,31 @@
     <Compile Include="frmAdministrarBibliotecas.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmAdministrarBibliotecas.Designer.cs">
+    <Compile Include="frmAdministrarBibliotecas.designer.cs">
       <DependentUpon>frmAdministrarBibliotecas.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmPerfilAuxiliar.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmPerfilAuxiliar.Designer.cs">
-      <DependentUpon>frmPerfilAuxiliar.cs</DependentUpon>
-    </Compile>
-    <Compile Include="frmPerfilPracticante.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmPerfilPracticante.Designer.cs">
-      <DependentUpon>frmPerfilPracticante.cs</DependentUpon>
-    </Compile>
-    <Compile Include="TipoPerfil.cs" />
     <Compile Include="frmAdministrarGestores.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmAdministrarGestores.Designer.cs">
+    <Compile Include="frmAdministrarGestores.designer.cs">
       <DependentUpon>frmAdministrarGestores.cs</DependentUpon>
     </Compile>
     <Compile Include="frmAdministrarPersonal.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmAdministrarPersonal.Designer.cs">
+    <Compile Include="frmAdministrarPersonal.designer.cs">
       <DependentUpon>frmAdministrarPersonal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmBuscarDistribucionxPersonal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBuscarDistribucionxPersonal.Designer.cs">
+      <DependentUpon>frmBuscarDistribucionxPersonal.cs</DependentUpon>
     </Compile>
     <Compile Include="frmBuscarPersonalBiblioteca.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmBuscarPersonalBiblioteca.Designer.cs">
+    <Compile Include="frmBuscarPersonalBiblioteca.designer.cs">
       <DependentUpon>frmBuscarPersonalBiblioteca.cs</DependentUpon>
     </Compile>
     <Compile Include="frmLogin.cs">
@@ -93,14 +86,26 @@
     <Compile Include="frmPerfilAdministrador.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmPerfilAdministrador.Designer.cs">
+    <Compile Include="frmPerfilAdministrador.designer.cs">
       <DependentUpon>frmPerfilAdministrador.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPerfilAuxiliar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPerfilAuxiliar.designer.cs">
+      <DependentUpon>frmPerfilAuxiliar.cs</DependentUpon>
     </Compile>
     <Compile Include="frmPerfilBibliotecario.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmPerfilBibliotecario.designer.cs">
       <DependentUpon>frmPerfilBibliotecario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPerfilPracticante.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPerfilPracticante.designer.cs">
+      <DependentUpon>frmPerfilPracticante.cs</DependentUpon>
     </Compile>
     <Compile Include="frmRegHE.cs">
       <SubType>Form</SubType>
@@ -131,6 +136,7 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TipoPerfil.cs" />
     <EmbeddedResource Include="frmAdministrarBibliotecas.resx">
       <DependentUpon>frmAdministrarBibliotecas.cs</DependentUpon>
     </EmbeddedResource>
@@ -139,6 +145,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmAdministrarPersonal.resx">
       <DependentUpon>frmAdministrarPersonal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmBuscarDistribucionxPersonal.resx">
+      <DependentUpon>frmBuscarDistribucionxPersonal.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmBuscarPersonalBiblioteca.resx">
       <DependentUpon>frmBuscarPersonalBiblioteca.cs</DependentUpon>
@@ -257,7 +266,10 @@
     <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\icono-1-usuario.png" />
+    <None Include="Resources\icono-eliminar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icono-eliminar1.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\icono-cerrarventana.png" />
@@ -266,13 +278,10 @@
     <None Include="Resources\icono-ver.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\icono-1-usuario.png" />
+  </ItemGroup>
+  <ItemGroup>
     <None Include="Resources\icono-ver-grande.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\icono-eliminar.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\icono-más.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

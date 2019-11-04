@@ -213,9 +213,9 @@ namespace TA_GesBib_Cliente.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap icono_guardar {
+        internal static System.Drawing.Bitmap icono_eliminar1 {
             get {
-                object obj = ResourceManager.GetObject("icono-guardar", resourceCulture);
+                object obj = ResourceManager.GetObject("icono-eliminar1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -223,9 +223,9 @@ namespace TA_GesBib_Cliente.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap icono_más {
+        internal static System.Drawing.Bitmap icono_guardar {
             get {
-                object obj = ResourceManager.GetObject("icono-más", resourceCulture);
+                object obj = ResourceManager.GetObject("icono-guardar", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

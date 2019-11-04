@@ -29,54 +29,53 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmRegHE));
-            this.label8 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
+            this.lblHMS_fin = new System.Windows.Forms.Label();
+            this.lblHMS_ini = new System.Windows.Forms.Label();
             this.txtDescripcion_HE = new System.Windows.Forms.TextBox();
             this.txtCantHoras_HE = new System.Windows.Forms.TextBox();
             this.txtHFin_HE = new System.Windows.Forms.TextBox();
             this.txtHIni_HE = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.lblDescripcion = new System.Windows.Forms.Label();
+            this.lblCantHoras = new System.Windows.Forms.Label();
+            this.lblHIni = new System.Windows.Forms.Label();
+            this.lblHFin = new System.Windows.Forms.Label();
             this.dtpFechaHE = new System.Windows.Forms.DateTimePicker();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lblFecha = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.btnCancelar = new System.Windows.Forms.Button();
+            this.btnGuardar = new System.Windows.Forms.Button();
+            this.btnNuevo = new System.Windows.Forms.Button();
+            this.btnCerrar = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // label8
+            // lblHMS_fin
             // 
-            this.label8.AutoSize = true;
-            this.label8.BackColor = System.Drawing.Color.Transparent;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(37)))), ((int)(((byte)(42)))));
-            this.label8.Location = new System.Drawing.Point(781, 347);
-            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(162, 32);
-            this.label8.TabIndex = 105;
-            this.label8.Text = "(hh:mm:ss) ";
-            this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.lblHMS_fin.AutoSize = true;
+            this.lblHMS_fin.BackColor = System.Drawing.Color.Transparent;
+            this.lblHMS_fin.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblHMS_fin.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(37)))), ((int)(((byte)(42)))));
+            this.lblHMS_fin.Location = new System.Drawing.Point(676, 337);
+            this.lblHMS_fin.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblHMS_fin.Name = "lblHMS_fin";
+            this.lblHMS_fin.Size = new System.Drawing.Size(162, 32);
+            this.lblHMS_fin.TabIndex = 105;
+            this.lblHMS_fin.Text = "(hh:mm:ss) ";
+            this.lblHMS_fin.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // label7
+            // lblHMS_ini
             // 
-            this.label7.AutoSize = true;
-            this.label7.BackColor = System.Drawing.Color.Transparent;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(37)))), ((int)(((byte)(42)))));
-            this.label7.Location = new System.Drawing.Point(779, 289);
-            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(162, 32);
-            this.label7.TabIndex = 104;
-            this.label7.Text = "(hh:mm:ss) ";
-            this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.lblHMS_ini.AutoSize = true;
+            this.lblHMS_ini.BackColor = System.Drawing.Color.Transparent;
+            this.lblHMS_ini.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblHMS_ini.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(37)))), ((int)(((byte)(42)))));
+            this.lblHMS_ini.Location = new System.Drawing.Point(676, 279);
+            this.lblHMS_ini.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblHMS_ini.Name = "lblHMS_ini";
+            this.lblHMS_ini.Size = new System.Drawing.Size(162, 32);
+            this.lblHMS_ini.TabIndex = 104;
+            this.lblHMS_ini.Text = "(hh:mm:ss) ";
+            this.lblHMS_ini.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // txtDescripcion_HE
             // 
@@ -92,7 +91,7 @@
             this.txtCantHoras_HE.Location = new System.Drawing.Point(464, 412);
             this.txtCantHoras_HE.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtCantHoras_HE.Name = "txtCantHoras_HE";
-            this.txtCantHoras_HE.Size = new System.Drawing.Size(145, 22);
+            this.txtCantHoras_HE.Size = new System.Drawing.Size(78, 22);
             this.txtCantHoras_HE.TabIndex = 102;
             // 
             // txtHFin_HE
@@ -100,7 +99,7 @@
             this.txtHFin_HE.Location = new System.Drawing.Point(464, 348);
             this.txtHFin_HE.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtHFin_HE.Name = "txtHFin_HE";
-            this.txtHFin_HE.Size = new System.Drawing.Size(307, 22);
+            this.txtHFin_HE.Size = new System.Drawing.Size(167, 22);
             this.txtHFin_HE.TabIndex = 101;
             // 
             // txtHIni_HE
@@ -108,64 +107,64 @@
             this.txtHIni_HE.Location = new System.Drawing.Point(464, 289);
             this.txtHIni_HE.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtHIni_HE.Name = "txtHIni_HE";
-            this.txtHIni_HE.Size = new System.Drawing.Size(307, 22);
+            this.txtHIni_HE.Size = new System.Drawing.Size(167, 22);
             this.txtHIni_HE.TabIndex = 100;
             // 
-            // label5
+            // lblDescripcion
             // 
-            this.label5.AutoSize = true;
-            this.label5.BackColor = System.Drawing.Color.Transparent;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(37)))), ((int)(((byte)(42)))));
-            this.label5.Location = new System.Drawing.Point(147, 473);
-            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(193, 32);
-            this.label5.TabIndex = 99;
-            this.label5.Text = "Descripción   :";
-            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.lblDescripcion.AutoSize = true;
+            this.lblDescripcion.BackColor = System.Drawing.Color.Transparent;
+            this.lblDescripcion.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDescripcion.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(37)))), ((int)(((byte)(42)))));
+            this.lblDescripcion.Location = new System.Drawing.Point(147, 473);
+            this.lblDescripcion.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblDescripcion.Name = "lblDescripcion";
+            this.lblDescripcion.Size = new System.Drawing.Size(193, 32);
+            this.lblDescripcion.TabIndex = 99;
+            this.lblDescripcion.Text = "Descripción   :";
+            this.lblDescripcion.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // label4
+            // lblCantHoras
             // 
-            this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.Color.Transparent;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(37)))), ((int)(((byte)(42)))));
-            this.label4.Location = new System.Drawing.Point(147, 411);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(280, 32);
-            this.label4.TabIndex = 98;
-            this.label4.Text = "Cantidad de Horas   :";
-            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.lblCantHoras.AutoSize = true;
+            this.lblCantHoras.BackColor = System.Drawing.Color.Transparent;
+            this.lblCantHoras.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCantHoras.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(37)))), ((int)(((byte)(42)))));
+            this.lblCantHoras.Location = new System.Drawing.Point(147, 411);
+            this.lblCantHoras.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblCantHoras.Name = "lblCantHoras";
+            this.lblCantHoras.Size = new System.Drawing.Size(280, 32);
+            this.lblCantHoras.TabIndex = 98;
+            this.lblCantHoras.Text = "Cantidad de Horas   :";
+            this.lblCantHoras.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // label3
+            // lblHIni
             // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(37)))), ((int)(((byte)(42)))));
-            this.label3.Location = new System.Drawing.Point(147, 292);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(172, 32);
-            this.label3.TabIndex = 97;
-            this.label3.Text = "Hora Inicio  :";
-            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.lblHIni.AutoSize = true;
+            this.lblHIni.BackColor = System.Drawing.Color.Transparent;
+            this.lblHIni.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblHIni.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(37)))), ((int)(((byte)(42)))));
+            this.lblHIni.Location = new System.Drawing.Point(147, 292);
+            this.lblHIni.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblHIni.Name = "lblHIni";
+            this.lblHIni.Size = new System.Drawing.Size(172, 32);
+            this.lblHIni.TabIndex = 97;
+            this.lblHIni.Text = "Hora Inicio  :";
+            this.lblHIni.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // label2
+            // lblHFin
             // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(37)))), ((int)(((byte)(42)))));
-            this.label2.Location = new System.Drawing.Point(147, 350);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(159, 32);
-            this.label2.TabIndex = 96;
-            this.label2.Text = "Hora Fin    :";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.lblHFin.AutoSize = true;
+            this.lblHFin.BackColor = System.Drawing.Color.Transparent;
+            this.lblHFin.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblHFin.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(37)))), ((int)(((byte)(42)))));
+            this.lblHFin.Location = new System.Drawing.Point(147, 350);
+            this.lblHFin.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblHFin.Name = "lblHFin";
+            this.lblHFin.Size = new System.Drawing.Size(159, 32);
+            this.lblHFin.TabIndex = 96;
+            this.lblHFin.Text = "Hora Fin    :";
+            this.lblHFin.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // dtpFechaHE
             // 
@@ -175,19 +174,19 @@
             this.dtpFechaHE.Size = new System.Drawing.Size(563, 22);
             this.dtpFechaHE.TabIndex = 95;
             // 
-            // label1
+            // lblFecha
             // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(37)))), ((int)(((byte)(42)))));
-            this.label1.Location = new System.Drawing.Point(147, 226);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(130, 32);
-            this.label1.TabIndex = 94;
-            this.label1.Text = "Fecha    :";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.lblFecha.AutoSize = true;
+            this.lblFecha.BackColor = System.Drawing.Color.Transparent;
+            this.lblFecha.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFecha.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(37)))), ((int)(((byte)(42)))));
+            this.lblFecha.Location = new System.Drawing.Point(147, 226);
+            this.lblFecha.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblFecha.Name = "lblFecha";
+            this.lblFecha.Size = new System.Drawing.Size(130, 32);
+            this.lblFecha.TabIndex = 94;
+            this.lblFecha.Text = "Fecha    :";
+            this.lblFecha.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // label6
             // 
@@ -198,9 +197,9 @@
             this.label6.Location = new System.Drawing.Point(121, 64);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(441, 19);
+            this.label6.Size = new System.Drawing.Size(497, 19);
             this.label6.TabIndex = 107;
-            this.label6.Text = "______________________________________________________";
+            this.label6.Text = "_____________________________________________________________";
             // 
             // label9
             // 
@@ -216,66 +215,73 @@
             this.label9.Text = "Registro de mis Horas Extras \r\n";
             this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // pictureBox1
+            // btnCancelar
             // 
-            this.pictureBox1.BackColor = System.Drawing.Color.Maroon;
-            this.pictureBox1.Image = global::TA_GesBib_Cliente.Properties.Resources.cerrar;
-            this.pictureBox1.Location = new System.Drawing.Point(969, 64);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(41, 41);
-            this.pictureBox1.TabIndex = 108;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            this.btnCancelar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(175)))), ((int)(((byte)(169)))));
+            this.btnCancelar.FlatAppearance.BorderSize = 0;
+            this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.btnCancelar.Image = global::TA_GesBib_Cliente.Properties.Resources.icons8_cancelar_2_30;
+            this.btnCancelar.Location = new System.Drawing.Point(671, 121);
+            this.btnCancelar.Margin = new System.Windows.Forms.Padding(4);
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Size = new System.Drawing.Size(189, 52);
+            this.btnCancelar.TabIndex = 52;
+            this.btnCancelar.Text = "CANCELAR";
+            this.btnCancelar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnCancelar.UseVisualStyleBackColor = false;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
-            // button5
+            // btnGuardar
             // 
-            this.button5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(175)))), ((int)(((byte)(169)))));
-            this.button5.FlatAppearance.BorderSize = 0;
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.button5.Image = global::TA_GesBib_Cliente.Properties.Resources.icons8_cancelar_2_30;
-            this.button5.Location = new System.Drawing.Point(671, 121);
-            this.button5.Margin = new System.Windows.Forms.Padding(4);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(189, 52);
-            this.button5.TabIndex = 52;
-            this.button5.Text = "CANCELAR";
-            this.button5.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button5.UseVisualStyleBackColor = false;
+            this.btnGuardar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(175)))), ((int)(((byte)(169)))));
+            this.btnGuardar.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnGuardar.FlatAppearance.BorderSize = 0;
+            this.btnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnGuardar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.btnGuardar.Image = global::TA_GesBib_Cliente.Properties.Resources.icono_guardar;
+            this.btnGuardar.Location = new System.Drawing.Point(493, 121);
+            this.btnGuardar.Margin = new System.Windows.Forms.Padding(4);
+            this.btnGuardar.Name = "btnGuardar";
+            this.btnGuardar.Size = new System.Drawing.Size(177, 52);
+            this.btnGuardar.TabIndex = 49;
+            this.btnGuardar.Text = "GUARDAR";
+            this.btnGuardar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnGuardar.UseVisualStyleBackColor = false;
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
-            // button2
+            // btnNuevo
             // 
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(175)))), ((int)(((byte)(169)))));
-            this.button2.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.button2.Image = global::TA_GesBib_Cliente.Properties.Resources.icono_guardar;
-            this.button2.Location = new System.Drawing.Point(493, 121);
-            this.button2.Margin = new System.Windows.Forms.Padding(4);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(177, 52);
-            this.button2.TabIndex = 49;
-            this.button2.Text = "GUARDAR";
-            this.button2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button2.UseVisualStyleBackColor = false;
+            this.btnNuevo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(175)))), ((int)(((byte)(169)))));
+            this.btnNuevo.FlatAppearance.BorderSize = 0;
+            this.btnNuevo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnNuevo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnNuevo.Image = global::TA_GesBib_Cliente.Properties.Resources.icono_crear_nuevo;
+            this.btnNuevo.Location = new System.Drawing.Point(331, 121);
+            this.btnNuevo.Margin = new System.Windows.Forms.Padding(4);
+            this.btnNuevo.Name = "btnNuevo";
+            this.btnNuevo.Size = new System.Drawing.Size(169, 52);
+            this.btnNuevo.TabIndex = 48;
+            this.btnNuevo.Text = "NUEVO";
+            this.btnNuevo.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnNuevo.UseVisualStyleBackColor = false;
+            this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click);
             // 
-            // button1
+            // btnCerrar
             // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(175)))), ((int)(((byte)(169)))));
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Image = global::TA_GesBib_Cliente.Properties.Resources.icono_crear_nuevo;
-            this.button1.Location = new System.Drawing.Point(331, 121);
-            this.button1.Margin = new System.Windows.Forms.Padding(4);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(169, 52);
-            this.button1.TabIndex = 48;
-            this.button1.Text = "NUEVO";
-            this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button1.UseVisualStyleBackColor = false;
+            this.btnCerrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(175)))), ((int)(((byte)(169)))));
+            this.btnCerrar.FlatAppearance.BorderSize = 0;
+            this.btnCerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCerrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.btnCerrar.Image = global::TA_GesBib_Cliente.Properties.Resources.icono_cerrarventana;
+            this.btnCerrar.Location = new System.Drawing.Point(825, 662);
+            this.btnCerrar.Name = "btnCerrar";
+            this.btnCerrar.Size = new System.Drawing.Size(150, 40);
+            this.btnCerrar.TabIndex = 119;
+            this.btnCerrar.Text = "CERRAR";
+            this.btnCerrar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnCerrar.UseVisualStyleBackColor = false;
+            this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
             // 
             // frmRegHE
             // 
@@ -283,31 +289,30 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(242)))), ((int)(((byte)(241)))));
             this.ClientSize = new System.Drawing.Size(1177, 747);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.btnCerrar);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label9);
-            this.Controls.Add(this.label8);
-            this.Controls.Add(this.label7);
+            this.Controls.Add(this.lblHMS_fin);
+            this.Controls.Add(this.lblHMS_ini);
             this.Controls.Add(this.txtDescripcion_HE);
             this.Controls.Add(this.txtCantHoras_HE);
             this.Controls.Add(this.txtHFin_HE);
             this.Controls.Add(this.txtHIni_HE);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
+            this.Controls.Add(this.lblDescripcion);
+            this.Controls.Add(this.lblCantHoras);
+            this.Controls.Add(this.lblHIni);
+            this.Controls.Add(this.lblHFin);
             this.Controls.Add(this.dtpFechaHE);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.button5);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.lblFecha);
+            this.Controls.Add(this.btnCancelar);
+            this.Controls.Add(this.btnGuardar);
+            this.Controls.Add(this.btnNuevo);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmRegHE";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmRegHorasEx_Bibliotecario";
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -315,23 +320,23 @@
 
         #endregion
 
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Button btnCancelar;
+        private System.Windows.Forms.Button btnGuardar;
+        private System.Windows.Forms.Button btnNuevo;
+        private System.Windows.Forms.Label lblHMS_fin;
+        private System.Windows.Forms.Label lblHMS_ini;
         private System.Windows.Forms.TextBox txtDescripcion_HE;
         private System.Windows.Forms.TextBox txtCantHoras_HE;
         private System.Windows.Forms.TextBox txtHFin_HE;
         private System.Windows.Forms.TextBox txtHIni_HE;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lblDescripcion;
+        private System.Windows.Forms.Label lblCantHoras;
+        private System.Windows.Forms.Label lblHIni;
+        private System.Windows.Forms.Label lblHFin;
         private System.Windows.Forms.DateTimePicker dtpFechaHE;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label lblFecha;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Button btnCerrar;
     }
 }
