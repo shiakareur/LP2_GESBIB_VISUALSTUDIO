@@ -35,21 +35,8 @@ namespace TA_GesBib_Cliente
             estadoComponentes(Estado.Inicial);
         }
         
-      
-        private void btnBuscarDistribucionPersonal_Click(object sender, EventArgs e)
-        {
-                      
-            frmBuscarDistribucionxPersonal formBuscarDistrixPers =
-                new frmBuscarDistribucionxPersonal();
-          
-
-            if (formBuscarDistrixPers.ShowDialog() == DialogResult.OK)
-            {
-                estadoComponentes(Estado.Buscar);
-            }
-
-        }
-
+     
+   
         public void estadoComponentes(Estado estado)
         {
 
@@ -73,7 +60,8 @@ namespace TA_GesBib_Cliente
                     btnGuardar.Enabled = false;
                     btnModificar.Enabled = false;
                     btnCancelar.Enabled = false;
-                    btnBuscarDistribucionPersonal.Enabled = false;
+                    btnBuscar.Enabled = false;
+                    //btnBuscarDistribucionPersonal.Enabled = false;
                     //Campos de Texto
                     txtNombre.Enabled = false;
                     txtApe.Enabled = false;
@@ -92,7 +80,8 @@ namespace TA_GesBib_Cliente
                     btnModificar.Enabled = true;
                     btnGuardar.Enabled = false;
                     btnCancelar.Enabled = true;
-                    btnBuscarDistribucionPersonal.Enabled = false;
+                    btnBuscar.Enabled = false;
+                    //btnBuscarDistribucionPersonal.Enabled = false;
                     break;
                 case Estado.Nuevo:
                     //Etiquetas
@@ -108,9 +97,10 @@ namespace TA_GesBib_Cliente
                     //Botones
                     btnNuevo.Enabled = false;
                     btnGuardar.Enabled = true;
-                    btnModificar.Enabled = true;
+                    btnModificar.Enabled = false;
                     btnCancelar.Enabled = true;
-                    btnBuscarDistribucionPersonal.Enabled = true;
+                    btnBuscar.Enabled = true;
+                    //btnBuscarDistribucionPersonal.Enabled = true;
                     //Campos de Texto
                     txtNombre.Enabled = false;
                     txtApe.Enabled = false;
@@ -139,9 +129,10 @@ namespace TA_GesBib_Cliente
                     //Botones
                     btnNuevo.Enabled = false;
                     btnGuardar.Enabled = true;
-                    btnModificar.Enabled = false;
+                    btnModificar.Enabled = true;
                     btnCancelar.Enabled = true;
-                    btnBuscarDistribucionPersonal.Enabled = false;
+                    btnBuscar.Enabled = false;
+                    //btnBuscarDistribucionPersonal.Enabled = false;
                     //Campos de Texto
                     txtNombre.Enabled = false;
                     txtApe.Enabled = false;
@@ -241,6 +232,21 @@ namespace TA_GesBib_Cliente
                     break;
                 default:
                     break;
+            }
+        }
+
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
+
+            //se busca o lista la distribucion de personal
+
+            frmBuscarDistribucionxPersonal formBuscarDistrixPers =
+                new frmBuscarDistribucionxPersonal();
+
+            estadoComponentes(Estado.Buscar);
+            if (formBuscarDistrixPers.ShowDialog() == DialogResult.OK)
+            {
+                estadoComponentes(Estado.Buscar);
             }
         }
     }

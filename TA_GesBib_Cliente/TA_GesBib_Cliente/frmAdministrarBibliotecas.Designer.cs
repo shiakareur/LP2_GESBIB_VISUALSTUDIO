@@ -309,9 +309,9 @@
             this.btnCerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCerrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.btnCerrar.Image = global::TA_GesBib_Cliente.Properties.Resources.icono_cerrarventana;
-            this.btnCerrar.Location = new System.Drawing.Point(693, 605);
+            this.btnCerrar.Location = new System.Drawing.Point(394, 620);
             this.btnCerrar.Name = "btnCerrar";
-            this.btnCerrar.Size = new System.Drawing.Size(119, 40);
+            this.btnCerrar.Size = new System.Drawing.Size(134, 42);
             this.btnCerrar.TabIndex = 45;
             this.btnCerrar.Text = "CERRAR";
             this.btnCerrar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -403,7 +403,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(242)))), ((int)(((byte)(241)))));
-            this.ClientSize = new System.Drawing.Size(930, 657);
+            this.ClientSize = new System.Drawing.Size(950, 715);
             this.Controls.Add(this.gbPuntosAtencion);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.btnCerrar);

@@ -148,6 +148,8 @@ namespace TA_GesBib_Cliente
                 }
                 else
                 {
+                    var_frmRegistrarHE_Bibliotecario.limpiarComponentes();
+                    var_frmRegistrarHE_Bibliotecario.estadoComponentes(Estado.Inicial);
                     var_frmRegistrarHE_Bibliotecario.Visible = true;
                 }
 
@@ -224,6 +226,8 @@ namespace TA_GesBib_Cliente
                 }
                 else
                 {
+                    var_frmRegistrarInasis_Bibliotecario.limpiarComponentes();
+                    var_frmRegistrarInasis_Bibliotecario.estadoComponentes(Estado.Inicial);
                     var_frmRegistrarInasis_Bibliotecario.Visible = true;
                 }
 
@@ -277,6 +281,8 @@ namespace TA_GesBib_Cliente
                 }
                 else
                 {
+                    var_frmSolicitarHL_Bibliotecario.limpiarComponentes();
+                    var_frmSolicitarHL_Bibliotecario.estadoComponentes(Estado.Inicial);
                     var_frmSolicitarHL_Bibliotecario.Visible = true;
                 }
 
@@ -341,6 +347,8 @@ namespace TA_GesBib_Cliente
                 }
                 else
                 {
+                    var_frmSolicitarCambioTurno_Bibliotecario.limpiarComponentes();
+                    var_frmSolicitarCambioTurno_Bibliotecario.estadoComponentes(Estado.Inicial);
                     var_frmSolicitarCambioTurno_Bibliotecario.Visible = true;
                 }
 

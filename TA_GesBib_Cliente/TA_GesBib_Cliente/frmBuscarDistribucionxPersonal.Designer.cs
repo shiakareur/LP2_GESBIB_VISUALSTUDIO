@@ -62,11 +62,11 @@
             this.hora_inicio_refrigerio,
             this.hora_fin_refrigerio});
             this.dgvDistri_Personal.Location = new System.Drawing.Point(25, 126);
-            this.dgvDistri_Personal.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dgvDistri_Personal.Margin = new System.Windows.Forms.Padding(2);
             this.dgvDistri_Personal.Name = "dgvDistri_Personal";
             this.dgvDistri_Personal.ReadOnly = true;
             this.dgvDistri_Personal.RowTemplate.Height = 24;
-            this.dgvDistri_Personal.Size = new System.Drawing.Size(697, 237);
+            this.dgvDistri_Personal.Size = new System.Drawing.Size(944, 302);
             this.dgvDistri_Personal.TabIndex = 0;
             // 
             // nombre
@@ -127,9 +127,9 @@
             // 
             this.txtNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.txtNombre.Location = new System.Drawing.Point(25, 74);
-            this.txtNombre.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtNombre.Margin = new System.Windows.Forms.Padding(2);
             this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(357, 26);
+            this.txtNombre.Size = new System.Drawing.Size(447, 26);
             this.txtNombre.TabIndex = 20;
             // 
             // lblNombre
@@ -153,9 +153,9 @@
             this.btnBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.btnBuscar.Image = global::TA_GesBib_Cliente.Properties.Resources.icono_buscar;
             this.btnBuscar.Location = new System.Drawing.Point(222, 31);
-            this.btnBuscar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnBuscar.Margin = new System.Windows.Forms.Padding(2);
             this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(105, 32);
+            this.btnBuscar.Size = new System.Drawing.Size(143, 32);
             this.btnBuscar.TabIndex = 44;
             this.btnBuscar.Text = "BUSCAR";
             this.btnBuscar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -167,10 +167,11 @@
             this.btnSeleccionar.FlatAppearance.BorderSize = 0;
             this.btnSeleccionar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSeleccionar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.btnSeleccionar.Location = new System.Drawing.Point(488, 89);
-            this.btnSeleccionar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnSeleccionar.Image = global::TA_GesBib_Cliente.Properties.Resources.icono_crear_nuevo;
+            this.btnSeleccionar.Location = new System.Drawing.Point(709, 68);
+            this.btnSeleccionar.Margin = new System.Windows.Forms.Padding(2);
             this.btnSeleccionar.Name = "btnSeleccionar";
-            this.btnSeleccionar.Size = new System.Drawing.Size(162, 32);
+            this.btnSeleccionar.Size = new System.Drawing.Size(188, 32);
             this.btnSeleccionar.TabIndex = 45;
             this.btnSeleccionar.Text = "SELECCIONAR";
             this.btnSeleccionar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -181,7 +182,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(242)))), ((int)(((byte)(241)))));
-            this.ClientSize = new System.Drawing.Size(813, 500);
+            this.ClientSize = new System.Drawing.Size(1018, 604);
             this.Controls.Add(this.btnSeleccionar);
             this.Controls.Add(this.btnBuscar);
             this.Controls.Add(this.txtNombre);
@@ -189,7 +190,7 @@
             this.Controls.Add(this.dgvDistri_Personal);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
             this.Name = "frmBuscarDistribucionxPersonal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

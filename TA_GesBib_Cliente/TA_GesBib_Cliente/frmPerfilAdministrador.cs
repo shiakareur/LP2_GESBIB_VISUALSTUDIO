@@ -102,5 +102,10 @@ namespace TA_GesBib_Cliente
             frmAdmBibliotecas.Show();
             frmAdmBibliotecas.Location = new Point(0, 0);
         }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
