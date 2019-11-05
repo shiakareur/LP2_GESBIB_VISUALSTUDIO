@@ -62,10 +62,10 @@
             // 
             // dtpSolCambioTurno
             // 
-            this.dtpSolCambioTurno.Location = new System.Drawing.Point(406, 165);
-            this.dtpSolCambioTurno.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dtpSolCambioTurno.Location = new System.Drawing.Point(304, 134);
+            this.dtpSolCambioTurno.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dtpSolCambioTurno.Name = "dtpSolCambioTurno";
-            this.dtpSolCambioTurno.Size = new System.Drawing.Size(501, 22);
+            this.dtpSolCambioTurno.Size = new System.Drawing.Size(377, 20);
             this.dtpSolCambioTurno.TabIndex = 106;
             // 
             // lblFecha
@@ -73,10 +73,9 @@
             this.lblFecha.AutoSize = true;
             this.lblFecha.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblFecha.ForeColor = System.Drawing.Color.Black;
-            this.lblFecha.Location = new System.Drawing.Point(175, 156);
-            this.lblFecha.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblFecha.Location = new System.Drawing.Point(131, 127);
             this.lblFecha.Name = "lblFecha";
-            this.lblFecha.Size = new System.Drawing.Size(130, 32);
+            this.lblFecha.Size = new System.Drawing.Size(102, 26);
             this.lblFecha.TabIndex = 105;
             this.lblFecha.Text = "Fecha    :";
             this.lblFecha.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -86,10 +85,9 @@
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Arial Unicode MS", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.Color.Black;
-            this.label11.Location = new System.Drawing.Point(127, 65);
-            this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label11.Location = new System.Drawing.Point(95, 53);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(377, 19);
+            this.label11.Size = new System.Drawing.Size(329, 15);
             this.label11.TabIndex = 102;
             this.label11.Text = "______________________________________________";
             // 
@@ -98,10 +96,9 @@
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.ForeColor = System.Drawing.Color.Black;
-            this.label12.Location = new System.Drawing.Point(137, 23);
-            this.label12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label12.Location = new System.Drawing.Point(103, 19);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(366, 42);
+            this.label12.Size = new System.Drawing.Size(292, 33);
             this.label12.TabIndex = 101;
             this.label12.Text = "Intercambiar mi turno\r\n";
             this.label12.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -116,9 +113,11 @@
             this.gbDatosGenerales.Controls.Add(this.txtNombre);
             this.gbDatosGenerales.Controls.Add(this.lblNombre);
             this.gbDatosGenerales.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gbDatosGenerales.Location = new System.Drawing.Point(181, 218);
+            this.gbDatosGenerales.Location = new System.Drawing.Point(136, 177);
+            this.gbDatosGenerales.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.gbDatosGenerales.Name = "gbDatosGenerales";
-            this.gbDatosGenerales.Size = new System.Drawing.Size(779, 157);
+            this.gbDatosGenerales.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.gbDatosGenerales.Size = new System.Drawing.Size(584, 128);
             this.gbDatosGenerales.TabIndex = 120;
             this.gbDatosGenerales.TabStop = false;
             this.gbDatosGenerales.Text = "Datos personal a intercambiar turno :";
@@ -126,9 +125,10 @@
             // btnBuscarDistribucionPersonal
             // 
             this.btnBuscarDistribucionPersonal.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBuscarDistribucionPersonal.Location = new System.Drawing.Point(349, 0);
+            this.btnBuscarDistribucionPersonal.Location = new System.Drawing.Point(262, 0);
+            this.btnBuscarDistribucionPersonal.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnBuscarDistribucionPersonal.Name = "btnBuscarDistribucionPersonal";
-            this.btnBuscarDistribucionPersonal.Size = new System.Drawing.Size(30, 26);
+            this.btnBuscarDistribucionPersonal.Size = new System.Drawing.Size(22, 21);
             this.btnBuscarDistribucionPersonal.TabIndex = 38;
             this.btnBuscarDistribucionPersonal.Text = "...";
             this.btnBuscarDistribucionPersonal.UseVisualStyleBackColor = true;
@@ -137,9 +137,10 @@
             // txtCargo
             // 
             this.txtCargo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.txtCargo.Location = new System.Drawing.Point(226, 108);
+            this.txtCargo.Location = new System.Drawing.Point(170, 88);
+            this.txtCargo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtCargo.Name = "txtCargo";
-            this.txtCargo.Size = new System.Drawing.Size(186, 30);
+            this.txtCargo.Size = new System.Drawing.Size(140, 26);
             this.txtCargo.TabIndex = 37;
             // 
             // lblCargo
@@ -148,18 +149,20 @@
             this.lblCargo.BackColor = System.Drawing.Color.Transparent;
             this.lblCargo.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCargo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(37)))), ((int)(((byte)(42)))));
-            this.lblCargo.Location = new System.Drawing.Point(55, 109);
+            this.lblCargo.Location = new System.Drawing.Point(41, 89);
+            this.lblCargo.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblCargo.Name = "lblCargo";
-            this.lblCargo.Size = new System.Drawing.Size(91, 29);
+            this.lblCargo.Size = new System.Drawing.Size(72, 24);
             this.lblCargo.TabIndex = 36;
             this.lblCargo.Text = "Cargo:";
             // 
             // txtApe
             // 
             this.txtApe.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.txtApe.Location = new System.Drawing.Point(226, 73);
+            this.txtApe.Location = new System.Drawing.Point(170, 59);
+            this.txtApe.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtApe.Name = "txtApe";
-            this.txtApe.Size = new System.Drawing.Size(425, 30);
+            this.txtApe.Size = new System.Drawing.Size(320, 26);
             this.txtApe.TabIndex = 35;
             // 
             // lblApe
@@ -168,18 +171,20 @@
             this.lblApe.BackColor = System.Drawing.Color.Transparent;
             this.lblApe.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblApe.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(37)))), ((int)(((byte)(42)))));
-            this.lblApe.Location = new System.Drawing.Point(55, 73);
+            this.lblApe.Location = new System.Drawing.Point(41, 59);
+            this.lblApe.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblApe.Name = "lblApe";
-            this.lblApe.Size = new System.Drawing.Size(130, 29);
+            this.lblApe.Size = new System.Drawing.Size(103, 24);
             this.lblApe.TabIndex = 34;
             this.lblApe.Text = "Apellidos:";
             // 
             // txtNombre
             // 
             this.txtNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.txtNombre.Location = new System.Drawing.Point(226, 37);
+            this.txtNombre.Location = new System.Drawing.Point(170, 30);
+            this.txtNombre.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(425, 30);
+            this.txtNombre.Size = new System.Drawing.Size(320, 26);
             this.txtNombre.TabIndex = 20;
             // 
             // lblNombre
@@ -188,9 +193,10 @@
             this.lblNombre.BackColor = System.Drawing.Color.Transparent;
             this.lblNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNombre.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(37)))), ((int)(((byte)(42)))));
-            this.lblNombre.Location = new System.Drawing.Point(55, 38);
+            this.lblNombre.Location = new System.Drawing.Point(41, 31);
+            this.lblNombre.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblNombre.Name = "lblNombre";
-            this.lblNombre.Size = new System.Drawing.Size(127, 29);
+            this.lblNombre.Size = new System.Drawing.Size(101, 24);
             this.lblNombre.TabIndex = 19;
             this.lblNombre.Text = "Nombres:";
             // 
@@ -207,9 +213,11 @@
             this.groupBox1.Controls.Add(this.txtPtoAten);
             this.groupBox1.Controls.Add(this.lblPuntoAten);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(181, 406);
+            this.groupBox1.Location = new System.Drawing.Point(136, 330);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(779, 195);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Size = new System.Drawing.Size(584, 158);
             this.groupBox1.TabIndex = 121;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Datos turno :";
@@ -217,9 +225,10 @@
             // txtFinRef
             // 
             this.txtFinRef.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.txtFinRef.Location = new System.Drawing.Point(351, 148);
+            this.txtFinRef.Location = new System.Drawing.Point(263, 120);
+            this.txtFinRef.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtFinRef.Name = "txtFinRef";
-            this.txtFinRef.Size = new System.Drawing.Size(186, 30);
+            this.txtFinRef.Size = new System.Drawing.Size(140, 26);
             this.txtFinRef.TabIndex = 41;
             // 
             // lblFinRef
@@ -228,18 +237,20 @@
             this.lblFinRef.BackColor = System.Drawing.Color.Transparent;
             this.lblFinRef.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblFinRef.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(37)))), ((int)(((byte)(42)))));
-            this.lblFinRef.Location = new System.Drawing.Point(55, 148);
+            this.lblFinRef.Location = new System.Drawing.Point(41, 120);
+            this.lblFinRef.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblFinRef.Name = "lblFinRef";
-            this.lblFinRef.Size = new System.Drawing.Size(226, 29);
+            this.lblFinRef.Size = new System.Drawing.Size(179, 24);
             this.lblFinRef.TabIndex = 40;
             this.lblFinRef.Text = "Hora fin refrigerio:";
             // 
             // txtHFin
             // 
             this.txtHFin.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.txtHFin.Location = new System.Drawing.Point(602, 73);
+            this.txtHFin.Location = new System.Drawing.Point(452, 59);
+            this.txtHFin.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtHFin.Name = "txtHFin";
-            this.txtHFin.Size = new System.Drawing.Size(112, 30);
+            this.txtHFin.Size = new System.Drawing.Size(85, 26);
             this.txtHFin.TabIndex = 39;
             // 
             // lblHFin
@@ -248,18 +259,20 @@
             this.lblHFin.BackColor = System.Drawing.Color.Transparent;
             this.lblHFin.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblHFin.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(37)))), ((int)(((byte)(42)))));
-            this.lblHFin.Location = new System.Drawing.Point(431, 73);
+            this.lblHFin.Location = new System.Drawing.Point(323, 59);
+            this.lblHFin.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblHFin.Name = "lblHFin";
-            this.lblHFin.Size = new System.Drawing.Size(120, 29);
+            this.lblHFin.Size = new System.Drawing.Size(97, 24);
             this.lblHFin.TabIndex = 38;
             this.lblHFin.Text = "Hora Fin:";
             // 
             // txtIniRef
             // 
             this.txtIniRef.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.txtIniRef.Location = new System.Drawing.Point(351, 109);
+            this.txtIniRef.Location = new System.Drawing.Point(263, 89);
+            this.txtIniRef.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtIniRef.Name = "txtIniRef";
-            this.txtIniRef.Size = new System.Drawing.Size(186, 30);
+            this.txtIniRef.Size = new System.Drawing.Size(140, 26);
             this.txtIniRef.TabIndex = 37;
             // 
             // lblIniRef
@@ -268,18 +281,20 @@
             this.lblIniRef.BackColor = System.Drawing.Color.Transparent;
             this.lblIniRef.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblIniRef.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(37)))), ((int)(((byte)(42)))));
-            this.lblIniRef.Location = new System.Drawing.Point(55, 109);
+            this.lblIniRef.Location = new System.Drawing.Point(41, 89);
+            this.lblIniRef.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblIniRef.Name = "lblIniRef";
-            this.lblIniRef.Size = new System.Drawing.Size(261, 29);
+            this.lblIniRef.Size = new System.Drawing.Size(207, 24);
             this.lblIniRef.TabIndex = 36;
             this.lblIniRef.Text = "Hora inicio refrigerio:";
             // 
             // txtHIni
             // 
             this.txtHIni.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.txtHIni.Location = new System.Drawing.Point(226, 73);
+            this.txtHIni.Location = new System.Drawing.Point(170, 59);
+            this.txtHIni.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtHIni.Name = "txtHIni";
-            this.txtHIni.Size = new System.Drawing.Size(112, 30);
+            this.txtHIni.Size = new System.Drawing.Size(85, 26);
             this.txtHIni.TabIndex = 35;
             // 
             // lblHIni
@@ -288,18 +303,20 @@
             this.lblHIni.BackColor = System.Drawing.Color.Transparent;
             this.lblHIni.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblHIni.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(37)))), ((int)(((byte)(42)))));
-            this.lblHIni.Location = new System.Drawing.Point(55, 73);
+            this.lblHIni.Location = new System.Drawing.Point(41, 59);
+            this.lblHIni.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblHIni.Name = "lblHIni";
-            this.lblHIni.Size = new System.Drawing.Size(146, 29);
+            this.lblHIni.Size = new System.Drawing.Size(117, 24);
             this.lblHIni.TabIndex = 34;
             this.lblHIni.Text = "Hora Inicio:";
             // 
             // txtPtoAten
             // 
             this.txtPtoAten.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.txtPtoAten.Location = new System.Drawing.Point(394, 37);
+            this.txtPtoAten.Location = new System.Drawing.Point(296, 30);
+            this.txtPtoAten.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtPtoAten.Name = "txtPtoAten";
-            this.txtPtoAten.Size = new System.Drawing.Size(257, 30);
+            this.txtPtoAten.Size = new System.Drawing.Size(194, 26);
             this.txtPtoAten.TabIndex = 20;
             // 
             // lblPuntoAten
@@ -308,9 +325,10 @@
             this.lblPuntoAten.BackColor = System.Drawing.Color.Transparent;
             this.lblPuntoAten.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPuntoAten.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(37)))), ((int)(((byte)(42)))));
-            this.lblPuntoAten.Location = new System.Drawing.Point(55, 38);
+            this.lblPuntoAten.Location = new System.Drawing.Point(41, 31);
+            this.lblPuntoAten.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblPuntoAten.Name = "lblPuntoAten";
-            this.lblPuntoAten.Size = new System.Drawing.Size(232, 29);
+            this.lblPuntoAten.Size = new System.Drawing.Size(189, 24);
             this.lblPuntoAten.TabIndex = 19;
             this.lblPuntoAten.Text = "Punto de Atención:";
             // 
@@ -321,10 +339,9 @@
             this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.btnCancelar.Image = global::TA_GesBib_Cliente.Properties.Resources.icons8_cancelar_2_30;
-            this.btnCancelar.Location = new System.Drawing.Point(761, 91);
-            this.btnCancelar.Margin = new System.Windows.Forms.Padding(4);
+            this.btnCancelar.Location = new System.Drawing.Point(571, 74);
             this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(174, 52);
+            this.btnCancelar.Size = new System.Drawing.Size(130, 42);
             this.btnCancelar.TabIndex = 116;
             this.btnCancelar.Text = "CANCELAR";
             this.btnCancelar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -339,10 +356,9 @@
             this.btnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGuardar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.btnGuardar.Image = global::TA_GesBib_Cliente.Properties.Resources.icono_guardar;
-            this.btnGuardar.Location = new System.Drawing.Point(411, 91);
-            this.btnGuardar.Margin = new System.Windows.Forms.Padding(4);
+            this.btnGuardar.Location = new System.Drawing.Point(308, 74);
             this.btnGuardar.Name = "btnGuardar";
-            this.btnGuardar.Size = new System.Drawing.Size(177, 52);
+            this.btnGuardar.Size = new System.Drawing.Size(133, 42);
             this.btnGuardar.TabIndex = 115;
             this.btnGuardar.Text = "GUARDAR";
             this.btnGuardar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -356,10 +372,9 @@
             this.btnNuevo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnNuevo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnNuevo.Image = global::TA_GesBib_Cliente.Properties.Resources.icono_crear_nuevo;
-            this.btnNuevo.Location = new System.Drawing.Point(249, 91);
-            this.btnNuevo.Margin = new System.Windows.Forms.Padding(4);
+            this.btnNuevo.Location = new System.Drawing.Point(187, 74);
             this.btnNuevo.Name = "btnNuevo";
-            this.btnNuevo.Size = new System.Drawing.Size(169, 52);
+            this.btnNuevo.Size = new System.Drawing.Size(127, 42);
             this.btnNuevo.TabIndex = 114;
             this.btnNuevo.Text = "NUEVO";
             this.btnNuevo.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -373,9 +388,10 @@
             this.btnModificar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnModificar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.btnModificar.Image = global::TA_GesBib_Cliente.Properties.Resources.icono_modificar;
-            this.btnModificar.Location = new System.Drawing.Point(587, 91);
+            this.btnModificar.Location = new System.Drawing.Point(440, 74);
+            this.btnModificar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnModificar.Name = "btnModificar";
-            this.btnModificar.Size = new System.Drawing.Size(174, 52);
+            this.btnModificar.Size = new System.Drawing.Size(130, 42);
             this.btnModificar.TabIndex = 122;
             this.btnModificar.Text = "MODIFICAR";
             this.btnModificar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -389,9 +405,10 @@
             this.btnCerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCerrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.btnCerrar.Image = global::TA_GesBib_Cliente.Properties.Resources.icono_cerrarventana;
-            this.btnCerrar.Location = new System.Drawing.Point(717, 630);
+            this.btnCerrar.Location = new System.Drawing.Point(538, 512);
+            this.btnCerrar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnCerrar.Name = "btnCerrar";
-            this.btnCerrar.Size = new System.Drawing.Size(150, 40);
+            this.btnCerrar.Size = new System.Drawing.Size(112, 32);
             this.btnCerrar.TabIndex = 123;
             this.btnCerrar.Text = "CERRAR";
             this.btnCerrar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -400,10 +417,10 @@
             // 
             // frmSolicitarCambioTurno
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(242)))), ((int)(((byte)(241)))));
-            this.ClientSize = new System.Drawing.Size(1105, 682);
+            this.ClientSize = new System.Drawing.Size(829, 554);
             this.Controls.Add(this.btnCerrar);
             this.Controls.Add(this.btnModificar);
             this.Controls.Add(this.groupBox1);
@@ -416,7 +433,6 @@
             this.Controls.Add(this.label11);
             this.Controls.Add(this.label12);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmSolicitarCambioTurno";
             this.Text = "frmSolicitarCambioTurno_Bibliotecario";
             this.gbDatosGenerales.ResumeLayout(false);

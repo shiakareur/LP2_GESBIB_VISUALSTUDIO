@@ -1,0 +1,373 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://services.lp2soft.pucp.edu.pe/" targetNamespace="http://services.lp2soft.pucp.edu.pe/" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="actualizarCapacitacion" type="tns:actualizarCapacitacion" />
+  <xs:element name="actualizarCapacitacionResponse" type="tns:actualizarCapacitacionResponse" />
+  <xs:element name="eliminarCapacitacion" type="tns:eliminarCapacitacion" />
+  <xs:element name="eliminarCapacitacionResponse" type="tns:eliminarCapacitacionResponse" />
+  <xs:element name="eliminarDiaCapacitacion" type="tns:eliminarDiaCapacitacion" />
+  <xs:element name="eliminarDiaCapacitacionResponse" type="tns:eliminarDiaCapacitacionResponse" />
+  <xs:element name="hello" type="tns:hello" />
+  <xs:element name="helloResponse" type="tns:helloResponse" />
+  <xs:element name="insertarAuxiliarBiblioteca" type="tns:insertarAuxiliarBiblioteca" />
+  <xs:element name="insertarAuxiliarBibliotecaResponse" type="tns:insertarAuxiliarBibliotecaResponse" />
+  <xs:element name="insertarBiblioteca" type="tns:insertarBiblioteca" />
+  <xs:element name="insertarBibliotecaResponse" type="tns:insertarBibliotecaResponse" />
+  <xs:element name="insertarBibliotecario" type="tns:insertarBibliotecario" />
+  <xs:element name="insertarBibliotecarioResponse" type="tns:insertarBibliotecarioResponse" />
+  <xs:element name="insertarGestor" type="tns:insertarGestor" />
+  <xs:element name="insertarGestorResponse" type="tns:insertarGestorResponse" />
+  <xs:element name="insertarPerfilExperiencia" type="tns:insertarPerfilExperiencia" />
+  <xs:element name="insertarPerfilExperienciaResponse" type="tns:insertarPerfilExperienciaResponse" />
+  <xs:element name="insertarPracticante" type="tns:insertarPracticante" />
+  <xs:element name="insertarPracticanteResponse" type="tns:insertarPracticanteResponse" />
+  <xs:element name="insertarPuntoAtencion" type="tns:insertarPuntoAtencion" />
+  <xs:element name="insertarPuntoAtencionResponse" type="tns:insertarPuntoAtencionResponse" />
+  <xs:element name="listarBibliotecas" type="tns:listarBibliotecas" />
+  <xs:element name="listarBibliotecasResponse" type="tns:listarBibliotecasResponse" />
+  <xs:element name="listarCapacitaciones" type="tns:listarCapacitaciones" />
+  <xs:element name="listarCapacitacionesResponse" type="tns:listarCapacitacionesResponse" />
+  <xs:element name="listarGestores" type="tns:listarGestores" />
+  <xs:element name="listarGestoresResponse" type="tns:listarGestoresResponse" />
+  <xs:element name="listarPerfilExperiencia" type="tns:listarPerfilExperiencia" />
+  <xs:element name="listarPerfilExperienciaResponse" type="tns:listarPerfilExperienciaResponse" />
+  <xs:element name="listarPuntosAtencion" type="tns:listarPuntosAtencion" />
+  <xs:element name="listarPuntosAtencionResponse" type="tns:listarPuntosAtencionResponse" />
+  <xs:complexType name="insertarGestor">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="gestor" type="tns:gestor" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="gestor">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:personal">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="avisos" nillable="true" type="tns:aviso" />
+          <xs:element minOccurs="0" name="biblioteca" type="tns:biblioteca" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="personal">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:usuario">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="codigo" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="cubreRefrigerioA" nillable="true" type="tns:personal" />
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="distribucion" nillable="true" type="tns:distribucionPersonal" />
+          <xs:element minOccurs="0" name="fecha_ingreso" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="foto" type="xs:base64Binary" />
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="listaCapacitaciones" nillable="true" type="tns:capacitacion" />
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="listaHorasExtra" nillable="true" type="tns:horaExtra" />
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="listaInasistencias" nillable="true" type="tns:inasistencia" />
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="listaVacaciones" nillable="true" type="tns:vacaciones" />
+          <xs:element minOccurs="0" name="meCubre" type="tns:personal" />
+          <xs:element name="totalHorasExtra" type="xs:float" />
+          <xs:element minOccurs="0" name="turno" type="tns:turno" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="usuario" abstract="true">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="apellido" type="xs:string" />
+      <xs:element minOccurs="0" name="contrasenia" type="xs:string" />
+      <xs:element minOccurs="0" name="email" type="xs:string" />
+      <xs:element name="id" type="xs:int" />
+      <xs:element minOccurs="0" name="nombre" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="aviso">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="descripcion" type="xs:string" />
+      <xs:element minOccurs="0" name="gestor" type="tns:gestor" />
+      <xs:element name="id" type="xs:int" />
+      <xs:element minOccurs="0" name="titulo" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="biblioteca">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="gestor" type="tns:gestor" />
+      <xs:element name="id" type="xs:int" />
+      <xs:element minOccurs="0" name="nombre" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="distribucionPersonal">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="fecha" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="horaFin" type="tns:time" />
+      <xs:element minOccurs="0" name="horaInicio" type="tns:time" />
+      <xs:element minOccurs="0" name="personal" type="tns:personal" />
+      <xs:element minOccurs="0" name="puntoAtencion" type="tns:puntosAtencion" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="time">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="puntosAtencion">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="biblioteca" type="tns:biblioteca" />
+      <xs:element name="cant_min_pers" type="xs:int" />
+      <xs:element name="cant_opt_pers" type="xs:int" />
+      <xs:element name="id" type="xs:int" />
+      <xs:element minOccurs="0" name="nombre" type="xs:string" />
+      <xs:element minOccurs="0" name="perfilExperiencia" type="tns:perfilExperiencia" />
+      <xs:element name="piso" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="perfilExperiencia">
+    <xs:sequence>
+      <xs:element name="id" type="xs:int" />
+      <xs:element minOccurs="0" name="nombrePerfil" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="capacitacion">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="descripcion" type="xs:string" />
+      <xs:element minOccurs="0" name="fecha_fin" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="fecha_ini" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="fin_inscripcion" type="xs:dateTime" />
+      <xs:element name="id" type="xs:int" />
+      <xs:element minOccurs="0" name="inicio_inscripcion" type="xs:dateTime" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="listaDiasCapacitacion" nillable="true" type="tns:diaCapacitacion" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="listaPersonal" nillable="true" type="tns:personal" />
+      <xs:element minOccurs="0" name="lugar" type="xs:string" />
+      <xs:element minOccurs="0" name="nombre" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="diaCapacitacion">
+    <xs:sequence>
+      <xs:element name="activo" type="xs:int" />
+      <xs:element minOccurs="0" name="capacitacion" type="tns:capacitacion" />
+      <xs:element minOccurs="0" name="fecha" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="hora_fin" type="tns:time" />
+      <xs:element minOccurs="0" name="hora_ini" type="tns:time" />
+      <xs:element name="idDiaCapacitacion" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="horaExtra">
+    <xs:sequence>
+      <xs:element name="cantidadHoras" type="xs:float" />
+      <xs:element minOccurs="0" name="descripcion" type="xs:string" />
+      <xs:element minOccurs="0" name="fecha" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="horaFin" type="tns:time" />
+      <xs:element minOccurs="0" name="horaInicio" type="tns:time" />
+      <xs:element name="id" type="xs:int" />
+      <xs:element minOccurs="0" name="personal" type="tns:personal" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="inasistencia">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="fecha" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="horaFin" type="tns:time" />
+      <xs:element minOccurs="0" name="horaInicio" type="tns:time" />
+      <xs:element name="id" type="xs:int" />
+      <xs:element minOccurs="0" name="motivo" type="xs:string" />
+      <xs:element minOccurs="0" name="personal" type="tns:personal" />
+      <xs:element minOccurs="0" name="tipoInasistencia" type="tns:tipoInasistencia" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="tipoInasistencia">
+    <xs:sequence>
+      <xs:element name="id" type="xs:int" />
+      <xs:element minOccurs="0" name="nombre" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="vacaciones">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="fecha_fin" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="fecha_inicio" type="xs:dateTime" />
+      <xs:element name="id" type="xs:int" />
+      <xs:element minOccurs="0" name="personal" type="tns:personal" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="turno">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="horaFin" type="tns:time" />
+      <xs:element minOccurs="0" name="horaInicio" type="tns:time" />
+      <xs:element name="id" type="xs:int" />
+      <xs:element minOccurs="0" name="refrigerioFin" type="tns:time" />
+      <xs:element minOccurs="0" name="refrigerioInicio" type="tns:time" />
+      <xs:element minOccurs="0" name="semestre" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="insertarGestorResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="insertarAuxiliarBiblioteca">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="auxiliar" type="tns:auxiliar" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="auxiliar">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:personalBiblioteca">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="personalBiblioteca">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:personal">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="biblioteca" type="tns:biblioteca" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="insertarAuxiliarBibliotecaResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="insertarPracticante">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="practicante" type="tns:practicante" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="practicante">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:personalBiblioteca">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="insertarPracticanteResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="insertarPerfilExperiencia">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="perfilExperiencia" type="tns:perfilExperiencia" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="insertarPerfilExperienciaResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarPuntosAtencion">
+    <xs:sequence>
+      <xs:element name="arg0" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarPuntosAtencionResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:puntosAtencion" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="insertarPuntoAtencion">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="PuntoAtencion" type="tns:puntosAtencion" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="insertarPuntoAtencionResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarPerfilExperiencia">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="listarPerfilExperienciaResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:perfilExperiencia" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarBibliotecas">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="listarBibliotecasResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:biblioteca" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="eliminarDiaCapacitacion">
+    <xs:sequence>
+      <xs:element name="idCapacitacion" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="eliminarDiaCapacitacionResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="hello">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="name" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="helloResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="actualizarCapacitacion">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="capacitacion" type="tns:capacitacion" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="actualizarCapacitacionResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarCapacitaciones">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="listarCapacitacionesResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:capacitacion" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="eliminarCapacitacion">
+    <xs:sequence>
+      <xs:element name="idCapacitacion" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="eliminarCapacitacionResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="insertarBibliotecario">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="bibliotecario" type="tns:bibliotecario" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="bibliotecario">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:personalBiblioteca">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="insertarBibliotecarioResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="insertarBiblioteca">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="biblioteca" type="tns:biblioteca" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="insertarBibliotecaResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarGestores">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="nombre" type="xs:string" />
+      <xs:element minOccurs="0" name="apellido" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarGestoresResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:gestor" />
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

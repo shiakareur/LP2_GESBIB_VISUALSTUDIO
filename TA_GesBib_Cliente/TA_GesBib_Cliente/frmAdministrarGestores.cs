@@ -12,8 +12,14 @@ namespace TA_GesBib_Cliente
 {
     public partial class frmAdministrarGestores : Form
     {
-        Estado estadoForm;
+        //Estado estadoForm;
+        ServicioJava.ServicioClient servGesBib = new ServicioJava.ServicioClient();
 
+        
+
+        
+
+               
         private frmPerfilAdministrador var_formPerfilAdmin;
         public frmAdministrarGestores()
         {
@@ -30,6 +36,10 @@ namespace TA_GesBib_Cliente
             InitializeComponent();
             //Al abrir el form, este es el estado de los componentes
             limpiarComponentes();
+
+            //cargamos el combobox de biblioteca asignada
+            cmbBibAisg.DataSource = servGesBib.listarBibliotecas();
+            cmbBibAisg.ValueMember = "Nombre";
             estadoComponentes(Estado.Inicial);
         }
 
@@ -169,6 +179,33 @@ namespace TA_GesBib_Cliente
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
+            //creamos el gestor
+            ServicioJava.gestor ges = new ServicioJava.gestor();
+
+            ges.codigo = txtCodigo.Text;
+            ges.nombre = txtNombres.Text;
+            ges.apellido = txtApellidos.Text;
+            ges.fecha_ingreso = dtpFechaIng.Value;
+            ges.fecha_ingresoSpecified = true;
+            ges.email = txtCorreo.Text;
+            ges.contrasenia = txtClave.Text;
+            ges.biblioteca = (ServicioJava.biblioteca)cmbBibAisg.SelectedItem;
+
+
+            //llamamos al servicio
+            try
+            {
+                servGesBib.insertarGestor(ges);
+            }
+            catch(Exception ex)
+            {
+
+            }
+            
+
+
+
+
             //Volver al estado inicial
             estadoComponentes(Estado.Inicial);
         }

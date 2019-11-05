@@ -12,7 +12,9 @@ namespace TA_GesBib_Cliente
 {
     public partial class frmAdministrarBibliotecas : Form
     {
-        Estado estadoForm;
+        //Estado estadoForm;
+
+        ServicioJava.ServicioClient servGesBib = new ServicioJava.ServicioClient();
 
         private frmPerfilAdministrador var_formPerfilAdmin;
         public frmAdministrarBibliotecas()
@@ -28,8 +30,15 @@ namespace TA_GesBib_Cliente
         {
             var_formPerfilAdmin = formPerfilAdmin;
             InitializeComponent();
+
+        
+
+
             //Al abrir el form, este es el estado de los componentes
             limpiarComponentes();
+            //cargamos el combobox de gestores
+            cmbGestor.DataSource = servGesBib.listarGestores("", "");
+            cmbGestor.ValueMember = "Apellido";
             estadoComponentes(Estado.Inicial);
         }
 
@@ -130,6 +139,31 @@ namespace TA_GesBib_Cliente
         {
             //Volver al estado inicial
             estadoComponentes(Estado.Inicial);
+
+
+            ServicioJava.biblioteca bib = new ServicioJava.biblioteca();
+
+
+            bib.nombre = txtNombre.Text;
+            bib.gestor = (ServicioJava.gestor)cmbGestor.SelectedItem;
+
+
+            try
+            {
+                servGesBib.insertarBiblioteca(bib);
+
+                //MessageBox.Show("Alumno Registrado exitosamente", "Mensaje Confirmacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch(System.ServiceModel.CommunicationException ex)
+            {
+                System.Console.WriteLine(" EXCEPCION !!");
+            }
+            
+
+
+
+
+
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)
