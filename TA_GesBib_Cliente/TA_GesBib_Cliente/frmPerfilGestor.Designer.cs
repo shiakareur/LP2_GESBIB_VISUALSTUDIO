@@ -37,14 +37,20 @@
             this.lblTipoPerfil = new System.Windows.Forms.Label();
             this.lblNombreUsuario = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.picHome = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label6 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lblBienvenido = new System.Windows.Forms.Label();
             this.panelAviso = new System.Windows.Forms.Panel();
+            this.panelBIPO = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picHome)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panelBIPO.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnAsignarTurnos
@@ -81,7 +87,7 @@
             this.btnCerrarSesion.Name = "btnCerrarSesion";
             this.btnCerrarSesion.Size = new System.Drawing.Size(227, 50);
             this.btnCerrarSesion.TabIndex = 59;
-            this.btnCerrarSesion.Text = "CERRAR SESIÓN";
+            this.btnCerrarSesion.Text = "Cerrar Sesion";
             this.btnCerrarSesion.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnCerrarSesion.UseVisualStyleBackColor = false;
             this.btnCerrarSesion.Click += new System.EventHandler(this.btnCerrarSesion_Click);
@@ -94,12 +100,12 @@
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.Image = global::TA_GesBib_Cliente.Properties.Resources.icono_configuracion_pequeño;
-            this.button3.Location = new System.Drawing.Point(25, 470);
+            this.button3.Location = new System.Drawing.Point(32, 470);
             this.button3.Margin = new System.Windows.Forms.Padding(4);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(200, 50);
             this.button3.TabIndex = 58;
-            this.button3.Text = "CONFIGURACIÓN";
+            this.button3.Text = "Configuración";
             this.button3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button3.UseVisualStyleBackColor = false;
             // 
@@ -164,6 +170,9 @@
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(175)))), ((int)(((byte)(169)))));
             this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel1.Controls.Add(this.button2);
+            this.panel1.Controls.Add(this.button1);
+            this.panel1.Controls.Add(this.picHome);
             this.panel1.Controls.Add(this.btnAsignarTurnos);
             this.panel1.Controls.Add(this.btnCerrarSesion);
             this.panel1.Controls.Add(this.button3);
@@ -181,6 +190,55 @@
             this.panel1.Size = new System.Drawing.Size(296, 824);
             this.panel1.TabIndex = 3;
             this.panel1.TabStop = true;
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(175)))), ((int)(((byte)(169)))));
+            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button2.FlatAppearance.BorderSize = 0;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.Image = global::TA_GesBib_Cliente.Properties.Resources.icon_validar;
+            this.button2.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.button2.Location = new System.Drawing.Point(25, 369);
+            this.button2.Margin = new System.Windows.Forms.Padding(4);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(227, 60);
+            this.button2.TabIndex = 63;
+            this.button2.Text = "Validaciones";
+            this.button2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button2.UseVisualStyleBackColor = false;
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(175)))), ((int)(((byte)(169)))));
+            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Image = global::TA_GesBib_Cliente.Properties.Resources.icon_capacitacion;
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.button1.Location = new System.Drawing.Point(25, 301);
+            this.button1.Margin = new System.Windows.Forms.Padding(4);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(227, 60);
+            this.button1.TabIndex = 62;
+            this.button1.Text = "Capacitaciones";
+            this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button1.UseVisualStyleBackColor = false;
+            // 
+            // picHome
+            // 
+            this.picHome.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(175)))), ((int)(((byte)(169)))));
+            this.picHome.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.picHome.Image = global::TA_GesBib_Cliente.Properties.Resources.hom4;
+            this.picHome.Location = new System.Drawing.Point(209, 113);
+            this.picHome.Name = "picHome";
+            this.picHome.Size = new System.Drawing.Size(56, 56);
+            this.picHome.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picHome.TabIndex = 61;
+            this.picHome.TabStop = false;
+            this.picHome.Click += new System.EventHandler(this.picHome_Click);
             // 
             // panel2
             // 
@@ -219,7 +277,7 @@
             this.lblBienvenido.BackColor = System.Drawing.SystemColors.Window;
             this.lblBienvenido.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblBienvenido.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.lblBienvenido.Location = new System.Drawing.Point(380, 92);
+            this.lblBienvenido.Location = new System.Drawing.Point(91, 50);
             this.lblBienvenido.Name = "lblBienvenido";
             this.lblBienvenido.Size = new System.Drawing.Size(449, 33);
             this.lblBienvenido.TabIndex = 58;
@@ -228,13 +286,24 @@
             // 
             // panelAviso
             // 
-            this.panelAviso.BackColor = System.Drawing.Color.Yellow;
+            this.panelAviso.BackColor = System.Drawing.Color.Transparent;
             this.panelAviso.BackgroundImage = global::TA_GesBib_Cliente.Properties.Resources.posit;
             this.panelAviso.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panelAviso.Location = new System.Drawing.Point(580, 205);
+            this.panelAviso.Location = new System.Drawing.Point(319, 272);
             this.panelAviso.Name = "panelAviso";
-            this.panelAviso.Size = new System.Drawing.Size(343, 285);
+            this.panelAviso.Size = new System.Drawing.Size(477, 348);
             this.panelAviso.TabIndex = 61;
+            // 
+            // panelBIPO
+            // 
+            this.panelBIPO.BackgroundImage = global::TA_GesBib_Cliente.Properties.Resources.biblio_ari_borroso;
+            this.panelBIPO.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panelBIPO.Controls.Add(this.panelAviso);
+            this.panelBIPO.Controls.Add(this.lblBienvenido);
+            this.panelBIPO.Location = new System.Drawing.Point(288, 0);
+            this.panelBIPO.Name = "panelBIPO";
+            this.panelBIPO.Size = new System.Drawing.Size(1079, 824);
+            this.panelBIPO.TabIndex = 63;
             // 
             // frmPerfilGestor
             // 
@@ -243,8 +312,7 @@
             this.BackgroundImage = global::TA_GesBib_Cliente.Properties.Resources.biblio_ari_borroso;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1364, 824);
-            this.Controls.Add(this.panelAviso);
-            this.Controls.Add(this.lblBienvenido);
+            this.Controls.Add(this.panelBIPO);
             this.Controls.Add(this.panel1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.IsMdiContainer = true;
@@ -255,9 +323,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picHome)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.panelBIPO.ResumeLayout(false);
+            this.panelBIPO.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -275,5 +345,9 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label lblBienvenido;
         private System.Windows.Forms.Panel panelAviso;
+        private System.Windows.Forms.PictureBox picHome;
+        private System.Windows.Forms.Panel panelBIPO;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button1;
     }
 }

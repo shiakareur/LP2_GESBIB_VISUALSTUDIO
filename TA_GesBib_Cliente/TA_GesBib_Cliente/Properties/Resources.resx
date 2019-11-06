@@ -121,8 +121,8 @@
   <data name="icono-usuario" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icono-usuario.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="icono-personal2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icono-personal2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="usuario" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\usuario.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="icono-configuracion_pequeño" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icono-configuracion_pequeño.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -130,8 +130,17 @@
   <data name="logoMediano" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\logoMediano.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="icon-tinker" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon-tinker.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="icono-1-usuario" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icono-1-usuario.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icono-personal" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icono-personal.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icono-home" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icono-home.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="icono-ver" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icono-ver.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -154,6 +163,9 @@
   <data name="cerrar" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\cerrar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="home_2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\home_2.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="icono-modificar" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icono-modificar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -163,14 +175,20 @@
   <data name="icono-configuracion" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icono-configuracion.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="usuario" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\usuario.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="home3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\home3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icono-personal2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icono-personal2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="icono-eliminar1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icono-eliminar1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="icono-buscar" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icono-buscar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="hom4" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\hom4.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="icono-eliminar" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icono-eliminar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -184,8 +202,14 @@
   <data name="icono-cerrar_sesion_pequeño" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icono-cerrar_sesion_pequeño.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="icon-capacitacion" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon-capacitacion.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="biblioCentral-v1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\biblioCentral-v1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon-validar" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon-validar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="biblio_ari_borroso" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\biblio_ari_borroso.jpeg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -196,10 +220,10 @@
   <data name="icono-guardar" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icono-guardar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="icono-personal" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icono-personal.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="posit" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\posit.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="tinker_45" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\tinker_45.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

@@ -84,6 +84,12 @@
     <Compile Include="frmPerfilGestor.Designer.cs">
       <DependentUpon>frmPerfilGestor.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmRespuestaValidaciones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRespuestaValidaciones.Designer.cs">
+      <DependentUpon>frmRespuestaValidaciones.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmVisualizarHorarios.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -230,6 +236,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmRegInasistencias.resx">
       <DependentUpon>frmRegInasistencias.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRespuestaValidaciones.resx">
+      <DependentUpon>frmRespuestaValidaciones.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmSolicitarCambioTurno.resx">
       <DependentUpon>frmSolicitarCambioTurno.cs</DependentUpon>
@@ -428,6 +437,30 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\posit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icono-home.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\home_2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\home3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hom4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon-validar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon-capacitacion.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon-tinker.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tinker_45.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

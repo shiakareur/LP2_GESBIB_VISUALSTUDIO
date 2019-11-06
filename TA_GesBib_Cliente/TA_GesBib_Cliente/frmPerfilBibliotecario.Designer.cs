@@ -38,13 +38,12 @@
             this.label2 = new System.Windows.Forms.Label();
             this.btnCerrarSesion = new System.Windows.Forms.Button();
             this.btnConfiguracion = new System.Windows.Forms.Button();
-            this.label6 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lblBienvenido = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.btnNotificaciones = new System.Windows.Forms.Button();
             this.panelBtn_Solicitar = new System.Windows.Forms.Panel();
             this.btnSolicitar_CambioTurno = new System.Windows.Forms.Button();
             this.btnSolicitar_HLibres = new System.Windows.Forms.Button();
@@ -54,6 +53,7 @@
             this.btnVisualizarHorarios = new System.Windows.Forms.Button();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.panelAviso = new System.Windows.Forms.Panel();
+            this.picHome = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -61,6 +61,7 @@
             this.panelBtn_Solicitar.SuspendLayout();
             this.panelBtn_Registrar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picHome)).BeginInit();
             this.SuspendLayout();
             // 
             // label3
@@ -152,9 +153,9 @@
             this.btnSolicitar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnSolicitar.Location = new System.Drawing.Point(0, 209);
             this.btnSolicitar.Name = "btnSolicitar";
-            this.btnSolicitar.Padding = new System.Windows.Forms.Padding(15, 0, 22, 0);
+            this.btnSolicitar.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.btnSolicitar.Size = new System.Drawing.Size(234, 40);
-            this.btnSolicitar.TabIndex = 10;
+            this.btnSolicitar.TabIndex = 50;
             this.btnSolicitar.Text = "Solicitar";
             this.btnSolicitar.UseVisualStyleBackColor = false;
             this.btnSolicitar.Click += new System.EventHandler(this.btnSolicitar_Click);
@@ -164,7 +165,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Arial Unicode MS", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(67)))), ((int)(((byte)(232)))));
-            this.label2.Location = new System.Drawing.Point(15, 459);
+            this.label2.Location = new System.Drawing.Point(15, 520);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(224, 15);
             this.label2.TabIndex = 15;
@@ -211,21 +212,10 @@
             this.btnConfiguracion.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnConfiguracion.UseVisualStyleBackColor = false;
             // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Arial Unicode MS", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(67)))), ((int)(((byte)(232)))));
-            this.label6.Location = new System.Drawing.Point(28, 499);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(196, 15);
-            this.label6.TabIndex = 14;
-            this.label6.Text = "___________________________";
-            // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::TA_GesBib_Cliente.Properties.Resources.logoMediano;
-            this.pictureBox1.Location = new System.Drawing.Point(85, 625);
+            this.pictureBox1.Location = new System.Drawing.Point(84, 673);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(114, 56);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -249,11 +239,10 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(175)))), ((int)(((byte)(169)))));
             this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.panel1.Controls.Add(this.panel2);
+            this.panel1.Controls.Add(this.picHome);
             this.panel1.Controls.Add(this.panel4);
             this.panel1.Controls.Add(this.panel3);
             this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.label6);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.pictureBox4);
             this.panel1.Controls.Add(this.lblTipoPerfil);
@@ -266,24 +255,18 @@
             this.panel1.TabIndex = 55;
             this.panel1.TabStop = true;
             // 
-            // panel2
-            // 
-            this.panel2.Location = new System.Drawing.Point(443, 517);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(492, 144);
-            this.panel2.TabIndex = 56;
-            // 
             // panel4
             // 
             this.panel4.Controls.Add(this.btnCerrarSesion);
             this.panel4.Controls.Add(this.btnConfiguracion);
-            this.panel4.Location = new System.Drawing.Point(21, 490);
+            this.panel4.Location = new System.Drawing.Point(28, 543);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(211, 86);
             this.panel4.TabIndex = 17;
             // 
             // panel3
             // 
+            this.panel3.Controls.Add(this.btnNotificaciones);
             this.panel3.Controls.Add(this.panelBtn_Solicitar);
             this.panel3.Controls.Add(this.btnSolicitar);
             this.panel3.Controls.Add(this.panelBtn_Registrar);
@@ -292,8 +275,28 @@
             this.panel3.Controls.Add(this.btnDistribuir_Personal);
             this.panel3.Location = new System.Drawing.Point(21, 117);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(234, 339);
+            this.panel3.Size = new System.Drawing.Size(234, 400);
             this.panel3.TabIndex = 16;
+            // 
+            // btnNotificaciones
+            // 
+            this.btnNotificaciones.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(175)))), ((int)(((byte)(169)))));
+            this.btnNotificaciones.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnNotificaciones.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnNotificaciones.FlatAppearance.BorderSize = 0;
+            this.btnNotificaciones.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnNotificaciones.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.btnNotificaciones.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btnNotificaciones.Image = global::TA_GesBib_Cliente.Properties.Resources.tinker_45;
+            this.btnNotificaciones.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnNotificaciones.Location = new System.Drawing.Point(0, 337);
+            this.btnNotificaciones.Name = "btnNotificaciones";
+            this.btnNotificaciones.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
+            this.btnNotificaciones.Size = new System.Drawing.Size(234, 40);
+            this.btnNotificaciones.TabIndex = 61;
+            this.btnNotificaciones.Text = "     Notificaciones";
+            this.btnNotificaciones.UseVisualStyleBackColor = false;
+            this.btnNotificaciones.Click += new System.EventHandler(this.btnNotificaciones_Click);
             // 
             // panelBtn_Solicitar
             // 
@@ -426,6 +429,19 @@
             this.panelAviso.Size = new System.Drawing.Size(343, 285);
             this.panelAviso.TabIndex = 60;
             // 
+            // picHome
+            // 
+            this.picHome.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(175)))), ((int)(((byte)(169)))));
+            this.picHome.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.picHome.Image = global::TA_GesBib_Cliente.Properties.Resources.hom4;
+            this.picHome.Location = new System.Drawing.Point(220, 65);
+            this.picHome.Name = "picHome";
+            this.picHome.Size = new System.Drawing.Size(56, 56);
+            this.picHome.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picHome.TabIndex = 62;
+            this.picHome.TabStop = false;
+            this.picHome.Click += new System.EventHandler(this.picHome_Click);
+            // 
             // frmPerfilBibliotecario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -453,6 +469,7 @@
             this.panelBtn_Solicitar.ResumeLayout(false);
             this.panelBtn_Registrar.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picHome)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -469,11 +486,9 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btnCerrarSesion;
         private System.Windows.Forms.Button btnConfiguracion;
-        private System.Windows.Forms.Label label6;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label lblBienvenido;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Button btnVisualizarHorarios;
@@ -485,5 +500,7 @@
         private System.Windows.Forms.Button btnSolicitar_HLibres;
         private System.Windows.Forms.Button btnSolicitar_CambioTurno;
         private System.Windows.Forms.Panel panelAviso;
+        private System.Windows.Forms.Button btnNotificaciones;
+        private System.Windows.Forms.PictureBox picHome;
     }
 }

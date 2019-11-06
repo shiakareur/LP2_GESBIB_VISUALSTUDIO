@@ -40,8 +40,10 @@ namespace TA_GesBib_Cliente
         private void btnAsignarTurnos_Click(object sender, EventArgs e)
         {
 
-            lblBienvenido.Visible = false;
-            panelAviso.Visible = false;
+            //lblBienvenido.Visible = false;
+            //panelAviso.Visible = false;
+
+            panelBIPO.Visible = false;
 
             frmAsignarTurnos frmAsignar_turno = new frmAsignarTurnos(this);
             frmAsignar_turno.MdiParent = this;
@@ -55,13 +57,20 @@ namespace TA_GesBib_Cliente
 
         private void btnAdmPerfilesExp_Click(object sender, EventArgs e)
         {
-            lblBienvenido.Visible = false;
-            panelAviso.Visible = false;
+            //lblBienvenido.Visible = false;
+            //panelAviso.Visible = false;
+
+            panelBIPO.Visible = false;
 
             frmAdminPerfilesExp frmAdminPerfilExp = new frmAdminPerfilesExp(this);
             frmAdminPerfilExp.MdiParent = this;
             frmAdminPerfilExp.Show();
             frmAdminPerfilExp.Location = new Point(0, 0);
+        }
+
+        private void picHome_Click(object sender, EventArgs e)
+        {
+            panelBIPO.Visible = true;
         }
     }
 }

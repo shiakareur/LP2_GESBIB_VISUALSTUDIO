@@ -113,6 +113,66 @@ namespace TA_GesBib_Cliente.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap hom4 {
+            get {
+                object obj = ResourceManager.GetObject("hom4", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap home_2 {
+            get {
+                object obj = ResourceManager.GetObject("home_2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap home3 {
+            get {
+                object obj = ResourceManager.GetObject("home3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icon_capacitacion {
+            get {
+                object obj = ResourceManager.GetObject("icon-capacitacion", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icon_tinker {
+            get {
+                object obj = ResourceManager.GetObject("icon-tinker", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icon_validar {
+            get {
+                object obj = ResourceManager.GetObject("icon-validar", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icono_1_usuario {
             get {
                 object obj = ResourceManager.GetObject("icono-1-usuario", resourceCulture);
@@ -233,6 +293,16 @@ namespace TA_GesBib_Cliente.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icono_home {
+            get {
+                object obj = ResourceManager.GetObject("icono-home", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icono_modificar {
             get {
                 object obj = ResourceManager.GetObject("icono-modificar", resourceCulture);
@@ -326,6 +396,16 @@ namespace TA_GesBib_Cliente.Properties {
         internal static System.Drawing.Bitmap posit {
             get {
                 object obj = ResourceManager.GetObject("posit", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap tinker_45 {
+            get {
+                object obj = ResourceManager.GetObject("tinker_45", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
