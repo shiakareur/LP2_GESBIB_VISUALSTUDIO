@@ -77,7 +77,7 @@
             this.gbDatosGenerales.Font = new System.Drawing.Font("Bahnschrift Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gbDatosGenerales.Location = new System.Drawing.Point(146, 52);
             this.gbDatosGenerales.Name = "gbDatosGenerales";
-            this.gbDatosGenerales.Size = new System.Drawing.Size(666, 204);
+            this.gbDatosGenerales.Size = new System.Drawing.Size(640, 204);
             this.gbDatosGenerales.TabIndex = 4;
             this.gbDatosGenerales.TabStop = false;
             this.gbDatosGenerales.Text = "Datos Generales";
@@ -87,7 +87,7 @@
             this.txtApellidos.Font = new System.Drawing.Font("Bahnschrift Light", 12F);
             this.txtApellidos.Location = new System.Drawing.Point(203, 118);
             this.txtApellidos.Name = "txtApellidos";
-            this.txtApellidos.Size = new System.Drawing.Size(425, 27);
+            this.txtApellidos.Size = new System.Drawing.Size(405, 27);
             this.txtApellidos.TabIndex = 35;
             // 
             // lblApellidos
@@ -107,7 +107,7 @@
             this.dtpFechaNac.Font = new System.Drawing.Font("Bahnschrift Light", 12F);
             this.dtpFechaNac.Location = new System.Drawing.Point(203, 160);
             this.dtpFechaNac.Name = "dtpFechaNac";
-            this.dtpFechaNac.Size = new System.Drawing.Size(425, 27);
+            this.dtpFechaNac.Size = new System.Drawing.Size(405, 27);
             this.dtpFechaNac.TabIndex = 22;
             // 
             // lblFechaNac
@@ -128,7 +128,7 @@
             this.txtNombres.Font = new System.Drawing.Font("Bahnschrift Light", 12F);
             this.txtNombres.Location = new System.Drawing.Point(203, 72);
             this.txtNombres.Name = "txtNombres";
-            this.txtNombres.Size = new System.Drawing.Size(425, 27);
+            this.txtNombres.Size = new System.Drawing.Size(405, 27);
             this.txtNombres.TabIndex = 20;
             // 
             // lblNombres
@@ -148,7 +148,7 @@
             this.txtCodigo.Font = new System.Drawing.Font("Bahnschrift Light", 12F);
             this.txtCodigo.Location = new System.Drawing.Point(203, 28);
             this.txtCodigo.Name = "txtCodigo";
-            this.txtCodigo.Size = new System.Drawing.Size(251, 27);
+            this.txtCodigo.Size = new System.Drawing.Size(230, 27);
             this.txtCodigo.TabIndex = 18;
             // 
             // lblCodigo
@@ -168,7 +168,7 @@
             this.txtCorreo.Font = new System.Drawing.Font("Bahnschrift Light", 12F);
             this.txtCorreo.Location = new System.Drawing.Point(203, 75);
             this.txtCorreo.Name = "txtCorreo";
-            this.txtCorreo.Size = new System.Drawing.Size(425, 27);
+            this.txtCorreo.Size = new System.Drawing.Size(405, 27);
             this.txtCorreo.TabIndex = 33;
             // 
             // lblCorreo
@@ -188,7 +188,7 @@
             this.txtClave.Font = new System.Drawing.Font("Bahnschrift Light", 12F);
             this.txtClave.Location = new System.Drawing.Point(203, 118);
             this.txtClave.Name = "txtClave";
-            this.txtClave.Size = new System.Drawing.Size(425, 27);
+            this.txtClave.Size = new System.Drawing.Size(405, 27);
             this.txtClave.TabIndex = 37;
             // 
             // lblClave
@@ -214,7 +214,7 @@
             this.groupBox1.Font = new System.Drawing.Font("Bahnschrift Light", 12F);
             this.groupBox1.Location = new System.Drawing.Point(146, 262);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(666, 168);
+            this.groupBox1.Size = new System.Drawing.Size(640, 168);
             this.groupBox1.TabIndex = 38;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Datos de la Cuenta";
@@ -224,7 +224,7 @@
             this.dtpFechaIng.Font = new System.Drawing.Font("Bahnschrift Light", 12F);
             this.dtpFechaIng.Location = new System.Drawing.Point(203, 32);
             this.dtpFechaIng.Name = "dtpFechaIng";
-            this.dtpFechaIng.Size = new System.Drawing.Size(425, 27);
+            this.dtpFechaIng.Size = new System.Drawing.Size(405, 27);
             this.dtpFechaIng.TabIndex = 41;
             // 
             // lblFechaIng
@@ -253,7 +253,7 @@
             this.groupBox2.Font = new System.Drawing.Font("Bahnschrift Light", 12F);
             this.groupBox2.Location = new System.Drawing.Point(146, 436);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(666, 153);
+            this.groupBox2.Size = new System.Drawing.Size(640, 153);
             this.groupBox2.TabIndex = 39;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Datos del Trabajo";
@@ -264,7 +264,7 @@
             this.rbPracticante.BackColor = System.Drawing.Color.Transparent;
             this.rbPracticante.Font = new System.Drawing.Font("Bahnschrift Light", 12F);
             this.rbPracticante.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(37)))), ((int)(((byte)(42)))));
-            this.rbPracticante.Location = new System.Drawing.Point(518, 26);
+            this.rbPracticante.Location = new System.Drawing.Point(498, 26);
             this.rbPracticante.Name = "rbPracticante";
             this.rbPracticante.Size = new System.Drawing.Size(110, 23);
             this.rbPracticante.TabIndex = 50;
@@ -318,7 +318,7 @@
             this.cmbDiaAsig.FormattingEnabled = true;
             this.cmbDiaAsig.Location = new System.Drawing.Point(203, 106);
             this.cmbDiaAsig.Name = "cmbDiaAsig";
-            this.cmbDiaAsig.Size = new System.Drawing.Size(425, 27);
+            this.cmbDiaAsig.Size = new System.Drawing.Size(405, 27);
             this.cmbDiaAsig.TabIndex = 46;
             // 
             // lblDiaAsig
@@ -339,7 +339,7 @@
             this.cmbBibAisg.FormattingEnabled = true;
             this.cmbBibAisg.Location = new System.Drawing.Point(203, 69);
             this.cmbBibAisg.Name = "cmbBibAisg";
-            this.cmbBibAisg.Size = new System.Drawing.Size(425, 27);
+            this.cmbBibAisg.Size = new System.Drawing.Size(405, 27);
             this.cmbBibAisg.TabIndex = 44;
             // 
             // lblBibAsig
@@ -361,9 +361,9 @@
             this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCancelar.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Bold);
             this.btnCancelar.Image = global::TA_GesBib_Cliente.Properties.Resources.icons8_cancelar_2_30;
-            this.btnCancelar.Location = new System.Drawing.Point(673, 6);
+            this.btnCancelar.Location = new System.Drawing.Point(653, 6);
             this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(139, 40);
+            this.btnCancelar.Size = new System.Drawing.Size(133, 40);
             this.btnCancelar.TabIndex = 44;
             this.btnCancelar.Text = "CANCELAR";
             this.btnCancelar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -377,9 +377,9 @@
             this.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBuscar.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Bold);
             this.btnBuscar.Image = global::TA_GesBib_Cliente.Properties.Resources.icono_buscar;
-            this.btnBuscar.Location = new System.Drawing.Point(533, 6);
+            this.btnBuscar.Location = new System.Drawing.Point(528, 6);
             this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(140, 40);
+            this.btnBuscar.Size = new System.Drawing.Size(133, 40);
             this.btnBuscar.TabIndex = 43;
             this.btnBuscar.Text = "BUSCAR";
             this.btnBuscar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -393,9 +393,9 @@
             this.btnModificar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnModificar.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Bold);
             this.btnModificar.Image = global::TA_GesBib_Cliente.Properties.Resources.icono_modificar;
-            this.btnModificar.Location = new System.Drawing.Point(394, 6);
+            this.btnModificar.Location = new System.Drawing.Point(400, 6);
             this.btnModificar.Name = "btnModificar";
-            this.btnModificar.Size = new System.Drawing.Size(141, 40);
+            this.btnModificar.Size = new System.Drawing.Size(133, 40);
             this.btnModificar.TabIndex = 42;
             this.btnModificar.Text = "MODIFICAR";
             this.btnModificar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -409,9 +409,9 @@
             this.btnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGuardar.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Bold);
             this.btnGuardar.Image = global::TA_GesBib_Cliente.Properties.Resources.icono_guardar;
-            this.btnGuardar.Location = new System.Drawing.Point(268, 6);
+            this.btnGuardar.Location = new System.Drawing.Point(272, 6);
             this.btnGuardar.Name = "btnGuardar";
-            this.btnGuardar.Size = new System.Drawing.Size(130, 40);
+            this.btnGuardar.Size = new System.Drawing.Size(133, 40);
             this.btnGuardar.TabIndex = 41;
             this.btnGuardar.Text = "GUARDAR";
             this.btnGuardar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -427,7 +427,7 @@
             this.btnNuevo.Image = global::TA_GesBib_Cliente.Properties.Resources.icono_crear_nuevo;
             this.btnNuevo.Location = new System.Drawing.Point(146, 6);
             this.btnNuevo.Name = "btnNuevo";
-            this.btnNuevo.Size = new System.Drawing.Size(124, 40);
+            this.btnNuevo.Size = new System.Drawing.Size(133, 40);
             this.btnNuevo.TabIndex = 40;
             this.btnNuevo.Text = "NUEVO";
             this.btnNuevo.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -441,7 +441,7 @@
             this.btnCerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCerrar.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Bold);
             this.btnCerrar.Image = global::TA_GesBib_Cliente.Properties.Resources.icono_cerrarventana;
-            this.btnCerrar.Location = new System.Drawing.Point(693, 605);
+            this.btnCerrar.Location = new System.Drawing.Point(667, 605);
             this.btnCerrar.Name = "btnCerrar";
             this.btnCerrar.Size = new System.Drawing.Size(119, 40);
             this.btnCerrar.TabIndex = 46;

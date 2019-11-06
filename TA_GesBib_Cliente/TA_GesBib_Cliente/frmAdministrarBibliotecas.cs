@@ -14,9 +14,9 @@ namespace TA_GesBib_Cliente
     {
         //Estado estadoForm;
 
-        ServicioJava.ServicioClient servGesBib = new ServicioJava.ServicioClient();
+        //ServicioJava.ServicioClient servGesBib = new ServicioJava.ServicioClient();
 
-        private frmPerfilAdministrador var_formPerfilAdmin;
+        //private frmPerfilAdministrador var_formPerfilAdmin;
         public frmAdministrarBibliotecas()
         {
             InitializeComponent();
@@ -28,7 +28,7 @@ namespace TA_GesBib_Cliente
 
         public frmAdministrarBibliotecas(frmPerfilAdministrador formPerfilAdmin)
         {
-            var_formPerfilAdmin = formPerfilAdmin;
+            //var_formPerfilAdmin = formPerfilAdmin;
             InitializeComponent();
 
         
@@ -36,10 +36,10 @@ namespace TA_GesBib_Cliente
 
             //Al abrir el form, este es el estado de los componentes
             limpiarComponentes();
-            //cargamos el combobox de gestores
-            cmbGestor.DataSource = servGesBib.listarGestores("", "");
-            cmbGestor.ValueMember = "Apellido";
-            estadoComponentes(Estado.Inicial);
+            ////cargamos el combobox de gestores
+            //cmbGestor.DataSource = servGesBib.listarGestores("", "");
+            //cmbGestor.ValueMember = "Apellido";
+            //estadoComponentes(Estado.Inicial);
         }
 
         //Estados
@@ -150,7 +150,7 @@ namespace TA_GesBib_Cliente
 
             try
             {
-                servGesBib.insertarBiblioteca(bib);
+                //servGesBib.insertarBiblioteca(bib);
 
                 //MessageBox.Show("Alumno Registrado exitosamente", "Mensaje Confirmacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
@@ -182,8 +182,8 @@ namespace TA_GesBib_Cliente
 
         private void btnBuscar_Click(object sender, EventArgs e)
         {
-            frmBuscarPersonalBiblioteca frmBuscarPersonalBib = new frmBuscarPersonalBiblioteca();
-            if (frmBuscarPersonalBib.ShowDialog() == DialogResult.OK)
+            frmBuscarBiblioteca frmBuscarBib = new frmBuscarBiblioteca();
+            if (frmBuscarBib.ShowDialog() == DialogResult.OK)
             {
                 estadoComponentes(Estado.Buscar);
             }
@@ -192,6 +192,13 @@ namespace TA_GesBib_Cliente
         private void btnCerrar_Click(object sender, EventArgs e)
         {
             this.Dispose();
+        }
+
+        private void btnCrearPuntoAtencion_Click(object sender, EventArgs e)
+        {
+            frmCrearPuntoAtencion frmCrearPA = new frmCrearPuntoAtencion();
+            frmCrearPA.Show();
+            frmCrearPA.Location = new Point(0, 0);
         }
     }
 }

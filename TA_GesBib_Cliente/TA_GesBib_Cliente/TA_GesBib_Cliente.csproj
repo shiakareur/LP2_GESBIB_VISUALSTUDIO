@@ -66,6 +66,18 @@
     <Compile Include="frmAsignarTurnos.Designer.cs">
       <DependentUpon>frmAsignarTurnos.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmCrearPuntoAtencion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCrearPuntoAtencion.designer.cs">
+      <DependentUpon>frmCrearPuntoAtencion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmBuscarBiblioteca.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBuscarBiblioteca.designer.cs">
+      <DependentUpon>frmBuscarBiblioteca.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmPerfilGestor.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -183,8 +195,14 @@
     <EmbeddedResource Include="frmAsignarTurnos.resx">
       <DependentUpon>frmAsignarTurnos.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmCrearPuntoAtencion.resx">
+      <DependentUpon>frmCrearPuntoAtencion.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmBuscarDistribucionxPersonal.resx">
       <DependentUpon>frmBuscarDistribucionxPersonal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmBuscarBiblioteca.resx">
+      <DependentUpon>frmBuscarBiblioteca.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmBuscarPersonalBiblioteca.resx">
       <DependentUpon>frmBuscarPersonalBiblioteca.cs</DependentUpon>

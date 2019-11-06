@@ -42,8 +42,8 @@
             this.lblTipoPerfil = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lblNombreUsuario = new System.Windows.Forms.Label();
-            this.lblBienvenido = new System.Windows.Forms.Label();
             this.panelAviso = new System.Windows.Forms.Panel();
+            this.lblBienvenido = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -98,10 +98,10 @@
             this.btnAdmGestores.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnAdmGestores.FlatAppearance.BorderSize = 0;
             this.btnAdmGestores.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAdmGestores.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAdmGestores.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAdmGestores.Image = global::TA_GesBib_Cliente.Properties.Resources.icono_1_usuario;
             this.btnAdmGestores.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnAdmGestores.Location = new System.Drawing.Point(25, 176);
+            this.btnAdmGestores.Location = new System.Drawing.Point(25, 174);
             this.btnAdmGestores.Margin = new System.Windows.Forms.Padding(4);
             this.btnAdmGestores.Name = "btnAdmGestores";
             this.btnAdmGestores.Size = new System.Drawing.Size(200, 60);
@@ -255,6 +255,16 @@
             this.lblNombreUsuario.Text = "Arianator";
             this.lblNombreUsuario.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
+            // panelAviso
+            // 
+            this.panelAviso.BackColor = System.Drawing.Color.Yellow;
+            this.panelAviso.BackgroundImage = global::TA_GesBib_Cliente.Properties.Resources.posit;
+            this.panelAviso.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panelAviso.Location = new System.Drawing.Point(554, 196);
+            this.panelAviso.Name = "panelAviso";
+            this.panelAviso.Size = new System.Drawing.Size(343, 285);
+            this.panelAviso.TabIndex = 59;
+            // 
             // lblBienvenido
             // 
             this.lblBienvenido.AutoSize = true;
@@ -267,16 +277,6 @@
             this.lblBienvenido.TabIndex = 58;
             this.lblBienvenido.Text = "Bienvenido, te informamos que ...";
             this.lblBienvenido.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // panelAviso
-            // 
-            this.panelAviso.BackColor = System.Drawing.Color.Yellow;
-            this.panelAviso.BackgroundImage = global::TA_GesBib_Cliente.Properties.Resources.posit;
-            this.panelAviso.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panelAviso.Location = new System.Drawing.Point(554, 196);
-            this.panelAviso.Name = "panelAviso";
-            this.panelAviso.Size = new System.Drawing.Size(343, 285);
-            this.panelAviso.TabIndex = 59;
             // 
             // frmPerfilAdministrador
             // 
@@ -322,7 +322,7 @@
         private System.Windows.Forms.Button btnAdmPersonal;
         private System.Windows.Forms.Button btnAdmGestores;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Label lblBienvenido;
         private System.Windows.Forms.Panel panelAviso;
+        private System.Windows.Forms.Label lblBienvenido;
     }
 }

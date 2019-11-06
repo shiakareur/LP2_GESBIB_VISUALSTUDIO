@@ -1,4 +1,11 @@
 1. TURNOS no se crean, solo el gestor lo asigna.
 2. Para ASIGNAR TURNOS crea formulario "Asignar Turno a Personal" donde primero busque al personal,  lo selecciona y se cargan sus datos, luego ingresa los datos del turno y da click en "asignar".
+3. PERFIL EXPERIENCIA crea y asigna el GESTOR.
+4. PUNTOS DE ATENCION crea y asigna el GESTOR.
+----------
+ACTUALIZACION 06/11
 
-
+1. BIBLIOTECAS:
+---No se hará el modificar: Buscas y te da todos los datos de la biblioteca y el datagridview FIN
+---Si quiero modificar un punto de atencion que esta en una biblioteca, entonces debo darle doble click al DGV de esa fila, y debe aparecer un formulario pequeño que me diga Modificar el punto de atencion, modificas ahi y Confirmas, se guarda en la base de datos y se cierra (esto deberia ser otro form porque tendrias 2 Modificar: uno de biblioteca y otro de punto de atencion).
+---Va a haber dos listas: 1 de eliminados(un for de eliminar puntos de atencion) y 1 de agregados (un for de insert a tales lineas)
