@@ -20,9 +20,9 @@ namespace TA_GesBib_Cliente
         private void btnAcceder_Click(object sender, EventArgs e)
         {
             //abrir diferentes usuarios
-            if (placeHolderUsuario.Text=="arianator")
+            if (placeHolderUsuario.Text=="ariana")
             {
-                frmPerfilAdministrador formPAdmin = new frmPerfilAdministrador();
+                frmPerfilAdministrador formPAdmin = new frmPerfilAdministrador(this);
                 formPAdmin.Visible = true;
                 this.Visible = true;
             }
@@ -38,8 +38,15 @@ namespace TA_GesBib_Cliente
                 frmAuxiliar.Visible = true;
                 this.Visible = true;
             }
+            else if (placeHolderUsuario.Text == "gaston")
+            {
+                frmPerfilGestor frmGestor = new frmPerfilGestor(this);
+                frmGestor.Visible = true;
+                this.Visible = true;
+            }
             else
             {
+                //BIBLIOTECARIO
                 frmPerfilBibliotecario formBibliotecario = new frmPerfilBibliotecario(this);
                 formBibliotecario.Visible = true;
                 this.Visible = false;

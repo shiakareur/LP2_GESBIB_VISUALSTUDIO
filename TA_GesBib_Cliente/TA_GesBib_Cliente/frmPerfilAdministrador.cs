@@ -12,16 +12,26 @@ namespace TA_GesBib_Cliente
 {
     public partial class frmPerfilAdministrador : Form
     {
-        //public Panel PanelAviso { get => panelAviso; set => panelAviso = value; }
-        //public Label LblBienvenido { get => lblBienvenido; set => lblBienvenido = value; }
-        //frmAdministrarGestores formAdminGestores = new frmAdministrarGestores();
+     
 
+        private frmLogin var_formLogin;
+        public Panel PanelAviso { get => panelAviso; set => panelAviso = value; }
+        public Label LblBienvenido { get => lblBienvenido; set => lblBienvenido = value; }
 
         public frmPerfilAdministrador()
         {
             InitializeComponent();
             //this.WindowState = FormWindowState.Maximized;
         }
+
+
+        public frmPerfilAdministrador(frmLogin formLogin) //con paramtero this 
+        {
+            var_formLogin = formLogin;
+            InitializeComponent();
+        }
+
+
 
         private void btnAdministrarGestores_Click(object sender, EventArgs e)
         {
@@ -89,6 +99,11 @@ namespace TA_GesBib_Cliente
 
         private void btnAdmGestores_Click(object sender, EventArgs e)
         {
+
+            lblBienvenido.Visible = false;
+            panelAviso.Visible = false;
+
+
             frmAdministrarGestores frmAdmGestores = new frmAdministrarGestores(this);
             frmAdmGestores.MdiParent = this;
             frmAdmGestores.Show();
@@ -97,6 +112,11 @@ namespace TA_GesBib_Cliente
 
         private void btnAdmBibliotecas_Click(object sender, EventArgs e)
         {
+
+            lblBienvenido.Visible = false;
+            panelAviso.Visible = false;
+
+
             frmAdministrarBibliotecas frmAdmBibliotecas = new frmAdministrarBibliotecas(this);
             frmAdmBibliotecas.MdiParent = this;
             frmAdmBibliotecas.Show();
@@ -106,6 +126,12 @@ namespace TA_GesBib_Cliente
         private void label1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnCerrarSesion_Click(object sender, EventArgs e)
+        {
+            this.Dispose();
+            this.var_formLogin.Visible = true;
         }
     }
 }

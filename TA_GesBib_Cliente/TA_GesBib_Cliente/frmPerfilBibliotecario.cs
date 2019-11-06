@@ -337,6 +337,9 @@ namespace TA_GesBib_Cliente
                     var_frmSolicitarCambioTurno_Bibliotecario.MdiParent = this;
 
                     //...add
+
+                    
+
                     var_frmSolicitarCambioTurno_Bibliotecario.StartPosition = FormStartPosition.Manual;
                     var_frmSolicitarCambioTurno_Bibliotecario.Left = 0;
                     var_frmSolicitarCambioTurno_Bibliotecario.Top = 0;
@@ -347,6 +350,7 @@ namespace TA_GesBib_Cliente
                 }
                 else
                 {
+                    
                     var_frmSolicitarCambioTurno_Bibliotecario.limpiarComponentes();
                     var_frmSolicitarCambioTurno_Bibliotecario.estadoComponentes(Estado.Inicial);
                     var_frmSolicitarCambioTurno_Bibliotecario.Visible = true;

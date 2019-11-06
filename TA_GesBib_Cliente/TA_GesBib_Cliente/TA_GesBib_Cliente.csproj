@@ -54,6 +54,18 @@
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
     <Compile Include="Estado.cs" />
+    <Compile Include="frmAdminPerfilesExp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAdminPerfilesExp.Designer.cs">
+      <DependentUpon>frmAdminPerfilesExp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAsignarTurnos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAsignarTurnos.Designer.cs">
+      <DependentUpon>frmAsignarTurnos.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmPerfilGestor.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -164,6 +176,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmAdministrarPersonal.resx">
       <DependentUpon>frmAdministrarPersonal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAdminPerfilesExp.resx">
+      <DependentUpon>frmAdminPerfilesExp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAsignarTurnos.resx">
+      <DependentUpon>frmAsignarTurnos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmBuscarDistribucionxPersonal.resx">
       <DependentUpon>frmBuscarDistribucionxPersonal.cs</DependentUpon>

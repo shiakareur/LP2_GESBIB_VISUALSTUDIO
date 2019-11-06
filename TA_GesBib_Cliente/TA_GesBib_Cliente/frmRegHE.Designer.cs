@@ -55,11 +55,11 @@
             this.lblHMS_fin.BackColor = System.Drawing.Color.Transparent;
             this.lblHMS_fin.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblHMS_fin.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(37)))), ((int)(((byte)(42)))));
-            this.lblHMS_fin.Location = new System.Drawing.Point(507, 278);
+            this.lblHMS_fin.Location = new System.Drawing.Point(480, 277);
             this.lblHMS_fin.Name = "lblHMS_fin";
-            this.lblHMS_fin.Size = new System.Drawing.Size(128, 26);
+            this.lblHMS_fin.Size = new System.Drawing.Size(100, 26);
             this.lblHMS_fin.TabIndex = 105;
-            this.lblHMS_fin.Text = "(hh:mm:ss) ";
+            this.lblHMS_fin.Text = "(hh:mm) ";
             this.lblHMS_fin.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // lblHMS_ini
@@ -68,17 +68,17 @@
             this.lblHMS_ini.BackColor = System.Drawing.Color.Transparent;
             this.lblHMS_ini.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblHMS_ini.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(37)))), ((int)(((byte)(42)))));
-            this.lblHMS_ini.Location = new System.Drawing.Point(507, 230);
+            this.lblHMS_ini.Location = new System.Drawing.Point(480, 229);
             this.lblHMS_ini.Name = "lblHMS_ini";
-            this.lblHMS_ini.Size = new System.Drawing.Size(128, 26);
+            this.lblHMS_ini.Size = new System.Drawing.Size(100, 26);
             this.lblHMS_ini.TabIndex = 104;
-            this.lblHMS_ini.Text = "(hh:mm:ss) ";
+            this.lblHMS_ini.Text = "(hh:mm) ";
             this.lblHMS_ini.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // txtDescripcion_HE
             // 
             this.txtDescripcion_HE.Location = new System.Drawing.Point(348, 384);
-            this.txtDescripcion_HE.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtDescripcion_HE.Margin = new System.Windows.Forms.Padding(2);
             this.txtDescripcion_HE.Multiline = true;
             this.txtDescripcion_HE.Name = "txtDescripcion_HE";
             this.txtDescripcion_HE.Size = new System.Drawing.Size(395, 123);
@@ -87,7 +87,7 @@
             // txtCantHoras_HE
             // 
             this.txtCantHoras_HE.Location = new System.Drawing.Point(348, 335);
-            this.txtCantHoras_HE.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtCantHoras_HE.Margin = new System.Windows.Forms.Padding(2);
             this.txtCantHoras_HE.Name = "txtCantHoras_HE";
             this.txtCantHoras_HE.Size = new System.Drawing.Size(60, 20);
             this.txtCantHoras_HE.TabIndex = 102;
@@ -95,17 +95,17 @@
             // txtHFin_HE
             // 
             this.txtHFin_HE.Location = new System.Drawing.Point(348, 283);
-            this.txtHFin_HE.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtHFin_HE.Margin = new System.Windows.Forms.Padding(2);
             this.txtHFin_HE.Name = "txtHFin_HE";
-            this.txtHFin_HE.Size = new System.Drawing.Size(126, 20);
+            this.txtHFin_HE.Size = new System.Drawing.Size(98, 20);
             this.txtHFin_HE.TabIndex = 101;
             // 
             // txtHIni_HE
             // 
             this.txtHIni_HE.Location = new System.Drawing.Point(348, 235);
-            this.txtHIni_HE.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtHIni_HE.Margin = new System.Windows.Forms.Padding(2);
             this.txtHIni_HE.Name = "txtHIni_HE";
-            this.txtHIni_HE.Size = new System.Drawing.Size(126, 20);
+            this.txtHIni_HE.Size = new System.Drawing.Size(98, 20);
             this.txtHIni_HE.TabIndex = 100;
             // 
             // lblDescripcion
@@ -163,7 +163,7 @@
             // dtpFechaHE
             // 
             this.dtpFechaHE.Location = new System.Drawing.Point(348, 184);
-            this.dtpFechaHE.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dtpFechaHE.Margin = new System.Windows.Forms.Padding(2);
             this.dtpFechaHE.Name = "dtpFechaHE";
             this.dtpFechaHE.Size = new System.Drawing.Size(423, 20);
             this.dtpFechaHE.TabIndex = 95;
@@ -263,7 +263,7 @@
             this.btnCerrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.btnCerrar.Image = global::TA_GesBib_Cliente.Properties.Resources.icono_cerrarventana;
             this.btnCerrar.Location = new System.Drawing.Point(381, 551);
-            this.btnCerrar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnCerrar.Margin = new System.Windows.Forms.Padding(2);
             this.btnCerrar.Name = "btnCerrar";
             this.btnCerrar.Size = new System.Drawing.Size(159, 36);
             this.btnCerrar.TabIndex = 119;

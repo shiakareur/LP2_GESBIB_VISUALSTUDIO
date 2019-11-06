@@ -33,6 +33,8 @@ namespace TA_GesBib_Cliente
 
             limpiarComponentes();
             estadoComponentes(Estado.Inicial);
+
+            lblFlechita.Visible = false;
         }
         
      
@@ -55,6 +57,16 @@ namespace TA_GesBib_Cliente
                     lblIniRef.Enabled = false;
                     lblFinRef.Enabled = false;
 
+
+                    lblMiH_ini.Enabled = false;
+                    lblMiH_fin.Enabled = false;
+                    lblMinombre.Enabled = false;
+                    lblMiApe.Enabled = false;
+                    lblMiCargo.Enabled = false;
+                    lblMiPA.Enabled = false;
+                    lblMiRef_ini.Enabled = false;
+                    lblMiRef_fin.Enabled = false;
+
                     //Botones
                     btnNuevo.Enabled = true;
                     btnGuardar.Enabled = false;
@@ -63,6 +75,8 @@ namespace TA_GesBib_Cliente
                     btnBuscar.Enabled = false;
                     //btnBuscarDistribucionPersonal.Enabled = false;
                     //Campos de Texto
+
+                    //del cumpañero
                     txtNombre.Enabled = false;
                     txtApe.Enabled = false;
                     txtCargo.Enabled = false;
@@ -71,6 +85,19 @@ namespace TA_GesBib_Cliente
                     txtHFin.Enabled = false;
                     txtIniRef.Enabled = false;
                     txtFinRef.Enabled = false;
+
+                    //ahora data del user
+
+                    txtMiNombre.Enabled = false;
+                    txtMiApe.Enabled = false;
+                    txtMiCargo.Enabled = false;
+                    txtMiPA.Enabled = false;
+                    txtMiHini.Enabled = false;
+                    txtMiHFin.Enabled = false;
+                    txtMiRefIni.Enabled = false;
+                    txtMiRefFin.Enabled = false;
+
+
 
                     dtpSolCambioTurno.Enabled = false;
                     break;
@@ -177,6 +204,7 @@ namespace TA_GesBib_Cliente
         private void btnNuevo_Click(object sender, EventArgs e)
         {
             //se pone los LABELS ENABLES
+            lblFlechita.Visible = true;
             limpiarComponentes();
             estadoComponentes(Estado.Nuevo);
         }

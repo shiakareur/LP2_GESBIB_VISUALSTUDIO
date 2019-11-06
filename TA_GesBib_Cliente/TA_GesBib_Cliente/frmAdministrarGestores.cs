@@ -14,11 +14,7 @@ namespace TA_GesBib_Cliente
     {
         //Estado estadoForm;
         ServicioJava.ServicioClient servGesBib = new ServicioJava.ServicioClient();
-
-        
-
-        
-
+                               
                
         private frmPerfilAdministrador var_formPerfilAdmin;
         public frmAdministrarGestores()

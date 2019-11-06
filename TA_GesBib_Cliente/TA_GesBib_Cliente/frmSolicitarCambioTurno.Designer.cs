@@ -57,24 +57,29 @@
             this.btnModificar = new System.Windows.Forms.Button();
             this.btnCerrar = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
+            this.txtMiRefFin = new System.Windows.Forms.TextBox();
+            this.lblMiRef_fin = new System.Windows.Forms.Label();
+            this.txtMiHFin = new System.Windows.Forms.TextBox();
+            this.lblMiH_fin = new System.Windows.Forms.Label();
+            this.txtMiRefIni = new System.Windows.Forms.TextBox();
+            this.lblMiRef_ini = new System.Windows.Forms.Label();
+            this.txtMiHini = new System.Windows.Forms.TextBox();
+            this.lblMiH_ini = new System.Windows.Forms.Label();
+            this.txtMiPA = new System.Windows.Forms.TextBox();
+            this.lblMiPA = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.label6 = new System.Windows.Forms.Label();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.label8 = new System.Windows.Forms.Label();
+            this.txtMiCargo = new System.Windows.Forms.TextBox();
+            this.lblMiCargo = new System.Windows.Forms.Label();
+            this.txtMiApe = new System.Windows.Forms.TextBox();
+            this.lblMiApe = new System.Windows.Forms.Label();
+            this.txtMiNombre = new System.Windows.Forms.TextBox();
+            this.lblMinombre = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.lblHMS_ini = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.lblFlechita = new System.Windows.Forms.Label();
             this.gbDatosGenerales.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -126,6 +131,7 @@
             // 
             // gbDatosGenerales
             // 
+            this.gbDatosGenerales.Controls.Add(this.lblFlechita);
             this.gbDatosGenerales.Controls.Add(this.txtCargo);
             this.gbDatosGenerales.Controls.Add(this.btnBuscar);
             this.gbDatosGenerales.Controls.Add(this.lblCargo);
@@ -134,11 +140,11 @@
             this.gbDatosGenerales.Controls.Add(this.txtNombre);
             this.gbDatosGenerales.Controls.Add(this.lblNombre);
             this.gbDatosGenerales.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gbDatosGenerales.Location = new System.Drawing.Point(25, 188);
+            this.gbDatosGenerales.Location = new System.Drawing.Point(548, 202);
             this.gbDatosGenerales.Margin = new System.Windows.Forms.Padding(2);
             this.gbDatosGenerales.Name = "gbDatosGenerales";
             this.gbDatosGenerales.Padding = new System.Windows.Forms.Padding(2);
-            this.gbDatosGenerales.Size = new System.Drawing.Size(568, 135);
+            this.gbDatosGenerales.Size = new System.Drawing.Size(467, 149);
             this.gbDatosGenerales.TabIndex = 120;
             this.gbDatosGenerales.TabStop = false;
             this.gbDatosGenerales.Text = "Datos personal a intercambiar turno :";
@@ -146,7 +152,7 @@
             // txtCargo
             // 
             this.txtCargo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.txtCargo.Location = new System.Drawing.Point(170, 88);
+            this.txtCargo.Location = new System.Drawing.Point(135, 88);
             this.txtCargo.Margin = new System.Windows.Forms.Padding(2);
             this.txtCargo.Name = "txtCargo";
             this.txtCargo.Size = new System.Drawing.Size(140, 26);
@@ -159,7 +165,7 @@
             this.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBuscar.Image = global::TA_GesBib_Cliente.Properties.Resources.icono_buscar;
-            this.btnBuscar.Location = new System.Drawing.Point(428, 88);
+            this.btnBuscar.Location = new System.Drawing.Point(320, 100);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(135, 42);
             this.btnBuscar.TabIndex = 124;
@@ -172,19 +178,19 @@
             // 
             this.lblCargo.AutoSize = true;
             this.lblCargo.BackColor = System.Drawing.Color.Transparent;
-            this.lblCargo.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCargo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCargo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(37)))), ((int)(((byte)(42)))));
             this.lblCargo.Location = new System.Drawing.Point(41, 89);
             this.lblCargo.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblCargo.Name = "lblCargo";
-            this.lblCargo.Size = new System.Drawing.Size(72, 24);
+            this.lblCargo.Size = new System.Drawing.Size(62, 20);
             this.lblCargo.TabIndex = 36;
             this.lblCargo.Text = "Cargo:";
             // 
             // txtApe
             // 
             this.txtApe.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.txtApe.Location = new System.Drawing.Point(170, 59);
+            this.txtApe.Location = new System.Drawing.Point(135, 59);
             this.txtApe.Margin = new System.Windows.Forms.Padding(2);
             this.txtApe.Name = "txtApe";
             this.txtApe.Size = new System.Drawing.Size(320, 26);
@@ -194,19 +200,19 @@
             // 
             this.lblApe.AutoSize = true;
             this.lblApe.BackColor = System.Drawing.Color.Transparent;
-            this.lblApe.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblApe.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblApe.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(37)))), ((int)(((byte)(42)))));
             this.lblApe.Location = new System.Drawing.Point(41, 59);
             this.lblApe.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblApe.Name = "lblApe";
-            this.lblApe.Size = new System.Drawing.Size(103, 24);
+            this.lblApe.Size = new System.Drawing.Size(87, 20);
             this.lblApe.TabIndex = 34;
             this.lblApe.Text = "Apellidos:";
             // 
             // txtNombre
             // 
             this.txtNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.txtNombre.Location = new System.Drawing.Point(170, 30);
+            this.txtNombre.Location = new System.Drawing.Point(135, 30);
             this.txtNombre.Margin = new System.Windows.Forms.Padding(2);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(320, 26);
@@ -216,17 +222,19 @@
             // 
             this.lblNombre.AutoSize = true;
             this.lblNombre.BackColor = System.Drawing.Color.Transparent;
-            this.lblNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNombre.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(37)))), ((int)(((byte)(42)))));
             this.lblNombre.Location = new System.Drawing.Point(41, 31);
             this.lblNombre.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblNombre.Name = "lblNombre";
-            this.lblNombre.Size = new System.Drawing.Size(101, 24);
+            this.lblNombre.Size = new System.Drawing.Size(85, 20);
             this.lblNombre.TabIndex = 19;
             this.lblNombre.Text = "Nombres:";
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.label10);
+            this.groupBox1.Controls.Add(this.lblHMS_ini);
             this.groupBox1.Controls.Add(this.txtFinRef);
             this.groupBox1.Controls.Add(this.lblFinRef);
             this.groupBox1.Controls.Add(this.txtHFin);
@@ -238,11 +246,11 @@
             this.groupBox1.Controls.Add(this.txtPtoAten);
             this.groupBox1.Controls.Add(this.lblPuntoAten);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(25, 341);
+            this.groupBox1.Location = new System.Drawing.Point(548, 355);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox1.Size = new System.Drawing.Size(584, 158);
+            this.groupBox1.Size = new System.Drawing.Size(467, 212);
             this.groupBox1.TabIndex = 121;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Datos turno :";
@@ -250,7 +258,7 @@
             // txtFinRef
             // 
             this.txtFinRef.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.txtFinRef.Location = new System.Drawing.Point(263, 120);
+            this.txtFinRef.Location = new System.Drawing.Point(219, 149);
             this.txtFinRef.Margin = new System.Windows.Forms.Padding(2);
             this.txtFinRef.Name = "txtFinRef";
             this.txtFinRef.Size = new System.Drawing.Size(140, 26);
@@ -260,19 +268,19 @@
             // 
             this.lblFinRef.AutoSize = true;
             this.lblFinRef.BackColor = System.Drawing.Color.Transparent;
-            this.lblFinRef.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFinRef.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblFinRef.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(37)))), ((int)(((byte)(42)))));
-            this.lblFinRef.Location = new System.Drawing.Point(41, 120);
+            this.lblFinRef.Location = new System.Drawing.Point(41, 153);
             this.lblFinRef.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblFinRef.Name = "lblFinRef";
-            this.lblFinRef.Size = new System.Drawing.Size(179, 24);
+            this.lblFinRef.Size = new System.Drawing.Size(155, 20);
             this.lblFinRef.TabIndex = 40;
             this.lblFinRef.Text = "Hora fin refrigerio:";
             // 
             // txtHFin
             // 
             this.txtHFin.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.txtHFin.Location = new System.Drawing.Point(452, 59);
+            this.txtHFin.Location = new System.Drawing.Point(219, 89);
             this.txtHFin.Margin = new System.Windows.Forms.Padding(2);
             this.txtHFin.Name = "txtHFin";
             this.txtHFin.Size = new System.Drawing.Size(85, 26);
@@ -282,19 +290,19 @@
             // 
             this.lblHFin.AutoSize = true;
             this.lblHFin.BackColor = System.Drawing.Color.Transparent;
-            this.lblHFin.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblHFin.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblHFin.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(37)))), ((int)(((byte)(42)))));
-            this.lblHFin.Location = new System.Drawing.Point(323, 59);
+            this.lblHFin.Location = new System.Drawing.Point(40, 90);
             this.lblHFin.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblHFin.Name = "lblHFin";
-            this.lblHFin.Size = new System.Drawing.Size(97, 24);
+            this.lblHFin.Size = new System.Drawing.Size(83, 20);
             this.lblHFin.TabIndex = 38;
             this.lblHFin.Text = "Hora Fin:";
             // 
             // txtIniRef
             // 
             this.txtIniRef.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.txtIniRef.Location = new System.Drawing.Point(263, 89);
+            this.txtIniRef.Location = new System.Drawing.Point(219, 119);
             this.txtIniRef.Margin = new System.Windows.Forms.Padding(2);
             this.txtIniRef.Name = "txtIniRef";
             this.txtIniRef.Size = new System.Drawing.Size(140, 26);
@@ -304,19 +312,19 @@
             // 
             this.lblIniRef.AutoSize = true;
             this.lblIniRef.BackColor = System.Drawing.Color.Transparent;
-            this.lblIniRef.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblIniRef.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblIniRef.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(37)))), ((int)(((byte)(42)))));
-            this.lblIniRef.Location = new System.Drawing.Point(41, 89);
+            this.lblIniRef.Location = new System.Drawing.Point(41, 122);
             this.lblIniRef.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblIniRef.Name = "lblIniRef";
-            this.lblIniRef.Size = new System.Drawing.Size(207, 24);
+            this.lblIniRef.Size = new System.Drawing.Size(176, 20);
             this.lblIniRef.TabIndex = 36;
             this.lblIniRef.Text = "Hora inicio refrigerio:";
             // 
             // txtHIni
             // 
             this.txtHIni.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.txtHIni.Location = new System.Drawing.Point(170, 59);
+            this.txtHIni.Location = new System.Drawing.Point(219, 59);
             this.txtHIni.Margin = new System.Windows.Forms.Padding(2);
             this.txtHIni.Name = "txtHIni";
             this.txtHIni.Size = new System.Drawing.Size(85, 26);
@@ -326,19 +334,19 @@
             // 
             this.lblHIni.AutoSize = true;
             this.lblHIni.BackColor = System.Drawing.Color.Transparent;
-            this.lblHIni.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblHIni.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblHIni.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(37)))), ((int)(((byte)(42)))));
             this.lblHIni.Location = new System.Drawing.Point(41, 59);
             this.lblHIni.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblHIni.Name = "lblHIni";
-            this.lblHIni.Size = new System.Drawing.Size(117, 24);
+            this.lblHIni.Size = new System.Drawing.Size(101, 20);
             this.lblHIni.TabIndex = 34;
             this.lblHIni.Text = "Hora Inicio:";
             // 
             // txtPtoAten
             // 
             this.txtPtoAten.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.txtPtoAten.Location = new System.Drawing.Point(296, 30);
+            this.txtPtoAten.Location = new System.Drawing.Point(219, 30);
             this.txtPtoAten.Margin = new System.Windows.Forms.Padding(2);
             this.txtPtoAten.Name = "txtPtoAten";
             this.txtPtoAten.Size = new System.Drawing.Size(194, 26);
@@ -348,12 +356,12 @@
             // 
             this.lblPuntoAten.AutoSize = true;
             this.lblPuntoAten.BackColor = System.Drawing.Color.Transparent;
-            this.lblPuntoAten.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPuntoAten.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPuntoAten.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(37)))), ((int)(((byte)(42)))));
             this.lblPuntoAten.Location = new System.Drawing.Point(41, 31);
             this.lblPuntoAten.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblPuntoAten.Name = "lblPuntoAten";
-            this.lblPuntoAten.Size = new System.Drawing.Size(189, 24);
+            this.lblPuntoAten.Size = new System.Drawing.Size(162, 20);
             this.lblPuntoAten.TabIndex = 19;
             this.lblPuntoAten.Text = "Punto de Atención:";
             // 
@@ -364,7 +372,7 @@
             this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.btnCancelar.Image = global::TA_GesBib_Cliente.Properties.Resources.icons8_cancelar_2_30;
-            this.btnCancelar.Location = new System.Drawing.Point(593, 74);
+            this.btnCancelar.Location = new System.Drawing.Point(673, 71);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(145, 42);
             this.btnCancelar.TabIndex = 116;
@@ -381,7 +389,7 @@
             this.btnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGuardar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.btnGuardar.Image = global::TA_GesBib_Cliente.Properties.Resources.icono_guardar;
-            this.btnGuardar.Location = new System.Drawing.Point(294, 74);
+            this.btnGuardar.Location = new System.Drawing.Point(374, 71);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(147, 42);
             this.btnGuardar.TabIndex = 115;
@@ -397,7 +405,7 @@
             this.btnNuevo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnNuevo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnNuevo.Image = global::TA_GesBib_Cliente.Properties.Resources.icono_crear_nuevo;
-            this.btnNuevo.Location = new System.Drawing.Point(167, 74);
+            this.btnNuevo.Location = new System.Drawing.Point(247, 71);
             this.btnNuevo.Name = "btnNuevo";
             this.btnNuevo.Size = new System.Drawing.Size(127, 42);
             this.btnNuevo.TabIndex = 114;
@@ -413,7 +421,7 @@
             this.btnModificar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnModificar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.btnModificar.Image = global::TA_GesBib_Cliente.Properties.Resources.icono_modificar;
-            this.btnModificar.Location = new System.Drawing.Point(441, 74);
+            this.btnModificar.Location = new System.Drawing.Point(521, 71);
             this.btnModificar.Margin = new System.Windows.Forms.Padding(2);
             this.btnModificar.Name = "btnModificar";
             this.btnModificar.Size = new System.Drawing.Size(152, 42);
@@ -442,242 +450,305 @@
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.textBox1);
-            this.groupBox2.Controls.Add(this.label1);
-            this.groupBox2.Controls.Add(this.textBox2);
-            this.groupBox2.Controls.Add(this.label2);
-            this.groupBox2.Controls.Add(this.textBox3);
-            this.groupBox2.Controls.Add(this.label3);
-            this.groupBox2.Controls.Add(this.textBox4);
-            this.groupBox2.Controls.Add(this.label4);
-            this.groupBox2.Controls.Add(this.textBox5);
-            this.groupBox2.Controls.Add(this.label5);
+            this.groupBox2.Controls.Add(this.label13);
+            this.groupBox2.Controls.Add(this.txtMiRefFin);
+            this.groupBox2.Controls.Add(this.label14);
+            this.groupBox2.Controls.Add(this.lblMiRef_fin);
+            this.groupBox2.Controls.Add(this.txtMiHFin);
+            this.groupBox2.Controls.Add(this.lblMiH_fin);
+            this.groupBox2.Controls.Add(this.txtMiRefIni);
+            this.groupBox2.Controls.Add(this.lblMiRef_ini);
+            this.groupBox2.Controls.Add(this.txtMiHini);
+            this.groupBox2.Controls.Add(this.lblMiH_ini);
+            this.groupBox2.Controls.Add(this.txtMiPA);
+            this.groupBox2.Controls.Add(this.lblMiPA);
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox2.Location = new System.Drawing.Point(611, 353);
+            this.groupBox2.Location = new System.Drawing.Point(23, 355);
             this.groupBox2.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox2.Size = new System.Drawing.Size(584, 158);
+            this.groupBox2.Size = new System.Drawing.Size(467, 212);
             this.groupBox2.TabIndex = 126;
             this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Datos turno :";
+            this.groupBox2.Text = "Mis datos de turno :";
             // 
-            // textBox1
+            // txtMiRefFin
             // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.textBox1.Location = new System.Drawing.Point(263, 120);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(140, 26);
-            this.textBox1.TabIndex = 41;
+            this.txtMiRefFin.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.txtMiRefFin.Location = new System.Drawing.Point(219, 149);
+            this.txtMiRefFin.Margin = new System.Windows.Forms.Padding(2);
+            this.txtMiRefFin.Name = "txtMiRefFin";
+            this.txtMiRefFin.Size = new System.Drawing.Size(140, 26);
+            this.txtMiRefFin.TabIndex = 41;
             // 
-            // label1
+            // lblMiRef_fin
             // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(37)))), ((int)(((byte)(42)))));
-            this.label1.Location = new System.Drawing.Point(41, 120);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(179, 24);
-            this.label1.TabIndex = 40;
-            this.label1.Text = "Hora fin refrigerio:";
+            this.lblMiRef_fin.AutoSize = true;
+            this.lblMiRef_fin.BackColor = System.Drawing.Color.Transparent;
+            this.lblMiRef_fin.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMiRef_fin.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(37)))), ((int)(((byte)(42)))));
+            this.lblMiRef_fin.Location = new System.Drawing.Point(41, 153);
+            this.lblMiRef_fin.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblMiRef_fin.Name = "lblMiRef_fin";
+            this.lblMiRef_fin.Size = new System.Drawing.Size(155, 20);
+            this.lblMiRef_fin.TabIndex = 40;
+            this.lblMiRef_fin.Text = "Hora fin refrigerio:";
             // 
-            // textBox2
+            // txtMiHFin
             // 
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.textBox2.Location = new System.Drawing.Point(452, 59);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(85, 26);
-            this.textBox2.TabIndex = 39;
+            this.txtMiHFin.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.txtMiHFin.Location = new System.Drawing.Point(219, 89);
+            this.txtMiHFin.Margin = new System.Windows.Forms.Padding(2);
+            this.txtMiHFin.Name = "txtMiHFin";
+            this.txtMiHFin.Size = new System.Drawing.Size(85, 26);
+            this.txtMiHFin.TabIndex = 39;
             // 
-            // label2
+            // lblMiH_fin
             // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(37)))), ((int)(((byte)(42)))));
-            this.label2.Location = new System.Drawing.Point(323, 59);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(97, 24);
-            this.label2.TabIndex = 38;
-            this.label2.Text = "Hora Fin:";
+            this.lblMiH_fin.AutoSize = true;
+            this.lblMiH_fin.BackColor = System.Drawing.Color.Transparent;
+            this.lblMiH_fin.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMiH_fin.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(37)))), ((int)(((byte)(42)))));
+            this.lblMiH_fin.Location = new System.Drawing.Point(41, 90);
+            this.lblMiH_fin.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblMiH_fin.Name = "lblMiH_fin";
+            this.lblMiH_fin.Size = new System.Drawing.Size(83, 20);
+            this.lblMiH_fin.TabIndex = 38;
+            this.lblMiH_fin.Text = "Hora Fin:";
             // 
-            // textBox3
+            // txtMiRefIni
             // 
-            this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.textBox3.Location = new System.Drawing.Point(263, 89);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(140, 26);
-            this.textBox3.TabIndex = 37;
+            this.txtMiRefIni.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.txtMiRefIni.Location = new System.Drawing.Point(219, 119);
+            this.txtMiRefIni.Margin = new System.Windows.Forms.Padding(2);
+            this.txtMiRefIni.Name = "txtMiRefIni";
+            this.txtMiRefIni.Size = new System.Drawing.Size(140, 26);
+            this.txtMiRefIni.TabIndex = 37;
             // 
-            // label3
+            // lblMiRef_ini
             // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(37)))), ((int)(((byte)(42)))));
-            this.label3.Location = new System.Drawing.Point(41, 89);
-            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(207, 24);
-            this.label3.TabIndex = 36;
-            this.label3.Text = "Hora inicio refrigerio:";
+            this.lblMiRef_ini.AutoSize = true;
+            this.lblMiRef_ini.BackColor = System.Drawing.Color.Transparent;
+            this.lblMiRef_ini.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMiRef_ini.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(37)))), ((int)(((byte)(42)))));
+            this.lblMiRef_ini.Location = new System.Drawing.Point(41, 122);
+            this.lblMiRef_ini.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblMiRef_ini.Name = "lblMiRef_ini";
+            this.lblMiRef_ini.Size = new System.Drawing.Size(176, 20);
+            this.lblMiRef_ini.TabIndex = 36;
+            this.lblMiRef_ini.Text = "Hora inicio refrigerio:";
             // 
-            // textBox4
+            // txtMiHini
             // 
-            this.textBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.textBox4.Location = new System.Drawing.Point(170, 59);
-            this.textBox4.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(85, 26);
-            this.textBox4.TabIndex = 35;
+            this.txtMiHini.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.txtMiHini.Location = new System.Drawing.Point(219, 59);
+            this.txtMiHini.Margin = new System.Windows.Forms.Padding(2);
+            this.txtMiHini.Name = "txtMiHini";
+            this.txtMiHini.Size = new System.Drawing.Size(85, 26);
+            this.txtMiHini.TabIndex = 35;
             // 
-            // label4
+            // lblMiH_ini
             // 
-            this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.Color.Transparent;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(37)))), ((int)(((byte)(42)))));
-            this.label4.Location = new System.Drawing.Point(41, 59);
-            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(117, 24);
-            this.label4.TabIndex = 34;
-            this.label4.Text = "Hora Inicio:";
+            this.lblMiH_ini.AutoSize = true;
+            this.lblMiH_ini.BackColor = System.Drawing.Color.Transparent;
+            this.lblMiH_ini.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMiH_ini.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(37)))), ((int)(((byte)(42)))));
+            this.lblMiH_ini.Location = new System.Drawing.Point(41, 59);
+            this.lblMiH_ini.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblMiH_ini.Name = "lblMiH_ini";
+            this.lblMiH_ini.Size = new System.Drawing.Size(101, 20);
+            this.lblMiH_ini.TabIndex = 34;
+            this.lblMiH_ini.Text = "Hora Inicio:";
             // 
-            // textBox5
+            // txtMiPA
             // 
-            this.textBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.textBox5.Location = new System.Drawing.Point(296, 30);
-            this.textBox5.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(194, 26);
-            this.textBox5.TabIndex = 20;
+            this.txtMiPA.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.txtMiPA.Location = new System.Drawing.Point(219, 30);
+            this.txtMiPA.Margin = new System.Windows.Forms.Padding(2);
+            this.txtMiPA.Name = "txtMiPA";
+            this.txtMiPA.Size = new System.Drawing.Size(194, 26);
+            this.txtMiPA.TabIndex = 20;
             // 
-            // label5
+            // lblMiPA
             // 
-            this.label5.AutoSize = true;
-            this.label5.BackColor = System.Drawing.Color.Transparent;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(37)))), ((int)(((byte)(42)))));
-            this.label5.Location = new System.Drawing.Point(41, 31);
-            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(189, 24);
-            this.label5.TabIndex = 19;
-            this.label5.Text = "Punto de Atención:";
+            this.lblMiPA.AutoSize = true;
+            this.lblMiPA.BackColor = System.Drawing.Color.Transparent;
+            this.lblMiPA.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMiPA.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(37)))), ((int)(((byte)(42)))));
+            this.lblMiPA.Location = new System.Drawing.Point(41, 31);
+            this.lblMiPA.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblMiPA.Name = "lblMiPA";
+            this.lblMiPA.Size = new System.Drawing.Size(162, 20);
+            this.lblMiPA.TabIndex = 19;
+            this.lblMiPA.Text = "Punto de Atención:";
             // 
             // groupBox3
             // 
-            this.groupBox3.Controls.Add(this.textBox6);
-            this.groupBox3.Controls.Add(this.button1);
-            this.groupBox3.Controls.Add(this.label6);
-            this.groupBox3.Controls.Add(this.textBox7);
-            this.groupBox3.Controls.Add(this.label7);
-            this.groupBox3.Controls.Add(this.textBox8);
-            this.groupBox3.Controls.Add(this.label8);
+            this.groupBox3.Controls.Add(this.txtMiCargo);
+            this.groupBox3.Controls.Add(this.lblMiCargo);
+            this.groupBox3.Controls.Add(this.txtMiApe);
+            this.groupBox3.Controls.Add(this.lblMiApe);
+            this.groupBox3.Controls.Add(this.txtMiNombre);
+            this.groupBox3.Controls.Add(this.lblMinombre);
             this.groupBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox3.Location = new System.Drawing.Point(611, 200);
+            this.groupBox3.Location = new System.Drawing.Point(23, 202);
             this.groupBox3.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox3.Size = new System.Drawing.Size(568, 135);
+            this.groupBox3.Size = new System.Drawing.Size(467, 149);
             this.groupBox3.TabIndex = 125;
             this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Datos personal a intercambiar turno :";
+            this.groupBox3.Text = "Mis datos personales :";
             // 
-            // textBox6
+            // txtMiCargo
             // 
-            this.textBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.textBox6.Location = new System.Drawing.Point(170, 88);
-            this.textBox6.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(140, 26);
-            this.textBox6.TabIndex = 37;
+            this.txtMiCargo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.txtMiCargo.Location = new System.Drawing.Point(135, 88);
+            this.txtMiCargo.Margin = new System.Windows.Forms.Padding(2);
+            this.txtMiCargo.Name = "txtMiCargo";
+            this.txtMiCargo.Size = new System.Drawing.Size(140, 26);
+            this.txtMiCargo.TabIndex = 37;
+            this.txtMiCargo.Text = "Bibliotecario";
             // 
-            // button1
+            // lblMiCargo
             // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(175)))), ((int)(((byte)(169)))));
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Image = global::TA_GesBib_Cliente.Properties.Resources.icono_buscar;
-            this.button1.Location = new System.Drawing.Point(428, 88);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(135, 42);
-            this.button1.TabIndex = 124;
-            this.button1.Text = "BUSCAR";
-            this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button1.UseVisualStyleBackColor = false;
+            this.lblMiCargo.AutoSize = true;
+            this.lblMiCargo.BackColor = System.Drawing.Color.Transparent;
+            this.lblMiCargo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMiCargo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(37)))), ((int)(((byte)(42)))));
+            this.lblMiCargo.Location = new System.Drawing.Point(41, 89);
+            this.lblMiCargo.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblMiCargo.Name = "lblMiCargo";
+            this.lblMiCargo.Size = new System.Drawing.Size(62, 20);
+            this.lblMiCargo.TabIndex = 36;
+            this.lblMiCargo.Text = "Cargo:";
             // 
-            // label6
+            // txtMiApe
             // 
-            this.label6.AutoSize = true;
-            this.label6.BackColor = System.Drawing.Color.Transparent;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(37)))), ((int)(((byte)(42)))));
-            this.label6.Location = new System.Drawing.Point(41, 89);
-            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(72, 24);
-            this.label6.TabIndex = 36;
-            this.label6.Text = "Cargo:";
+            this.txtMiApe.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.txtMiApe.Location = new System.Drawing.Point(135, 59);
+            this.txtMiApe.Margin = new System.Windows.Forms.Padding(2);
+            this.txtMiApe.Name = "txtMiApe";
+            this.txtMiApe.Size = new System.Drawing.Size(320, 26);
+            this.txtMiApe.TabIndex = 35;
+            this.txtMiApe.Text = "El Constructor";
             // 
-            // textBox7
+            // lblMiApe
             // 
-            this.textBox7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.textBox7.Location = new System.Drawing.Point(170, 59);
-            this.textBox7.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(320, 26);
-            this.textBox7.TabIndex = 35;
+            this.lblMiApe.AutoSize = true;
+            this.lblMiApe.BackColor = System.Drawing.Color.Transparent;
+            this.lblMiApe.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMiApe.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(37)))), ((int)(((byte)(42)))));
+            this.lblMiApe.Location = new System.Drawing.Point(41, 59);
+            this.lblMiApe.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblMiApe.Name = "lblMiApe";
+            this.lblMiApe.Size = new System.Drawing.Size(87, 20);
+            this.lblMiApe.TabIndex = 34;
+            this.lblMiApe.Text = "Apellidos:";
             // 
-            // label7
+            // txtMiNombre
             // 
-            this.label7.AutoSize = true;
-            this.label7.BackColor = System.Drawing.Color.Transparent;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(37)))), ((int)(((byte)(42)))));
-            this.label7.Location = new System.Drawing.Point(41, 59);
-            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(103, 24);
-            this.label7.TabIndex = 34;
-            this.label7.Text = "Apellidos:";
+            this.txtMiNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.txtMiNombre.Location = new System.Drawing.Point(135, 30);
+            this.txtMiNombre.Margin = new System.Windows.Forms.Padding(2);
+            this.txtMiNombre.Name = "txtMiNombre";
+            this.txtMiNombre.Size = new System.Drawing.Size(320, 26);
+            this.txtMiNombre.TabIndex = 20;
+            this.txtMiNombre.Text = "Bob";
             // 
-            // textBox8
+            // lblMinombre
             // 
-            this.textBox8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.textBox8.Location = new System.Drawing.Point(170, 30);
-            this.textBox8.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(320, 26);
-            this.textBox8.TabIndex = 20;
+            this.lblMinombre.AutoSize = true;
+            this.lblMinombre.BackColor = System.Drawing.Color.Transparent;
+            this.lblMinombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMinombre.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(37)))), ((int)(((byte)(42)))));
+            this.lblMinombre.Location = new System.Drawing.Point(41, 31);
+            this.lblMinombre.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblMinombre.Name = "lblMinombre";
+            this.lblMinombre.Size = new System.Drawing.Size(85, 20);
+            this.lblMinombre.TabIndex = 19;
+            this.lblMinombre.Text = "Nombres:";
             // 
-            // label8
+            // label9
             // 
-            this.label8.AutoSize = true;
-            this.label8.BackColor = System.Drawing.Color.Transparent;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(37)))), ((int)(((byte)(42)))));
-            this.label8.Location = new System.Drawing.Point(41, 31);
-            this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(101, 24);
-            this.label8.TabIndex = 19;
-            this.label8.Text = "Nombres:";
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(495, 339);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(48, 32);
+            this.label9.TabIndex = 127;
+            this.label9.Text = "<<<\r\n    >>>";
+            // 
+            // lblHMS_ini
+            // 
+            this.lblHMS_ini.AutoSize = true;
+            this.lblHMS_ini.BackColor = System.Drawing.Color.Transparent;
+            this.lblHMS_ini.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblHMS_ini.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(37)))), ((int)(((byte)(42)))));
+            this.lblHMS_ini.Location = new System.Drawing.Point(321, 60);
+            this.lblHMS_ini.Name = "lblHMS_ini";
+            this.lblHMS_ini.Size = new System.Drawing.Size(71, 20);
+            this.lblHMS_ini.TabIndex = 105;
+            this.lblHMS_ini.Text = "(hh:mm) ";
+            this.lblHMS_ini.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.BackColor = System.Drawing.Color.Transparent;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(37)))), ((int)(((byte)(42)))));
+            this.label10.Location = new System.Drawing.Point(320, 91);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(71, 20);
+            this.label10.TabIndex = 106;
+            this.label10.Text = "(hh:mm) ";
+            this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.BackColor = System.Drawing.Color.Transparent;
+            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(37)))), ((int)(((byte)(42)))));
+            this.label13.Location = new System.Drawing.Point(325, 93);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(71, 20);
+            this.label13.TabIndex = 108;
+            this.label13.Text = "(hh:mm) ";
+            this.label13.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.BackColor = System.Drawing.Color.Transparent;
+            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(37)))), ((int)(((byte)(42)))));
+            this.label14.Location = new System.Drawing.Point(326, 62);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(71, 20);
+            this.label14.TabIndex = 107;
+            this.label14.Text = "(hh:mm) ";
+            this.label14.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // lblFlechita
+            // 
+            this.lblFlechita.AutoSize = true;
+            this.lblFlechita.Font = new System.Drawing.Font("Microsoft PhagsPa", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFlechita.Location = new System.Drawing.Point(247, 115);
+            this.lblFlechita.Name = "lblFlechita";
+            this.lblFlechita.Size = new System.Drawing.Size(67, 27);
+            this.lblFlechita.TabIndex = 128;
+            this.lblFlechita.Text = "----->";
+            this.lblFlechita.Visible = false;
             // 
             // frmSolicitarCambioTurno
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(242)))), ((int)(((byte)(241)))));
-            this.ClientSize = new System.Drawing.Size(1216, 679);
+            this.ClientSize = new System.Drawing.Size(1083, 679);
+            this.Controls.Add(this.label9);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.btnCerrar);
             this.Controls.Add(this.groupBox3);
@@ -737,23 +808,28 @@
         private System.Windows.Forms.Button btnCerrar;
         private System.Windows.Forms.Button btnBuscar;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TextBox txtMiRefFin;
+        private System.Windows.Forms.Label lblMiRef_fin;
+        private System.Windows.Forms.TextBox txtMiHFin;
+        private System.Windows.Forms.Label lblMiH_fin;
+        private System.Windows.Forms.TextBox txtMiRefIni;
+        private System.Windows.Forms.Label lblMiRef_ini;
+        private System.Windows.Forms.TextBox txtMiHini;
+        private System.Windows.Forms.Label lblMiH_ini;
+        private System.Windows.Forms.TextBox txtMiPA;
+        private System.Windows.Forms.Label lblMiPA;
         private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox textBox8;
-        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.TextBox txtMiCargo;
+        private System.Windows.Forms.Label lblMiCargo;
+        private System.Windows.Forms.TextBox txtMiApe;
+        private System.Windows.Forms.Label lblMiApe;
+        private System.Windows.Forms.TextBox txtMiNombre;
+        private System.Windows.Forms.Label lblMinombre;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label lblHMS_ini;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label lblFlechita;
     }
 }

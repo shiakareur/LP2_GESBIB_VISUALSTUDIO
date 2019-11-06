@@ -93,9 +93,9 @@
             this.lblNombreUsuario.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.lblNombreUsuario.Location = new System.Drawing.Point(109, 60);
             this.lblNombreUsuario.Name = "lblNombreUsuario";
-            this.lblNombreUsuario.Size = new System.Drawing.Size(46, 20);
+            this.lblNombreUsuario.Size = new System.Drawing.Size(41, 20);
             this.lblNombreUsuario.TabIndex = 0;
-            this.lblNombreUsuario.Text = "BOB";
+            this.lblNombreUsuario.Text = "Bob";
             this.lblNombreUsuario.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // btnDistribuir_Personal

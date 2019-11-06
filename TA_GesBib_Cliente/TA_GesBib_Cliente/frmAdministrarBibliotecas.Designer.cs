@@ -67,7 +67,7 @@
             this.gbDatosGenerales.Controls.Add(this.txtNombre);
             this.gbDatosGenerales.Controls.Add(this.lblNombre);
             this.gbDatosGenerales.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gbDatosGenerales.Location = new System.Drawing.Point(146, 52);
+            this.gbDatosGenerales.Location = new System.Drawing.Point(146, 69);
             this.gbDatosGenerales.Name = "gbDatosGenerales";
             this.gbDatosGenerales.Size = new System.Drawing.Size(666, 113);
             this.gbDatosGenerales.TabIndex = 4;
@@ -130,7 +130,7 @@
             this.gbPuntosAtencion.Controls.Add(this.textBox2);
             this.gbPuntosAtencion.Controls.Add(this.label2);
             this.gbPuntosAtencion.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gbPuntosAtencion.Location = new System.Drawing.Point(146, 185);
+            this.gbPuntosAtencion.Location = new System.Drawing.Point(146, 211);
             this.gbPuntosAtencion.Name = "gbPuntosAtencion";
             this.gbPuntosAtencion.Size = new System.Drawing.Size(666, 251);
             this.gbPuntosAtencion.TabIndex = 21;
@@ -170,7 +170,7 @@
             // comboBox2
             // 
             this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(160, 176);
+            this.comboBox2.Location = new System.Drawing.Point(235, 176);
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(229, 28);
             this.comboBox2.TabIndex = 21;
@@ -286,7 +286,7 @@
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1});
-            this.dataGridView1.Location = new System.Drawing.Point(146, 451);
+            this.dataGridView1.Location = new System.Drawing.Point(146, 468);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
@@ -309,7 +309,7 @@
             this.btnCerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCerrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.btnCerrar.Image = global::TA_GesBib_Cliente.Properties.Resources.icono_cerrarventana;
-            this.btnCerrar.Location = new System.Drawing.Point(394, 620);
+            this.btnCerrar.Location = new System.Drawing.Point(394, 643);
             this.btnCerrar.Name = "btnCerrar";
             this.btnCerrar.Size = new System.Drawing.Size(134, 42);
             this.btnCerrar.TabIndex = 45;
@@ -325,9 +325,9 @@
             this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.btnCancelar.Image = global::TA_GesBib_Cliente.Properties.Resources.icons8_cancelar_2_30;
-            this.btnCancelar.Location = new System.Drawing.Point(673, 6);
+            this.btnCancelar.Location = new System.Drawing.Point(717, 12);
             this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(139, 40);
+            this.btnCancelar.Size = new System.Drawing.Size(153, 40);
             this.btnCancelar.TabIndex = 44;
             this.btnCancelar.Text = "CANCELAR";
             this.btnCancelar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -341,7 +341,7 @@
             this.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.btnBuscar.Image = global::TA_GesBib_Cliente.Properties.Resources.icono_buscar;
-            this.btnBuscar.Location = new System.Drawing.Point(533, 6);
+            this.btnBuscar.Location = new System.Drawing.Point(577, 12);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(140, 40);
             this.btnBuscar.TabIndex = 43;
@@ -357,9 +357,9 @@
             this.btnModificar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnModificar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.btnModificar.Image = global::TA_GesBib_Cliente.Properties.Resources.icono_modificar;
-            this.btnModificar.Location = new System.Drawing.Point(394, 6);
+            this.btnModificar.Location = new System.Drawing.Point(424, 12);
             this.btnModificar.Name = "btnModificar";
-            this.btnModificar.Size = new System.Drawing.Size(141, 40);
+            this.btnModificar.Size = new System.Drawing.Size(156, 40);
             this.btnModificar.TabIndex = 42;
             this.btnModificar.Text = "MODIFICAR";
             this.btnModificar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -373,9 +373,9 @@
             this.btnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGuardar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.btnGuardar.Image = global::TA_GesBib_Cliente.Properties.Resources.icono_guardar;
-            this.btnGuardar.Location = new System.Drawing.Point(268, 6);
+            this.btnGuardar.Location = new System.Drawing.Point(283, 12);
             this.btnGuardar.Name = "btnGuardar";
-            this.btnGuardar.Size = new System.Drawing.Size(130, 40);
+            this.btnGuardar.Size = new System.Drawing.Size(141, 40);
             this.btnGuardar.TabIndex = 41;
             this.btnGuardar.Text = "GUARDAR";
             this.btnGuardar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -389,7 +389,7 @@
             this.btnNuevo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnNuevo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnNuevo.Image = global::TA_GesBib_Cliente.Properties.Resources.icono_crear_nuevo;
-            this.btnNuevo.Location = new System.Drawing.Point(146, 6);
+            this.btnNuevo.Location = new System.Drawing.Point(159, 12);
             this.btnNuevo.Name = "btnNuevo";
             this.btnNuevo.Size = new System.Drawing.Size(124, 40);
             this.btnNuevo.TabIndex = 40;
@@ -403,7 +403,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(242)))), ((int)(((byte)(241)))));
-            this.ClientSize = new System.Drawing.Size(950, 715);
+            this.ClientSize = new System.Drawing.Size(989, 734);
             this.Controls.Add(this.gbPuntosAtencion);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.btnCerrar);
