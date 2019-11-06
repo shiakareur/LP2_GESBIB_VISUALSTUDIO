@@ -72,6 +72,12 @@
     <Compile Include="frmCapacitaciones.Designer.cs">
       <DependentUpon>frmCapacitaciones.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmCrearDiaCapacitacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCrearDiaCapacitacion.Designer.cs">
+      <DependentUpon>frmCrearDiaCapacitacion.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmCrearPuntoAtencion.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -215,6 +221,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmBuscarGestores.resx">
       <DependentUpon>frmBuscarGestores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCapacitaciones.resx">
+      <DependentUpon>frmCapacitaciones.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCrearDiaCapacitacion.resx">
+      <DependentUpon>frmCrearDiaCapacitacion.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmCrearPuntoAtencion.resx">
       <DependentUpon>frmCrearPuntoAtencion.cs</DependentUpon>

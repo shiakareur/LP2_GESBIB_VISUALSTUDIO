@@ -72,5 +72,15 @@ namespace TA_GesBib_Cliente
         {
             panelBIPO.Visible = true;
         }
+
+        private void btnCapacitacion_Click(object sender, EventArgs e)
+        {
+            panelBIPO.Visible = false;
+
+            frmCapacitaciones frmCapa = new frmCapacitaciones();
+            frmCapa.MdiParent = this;
+            frmCapa.Show();
+            frmCapa.Location = new Point(0, 0);
+        }
     }
 }

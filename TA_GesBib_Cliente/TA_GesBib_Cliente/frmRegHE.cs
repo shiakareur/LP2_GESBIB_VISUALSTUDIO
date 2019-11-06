@@ -55,6 +55,10 @@ namespace TA_GesBib_Cliente
         {
 
 
+
+
+
+
             //llamamos al SERVICIO RESPECTIVO
             //Servicio<HoraExtra> hora_extra = new ServicioTA<HoraExtra>;
             //DBController.regHE(hora_extra);

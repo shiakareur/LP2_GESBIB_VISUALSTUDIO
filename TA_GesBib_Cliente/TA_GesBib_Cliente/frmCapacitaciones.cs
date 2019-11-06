@@ -16,5 +16,18 @@ namespace TA_GesBib_Cliente
         {
             InitializeComponent();
         }
+
+        private void btnCerrar_Click(object sender, EventArgs e)
+        {
+
+
+        }
+
+        private void btnCrearDiaCapa_Click(object sender, EventArgs e)
+        {
+            frmCrearDiaCapacitacion frmCrearDiaPA = new frmCrearDiaCapacitacion();
+            frmCrearDiaPA.Show();
+            frmCrearDiaPA.Location = new Point(0, 0);
+        }
     }
 }

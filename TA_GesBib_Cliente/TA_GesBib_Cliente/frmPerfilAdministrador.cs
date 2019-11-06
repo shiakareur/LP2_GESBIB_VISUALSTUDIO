@@ -81,6 +81,10 @@ namespace TA_GesBib_Cliente
 
         private void btnAdministrarPersonal_Click_1(object sender, EventArgs e)
         {
+            lblBienvenido.Visible = false;
+            panelAviso.Visible = false;
+
+            
             frmAdministrarPersonal formAdminPersonal = new frmAdministrarPersonal(this);
             formAdminPersonal.MdiParent = this;
             formAdminPersonal.Show();

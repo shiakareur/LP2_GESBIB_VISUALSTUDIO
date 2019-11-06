@@ -38,7 +38,7 @@
             this.lblNombreUsuario = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnCapacitacion = new System.Windows.Forms.Button();
             this.picHome = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label6 = new System.Windows.Forms.Label();
@@ -171,7 +171,7 @@
             this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel1.Controls.Add(this.button2);
-            this.panel1.Controls.Add(this.button1);
+            this.panel1.Controls.Add(this.btnCapacitacion);
             this.panel1.Controls.Add(this.picHome);
             this.panel1.Controls.Add(this.btnAsignarTurnos);
             this.panel1.Controls.Add(this.btnCerrarSesion);
@@ -209,23 +209,24 @@
             this.button2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button2.UseVisualStyleBackColor = false;
             // 
-            // button1
+            // btnCapacitacion
             // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(175)))), ((int)(((byte)(169)))));
-            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Image = global::TA_GesBib_Cliente.Properties.Resources.icon_capacitacion;
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button1.Location = new System.Drawing.Point(25, 301);
-            this.button1.Margin = new System.Windows.Forms.Padding(4);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(227, 60);
-            this.button1.TabIndex = 62;
-            this.button1.Text = "Capacitaciones";
-            this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button1.UseVisualStyleBackColor = false;
+            this.btnCapacitacion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(175)))), ((int)(((byte)(169)))));
+            this.btnCapacitacion.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCapacitacion.FlatAppearance.BorderSize = 0;
+            this.btnCapacitacion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCapacitacion.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCapacitacion.Image = global::TA_GesBib_Cliente.Properties.Resources.icon_capacitacion;
+            this.btnCapacitacion.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnCapacitacion.Location = new System.Drawing.Point(25, 301);
+            this.btnCapacitacion.Margin = new System.Windows.Forms.Padding(4);
+            this.btnCapacitacion.Name = "btnCapacitacion";
+            this.btnCapacitacion.Size = new System.Drawing.Size(227, 60);
+            this.btnCapacitacion.TabIndex = 62;
+            this.btnCapacitacion.Text = "Capacitaciones";
+            this.btnCapacitacion.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnCapacitacion.UseVisualStyleBackColor = false;
+            this.btnCapacitacion.Click += new System.EventHandler(this.btnCapacitacion_Click);
             // 
             // picHome
             // 
@@ -348,6 +349,6 @@
         private System.Windows.Forms.PictureBox picHome;
         private System.Windows.Forms.Panel panelBIPO;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnCapacitacion;
     }
 }
