@@ -31,8 +31,6 @@
             this.gbDatosGenerales = new System.Windows.Forms.GroupBox();
             this.txtApellidos = new System.Windows.Forms.TextBox();
             this.lblApellidos = new System.Windows.Forms.Label();
-            this.dtpFechaNac = new System.Windows.Forms.DateTimePicker();
-            this.lblFechaNac = new System.Windows.Forms.Label();
             this.txtNombres = new System.Windows.Forms.TextBox();
             this.lblNombres = new System.Windows.Forms.Label();
             this.txtCodigo = new System.Windows.Forms.TextBox();
@@ -68,8 +66,6 @@
             // 
             this.gbDatosGenerales.Controls.Add(this.txtApellidos);
             this.gbDatosGenerales.Controls.Add(this.lblApellidos);
-            this.gbDatosGenerales.Controls.Add(this.dtpFechaNac);
-            this.gbDatosGenerales.Controls.Add(this.lblFechaNac);
             this.gbDatosGenerales.Controls.Add(this.txtNombres);
             this.gbDatosGenerales.Controls.Add(this.lblNombres);
             this.gbDatosGenerales.Controls.Add(this.txtCodigo);
@@ -101,27 +97,6 @@
             this.lblApellidos.Size = new System.Drawing.Size(93, 23);
             this.lblApellidos.TabIndex = 34;
             this.lblApellidos.Text = "Apellidos:";
-            // 
-            // dtpFechaNac
-            // 
-            this.dtpFechaNac.Font = new System.Drawing.Font("Bahnschrift Light", 12F);
-            this.dtpFechaNac.Location = new System.Drawing.Point(203, 160);
-            this.dtpFechaNac.Name = "dtpFechaNac";
-            this.dtpFechaNac.Size = new System.Drawing.Size(405, 27);
-            this.dtpFechaNac.TabIndex = 22;
-            // 
-            // lblFechaNac
-            // 
-            this.lblFechaNac.AutoSize = true;
-            this.lblFechaNac.BackColor = System.Drawing.Color.Transparent;
-            this.lblFechaNac.Font = new System.Drawing.Font("Bahnschrift", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFechaNac.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(37)))), ((int)(((byte)(42)))));
-            this.lblFechaNac.Location = new System.Drawing.Point(52, 163);
-            this.lblFechaNac.Name = "lblFechaNac";
-            this.lblFechaNac.Size = new System.Drawing.Size(100, 23);
-            this.lblFechaNac.TabIndex = 21;
-            this.lblFechaNac.Text = "Fecha Nac:";
-            this.lblFechaNac.Click += new System.EventHandler(this.lblFechaNac_Click);
             // 
             // txtNombres
             // 
@@ -485,8 +460,6 @@
         private System.Windows.Forms.GroupBox gbDatosGenerales;
         private System.Windows.Forms.TextBox txtCorreo;
         private System.Windows.Forms.Label lblCorreo;
-        private System.Windows.Forms.DateTimePicker dtpFechaNac;
-        private System.Windows.Forms.Label lblFechaNac;
         private System.Windows.Forms.TextBox txtNombres;
         private System.Windows.Forms.Label lblNombres;
         private System.Windows.Forms.TextBox txtCodigo;

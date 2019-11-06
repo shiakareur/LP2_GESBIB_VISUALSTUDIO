@@ -50,7 +50,6 @@ namespace TA_GesBib_Cliente
                     lblCodigo.Enabled = false;
                     lblNombres.Enabled = false;
                     lblApellidos.Enabled = false;
-                    lblFechaNac.Enabled = false;
                     lblFechaIng.Enabled = false;
                     lblCorreo.Enabled = false;
                     lblClave.Enabled = false;
@@ -65,7 +64,6 @@ namespace TA_GesBib_Cliente
                     txtCodigo.Enabled = false;
                     txtNombres.Enabled = false;
                     txtApellidos.Enabled = false;
-                    dtpFechaNac.Enabled = false;
                     dtpFechaIng.Enabled = false;
                     txtCorreo.Enabled = false;
                     txtClave.Enabled = false;
@@ -77,7 +75,6 @@ namespace TA_GesBib_Cliente
                     lblCodigo.Enabled = true;
                     lblNombres.Enabled = true;
                     lblApellidos.Enabled = true;
-                    lblFechaNac.Enabled = true;
                     lblFechaIng.Enabled = true;
                     lblCorreo.Enabled = true;
                     lblClave.Enabled = true;
@@ -92,7 +89,6 @@ namespace TA_GesBib_Cliente
                     txtCodigo.Enabled = true;
                     txtNombres.Enabled = true;
                     txtApellidos.Enabled = true;
-                    dtpFechaNac.Enabled = true;
                     dtpFechaIng.Enabled = true;
                     txtCorreo.Enabled = true;
                     txtClave.Enabled = true;
@@ -111,7 +107,6 @@ namespace TA_GesBib_Cliente
                     lblCodigo.Enabled = true;
                     lblNombres.Enabled = true;
                     lblApellidos.Enabled = true;
-                    lblFechaNac.Enabled = true;
                     lblFechaIng.Enabled = true;
                     lblCorreo.Enabled = true;
                     lblClave.Enabled = true;
@@ -127,7 +122,6 @@ namespace TA_GesBib_Cliente
                     txtCodigo.Enabled = true;
                     txtNombres.Enabled = true;
                     txtApellidos.Enabled = true;
-                    dtpFechaNac.Enabled = true;
                     dtpFechaIng.Enabled = true;
                     txtCorreo.Enabled = true;
                     txtClave.Enabled = true;
@@ -141,7 +135,6 @@ namespace TA_GesBib_Cliente
             txtCodigo.Text = "";
             txtNombres.Text = "";
             txtApellidos.Text = "";
-            dtpFechaNac.Value = DateTime.Today;
             dtpFechaIng.Value = DateTime.Today;
             txtCorreo.Text = "";
             txtClave.Text = "";

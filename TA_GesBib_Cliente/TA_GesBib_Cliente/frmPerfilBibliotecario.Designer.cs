@@ -41,6 +41,7 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lblBienvenido = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.picHome = new System.Windows.Forms.PictureBox();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.btnNotificaciones = new System.Windows.Forms.Button();
@@ -53,15 +54,14 @@
             this.btnVisualizarHorarios = new System.Windows.Forms.Button();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.panelAviso = new System.Windows.Forms.Panel();
-            this.picHome = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picHome)).BeginInit();
             this.panel4.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panelBtn_Solicitar.SuspendLayout();
             this.panelBtn_Registrar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picHome)).BeginInit();
             this.SuspendLayout();
             // 
             // label3
@@ -255,6 +255,19 @@
             this.panel1.TabIndex = 55;
             this.panel1.TabStop = true;
             // 
+            // picHome
+            // 
+            this.picHome.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(175)))), ((int)(((byte)(169)))));
+            this.picHome.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.picHome.Image = global::TA_GesBib_Cliente.Properties.Resources.hom4;
+            this.picHome.Location = new System.Drawing.Point(220, 65);
+            this.picHome.Name = "picHome";
+            this.picHome.Size = new System.Drawing.Size(56, 56);
+            this.picHome.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picHome.TabIndex = 62;
+            this.picHome.TabStop = false;
+            this.picHome.Click += new System.EventHandler(this.picHome_Click);
+            // 
             // panel4
             // 
             this.panel4.Controls.Add(this.btnCerrarSesion);
@@ -310,16 +323,16 @@
             // 
             // btnSolicitar_CambioTurno
             // 
-            this.btnSolicitar_CambioTurno.BackColor = System.Drawing.Color.SteelBlue;
+            this.btnSolicitar_CambioTurno.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(242)))), ((int)(((byte)(241)))));
             this.btnSolicitar_CambioTurno.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.btnSolicitar_CambioTurno.FlatAppearance.BorderSize = 0;
             this.btnSolicitar_CambioTurno.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSolicitar_CambioTurno.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSolicitar_CambioTurno.ForeColor = System.Drawing.Color.White;
+            this.btnSolicitar_CambioTurno.ForeColor = System.Drawing.SystemColors.ControlText;
             this.btnSolicitar_CambioTurno.Location = new System.Drawing.Point(1, 40);
             this.btnSolicitar_CambioTurno.Name = "btnSolicitar_CambioTurno";
             this.btnSolicitar_CambioTurno.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
-            this.btnSolicitar_CambioTurno.Size = new System.Drawing.Size(210, 40);
+            this.btnSolicitar_CambioTurno.Size = new System.Drawing.Size(234, 40);
             this.btnSolicitar_CambioTurno.TabIndex = 62;
             this.btnSolicitar_CambioTurno.Text = "> Cambio de Turno";
             this.btnSolicitar_CambioTurno.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -328,16 +341,16 @@
             // 
             // btnSolicitar_HLibres
             // 
-            this.btnSolicitar_HLibres.BackColor = System.Drawing.Color.SteelBlue;
+            this.btnSolicitar_HLibres.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(242)))), ((int)(((byte)(241)))));
             this.btnSolicitar_HLibres.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.btnSolicitar_HLibres.FlatAppearance.BorderSize = 0;
             this.btnSolicitar_HLibres.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSolicitar_HLibres.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSolicitar_HLibres.ForeColor = System.Drawing.Color.White;
+            this.btnSolicitar_HLibres.ForeColor = System.Drawing.SystemColors.ControlText;
             this.btnSolicitar_HLibres.Location = new System.Drawing.Point(1, 0);
             this.btnSolicitar_HLibres.Name = "btnSolicitar_HLibres";
             this.btnSolicitar_HLibres.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
-            this.btnSolicitar_HLibres.Size = new System.Drawing.Size(210, 40);
+            this.btnSolicitar_HLibres.Size = new System.Drawing.Size(234, 40);
             this.btnSolicitar_HLibres.TabIndex = 61;
             this.btnSolicitar_HLibres.Text = "> Horas Libres";
             this.btnSolicitar_HLibres.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -356,16 +369,16 @@
             // 
             // btnReg_Inas
             // 
-            this.btnReg_Inas.BackColor = System.Drawing.Color.SteelBlue;
+            this.btnReg_Inas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(242)))), ((int)(((byte)(241)))));
             this.btnReg_Inas.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.btnReg_Inas.FlatAppearance.BorderSize = 0;
             this.btnReg_Inas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnReg_Inas.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnReg_Inas.ForeColor = System.Drawing.Color.White;
+            this.btnReg_Inas.ForeColor = System.Drawing.SystemColors.ControlText;
             this.btnReg_Inas.Location = new System.Drawing.Point(0, 40);
             this.btnReg_Inas.Name = "btnReg_Inas";
             this.btnReg_Inas.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
-            this.btnReg_Inas.Size = new System.Drawing.Size(210, 40);
+            this.btnReg_Inas.Size = new System.Drawing.Size(234, 40);
             this.btnReg_Inas.TabIndex = 62;
             this.btnReg_Inas.Text = "> Inasistencias";
             this.btnReg_Inas.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -374,16 +387,16 @@
             // 
             // btnReg_HE
             // 
-            this.btnReg_HE.BackColor = System.Drawing.Color.SteelBlue;
+            this.btnReg_HE.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(242)))), ((int)(((byte)(241)))));
             this.btnReg_HE.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.btnReg_HE.FlatAppearance.BorderSize = 0;
             this.btnReg_HE.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnReg_HE.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnReg_HE.ForeColor = System.Drawing.Color.White;
+            this.btnReg_HE.ForeColor = System.Drawing.SystemColors.ControlText;
             this.btnReg_HE.Location = new System.Drawing.Point(0, 0);
             this.btnReg_HE.Name = "btnReg_HE";
             this.btnReg_HE.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
-            this.btnReg_HE.Size = new System.Drawing.Size(210, 40);
+            this.btnReg_HE.Size = new System.Drawing.Size(234, 40);
             this.btnReg_HE.TabIndex = 61;
             this.btnReg_HE.Text = "> Horas Extras";
             this.btnReg_HE.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -409,6 +422,7 @@
             this.btnVisualizarHorarios.Text = "Visualizar Horarios";
             this.btnVisualizarHorarios.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnVisualizarHorarios.UseVisualStyleBackColor = false;
+            this.btnVisualizarHorarios.Click += new System.EventHandler(this.btnVisualizarHorarios_Click);
             // 
             // pictureBox4
             // 
@@ -428,19 +442,6 @@
             this.panelAviso.Name = "panelAviso";
             this.panelAviso.Size = new System.Drawing.Size(343, 285);
             this.panelAviso.TabIndex = 60;
-            // 
-            // picHome
-            // 
-            this.picHome.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(175)))), ((int)(((byte)(169)))));
-            this.picHome.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.picHome.Image = global::TA_GesBib_Cliente.Properties.Resources.hom4;
-            this.picHome.Location = new System.Drawing.Point(220, 65);
-            this.picHome.Name = "picHome";
-            this.picHome.Size = new System.Drawing.Size(56, 56);
-            this.picHome.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picHome.TabIndex = 62;
-            this.picHome.TabStop = false;
-            this.picHome.Click += new System.EventHandler(this.picHome_Click);
             // 
             // frmPerfilBibliotecario
             // 
@@ -464,12 +465,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picHome)).EndInit();
             this.panel4.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panelBtn_Solicitar.ResumeLayout(false);
             this.panelBtn_Registrar.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picHome)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -540,6 +540,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmAsignarTurnos";
             this.Text = "frmAsignarTurnos";
+            this.Load += new System.EventHandler(this.frmAsignarTurnos_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvDistri_Personal)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();

@@ -27,7 +27,9 @@ namespace TA_GesBib_Cliente
             InitializeComponent();
         }
 
+        private void frmAsignarTurnos_Load(object sender, EventArgs e)
+        {
 
-
+        }
     }
 }

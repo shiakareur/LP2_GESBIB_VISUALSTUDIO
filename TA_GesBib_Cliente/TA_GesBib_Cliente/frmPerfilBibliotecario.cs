@@ -32,6 +32,7 @@ namespace TA_GesBib_Cliente
         private frmSolicitarCambioTurno var_frmSolicitarCambioTurno_Bibliotecario;
 
         private frmRespuestaValidaciones var_frmRespuestasSolicitudes_Bibliotecario;
+        private frmVisualizarHorarios var_frmVerHorarios_Bibliotecario;
 
         public Panel PanelAviso { get => panelAviso; set => panelAviso = value; }
         public Label LblBienvenido { get => lblBienvenido; set => lblBienvenido = value; }                   
@@ -124,8 +125,10 @@ namespace TA_GesBib_Cliente
                         var_frmSolicitarHL_Bibliotecario.Visible == true) ||
                     (var_frmSolicitarCambioTurno_Bibliotecario != null &&
                         var_frmSolicitarCambioTurno_Bibliotecario.Visible == true)||
-                        (var_frmRespuestasSolicitudes_Bibliotecario != null &&
-                        var_frmRespuestasSolicitudes_Bibliotecario.Visible == true))
+                    (var_frmRespuestasSolicitudes_Bibliotecario != null &&
+                        var_frmRespuestasSolicitudes_Bibliotecario.Visible == true)||
+                    (var_frmVerHorarios_Bibliotecario != null &&
+                        var_frmVerHorarios_Bibliotecario.Visible == true))
                 {
 
                 this.muestraMensajeCerraroGuardarCambios();
@@ -201,12 +204,14 @@ namespace TA_GesBib_Cliente
 
             if((var_frmRegistrarHE_Bibliotecario != null &&
                         var_frmRegistrarHE_Bibliotecario.Visible == true) ||
-                    (var_frmSolicitarHL_Bibliotecario != null &&
-                        var_frmSolicitarHL_Bibliotecario.Visible == true) ||
-                    (var_frmSolicitarCambioTurno_Bibliotecario != null &&
+               (var_frmSolicitarHL_Bibliotecario != null &&
+                       var_frmSolicitarHL_Bibliotecario.Visible == true) ||
+               (var_frmSolicitarCambioTurno_Bibliotecario != null &&
                         var_frmSolicitarCambioTurno_Bibliotecario.Visible == true) ||
-                        (var_frmRespuestasSolicitudes_Bibliotecario != null &&
-                        var_frmRespuestasSolicitudes_Bibliotecario.Visible == true))
+               (var_frmRespuestasSolicitudes_Bibliotecario != null &&
+                        var_frmRespuestasSolicitudes_Bibliotecario.Visible == true)||
+               (var_frmVerHorarios_Bibliotecario != null &&
+                        var_frmVerHorarios_Bibliotecario.Visible == true))
             {
                 this.muestraMensajeCerraroGuardarCambios();
             }
@@ -258,12 +263,14 @@ namespace TA_GesBib_Cliente
         {
             if((var_frmRegistrarHE_Bibliotecario != null &&
                         var_frmRegistrarHE_Bibliotecario.Visible == true) ||
-                    (var_frmRegistrarInasis_Bibliotecario != null &&
+               (var_frmRegistrarInasis_Bibliotecario != null &&
                         var_frmRegistrarInasis_Bibliotecario.Visible == true) ||
-                    (var_frmSolicitarCambioTurno_Bibliotecario != null &&
+               (var_frmSolicitarCambioTurno_Bibliotecario != null &&
                         var_frmSolicitarCambioTurno_Bibliotecario.Visible == true) ||
-                        (var_frmRespuestasSolicitudes_Bibliotecario != null &&
-                        var_frmRespuestasSolicitudes_Bibliotecario.Visible == true))
+               (var_frmRespuestasSolicitudes_Bibliotecario != null &&
+                        var_frmRespuestasSolicitudes_Bibliotecario.Visible == true) ||
+               (var_frmVerHorarios_Bibliotecario != null &&
+                        var_frmVerHorarios_Bibliotecario.Visible == true))
             {
                 this.muestraMensajeCerraroGuardarCambios();
             }
@@ -326,12 +333,14 @@ namespace TA_GesBib_Cliente
         {
             if((var_frmRegistrarHE_Bibliotecario != null &&
                         var_frmRegistrarHE_Bibliotecario.Visible == true) ||
-                    (var_frmRegistrarInasis_Bibliotecario != null &&
+               (var_frmRegistrarInasis_Bibliotecario != null &&
                         var_frmRegistrarInasis_Bibliotecario.Visible == true) ||
-                    (var_frmSolicitarHL_Bibliotecario != null &&
+               (var_frmSolicitarHL_Bibliotecario != null &&
                         var_frmSolicitarHL_Bibliotecario.Visible == true) ||
-                        (var_frmRespuestasSolicitudes_Bibliotecario != null &&
-                        var_frmRespuestasSolicitudes_Bibliotecario.Visible == true))
+               (var_frmRespuestasSolicitudes_Bibliotecario != null &&
+                        var_frmRespuestasSolicitudes_Bibliotecario.Visible == true)||
+               (var_frmVerHorarios_Bibliotecario != null &&
+                        var_frmVerHorarios_Bibliotecario.Visible == true))
             {
                 this.muestraMensajeCerraroGuardarCambios();
             }
@@ -384,10 +393,14 @@ namespace TA_GesBib_Cliente
         {
             if ((var_frmRegistrarInasis_Bibliotecario != null &&
                         var_frmRegistrarInasis_Bibliotecario.Visible == true) ||
-                    (var_frmSolicitarHL_Bibliotecario != null &&
+                (var_frmSolicitarHL_Bibliotecario != null &&
                         var_frmSolicitarHL_Bibliotecario.Visible == true) ||
-                    (var_frmSolicitarCambioTurno_Bibliotecario != null &&
-                        var_frmSolicitarCambioTurno_Bibliotecario.Visible == true))
+                (var_frmSolicitarCambioTurno_Bibliotecario != null &&
+                        var_frmSolicitarCambioTurno_Bibliotecario.Visible == true)||
+                (var_frmRespuestasSolicitudes_Bibliotecario != null &&
+                        var_frmRespuestasSolicitudes_Bibliotecario.Visible == true)||
+                (var_frmVerHorarios_Bibliotecario != null &&
+                        var_frmVerHorarios_Bibliotecario.Visible == true))
             {
 
                 this.muestraMensajeCerraroGuardarCambios();
@@ -463,6 +476,90 @@ namespace TA_GesBib_Cliente
         private void picHome_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnVisualizarHorarios_Click(object sender, EventArgs e)
+        {
+            if ((var_frmRegistrarInasis_Bibliotecario != null &&
+                        var_frmRegistrarInasis_Bibliotecario.Visible == true) ||
+                (var_frmSolicitarHL_Bibliotecario != null &&
+                        var_frmSolicitarHL_Bibliotecario.Visible == true) ||
+                (var_frmSolicitarCambioTurno_Bibliotecario != null &&
+                        var_frmSolicitarCambioTurno_Bibliotecario.Visible == true) ||
+                (var_frmRespuestasSolicitudes_Bibliotecario != null &&
+                        var_frmRespuestasSolicitudes_Bibliotecario.Visible == true) ||
+                (var_frmRegistrarHE_Bibliotecario != null &&
+                        var_frmRegistrarHE_Bibliotecario.Visible == true))
+            {
+
+                this.muestraMensajeCerraroGuardarCambios();
+
+            }
+            else
+            {
+
+                //seguimos con nuestra programacion
+                //aca llamamos al formulario de registrar Horas extras
+                if (var_frmVerHorarios_Bibliotecario == null)
+                {
+                    var_frmVerHorarios_Bibliotecario = new frmVisualizarHorarios(this, TipoPerfil.PerfilBibliotecario);
+                    var_frmVerHorarios_Bibliotecario.MdiParent = this;
+
+                    //...add
+                    var_frmVerHorarios_Bibliotecario.StartPosition = FormStartPosition.Manual;
+                    var_frmVerHorarios_Bibliotecario.Left = 0;
+                    var_frmVerHorarios_Bibliotecario.Top = 0;
+                    //...
+
+
+                    var_frmVerHorarios_Bibliotecario.Show();
+                }
+                else
+                {
+                    //var_frmRespuestasSolicitudes_Bibliotecario.limpiarComponentes();
+                    //var_frmRespuestasSolicitudes_Bibliotecario.estadoComponentes(Estado.Inicial);
+                    var_frmVerHorarios_Bibliotecario.Visible = true;
+                }
+
+                //....
+                if (var_frmSolicitarHL_Bibliotecario != null)
+                {
+                    var_frmSolicitarHL_Bibliotecario.Visible = false;
+                    //todos los demas formularios
+
+                }
+
+                //hoy agregeishion
+
+                if (var_frmRegistrarInasis_Bibliotecario != null)
+                {
+                    var_frmRegistrarInasis_Bibliotecario.Visible = false;
+                    //todos los demas formularios
+
+                }
+
+                if (var_frmSolicitarCambioTurno_Bibliotecario != null)
+                {
+                    var_frmSolicitarCambioTurno_Bibliotecario.Visible = false;
+                    //todos los demas formularios
+
+                }
+
+                if (var_frmRegistrarHE_Bibliotecario != null)
+                {
+                    var_frmRegistrarHE_Bibliotecario.Visible = false;
+                    //todos los demas formularios
+
+                }
+
+                //hoy agregeishion
+
+                lblBienvenido.Visible = false;
+                panelAviso.Visible = false;
+
+                //escondemos el submenu
+                hideSubMenu();
+            }
         }
     }
 }

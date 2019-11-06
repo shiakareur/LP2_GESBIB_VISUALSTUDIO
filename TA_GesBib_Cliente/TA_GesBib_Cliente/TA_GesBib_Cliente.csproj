@@ -66,6 +66,12 @@
     <Compile Include="frmAsignarTurnos.Designer.cs">
       <DependentUpon>frmAsignarTurnos.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmCapacitaciones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCapacitaciones.Designer.cs">
+      <DependentUpon>frmCapacitaciones.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmCrearPuntoAtencion.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -77,6 +83,12 @@
     </Compile>
     <Compile Include="frmBuscarBiblioteca.designer.cs">
       <DependentUpon>frmBuscarBiblioteca.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmBuscarGestores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBuscarGestores.Designer.cs">
+      <DependentUpon>frmBuscarGestores.cs</DependentUpon>
     </Compile>
     <Compile Include="frmPerfilGestor.cs">
       <SubType>Form</SubType>
@@ -201,6 +213,9 @@
     <EmbeddedResource Include="frmAsignarTurnos.resx">
       <DependentUpon>frmAsignarTurnos.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmBuscarGestores.resx">
+      <DependentUpon>frmBuscarGestores.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmCrearPuntoAtencion.resx">
       <DependentUpon>frmCrearPuntoAtencion.cs</DependentUpon>
     </EmbeddedResource>
@@ -254,8 +269,8 @@
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <None Include="Connected Services\ServicioJava\Servicio.wsdl" />
-    <None Include="Connected Services\ServicioJava\Servicio.xsd">
+    <None Include="Connected Services\ServicioJava\Servicio1.wsdl" />
+    <None Include="Connected Services\ServicioJava\Servicio1.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="Connected Services\ServicioJava\TA_GesBib_Cliente.ServicioJava.actualizarCapacitacionResponse.datasource">
@@ -461,6 +476,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\tinker_45.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icono-regresar.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -145,7 +145,7 @@ namespace TA_GesBib_Cliente
 
 
             bib.nombre = txtNombre.Text;
-            bib.gestor = (ServicioJava.gestor)cmbGestor.SelectedItem;
+            //bib.gestor = (ServicioJava.gestor)cmbGestor.SelectedItem;
 
 
             try
@@ -199,6 +199,11 @@ namespace TA_GesBib_Cliente
             frmCrearPuntoAtencion frmCrearPA = new frmCrearPuntoAtencion();
             frmCrearPA.Show();
             frmCrearPA.Location = new Point(0, 0);
+        }
+
+        private void btnModificarPuntoAtencion_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

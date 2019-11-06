@@ -16,136 +16,6 @@ namespace TA_GesBib_Cliente.ServicioJava {
     public interface Servicio {
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2soft.pucp.edu.pe/Servicio/insertarBibliotecaRequest", ReplyAction="http://services.lp2soft.pucp.edu.pe/Servicio/insertarBibliotecaResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(usuario))]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        TA_GesBib_Cliente.ServicioJava.insertarBibliotecaResponse insertarBiblioteca(TA_GesBib_Cliente.ServicioJava.insertarBibliotecaRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2soft.pucp.edu.pe/Servicio/insertarBibliotecaRequest", ReplyAction="http://services.lp2soft.pucp.edu.pe/Servicio/insertarBibliotecaResponse")]
-        System.Threading.Tasks.Task<TA_GesBib_Cliente.ServicioJava.insertarBibliotecaResponse> insertarBibliotecaAsync(TA_GesBib_Cliente.ServicioJava.insertarBibliotecaRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2soft.pucp.edu.pe/Servicio/listarCapacitacionesRequest", ReplyAction="http://services.lp2soft.pucp.edu.pe/Servicio/listarCapacitacionesResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(usuario))]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        TA_GesBib_Cliente.ServicioJava.listarCapacitacionesResponse listarCapacitaciones(TA_GesBib_Cliente.ServicioJava.listarCapacitacionesRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2soft.pucp.edu.pe/Servicio/listarCapacitacionesRequest", ReplyAction="http://services.lp2soft.pucp.edu.pe/Servicio/listarCapacitacionesResponse")]
-        System.Threading.Tasks.Task<TA_GesBib_Cliente.ServicioJava.listarCapacitacionesResponse> listarCapacitacionesAsync(TA_GesBib_Cliente.ServicioJava.listarCapacitacionesRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2soft.pucp.edu.pe/Servicio/insertarAuxiliarBibliotecaRequest", ReplyAction="http://services.lp2soft.pucp.edu.pe/Servicio/insertarAuxiliarBibliotecaResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(usuario))]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        TA_GesBib_Cliente.ServicioJava.insertarAuxiliarBibliotecaResponse insertarAuxiliarBiblioteca(TA_GesBib_Cliente.ServicioJava.insertarAuxiliarBibliotecaRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2soft.pucp.edu.pe/Servicio/insertarAuxiliarBibliotecaRequest", ReplyAction="http://services.lp2soft.pucp.edu.pe/Servicio/insertarAuxiliarBibliotecaResponse")]
-        System.Threading.Tasks.Task<TA_GesBib_Cliente.ServicioJava.insertarAuxiliarBibliotecaResponse> insertarAuxiliarBibliotecaAsync(TA_GesBib_Cliente.ServicioJava.insertarAuxiliarBibliotecaRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2soft.pucp.edu.pe/Servicio/eliminarDiaCapacitacionRequest", ReplyAction="http://services.lp2soft.pucp.edu.pe/Servicio/eliminarDiaCapacitacionResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(usuario))]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        TA_GesBib_Cliente.ServicioJava.eliminarDiaCapacitacionResponse eliminarDiaCapacitacion(TA_GesBib_Cliente.ServicioJava.eliminarDiaCapacitacionRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2soft.pucp.edu.pe/Servicio/eliminarDiaCapacitacionRequest", ReplyAction="http://services.lp2soft.pucp.edu.pe/Servicio/eliminarDiaCapacitacionResponse")]
-        System.Threading.Tasks.Task<TA_GesBib_Cliente.ServicioJava.eliminarDiaCapacitacionResponse> eliminarDiaCapacitacionAsync(TA_GesBib_Cliente.ServicioJava.eliminarDiaCapacitacionRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2soft.pucp.edu.pe/Servicio/insertarPracticanteRequest", ReplyAction="http://services.lp2soft.pucp.edu.pe/Servicio/insertarPracticanteResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(usuario))]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        TA_GesBib_Cliente.ServicioJava.insertarPracticanteResponse insertarPracticante(TA_GesBib_Cliente.ServicioJava.insertarPracticanteRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2soft.pucp.edu.pe/Servicio/insertarPracticanteRequest", ReplyAction="http://services.lp2soft.pucp.edu.pe/Servicio/insertarPracticanteResponse")]
-        System.Threading.Tasks.Task<TA_GesBib_Cliente.ServicioJava.insertarPracticanteResponse> insertarPracticanteAsync(TA_GesBib_Cliente.ServicioJava.insertarPracticanteRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2soft.pucp.edu.pe/Servicio/actualizarCapacitacionRequest", ReplyAction="http://services.lp2soft.pucp.edu.pe/Servicio/actualizarCapacitacionResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(usuario))]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        TA_GesBib_Cliente.ServicioJava.actualizarCapacitacionResponse actualizarCapacitacion(TA_GesBib_Cliente.ServicioJava.actualizarCapacitacionRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2soft.pucp.edu.pe/Servicio/actualizarCapacitacionRequest", ReplyAction="http://services.lp2soft.pucp.edu.pe/Servicio/actualizarCapacitacionResponse")]
-        System.Threading.Tasks.Task<TA_GesBib_Cliente.ServicioJava.actualizarCapacitacionResponse> actualizarCapacitacionAsync(TA_GesBib_Cliente.ServicioJava.actualizarCapacitacionRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2soft.pucp.edu.pe/Servicio/listarPerfilExperienciaRequest", ReplyAction="http://services.lp2soft.pucp.edu.pe/Servicio/listarPerfilExperienciaResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(usuario))]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        TA_GesBib_Cliente.ServicioJava.listarPerfilExperienciaResponse listarPerfilExperiencia(TA_GesBib_Cliente.ServicioJava.listarPerfilExperienciaRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2soft.pucp.edu.pe/Servicio/listarPerfilExperienciaRequest", ReplyAction="http://services.lp2soft.pucp.edu.pe/Servicio/listarPerfilExperienciaResponse")]
-        System.Threading.Tasks.Task<TA_GesBib_Cliente.ServicioJava.listarPerfilExperienciaResponse> listarPerfilExperienciaAsync(TA_GesBib_Cliente.ServicioJava.listarPerfilExperienciaRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2soft.pucp.edu.pe/Servicio/listarBibliotecasRequest", ReplyAction="http://services.lp2soft.pucp.edu.pe/Servicio/listarBibliotecasResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(usuario))]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        TA_GesBib_Cliente.ServicioJava.listarBibliotecasResponse listarBibliotecas(TA_GesBib_Cliente.ServicioJava.listarBibliotecasRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2soft.pucp.edu.pe/Servicio/listarBibliotecasRequest", ReplyAction="http://services.lp2soft.pucp.edu.pe/Servicio/listarBibliotecasResponse")]
-        System.Threading.Tasks.Task<TA_GesBib_Cliente.ServicioJava.listarBibliotecasResponse> listarBibliotecasAsync(TA_GesBib_Cliente.ServicioJava.listarBibliotecasRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2soft.pucp.edu.pe/Servicio/insertarPuntoAtencionRequest", ReplyAction="http://services.lp2soft.pucp.edu.pe/Servicio/insertarPuntoAtencionResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(usuario))]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        TA_GesBib_Cliente.ServicioJava.insertarPuntoAtencionResponse insertarPuntoAtencion(TA_GesBib_Cliente.ServicioJava.insertarPuntoAtencionRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2soft.pucp.edu.pe/Servicio/insertarPuntoAtencionRequest", ReplyAction="http://services.lp2soft.pucp.edu.pe/Servicio/insertarPuntoAtencionResponse")]
-        System.Threading.Tasks.Task<TA_GesBib_Cliente.ServicioJava.insertarPuntoAtencionResponse> insertarPuntoAtencionAsync(TA_GesBib_Cliente.ServicioJava.insertarPuntoAtencionRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2soft.pucp.edu.pe/Servicio/listarPuntosAtencionRequest", ReplyAction="http://services.lp2soft.pucp.edu.pe/Servicio/listarPuntosAtencionResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(usuario))]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        TA_GesBib_Cliente.ServicioJava.listarPuntosAtencionResponse listarPuntosAtencion(TA_GesBib_Cliente.ServicioJava.listarPuntosAtencionRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2soft.pucp.edu.pe/Servicio/listarPuntosAtencionRequest", ReplyAction="http://services.lp2soft.pucp.edu.pe/Servicio/listarPuntosAtencionResponse")]
-        System.Threading.Tasks.Task<TA_GesBib_Cliente.ServicioJava.listarPuntosAtencionResponse> listarPuntosAtencionAsync(TA_GesBib_Cliente.ServicioJava.listarPuntosAtencionRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2soft.pucp.edu.pe/Servicio/insertarPerfilExperienciaRequest", ReplyAction="http://services.lp2soft.pucp.edu.pe/Servicio/insertarPerfilExperienciaResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(usuario))]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        TA_GesBib_Cliente.ServicioJava.insertarPerfilExperienciaResponse insertarPerfilExperiencia(TA_GesBib_Cliente.ServicioJava.insertarPerfilExperienciaRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2soft.pucp.edu.pe/Servicio/insertarPerfilExperienciaRequest", ReplyAction="http://services.lp2soft.pucp.edu.pe/Servicio/insertarPerfilExperienciaResponse")]
-        System.Threading.Tasks.Task<TA_GesBib_Cliente.ServicioJava.insertarPerfilExperienciaResponse> insertarPerfilExperienciaAsync(TA_GesBib_Cliente.ServicioJava.insertarPerfilExperienciaRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2soft.pucp.edu.pe/Servicio/eliminarCapacitacionRequest", ReplyAction="http://services.lp2soft.pucp.edu.pe/Servicio/eliminarCapacitacionResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(usuario))]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        TA_GesBib_Cliente.ServicioJava.eliminarCapacitacionResponse eliminarCapacitacion(TA_GesBib_Cliente.ServicioJava.eliminarCapacitacionRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2soft.pucp.edu.pe/Servicio/eliminarCapacitacionRequest", ReplyAction="http://services.lp2soft.pucp.edu.pe/Servicio/eliminarCapacitacionResponse")]
-        System.Threading.Tasks.Task<TA_GesBib_Cliente.ServicioJava.eliminarCapacitacionResponse> eliminarCapacitacionAsync(TA_GesBib_Cliente.ServicioJava.eliminarCapacitacionRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2soft.pucp.edu.pe/Servicio/insertarBibliotecarioRequest", ReplyAction="http://services.lp2soft.pucp.edu.pe/Servicio/insertarBibliotecarioResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(usuario))]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        TA_GesBib_Cliente.ServicioJava.insertarBibliotecarioResponse insertarBibliotecario(TA_GesBib_Cliente.ServicioJava.insertarBibliotecarioRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2soft.pucp.edu.pe/Servicio/insertarBibliotecarioRequest", ReplyAction="http://services.lp2soft.pucp.edu.pe/Servicio/insertarBibliotecarioResponse")]
-        System.Threading.Tasks.Task<TA_GesBib_Cliente.ServicioJava.insertarBibliotecarioResponse> insertarBibliotecarioAsync(TA_GesBib_Cliente.ServicioJava.insertarBibliotecarioRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2soft.pucp.edu.pe/Servicio/insertarGestorRequest", ReplyAction="http://services.lp2soft.pucp.edu.pe/Servicio/insertarGestorResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(usuario))]
@@ -154,6 +24,16 @@ namespace TA_GesBib_Cliente.ServicioJava {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2soft.pucp.edu.pe/Servicio/insertarGestorRequest", ReplyAction="http://services.lp2soft.pucp.edu.pe/Servicio/insertarGestorResponse")]
         System.Threading.Tasks.Task<TA_GesBib_Cliente.ServicioJava.insertarGestorResponse> insertarGestorAsync(TA_GesBib_Cliente.ServicioJava.insertarGestorRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2soft.pucp.edu.pe/Servicio/listarGestoresRequest", ReplyAction="http://services.lp2soft.pucp.edu.pe/Servicio/listarGestoresResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(usuario))]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        TA_GesBib_Cliente.ServicioJava.listarGestoresResponse listarGestores(TA_GesBib_Cliente.ServicioJava.listarGestoresRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2soft.pucp.edu.pe/Servicio/listarGestoresRequest", ReplyAction="http://services.lp2soft.pucp.edu.pe/Servicio/listarGestoresResponse")]
+        System.Threading.Tasks.Task<TA_GesBib_Cliente.ServicioJava.listarGestoresResponse> listarGestoresAsync(TA_GesBib_Cliente.ServicioJava.listarGestoresRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2soft.pucp.edu.pe/Servicio/helloRequest", ReplyAction="http://services.lp2soft.pucp.edu.pe/Servicio/helloResponse")]
@@ -166,74 +46,134 @@ namespace TA_GesBib_Cliente.ServicioJava {
         System.Threading.Tasks.Task<TA_GesBib_Cliente.ServicioJava.helloResponse> helloAsync(TA_GesBib_Cliente.ServicioJava.helloRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2soft.pucp.edu.pe/Servicio/listarGestoresRequest", ReplyAction="http://services.lp2soft.pucp.edu.pe/Servicio/listarGestoresResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2soft.pucp.edu.pe/Servicio/listarCapacitacionesRequest", ReplyAction="http://services.lp2soft.pucp.edu.pe/Servicio/listarCapacitacionesResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(usuario))]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        TA_GesBib_Cliente.ServicioJava.listarGestoresResponse listarGestores(TA_GesBib_Cliente.ServicioJava.listarGestoresRequest request);
+        TA_GesBib_Cliente.ServicioJava.listarCapacitacionesResponse listarCapacitaciones(TA_GesBib_Cliente.ServicioJava.listarCapacitacionesRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2soft.pucp.edu.pe/Servicio/listarGestoresRequest", ReplyAction="http://services.lp2soft.pucp.edu.pe/Servicio/listarGestoresResponse")]
-        System.Threading.Tasks.Task<TA_GesBib_Cliente.ServicioJava.listarGestoresResponse> listarGestoresAsync(TA_GesBib_Cliente.ServicioJava.listarGestoresRequest request);
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3761.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://services.lp2soft.pucp.edu.pe/")]
-    public partial class biblioteca : object, System.ComponentModel.INotifyPropertyChanged {
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2soft.pucp.edu.pe/Servicio/listarCapacitacionesRequest", ReplyAction="http://services.lp2soft.pucp.edu.pe/Servicio/listarCapacitacionesResponse")]
+        System.Threading.Tasks.Task<TA_GesBib_Cliente.ServicioJava.listarCapacitacionesResponse> listarCapacitacionesAsync(TA_GesBib_Cliente.ServicioJava.listarCapacitacionesRequest request);
         
-        private gestor gestorField;
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2soft.pucp.edu.pe/Servicio/insertarPerfilExperienciaRequest", ReplyAction="http://services.lp2soft.pucp.edu.pe/Servicio/insertarPerfilExperienciaResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(usuario))]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        TA_GesBib_Cliente.ServicioJava.insertarPerfilExperienciaResponse insertarPerfilExperiencia(TA_GesBib_Cliente.ServicioJava.insertarPerfilExperienciaRequest request);
         
-        private int idField;
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2soft.pucp.edu.pe/Servicio/insertarPerfilExperienciaRequest", ReplyAction="http://services.lp2soft.pucp.edu.pe/Servicio/insertarPerfilExperienciaResponse")]
+        System.Threading.Tasks.Task<TA_GesBib_Cliente.ServicioJava.insertarPerfilExperienciaResponse> insertarPerfilExperienciaAsync(TA_GesBib_Cliente.ServicioJava.insertarPerfilExperienciaRequest request);
         
-        private string nombreField;
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2soft.pucp.edu.pe/Servicio/actualizarCapacitacionRequest", ReplyAction="http://services.lp2soft.pucp.edu.pe/Servicio/actualizarCapacitacionResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(usuario))]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        TA_GesBib_Cliente.ServicioJava.actualizarCapacitacionResponse actualizarCapacitacion(TA_GesBib_Cliente.ServicioJava.actualizarCapacitacionRequest request);
         
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
-        public gestor gestor {
-            get {
-                return this.gestorField;
-            }
-            set {
-                this.gestorField = value;
-                this.RaisePropertyChanged("gestor");
-            }
-        }
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2soft.pucp.edu.pe/Servicio/actualizarCapacitacionRequest", ReplyAction="http://services.lp2soft.pucp.edu.pe/Servicio/actualizarCapacitacionResponse")]
+        System.Threading.Tasks.Task<TA_GesBib_Cliente.ServicioJava.actualizarCapacitacionResponse> actualizarCapacitacionAsync(TA_GesBib_Cliente.ServicioJava.actualizarCapacitacionRequest request);
         
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
-        public int id {
-            get {
-                return this.idField;
-            }
-            set {
-                this.idField = value;
-                this.RaisePropertyChanged("id");
-            }
-        }
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2soft.pucp.edu.pe/Servicio/eliminarDiaCapacitacionRequest", ReplyAction="http://services.lp2soft.pucp.edu.pe/Servicio/eliminarDiaCapacitacionResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(usuario))]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        TA_GesBib_Cliente.ServicioJava.eliminarDiaCapacitacionResponse eliminarDiaCapacitacion(TA_GesBib_Cliente.ServicioJava.eliminarDiaCapacitacionRequest request);
         
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
-        public string nombre {
-            get {
-                return this.nombreField;
-            }
-            set {
-                this.nombreField = value;
-                this.RaisePropertyChanged("nombre");
-            }
-        }
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2soft.pucp.edu.pe/Servicio/eliminarDiaCapacitacionRequest", ReplyAction="http://services.lp2soft.pucp.edu.pe/Servicio/eliminarDiaCapacitacionResponse")]
+        System.Threading.Tasks.Task<TA_GesBib_Cliente.ServicioJava.eliminarDiaCapacitacionResponse> eliminarDiaCapacitacionAsync(TA_GesBib_Cliente.ServicioJava.eliminarDiaCapacitacionRequest request);
         
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2soft.pucp.edu.pe/Servicio/insertarBibliotecaRequest", ReplyAction="http://services.lp2soft.pucp.edu.pe/Servicio/insertarBibliotecaResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(usuario))]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        TA_GesBib_Cliente.ServicioJava.insertarBibliotecaResponse insertarBiblioteca(TA_GesBib_Cliente.ServicioJava.insertarBibliotecaRequest request);
         
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2soft.pucp.edu.pe/Servicio/insertarBibliotecaRequest", ReplyAction="http://services.lp2soft.pucp.edu.pe/Servicio/insertarBibliotecaResponse")]
+        System.Threading.Tasks.Task<TA_GesBib_Cliente.ServicioJava.insertarBibliotecaResponse> insertarBibliotecaAsync(TA_GesBib_Cliente.ServicioJava.insertarBibliotecaRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2soft.pucp.edu.pe/Servicio/listarPuntosAtencionRequest", ReplyAction="http://services.lp2soft.pucp.edu.pe/Servicio/listarPuntosAtencionResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(usuario))]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        TA_GesBib_Cliente.ServicioJava.listarPuntosAtencionResponse listarPuntosAtencion(TA_GesBib_Cliente.ServicioJava.listarPuntosAtencionRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2soft.pucp.edu.pe/Servicio/listarPuntosAtencionRequest", ReplyAction="http://services.lp2soft.pucp.edu.pe/Servicio/listarPuntosAtencionResponse")]
+        System.Threading.Tasks.Task<TA_GesBib_Cliente.ServicioJava.listarPuntosAtencionResponse> listarPuntosAtencionAsync(TA_GesBib_Cliente.ServicioJava.listarPuntosAtencionRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2soft.pucp.edu.pe/Servicio/insertarBibliotecarioRequest", ReplyAction="http://services.lp2soft.pucp.edu.pe/Servicio/insertarBibliotecarioResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(usuario))]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        TA_GesBib_Cliente.ServicioJava.insertarBibliotecarioResponse insertarBibliotecario(TA_GesBib_Cliente.ServicioJava.insertarBibliotecarioRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2soft.pucp.edu.pe/Servicio/insertarBibliotecarioRequest", ReplyAction="http://services.lp2soft.pucp.edu.pe/Servicio/insertarBibliotecarioResponse")]
+        System.Threading.Tasks.Task<TA_GesBib_Cliente.ServicioJava.insertarBibliotecarioResponse> insertarBibliotecarioAsync(TA_GesBib_Cliente.ServicioJava.insertarBibliotecarioRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2soft.pucp.edu.pe/Servicio/insertarAuxiliarBibliotecaRequest", ReplyAction="http://services.lp2soft.pucp.edu.pe/Servicio/insertarAuxiliarBibliotecaResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(usuario))]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        TA_GesBib_Cliente.ServicioJava.insertarAuxiliarBibliotecaResponse insertarAuxiliarBiblioteca(TA_GesBib_Cliente.ServicioJava.insertarAuxiliarBibliotecaRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2soft.pucp.edu.pe/Servicio/insertarAuxiliarBibliotecaRequest", ReplyAction="http://services.lp2soft.pucp.edu.pe/Servicio/insertarAuxiliarBibliotecaResponse")]
+        System.Threading.Tasks.Task<TA_GesBib_Cliente.ServicioJava.insertarAuxiliarBibliotecaResponse> insertarAuxiliarBibliotecaAsync(TA_GesBib_Cliente.ServicioJava.insertarAuxiliarBibliotecaRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2soft.pucp.edu.pe/Servicio/eliminarCapacitacionRequest", ReplyAction="http://services.lp2soft.pucp.edu.pe/Servicio/eliminarCapacitacionResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(usuario))]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        TA_GesBib_Cliente.ServicioJava.eliminarCapacitacionResponse eliminarCapacitacion(TA_GesBib_Cliente.ServicioJava.eliminarCapacitacionRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2soft.pucp.edu.pe/Servicio/eliminarCapacitacionRequest", ReplyAction="http://services.lp2soft.pucp.edu.pe/Servicio/eliminarCapacitacionResponse")]
+        System.Threading.Tasks.Task<TA_GesBib_Cliente.ServicioJava.eliminarCapacitacionResponse> eliminarCapacitacionAsync(TA_GesBib_Cliente.ServicioJava.eliminarCapacitacionRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2soft.pucp.edu.pe/Servicio/insertarPuntoAtencionRequest", ReplyAction="http://services.lp2soft.pucp.edu.pe/Servicio/insertarPuntoAtencionResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(usuario))]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        TA_GesBib_Cliente.ServicioJava.insertarPuntoAtencionResponse insertarPuntoAtencion(TA_GesBib_Cliente.ServicioJava.insertarPuntoAtencionRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2soft.pucp.edu.pe/Servicio/insertarPuntoAtencionRequest", ReplyAction="http://services.lp2soft.pucp.edu.pe/Servicio/insertarPuntoAtencionResponse")]
+        System.Threading.Tasks.Task<TA_GesBib_Cliente.ServicioJava.insertarPuntoAtencionResponse> insertarPuntoAtencionAsync(TA_GesBib_Cliente.ServicioJava.insertarPuntoAtencionRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2soft.pucp.edu.pe/Servicio/listarBibliotecasRequest", ReplyAction="http://services.lp2soft.pucp.edu.pe/Servicio/listarBibliotecasResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(usuario))]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        TA_GesBib_Cliente.ServicioJava.listarBibliotecasResponse listarBibliotecas(TA_GesBib_Cliente.ServicioJava.listarBibliotecasRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2soft.pucp.edu.pe/Servicio/listarBibliotecasRequest", ReplyAction="http://services.lp2soft.pucp.edu.pe/Servicio/listarBibliotecasResponse")]
+        System.Threading.Tasks.Task<TA_GesBib_Cliente.ServicioJava.listarBibliotecasResponse> listarBibliotecasAsync(TA_GesBib_Cliente.ServicioJava.listarBibliotecasRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2soft.pucp.edu.pe/Servicio/listarPerfilExperienciaRequest", ReplyAction="http://services.lp2soft.pucp.edu.pe/Servicio/listarPerfilExperienciaResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(usuario))]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        TA_GesBib_Cliente.ServicioJava.listarPerfilExperienciaResponse listarPerfilExperiencia(TA_GesBib_Cliente.ServicioJava.listarPerfilExperienciaRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2soft.pucp.edu.pe/Servicio/listarPerfilExperienciaRequest", ReplyAction="http://services.lp2soft.pucp.edu.pe/Servicio/listarPerfilExperienciaResponse")]
+        System.Threading.Tasks.Task<TA_GesBib_Cliente.ServicioJava.listarPerfilExperienciaResponse> listarPerfilExperienciaAsync(TA_GesBib_Cliente.ServicioJava.listarPerfilExperienciaRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2soft.pucp.edu.pe/Servicio/insertarPracticanteRequest", ReplyAction="http://services.lp2soft.pucp.edu.pe/Servicio/insertarPracticanteResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(usuario))]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        TA_GesBib_Cliente.ServicioJava.insertarPracticanteResponse insertarPracticante(TA_GesBib_Cliente.ServicioJava.insertarPracticanteRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2soft.pucp.edu.pe/Servicio/insertarPracticanteRequest", ReplyAction="http://services.lp2soft.pucp.edu.pe/Servicio/insertarPracticanteResponse")]
+        System.Threading.Tasks.Task<TA_GesBib_Cliente.ServicioJava.insertarPracticanteResponse> insertarPracticanteAsync(TA_GesBib_Cliente.ServicioJava.insertarPracticanteRequest request);
     }
     
     /// <remarks/>
@@ -970,6 +910,66 @@ namespace TA_GesBib_Cliente.ServicioJava {
             set {
                 this.pisoField = value;
                 this.RaisePropertyChanged("piso");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3761.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://services.lp2soft.pucp.edu.pe/")]
+    public partial class biblioteca : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private gestor gestorField;
+        
+        private int idField;
+        
+        private string nombreField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
+        public gestor gestor {
+            get {
+                return this.gestorField;
+            }
+            set {
+                this.gestorField = value;
+                this.RaisePropertyChanged("gestor");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
+        public int id {
+            get {
+                return this.idField;
+            }
+            set {
+                this.idField = value;
+                this.RaisePropertyChanged("id");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
+        public string nombre {
+            get {
+                return this.nombreField;
+            }
+            set {
+                this.nombreField = value;
+                this.RaisePropertyChanged("nombre");
             }
         }
         
@@ -1815,450 +1815,6 @@ namespace TA_GesBib_Cliente.ServicioJava {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarBiblioteca", WrapperNamespace="http://services.lp2soft.pucp.edu.pe/", IsWrapped=true)]
-    public partial class insertarBibliotecaRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.lp2soft.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public TA_GesBib_Cliente.ServicioJava.biblioteca biblioteca;
-        
-        public insertarBibliotecaRequest() {
-        }
-        
-        public insertarBibliotecaRequest(TA_GesBib_Cliente.ServicioJava.biblioteca biblioteca) {
-            this.biblioteca = biblioteca;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarBibliotecaResponse", WrapperNamespace="http://services.lp2soft.pucp.edu.pe/", IsWrapped=true)]
-    public partial class insertarBibliotecaResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.lp2soft.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int @return;
-        
-        public insertarBibliotecaResponse() {
-        }
-        
-        public insertarBibliotecaResponse(int @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarCapacitaciones", WrapperNamespace="http://services.lp2soft.pucp.edu.pe/", IsWrapped=true)]
-    public partial class listarCapacitacionesRequest {
-        
-        public listarCapacitacionesRequest() {
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarCapacitacionesResponse", WrapperNamespace="http://services.lp2soft.pucp.edu.pe/", IsWrapped=true)]
-    public partial class listarCapacitacionesResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.lp2soft.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public TA_GesBib_Cliente.ServicioJava.capacitacion[] @return;
-        
-        public listarCapacitacionesResponse() {
-        }
-        
-        public listarCapacitacionesResponse(TA_GesBib_Cliente.ServicioJava.capacitacion[] @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarAuxiliarBiblioteca", WrapperNamespace="http://services.lp2soft.pucp.edu.pe/", IsWrapped=true)]
-    public partial class insertarAuxiliarBibliotecaRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.lp2soft.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public TA_GesBib_Cliente.ServicioJava.auxiliar auxiliar;
-        
-        public insertarAuxiliarBibliotecaRequest() {
-        }
-        
-        public insertarAuxiliarBibliotecaRequest(TA_GesBib_Cliente.ServicioJava.auxiliar auxiliar) {
-            this.auxiliar = auxiliar;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarAuxiliarBibliotecaResponse", WrapperNamespace="http://services.lp2soft.pucp.edu.pe/", IsWrapped=true)]
-    public partial class insertarAuxiliarBibliotecaResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.lp2soft.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int @return;
-        
-        public insertarAuxiliarBibliotecaResponse() {
-        }
-        
-        public insertarAuxiliarBibliotecaResponse(int @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarDiaCapacitacion", WrapperNamespace="http://services.lp2soft.pucp.edu.pe/", IsWrapped=true)]
-    public partial class eliminarDiaCapacitacionRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.lp2soft.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int idCapacitacion;
-        
-        public eliminarDiaCapacitacionRequest() {
-        }
-        
-        public eliminarDiaCapacitacionRequest(int idCapacitacion) {
-            this.idCapacitacion = idCapacitacion;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarDiaCapacitacionResponse", WrapperNamespace="http://services.lp2soft.pucp.edu.pe/", IsWrapped=true)]
-    public partial class eliminarDiaCapacitacionResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.lp2soft.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int @return;
-        
-        public eliminarDiaCapacitacionResponse() {
-        }
-        
-        public eliminarDiaCapacitacionResponse(int @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarPracticante", WrapperNamespace="http://services.lp2soft.pucp.edu.pe/", IsWrapped=true)]
-    public partial class insertarPracticanteRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.lp2soft.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public TA_GesBib_Cliente.ServicioJava.practicante practicante;
-        
-        public insertarPracticanteRequest() {
-        }
-        
-        public insertarPracticanteRequest(TA_GesBib_Cliente.ServicioJava.practicante practicante) {
-            this.practicante = practicante;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarPracticanteResponse", WrapperNamespace="http://services.lp2soft.pucp.edu.pe/", IsWrapped=true)]
-    public partial class insertarPracticanteResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.lp2soft.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int @return;
-        
-        public insertarPracticanteResponse() {
-        }
-        
-        public insertarPracticanteResponse(int @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="actualizarCapacitacion", WrapperNamespace="http://services.lp2soft.pucp.edu.pe/", IsWrapped=true)]
-    public partial class actualizarCapacitacionRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.lp2soft.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public TA_GesBib_Cliente.ServicioJava.capacitacion capacitacion;
-        
-        public actualizarCapacitacionRequest() {
-        }
-        
-        public actualizarCapacitacionRequest(TA_GesBib_Cliente.ServicioJava.capacitacion capacitacion) {
-            this.capacitacion = capacitacion;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="actualizarCapacitacionResponse", WrapperNamespace="http://services.lp2soft.pucp.edu.pe/", IsWrapped=true)]
-    public partial class actualizarCapacitacionResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.lp2soft.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int @return;
-        
-        public actualizarCapacitacionResponse() {
-        }
-        
-        public actualizarCapacitacionResponse(int @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarPerfilExperiencia", WrapperNamespace="http://services.lp2soft.pucp.edu.pe/", IsWrapped=true)]
-    public partial class listarPerfilExperienciaRequest {
-        
-        public listarPerfilExperienciaRequest() {
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarPerfilExperienciaResponse", WrapperNamespace="http://services.lp2soft.pucp.edu.pe/", IsWrapped=true)]
-    public partial class listarPerfilExperienciaResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.lp2soft.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public TA_GesBib_Cliente.ServicioJava.perfilExperiencia[] @return;
-        
-        public listarPerfilExperienciaResponse() {
-        }
-        
-        public listarPerfilExperienciaResponse(TA_GesBib_Cliente.ServicioJava.perfilExperiencia[] @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarBibliotecas", WrapperNamespace="http://services.lp2soft.pucp.edu.pe/", IsWrapped=true)]
-    public partial class listarBibliotecasRequest {
-        
-        public listarBibliotecasRequest() {
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarBibliotecasResponse", WrapperNamespace="http://services.lp2soft.pucp.edu.pe/", IsWrapped=true)]
-    public partial class listarBibliotecasResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.lp2soft.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public TA_GesBib_Cliente.ServicioJava.biblioteca[] @return;
-        
-        public listarBibliotecasResponse() {
-        }
-        
-        public listarBibliotecasResponse(TA_GesBib_Cliente.ServicioJava.biblioteca[] @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarPuntoAtencion", WrapperNamespace="http://services.lp2soft.pucp.edu.pe/", IsWrapped=true)]
-    public partial class insertarPuntoAtencionRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.lp2soft.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public TA_GesBib_Cliente.ServicioJava.puntosAtencion PuntoAtencion;
-        
-        public insertarPuntoAtencionRequest() {
-        }
-        
-        public insertarPuntoAtencionRequest(TA_GesBib_Cliente.ServicioJava.puntosAtencion PuntoAtencion) {
-            this.PuntoAtencion = PuntoAtencion;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarPuntoAtencionResponse", WrapperNamespace="http://services.lp2soft.pucp.edu.pe/", IsWrapped=true)]
-    public partial class insertarPuntoAtencionResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.lp2soft.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int @return;
-        
-        public insertarPuntoAtencionResponse() {
-        }
-        
-        public insertarPuntoAtencionResponse(int @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarPuntosAtencion", WrapperNamespace="http://services.lp2soft.pucp.edu.pe/", IsWrapped=true)]
-    public partial class listarPuntosAtencionRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.lp2soft.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int arg0;
-        
-        public listarPuntosAtencionRequest() {
-        }
-        
-        public listarPuntosAtencionRequest(int arg0) {
-            this.arg0 = arg0;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarPuntosAtencionResponse", WrapperNamespace="http://services.lp2soft.pucp.edu.pe/", IsWrapped=true)]
-    public partial class listarPuntosAtencionResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.lp2soft.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public TA_GesBib_Cliente.ServicioJava.puntosAtencion[] @return;
-        
-        public listarPuntosAtencionResponse() {
-        }
-        
-        public listarPuntosAtencionResponse(TA_GesBib_Cliente.ServicioJava.puntosAtencion[] @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarPerfilExperiencia", WrapperNamespace="http://services.lp2soft.pucp.edu.pe/", IsWrapped=true)]
-    public partial class insertarPerfilExperienciaRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.lp2soft.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public TA_GesBib_Cliente.ServicioJava.perfilExperiencia perfilExperiencia;
-        
-        public insertarPerfilExperienciaRequest() {
-        }
-        
-        public insertarPerfilExperienciaRequest(TA_GesBib_Cliente.ServicioJava.perfilExperiencia perfilExperiencia) {
-            this.perfilExperiencia = perfilExperiencia;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarPerfilExperienciaResponse", WrapperNamespace="http://services.lp2soft.pucp.edu.pe/", IsWrapped=true)]
-    public partial class insertarPerfilExperienciaResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.lp2soft.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int @return;
-        
-        public insertarPerfilExperienciaResponse() {
-        }
-        
-        public insertarPerfilExperienciaResponse(int @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarCapacitacion", WrapperNamespace="http://services.lp2soft.pucp.edu.pe/", IsWrapped=true)]
-    public partial class eliminarCapacitacionRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.lp2soft.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int idCapacitacion;
-        
-        public eliminarCapacitacionRequest() {
-        }
-        
-        public eliminarCapacitacionRequest(int idCapacitacion) {
-            this.idCapacitacion = idCapacitacion;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarCapacitacionResponse", WrapperNamespace="http://services.lp2soft.pucp.edu.pe/", IsWrapped=true)]
-    public partial class eliminarCapacitacionResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.lp2soft.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int @return;
-        
-        public eliminarCapacitacionResponse() {
-        }
-        
-        public eliminarCapacitacionResponse(int @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarBibliotecario", WrapperNamespace="http://services.lp2soft.pucp.edu.pe/", IsWrapped=true)]
-    public partial class insertarBibliotecarioRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.lp2soft.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public TA_GesBib_Cliente.ServicioJava.bibliotecario bibliotecario;
-        
-        public insertarBibliotecarioRequest() {
-        }
-        
-        public insertarBibliotecarioRequest(TA_GesBib_Cliente.ServicioJava.bibliotecario bibliotecario) {
-            this.bibliotecario = bibliotecario;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarBibliotecarioResponse", WrapperNamespace="http://services.lp2soft.pucp.edu.pe/", IsWrapped=true)]
-    public partial class insertarBibliotecarioResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.lp2soft.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int @return;
-        
-        public insertarBibliotecarioResponse() {
-        }
-        
-        public insertarBibliotecarioResponse(int @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     [System.ServiceModel.MessageContractAttribute(WrapperName="insertarGestor", WrapperNamespace="http://services.lp2soft.pucp.edu.pe/", IsWrapped=true)]
     public partial class insertarGestorRequest {
         
@@ -2288,42 +1844,6 @@ namespace TA_GesBib_Cliente.ServicioJava {
         }
         
         public insertarGestorResponse(int @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="hello", WrapperNamespace="http://services.lp2soft.pucp.edu.pe/", IsWrapped=true)]
-    public partial class helloRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.lp2soft.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string name;
-        
-        public helloRequest() {
-        }
-        
-        public helloRequest(string name) {
-            this.name = name;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="helloResponse", WrapperNamespace="http://services.lp2soft.pucp.edu.pe/", IsWrapped=true)]
-    public partial class helloResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.lp2soft.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string @return;
-        
-        public helloResponse() {
-        }
-        
-        public helloResponse(string @return) {
             this.@return = @return;
         }
     }
@@ -2369,6 +1889,486 @@ namespace TA_GesBib_Cliente.ServicioJava {
         }
     }
     
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="hello", WrapperNamespace="http://services.lp2soft.pucp.edu.pe/", IsWrapped=true)]
+    public partial class helloRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.lp2soft.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string name;
+        
+        public helloRequest() {
+        }
+        
+        public helloRequest(string name) {
+            this.name = name;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="helloResponse", WrapperNamespace="http://services.lp2soft.pucp.edu.pe/", IsWrapped=true)]
+    public partial class helloResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.lp2soft.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string @return;
+        
+        public helloResponse() {
+        }
+        
+        public helloResponse(string @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarCapacitaciones", WrapperNamespace="http://services.lp2soft.pucp.edu.pe/", IsWrapped=true)]
+    public partial class listarCapacitacionesRequest {
+        
+        public listarCapacitacionesRequest() {
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarCapacitacionesResponse", WrapperNamespace="http://services.lp2soft.pucp.edu.pe/", IsWrapped=true)]
+    public partial class listarCapacitacionesResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.lp2soft.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public TA_GesBib_Cliente.ServicioJava.capacitacion[] @return;
+        
+        public listarCapacitacionesResponse() {
+        }
+        
+        public listarCapacitacionesResponse(TA_GesBib_Cliente.ServicioJava.capacitacion[] @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarPerfilExperiencia", WrapperNamespace="http://services.lp2soft.pucp.edu.pe/", IsWrapped=true)]
+    public partial class insertarPerfilExperienciaRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.lp2soft.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public TA_GesBib_Cliente.ServicioJava.perfilExperiencia perfilExperiencia;
+        
+        public insertarPerfilExperienciaRequest() {
+        }
+        
+        public insertarPerfilExperienciaRequest(TA_GesBib_Cliente.ServicioJava.perfilExperiencia perfilExperiencia) {
+            this.perfilExperiencia = perfilExperiencia;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarPerfilExperienciaResponse", WrapperNamespace="http://services.lp2soft.pucp.edu.pe/", IsWrapped=true)]
+    public partial class insertarPerfilExperienciaResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.lp2soft.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int @return;
+        
+        public insertarPerfilExperienciaResponse() {
+        }
+        
+        public insertarPerfilExperienciaResponse(int @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="actualizarCapacitacion", WrapperNamespace="http://services.lp2soft.pucp.edu.pe/", IsWrapped=true)]
+    public partial class actualizarCapacitacionRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.lp2soft.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public TA_GesBib_Cliente.ServicioJava.capacitacion capacitacion;
+        
+        public actualizarCapacitacionRequest() {
+        }
+        
+        public actualizarCapacitacionRequest(TA_GesBib_Cliente.ServicioJava.capacitacion capacitacion) {
+            this.capacitacion = capacitacion;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="actualizarCapacitacionResponse", WrapperNamespace="http://services.lp2soft.pucp.edu.pe/", IsWrapped=true)]
+    public partial class actualizarCapacitacionResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.lp2soft.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int @return;
+        
+        public actualizarCapacitacionResponse() {
+        }
+        
+        public actualizarCapacitacionResponse(int @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarDiaCapacitacion", WrapperNamespace="http://services.lp2soft.pucp.edu.pe/", IsWrapped=true)]
+    public partial class eliminarDiaCapacitacionRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.lp2soft.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int idCapacitacion;
+        
+        public eliminarDiaCapacitacionRequest() {
+        }
+        
+        public eliminarDiaCapacitacionRequest(int idCapacitacion) {
+            this.idCapacitacion = idCapacitacion;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarDiaCapacitacionResponse", WrapperNamespace="http://services.lp2soft.pucp.edu.pe/", IsWrapped=true)]
+    public partial class eliminarDiaCapacitacionResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.lp2soft.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int @return;
+        
+        public eliminarDiaCapacitacionResponse() {
+        }
+        
+        public eliminarDiaCapacitacionResponse(int @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarBiblioteca", WrapperNamespace="http://services.lp2soft.pucp.edu.pe/", IsWrapped=true)]
+    public partial class insertarBibliotecaRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.lp2soft.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public TA_GesBib_Cliente.ServicioJava.biblioteca biblioteca;
+        
+        public insertarBibliotecaRequest() {
+        }
+        
+        public insertarBibliotecaRequest(TA_GesBib_Cliente.ServicioJava.biblioteca biblioteca) {
+            this.biblioteca = biblioteca;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarBibliotecaResponse", WrapperNamespace="http://services.lp2soft.pucp.edu.pe/", IsWrapped=true)]
+    public partial class insertarBibliotecaResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.lp2soft.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int @return;
+        
+        public insertarBibliotecaResponse() {
+        }
+        
+        public insertarBibliotecaResponse(int @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarPuntosAtencion", WrapperNamespace="http://services.lp2soft.pucp.edu.pe/", IsWrapped=true)]
+    public partial class listarPuntosAtencionRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.lp2soft.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int arg0;
+        
+        public listarPuntosAtencionRequest() {
+        }
+        
+        public listarPuntosAtencionRequest(int arg0) {
+            this.arg0 = arg0;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarPuntosAtencionResponse", WrapperNamespace="http://services.lp2soft.pucp.edu.pe/", IsWrapped=true)]
+    public partial class listarPuntosAtencionResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.lp2soft.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public TA_GesBib_Cliente.ServicioJava.puntosAtencion[] @return;
+        
+        public listarPuntosAtencionResponse() {
+        }
+        
+        public listarPuntosAtencionResponse(TA_GesBib_Cliente.ServicioJava.puntosAtencion[] @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarBibliotecario", WrapperNamespace="http://services.lp2soft.pucp.edu.pe/", IsWrapped=true)]
+    public partial class insertarBibliotecarioRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.lp2soft.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public TA_GesBib_Cliente.ServicioJava.bibliotecario bibliotecario;
+        
+        public insertarBibliotecarioRequest() {
+        }
+        
+        public insertarBibliotecarioRequest(TA_GesBib_Cliente.ServicioJava.bibliotecario bibliotecario) {
+            this.bibliotecario = bibliotecario;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarBibliotecarioResponse", WrapperNamespace="http://services.lp2soft.pucp.edu.pe/", IsWrapped=true)]
+    public partial class insertarBibliotecarioResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.lp2soft.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int @return;
+        
+        public insertarBibliotecarioResponse() {
+        }
+        
+        public insertarBibliotecarioResponse(int @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarAuxiliarBiblioteca", WrapperNamespace="http://services.lp2soft.pucp.edu.pe/", IsWrapped=true)]
+    public partial class insertarAuxiliarBibliotecaRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.lp2soft.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public TA_GesBib_Cliente.ServicioJava.auxiliar auxiliar;
+        
+        public insertarAuxiliarBibliotecaRequest() {
+        }
+        
+        public insertarAuxiliarBibliotecaRequest(TA_GesBib_Cliente.ServicioJava.auxiliar auxiliar) {
+            this.auxiliar = auxiliar;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarAuxiliarBibliotecaResponse", WrapperNamespace="http://services.lp2soft.pucp.edu.pe/", IsWrapped=true)]
+    public partial class insertarAuxiliarBibliotecaResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.lp2soft.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int @return;
+        
+        public insertarAuxiliarBibliotecaResponse() {
+        }
+        
+        public insertarAuxiliarBibliotecaResponse(int @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarCapacitacion", WrapperNamespace="http://services.lp2soft.pucp.edu.pe/", IsWrapped=true)]
+    public partial class eliminarCapacitacionRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.lp2soft.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int idCapacitacion;
+        
+        public eliminarCapacitacionRequest() {
+        }
+        
+        public eliminarCapacitacionRequest(int idCapacitacion) {
+            this.idCapacitacion = idCapacitacion;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarCapacitacionResponse", WrapperNamespace="http://services.lp2soft.pucp.edu.pe/", IsWrapped=true)]
+    public partial class eliminarCapacitacionResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.lp2soft.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int @return;
+        
+        public eliminarCapacitacionResponse() {
+        }
+        
+        public eliminarCapacitacionResponse(int @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarPuntoAtencion", WrapperNamespace="http://services.lp2soft.pucp.edu.pe/", IsWrapped=true)]
+    public partial class insertarPuntoAtencionRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.lp2soft.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public TA_GesBib_Cliente.ServicioJava.puntosAtencion PuntoAtencion;
+        
+        public insertarPuntoAtencionRequest() {
+        }
+        
+        public insertarPuntoAtencionRequest(TA_GesBib_Cliente.ServicioJava.puntosAtencion PuntoAtencion) {
+            this.PuntoAtencion = PuntoAtencion;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarPuntoAtencionResponse", WrapperNamespace="http://services.lp2soft.pucp.edu.pe/", IsWrapped=true)]
+    public partial class insertarPuntoAtencionResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.lp2soft.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int @return;
+        
+        public insertarPuntoAtencionResponse() {
+        }
+        
+        public insertarPuntoAtencionResponse(int @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarBibliotecas", WrapperNamespace="http://services.lp2soft.pucp.edu.pe/", IsWrapped=true)]
+    public partial class listarBibliotecasRequest {
+        
+        public listarBibliotecasRequest() {
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarBibliotecasResponse", WrapperNamespace="http://services.lp2soft.pucp.edu.pe/", IsWrapped=true)]
+    public partial class listarBibliotecasResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.lp2soft.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public TA_GesBib_Cliente.ServicioJava.biblioteca[] @return;
+        
+        public listarBibliotecasResponse() {
+        }
+        
+        public listarBibliotecasResponse(TA_GesBib_Cliente.ServicioJava.biblioteca[] @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarPerfilExperiencia", WrapperNamespace="http://services.lp2soft.pucp.edu.pe/", IsWrapped=true)]
+    public partial class listarPerfilExperienciaRequest {
+        
+        public listarPerfilExperienciaRequest() {
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarPerfilExperienciaResponse", WrapperNamespace="http://services.lp2soft.pucp.edu.pe/", IsWrapped=true)]
+    public partial class listarPerfilExperienciaResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.lp2soft.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public TA_GesBib_Cliente.ServicioJava.perfilExperiencia[] @return;
+        
+        public listarPerfilExperienciaResponse() {
+        }
+        
+        public listarPerfilExperienciaResponse(TA_GesBib_Cliente.ServicioJava.perfilExperiencia[] @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarPracticante", WrapperNamespace="http://services.lp2soft.pucp.edu.pe/", IsWrapped=true)]
+    public partial class insertarPracticanteRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.lp2soft.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public TA_GesBib_Cliente.ServicioJava.practicante practicante;
+        
+        public insertarPracticanteRequest() {
+        }
+        
+        public insertarPracticanteRequest(TA_GesBib_Cliente.ServicioJava.practicante practicante) {
+            this.practicante = practicante;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarPracticanteResponse", WrapperNamespace="http://services.lp2soft.pucp.edu.pe/", IsWrapped=true)]
+    public partial class insertarPracticanteResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.lp2soft.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int @return;
+        
+        public insertarPracticanteResponse() {
+        }
+        
+        public insertarPracticanteResponse(int @return) {
+            this.@return = @return;
+        }
+    }
+    
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     public interface ServicioChannel : TA_GesBib_Cliente.ServicioJava.Servicio, System.ServiceModel.IClientChannel {
     }
@@ -2397,299 +2397,6 @@ namespace TA_GesBib_Cliente.ServicioJava {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        TA_GesBib_Cliente.ServicioJava.insertarBibliotecaResponse TA_GesBib_Cliente.ServicioJava.Servicio.insertarBiblioteca(TA_GesBib_Cliente.ServicioJava.insertarBibliotecaRequest request) {
-            return base.Channel.insertarBiblioteca(request);
-        }
-        
-        public int insertarBiblioteca(TA_GesBib_Cliente.ServicioJava.biblioteca biblioteca) {
-            TA_GesBib_Cliente.ServicioJava.insertarBibliotecaRequest inValue = new TA_GesBib_Cliente.ServicioJava.insertarBibliotecaRequest();
-            inValue.biblioteca = biblioteca;
-            TA_GesBib_Cliente.ServicioJava.insertarBibliotecaResponse retVal = ((TA_GesBib_Cliente.ServicioJava.Servicio)(this)).insertarBiblioteca(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<TA_GesBib_Cliente.ServicioJava.insertarBibliotecaResponse> TA_GesBib_Cliente.ServicioJava.Servicio.insertarBibliotecaAsync(TA_GesBib_Cliente.ServicioJava.insertarBibliotecaRequest request) {
-            return base.Channel.insertarBibliotecaAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<TA_GesBib_Cliente.ServicioJava.insertarBibliotecaResponse> insertarBibliotecaAsync(TA_GesBib_Cliente.ServicioJava.biblioteca biblioteca) {
-            TA_GesBib_Cliente.ServicioJava.insertarBibliotecaRequest inValue = new TA_GesBib_Cliente.ServicioJava.insertarBibliotecaRequest();
-            inValue.biblioteca = biblioteca;
-            return ((TA_GesBib_Cliente.ServicioJava.Servicio)(this)).insertarBibliotecaAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        TA_GesBib_Cliente.ServicioJava.listarCapacitacionesResponse TA_GesBib_Cliente.ServicioJava.Servicio.listarCapacitaciones(TA_GesBib_Cliente.ServicioJava.listarCapacitacionesRequest request) {
-            return base.Channel.listarCapacitaciones(request);
-        }
-        
-        public TA_GesBib_Cliente.ServicioJava.capacitacion[] listarCapacitaciones() {
-            TA_GesBib_Cliente.ServicioJava.listarCapacitacionesRequest inValue = new TA_GesBib_Cliente.ServicioJava.listarCapacitacionesRequest();
-            TA_GesBib_Cliente.ServicioJava.listarCapacitacionesResponse retVal = ((TA_GesBib_Cliente.ServicioJava.Servicio)(this)).listarCapacitaciones(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<TA_GesBib_Cliente.ServicioJava.listarCapacitacionesResponse> TA_GesBib_Cliente.ServicioJava.Servicio.listarCapacitacionesAsync(TA_GesBib_Cliente.ServicioJava.listarCapacitacionesRequest request) {
-            return base.Channel.listarCapacitacionesAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<TA_GesBib_Cliente.ServicioJava.listarCapacitacionesResponse> listarCapacitacionesAsync() {
-            TA_GesBib_Cliente.ServicioJava.listarCapacitacionesRequest inValue = new TA_GesBib_Cliente.ServicioJava.listarCapacitacionesRequest();
-            return ((TA_GesBib_Cliente.ServicioJava.Servicio)(this)).listarCapacitacionesAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        TA_GesBib_Cliente.ServicioJava.insertarAuxiliarBibliotecaResponse TA_GesBib_Cliente.ServicioJava.Servicio.insertarAuxiliarBiblioteca(TA_GesBib_Cliente.ServicioJava.insertarAuxiliarBibliotecaRequest request) {
-            return base.Channel.insertarAuxiliarBiblioteca(request);
-        }
-        
-        public int insertarAuxiliarBiblioteca(TA_GesBib_Cliente.ServicioJava.auxiliar auxiliar) {
-            TA_GesBib_Cliente.ServicioJava.insertarAuxiliarBibliotecaRequest inValue = new TA_GesBib_Cliente.ServicioJava.insertarAuxiliarBibliotecaRequest();
-            inValue.auxiliar = auxiliar;
-            TA_GesBib_Cliente.ServicioJava.insertarAuxiliarBibliotecaResponse retVal = ((TA_GesBib_Cliente.ServicioJava.Servicio)(this)).insertarAuxiliarBiblioteca(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<TA_GesBib_Cliente.ServicioJava.insertarAuxiliarBibliotecaResponse> TA_GesBib_Cliente.ServicioJava.Servicio.insertarAuxiliarBibliotecaAsync(TA_GesBib_Cliente.ServicioJava.insertarAuxiliarBibliotecaRequest request) {
-            return base.Channel.insertarAuxiliarBibliotecaAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<TA_GesBib_Cliente.ServicioJava.insertarAuxiliarBibliotecaResponse> insertarAuxiliarBibliotecaAsync(TA_GesBib_Cliente.ServicioJava.auxiliar auxiliar) {
-            TA_GesBib_Cliente.ServicioJava.insertarAuxiliarBibliotecaRequest inValue = new TA_GesBib_Cliente.ServicioJava.insertarAuxiliarBibliotecaRequest();
-            inValue.auxiliar = auxiliar;
-            return ((TA_GesBib_Cliente.ServicioJava.Servicio)(this)).insertarAuxiliarBibliotecaAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        TA_GesBib_Cliente.ServicioJava.eliminarDiaCapacitacionResponse TA_GesBib_Cliente.ServicioJava.Servicio.eliminarDiaCapacitacion(TA_GesBib_Cliente.ServicioJava.eliminarDiaCapacitacionRequest request) {
-            return base.Channel.eliminarDiaCapacitacion(request);
-        }
-        
-        public int eliminarDiaCapacitacion(int idCapacitacion) {
-            TA_GesBib_Cliente.ServicioJava.eliminarDiaCapacitacionRequest inValue = new TA_GesBib_Cliente.ServicioJava.eliminarDiaCapacitacionRequest();
-            inValue.idCapacitacion = idCapacitacion;
-            TA_GesBib_Cliente.ServicioJava.eliminarDiaCapacitacionResponse retVal = ((TA_GesBib_Cliente.ServicioJava.Servicio)(this)).eliminarDiaCapacitacion(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<TA_GesBib_Cliente.ServicioJava.eliminarDiaCapacitacionResponse> TA_GesBib_Cliente.ServicioJava.Servicio.eliminarDiaCapacitacionAsync(TA_GesBib_Cliente.ServicioJava.eliminarDiaCapacitacionRequest request) {
-            return base.Channel.eliminarDiaCapacitacionAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<TA_GesBib_Cliente.ServicioJava.eliminarDiaCapacitacionResponse> eliminarDiaCapacitacionAsync(int idCapacitacion) {
-            TA_GesBib_Cliente.ServicioJava.eliminarDiaCapacitacionRequest inValue = new TA_GesBib_Cliente.ServicioJava.eliminarDiaCapacitacionRequest();
-            inValue.idCapacitacion = idCapacitacion;
-            return ((TA_GesBib_Cliente.ServicioJava.Servicio)(this)).eliminarDiaCapacitacionAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        TA_GesBib_Cliente.ServicioJava.insertarPracticanteResponse TA_GesBib_Cliente.ServicioJava.Servicio.insertarPracticante(TA_GesBib_Cliente.ServicioJava.insertarPracticanteRequest request) {
-            return base.Channel.insertarPracticante(request);
-        }
-        
-        public int insertarPracticante(TA_GesBib_Cliente.ServicioJava.practicante practicante) {
-            TA_GesBib_Cliente.ServicioJava.insertarPracticanteRequest inValue = new TA_GesBib_Cliente.ServicioJava.insertarPracticanteRequest();
-            inValue.practicante = practicante;
-            TA_GesBib_Cliente.ServicioJava.insertarPracticanteResponse retVal = ((TA_GesBib_Cliente.ServicioJava.Servicio)(this)).insertarPracticante(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<TA_GesBib_Cliente.ServicioJava.insertarPracticanteResponse> TA_GesBib_Cliente.ServicioJava.Servicio.insertarPracticanteAsync(TA_GesBib_Cliente.ServicioJava.insertarPracticanteRequest request) {
-            return base.Channel.insertarPracticanteAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<TA_GesBib_Cliente.ServicioJava.insertarPracticanteResponse> insertarPracticanteAsync(TA_GesBib_Cliente.ServicioJava.practicante practicante) {
-            TA_GesBib_Cliente.ServicioJava.insertarPracticanteRequest inValue = new TA_GesBib_Cliente.ServicioJava.insertarPracticanteRequest();
-            inValue.practicante = practicante;
-            return ((TA_GesBib_Cliente.ServicioJava.Servicio)(this)).insertarPracticanteAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        TA_GesBib_Cliente.ServicioJava.actualizarCapacitacionResponse TA_GesBib_Cliente.ServicioJava.Servicio.actualizarCapacitacion(TA_GesBib_Cliente.ServicioJava.actualizarCapacitacionRequest request) {
-            return base.Channel.actualizarCapacitacion(request);
-        }
-        
-        public int actualizarCapacitacion(TA_GesBib_Cliente.ServicioJava.capacitacion capacitacion) {
-            TA_GesBib_Cliente.ServicioJava.actualizarCapacitacionRequest inValue = new TA_GesBib_Cliente.ServicioJava.actualizarCapacitacionRequest();
-            inValue.capacitacion = capacitacion;
-            TA_GesBib_Cliente.ServicioJava.actualizarCapacitacionResponse retVal = ((TA_GesBib_Cliente.ServicioJava.Servicio)(this)).actualizarCapacitacion(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<TA_GesBib_Cliente.ServicioJava.actualizarCapacitacionResponse> TA_GesBib_Cliente.ServicioJava.Servicio.actualizarCapacitacionAsync(TA_GesBib_Cliente.ServicioJava.actualizarCapacitacionRequest request) {
-            return base.Channel.actualizarCapacitacionAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<TA_GesBib_Cliente.ServicioJava.actualizarCapacitacionResponse> actualizarCapacitacionAsync(TA_GesBib_Cliente.ServicioJava.capacitacion capacitacion) {
-            TA_GesBib_Cliente.ServicioJava.actualizarCapacitacionRequest inValue = new TA_GesBib_Cliente.ServicioJava.actualizarCapacitacionRequest();
-            inValue.capacitacion = capacitacion;
-            return ((TA_GesBib_Cliente.ServicioJava.Servicio)(this)).actualizarCapacitacionAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        TA_GesBib_Cliente.ServicioJava.listarPerfilExperienciaResponse TA_GesBib_Cliente.ServicioJava.Servicio.listarPerfilExperiencia(TA_GesBib_Cliente.ServicioJava.listarPerfilExperienciaRequest request) {
-            return base.Channel.listarPerfilExperiencia(request);
-        }
-        
-        public TA_GesBib_Cliente.ServicioJava.perfilExperiencia[] listarPerfilExperiencia() {
-            TA_GesBib_Cliente.ServicioJava.listarPerfilExperienciaRequest inValue = new TA_GesBib_Cliente.ServicioJava.listarPerfilExperienciaRequest();
-            TA_GesBib_Cliente.ServicioJava.listarPerfilExperienciaResponse retVal = ((TA_GesBib_Cliente.ServicioJava.Servicio)(this)).listarPerfilExperiencia(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<TA_GesBib_Cliente.ServicioJava.listarPerfilExperienciaResponse> TA_GesBib_Cliente.ServicioJava.Servicio.listarPerfilExperienciaAsync(TA_GesBib_Cliente.ServicioJava.listarPerfilExperienciaRequest request) {
-            return base.Channel.listarPerfilExperienciaAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<TA_GesBib_Cliente.ServicioJava.listarPerfilExperienciaResponse> listarPerfilExperienciaAsync() {
-            TA_GesBib_Cliente.ServicioJava.listarPerfilExperienciaRequest inValue = new TA_GesBib_Cliente.ServicioJava.listarPerfilExperienciaRequest();
-            return ((TA_GesBib_Cliente.ServicioJava.Servicio)(this)).listarPerfilExperienciaAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        TA_GesBib_Cliente.ServicioJava.listarBibliotecasResponse TA_GesBib_Cliente.ServicioJava.Servicio.listarBibliotecas(TA_GesBib_Cliente.ServicioJava.listarBibliotecasRequest request) {
-            return base.Channel.listarBibliotecas(request);
-        }
-        
-        public TA_GesBib_Cliente.ServicioJava.biblioteca[] listarBibliotecas() {
-            TA_GesBib_Cliente.ServicioJava.listarBibliotecasRequest inValue = new TA_GesBib_Cliente.ServicioJava.listarBibliotecasRequest();
-            TA_GesBib_Cliente.ServicioJava.listarBibliotecasResponse retVal = ((TA_GesBib_Cliente.ServicioJava.Servicio)(this)).listarBibliotecas(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<TA_GesBib_Cliente.ServicioJava.listarBibliotecasResponse> TA_GesBib_Cliente.ServicioJava.Servicio.listarBibliotecasAsync(TA_GesBib_Cliente.ServicioJava.listarBibliotecasRequest request) {
-            return base.Channel.listarBibliotecasAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<TA_GesBib_Cliente.ServicioJava.listarBibliotecasResponse> listarBibliotecasAsync() {
-            TA_GesBib_Cliente.ServicioJava.listarBibliotecasRequest inValue = new TA_GesBib_Cliente.ServicioJava.listarBibliotecasRequest();
-            return ((TA_GesBib_Cliente.ServicioJava.Servicio)(this)).listarBibliotecasAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        TA_GesBib_Cliente.ServicioJava.insertarPuntoAtencionResponse TA_GesBib_Cliente.ServicioJava.Servicio.insertarPuntoAtencion(TA_GesBib_Cliente.ServicioJava.insertarPuntoAtencionRequest request) {
-            return base.Channel.insertarPuntoAtencion(request);
-        }
-        
-        public int insertarPuntoAtencion(TA_GesBib_Cliente.ServicioJava.puntosAtencion PuntoAtencion) {
-            TA_GesBib_Cliente.ServicioJava.insertarPuntoAtencionRequest inValue = new TA_GesBib_Cliente.ServicioJava.insertarPuntoAtencionRequest();
-            inValue.PuntoAtencion = PuntoAtencion;
-            TA_GesBib_Cliente.ServicioJava.insertarPuntoAtencionResponse retVal = ((TA_GesBib_Cliente.ServicioJava.Servicio)(this)).insertarPuntoAtencion(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<TA_GesBib_Cliente.ServicioJava.insertarPuntoAtencionResponse> TA_GesBib_Cliente.ServicioJava.Servicio.insertarPuntoAtencionAsync(TA_GesBib_Cliente.ServicioJava.insertarPuntoAtencionRequest request) {
-            return base.Channel.insertarPuntoAtencionAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<TA_GesBib_Cliente.ServicioJava.insertarPuntoAtencionResponse> insertarPuntoAtencionAsync(TA_GesBib_Cliente.ServicioJava.puntosAtencion PuntoAtencion) {
-            TA_GesBib_Cliente.ServicioJava.insertarPuntoAtencionRequest inValue = new TA_GesBib_Cliente.ServicioJava.insertarPuntoAtencionRequest();
-            inValue.PuntoAtencion = PuntoAtencion;
-            return ((TA_GesBib_Cliente.ServicioJava.Servicio)(this)).insertarPuntoAtencionAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        TA_GesBib_Cliente.ServicioJava.listarPuntosAtencionResponse TA_GesBib_Cliente.ServicioJava.Servicio.listarPuntosAtencion(TA_GesBib_Cliente.ServicioJava.listarPuntosAtencionRequest request) {
-            return base.Channel.listarPuntosAtencion(request);
-        }
-        
-        public TA_GesBib_Cliente.ServicioJava.puntosAtencion[] listarPuntosAtencion(int arg0) {
-            TA_GesBib_Cliente.ServicioJava.listarPuntosAtencionRequest inValue = new TA_GesBib_Cliente.ServicioJava.listarPuntosAtencionRequest();
-            inValue.arg0 = arg0;
-            TA_GesBib_Cliente.ServicioJava.listarPuntosAtencionResponse retVal = ((TA_GesBib_Cliente.ServicioJava.Servicio)(this)).listarPuntosAtencion(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<TA_GesBib_Cliente.ServicioJava.listarPuntosAtencionResponse> TA_GesBib_Cliente.ServicioJava.Servicio.listarPuntosAtencionAsync(TA_GesBib_Cliente.ServicioJava.listarPuntosAtencionRequest request) {
-            return base.Channel.listarPuntosAtencionAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<TA_GesBib_Cliente.ServicioJava.listarPuntosAtencionResponse> listarPuntosAtencionAsync(int arg0) {
-            TA_GesBib_Cliente.ServicioJava.listarPuntosAtencionRequest inValue = new TA_GesBib_Cliente.ServicioJava.listarPuntosAtencionRequest();
-            inValue.arg0 = arg0;
-            return ((TA_GesBib_Cliente.ServicioJava.Servicio)(this)).listarPuntosAtencionAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        TA_GesBib_Cliente.ServicioJava.insertarPerfilExperienciaResponse TA_GesBib_Cliente.ServicioJava.Servicio.insertarPerfilExperiencia(TA_GesBib_Cliente.ServicioJava.insertarPerfilExperienciaRequest request) {
-            return base.Channel.insertarPerfilExperiencia(request);
-        }
-        
-        public int insertarPerfilExperiencia(TA_GesBib_Cliente.ServicioJava.perfilExperiencia perfilExperiencia) {
-            TA_GesBib_Cliente.ServicioJava.insertarPerfilExperienciaRequest inValue = new TA_GesBib_Cliente.ServicioJava.insertarPerfilExperienciaRequest();
-            inValue.perfilExperiencia = perfilExperiencia;
-            TA_GesBib_Cliente.ServicioJava.insertarPerfilExperienciaResponse retVal = ((TA_GesBib_Cliente.ServicioJava.Servicio)(this)).insertarPerfilExperiencia(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<TA_GesBib_Cliente.ServicioJava.insertarPerfilExperienciaResponse> TA_GesBib_Cliente.ServicioJava.Servicio.insertarPerfilExperienciaAsync(TA_GesBib_Cliente.ServicioJava.insertarPerfilExperienciaRequest request) {
-            return base.Channel.insertarPerfilExperienciaAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<TA_GesBib_Cliente.ServicioJava.insertarPerfilExperienciaResponse> insertarPerfilExperienciaAsync(TA_GesBib_Cliente.ServicioJava.perfilExperiencia perfilExperiencia) {
-            TA_GesBib_Cliente.ServicioJava.insertarPerfilExperienciaRequest inValue = new TA_GesBib_Cliente.ServicioJava.insertarPerfilExperienciaRequest();
-            inValue.perfilExperiencia = perfilExperiencia;
-            return ((TA_GesBib_Cliente.ServicioJava.Servicio)(this)).insertarPerfilExperienciaAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        TA_GesBib_Cliente.ServicioJava.eliminarCapacitacionResponse TA_GesBib_Cliente.ServicioJava.Servicio.eliminarCapacitacion(TA_GesBib_Cliente.ServicioJava.eliminarCapacitacionRequest request) {
-            return base.Channel.eliminarCapacitacion(request);
-        }
-        
-        public int eliminarCapacitacion(int idCapacitacion) {
-            TA_GesBib_Cliente.ServicioJava.eliminarCapacitacionRequest inValue = new TA_GesBib_Cliente.ServicioJava.eliminarCapacitacionRequest();
-            inValue.idCapacitacion = idCapacitacion;
-            TA_GesBib_Cliente.ServicioJava.eliminarCapacitacionResponse retVal = ((TA_GesBib_Cliente.ServicioJava.Servicio)(this)).eliminarCapacitacion(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<TA_GesBib_Cliente.ServicioJava.eliminarCapacitacionResponse> TA_GesBib_Cliente.ServicioJava.Servicio.eliminarCapacitacionAsync(TA_GesBib_Cliente.ServicioJava.eliminarCapacitacionRequest request) {
-            return base.Channel.eliminarCapacitacionAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<TA_GesBib_Cliente.ServicioJava.eliminarCapacitacionResponse> eliminarCapacitacionAsync(int idCapacitacion) {
-            TA_GesBib_Cliente.ServicioJava.eliminarCapacitacionRequest inValue = new TA_GesBib_Cliente.ServicioJava.eliminarCapacitacionRequest();
-            inValue.idCapacitacion = idCapacitacion;
-            return ((TA_GesBib_Cliente.ServicioJava.Servicio)(this)).eliminarCapacitacionAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        TA_GesBib_Cliente.ServicioJava.insertarBibliotecarioResponse TA_GesBib_Cliente.ServicioJava.Servicio.insertarBibliotecario(TA_GesBib_Cliente.ServicioJava.insertarBibliotecarioRequest request) {
-            return base.Channel.insertarBibliotecario(request);
-        }
-        
-        public int insertarBibliotecario(TA_GesBib_Cliente.ServicioJava.bibliotecario bibliotecario) {
-            TA_GesBib_Cliente.ServicioJava.insertarBibliotecarioRequest inValue = new TA_GesBib_Cliente.ServicioJava.insertarBibliotecarioRequest();
-            inValue.bibliotecario = bibliotecario;
-            TA_GesBib_Cliente.ServicioJava.insertarBibliotecarioResponse retVal = ((TA_GesBib_Cliente.ServicioJava.Servicio)(this)).insertarBibliotecario(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<TA_GesBib_Cliente.ServicioJava.insertarBibliotecarioResponse> TA_GesBib_Cliente.ServicioJava.Servicio.insertarBibliotecarioAsync(TA_GesBib_Cliente.ServicioJava.insertarBibliotecarioRequest request) {
-            return base.Channel.insertarBibliotecarioAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<TA_GesBib_Cliente.ServicioJava.insertarBibliotecarioResponse> insertarBibliotecarioAsync(TA_GesBib_Cliente.ServicioJava.bibliotecario bibliotecario) {
-            TA_GesBib_Cliente.ServicioJava.insertarBibliotecarioRequest inValue = new TA_GesBib_Cliente.ServicioJava.insertarBibliotecarioRequest();
-            inValue.bibliotecario = bibliotecario;
-            return ((TA_GesBib_Cliente.ServicioJava.Servicio)(this)).insertarBibliotecarioAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         TA_GesBib_Cliente.ServicioJava.insertarGestorResponse TA_GesBib_Cliente.ServicioJava.Servicio.insertarGestor(TA_GesBib_Cliente.ServicioJava.insertarGestorRequest request) {
             return base.Channel.insertarGestor(request);
         }
@@ -2710,6 +2417,31 @@ namespace TA_GesBib_Cliente.ServicioJava {
             TA_GesBib_Cliente.ServicioJava.insertarGestorRequest inValue = new TA_GesBib_Cliente.ServicioJava.insertarGestorRequest();
             inValue.gestor = gestor;
             return ((TA_GesBib_Cliente.ServicioJava.Servicio)(this)).insertarGestorAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        TA_GesBib_Cliente.ServicioJava.listarGestoresResponse TA_GesBib_Cliente.ServicioJava.Servicio.listarGestores(TA_GesBib_Cliente.ServicioJava.listarGestoresRequest request) {
+            return base.Channel.listarGestores(request);
+        }
+        
+        public TA_GesBib_Cliente.ServicioJava.gestor[] listarGestores(string nombre, string apellido) {
+            TA_GesBib_Cliente.ServicioJava.listarGestoresRequest inValue = new TA_GesBib_Cliente.ServicioJava.listarGestoresRequest();
+            inValue.nombre = nombre;
+            inValue.apellido = apellido;
+            TA_GesBib_Cliente.ServicioJava.listarGestoresResponse retVal = ((TA_GesBib_Cliente.ServicioJava.Servicio)(this)).listarGestores(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<TA_GesBib_Cliente.ServicioJava.listarGestoresResponse> TA_GesBib_Cliente.ServicioJava.Servicio.listarGestoresAsync(TA_GesBib_Cliente.ServicioJava.listarGestoresRequest request) {
+            return base.Channel.listarGestoresAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<TA_GesBib_Cliente.ServicioJava.listarGestoresResponse> listarGestoresAsync(string nombre, string apellido) {
+            TA_GesBib_Cliente.ServicioJava.listarGestoresRequest inValue = new TA_GesBib_Cliente.ServicioJava.listarGestoresRequest();
+            inValue.nombre = nombre;
+            inValue.apellido = apellido;
+            return ((TA_GesBib_Cliente.ServicioJava.Servicio)(this)).listarGestoresAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -2736,28 +2468,296 @@ namespace TA_GesBib_Cliente.ServicioJava {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        TA_GesBib_Cliente.ServicioJava.listarGestoresResponse TA_GesBib_Cliente.ServicioJava.Servicio.listarGestores(TA_GesBib_Cliente.ServicioJava.listarGestoresRequest request) {
-            return base.Channel.listarGestores(request);
+        TA_GesBib_Cliente.ServicioJava.listarCapacitacionesResponse TA_GesBib_Cliente.ServicioJava.Servicio.listarCapacitaciones(TA_GesBib_Cliente.ServicioJava.listarCapacitacionesRequest request) {
+            return base.Channel.listarCapacitaciones(request);
         }
         
-        public TA_GesBib_Cliente.ServicioJava.gestor[] listarGestores(string nombre, string apellido) {
-            TA_GesBib_Cliente.ServicioJava.listarGestoresRequest inValue = new TA_GesBib_Cliente.ServicioJava.listarGestoresRequest();
-            inValue.nombre = nombre;
-            inValue.apellido = apellido;
-            TA_GesBib_Cliente.ServicioJava.listarGestoresResponse retVal = ((TA_GesBib_Cliente.ServicioJava.Servicio)(this)).listarGestores(inValue);
+        public TA_GesBib_Cliente.ServicioJava.capacitacion[] listarCapacitaciones() {
+            TA_GesBib_Cliente.ServicioJava.listarCapacitacionesRequest inValue = new TA_GesBib_Cliente.ServicioJava.listarCapacitacionesRequest();
+            TA_GesBib_Cliente.ServicioJava.listarCapacitacionesResponse retVal = ((TA_GesBib_Cliente.ServicioJava.Servicio)(this)).listarCapacitaciones(inValue);
             return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<TA_GesBib_Cliente.ServicioJava.listarGestoresResponse> TA_GesBib_Cliente.ServicioJava.Servicio.listarGestoresAsync(TA_GesBib_Cliente.ServicioJava.listarGestoresRequest request) {
-            return base.Channel.listarGestoresAsync(request);
+        System.Threading.Tasks.Task<TA_GesBib_Cliente.ServicioJava.listarCapacitacionesResponse> TA_GesBib_Cliente.ServicioJava.Servicio.listarCapacitacionesAsync(TA_GesBib_Cliente.ServicioJava.listarCapacitacionesRequest request) {
+            return base.Channel.listarCapacitacionesAsync(request);
         }
         
-        public System.Threading.Tasks.Task<TA_GesBib_Cliente.ServicioJava.listarGestoresResponse> listarGestoresAsync(string nombre, string apellido) {
-            TA_GesBib_Cliente.ServicioJava.listarGestoresRequest inValue = new TA_GesBib_Cliente.ServicioJava.listarGestoresRequest();
-            inValue.nombre = nombre;
-            inValue.apellido = apellido;
-            return ((TA_GesBib_Cliente.ServicioJava.Servicio)(this)).listarGestoresAsync(inValue);
+        public System.Threading.Tasks.Task<TA_GesBib_Cliente.ServicioJava.listarCapacitacionesResponse> listarCapacitacionesAsync() {
+            TA_GesBib_Cliente.ServicioJava.listarCapacitacionesRequest inValue = new TA_GesBib_Cliente.ServicioJava.listarCapacitacionesRequest();
+            return ((TA_GesBib_Cliente.ServicioJava.Servicio)(this)).listarCapacitacionesAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        TA_GesBib_Cliente.ServicioJava.insertarPerfilExperienciaResponse TA_GesBib_Cliente.ServicioJava.Servicio.insertarPerfilExperiencia(TA_GesBib_Cliente.ServicioJava.insertarPerfilExperienciaRequest request) {
+            return base.Channel.insertarPerfilExperiencia(request);
+        }
+        
+        public int insertarPerfilExperiencia(TA_GesBib_Cliente.ServicioJava.perfilExperiencia perfilExperiencia) {
+            TA_GesBib_Cliente.ServicioJava.insertarPerfilExperienciaRequest inValue = new TA_GesBib_Cliente.ServicioJava.insertarPerfilExperienciaRequest();
+            inValue.perfilExperiencia = perfilExperiencia;
+            TA_GesBib_Cliente.ServicioJava.insertarPerfilExperienciaResponse retVal = ((TA_GesBib_Cliente.ServicioJava.Servicio)(this)).insertarPerfilExperiencia(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<TA_GesBib_Cliente.ServicioJava.insertarPerfilExperienciaResponse> TA_GesBib_Cliente.ServicioJava.Servicio.insertarPerfilExperienciaAsync(TA_GesBib_Cliente.ServicioJava.insertarPerfilExperienciaRequest request) {
+            return base.Channel.insertarPerfilExperienciaAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<TA_GesBib_Cliente.ServicioJava.insertarPerfilExperienciaResponse> insertarPerfilExperienciaAsync(TA_GesBib_Cliente.ServicioJava.perfilExperiencia perfilExperiencia) {
+            TA_GesBib_Cliente.ServicioJava.insertarPerfilExperienciaRequest inValue = new TA_GesBib_Cliente.ServicioJava.insertarPerfilExperienciaRequest();
+            inValue.perfilExperiencia = perfilExperiencia;
+            return ((TA_GesBib_Cliente.ServicioJava.Servicio)(this)).insertarPerfilExperienciaAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        TA_GesBib_Cliente.ServicioJava.actualizarCapacitacionResponse TA_GesBib_Cliente.ServicioJava.Servicio.actualizarCapacitacion(TA_GesBib_Cliente.ServicioJava.actualizarCapacitacionRequest request) {
+            return base.Channel.actualizarCapacitacion(request);
+        }
+        
+        public int actualizarCapacitacion(TA_GesBib_Cliente.ServicioJava.capacitacion capacitacion) {
+            TA_GesBib_Cliente.ServicioJava.actualizarCapacitacionRequest inValue = new TA_GesBib_Cliente.ServicioJava.actualizarCapacitacionRequest();
+            inValue.capacitacion = capacitacion;
+            TA_GesBib_Cliente.ServicioJava.actualizarCapacitacionResponse retVal = ((TA_GesBib_Cliente.ServicioJava.Servicio)(this)).actualizarCapacitacion(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<TA_GesBib_Cliente.ServicioJava.actualizarCapacitacionResponse> TA_GesBib_Cliente.ServicioJava.Servicio.actualizarCapacitacionAsync(TA_GesBib_Cliente.ServicioJava.actualizarCapacitacionRequest request) {
+            return base.Channel.actualizarCapacitacionAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<TA_GesBib_Cliente.ServicioJava.actualizarCapacitacionResponse> actualizarCapacitacionAsync(TA_GesBib_Cliente.ServicioJava.capacitacion capacitacion) {
+            TA_GesBib_Cliente.ServicioJava.actualizarCapacitacionRequest inValue = new TA_GesBib_Cliente.ServicioJava.actualizarCapacitacionRequest();
+            inValue.capacitacion = capacitacion;
+            return ((TA_GesBib_Cliente.ServicioJava.Servicio)(this)).actualizarCapacitacionAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        TA_GesBib_Cliente.ServicioJava.eliminarDiaCapacitacionResponse TA_GesBib_Cliente.ServicioJava.Servicio.eliminarDiaCapacitacion(TA_GesBib_Cliente.ServicioJava.eliminarDiaCapacitacionRequest request) {
+            return base.Channel.eliminarDiaCapacitacion(request);
+        }
+        
+        public int eliminarDiaCapacitacion(int idCapacitacion) {
+            TA_GesBib_Cliente.ServicioJava.eliminarDiaCapacitacionRequest inValue = new TA_GesBib_Cliente.ServicioJava.eliminarDiaCapacitacionRequest();
+            inValue.idCapacitacion = idCapacitacion;
+            TA_GesBib_Cliente.ServicioJava.eliminarDiaCapacitacionResponse retVal = ((TA_GesBib_Cliente.ServicioJava.Servicio)(this)).eliminarDiaCapacitacion(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<TA_GesBib_Cliente.ServicioJava.eliminarDiaCapacitacionResponse> TA_GesBib_Cliente.ServicioJava.Servicio.eliminarDiaCapacitacionAsync(TA_GesBib_Cliente.ServicioJava.eliminarDiaCapacitacionRequest request) {
+            return base.Channel.eliminarDiaCapacitacionAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<TA_GesBib_Cliente.ServicioJava.eliminarDiaCapacitacionResponse> eliminarDiaCapacitacionAsync(int idCapacitacion) {
+            TA_GesBib_Cliente.ServicioJava.eliminarDiaCapacitacionRequest inValue = new TA_GesBib_Cliente.ServicioJava.eliminarDiaCapacitacionRequest();
+            inValue.idCapacitacion = idCapacitacion;
+            return ((TA_GesBib_Cliente.ServicioJava.Servicio)(this)).eliminarDiaCapacitacionAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        TA_GesBib_Cliente.ServicioJava.insertarBibliotecaResponse TA_GesBib_Cliente.ServicioJava.Servicio.insertarBiblioteca(TA_GesBib_Cliente.ServicioJava.insertarBibliotecaRequest request) {
+            return base.Channel.insertarBiblioteca(request);
+        }
+        
+        public int insertarBiblioteca(TA_GesBib_Cliente.ServicioJava.biblioteca biblioteca) {
+            TA_GesBib_Cliente.ServicioJava.insertarBibliotecaRequest inValue = new TA_GesBib_Cliente.ServicioJava.insertarBibliotecaRequest();
+            inValue.biblioteca = biblioteca;
+            TA_GesBib_Cliente.ServicioJava.insertarBibliotecaResponse retVal = ((TA_GesBib_Cliente.ServicioJava.Servicio)(this)).insertarBiblioteca(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<TA_GesBib_Cliente.ServicioJava.insertarBibliotecaResponse> TA_GesBib_Cliente.ServicioJava.Servicio.insertarBibliotecaAsync(TA_GesBib_Cliente.ServicioJava.insertarBibliotecaRequest request) {
+            return base.Channel.insertarBibliotecaAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<TA_GesBib_Cliente.ServicioJava.insertarBibliotecaResponse> insertarBibliotecaAsync(TA_GesBib_Cliente.ServicioJava.biblioteca biblioteca) {
+            TA_GesBib_Cliente.ServicioJava.insertarBibliotecaRequest inValue = new TA_GesBib_Cliente.ServicioJava.insertarBibliotecaRequest();
+            inValue.biblioteca = biblioteca;
+            return ((TA_GesBib_Cliente.ServicioJava.Servicio)(this)).insertarBibliotecaAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        TA_GesBib_Cliente.ServicioJava.listarPuntosAtencionResponse TA_GesBib_Cliente.ServicioJava.Servicio.listarPuntosAtencion(TA_GesBib_Cliente.ServicioJava.listarPuntosAtencionRequest request) {
+            return base.Channel.listarPuntosAtencion(request);
+        }
+        
+        public TA_GesBib_Cliente.ServicioJava.puntosAtencion[] listarPuntosAtencion(int arg0) {
+            TA_GesBib_Cliente.ServicioJava.listarPuntosAtencionRequest inValue = new TA_GesBib_Cliente.ServicioJava.listarPuntosAtencionRequest();
+            inValue.arg0 = arg0;
+            TA_GesBib_Cliente.ServicioJava.listarPuntosAtencionResponse retVal = ((TA_GesBib_Cliente.ServicioJava.Servicio)(this)).listarPuntosAtencion(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<TA_GesBib_Cliente.ServicioJava.listarPuntosAtencionResponse> TA_GesBib_Cliente.ServicioJava.Servicio.listarPuntosAtencionAsync(TA_GesBib_Cliente.ServicioJava.listarPuntosAtencionRequest request) {
+            return base.Channel.listarPuntosAtencionAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<TA_GesBib_Cliente.ServicioJava.listarPuntosAtencionResponse> listarPuntosAtencionAsync(int arg0) {
+            TA_GesBib_Cliente.ServicioJava.listarPuntosAtencionRequest inValue = new TA_GesBib_Cliente.ServicioJava.listarPuntosAtencionRequest();
+            inValue.arg0 = arg0;
+            return ((TA_GesBib_Cliente.ServicioJava.Servicio)(this)).listarPuntosAtencionAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        TA_GesBib_Cliente.ServicioJava.insertarBibliotecarioResponse TA_GesBib_Cliente.ServicioJava.Servicio.insertarBibliotecario(TA_GesBib_Cliente.ServicioJava.insertarBibliotecarioRequest request) {
+            return base.Channel.insertarBibliotecario(request);
+        }
+        
+        public int insertarBibliotecario(TA_GesBib_Cliente.ServicioJava.bibliotecario bibliotecario) {
+            TA_GesBib_Cliente.ServicioJava.insertarBibliotecarioRequest inValue = new TA_GesBib_Cliente.ServicioJava.insertarBibliotecarioRequest();
+            inValue.bibliotecario = bibliotecario;
+            TA_GesBib_Cliente.ServicioJava.insertarBibliotecarioResponse retVal = ((TA_GesBib_Cliente.ServicioJava.Servicio)(this)).insertarBibliotecario(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<TA_GesBib_Cliente.ServicioJava.insertarBibliotecarioResponse> TA_GesBib_Cliente.ServicioJava.Servicio.insertarBibliotecarioAsync(TA_GesBib_Cliente.ServicioJava.insertarBibliotecarioRequest request) {
+            return base.Channel.insertarBibliotecarioAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<TA_GesBib_Cliente.ServicioJava.insertarBibliotecarioResponse> insertarBibliotecarioAsync(TA_GesBib_Cliente.ServicioJava.bibliotecario bibliotecario) {
+            TA_GesBib_Cliente.ServicioJava.insertarBibliotecarioRequest inValue = new TA_GesBib_Cliente.ServicioJava.insertarBibliotecarioRequest();
+            inValue.bibliotecario = bibliotecario;
+            return ((TA_GesBib_Cliente.ServicioJava.Servicio)(this)).insertarBibliotecarioAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        TA_GesBib_Cliente.ServicioJava.insertarAuxiliarBibliotecaResponse TA_GesBib_Cliente.ServicioJava.Servicio.insertarAuxiliarBiblioteca(TA_GesBib_Cliente.ServicioJava.insertarAuxiliarBibliotecaRequest request) {
+            return base.Channel.insertarAuxiliarBiblioteca(request);
+        }
+        
+        public int insertarAuxiliarBiblioteca(TA_GesBib_Cliente.ServicioJava.auxiliar auxiliar) {
+            TA_GesBib_Cliente.ServicioJava.insertarAuxiliarBibliotecaRequest inValue = new TA_GesBib_Cliente.ServicioJava.insertarAuxiliarBibliotecaRequest();
+            inValue.auxiliar = auxiliar;
+            TA_GesBib_Cliente.ServicioJava.insertarAuxiliarBibliotecaResponse retVal = ((TA_GesBib_Cliente.ServicioJava.Servicio)(this)).insertarAuxiliarBiblioteca(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<TA_GesBib_Cliente.ServicioJava.insertarAuxiliarBibliotecaResponse> TA_GesBib_Cliente.ServicioJava.Servicio.insertarAuxiliarBibliotecaAsync(TA_GesBib_Cliente.ServicioJava.insertarAuxiliarBibliotecaRequest request) {
+            return base.Channel.insertarAuxiliarBibliotecaAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<TA_GesBib_Cliente.ServicioJava.insertarAuxiliarBibliotecaResponse> insertarAuxiliarBibliotecaAsync(TA_GesBib_Cliente.ServicioJava.auxiliar auxiliar) {
+            TA_GesBib_Cliente.ServicioJava.insertarAuxiliarBibliotecaRequest inValue = new TA_GesBib_Cliente.ServicioJava.insertarAuxiliarBibliotecaRequest();
+            inValue.auxiliar = auxiliar;
+            return ((TA_GesBib_Cliente.ServicioJava.Servicio)(this)).insertarAuxiliarBibliotecaAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        TA_GesBib_Cliente.ServicioJava.eliminarCapacitacionResponse TA_GesBib_Cliente.ServicioJava.Servicio.eliminarCapacitacion(TA_GesBib_Cliente.ServicioJava.eliminarCapacitacionRequest request) {
+            return base.Channel.eliminarCapacitacion(request);
+        }
+        
+        public int eliminarCapacitacion(int idCapacitacion) {
+            TA_GesBib_Cliente.ServicioJava.eliminarCapacitacionRequest inValue = new TA_GesBib_Cliente.ServicioJava.eliminarCapacitacionRequest();
+            inValue.idCapacitacion = idCapacitacion;
+            TA_GesBib_Cliente.ServicioJava.eliminarCapacitacionResponse retVal = ((TA_GesBib_Cliente.ServicioJava.Servicio)(this)).eliminarCapacitacion(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<TA_GesBib_Cliente.ServicioJava.eliminarCapacitacionResponse> TA_GesBib_Cliente.ServicioJava.Servicio.eliminarCapacitacionAsync(TA_GesBib_Cliente.ServicioJava.eliminarCapacitacionRequest request) {
+            return base.Channel.eliminarCapacitacionAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<TA_GesBib_Cliente.ServicioJava.eliminarCapacitacionResponse> eliminarCapacitacionAsync(int idCapacitacion) {
+            TA_GesBib_Cliente.ServicioJava.eliminarCapacitacionRequest inValue = new TA_GesBib_Cliente.ServicioJava.eliminarCapacitacionRequest();
+            inValue.idCapacitacion = idCapacitacion;
+            return ((TA_GesBib_Cliente.ServicioJava.Servicio)(this)).eliminarCapacitacionAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        TA_GesBib_Cliente.ServicioJava.insertarPuntoAtencionResponse TA_GesBib_Cliente.ServicioJava.Servicio.insertarPuntoAtencion(TA_GesBib_Cliente.ServicioJava.insertarPuntoAtencionRequest request) {
+            return base.Channel.insertarPuntoAtencion(request);
+        }
+        
+        public int insertarPuntoAtencion(TA_GesBib_Cliente.ServicioJava.puntosAtencion PuntoAtencion) {
+            TA_GesBib_Cliente.ServicioJava.insertarPuntoAtencionRequest inValue = new TA_GesBib_Cliente.ServicioJava.insertarPuntoAtencionRequest();
+            inValue.PuntoAtencion = PuntoAtencion;
+            TA_GesBib_Cliente.ServicioJava.insertarPuntoAtencionResponse retVal = ((TA_GesBib_Cliente.ServicioJava.Servicio)(this)).insertarPuntoAtencion(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<TA_GesBib_Cliente.ServicioJava.insertarPuntoAtencionResponse> TA_GesBib_Cliente.ServicioJava.Servicio.insertarPuntoAtencionAsync(TA_GesBib_Cliente.ServicioJava.insertarPuntoAtencionRequest request) {
+            return base.Channel.insertarPuntoAtencionAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<TA_GesBib_Cliente.ServicioJava.insertarPuntoAtencionResponse> insertarPuntoAtencionAsync(TA_GesBib_Cliente.ServicioJava.puntosAtencion PuntoAtencion) {
+            TA_GesBib_Cliente.ServicioJava.insertarPuntoAtencionRequest inValue = new TA_GesBib_Cliente.ServicioJava.insertarPuntoAtencionRequest();
+            inValue.PuntoAtencion = PuntoAtencion;
+            return ((TA_GesBib_Cliente.ServicioJava.Servicio)(this)).insertarPuntoAtencionAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        TA_GesBib_Cliente.ServicioJava.listarBibliotecasResponse TA_GesBib_Cliente.ServicioJava.Servicio.listarBibliotecas(TA_GesBib_Cliente.ServicioJava.listarBibliotecasRequest request) {
+            return base.Channel.listarBibliotecas(request);
+        }
+        
+        public TA_GesBib_Cliente.ServicioJava.biblioteca[] listarBibliotecas() {
+            TA_GesBib_Cliente.ServicioJava.listarBibliotecasRequest inValue = new TA_GesBib_Cliente.ServicioJava.listarBibliotecasRequest();
+            TA_GesBib_Cliente.ServicioJava.listarBibliotecasResponse retVal = ((TA_GesBib_Cliente.ServicioJava.Servicio)(this)).listarBibliotecas(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<TA_GesBib_Cliente.ServicioJava.listarBibliotecasResponse> TA_GesBib_Cliente.ServicioJava.Servicio.listarBibliotecasAsync(TA_GesBib_Cliente.ServicioJava.listarBibliotecasRequest request) {
+            return base.Channel.listarBibliotecasAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<TA_GesBib_Cliente.ServicioJava.listarBibliotecasResponse> listarBibliotecasAsync() {
+            TA_GesBib_Cliente.ServicioJava.listarBibliotecasRequest inValue = new TA_GesBib_Cliente.ServicioJava.listarBibliotecasRequest();
+            return ((TA_GesBib_Cliente.ServicioJava.Servicio)(this)).listarBibliotecasAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        TA_GesBib_Cliente.ServicioJava.listarPerfilExperienciaResponse TA_GesBib_Cliente.ServicioJava.Servicio.listarPerfilExperiencia(TA_GesBib_Cliente.ServicioJava.listarPerfilExperienciaRequest request) {
+            return base.Channel.listarPerfilExperiencia(request);
+        }
+        
+        public TA_GesBib_Cliente.ServicioJava.perfilExperiencia[] listarPerfilExperiencia() {
+            TA_GesBib_Cliente.ServicioJava.listarPerfilExperienciaRequest inValue = new TA_GesBib_Cliente.ServicioJava.listarPerfilExperienciaRequest();
+            TA_GesBib_Cliente.ServicioJava.listarPerfilExperienciaResponse retVal = ((TA_GesBib_Cliente.ServicioJava.Servicio)(this)).listarPerfilExperiencia(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<TA_GesBib_Cliente.ServicioJava.listarPerfilExperienciaResponse> TA_GesBib_Cliente.ServicioJava.Servicio.listarPerfilExperienciaAsync(TA_GesBib_Cliente.ServicioJava.listarPerfilExperienciaRequest request) {
+            return base.Channel.listarPerfilExperienciaAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<TA_GesBib_Cliente.ServicioJava.listarPerfilExperienciaResponse> listarPerfilExperienciaAsync() {
+            TA_GesBib_Cliente.ServicioJava.listarPerfilExperienciaRequest inValue = new TA_GesBib_Cliente.ServicioJava.listarPerfilExperienciaRequest();
+            return ((TA_GesBib_Cliente.ServicioJava.Servicio)(this)).listarPerfilExperienciaAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        TA_GesBib_Cliente.ServicioJava.insertarPracticanteResponse TA_GesBib_Cliente.ServicioJava.Servicio.insertarPracticante(TA_GesBib_Cliente.ServicioJava.insertarPracticanteRequest request) {
+            return base.Channel.insertarPracticante(request);
+        }
+        
+        public int insertarPracticante(TA_GesBib_Cliente.ServicioJava.practicante practicante) {
+            TA_GesBib_Cliente.ServicioJava.insertarPracticanteRequest inValue = new TA_GesBib_Cliente.ServicioJava.insertarPracticanteRequest();
+            inValue.practicante = practicante;
+            TA_GesBib_Cliente.ServicioJava.insertarPracticanteResponse retVal = ((TA_GesBib_Cliente.ServicioJava.Servicio)(this)).insertarPracticante(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<TA_GesBib_Cliente.ServicioJava.insertarPracticanteResponse> TA_GesBib_Cliente.ServicioJava.Servicio.insertarPracticanteAsync(TA_GesBib_Cliente.ServicioJava.insertarPracticanteRequest request) {
+            return base.Channel.insertarPracticanteAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<TA_GesBib_Cliente.ServicioJava.insertarPracticanteResponse> insertarPracticanteAsync(TA_GesBib_Cliente.ServicioJava.practicante practicante) {
+            TA_GesBib_Cliente.ServicioJava.insertarPracticanteRequest inValue = new TA_GesBib_Cliente.ServicioJava.insertarPracticanteRequest();
+            inValue.practicante = practicante;
+            return ((TA_GesBib_Cliente.ServicioJava.Servicio)(this)).insertarPracticanteAsync(inValue);
         }
     }
 }
