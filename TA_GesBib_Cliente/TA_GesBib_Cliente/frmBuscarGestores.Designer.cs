@@ -158,7 +158,7 @@
             // 
             // Especialidad
             // 
-            this.Especialidad.DataPropertyName = "Apellidos";
+            this.Especialidad.DataPropertyName = "Apellido";
             dataGridViewCellStyle4.Font = new System.Drawing.Font("Bahnschrift", 14.25F, System.Drawing.FontStyle.Bold);
             this.Especialidad.DefaultCellStyle = dataGridViewCellStyle4;
             this.Especialidad.HeaderText = "Apellidos";

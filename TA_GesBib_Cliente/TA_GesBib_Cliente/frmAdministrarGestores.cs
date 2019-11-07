@@ -175,7 +175,7 @@ namespace TA_GesBib_Cliente
             }
             else if (estadoObjGestor == Estado.Modificar)
             {
-                //servGesBib.actualizarGestor(ges);
+                servGesBib.actualizarGestor(ges);
                 MessageBox.Show("Se han actualizado los datos", "Mensaje Confirmacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             estadoComponentes(Estado.Inicial);

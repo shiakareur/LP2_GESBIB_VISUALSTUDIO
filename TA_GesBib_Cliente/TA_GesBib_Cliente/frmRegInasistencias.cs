@@ -47,7 +47,7 @@ namespace TA_GesBib_Cliente
             estadoComponentes(Estado.Inicial);
 
             //cargamos los tipos de inasistencia en el combo box
-            //cmbTipo_Inasistencia.DataSource = servTA.listarTipoInasistencia;
+            cmbTipo_Inasistencia.DataSource = servTA.listarTipoInasistencia();
             cmbTipo_Inasistencia.ValueMember = "nombre";
 
 
@@ -71,10 +71,16 @@ namespace TA_GesBib_Cliente
         private void btnGuardar_Click(object sender, EventArgs e)
         {
             ServicioJava.inasistencia inasis = new ServicioJava.inasistencia();
-                      
-            inasis.tipoInasistencia = 
-                ((ServicioJava.inasistencia)cmbTipo_Inasistencia.SelectedItem).tipoInasistencia;
 
+            try
+            {
+                inasis.tipoInasistencia =
+                    ((ServicioJava.inasistencia)cmbTipo_Inasistencia.SelectedItem).tipoInasistencia;
+            }
+            catch (Exception ex)
+            {
+                System.Console.Write("ASD");
+            }
             inasis.fecha = dtpRegInasis.Value;
             inasis.horaInicio = txtHIni_Inasis.Text;
             inasis.horaFin = txtHFin_Inasis.Text;

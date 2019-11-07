@@ -192,10 +192,20 @@ namespace TA_GesBib_Cliente
                 biblioteca = frmBuscarBib.BibliotecaSeleccionada;
                 txtNombreBib.Text = biblioteca.nombre;
                 //txtNombreGestor.Text = biblioteca.gestor.nombre + " " + biblioteca.gestor.apellido;
-                txtNombreGestor.Text = biblioteca.gestor.id.ToString();
-                txtCodigo.Text = biblioteca.gestor.codigo;
-                dgvPuntosAtencion.DataSource = servGesBib.listarPuntosAtencion(biblioteca.id);
-                estadoComponentes(Estado.Buscar);
+                try
+                {
+                    txtNombreGestor.Text = biblioteca.gestor.id.ToString();
+                    txtCodigo.Text = biblioteca.gestor.codigo;
+
+                    dgvPuntosAtencion.DataSource = servGesBib.listarPuntosAtencion(biblioteca.id);
+
+                    estadoComponentes(Estado.Buscar);
+                }
+                catch (Exception ex)
+                {
+                    System.Console.WriteLine("Error");
+                }
+               
                 }
 
         }
