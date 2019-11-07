@@ -116,10 +116,12 @@ namespace TA_GesBib_Cliente
 
         private void btnReg_HE_Click(object sender, EventArgs e)
         {
+
+            panelBIPO.Visible = false;
             //......
             //preguntar si hay algun form "activo" para no cargar este form
-          
-              if (  (var_frmRegistrarInasis_Bibliotecario != null &&
+
+            if (  (var_frmRegistrarInasis_Bibliotecario != null &&
                         var_frmRegistrarInasis_Bibliotecario.Visible == true) ||
                     (var_frmSolicitarHL_Bibliotecario != null &&    
                         var_frmSolicitarHL_Bibliotecario.Visible == true) ||
@@ -200,9 +202,9 @@ namespace TA_GesBib_Cliente
 
         private void btnReg_Inas_Click(object sender, EventArgs e)
         {
+            panelBIPO.Visible = false;
 
-
-            if((var_frmRegistrarHE_Bibliotecario != null &&
+            if ((var_frmRegistrarHE_Bibliotecario != null &&
                         var_frmRegistrarHE_Bibliotecario.Visible == true) ||
                (var_frmSolicitarHL_Bibliotecario != null &&
                        var_frmSolicitarHL_Bibliotecario.Visible == true) ||
@@ -261,7 +263,9 @@ namespace TA_GesBib_Cliente
 
         private void btnSolicitar_HLibres_Click(object sender, EventArgs e)
         {
-            if((var_frmRegistrarHE_Bibliotecario != null &&
+            panelBIPO.Visible = false;
+
+            if ((var_frmRegistrarHE_Bibliotecario != null &&
                         var_frmRegistrarHE_Bibliotecario.Visible == true) ||
                (var_frmRegistrarInasis_Bibliotecario != null &&
                         var_frmRegistrarInasis_Bibliotecario.Visible == true) ||
@@ -331,7 +335,10 @@ namespace TA_GesBib_Cliente
 
         private void btnSolicitar_CambioTurno_Click(object sender, EventArgs e)
         {
-            if((var_frmRegistrarHE_Bibliotecario != null &&
+
+            panelBIPO.Visible = false;
+
+            if ((var_frmRegistrarHE_Bibliotecario != null &&
                         var_frmRegistrarHE_Bibliotecario.Visible == true) ||
                (var_frmRegistrarInasis_Bibliotecario != null &&
                         var_frmRegistrarInasis_Bibliotecario.Visible == true) ||
@@ -391,6 +398,8 @@ namespace TA_GesBib_Cliente
 
         private void btnNotificaciones_Click(object sender, EventArgs e)
         {
+            panelBIPO.Visible = false;
+
             if ((var_frmRegistrarInasis_Bibliotecario != null &&
                         var_frmRegistrarInasis_Bibliotecario.Visible == true) ||
                 (var_frmSolicitarHL_Bibliotecario != null &&
@@ -475,11 +484,13 @@ namespace TA_GesBib_Cliente
 
         private void picHome_Click(object sender, EventArgs e)
         {
-
+            panelBIPO.Visible = true;
         }
 
         private void btnVisualizarHorarios_Click(object sender, EventArgs e)
         {
+            panelBIPO.Visible = false;
+
             if ((var_frmRegistrarInasis_Bibliotecario != null &&
                         var_frmRegistrarInasis_Bibliotecario.Visible == true) ||
                 (var_frmSolicitarHL_Bibliotecario != null &&

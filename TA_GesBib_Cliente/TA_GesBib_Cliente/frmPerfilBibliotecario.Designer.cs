@@ -41,7 +41,6 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lblBienvenido = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.picHome = new System.Windows.Forms.PictureBox();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.btnNotificaciones = new System.Windows.Forms.Button();
@@ -54,14 +53,15 @@
             this.btnVisualizarHorarios = new System.Windows.Forms.Button();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.panelAviso = new System.Windows.Forms.Panel();
+            this.panelBIPO = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picHome)).BeginInit();
             this.panel4.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panelBtn_Solicitar.SuspendLayout();
             this.panelBtn_Registrar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            this.panelBIPO.SuspendLayout();
             this.SuspendLayout();
             // 
             // label3
@@ -228,7 +228,7 @@
             this.lblBienvenido.BackColor = System.Drawing.SystemColors.Window;
             this.lblBienvenido.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblBienvenido.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.lblBienvenido.Location = new System.Drawing.Point(368, 65);
+            this.lblBienvenido.Location = new System.Drawing.Point(89, 88);
             this.lblBienvenido.Name = "lblBienvenido";
             this.lblBienvenido.Size = new System.Drawing.Size(449, 33);
             this.lblBienvenido.TabIndex = 56;
@@ -239,7 +239,6 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(175)))), ((int)(((byte)(169)))));
             this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.panel1.Controls.Add(this.picHome);
             this.panel1.Controls.Add(this.panel4);
             this.panel1.Controls.Add(this.panel3);
             this.panel1.Controls.Add(this.label2);
@@ -254,19 +253,6 @@
             this.panel1.Size = new System.Drawing.Size(279, 778);
             this.panel1.TabIndex = 55;
             this.panel1.TabStop = true;
-            // 
-            // picHome
-            // 
-            this.picHome.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(175)))), ((int)(((byte)(169)))));
-            this.picHome.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.picHome.Image = global::TA_GesBib_Cliente.Properties.Resources.hom4;
-            this.picHome.Location = new System.Drawing.Point(220, 65);
-            this.picHome.Name = "picHome";
-            this.picHome.Size = new System.Drawing.Size(56, 56);
-            this.picHome.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picHome.TabIndex = 62;
-            this.picHome.TabStop = false;
-            this.picHome.Click += new System.EventHandler(this.picHome_Click);
             // 
             // panel4
             // 
@@ -435,13 +421,24 @@
             // 
             // panelAviso
             // 
-            this.panelAviso.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.panelAviso.BackColor = System.Drawing.Color.Transparent;
             this.panelAviso.BackgroundImage = global::TA_GesBib_Cliente.Properties.Resources.posit;
             this.panelAviso.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panelAviso.Location = new System.Drawing.Point(577, 189);
+            this.panelAviso.Location = new System.Drawing.Point(321, 260);
             this.panelAviso.Name = "panelAviso";
-            this.panelAviso.Size = new System.Drawing.Size(343, 285);
+            this.panelAviso.Size = new System.Drawing.Size(506, 336);
             this.panelAviso.TabIndex = 60;
+            // 
+            // panelBIPO
+            // 
+            this.panelBIPO.BackgroundImage = global::TA_GesBib_Cliente.Properties.Resources.biblio_ari_borroso;
+            this.panelBIPO.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panelBIPO.Controls.Add(this.lblBienvenido);
+            this.panelBIPO.Controls.Add(this.panelAviso);
+            this.panelBIPO.Location = new System.Drawing.Point(280, 2);
+            this.panelBIPO.Name = "panelBIPO";
+            this.panelBIPO.Size = new System.Drawing.Size(1112, 773);
+            this.panelBIPO.TabIndex = 64;
             // 
             // frmPerfilBibliotecario
             // 
@@ -450,9 +447,8 @@
             this.BackgroundImage = global::TA_GesBib_Cliente.Properties.Resources.biblio_ari_borroso;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1396, 778);
-            this.Controls.Add(this.panelAviso);
+            this.Controls.Add(this.panelBIPO);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.lblBienvenido);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -465,14 +461,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picHome)).EndInit();
             this.panel4.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panelBtn_Solicitar.ResumeLayout(false);
             this.panelBtn_Registrar.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            this.panelBIPO.ResumeLayout(false);
+            this.panelBIPO.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -502,6 +498,6 @@
         private System.Windows.Forms.Button btnSolicitar_CambioTurno;
         private System.Windows.Forms.Panel panelAviso;
         private System.Windows.Forms.Button btnNotificaciones;
-        private System.Windows.Forms.PictureBox picHome;
+        private System.Windows.Forms.Panel panelBIPO;
     }
 }

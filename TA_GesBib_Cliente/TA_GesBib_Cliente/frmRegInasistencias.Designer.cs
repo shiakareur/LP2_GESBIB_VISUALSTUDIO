@@ -231,7 +231,7 @@
             this.btnCerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCerrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.btnCerrar.Image = global::TA_GesBib_Cliente.Properties.Resources.icono_cerrarventana;
-            this.btnCerrar.Location = new System.Drawing.Point(371, 475);
+            this.btnCerrar.Location = new System.Drawing.Point(329, 492);
             this.btnCerrar.Margin = new System.Windows.Forms.Padding(2);
             this.btnCerrar.Name = "btnCerrar";
             this.btnCerrar.Size = new System.Drawing.Size(136, 32);

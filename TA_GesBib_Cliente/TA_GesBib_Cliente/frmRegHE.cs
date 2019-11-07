@@ -12,7 +12,10 @@ namespace TA_GesBib_Cliente
 {
     public partial class frmRegHE : Form
     {
-                
+
+
+        ServicioJava.ServicioClient servTA = new ServicioJava.ServicioClient();
+
         private Form var_perfilPersonal;
         private TipoPerfil var_tipoPerfil = TipoPerfil.PerfilBibliotecario;
 
@@ -53,11 +56,26 @@ namespace TA_GesBib_Cliente
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
+            //Saco mi data
+
+            //user.getnombre();
+            //...
 
 
 
+            //saco la data del form
 
+            ServicioJava.horaExtra hora_extra = new ServicioJava.horaExtra();
 
+            hora_extra.fecha = dtpFechaHE.Value;
+            hora_extra.fechaSpecified = true;
+
+            //la hora en time
+            hora_extra.horaInicio = txtHIni_HE.Text;
+            hora_extra.horaFin = txtHFin_HE.Text;
+
+            hora_extra.cantidadHoras = Int32.Parse(txtCantHoras_HE.Text);
+            hora_extra.descripcion = txtDescripcion_HE.Text;
 
             //llamamos al SERVICIO RESPECTIVO
             //Servicio<HoraExtra> hora_extra = new ServicioTA<HoraExtra>;

@@ -187,7 +187,7 @@
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(296, 824);
+            this.panel1.Size = new System.Drawing.Size(296, 778);
             this.panel1.TabIndex = 3;
             this.panel1.TabStop = true;
             // 
@@ -290,7 +290,7 @@
             this.panelAviso.BackColor = System.Drawing.Color.Transparent;
             this.panelAviso.BackgroundImage = global::TA_GesBib_Cliente.Properties.Resources.posit;
             this.panelAviso.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panelAviso.Location = new System.Drawing.Point(319, 272);
+            this.panelAviso.Location = new System.Drawing.Point(320, 244);
             this.panelAviso.Name = "panelAviso";
             this.panelAviso.Size = new System.Drawing.Size(477, 348);
             this.panelAviso.TabIndex = 61;
@@ -303,7 +303,7 @@
             this.panelBIPO.Controls.Add(this.lblBienvenido);
             this.panelBIPO.Location = new System.Drawing.Point(288, 0);
             this.panelBIPO.Name = "panelBIPO";
-            this.panelBIPO.Size = new System.Drawing.Size(1079, 824);
+            this.panelBIPO.Size = new System.Drawing.Size(1108, 773);
             this.panelBIPO.TabIndex = 63;
             // 
             // frmPerfilGestor
@@ -312,7 +312,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::TA_GesBib_Cliente.Properties.Resources.biblio_ari_borroso;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1364, 824);
+            this.ClientSize = new System.Drawing.Size(1396, 778);
             this.Controls.Add(this.panelBIPO);
             this.Controls.Add(this.panel1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));

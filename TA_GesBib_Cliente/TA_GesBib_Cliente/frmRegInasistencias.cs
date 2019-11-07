@@ -13,6 +13,9 @@ namespace TA_GesBib_Cliente
     public partial class frmRegInasistencias : Form
     {
         //private frmPerfilBibliotecario var_perfilBibliotecario;
+
+        ServicioJava.ServicioClient servTA = new ServicioJava.ServicioClient();
+
         private Form var_perfilPersonal;
         private TipoPerfil var_tipoPerfil = TipoPerfil.PerfilBibliotecario;
 
@@ -42,6 +45,12 @@ namespace TA_GesBib_Cliente
 
             limpiarComponentes();
             estadoComponentes(Estado.Inicial);
+
+            //cargamos los tipos de inasistencia en el combo box
+            //cmbTipo_Inasistencia.DataSource = servTA.listarTipoInasistencia;
+            cmbTipo_Inasistencia.ValueMember = "nombre";
+
+
         }
 
 
@@ -61,11 +70,20 @@ namespace TA_GesBib_Cliente
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
+            ServicioJava.inasistencia inasis = new ServicioJava.inasistencia();
+                      
+            inasis.tipoInasistencia = 
+                ((ServicioJava.inasistencia)cmbTipo_Inasistencia.SelectedItem).tipoInasistencia;
+
+            inasis.fecha = dtpRegInasis.Value;
+            inasis.horaInicio = txtHIni_Inasis.Text;
+            inasis.horaFin = txtHFin_Inasis.Text;
+
             //llamamos al SERVICIO RESPECTIVO
-            //Servicio<HoraExtra> inasistencia = new ServicioTA<Inasistencia>;
-            //DBController.regInasistencia(inasistencia);
-            //mostramos mensaje de registro exitoso
-            //....
+
+            //servTA.insertarInasistencia(inasis);
+
+            //mostramos mensaje de registro exitoso           
             estadoComponentes(Estado.Inicial);
             this.muestraMensajeExitoso();
         }

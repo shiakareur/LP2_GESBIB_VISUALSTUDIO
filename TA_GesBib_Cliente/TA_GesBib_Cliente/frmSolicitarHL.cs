@@ -13,6 +13,8 @@ namespace TA_GesBib_Cliente
     public partial class frmSolicitarHL : Form
     {
 
+        ServicioJava.ServicioClient servTA = new ServicioJava.ServicioClient();
+
         private Form var_perfilPersonal;
         private TipoPerfil var_tipoPerfil = TipoPerfil.PerfilBibliotecario;
 
@@ -53,8 +55,21 @@ namespace TA_GesBib_Cliente
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
+            ServicioJava.inasistencia inaHL = new ServicioJava.inasistencia();
+
+            //el ID de INASISTENCIA ES 4
+            inaHL.personal.id = 2;  //************************************************
+            inaHL.tipoInasistencia.id = 4;
+            //vamos a REGISTRAR una hora libre que es de tipo INASISTENCIA
+
+            inaHL.fecha = dtpSoliHL.Value;
+            inaHL.horaInicio = txtHIni_HL.Text;
+            inaHL.horaFin = txtHFin_HL.Text;
+
             //llamamos al SERVICIO RESPECTIVO
-            //DBController.....
+
+            //servTA.insertarInasistencia(inaHL);
+
             //mostramos mensaje de registro exitoso
             //....
 

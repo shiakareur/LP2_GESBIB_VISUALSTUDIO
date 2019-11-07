@@ -12,6 +12,7 @@ namespace TA_GesBib_Cliente
 {
     public partial class frmLogin : Form
     {
+        ServicioJava.ServicioClient servTA = new ServicioJava.ServicioClient();
         public frmLogin()
         {
             InitializeComponent();
@@ -19,6 +20,10 @@ namespace TA_GesBib_Cliente
 
         private void btnAcceder_Click(object sender, EventArgs e)
         {
+
+            //KeyValuePair<String, ServicioJava.usuario> a = new KeyValuePair<>(servTA.validarUsuario("bbenrique@gmail.com", "987654"));
+
+
             //abrir diferentes usuarios
             if (placeHolderUsuario.Text=="ariana")
             {
@@ -26,6 +31,9 @@ namespace TA_GesBib_Cliente
                 formPAdmin.Visible = true;
                 this.Visible = true;
             }
+
+            //KeyValuePair<String, ServicioJava.usuario> a = new KeyValuePair<>(servTA.validarUsuario("bbenrique@gmail.com", "987654"));
+
             else if (placeHolderUsuario.Text == "practicante")
             {
                 frmPerfilPracticante frmPracticante = new frmPerfilPracticante(this);
