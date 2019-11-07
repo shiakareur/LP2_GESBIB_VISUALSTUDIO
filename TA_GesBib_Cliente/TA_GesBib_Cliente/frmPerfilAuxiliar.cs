@@ -31,6 +31,9 @@ namespace TA_GesBib_Cliente
         private frmSolicitarHL var_frmSolicitarHL_Auxiliar;
         private frmSolicitarCambioTurno var_frmSolicitarCambioTurno_Auxiliar;
 
+        private frmRespuestaValidaciones var_frmRespuestasSolicitudes_Auxiliar;
+        private frmVisualizarHorarios var_frmVerHorarios_Auxiliar;
+
         public Panel PanelAviso { get => panelAviso; set => panelAviso = value; }
         public Label LblBienvenido { get => lblBienvenido; set => lblBienvenido = value; }
 
@@ -97,125 +100,219 @@ namespace TA_GesBib_Cliente
 
 
 
+        private void muestraMensajeCerraroGuardarCambios()
+        {
+            //mostramos mensaje de error
+            MessageBox.Show("Cierre o guarde los cambios !",
+                "Advertencia",
+                MessageBoxButtons.OK,
+                MessageBoxIcon.Exclamation,
+                MessageBoxDefaultButton.Button1);
+        }
+
         private void btnReg_HE_Click(object sender, EventArgs e)
         {
 
-            //aca llamamos al formulario de registrar Horas extras
-            if (var_frmRegistrarHE_Auxiliar == null)
+            panelBIPO.Visible = false;
+            //......
+            //preguntar si hay algun form "activo" para no cargar este form
+
+            if ((var_frmRegistrarInasis_Auxiliar != null &&
+                        var_frmRegistrarInasis_Auxiliar.Visible == true) ||
+                    (var_frmSolicitarHL_Auxiliar != null &&
+                        var_frmSolicitarHL_Auxiliar.Visible == true) ||
+                    (var_frmSolicitarCambioTurno_Auxiliar != null &&
+                        var_frmSolicitarCambioTurno_Auxiliar.Visible == true) ||
+                    (var_frmRespuestasSolicitudes_Auxiliar != null &&
+                        var_frmRespuestasSolicitudes_Auxiliar.Visible == true) ||
+                    (var_frmVerHorarios_Auxiliar != null &&
+                        var_frmVerHorarios_Auxiliar.Visible == true))
             {
-                var_frmRegistrarHE_Auxiliar = new frmRegHE(this, TipoPerfil.PerfilAuxiliar);
-                var_frmRegistrarHE_Auxiliar.MdiParent = this;
 
-                //...add
-                var_frmRegistrarHE_Auxiliar.StartPosition = FormStartPosition.Manual;
-                var_frmRegistrarHE_Auxiliar.Left = 0;
-                var_frmRegistrarHE_Auxiliar.Top = 0;
-                //...
+                this.muestraMensajeCerraroGuardarCambios();
 
-
-                var_frmRegistrarHE_Auxiliar.Show();
             }
             else
             {
-                var_frmRegistrarHE_Auxiliar.Visible = true;
+
+                //seguimos con nuestra programacion
+                //aca llamamos al formulario de registrar Horas extras
+                if (var_frmRegistrarHE_Auxiliar == null)
+                {
+                    var_frmRegistrarHE_Auxiliar = new frmRegHE(this, TipoPerfil.PerfilAuxiliar);
+                    var_frmRegistrarHE_Auxiliar.MdiParent = this;
+
+                    //...add
+                    var_frmRegistrarHE_Auxiliar.StartPosition = FormStartPosition.Manual;
+                    var_frmRegistrarHE_Auxiliar.Left = 0;
+                    var_frmRegistrarHE_Auxiliar.Top = 0;
+                    //...
+
+
+                    var_frmRegistrarHE_Auxiliar.Show();
+                }
+                else
+                {
+                    var_frmRegistrarHE_Auxiliar.limpiarComponentes();
+                    var_frmRegistrarHE_Auxiliar.estadoComponentes(Estado.Inicial);
+                    var_frmRegistrarHE_Auxiliar.Visible = true;
+                }
+
+                //....
+                if (var_frmSolicitarHL_Auxiliar != null)
+                {
+                    var_frmSolicitarHL_Auxiliar.Visible = false;
+                    //todos los demas formularios
+
+                }
+
+                //hoy agregeishion
+
+                if (var_frmRegistrarInasis_Auxiliar != null)
+                {
+                    var_frmRegistrarInasis_Auxiliar.Visible = false;
+                    //todos los demas formularios
+
+                }
+
+                if (var_frmSolicitarCambioTurno_Auxiliar != null)
+                {
+                    var_frmSolicitarCambioTurno_Auxiliar.Visible = false;
+                    //todos los demas formularios
+
+                }
+
+                //hoy agregeishion
+
+                lblBienvenido.Visible = false;
+                panelAviso.Visible = false;
+
+                //escondemos el submenu
+                hideSubMenu();
             }
 
-            //....
-            if (var_frmSolicitarHL_Auxiliar != null)
-            {
-                var_frmSolicitarHL_Auxiliar.Visible = false;
-                //todos los demas formularios
 
-            }
-
-            lblBienvenido.Visible = false;
-            panelAviso.Visible = false;
-
-            //escondemos el submenu
-            hideSubMenu();
+            //....            
 
         }
 
         private void btnReg_Inas_Click(object sender, EventArgs e)
         {
+            panelBIPO.Visible = false;
 
-            //aca llamamos al formulario de registrar Horas extras
-            if (var_frmRegistrarInasis_Auxiliar == null)
+            if ((var_frmRegistrarHE_Auxiliar != null &&
+                        var_frmRegistrarHE_Auxiliar.Visible == true) ||
+               (var_frmSolicitarHL_Auxiliar != null &&
+                       var_frmSolicitarHL_Auxiliar.Visible == true) ||
+               (var_frmSolicitarCambioTurno_Auxiliar != null &&
+                        var_frmSolicitarCambioTurno_Auxiliar.Visible == true) ||
+               (var_frmRespuestasSolicitudes_Auxiliar != null &&
+                        var_frmRespuestasSolicitudes_Auxiliar.Visible == true) ||
+               (var_frmVerHorarios_Auxiliar != null &&
+                        var_frmVerHorarios_Auxiliar.Visible == true))
             {
-                var_frmRegistrarInasis_Auxiliar = new frmRegInasistencias(this, TipoPerfil.PerfilAuxiliar);
-                var_frmRegistrarInasis_Auxiliar.MdiParent = this;
-
-                //...add
-                var_frmRegistrarInasis_Auxiliar.StartPosition = FormStartPosition.Manual;
-                var_frmRegistrarInasis_Auxiliar.Left = 0;
-                var_frmRegistrarInasis_Auxiliar.Top = 0;
-                //...
-
-
-                var_frmRegistrarInasis_Auxiliar.Show();
+                this.muestraMensajeCerraroGuardarCambios();
             }
             else
             {
-                var_frmRegistrarInasis_Auxiliar.Visible = true;
+                //aca llamamos al formulario de registrar Horas extras
+                if (var_frmRegistrarInasis_Auxiliar == null)
+                {
+                    var_frmRegistrarInasis_Auxiliar = new frmRegInasistencias(this, TipoPerfil.PerfilAuxiliar);
+                    var_frmRegistrarInasis_Auxiliar.MdiParent = this;
+
+                    //...add
+                    var_frmRegistrarInasis_Auxiliar.StartPosition = FormStartPosition.Manual;
+                    var_frmRegistrarInasis_Auxiliar.Left = 0;
+                    var_frmRegistrarInasis_Auxiliar.Top = 0;
+                    //...
+
+
+                    var_frmRegistrarInasis_Auxiliar.Show();
+                }
+                else
+                {
+                    var_frmRegistrarInasis_Auxiliar.limpiarComponentes();
+                    var_frmRegistrarInasis_Auxiliar.estadoComponentes(Estado.Inicial);
+                    var_frmRegistrarInasis_Auxiliar.Visible = true;
+                }
+
+                //....
+                if (var_frmSolicitarHL_Auxiliar != null)
+                {
+                    var_frmSolicitarHL_Auxiliar.Visible = false;
+                    //todos los demas formularios
+
+                }
+
+                lblBienvenido.Visible = false;
+                panelAviso.Visible = false;
+
+                //escondemos el submenu
+                hideSubMenu();
+
             }
-
-            //....
-            if (var_frmSolicitarHL_Auxiliar != null)
-            {
-                var_frmSolicitarHL_Auxiliar.Visible = false;
-                //todos los demas formularios
-
-            }
-
-            lblBienvenido.Visible = false;
-            panelAviso.Visible = false;
-
-            //escondemos el submenu
-            hideSubMenu();
-
 
         }
 
 
 
-
-
         private void btnSolicitar_HLibres_Click(object sender, EventArgs e)
         {
+            panelBIPO.Visible = false;
 
-            //aca llamamos al formulario de solicitar horas libres
-            if (var_frmSolicitarHL_Auxiliar == null)
+            if ((var_frmRegistrarHE_Auxiliar != null &&
+                        var_frmRegistrarHE_Auxiliar.Visible == true) ||
+               (var_frmRegistrarInasis_Auxiliar != null &&
+                        var_frmRegistrarInasis_Auxiliar.Visible == true) ||
+               (var_frmSolicitarCambioTurno_Auxiliar != null &&
+                        var_frmSolicitarCambioTurno_Auxiliar.Visible == true) ||
+               (var_frmRespuestasSolicitudes_Auxiliar != null &&
+                        var_frmRespuestasSolicitudes_Auxiliar.Visible == true) ||
+               (var_frmVerHorarios_Auxiliar != null &&
+                        var_frmVerHorarios_Auxiliar.Visible == true))
             {
-                var_frmSolicitarHL_Auxiliar = new frmSolicitarHL(this, TipoPerfil.PerfilAuxiliar);
-                var_frmSolicitarHL_Auxiliar.MdiParent = this;
-
-                //...add
-                var_frmSolicitarHL_Auxiliar.StartPosition = FormStartPosition.Manual;
-                var_frmSolicitarHL_Auxiliar.Left = 0;
-                var_frmSolicitarHL_Auxiliar.Top = 0;
-                //...
-
-
-                var_frmSolicitarHL_Auxiliar.Show();
+                this.muestraMensajeCerraroGuardarCambios();
             }
             else
             {
-                var_frmSolicitarHL_Auxiliar.Visible = true;
+                //aca llamamos al formulario de solicitar horas libres
+                if (var_frmSolicitarHL_Auxiliar == null)
+                {
+                    var_frmSolicitarHL_Auxiliar = new frmSolicitarHL(this, TipoPerfil.PerfilAuxiliar);
+                    var_frmSolicitarHL_Auxiliar.MdiParent = this;
+
+                    //...add
+                    var_frmSolicitarHL_Auxiliar.StartPosition = FormStartPosition.Manual;
+                    var_frmSolicitarHL_Auxiliar.Left = 0;
+                    var_frmSolicitarHL_Auxiliar.Top = 0;
+                    //...
+
+
+                    var_frmSolicitarHL_Auxiliar.Show();
+                }
+                else
+                {
+                    var_frmSolicitarHL_Auxiliar.limpiarComponentes();
+                    var_frmSolicitarHL_Auxiliar.estadoComponentes(Estado.Inicial);
+                    var_frmSolicitarHL_Auxiliar.Visible = true;
+                }
+
+                //....
+                if (var_frmSolicitarCambioTurno_Auxiliar != null)
+                {
+                    var_frmSolicitarCambioTurno_Auxiliar.Visible = false;
+                    //todos los demas formularios
+
+                }
+
+                lblBienvenido.Visible = false;
+                panelAviso.Visible = false;
+
+                //escondemos el submenu
+                hideSubMenu();
             }
 
-            //....
-            if (var_frmSolicitarCambioTurno_Auxiliar != null)
-            {
-                var_frmSolicitarCambioTurno_Auxiliar.Visible = false;
-                //todos los demas formularios
-
-            }
-
-            lblBienvenido.Visible = false;
-            panelAviso.Visible = false;
-
-            //escondemos el submenu
-            hideSubMenu();
         }
 
 
@@ -234,39 +331,242 @@ namespace TA_GesBib_Cliente
 
         private void btnSolicitar_CambioTurno_Click(object sender, EventArgs e)
         {
-            //aca llamamos al formulario de solicitar cambio de turno
-            if (var_frmSolicitarCambioTurno_Auxiliar == null)
+
+            panelBIPO.Visible = false;
+
+            if ((var_frmRegistrarHE_Auxiliar != null &&
+                        var_frmRegistrarHE_Auxiliar.Visible == true) ||
+               (var_frmRegistrarInasis_Auxiliar != null &&
+                        var_frmRegistrarInasis_Auxiliar.Visible == true) ||
+               (var_frmSolicitarHL_Auxiliar != null &&
+                        var_frmSolicitarHL_Auxiliar.Visible == true) ||
+               (var_frmRespuestasSolicitudes_Auxiliar != null &&
+                        var_frmRespuestasSolicitudes_Auxiliar.Visible == true) ||
+               (var_frmVerHorarios_Auxiliar != null &&
+                        var_frmVerHorarios_Auxiliar.Visible == true))
             {
-                var_frmSolicitarCambioTurno_Auxiliar = new frmSolicitarCambioTurno(this, TipoPerfil.PerfilAuxiliar);
-                var_frmSolicitarCambioTurno_Auxiliar.MdiParent = this;
-
-                //...add
-                var_frmSolicitarCambioTurno_Auxiliar.StartPosition = FormStartPosition.Manual;
-                var_frmSolicitarCambioTurno_Auxiliar.Left = 0;
-                var_frmSolicitarCambioTurno_Auxiliar.Top = 0;
-                //...
-
-
-                var_frmSolicitarCambioTurno_Auxiliar.Show();
+                this.muestraMensajeCerraroGuardarCambios();
             }
             else
             {
-                var_frmSolicitarCambioTurno_Auxiliar.Visible = true;
+                //aca llamamos al formulario de solicitar cambio de turno
+                if (var_frmSolicitarCambioTurno_Auxiliar == null)
+                {
+                    var_frmSolicitarCambioTurno_Auxiliar = new frmSolicitarCambioTurno(this, TipoPerfil.PerfilAuxiliar);
+                    var_frmSolicitarCambioTurno_Auxiliar.MdiParent = this;
+
+                    //...add
+
+
+
+                    var_frmSolicitarCambioTurno_Auxiliar.StartPosition = FormStartPosition.Manual;
+                    var_frmSolicitarCambioTurno_Auxiliar.Left = 0;
+                    var_frmSolicitarCambioTurno_Auxiliar.Top = 0;
+                    //...
+
+
+                    var_frmSolicitarCambioTurno_Auxiliar.Show();
+                }
+                else
+                {
+
+                    var_frmSolicitarCambioTurno_Auxiliar.limpiarComponentes();
+                    var_frmSolicitarCambioTurno_Auxiliar.estadoComponentes(Estado.Inicial);
+                    var_frmSolicitarCambioTurno_Auxiliar.Visible = true;
+                }
+
+                //....
+                if (var_frmSolicitarHL_Auxiliar != null)
+                {
+                    var_frmSolicitarHL_Auxiliar.Visible = false;
+                    //todos los demas formularios
+
+                }
+
+                lblBienvenido.Visible = false;
+                panelAviso.Visible = false;
+
+                //escondemos el submenu
+                hideSubMenu();
             }
 
-            //....
-            if (var_frmSolicitarHL_Auxiliar != null)
+        }
+
+        private void btnNotificaciones_Click(object sender, EventArgs e)
+        {
+            panelBIPO.Visible = false;
+
+            if ((var_frmRegistrarInasis_Auxiliar != null &&
+                        var_frmRegistrarInasis_Auxiliar.Visible == true) ||
+                (var_frmSolicitarHL_Auxiliar != null &&
+                        var_frmSolicitarHL_Auxiliar.Visible == true) ||
+                (var_frmSolicitarCambioTurno_Auxiliar != null &&
+                        var_frmSolicitarCambioTurno_Auxiliar.Visible == true) ||
+                (var_frmRespuestasSolicitudes_Auxiliar != null &&
+                        var_frmRespuestasSolicitudes_Auxiliar.Visible == true) ||
+                (var_frmVerHorarios_Auxiliar != null &&
+                        var_frmVerHorarios_Auxiliar.Visible == true))
             {
-                var_frmSolicitarHL_Auxiliar.Visible = false;
-                //todos los demas formularios
+
+                this.muestraMensajeCerraroGuardarCambios();
 
             }
+            else
+            {
 
-            lblBienvenido.Visible = false;
-            panelAviso.Visible = false;
+                //seguimos con nuestra programacion
+                //aca llamamos al formulario de registrar Horas extras
+                if (var_frmRespuestasSolicitudes_Auxiliar == null)
+                {
+                    var_frmRespuestasSolicitudes_Auxiliar = new frmRespuestaValidaciones(this, TipoPerfil.PerfilAuxiliar);
+                    var_frmRespuestasSolicitudes_Auxiliar.MdiParent = this;
 
-            //escondemos el submenu
-            hideSubMenu();
+                    //...add
+                    var_frmRespuestasSolicitudes_Auxiliar.StartPosition = FormStartPosition.Manual;
+                    var_frmRespuestasSolicitudes_Auxiliar.Left = 0;
+                    var_frmRespuestasSolicitudes_Auxiliar.Top = 0;
+                    //...
+
+
+                    var_frmRespuestasSolicitudes_Auxiliar.Show();
+                }
+                else
+                {
+                    //var_frmRespuestasSolicitudes_Auxiliar.limpiarComponentes();
+                    //var_frmRespuestasSolicitudes_Auxiliar.estadoComponentes(Estado.Inicial);
+                    var_frmRespuestasSolicitudes_Auxiliar.Visible = true;
+                }
+
+                //....
+                if (var_frmSolicitarHL_Auxiliar != null)
+                {
+                    var_frmSolicitarHL_Auxiliar.Visible = false;
+                    //todos los demas formularios
+
+                }
+
+                //hoy agregeishion
+
+                if (var_frmRegistrarInasis_Auxiliar != null)
+                {
+                    var_frmRegistrarInasis_Auxiliar.Visible = false;
+                    //todos los demas formularios
+
+                }
+
+                if (var_frmSolicitarCambioTurno_Auxiliar != null)
+                {
+                    var_frmSolicitarCambioTurno_Auxiliar.Visible = false;
+                    //todos los demas formularios
+
+                }
+
+                if (var_frmRegistrarHE_Auxiliar != null)
+                {
+                    var_frmRegistrarHE_Auxiliar.Visible = false;
+                    //todos los demas formularios
+
+                }
+
+                //hoy agregeishion
+
+                lblBienvenido.Visible = false;
+                panelAviso.Visible = false;
+
+                //escondemos el submenu
+                hideSubMenu();
+            }
+        }
+
+        private void picHome_Click(object sender, EventArgs e)
+        {
+            panelBIPO.Visible = true;
+        }
+
+        private void btnVisualizarHorarios_Click(object sender, EventArgs e)
+        {
+            panelBIPO.Visible = false;
+
+            if ((var_frmRegistrarInasis_Auxiliar != null &&
+                        var_frmRegistrarInasis_Auxiliar.Visible == true) ||
+                (var_frmSolicitarHL_Auxiliar != null &&
+                        var_frmSolicitarHL_Auxiliar.Visible == true) ||
+                (var_frmSolicitarCambioTurno_Auxiliar != null &&
+                        var_frmSolicitarCambioTurno_Auxiliar.Visible == true) ||
+                (var_frmRespuestasSolicitudes_Auxiliar != null &&
+                        var_frmRespuestasSolicitudes_Auxiliar.Visible == true) ||
+                (var_frmRegistrarHE_Auxiliar != null &&
+                        var_frmRegistrarHE_Auxiliar.Visible == true))
+            {
+
+                this.muestraMensajeCerraroGuardarCambios();
+
+            }
+            else
+            {
+
+                //seguimos con nuestra programacion
+                //aca llamamos al formulario de registrar Horas extras
+                if (var_frmVerHorarios_Auxiliar == null)
+                {
+                    var_frmVerHorarios_Auxiliar = new frmVisualizarHorarios(this, TipoPerfil.PerfilAuxiliar);
+                    var_frmVerHorarios_Auxiliar.MdiParent = this;
+
+                    //...add
+                    var_frmVerHorarios_Auxiliar.StartPosition = FormStartPosition.Manual;
+                    var_frmVerHorarios_Auxiliar.Left = 0;
+                    var_frmVerHorarios_Auxiliar.Top = 0;
+                    //...
+
+
+                    var_frmVerHorarios_Auxiliar.Show();
+                }
+                else
+                {
+                    //var_frmRespuestasSolicitudes_Auxiliar.limpiarComponentes();
+                    //var_frmRespuestasSolicitudes_Auxiliar.estadoComponentes(Estado.Inicial);
+                    var_frmVerHorarios_Auxiliar.Visible = true;
+                }
+
+                //....
+                if (var_frmSolicitarHL_Auxiliar != null)
+                {
+                    var_frmSolicitarHL_Auxiliar.Visible = false;
+                    //todos los demas formularios
+
+                }
+
+                //hoy agregeishion
+
+                if (var_frmRegistrarInasis_Auxiliar != null)
+                {
+                    var_frmRegistrarInasis_Auxiliar.Visible = false;
+                    //todos los demas formularios
+
+                }
+
+                if (var_frmSolicitarCambioTurno_Auxiliar != null)
+                {
+                    var_frmSolicitarCambioTurno_Auxiliar.Visible = false;
+                    //todos los demas formularios
+
+                }
+
+                if (var_frmRegistrarHE_Auxiliar != null)
+                {
+                    var_frmRegistrarHE_Auxiliar.Visible = false;
+                    //todos los demas formularios
+
+                }
+
+                //hoy agregeishion
+
+                lblBienvenido.Visible = false;
+                panelAviso.Visible = false;
+
+                //escondemos el submenu
+                hideSubMenu();
+            }
         }
     }
 }

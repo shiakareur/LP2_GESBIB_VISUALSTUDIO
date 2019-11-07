@@ -56,10 +56,9 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.Black;
-            this.label6.Location = new System.Drawing.Point(83, 58);
-            this.label6.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
+            this.label6.Location = new System.Drawing.Point(263, 165);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(385, 13);
+            this.label6.Size = new System.Drawing.Size(1043, 38);
             this.label6.TabIndex = 95;
             this.label6.Text = "______________________________________________________";
             // 
@@ -68,9 +67,10 @@
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.Black;
-            this.label9.Location = new System.Drawing.Point(93, 29);
+            this.label9.Location = new System.Drawing.Point(295, 83);
+            this.label9.Margin = new System.Windows.Forms.Padding(10, 0, 10, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(262, 33);
+            this.label9.Size = new System.Drawing.Size(773, 98);
             this.label9.TabIndex = 94;
             this.label9.Text = "Visualizar Horarios\r\n";
             this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -78,10 +78,10 @@
             // dtpHorarios
             // 
             this.dtpHorarios.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtpHorarios.Location = new System.Drawing.Point(197, 232);
-            this.dtpHorarios.Margin = new System.Windows.Forms.Padding(2);
+            this.dtpHorarios.Location = new System.Drawing.Point(624, 660);
+            this.dtpHorarios.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.dtpHorarios.Name = "dtpHorarios";
-            this.dtpHorarios.Size = new System.Drawing.Size(289, 23);
+            this.dtpHorarios.Size = new System.Drawing.Size(907, 53);
             this.dtpHorarios.TabIndex = 123;
             // 
             // lblFecha
@@ -89,9 +89,10 @@
             this.lblFecha.AutoSize = true;
             this.lblFecha.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblFecha.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(37)))), ((int)(((byte)(42)))));
-            this.lblFecha.Location = new System.Drawing.Point(98, 229);
+            this.lblFecha.Location = new System.Drawing.Point(310, 652);
+            this.lblFecha.Margin = new System.Windows.Forms.Padding(10, 0, 10, 0);
             this.lblFecha.Name = "lblFecha";
-            this.lblFecha.Size = new System.Drawing.Size(84, 26);
+            this.lblFecha.Size = new System.Drawing.Size(248, 74);
             this.lblFecha.TabIndex = 113;
             this.lblFecha.Text = "Fecha: ";
             this.lblFecha.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -99,12 +100,12 @@
             // txtNombre
             // 
             this.txtNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.txtNombre.Location = new System.Drawing.Point(197, 119);
-            this.txtNombre.Margin = new System.Windows.Forms.Padding(2);
+            this.txtNombre.Location = new System.Drawing.Point(624, 339);
+            this.txtNombre.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(107, 26);
+            this.txtNombre.Size = new System.Drawing.Size(330, 62);
             this.txtNombre.TabIndex = 125;
-            this.txtNombre.Tag = "";
+            this.txtNombre.Tag = "opcional";
             // 
             // lblNombre
             // 
@@ -112,10 +113,10 @@
             this.lblNombre.BackColor = System.Drawing.Color.Transparent;
             this.lblNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNombre.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(37)))), ((int)(((byte)(42)))));
-            this.lblNombre.Location = new System.Drawing.Point(98, 119);
-            this.lblNombre.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblNombre.Location = new System.Drawing.Point(310, 339);
+            this.lblNombre.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.lblNombre.Name = "lblNombre";
-            this.lblNombre.Size = new System.Drawing.Size(87, 26);
+            this.lblNombre.Size = new System.Drawing.Size(255, 74);
             this.lblNombre.TabIndex = 124;
             this.lblNombre.Text = "Código:";
             // 
@@ -129,11 +130,10 @@
             this.PuntoAtencion,
             this.HoraInicio,
             this.HoraFin});
-            this.dataGridView1.Location = new System.Drawing.Point(86, 272);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(1);
+            this.dataGridView1.Location = new System.Drawing.Point(272, 774);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowTemplate.Height = 46;
-            this.dataGridView1.Size = new System.Drawing.Size(756, 302);
+            this.dataGridView1.Size = new System.Drawing.Size(2394, 860);
             this.dataGridView1.TabIndex = 127;
             // 
             // Nombre
@@ -172,28 +172,30 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(37)))), ((int)(((byte)(42)))));
-            this.label1.Location = new System.Drawing.Point(98, 159);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Location = new System.Drawing.Point(310, 453);
+            this.label1.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(196, 26);
+            this.label1.Size = new System.Drawing.Size(575, 74);
             this.label1.TabIndex = 129;
             this.label1.Text = "Nombre Completo:";
             // 
             // textBox1
             // 
             this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.textBox1.Location = new System.Drawing.Point(294, 159);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox1.Location = new System.Drawing.Point(931, 453);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(533, 26);
+            this.textBox1.Size = new System.Drawing.Size(1679, 62);
             this.textBox1.TabIndex = 130;
             this.textBox1.Tag = "";
             // 
             // groupBox1
             // 
-            this.groupBox1.Location = new System.Drawing.Point(86, 96);
+            this.groupBox1.Location = new System.Drawing.Point(272, 273);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(10, 9, 10, 9);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(756, 107);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(10, 9, 10, 9);
+            this.groupBox1.Size = new System.Drawing.Size(2394, 305);
             this.groupBox1.TabIndex = 131;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Datos del personal";
@@ -205,10 +207,10 @@
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
             this.button1.Image = global::TA_GesBib_Cliente.Properties.Resources.icono_buscar;
-            this.button1.Location = new System.Drawing.Point(320, 114);
-            this.button1.Margin = new System.Windows.Forms.Padding(2);
+            this.button1.Location = new System.Drawing.Point(1013, 324);
+            this.button1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(35, 34);
+            this.button1.Size = new System.Drawing.Size(111, 97);
             this.button1.TabIndex = 128;
             this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button1.UseVisualStyleBackColor = false;
@@ -221,10 +223,10 @@
             this.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.btnBuscar.Image = global::TA_GesBib_Cliente.Properties.Resources.icono_buscar;
-            this.btnBuscar.Location = new System.Drawing.Point(630, 215);
-            this.btnBuscar.Margin = new System.Windows.Forms.Padding(2);
+            this.btnBuscar.Location = new System.Drawing.Point(1995, 612);
+            this.btnBuscar.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(212, 40);
+            this.btnBuscar.Size = new System.Drawing.Size(671, 114);
             this.btnBuscar.TabIndex = 126;
             this.btnBuscar.Text = "BUSCAR HORARIO";
             this.btnBuscar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -236,10 +238,10 @@
             this.btnCerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCerrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.btnCerrar.Image = global::TA_GesBib_Cliente.Properties.Resources.icono_regresar;
-            this.btnCerrar.Location = new System.Drawing.Point(31, 29);
-            this.btnCerrar.Margin = new System.Windows.Forms.Padding(2);
+            this.btnCerrar.Location = new System.Drawing.Point(98, 83);
+            this.btnCerrar.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.btnCerrar.Name = "btnCerrar";
-            this.btnCerrar.Size = new System.Drawing.Size(47, 33);
+            this.btnCerrar.Size = new System.Drawing.Size(149, 94);
             this.btnCerrar.TabIndex = 122;
             this.btnCerrar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnCerrar.UseVisualStyleBackColor = false;
@@ -247,10 +249,10 @@
             // 
             // frmVisualizarHorarios
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(19F, 37F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(242)))), ((int)(((byte)(241)))));
-            this.ClientSize = new System.Drawing.Size(927, 637);
+            this.ClientSize = new System.Drawing.Size(2936, 1813);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button1);
@@ -266,6 +268,7 @@
             this.Controls.Add(this.groupBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(10, 9, 10, 9);
             this.Name = "frmVisualizarHorarios";
             this.Text = "frmVisualizarHorarios_Bibliotecario";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
