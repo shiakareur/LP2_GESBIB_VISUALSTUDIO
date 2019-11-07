@@ -291,24 +291,6 @@
     <None Include="Connected Services\ServicioJava\TA_GesBib_Cliente.ServicioJava.actualizarCapacitacionResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Connected Services\ServicioJava\TA_GesBib_Cliente.ServicioJava.actualizarDiaCapacitacionResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\ServicioJava\TA_GesBib_Cliente.ServicioJava.actualizarGestorResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\ServicioJava\TA_GesBib_Cliente.ServicioJava.actualizarHoraExtraResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\ServicioJava\TA_GesBib_Cliente.ServicioJava.actualizarInasistenciaResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\ServicioJava\TA_GesBib_Cliente.ServicioJava.actualizarPuntoAtencionResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\ServicioJava\TA_GesBib_Cliente.ServicioJava.asignarPerfilResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
     <None Include="Connected Services\ServicioJava\TA_GesBib_Cliente.ServicioJava.biblioteca.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
@@ -322,9 +304,6 @@
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\ServicioJava\TA_GesBib_Cliente.ServicioJava.gestor.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\ServicioJava\TA_GesBib_Cliente.ServicioJava.hallarTipoUsuarioResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\ServicioJava\TA_GesBib_Cliente.ServicioJava.helloResponse.datasource">

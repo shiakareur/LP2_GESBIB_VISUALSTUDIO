@@ -12,11 +12,13 @@ namespace TA_GesBib_Cliente
 {
     public partial class frmAdministrarBibliotecas : Form
     {
-        //Estado estadoForm;
-
-        //ServicioJava.ServicioClient servGesBib = new ServicioJava.ServicioClient();
-
-        //private frmPerfilAdministrador var_formPerfilAdmin;
+        //para estados
+        Estado estadoObjBiblioteca;
+        //Servicio
+        ServicioJava.ServicioClient servGesBib = new ServicioJava.ServicioClient();
+        //Gestor
+        ServicioJava.gestor gestor = new ServicioJava.gestor();
+        private frmPerfilAdministrador var_formPerfilAdmin;
         public frmAdministrarBibliotecas()
         {
             InitializeComponent();
@@ -209,6 +211,16 @@ namespace TA_GesBib_Cliente
         private void btnCerrar_Click_1(object sender, EventArgs e)
         {
             this.Dispose();
+        }
+
+        private void btnCerrar_Click_2(object sender, EventArgs e)
+        {
+            this.Dispose();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

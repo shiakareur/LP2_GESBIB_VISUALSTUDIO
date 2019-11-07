@@ -48,6 +48,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
             this.btnCerrar = new System.Windows.Forms.Button();
             this.gbDatosGenerales.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -60,9 +62,9 @@
             this.gbDatosGenerales.Controls.Add(this.txtNombre);
             this.gbDatosGenerales.Controls.Add(this.lblNombre);
             this.gbDatosGenerales.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.gbDatosGenerales.Location = new System.Drawing.Point(146, 52);
+            this.gbDatosGenerales.Location = new System.Drawing.Point(136, 138);
             this.gbDatosGenerales.Name = "gbDatosGenerales";
-            this.gbDatosGenerales.Size = new System.Drawing.Size(648, 72);
+            this.gbDatosGenerales.Size = new System.Drawing.Size(666, 72);
             this.gbDatosGenerales.TabIndex = 4;
             this.gbDatosGenerales.TabStop = false;
             this.gbDatosGenerales.Text = "Datos de la Biblioteca";
@@ -72,7 +74,7 @@
             this.txtNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.txtNombre.Location = new System.Drawing.Point(129, 33);
             this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(499, 30);
+            this.txtNombre.Size = new System.Drawing.Size(499, 26);
             this.txtNombre.TabIndex = 18;
             // 
             // lblNombre
@@ -83,7 +85,7 @@
             this.lblNombre.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(37)))), ((int)(((byte)(42)))));
             this.lblNombre.Location = new System.Drawing.Point(9, 33);
             this.lblNombre.Name = "lblNombre";
-            this.lblNombre.Size = new System.Drawing.Size(114, 29);
+            this.lblNombre.Size = new System.Drawing.Size(91, 24);
             this.lblNombre.TabIndex = 17;
             this.lblNombre.Text = "Nombre:";
             // 
@@ -95,7 +97,7 @@
             this.lblGestorAsig.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(37)))), ((int)(((byte)(42)))));
             this.lblGestorAsig.Location = new System.Drawing.Point(9, 69);
             this.lblGestorAsig.Name = "lblGestorAsig";
-            this.lblGestorAsig.Size = new System.Drawing.Size(114, 29);
+            this.lblGestorAsig.Size = new System.Drawing.Size(91, 24);
             this.lblGestorAsig.TabIndex = 19;
             this.lblGestorAsig.Text = "Nombre:";
             // 
@@ -129,9 +131,9 @@
             this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.btnCancelar.Image = global::TA_GesBib_Cliente.Properties.Resources.icons8_cancelar_2_30;
-            this.btnCancelar.Location = new System.Drawing.Point(661, 6);
+            this.btnCancelar.Location = new System.Drawing.Point(659, 83);
             this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(133, 40);
+            this.btnCancelar.Size = new System.Drawing.Size(143, 40);
             this.btnCancelar.TabIndex = 44;
             this.btnCancelar.Text = "CANCELAR";
             this.btnCancelar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -145,7 +147,7 @@
             this.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.btnBuscar.Image = global::TA_GesBib_Cliente.Properties.Resources.icono_buscar;
-            this.btnBuscar.Location = new System.Drawing.Point(531, 6);
+            this.btnBuscar.Location = new System.Drawing.Point(529, 83);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(133, 40);
             this.btnBuscar.TabIndex = 43;
@@ -161,9 +163,9 @@
             this.btnModificar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnModificar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.btnModificar.Image = global::TA_GesBib_Cliente.Properties.Resources.icono_modificar;
-            this.btnModificar.Location = new System.Drawing.Point(402, 6);
+            this.btnModificar.Location = new System.Drawing.Point(390, 83);
             this.btnModificar.Name = "btnModificar";
-            this.btnModificar.Size = new System.Drawing.Size(133, 40);
+            this.btnModificar.Size = new System.Drawing.Size(149, 40);
             this.btnModificar.TabIndex = 42;
             this.btnModificar.Text = "MODIFICAR";
             this.btnModificar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -177,9 +179,9 @@
             this.btnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGuardar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.btnGuardar.Image = global::TA_GesBib_Cliente.Properties.Resources.icono_guardar;
-            this.btnGuardar.Location = new System.Drawing.Point(275, 6);
+            this.btnGuardar.Location = new System.Drawing.Point(252, 83);
             this.btnGuardar.Name = "btnGuardar";
-            this.btnGuardar.Size = new System.Drawing.Size(133, 40);
+            this.btnGuardar.Size = new System.Drawing.Size(142, 40);
             this.btnGuardar.TabIndex = 41;
             this.btnGuardar.Text = "GUARDAR";
             this.btnGuardar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -193,9 +195,9 @@
             this.btnNuevo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnNuevo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.btnNuevo.Image = global::TA_GesBib_Cliente.Properties.Resources.icono_crear_nuevo;
-            this.btnNuevo.Location = new System.Drawing.Point(146, 6);
+            this.btnNuevo.Location = new System.Drawing.Point(136, 83);
             this.btnNuevo.Name = "btnNuevo";
-            this.btnNuevo.Size = new System.Drawing.Size(133, 40);
+            this.btnNuevo.Size = new System.Drawing.Size(120, 40);
             this.btnNuevo.TabIndex = 40;
             this.btnNuevo.Text = "NUEVO";
             this.btnNuevo.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -209,9 +211,9 @@
             this.gbPuntosAtencion.Controls.Add(this.btnModificarPuntoAtencion);
             this.gbPuntosAtencion.Controls.Add(this.dataGridView1);
             this.gbPuntosAtencion.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.gbPuntosAtencion.Location = new System.Drawing.Point(146, 270);
+            this.gbPuntosAtencion.Location = new System.Drawing.Point(136, 347);
             this.gbPuntosAtencion.Name = "gbPuntosAtencion";
-            this.gbPuntosAtencion.Size = new System.Drawing.Size(648, 298);
+            this.gbPuntosAtencion.Size = new System.Drawing.Size(666, 298);
             this.gbPuntosAtencion.TabIndex = 21;
             this.gbPuntosAtencion.TabStop = false;
             this.gbPuntosAtencion.Text = "Puntos de Atención asignados";
@@ -236,7 +238,7 @@
             this.btnCrearPuntoAtencion.FlatAppearance.BorderSize = 0;
             this.btnCrearPuntoAtencion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCrearPuntoAtencion.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.btnCrearPuntoAtencion.Location = new System.Drawing.Point(319, 248);
+            this.btnCrearPuntoAtencion.Location = new System.Drawing.Point(303, 248);
             this.btnCrearPuntoAtencion.Name = "btnCrearPuntoAtencion";
             this.btnCrearPuntoAtencion.Size = new System.Drawing.Size(89, 33);
             this.btnCrearPuntoAtencion.TabIndex = 47;
@@ -251,9 +253,9 @@
             this.btnModificarPuntoAtencion.FlatAppearance.BorderSize = 0;
             this.btnModificarPuntoAtencion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnModificarPuntoAtencion.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.btnModificarPuntoAtencion.Location = new System.Drawing.Point(414, 248);
+            this.btnModificarPuntoAtencion.Location = new System.Drawing.Point(398, 248);
             this.btnModificarPuntoAtencion.Name = "btnModificarPuntoAtencion";
-            this.btnModificarPuntoAtencion.Size = new System.Drawing.Size(104, 33);
+            this.btnModificarPuntoAtencion.Size = new System.Drawing.Size(120, 33);
             this.btnModificarPuntoAtencion.TabIndex = 48;
             this.btnModificarPuntoAtencion.Text = "MODIFICAR";
             this.btnModificarPuntoAtencion.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -265,7 +267,7 @@
             this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.textBox1.Location = new System.Drawing.Point(129, 32);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(97, 30);
+            this.textBox1.Size = new System.Drawing.Size(97, 26);
             this.textBox1.TabIndex = 20;
             // 
             // button1
@@ -282,6 +284,7 @@
             this.button1.TabIndex = 129;
             this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // label1
             // 
@@ -291,7 +294,7 @@
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(37)))), ((int)(((byte)(42)))));
             this.label1.Location = new System.Drawing.Point(9, 32);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(105, 29);
+            this.label1.Size = new System.Drawing.Size(83, 24);
             this.label1.TabIndex = 130;
             this.label1.Text = "Código:";
             // 
@@ -303,9 +306,9 @@
             this.groupBox1.Controls.Add(this.textBox1);
             this.groupBox1.Controls.Add(this.lblGestorAsig);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.groupBox1.Location = new System.Drawing.Point(146, 139);
+            this.groupBox1.Location = new System.Drawing.Point(136, 216);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(648, 115);
+            this.groupBox1.Size = new System.Drawing.Size(666, 115);
             this.groupBox1.TabIndex = 19;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Datos del Gestor";
@@ -315,8 +318,33 @@
             this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.textBox2.Location = new System.Drawing.Point(129, 69);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(499, 30);
+            this.textBox2.Size = new System.Drawing.Size(499, 26);
             this.textBox2.TabIndex = 131;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.BackColor = System.Drawing.Color.Transparent;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(37)))), ((int)(((byte)(42)))));
+            this.label9.Location = new System.Drawing.Point(130, 19);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(314, 33);
+            this.label9.TabIndex = 136;
+            this.label9.Text = "Administrar Bibliotecas";
+            this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.Color.Transparent;
+            this.label6.Font = new System.Drawing.Font("Arial Unicode MS", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(37)))), ((int)(((byte)(42)))));
+            this.label6.Location = new System.Drawing.Point(130, 45);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(308, 15);
+            this.label6.TabIndex = 137;
+            this.label6.Text = "___________________________________________";
             // 
             // btnCerrar
             // 
@@ -325,23 +353,25 @@
             this.btnCerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCerrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.btnCerrar.Image = global::TA_GesBib_Cliente.Properties.Resources.icono_regresar;
-            this.btnCerrar.Location = new System.Drawing.Point(36, 12);
+            this.btnCerrar.Location = new System.Drawing.Point(59, 20);
             this.btnCerrar.Name = "btnCerrar";
             this.btnCerrar.Size = new System.Drawing.Size(65, 40);
-            this.btnCerrar.TabIndex = 46;
+            this.btnCerrar.TabIndex = 135;
             this.btnCerrar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnCerrar.UseVisualStyleBackColor = false;
-            this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click_1);
+            this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click_2);
             // 
             // frmAdministrarBibliotecas
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 17F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(242)))), ((int)(((byte)(241)))));
             this.ClientSize = new System.Drawing.Size(930, 657);
-            this.Controls.Add(this.btnCerrar);
+            this.Controls.Add(this.label9);
             this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.label6);
             this.Controls.Add(this.gbPuntosAtencion);
+            this.Controls.Add(this.btnCerrar);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnBuscar);
             this.Controls.Add(this.btnModificar);
@@ -360,6 +390,7 @@
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -385,6 +416,8 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button btnCerrar;
     }
 }

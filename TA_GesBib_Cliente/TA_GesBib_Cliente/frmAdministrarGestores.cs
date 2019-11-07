@@ -12,6 +12,8 @@ namespace TA_GesBib_Cliente
 {
     public partial class frmAdministrarGestores : Form
     {
+        //para estados
+        Estado estadoObjGestor;
         //Servicio
         ServicioJava.ServicioClient servGesBib = new ServicioJava.ServicioClient();
         //Gestor
@@ -165,81 +167,81 @@ namespace TA_GesBib_Cliente
 
             ges.biblioteca = (ServicioJava.biblioteca)cmbBibAisg.SelectedItem;
 
+            //try
+            //{
+            //    servGesBib.insertarGestor(ges);
+            //    //mensajito
+            //    this.muestraMensajeExitoso();
+            //}
+            //catch (Exception ex)
+            //{
 
-            //llamamos al servicio
-            try
+            //}
+
+            ////Volver al estado inicial
+            //estadoComponentes(Estado.Inicial);
+
+            if (estadoObjGestor == Estado.Nuevo)
             {
                 servGesBib.insertarGestor(ges);
-                //mensajito
-                this.muestraMensajeExitoso();
+                //Mostramos un mensaje de exito
+                MessageBox.Show("Gestor Registrado exitosamente", "Mensaje Confirmacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
-            catch (Exception ex)
+            else if (estadoObjGestor == Estado.Modificar)
             {
-
+                //servGesBib.actualizarGestor(ges);
+                MessageBox.Show("Se han actualizado los datos", "Mensaje Confirmacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
-
-
-
-
-
-            //Volver al estado inicial
             estadoComponentes(Estado.Inicial);
-        }
-
-        private void btnCancelar_Click(object sender, EventArgs e)
-        {
-            //Volver al estado inicial
-            limpiarComponentes();
-            estadoComponentes(Estado.Inicial);
-        }
-
-        private void btnNuevo_Click(object sender, EventArgs e)
-        {
-            //Volver al estado inicial
-            limpiarComponentes();
-            estadoComponentes(Estado.Nuevo);
-        }
-
-        private void btnBuscar_Click(object sender, EventArgs e)
-        {
-            frmBuscarGestores frmBuscarGestor = new frmBuscarGestores();
-            if (frmBuscarGestor.ShowDialog() == DialogResult.OK)
-            {
-                gestor = frmBuscarGestor.GestorSeleccionado;
-                txtCodigo.Text = gestor.codigo;
-                txtNombres.Text = gestor.nombre;
-                txtApellidos.Text = gestor.apellido;
-                txtCorreo.Text = gestor.email;
-                txtClave.Text = gestor.contrasenia;
-                dtpFechaIng.Value = gestor.fecha_ingreso;
-                cmbBibAisg.SelectedValue = gestor.biblioteca.id;
-                //System.Console.WriteLine(gestor.biblioteca.id);
-                estadoComponentes(Estado.Buscar);
-            }
-        }
-
-        private void btnCerrar_Click(object sender, EventArgs e)
-        {
-            this.Dispose();
-        }
-
-        private void muestraMensajeExitoso()
-        {
-            //mostramos mensaje de error
-            MessageBox.Show("Se guardaron los cambios exitosamente !",
-                "Mensajillo");
-        }
-
-        private void muestraMensajeCerraroGuardarCambios()
-        {
-            //mostramos mensaje de error
-            MessageBox.Show("Cierre o guarde los cambios !",
-                "Advertencia",
-                MessageBoxButtons.OK,
-                MessageBoxIcon.Exclamation,
-                MessageBoxDefaultButton.Button1);
-        }
+        
 
     }
 
+    private void btnCancelar_Click(object sender, EventArgs e)
+    {
+        //Volver al estado inicial
+        limpiarComponentes();
+        estadoComponentes(Estado.Inicial);
+    }
+
+    private void btnNuevo_Click(object sender, EventArgs e)
+    {
+        limpiarComponentes();
+
+        //Instanciamos uno nuevo
+        gestor = new ServicioJava.gestor();
+
+        estadoObjGestor = Estado.Nuevo;
+        estadoComponentes(Estado.Nuevo);
+    }
+
+    private void btnBuscar_Click(object sender, EventArgs e)
+    {
+        frmBuscarGestores frmBuscarGestor = new frmBuscarGestores();
+        if (frmBuscarGestor.ShowDialog() == DialogResult.OK)
+        {
+            gestor = frmBuscarGestor.GestorSeleccionado;
+            txtCodigo.Text = gestor.codigo;
+            txtNombres.Text = gestor.nombre;
+            txtApellidos.Text = gestor.apellido;
+            txtCorreo.Text = gestor.email;
+            txtClave.Text = gestor.contrasenia;
+            dtpFechaIng.Value = gestor.fecha_ingreso;
+            cmbBibAisg.SelectedValue = gestor.biblioteca.id;
+            estadoComponentes(Estado.Buscar);
+        }
+    }
+
+    private void btnCerrar_Click(object sender, EventArgs e)
+    {
+        this.Dispose();
+    }
+
+    private void btnModificar_Click(object sender, EventArgs e)
+    {
+        estadoObjGestor = Estado.Modificar;
+        estadoComponentes(Estado.Modificar);
+    }
+
+    }
 }

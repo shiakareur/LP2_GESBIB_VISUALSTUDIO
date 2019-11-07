@@ -89,6 +89,7 @@ namespace TA_GesBib_Cliente
             formAdminPersonal.MdiParent = this;
             formAdminPersonal.Show();
             formAdminPersonal.Location = new Point(0, 0);
+            formAdminPersonal.Size = new Size(934, 675);
         }
 
         private void pictureBox4_Click(object sender, EventArgs e)
@@ -112,6 +113,7 @@ namespace TA_GesBib_Cliente
             frmAdmGestores.MdiParent = this;
             frmAdmGestores.Show();
             frmAdmGestores.Location = new Point(0, 0);
+            frmAdmGestores.Size=new Size(934,675);
         }
 
         private void btnAdmBibliotecas_Click(object sender, EventArgs e)
@@ -125,6 +127,7 @@ namespace TA_GesBib_Cliente
             frmAdmBibliotecas.MdiParent = this;
             frmAdmBibliotecas.Show();
             frmAdmBibliotecas.Location = new Point(0, 0);
+            frmAdmBibliotecas.Size = new Size(934, 675);
         }
 
         private void label1_Click(object sender, EventArgs e)
