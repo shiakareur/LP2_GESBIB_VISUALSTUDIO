@@ -46,11 +46,13 @@ namespace TA_GesBib_Cliente
         }
 
 
-        public frmPerfilAuxiliar(frmLogin formLogin) //con paramtero this 
+        public frmPerfilAuxiliar(frmLogin formLogin, ServicioJava.usuario _usuario) //con paramtero this 
         {
+            var_usuario = _usuario;
             var_formLogin = formLogin;
             InitializeComponent();
             customizeDesign();
+            lblNombreUsuario.Text = _usuario.nombre;
         }
 
         //...................PANELES v2 ................................
@@ -222,7 +224,7 @@ namespace TA_GesBib_Cliente
                 //aca llamamos al formulario de registrar Horas extras
                 if (var_frmRegistrarInasis_Auxiliar == null)
                 {
-                    var_frmRegistrarInasis_Auxiliar = new frmRegInasistencias(this, TipoPerfil.PerfilAuxiliar);
+                    var_frmRegistrarInasis_Auxiliar = new frmRegInasistencias(this, TipoPerfil.PerfilAuxiliar, var_usuario);
                     var_frmRegistrarInasis_Auxiliar.MdiParent = this;
 
                     //...add

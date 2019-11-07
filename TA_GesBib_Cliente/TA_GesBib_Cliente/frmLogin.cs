@@ -36,8 +36,16 @@ namespace TA_GesBib_Cliente
             else if (userV.nombreTipo == "PERSONAL")
             {
                 string tipoP = servTA.hallarTipoUsuario(userV.user.id);
-                if (tipoP == "PRACTICANTE") { }
-                else if (tipoP == "AUXILIAR") { }
+                if (tipoP == "PRACTICANTE") {
+                    frmPerfilPracticante frmPerfilPracticante = new frmPerfilPracticante(this, userV.user);
+                    frmPerfilPracticante.Visible = true;
+                    this.Visible = false;
+                }
+                else if (tipoP == "AUXILIAR") {
+                    frmPerfilAuxiliar frmPerfilAuxiliar = new frmPerfilAuxiliar(this, userV.user);
+                    frmPerfilAuxiliar.Visible = true;
+                    this.Visible = false;
+                }
                 else if (tipoP == "BIBLIOTECARIO")
                 {
                     frmPerfilBibliotecario formBibliotecario = new frmPerfilBibliotecario(this, userV.user);

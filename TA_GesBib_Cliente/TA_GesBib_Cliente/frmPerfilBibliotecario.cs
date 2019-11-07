@@ -229,7 +229,7 @@ namespace TA_GesBib_Cliente
                 //aca llamamos al formulario de registrar Horas extras
                 if (var_frmRegistrarInasis_Bibliotecario == null)
                 {
-                    var_frmRegistrarInasis_Bibliotecario = new frmRegInasistencias(this,TipoPerfil.PerfilBibliotecario);
+                    var_frmRegistrarInasis_Bibliotecario = new frmRegInasistencias(this,TipoPerfil.PerfilBibliotecario,var_usuario);
                     var_frmRegistrarInasis_Bibliotecario.MdiParent = this;
 
                     //...add

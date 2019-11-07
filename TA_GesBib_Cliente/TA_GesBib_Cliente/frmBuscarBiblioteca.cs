@@ -21,15 +21,21 @@ namespace TA_GesBib_Cliente
         {
             InitializeComponent();
             dgvBibliotecas.AutoGenerateColumns = false;
-            dgvBibliotecas.DataSource = DBController.listarBibliotecas();
+            dgvBibliotecas.DataSource = DBController.listarBibliotecasPorNombre("");
         }
 
         public ServicioJava.biblioteca BibliotecaSeleccionada { get => bibliotecaSeleccionada; set => bibliotecaSeleccionada = value; }
 
         private void dgvGestores_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
         {
-            ServicioJava.biblioteca bibliotecaFila = (ServicioJava.biblioteca)dgvBibliotecas.Rows[e.RowIndex].DataBoundItem;
-            dgvBibliotecas.Rows[e.RowIndex].Cells["Gestor"].Value = bibliotecaFila.gestor.nombre+" "+ bibliotecaFila.gestor.apellido;
+            ServicioJava.biblioteca bibliotecaFila = dgvBibliotecas.Rows[e.RowIndex].DataBoundItem as ServicioJava.biblioteca;
+            try
+            {
+                dgvBibliotecas.Rows[e.RowIndex].Cells[1].Value = bibliotecaFila.gestor.nombre + " " + bibliotecaFila.gestor.apellido;
+            }
+            catch (Exception ex) {
+                System.Console.WriteLine("Error");
+            }
         }
 
         private void btnSeleccionarBib_Click(object sender, EventArgs e)
@@ -40,7 +46,12 @@ namespace TA_GesBib_Cliente
 
         private void btnBuscarBib_Click(object sender, EventArgs e)
         {
-            dgvBibliotecas.DataSource = DBController.listarBibliotecasPorNombre(bibliotecaSeleccionada.nombre);
+            dgvBibliotecas.DataSource = DBController.listarBibliotecasPorNombre(txtNombre.Text);
+        }
+
+        private void frmBuscarBiblioteca_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

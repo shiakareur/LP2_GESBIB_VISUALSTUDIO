@@ -281,8 +281,8 @@
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <None Include="Connected Services\ServicioJava\Servicio1.wsdl" />
-    <None Include="Connected Services\ServicioJava\Servicio1.xsd">
+    <None Include="Connected Services\ServicioJava\Servicio.wsdl" />
+    <None Include="Connected Services\ServicioJava\Servicio.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="Connected Services\ServicioJava\TA_GesBib_Cliente.ServicioJava.actualizarAuxiliarBibliotecaResponse.datasource">

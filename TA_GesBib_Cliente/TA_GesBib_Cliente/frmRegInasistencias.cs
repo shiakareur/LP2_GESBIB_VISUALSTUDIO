@@ -16,6 +16,9 @@ namespace TA_GesBib_Cliente
 
         ServicioJava.ServicioClient servTA = new ServicioJava.ServicioClient();
 
+        private ServicioJava.usuario var_usuario;
+
+
         private Form var_perfilPersonal;
         private TipoPerfil var_tipoPerfil = TipoPerfil.PerfilBibliotecario;
 
@@ -37,8 +40,10 @@ namespace TA_GesBib_Cliente
 
         }*/
 
-        public frmRegInasistencias(Form formPerfilPersonal, TipoPerfil tipoPerfil)
+        public frmRegInasistencias(Form formPerfilPersonal, TipoPerfil tipoPerfil, ServicioJava.usuario _USER)
         {
+
+            var_usuario = _USER;
             var_perfilPersonal = formPerfilPersonal;
             var_tipoPerfil = tipoPerfil;
             InitializeComponent();
@@ -81,13 +86,25 @@ namespace TA_GesBib_Cliente
             {
                 System.Console.Write("ASD");
             }
+            inasis.personal = new ServicioJava.personal();
+            inasis.personal.id = var_usuario.id;
+            inasis.tipoInasistencia = new ServicioJava.tipoInasistencia();
+            inasis.tipoInasistencia = (ServicioJava.tipoInasistencia)cmbTipo_Inasistencia.SelectedItem;
             inasis.fecha = dtpRegInasis.Value;
             inasis.horaInicio = txtHIni_Inasis.Text;
             inasis.horaFin = txtHFin_Inasis.Text;
+            inasis.motivo = txtDescripcion_HE.Text;
 
             //llamamos al SERVICIO RESPECTIVO
-
-            //servTA.insertarInasistencia(inasis);
+            try
+            {
+                servTA.insertarInasistencia(inasis);
+            }
+            catch (Exception ex)
+            {
+                System.Console.Write("ASD");
+            }
+            
 
             //mostramos mensaje de registro exitoso           
             estadoComponentes(Estado.Inicial);

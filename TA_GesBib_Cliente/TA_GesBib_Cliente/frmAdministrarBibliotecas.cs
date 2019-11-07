@@ -189,13 +189,13 @@ namespace TA_GesBib_Cliente
             frmBuscarBiblioteca frmBuscarBib = new frmBuscarBiblioteca();
             if (frmBuscarBib.ShowDialog() == DialogResult.OK)
             {
-                biblioteca = frmBuscarBib.BibliotecaSeleccionada;
-                txtNombreBib.Text = biblioteca.nombre;
-                //txtNombreGestor.Text = biblioteca.gestor.nombre + " " + biblioteca.gestor.apellido;
                 try
                 {
-                    txtNombreGestor.Text = biblioteca.gestor.id.ToString();
-                    txtCodigo.Text = biblioteca.gestor.codigo;
+                    biblioteca = frmBuscarBib.BibliotecaSeleccionada;
+                    txtNombreBib.Text = biblioteca.nombre;
+                    txtNombreGestor.Text = biblioteca.gestor.nombre + " " + biblioteca.gestor.apellido;
+
+                    txtCodigo.Text = biblioteca.gestor.id.ToString();
 
                     dgvPuntosAtencion.DataSource = servGesBib.listarPuntosAtencion(biblioteca.id);
 

@@ -30,6 +30,8 @@ namespace TA_GesBib_Cliente
             var_usuario = _usuario;
             var_formLogin = formLogin;
             InitializeComponent();
+            lblNombreUsuario.Text = _usuario.nombre;
+
            
         }
 

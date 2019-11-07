@@ -162,6 +162,7 @@
             this.Controls.Add(this.btnSeleccionar);
             this.Controls.Add(this.dgvBibliotecas);
             this.Name = "frmBuscarBiblioteca";
+            this.Load += new System.EventHandler(this.frmBuscarBiblioteca_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvBibliotecas)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
