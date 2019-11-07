@@ -579,5 +579,54 @@ namespace TA_GesBib_Cliente
                 hideSubMenu();
             }
         }
+
+        private void btnConfiguracion_Click(object sender, EventArgs e)
+        {
+            panelBIPO.Visible = false;
+
+            if ((var_frmRegistrarInasis_Bibliotecario != null &&
+                        var_frmRegistrarInasis_Bibliotecario.Visible == true) ||
+                (var_frmSolicitarHL_Bibliotecario != null &&
+                        var_frmSolicitarHL_Bibliotecario.Visible == true) ||
+                (var_frmSolicitarCambioTurno_Bibliotecario != null &&
+                        var_frmSolicitarCambioTurno_Bibliotecario.Visible == true) ||
+                (var_frmRespuestasSolicitudes_Bibliotecario != null &&
+                        var_frmRespuestasSolicitudes_Bibliotecario.Visible == true) ||
+                (var_frmRegistrarHE_Bibliotecario != null &&
+                        var_frmRegistrarHE_Bibliotecario.Visible == true))
+            {
+
+                this.muestraMensajeCerraroGuardarCambios();
+
+            }
+            else
+            {
+                frmConfigurar config = new frmConfigurar(this, TipoPerfil.PerfilBibliotecario);
+                config.MdiParent = this;
+
+                //...add
+                config.StartPosition = FormStartPosition.Manual;
+                config.Left = 0;
+                config.Top = 0;
+                //...
+
+
+                config.Show();
+
+
+
+
+
+
+
+                //hoy agregeishion
+
+                lblBienvenido.Visible = false;
+                panelAviso.Visible = false;
+
+                //escondemos el submenu
+                hideSubMenu();
+            }
+        }
     }
 }
