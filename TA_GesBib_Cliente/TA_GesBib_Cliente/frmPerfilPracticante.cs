@@ -23,6 +23,9 @@ namespace TA_GesBib_Cliente
     public partial class frmPerfilPracticante : Form
     {
         //se agrego
+
+        private ServicioJava.usuario var_usuario;
+
         private frmLogin var_formLogin;
 
         private frmRegHE var_frmRegistrarHE_Practicante;
@@ -133,7 +136,8 @@ namespace TA_GesBib_Cliente
                 //aca llamamos al formulario de registrar Horas extras
                 if (var_frmRegistrarHE_Practicante == null)
                 {
-                    var_frmRegistrarHE_Practicante = new frmRegHE(this, TipoPerfil.PerfilPracticante);
+                    var_frmRegistrarHE_Practicante = new frmRegHE(this, TipoPerfil.PerfilPracticante,
+                    var_usuario);
                     var_frmRegistrarHE_Practicante.MdiParent = this;
 
                     //...add

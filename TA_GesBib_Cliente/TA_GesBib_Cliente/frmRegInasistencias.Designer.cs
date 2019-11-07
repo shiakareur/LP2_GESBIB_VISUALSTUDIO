@@ -45,6 +45,8 @@
             this.btnGuardar = new System.Windows.Forms.Button();
             this.btnNuevo = new System.Windows.Forms.Button();
             this.btnCerrar = new System.Windows.Forms.Button();
+            this.txtDescripcion_HE = new System.Windows.Forms.TextBox();
+            this.lblDescripcion = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // lblHMS_fin
@@ -52,9 +54,10 @@
             this.lblHMS_fin.AutoSize = true;
             this.lblHMS_fin.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblHMS_fin.ForeColor = System.Drawing.Color.Black;
-            this.lblHMS_fin.Location = new System.Drawing.Point(421, 373);
+            this.lblHMS_fin.Location = new System.Drawing.Point(561, 459);
+            this.lblHMS_fin.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblHMS_fin.Name = "lblHMS_fin";
-            this.lblHMS_fin.Size = new System.Drawing.Size(100, 26);
+            this.lblHMS_fin.Size = new System.Drawing.Size(126, 32);
             this.lblHMS_fin.TabIndex = 112;
             this.lblHMS_fin.Text = "(hh:mm) ";
             this.lblHMS_fin.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -64,27 +67,28 @@
             this.lblHMS_ini.AutoSize = true;
             this.lblHMS_ini.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblHMS_ini.ForeColor = System.Drawing.Color.Black;
-            this.lblHMS_ini.Location = new System.Drawing.Point(421, 329);
+            this.lblHMS_ini.Location = new System.Drawing.Point(561, 405);
+            this.lblHMS_ini.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblHMS_ini.Name = "lblHMS_ini";
-            this.lblHMS_ini.Size = new System.Drawing.Size(100, 26);
+            this.lblHMS_ini.Size = new System.Drawing.Size(126, 32);
             this.lblHMS_ini.TabIndex = 111;
             this.lblHMS_ini.Text = "(hh:mm) ";
             this.lblHMS_ini.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // txtHFin_Inasis
             // 
-            this.txtHFin_Inasis.Location = new System.Drawing.Point(287, 382);
-            this.txtHFin_Inasis.Margin = new System.Windows.Forms.Padding(2);
+            this.txtHFin_Inasis.Location = new System.Drawing.Point(383, 470);
+            this.txtHFin_Inasis.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtHFin_Inasis.Name = "txtHFin_Inasis";
-            this.txtHFin_Inasis.Size = new System.Drawing.Size(100, 20);
+            this.txtHFin_Inasis.Size = new System.Drawing.Size(132, 22);
             this.txtHFin_Inasis.TabIndex = 110;
             // 
             // txtHIni_Inasis
             // 
-            this.txtHIni_Inasis.Location = new System.Drawing.Point(287, 335);
-            this.txtHIni_Inasis.Margin = new System.Windows.Forms.Padding(2);
+            this.txtHIni_Inasis.Location = new System.Drawing.Point(383, 412);
+            this.txtHIni_Inasis.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtHIni_Inasis.Name = "txtHIni_Inasis";
-            this.txtHIni_Inasis.Size = new System.Drawing.Size(100, 20);
+            this.txtHIni_Inasis.Size = new System.Drawing.Size(132, 22);
             this.txtHIni_Inasis.TabIndex = 109;
             // 
             // lblHIni
@@ -92,9 +96,10 @@
             this.lblHIni.AutoSize = true;
             this.lblHIni.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblHIni.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(37)))), ((int)(((byte)(42)))));
-            this.lblHIni.Location = new System.Drawing.Point(113, 329);
+            this.lblHIni.Location = new System.Drawing.Point(151, 405);
+            this.lblHIni.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblHIni.Name = "lblHIni";
-            this.lblHIni.Size = new System.Drawing.Size(134, 26);
+            this.lblHIni.Size = new System.Drawing.Size(172, 32);
             this.lblHIni.TabIndex = 108;
             this.lblHIni.Text = "Hora Inicio  :";
             this.lblHIni.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -104,19 +109,20 @@
             this.lblHFin.AutoSize = true;
             this.lblHFin.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblHFin.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(37)))), ((int)(((byte)(42)))));
-            this.lblHFin.Location = new System.Drawing.Point(113, 376);
+            this.lblHFin.Location = new System.Drawing.Point(151, 463);
+            this.lblHFin.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblHFin.Name = "lblHFin";
-            this.lblHFin.Size = new System.Drawing.Size(125, 26);
+            this.lblHFin.Size = new System.Drawing.Size(159, 32);
             this.lblHFin.TabIndex = 107;
             this.lblHFin.Text = "Hora Fin    :";
             this.lblHFin.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // dtpRegInasis
             // 
-            this.dtpRegInasis.Location = new System.Drawing.Point(287, 274);
-            this.dtpRegInasis.Margin = new System.Windows.Forms.Padding(2);
+            this.dtpRegInasis.Location = new System.Drawing.Point(383, 337);
+            this.dtpRegInasis.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dtpRegInasis.Name = "dtpRegInasis";
-            this.dtpRegInasis.Size = new System.Drawing.Size(423, 20);
+            this.dtpRegInasis.Size = new System.Drawing.Size(563, 22);
             this.dtpRegInasis.TabIndex = 106;
             // 
             // lblFecha
@@ -124,9 +130,10 @@
             this.lblFecha.AutoSize = true;
             this.lblFecha.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblFecha.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(37)))), ((int)(((byte)(42)))));
-            this.lblFecha.Location = new System.Drawing.Point(113, 274);
+            this.lblFecha.Location = new System.Drawing.Point(151, 337);
+            this.lblFecha.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblFecha.Name = "lblFecha";
-            this.lblFecha.Size = new System.Drawing.Size(102, 26);
+            this.lblFecha.Size = new System.Drawing.Size(130, 32);
             this.lblFecha.TabIndex = 105;
             this.lblFecha.Text = "Fecha    :";
             this.lblFecha.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -134,10 +141,10 @@
             // cmbTipo_Inasistencia
             // 
             this.cmbTipo_Inasistencia.FormattingEnabled = true;
-            this.cmbTipo_Inasistencia.Location = new System.Drawing.Point(425, 227);
-            this.cmbTipo_Inasistencia.Margin = new System.Windows.Forms.Padding(2);
+            this.cmbTipo_Inasistencia.Location = new System.Drawing.Point(567, 279);
+            this.cmbTipo_Inasistencia.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cmbTipo_Inasistencia.Name = "cmbTipo_Inasistencia";
-            this.cmbTipo_Inasistencia.Size = new System.Drawing.Size(141, 21);
+            this.cmbTipo_Inasistencia.Size = new System.Drawing.Size(187, 24);
             this.cmbTipo_Inasistencia.TabIndex = 104;
             // 
             // label11
@@ -145,9 +152,10 @@
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Arial Unicode MS", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.Color.Black;
-            this.label11.Location = new System.Drawing.Point(93, 69);
+            this.label11.Location = new System.Drawing.Point(124, 85);
+            this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(434, 15);
+            this.label11.Size = new System.Drawing.Size(497, 19);
             this.label11.TabIndex = 102;
             this.label11.Text = "_____________________________________________________________";
             // 
@@ -156,9 +164,10 @@
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(37)))), ((int)(((byte)(42)))));
-            this.label12.Location = new System.Drawing.Point(91, 35);
+            this.label12.Location = new System.Drawing.Point(121, 43);
+            this.label12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(397, 33);
+            this.label12.Size = new System.Drawing.Size(502, 42);
             this.label12.TabIndex = 101;
             this.label12.Text = "Registro de mis Inasistencias\r\n";
             this.label12.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -168,9 +177,10 @@
             this.lblElija.AutoSize = true;
             this.lblElija.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblElija.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(37)))), ((int)(((byte)(42)))));
-            this.lblElija.Location = new System.Drawing.Point(113, 221);
+            this.lblElija.Location = new System.Drawing.Point(151, 272);
+            this.lblElija.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblElija.Name = "lblElija";
-            this.lblElija.Size = new System.Drawing.Size(252, 26);
+            this.lblElija.Size = new System.Drawing.Size(330, 32);
             this.lblElija.TabIndex = 100;
             this.lblElija.Text = "Elija tipo de Inasistencia:";
             this.lblElija.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -182,9 +192,10 @@
             this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.btnCancelar.Image = global::TA_GesBib_Cliente.Properties.Resources.icons8_cancelar_2_30;
-            this.btnCancelar.Location = new System.Drawing.Point(487, 110);
+            this.btnCancelar.Location = new System.Drawing.Point(649, 135);
+            this.btnCancelar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(142, 42);
+            this.btnCancelar.Size = new System.Drawing.Size(189, 52);
             this.btnCancelar.TabIndex = 115;
             this.btnCancelar.Text = "CANCELAR";
             this.btnCancelar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -199,9 +210,10 @@
             this.btnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGuardar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.btnGuardar.Image = global::TA_GesBib_Cliente.Properties.Resources.icono_guardar;
-            this.btnGuardar.Location = new System.Drawing.Point(340, 110);
+            this.btnGuardar.Location = new System.Drawing.Point(453, 135);
+            this.btnGuardar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnGuardar.Name = "btnGuardar";
-            this.btnGuardar.Size = new System.Drawing.Size(147, 42);
+            this.btnGuardar.Size = new System.Drawing.Size(196, 52);
             this.btnGuardar.TabIndex = 114;
             this.btnGuardar.Text = "GUARDAR";
             this.btnGuardar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -215,9 +227,10 @@
             this.btnNuevo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnNuevo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnNuevo.Image = global::TA_GesBib_Cliente.Properties.Resources.icono_crear_nuevo;
-            this.btnNuevo.Location = new System.Drawing.Point(215, 110);
+            this.btnNuevo.Location = new System.Drawing.Point(287, 135);
+            this.btnNuevo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnNuevo.Name = "btnNuevo";
-            this.btnNuevo.Size = new System.Drawing.Size(127, 42);
+            this.btnNuevo.Size = new System.Drawing.Size(169, 52);
             this.btnNuevo.TabIndex = 113;
             this.btnNuevo.Text = "NUEVO";
             this.btnNuevo.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -226,27 +239,51 @@
             // 
             // btnCerrar
             // 
-            this.btnCerrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(175)))), ((int)(((byte)(169)))));
+            this.btnCerrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(242)))), ((int)(((byte)(241)))));
             this.btnCerrar.FlatAppearance.BorderSize = 0;
             this.btnCerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCerrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.btnCerrar.Image = global::TA_GesBib_Cliente.Properties.Resources.icono_cerrarventana;
-            this.btnCerrar.Location = new System.Drawing.Point(329, 492);
-            this.btnCerrar.Margin = new System.Windows.Forms.Padding(2);
+            this.btnCerrar.Image = global::TA_GesBib_Cliente.Properties.Resources.icono_regresar;
+            this.btnCerrar.Location = new System.Drawing.Point(31, 50);
+            this.btnCerrar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnCerrar.Name = "btnCerrar";
-            this.btnCerrar.Size = new System.Drawing.Size(136, 32);
+            this.btnCerrar.Size = new System.Drawing.Size(67, 39);
             this.btnCerrar.TabIndex = 118;
-            this.btnCerrar.Text = "CERRAR";
             this.btnCerrar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnCerrar.UseVisualStyleBackColor = false;
             this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
             // 
+            // txtDescripcion_HE
+            // 
+            this.txtDescripcion_HE.Location = new System.Drawing.Point(468, 518);
+            this.txtDescripcion_HE.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtDescripcion_HE.Multiline = true;
+            this.txtDescripcion_HE.Name = "txtDescripcion_HE";
+            this.txtDescripcion_HE.Size = new System.Drawing.Size(525, 150);
+            this.txtDescripcion_HE.TabIndex = 120;
+            // 
+            // lblDescripcion
+            // 
+            this.lblDescripcion.AutoSize = true;
+            this.lblDescripcion.BackColor = System.Drawing.Color.Transparent;
+            this.lblDescripcion.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDescripcion.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(37)))), ((int)(((byte)(42)))));
+            this.lblDescripcion.Location = new System.Drawing.Point(151, 518);
+            this.lblDescripcion.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblDescripcion.Name = "lblDescripcion";
+            this.lblDescripcion.Size = new System.Drawing.Size(193, 32);
+            this.lblDescripcion.TabIndex = 119;
+            this.lblDescripcion.Text = "Descripción   :";
+            this.lblDescripcion.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
             // frmRegInasistencias
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(242)))), ((int)(((byte)(241)))));
-            this.ClientSize = new System.Drawing.Size(938, 597);
+            this.ClientSize = new System.Drawing.Size(1251, 735);
+            this.Controls.Add(this.txtDescripcion_HE);
+            this.Controls.Add(this.lblDescripcion);
             this.Controls.Add(this.btnCerrar);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnGuardar);
@@ -265,6 +302,7 @@
             this.Controls.Add(this.lblElija);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "frmRegInasistencias";
             this.Text = "frmRegInasistencias_Bibliotecario";
             this.ResumeLayout(false);
@@ -290,5 +328,7 @@
         private System.Windows.Forms.Button btnGuardar;
         private System.Windows.Forms.Button btnNuevo;
         private System.Windows.Forms.Button btnCerrar;
+        private System.Windows.Forms.TextBox txtDescripcion_HE;
+        private System.Windows.Forms.Label lblDescripcion;
     }
 }

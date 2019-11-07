@@ -13,8 +13,9 @@ namespace TA_GesBib_Cliente
     public partial class frmRegHE : Form
     {
 
-
         ServicioJava.ServicioClient servTA = new ServicioJava.ServicioClient();
+
+        private ServicioJava.usuario  var_usuario;
 
         private Form var_perfilPersonal;
         private TipoPerfil var_tipoPerfil = TipoPerfil.PerfilBibliotecario;
@@ -29,8 +30,9 @@ namespace TA_GesBib_Cliente
         //se agrego
  
 
-        public frmRegHE(Form formPerfilPersonal, TipoPerfil tipoPerfil)
+        public frmRegHE(Form formPerfilPersonal, TipoPerfil tipoPerfil,ServicioJava.usuario _user)
         {
+            var_usuario = _user;
             var_perfilPersonal = formPerfilPersonal;
             var_tipoPerfil = tipoPerfil;
             InitializeComponent();
@@ -56,16 +58,12 @@ namespace TA_GesBib_Cliente
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
-            //Saco mi data
-
-            //user.getnombre();
-            //...
-
-
-
+           
             //saco la data del form
 
             ServicioJava.horaExtra hora_extra = new ServicioJava.horaExtra();
+            hora_extra.personal= new ServicioJava.personal();
+            hora_extra.personal.id = var_usuario.id;
 
             hora_extra.fecha = dtpFechaHE.Value;
             hora_extra.fechaSpecified = true;
@@ -78,8 +76,8 @@ namespace TA_GesBib_Cliente
             hora_extra.descripcion = txtDescripcion_HE.Text;
 
             //llamamos al SERVICIO RESPECTIVO
-            //Servicio<HoraExtra> hora_extra = new ServicioTA<HoraExtra>;
-            //DBController.regHE(hora_extra);
+          
+            servTA.insertarHoraExtra(hora_extra);
             //mostramos mensaje de registro exitoso
             //....
 

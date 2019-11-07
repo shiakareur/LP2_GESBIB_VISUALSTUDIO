@@ -12,7 +12,8 @@ namespace TA_GesBib_Cliente
 {
     public partial class frmLogin : Form
     {
-        ServicioJava.ServicioClient servTA = new ServicioJava.ServicioClient();
+        ServicioJava.ServicioClient servTA = new ServicioJava.ServicioClient();       
+                
         public frmLogin()
         {
             InitializeComponent();
@@ -22,10 +23,30 @@ namespace TA_GesBib_Cliente
         {
 
             //KeyValuePair<String, ServicioJava.usuario> a = new KeyValuePair<>(servTA.validarUsuario("bbenrique@gmail.com", "987654"));
+            ServicioJava.pairStringUsuario userV = servTA.validarUsuario(placeHolderUsuario.Text, txtcontraseña.Text);
+            if (userV.nombreTipo == "")
+            {
+            }
+            else if (userV.nombreTipo == "ADMINISTRADOR")
+            {
 
+            }
+            else if (userV.nombreTipo == "PERSONAL") {
+                string tipoP = servTA.hallarTipoUsuario(userV.user.id);
+                if (tipoP == "PRACTICANTE") { }
+                else if (tipoP == "AUXILIAR") { }
+                else if (tipoP == "BIBLIOTECARIO") {
+                    frmPerfilBibliotecario formBibliotecario = new frmPerfilBibliotecario(this,userV.user);
+                    formBibliotecario.Visible = true;
+                    this.Visible = false;
+                }
+                else if (tipoP == "GESTOR") { }
+            }
+            
 
-            //abrir diferentes usuarios
-            if (placeHolderUsuario.Text=="ariana")
+            /*
+                //abrir diferentes usuarios
+                if (placeHolderUsuario.Text=="ariana")
             {
                 frmPerfilAdministrador formPAdmin = new frmPerfilAdministrador(this);
                 formPAdmin.Visible = true;
@@ -58,7 +79,7 @@ namespace TA_GesBib_Cliente
                 frmPerfilBibliotecario formBibliotecario = new frmPerfilBibliotecario(this);
                 formBibliotecario.Visible = true;
                 this.Visible = false;
-            }
+            }*/
   
 
         }

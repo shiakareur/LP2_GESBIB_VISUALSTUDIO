@@ -65,6 +65,7 @@ namespace TA_GesBib_Cliente
             inaHL.fecha = dtpSoliHL.Value;
             inaHL.horaInicio = txtHIni_HL.Text;
             inaHL.horaFin = txtHFin_HL.Text;
+            //inaHL.motivo = 
 
             //llamamos al SERVICIO RESPECTIVO
 

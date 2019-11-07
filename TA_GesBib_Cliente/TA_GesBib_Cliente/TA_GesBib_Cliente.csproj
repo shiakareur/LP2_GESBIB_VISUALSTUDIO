@@ -96,23 +96,29 @@
     <Compile Include="frmBuscarGestores.Designer.cs">
       <DependentUpon>frmBuscarGestores.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmPerfilAuxiliar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPerfilAuxiliar.designer.cs">
+      <DependentUpon>frmPerfilAuxiliar.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmPerfilGestor.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmPerfilGestor.Designer.cs">
       <DependentUpon>frmPerfilGestor.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmPerfilPracticante.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPerfilPracticante.designer.cs">
+      <DependentUpon>frmPerfilPracticante.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmRespuestaValidaciones.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmRespuestaValidaciones.Designer.cs">
       <DependentUpon>frmRespuestaValidaciones.cs</DependentUpon>
-    </Compile>
-    <Compile Include="frmVisualizarHorarios.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmVisualizarHorarios.Designer.cs">
-      <DependentUpon>frmVisualizarHorarios.cs</DependentUpon>
     </Compile>
     <Compile Include="frmAdministrarBibliotecas.cs">
       <SubType>Form</SubType>
@@ -156,23 +162,11 @@
     <Compile Include="frmPerfilAdministrador.designer.cs">
       <DependentUpon>frmPerfilAdministrador.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmPerfilAuxiliar.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmPerfilAuxiliar.designer.cs">
-      <DependentUpon>frmPerfilAuxiliar.cs</DependentUpon>
-    </Compile>
     <Compile Include="frmPerfilBibliotecario.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmPerfilBibliotecario.designer.cs">
       <DependentUpon>frmPerfilBibliotecario.cs</DependentUpon>
-    </Compile>
-    <Compile Include="frmPerfilPracticante.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmPerfilPracticante.designer.cs">
-      <DependentUpon>frmPerfilPracticante.cs</DependentUpon>
     </Compile>
     <Compile Include="frmRegHE.cs">
       <SubType>Form</SubType>
@@ -197,6 +191,12 @@
     </Compile>
     <Compile Include="frmSolicitarHL.Designer.cs">
       <DependentUpon>frmSolicitarHL.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmVisualizarHorarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmVisualizarHorarios.designer.cs">
+      <DependentUpon>frmVisualizarHorarios.cs</DependentUpon>
     </Compile>
     <Compile Include="PlaceHolderTextBox.cs">
       <SubType>Component</SubType>
@@ -291,6 +291,24 @@
     <None Include="Connected Services\ServicioJava\TA_GesBib_Cliente.ServicioJava.actualizarCapacitacionResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
+    <None Include="Connected Services\ServicioJava\TA_GesBib_Cliente.ServicioJava.actualizarDiaCapacitacionResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServicioJava\TA_GesBib_Cliente.ServicioJava.actualizarGestorResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServicioJava\TA_GesBib_Cliente.ServicioJava.actualizarHoraExtraResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServicioJava\TA_GesBib_Cliente.ServicioJava.actualizarInasistenciaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServicioJava\TA_GesBib_Cliente.ServicioJava.actualizarPuntoAtencionResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServicioJava\TA_GesBib_Cliente.ServicioJava.asignarPerfilResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Connected Services\ServicioJava\TA_GesBib_Cliente.ServicioJava.biblioteca.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
@@ -304,6 +322,9 @@
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\ServicioJava\TA_GesBib_Cliente.ServicioJava.gestor.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServicioJava\TA_GesBib_Cliente.ServicioJava.hallarTipoUsuarioResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\ServicioJava\TA_GesBib_Cliente.ServicioJava.helloResponse.datasource">

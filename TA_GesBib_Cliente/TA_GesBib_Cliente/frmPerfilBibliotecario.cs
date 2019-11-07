@@ -23,6 +23,11 @@ namespace TA_GesBib_Cliente
     public partial class frmPerfilBibliotecario : Form
     {
         //se agrego
+
+
+        private ServicioJava.usuario var_usuario;
+
+
         private frmLogin var_formLogin;
 
         private frmRegHE var_frmRegistrarHE_Bibliotecario;
@@ -45,8 +50,9 @@ namespace TA_GesBib_Cliente
         }
 
         
-        public frmPerfilBibliotecario(frmLogin formLogin) //con paramtero this 
+        public frmPerfilBibliotecario(frmLogin formLogin,ServicioJava.usuario _usuario) //con paramtero this 
         {
+            var_usuario = _usuario;
             var_formLogin = formLogin;
             InitializeComponent();
             customizeDesign(); // <---- para los PANELES
@@ -143,7 +149,8 @@ namespace TA_GesBib_Cliente
                 //aca llamamos al formulario de registrar Horas extras
                 if (var_frmRegistrarHE_Bibliotecario == null)
                 {
-                    var_frmRegistrarHE_Bibliotecario = new frmRegHE(this,TipoPerfil.PerfilBibliotecario);
+                    var_frmRegistrarHE_Bibliotecario = new frmRegHE(this,
+                        TipoPerfil.PerfilBibliotecario, var_usuario);
                     var_frmRegistrarHE_Bibliotecario.MdiParent = this;
 
                     //...add
