@@ -35,7 +35,7 @@ namespace TA_GesBib_Cliente
             //Al abrir el form, este es el estado de los componentes
             limpiarComponentes();
 
-            //Obtenemos las especialidades desde BD
+            //Obtenemos las bibliotecas desde BD
             BindingList<ServicioJava.biblioteca> bibliotecas =
                 new BindingList<ServicioJava.biblioteca>(
             servGesBib.listarBibliotecas());
@@ -166,20 +166,6 @@ namespace TA_GesBib_Cliente
             ges.contrasenia = txtClave.Text;
 
             ges.biblioteca = (ServicioJava.biblioteca)cmbBibAisg.SelectedItem;
-
-            //try
-            //{
-            //    servGesBib.insertarGestor(ges);
-            //    //mensajito
-            //    this.muestraMensajeExitoso();
-            //}
-            //catch (Exception ex)
-            //{
-
-            //}
-
-            ////Volver al estado inicial
-            //estadoComponentes(Estado.Inicial);
 
             if (estadoObjGestor == Estado.Nuevo)
             {

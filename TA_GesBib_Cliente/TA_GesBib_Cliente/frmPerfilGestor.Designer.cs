@@ -39,7 +39,6 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.button2 = new System.Windows.Forms.Button();
             this.btnCapacitacion = new System.Windows.Forms.Button();
-            this.picHome = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label6 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -48,7 +47,6 @@
             this.panelBIPO = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picHome)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panelBIPO.SuspendLayout();
             this.SuspendLayout();
@@ -172,7 +170,6 @@
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel1.Controls.Add(this.button2);
             this.panel1.Controls.Add(this.btnCapacitacion);
-            this.panel1.Controls.Add(this.picHome);
             this.panel1.Controls.Add(this.btnAsignarTurnos);
             this.panel1.Controls.Add(this.btnCerrarSesion);
             this.panel1.Controls.Add(this.button3);
@@ -187,7 +184,7 @@
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(296, 778);
+            this.panel1.Size = new System.Drawing.Size(296, 749);
             this.panel1.TabIndex = 3;
             this.panel1.TabStop = true;
             // 
@@ -227,19 +224,6 @@
             this.btnCapacitacion.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnCapacitacion.UseVisualStyleBackColor = false;
             this.btnCapacitacion.Click += new System.EventHandler(this.btnCapacitacion_Click);
-            // 
-            // picHome
-            // 
-            this.picHome.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(175)))), ((int)(((byte)(169)))));
-            this.picHome.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.picHome.Image = global::TA_GesBib_Cliente.Properties.Resources.hom4;
-            this.picHome.Location = new System.Drawing.Point(209, 113);
-            this.picHome.Name = "picHome";
-            this.picHome.Size = new System.Drawing.Size(56, 56);
-            this.picHome.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picHome.TabIndex = 61;
-            this.picHome.TabStop = false;
-            this.picHome.Click += new System.EventHandler(this.picHome_Click);
             // 
             // panel2
             // 
@@ -312,7 +296,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::TA_GesBib_Cliente.Properties.Resources.biblio_ari_borroso;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1396, 778);
+            this.ClientSize = new System.Drawing.Size(1370, 749);
             this.Controls.Add(this.panelBIPO);
             this.Controls.Add(this.panel1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -324,7 +308,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picHome)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panelBIPO.ResumeLayout(false);
             this.panelBIPO.PerformLayout();
@@ -346,7 +329,6 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label lblBienvenido;
         private System.Windows.Forms.Panel panelAviso;
-        private System.Windows.Forms.PictureBox picHome;
         private System.Windows.Forms.Panel panelBIPO;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button btnCapacitacion;

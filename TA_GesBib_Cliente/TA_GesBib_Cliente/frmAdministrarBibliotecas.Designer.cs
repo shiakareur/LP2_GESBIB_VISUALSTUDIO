@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             this.gbDatosGenerales = new System.Windows.Forms.GroupBox();
-            this.txtNombre = new System.Windows.Forms.TextBox();
+            this.txtNombreBib = new System.Windows.Forms.TextBox();
             this.lblNombre = new System.Windows.Forms.Label();
             this.lblGestorAsig = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgvPuntosAtencion = new System.Windows.Forms.DataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnBuscar = new System.Windows.Forms.Button();
@@ -40,26 +40,23 @@
             this.btnGuardar = new System.Windows.Forms.Button();
             this.btnNuevo = new System.Windows.Forms.Button();
             this.gbPuntosAtencion = new System.Windows.Forms.GroupBox();
-            this.button2 = new System.Windows.Forms.Button();
-            this.btnCrearPuntoAtencion = new System.Windows.Forms.Button();
-            this.btnModificarPuntoAtencion = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtCodigo = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtNombreGestor = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.btnCerrar = new System.Windows.Forms.Button();
             this.gbDatosGenerales.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvPuntosAtencion)).BeginInit();
             this.gbPuntosAtencion.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // gbDatosGenerales
             // 
-            this.gbDatosGenerales.Controls.Add(this.txtNombre);
+            this.gbDatosGenerales.Controls.Add(this.txtNombreBib);
             this.gbDatosGenerales.Controls.Add(this.lblNombre);
             this.gbDatosGenerales.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.gbDatosGenerales.Location = new System.Drawing.Point(136, 138);
@@ -69,13 +66,13 @@
             this.gbDatosGenerales.TabStop = false;
             this.gbDatosGenerales.Text = "Datos de la Biblioteca";
             // 
-            // txtNombre
+            // txtNombreBib
             // 
-            this.txtNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.txtNombre.Location = new System.Drawing.Point(129, 33);
-            this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(499, 26);
-            this.txtNombre.TabIndex = 18;
+            this.txtNombreBib.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.txtNombreBib.Location = new System.Drawing.Point(129, 33);
+            this.txtNombreBib.Name = "txtNombreBib";
+            this.txtNombreBib.Size = new System.Drawing.Size(499, 26);
+            this.txtNombreBib.TabIndex = 18;
             // 
             // lblNombre
             // 
@@ -101,20 +98,20 @@
             this.lblGestorAsig.TabIndex = 19;
             this.lblGestorAsig.Text = "Nombre:";
             // 
-            // dataGridView1
+            // dgvPuntosAtencion
             // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgvPuntosAtencion.AllowUserToAddRows = false;
+            this.dgvPuntosAtencion.AllowUserToDeleteRows = false;
+            this.dgvPuntosAtencion.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvPuntosAtencion.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1});
-            this.dataGridView1.Location = new System.Drawing.Point(13, 43);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            this.dataGridView1.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.dataGridView1.Size = new System.Drawing.Size(615, 189);
-            this.dataGridView1.TabIndex = 52;
+            this.dgvPuntosAtencion.Location = new System.Drawing.Point(13, 43);
+            this.dgvPuntosAtencion.Name = "dgvPuntosAtencion";
+            this.dgvPuntosAtencion.ReadOnly = true;
+            this.dgvPuntosAtencion.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            this.dgvPuntosAtencion.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.dgvPuntosAtencion.Size = new System.Drawing.Size(615, 189);
+            this.dgvPuntosAtencion.TabIndex = 52;
             // 
             // Column1
             // 
@@ -206,10 +203,7 @@
             // 
             // gbPuntosAtencion
             // 
-            this.gbPuntosAtencion.Controls.Add(this.button2);
-            this.gbPuntosAtencion.Controls.Add(this.btnCrearPuntoAtencion);
-            this.gbPuntosAtencion.Controls.Add(this.btnModificarPuntoAtencion);
-            this.gbPuntosAtencion.Controls.Add(this.dataGridView1);
+            this.gbPuntosAtencion.Controls.Add(this.dgvPuntosAtencion);
             this.gbPuntosAtencion.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.gbPuntosAtencion.Location = new System.Drawing.Point(136, 347);
             this.gbPuntosAtencion.Name = "gbPuntosAtencion";
@@ -218,57 +212,13 @@
             this.gbPuntosAtencion.TabStop = false;
             this.gbPuntosAtencion.Text = "Puntos de Atención asignados";
             // 
-            // button2
+            // txtCodigo
             // 
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(175)))), ((int)(((byte)(169)))));
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.button2.Location = new System.Drawing.Point(524, 248);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(104, 33);
-            this.button2.TabIndex = 53;
-            this.button2.Text = "ELIMINAR";
-            this.button2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button2.UseVisualStyleBackColor = false;
-            // 
-            // btnCrearPuntoAtencion
-            // 
-            this.btnCrearPuntoAtencion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(175)))), ((int)(((byte)(169)))));
-            this.btnCrearPuntoAtencion.FlatAppearance.BorderSize = 0;
-            this.btnCrearPuntoAtencion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCrearPuntoAtencion.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.btnCrearPuntoAtencion.Location = new System.Drawing.Point(303, 248);
-            this.btnCrearPuntoAtencion.Name = "btnCrearPuntoAtencion";
-            this.btnCrearPuntoAtencion.Size = new System.Drawing.Size(89, 33);
-            this.btnCrearPuntoAtencion.TabIndex = 47;
-            this.btnCrearPuntoAtencion.Text = "CREAR";
-            this.btnCrearPuntoAtencion.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnCrearPuntoAtencion.UseVisualStyleBackColor = false;
-            this.btnCrearPuntoAtencion.Click += new System.EventHandler(this.btnCrearPuntoAtencion_Click);
-            // 
-            // btnModificarPuntoAtencion
-            // 
-            this.btnModificarPuntoAtencion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(175)))), ((int)(((byte)(169)))));
-            this.btnModificarPuntoAtencion.FlatAppearance.BorderSize = 0;
-            this.btnModificarPuntoAtencion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnModificarPuntoAtencion.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.btnModificarPuntoAtencion.Location = new System.Drawing.Point(398, 248);
-            this.btnModificarPuntoAtencion.Name = "btnModificarPuntoAtencion";
-            this.btnModificarPuntoAtencion.Size = new System.Drawing.Size(120, 33);
-            this.btnModificarPuntoAtencion.TabIndex = 48;
-            this.btnModificarPuntoAtencion.Text = "MODIFICAR";
-            this.btnModificarPuntoAtencion.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnModificarPuntoAtencion.UseVisualStyleBackColor = false;
-            this.btnModificarPuntoAtencion.Click += new System.EventHandler(this.btnModificarPuntoAtencion_Click);
-            // 
-            // textBox1
-            // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.textBox1.Location = new System.Drawing.Point(129, 32);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(97, 26);
-            this.textBox1.TabIndex = 20;
+            this.txtCodigo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.txtCodigo.Location = new System.Drawing.Point(129, 32);
+            this.txtCodigo.Name = "txtCodigo";
+            this.txtCodigo.Size = new System.Drawing.Size(97, 26);
+            this.txtCodigo.TabIndex = 20;
             // 
             // button1
             // 
@@ -284,7 +234,6 @@
             this.button1.TabIndex = 129;
             this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // label1
             // 
@@ -300,10 +249,10 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.textBox2);
+            this.groupBox1.Controls.Add(this.txtNombreGestor);
             this.groupBox1.Controls.Add(this.button1);
             this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Controls.Add(this.textBox1);
+            this.groupBox1.Controls.Add(this.txtCodigo);
             this.groupBox1.Controls.Add(this.lblGestorAsig);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.groupBox1.Location = new System.Drawing.Point(136, 216);
@@ -313,13 +262,13 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Datos del Gestor";
             // 
-            // textBox2
+            // txtNombreGestor
             // 
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.textBox2.Location = new System.Drawing.Point(129, 69);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(499, 26);
-            this.textBox2.TabIndex = 131;
+            this.txtNombreGestor.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.txtNombreGestor.Location = new System.Drawing.Point(129, 69);
+            this.txtNombreGestor.Name = "txtNombreGestor";
+            this.txtNombreGestor.Size = new System.Drawing.Size(499, 26);
+            this.txtNombreGestor.TabIndex = 131;
             // 
             // label9
             // 
@@ -385,7 +334,7 @@
             this.Load += new System.EventHandler(this.frmAdministrarPersonal_Load);
             this.gbDatosGenerales.ResumeLayout(false);
             this.gbDatosGenerales.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvPuntosAtencion)).EndInit();
             this.gbPuntosAtencion.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
@@ -398,24 +347,21 @@
 
         private System.Windows.Forms.GroupBox gbDatosGenerales;
         private System.Windows.Forms.Label lblGestorAsig;
-        private System.Windows.Forms.TextBox txtNombre;
+        private System.Windows.Forms.TextBox txtNombreBib;
         private System.Windows.Forms.Label lblNombre;
         private System.Windows.Forms.Button btnNuevo;
         private System.Windows.Forms.Button btnGuardar;
         private System.Windows.Forms.Button btnModificar;
         private System.Windows.Forms.Button btnBuscar;
         private System.Windows.Forms.Button btnCancelar;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgvPuntosAtencion;
         private System.Windows.Forms.GroupBox gbPuntosAtencion;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.Button btnCrearPuntoAtencion;
-        private System.Windows.Forms.Button btnModificarPuntoAtencion;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtCodigo;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.TextBox txtNombreGestor;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button btnCerrar;

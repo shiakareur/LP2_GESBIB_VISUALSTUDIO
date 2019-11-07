@@ -76,8 +76,14 @@ namespace TA_GesBib_Cliente
             hora_extra.descripcion = txtDescripcion_HE.Text;
 
             //llamamos al SERVICIO RESPECTIVO
-          
-            servTA.insertarHoraExtra(hora_extra);
+            try
+            {
+                servTA.insertarHoraExtra(hora_extra);
+            }catch (Exception ex)
+            {
+                System.Console.WriteLine("Error");
+            }
+            
             //mostramos mensaje de registro exitoso
             //....
 

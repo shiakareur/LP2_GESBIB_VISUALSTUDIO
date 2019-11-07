@@ -14,6 +14,7 @@ namespace TA_GesBib_Cliente
     {
 
         private frmLogin var_formLogin;
+        private ServicioJava.usuario var_usuario;
 
         public Panel PanelAviso { get => panelAviso; set => panelAviso = value; }
         public Label LblBienvenido { get => lblBienvenido; set => lblBienvenido = value; }
@@ -25,9 +26,10 @@ namespace TA_GesBib_Cliente
             InitializeComponent();
         }
 
-        public frmPerfilGestor(frmLogin formLogin) //con paramtero this 
+        public frmPerfilGestor(frmLogin formLogin,ServicioJava.usuario _user) //con paramtero this 
         {
             var_formLogin = formLogin;
+            var_usuario = _user;
             InitializeComponent();
         }
 

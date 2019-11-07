@@ -17,7 +17,7 @@ namespace TA_GesBib_Cliente
         //Servicio
         ServicioJava.ServicioClient servGesBib = new ServicioJava.ServicioClient();
         //Gestor
-        ServicioJava.gestor gestor = new ServicioJava.gestor();
+        ServicioJava.biblioteca biblioteca = new ServicioJava.biblioteca();
         private frmPerfilAdministrador var_formPerfilAdmin;
         public frmAdministrarBibliotecas()
         {
@@ -26,22 +26,14 @@ namespace TA_GesBib_Cliente
             //Al abrir el form, este es el estado de los componentes
             limpiarComponentes();
             estadoComponentes(Estado.Inicial);
+            
         }
 
         public frmAdministrarBibliotecas(frmPerfilAdministrador formPerfilAdmin)
         {
             //var_formPerfilAdmin = formPerfilAdmin;
             InitializeComponent();
-
-        
-
-
-            //Al abrir el form, este es el estado de los componentes
-            limpiarComponentes();
-            ////cargamos el combobox de gestores
-            //cmbGestor.DataSource = servGesBib.listarGestores("", "");
-            //cmbGestor.ValueMember = "Apellido";
-            //estadoComponentes(Estado.Inicial);
+            
         }
 
         //Estados
@@ -61,7 +53,7 @@ namespace TA_GesBib_Cliente
                     btnCancelar.Enabled = false;
                     btnBuscar.Enabled = true;
                     //Campos de Texto
-                    txtNombre.Enabled = false;
+                    txtNombreBib.Enabled = false;
 
                     break;
 
@@ -77,7 +69,7 @@ namespace TA_GesBib_Cliente
                     btnCancelar.Enabled = true;
                     btnBuscar.Enabled = false;
                     //Campos de Texto
-                    txtNombre.Enabled = true;
+                    txtNombreBib.Enabled = true;
 
                     break;
                 case Estado.Buscar:
@@ -101,7 +93,7 @@ namespace TA_GesBib_Cliente
                     btnCancelar.Enabled = true;
                     btnBuscar.Enabled = false;
                     //Campos de Texto
-                    txtNombre.Enabled = true;
+                    txtNombreBib.Enabled = true;
 
                     break;
             }
@@ -109,7 +101,7 @@ namespace TA_GesBib_Cliente
 
         public void limpiarComponentes()
         {
-            txtNombre.Text = "";
+            txtNombreBib.Text = "";
 
 
         }
@@ -139,32 +131,32 @@ namespace TA_GesBib_Cliente
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
-            //Volver al estado inicial
-            estadoComponentes(Estado.Inicial);
-
-
+            //creamos la biblioteca
             ServicioJava.biblioteca bib = new ServicioJava.biblioteca();
 
-
-            bib.nombre = txtNombre.Text;
-            //bib.gestor = (ServicioJava.gestor)cmbGestor.SelectedItem;
-
-
+            bib.nombre = txtNombreBib.Text;
             try
             {
-                //servGesBib.insertarBiblioteca(bib);
-
-                //MessageBox.Show("Alumno Registrado exitosamente", "Mensaje Confirmacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-            catch(System.ServiceModel.CommunicationException ex)
+                bib.gestor.nombre = txtNombreGestor.Text;
+            }catch(Exception ex)
             {
-                System.Console.WriteLine(" EXCEPCION !!");
+                System.Console.WriteLine("Error en gestor");
             }
             
+            bib.gestor.codigo = txtCodigo.Text;
 
-
-
-
+            if (estadoObjBiblioteca == Estado.Nuevo)
+            {
+                servGesBib.insertarBiblioteca(bib);
+                //Mostramos un mensaje de exito
+                MessageBox.Show("Biblioteca Registrada exitosamente", "Mensaje Confirmacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else if (estadoObjBiblioteca == Estado.Modificar)
+            {
+                servGesBib.actualizarBiblioteca(bib);
+                MessageBox.Show("Se han actualizado los datos", "Mensaje Confirmacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            estadoComponentes(Estado.Inicial);
 
         }
 
@@ -177,18 +169,35 @@ namespace TA_GesBib_Cliente
 
         private void btnNuevo_Click(object sender, EventArgs e)
         {
-            //Volver al estado inicial
             limpiarComponentes();
+
+            //Instanciamos uno nuevo
+            biblioteca = new ServicioJava.biblioteca();
+
+            estadoObjBiblioteca = Estado.Nuevo;
             estadoComponentes(Estado.Nuevo);
         }
 
         private void btnBuscar_Click(object sender, EventArgs e)
         {
+            //frmBuscarBiblioteca frmBuscarBib = new frmBuscarBiblioteca();
+            //if (frmBuscarBib.ShowDialog() == DialogResult.OK)
+            //{
+            //    estadoComponentes(Estado.Buscar);
+            //}
+
             frmBuscarBiblioteca frmBuscarBib = new frmBuscarBiblioteca();
             if (frmBuscarBib.ShowDialog() == DialogResult.OK)
             {
+                biblioteca = frmBuscarBib.BibliotecaSeleccionada;
+                txtNombreBib.Text = biblioteca.nombre;
+                //txtNombreGestor.Text = biblioteca.gestor.nombre + " " + biblioteca.gestor.apellido;
+                txtNombreGestor.Text = biblioteca.gestor.id.ToString();
+                txtCodigo.Text = biblioteca.gestor.codigo;
+                dgvPuntosAtencion.DataSource = servGesBib.listarPuntosAtencion(biblioteca.id);
                 estadoComponentes(Estado.Buscar);
-            }
+                }
+
         }
 
         private void btnCerrar_Click(object sender, EventArgs e)
@@ -203,11 +212,6 @@ namespace TA_GesBib_Cliente
             frmCrearPA.Location = new Point(0, 0);
         }
 
-        private void btnModificarPuntoAtencion_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnCerrar_Click_1(object sender, EventArgs e)
         {
             this.Dispose();
@@ -218,9 +222,5 @@ namespace TA_GesBib_Cliente
             this.Dispose();
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }

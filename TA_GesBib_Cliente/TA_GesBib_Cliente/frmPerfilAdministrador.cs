@@ -12,7 +12,7 @@ namespace TA_GesBib_Cliente
 {
     public partial class frmPerfilAdministrador : Form
     {
-     
+        private ServicioJava.usuario var_usuario;
 
         private frmLogin var_formLogin;
         public Panel PanelAviso { get => panelAviso; set => panelAviso = value; }
@@ -25,10 +25,12 @@ namespace TA_GesBib_Cliente
         }
 
 
-        public frmPerfilAdministrador(frmLogin formLogin) //con paramtero this 
+        public frmPerfilAdministrador(frmLogin formLogin, ServicioJava.usuario _usuario) //con paramtero this 
         {
+            var_usuario = _usuario;
             var_formLogin = formLogin;
             InitializeComponent();
+           
         }
 
 

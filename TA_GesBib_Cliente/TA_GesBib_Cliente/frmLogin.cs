@@ -21,31 +21,35 @@ namespace TA_GesBib_Cliente
 
         private void btnAcceder_Click(object sender, EventArgs e)
         {
-            frmPerfilAdministrador frmPerfilAdministrador = new frmPerfilAdministrador(this);
-            frmPerfilAdministrador.Visible = true;
-            this.Visible = false;
+
             //KeyValuePair<String, ServicioJava.usuario> a = new KeyValuePair<>(servTA.validarUsuario("bbenrique@gmail.com", "987654"));
-            //ServicioJava.pairStringUsuario userV = servTA.validarUsuario(placeHolderUsuario.Text, txtcontraseña.Text);
-            //if (userV.nombreTipo == "")
-            //{
-            //}
-            //else if (userV.nombreTipo == "ADMINISTRADOR")
-            //{
-            //    frmPerfilAdministrador frmPerfilAdministrador = new frmPerfilAdministrador(this);
-            //    frmPerfilAdministrador.Visible = true;
-            //    this.Visible = false;
-            //}
-            //else if (userV.nombreTipo == "PERSONAL") {
-            //    string tipoP = servTA.hallarTipoUsuario(userV.user.id);
-            //    if (tipoP == "PRACTICANTE") { }
-            //    else if (tipoP == "AUXILIAR") { }
-            //    else if (tipoP == "BIBLIOTECARIO") {
-            //        frmPerfilBibliotecario formBibliotecario = new frmPerfilBibliotecario(this,userV.user);
-            //        formBibliotecario.Visible = true;
-            //        this.Visible = false;
-            //    }
-            //    else if (tipoP == "GESTOR") { }
-            //}
+            ServicioJava.pairStringUsuario userV = servTA.validarUsuario(placeHolderUsuario.Text, txtcontraseña.Text);
+            if (userV.nombreTipo == "")
+            {
+            }
+            else if (userV.nombreTipo == "ADMINISTRADOR")
+            {
+                frmPerfilAdministrador frmPerfilAdministrador = new frmPerfilAdministrador(this, userV.user);
+                frmPerfilAdministrador.Visible = true;
+                this.Visible = false;
+            }
+            else if (userV.nombreTipo == "PERSONAL")
+            {
+                string tipoP = servTA.hallarTipoUsuario(userV.user.id);
+                if (tipoP == "PRACTICANTE") { }
+                else if (tipoP == "AUXILIAR") { }
+                else if (tipoP == "BIBLIOTECARIO")
+                {
+                    frmPerfilBibliotecario formBibliotecario = new frmPerfilBibliotecario(this, userV.user);
+                    formBibliotecario.Visible = true;
+                    this.Visible = false;
+                }
+                else if (tipoP == "GESTOR") {
+                    frmPerfilGestor formGestor = new frmPerfilGestor(this, userV.user);
+                    formGestor.Visible = true;
+                    this.Visible = false;
+                }
+            }
 
             //------------------
 
