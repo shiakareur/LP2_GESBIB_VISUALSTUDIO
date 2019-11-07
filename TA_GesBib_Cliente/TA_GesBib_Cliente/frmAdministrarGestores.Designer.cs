@@ -209,7 +209,6 @@
             this.lblFechaIng.Size = new System.Drawing.Size(110, 24);
             this.lblFechaIng.TabIndex = 40;
             this.lblFechaIng.Text = "Fecha Ing:";
-            this.lblFechaIng.Click += new System.EventHandler(this.label3_Click);
             // 
             // groupBox2
             // 
@@ -385,7 +384,6 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmAdministrarGestores";
             this.Text = "frmAdministrarPersonal";
-            this.Load += new System.EventHandler(this.frmAdministrarPersonal_Load);
             this.gbDatosGenerales.ResumeLayout(false);
             this.gbDatosGenerales.PerformLayout();
             this.groupBox1.ResumeLayout(false);

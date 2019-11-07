@@ -12,10 +12,10 @@ namespace TA_GesBib_Cliente
 {
     public partial class frmAdministrarGestores : Form
     {
-        //Estado estadoForm;
+        //Servicio
         ServicioJava.ServicioClient servGesBib = new ServicioJava.ServicioClient();
-                               
-               
+        //Gestor
+        ServicioJava.gestor gestor = new ServicioJava.gestor();
         private frmPerfilAdministrador var_formPerfilAdmin;
         public frmAdministrarGestores()
         {
@@ -33,10 +33,17 @@ namespace TA_GesBib_Cliente
             //Al abrir el form, este es el estado de los componentes
             limpiarComponentes();
 
-            //cargamos el combobox de biblioteca asignada
+            //Obtenemos las especialidades desde BD
+            BindingList<ServicioJava.biblioteca> bibliotecas =
+                new BindingList<ServicioJava.biblioteca>(
+            servGesBib.listarBibliotecas());
+
+            //Enlazamos el ComboBox con las especialidades obtenidas
             cmbBibAisg.DataSource = servGesBib.listarBibliotecas();
-            cmbBibAisg.ValueMember = "Nombre";
-            estadoComponentes(Estado.Inicial);
+
+            //Indicamos la Propiedad que debería visualizarse
+            cmbBibAisg.DisplayMember = "Nombre";
+            cmbBibAisg.ValueMember = "Id";
         }
 
         //Estados
@@ -143,29 +150,6 @@ namespace TA_GesBib_Cliente
 
         }
 
-        private void frmAdministrarPersonal_Load(object sender, EventArgs e)
-        {   
-           
-            //this.WindowState = FormWindowState.Maximized;
-        }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-            this.Dispose();
-            //var_formPerfilAdmin.LblBienvenido.Visible = true;
-            //var_formPerfilAdmin.PanelAviso.Visible = true;
-        }
-
-        private void lblFechaNac_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnGuardar_Click(object sender, EventArgs e)
         {
             //creamos el gestor
@@ -178,6 +162,7 @@ namespace TA_GesBib_Cliente
             ges.fecha_ingresoSpecified = true;
             ges.email = txtCorreo.Text;
             ges.contrasenia = txtClave.Text;
+
             ges.biblioteca = (ServicioJava.biblioteca)cmbBibAisg.SelectedItem;
 
 
@@ -185,12 +170,14 @@ namespace TA_GesBib_Cliente
             try
             {
                 servGesBib.insertarGestor(ges);
+                //mensajito
+                this.muestraMensajeExitoso();
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
 
             }
-            
+
 
 
 
@@ -215,16 +202,44 @@ namespace TA_GesBib_Cliente
 
         private void btnBuscar_Click(object sender, EventArgs e)
         {
-            frmBuscarPersonalBiblioteca frmBuscarPersonalBib = new frmBuscarPersonalBiblioteca();
-            if (frmBuscarPersonalBib.ShowDialog() == DialogResult.OK)
+            frmBuscarGestores frmBuscarGestor = new frmBuscarGestores();
+            if (frmBuscarGestor.ShowDialog() == DialogResult.OK)
             {
+                gestor = frmBuscarGestor.GestorSeleccionado;
+                txtCodigo.Text = gestor.codigo;
+                txtNombres.Text = gestor.nombre;
+                txtApellidos.Text = gestor.apellido;
+                txtCorreo.Text = gestor.email;
+                txtClave.Text = gestor.contrasenia;
+                dtpFechaIng.Value = gestor.fecha_ingreso;
+                cmbBibAisg.SelectedValue = gestor.biblioteca.id;
+                //System.Console.WriteLine(gestor.biblioteca.id);
                 estadoComponentes(Estado.Buscar);
             }
         }
 
         private void btnCerrar_Click(object sender, EventArgs e)
         {
-            this.Hide();
+            this.Dispose();
         }
+
+        private void muestraMensajeExitoso()
+        {
+            //mostramos mensaje de error
+            MessageBox.Show("Se guardaron los cambios exitosamente !",
+                "Mensajillo");
+        }
+
+        private void muestraMensajeCerraroGuardarCambios()
+        {
+            //mostramos mensaje de error
+            MessageBox.Show("Cierre o guarde los cambios !",
+                "Advertencia",
+                MessageBoxButtons.OK,
+                MessageBoxIcon.Exclamation,
+                MessageBoxDefaultButton.Button1);
+        }
+
     }
+
 }

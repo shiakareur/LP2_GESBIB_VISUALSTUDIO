@@ -81,7 +81,7 @@
             this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button2.FlatAppearance.BorderSize = 0;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.Font = new System.Drawing.Font("Bahnschrift", 14.25F, System.Drawing.FontStyle.Bold);
             this.button2.Image = global::TA_GesBib_Cliente.Properties.Resources.icono_ver_grande;
             this.button2.Location = new System.Drawing.Point(25, 374);
             this.button2.Margin = new System.Windows.Forms.Padding(4);
@@ -98,7 +98,7 @@
             this.btnAdmGestores.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnAdmGestores.FlatAppearance.BorderSize = 0;
             this.btnAdmGestores.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAdmGestores.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAdmGestores.Font = new System.Drawing.Font("Bahnschrift", 14.25F, System.Drawing.FontStyle.Bold);
             this.btnAdmGestores.Image = global::TA_GesBib_Cliente.Properties.Resources.icono_1_usuario;
             this.btnAdmGestores.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btnAdmGestores.Location = new System.Drawing.Point(25, 174);
@@ -119,12 +119,12 @@
             this.btnCerrarSesion.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnCerrarSesion.FlatAppearance.BorderSize = 0;
             this.btnCerrarSesion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCerrarSesion.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCerrarSesion.Font = new System.Drawing.Font("Bahnschrift", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCerrarSesion.Image = global::TA_GesBib_Cliente.Properties.Resources.icono_cerrar_sesion_pequeño;
             this.btnCerrarSesion.Location = new System.Drawing.Point(25, 519);
             this.btnCerrarSesion.Margin = new System.Windows.Forms.Padding(4);
             this.btnCerrarSesion.Name = "btnCerrarSesion";
-            this.btnCerrarSesion.Size = new System.Drawing.Size(227, 50);
+            this.btnCerrarSesion.Size = new System.Drawing.Size(200, 50);
             this.btnCerrarSesion.TabIndex = 59;
             this.btnCerrarSesion.Text = "CERRAR SESIÓN";
             this.btnCerrarSesion.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -137,7 +137,7 @@
             this.button3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button3.FlatAppearance.BorderSize = 0;
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.Font = new System.Drawing.Font("Bahnschrift", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.Image = global::TA_GesBib_Cliente.Properties.Resources.icono_configuracion_pequeño;
             this.button3.Location = new System.Drawing.Point(25, 470);
             this.button3.Margin = new System.Windows.Forms.Padding(4);
@@ -154,7 +154,7 @@
             this.btnAdmBibliotecas.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnAdmBibliotecas.FlatAppearance.BorderSize = 0;
             this.btnAdmBibliotecas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAdmBibliotecas.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAdmBibliotecas.Font = new System.Drawing.Font("Bahnschrift", 14.25F, System.Drawing.FontStyle.Bold);
             this.btnAdmBibliotecas.Image = global::TA_GesBib_Cliente.Properties.Resources.icono_biblioteca;
             this.btnAdmBibliotecas.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btnAdmBibliotecas.Location = new System.Drawing.Point(25, 292);
@@ -173,7 +173,7 @@
             this.btnAdmPersonal.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnAdmPersonal.FlatAppearance.BorderSize = 0;
             this.btnAdmPersonal.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAdmPersonal.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAdmPersonal.Font = new System.Drawing.Font("Bahnschrift", 14.25F, System.Drawing.FontStyle.Bold);
             this.btnAdmPersonal.Image = global::TA_GesBib_Cliente.Properties.Resources.icono_personal2;
             this.btnAdmPersonal.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btnAdmPersonal.Location = new System.Drawing.Point(25, 233);
@@ -221,12 +221,12 @@
             // lblTipoPerfil
             // 
             this.lblTipoPerfil.AutoSize = true;
-            this.lblTipoPerfil.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold);
+            this.lblTipoPerfil.Font = new System.Drawing.Font("Bahnschrift", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTipoPerfil.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.lblTipoPerfil.Location = new System.Drawing.Point(92, 47);
             this.lblTipoPerfil.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblTipoPerfil.Name = "lblTipoPerfil";
-            this.lblTipoPerfil.Size = new System.Drawing.Size(84, 25);
+            this.lblTipoPerfil.Size = new System.Drawing.Size(67, 23);
             this.lblTipoPerfil.TabIndex = 10;
             this.lblTipoPerfil.Text = "ADMIN";
             this.lblTipoPerfil.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -245,12 +245,12 @@
             // lblNombreUsuario
             // 
             this.lblNombreUsuario.AutoSize = true;
-            this.lblNombreUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNombreUsuario.Font = new System.Drawing.Font("Bahnschrift", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNombreUsuario.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.lblNombreUsuario.Location = new System.Drawing.Point(93, 77);
             this.lblNombreUsuario.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblNombreUsuario.Name = "lblNombreUsuario";
-            this.lblNombreUsuario.Size = new System.Drawing.Size(94, 24);
+            this.lblNombreUsuario.Size = new System.Drawing.Size(90, 23);
             this.lblNombreUsuario.TabIndex = 0;
             this.lblNombreUsuario.Text = "Arianator";
             this.lblNombreUsuario.TextAlign = System.Drawing.ContentAlignment.MiddleRight;

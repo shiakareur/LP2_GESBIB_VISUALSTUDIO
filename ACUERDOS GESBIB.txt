@@ -9,3 +9,16 @@ ACTUALIZACION 06/11
 ---No se hará el modificar: Buscas y te da todos los datos de la biblioteca y el datagridview FIN
 ---Si quiero modificar un punto de atencion que esta en una biblioteca, entonces debo darle doble click al DGV de esa fila, y debe aparecer un formulario pequeño que me diga Modificar el punto de atencion, modificas ahi y Confirmas, se guarda en la base de datos y se cierra (esto deberia ser otro form porque tendrias 2 Modificar: uno de biblioteca y otro de punto de atencion).
 ---Va a haber dos listas: 1 de eliminados(un for de eliminar puntos de atencion) y 1 de agregados (un for de insert a tales lineas)
+
+--------------
+Acuerdos de ayer: 
+1. Que cuando se abra un form, se tiene que cerrar el anterior (ya sea con ventana de aviso o no se)
+2. Que haya un Home(volver a la vista principal de avisos) en vez de un Cerrar o una X
+3. Los avisos aparecerán como Post-it (no se si esto lo aprobamos todos pero lo pongo :v)
+4. El administrar Puntos de atención lo hace el administrador, no el gestor
+
+-------------
+ACUERDOS HOY AAAAAAAA
+
+1. PERFIL DE EXPERIENCIA: no se puede crear, ya están establecidos, solo se puede modificar.
+2.
