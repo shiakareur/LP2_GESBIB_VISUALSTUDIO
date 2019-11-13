@@ -102,6 +102,12 @@
     <Compile Include="frmBuscarGestores.Designer.cs">
       <DependentUpon>frmBuscarGestores.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmDistribuirPersonal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDistribuirPersonal.Designer.cs">
+      <DependentUpon>frmDistribuirPersonal.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmPerfilAuxiliar.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -249,6 +255,9 @@
     <EmbeddedResource Include="frmBuscarPersonalBiblioteca.resx">
       <DependentUpon>frmBuscarPersonalBiblioteca.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmDistribuirPersonal.resx">
+      <DependentUpon>frmDistribuirPersonal.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </EmbeddedResource>
@@ -290,8 +299,8 @@
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <None Include="Connected Services\ServicioJava\Servicio.wsdl" />
-    <None Include="Connected Services\ServicioJava\Servicio.xsd">
+    <None Include="Connected Services\ServicioJava\Servicio1.wsdl" />
+    <None Include="Connected Services\ServicioJava\Servicio1.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="Connected Services\ServicioJava\TA_GesBib_Cliente.ServicioJava.actualizarAuxiliarBibliotecaResponse.datasource">
