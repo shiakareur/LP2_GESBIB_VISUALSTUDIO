@@ -60,6 +60,12 @@
     <Compile Include="frmAdminPerfilesExp.Designer.cs">
       <DependentUpon>frmAdminPerfilesExp.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmAsignarPersonalPuntoAtencion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAsignarPersonalPuntoAtencion.Designer.cs">
+      <DependentUpon>frmAsignarPersonalPuntoAtencion.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmAsignarTurnos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -227,6 +233,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmAdminPerfilesExp.resx">
       <DependentUpon>frmAdminPerfilesExp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAsignarPersonalPuntoAtencion.resx">
+      <DependentUpon>frmAsignarPersonalPuntoAtencion.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmAsignarTurnos.resx">
       <DependentUpon>frmAsignarTurnos.cs</DependentUpon>

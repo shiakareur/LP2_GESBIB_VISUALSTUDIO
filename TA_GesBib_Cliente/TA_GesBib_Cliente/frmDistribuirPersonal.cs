@@ -12,9 +12,15 @@ namespace TA_GesBib_Cliente
 {
     public partial class frmDistribuirPersonal : Form
     {
+        private ServicioJava.distribucionPersonal distrib = new ServicioJava.distribucionPersonal();
+        ServicioJava.ServicioClient DBController = new ServicioJava.ServicioClient();
+
         public frmDistribuirPersonal()
         {
             InitializeComponent();
+            dgvDitribucion.Rows[0].Cells[1].Style.BackColor = Color.PowderBlue;
+            //dgvDitribucion.Columns[1].SortMode = DataGridViewColumnSortMode.NotSortable;
+            //Daywisegrid.Rows[RowIndex].Cells[columnIndex].Style.BackColor = Color.Red;
         }
 
         private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
@@ -22,9 +28,20 @@ namespace TA_GesBib_Cliente
 
         }
 
-        private void dgvDitribucion_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void dgvDitribucion_CellMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
         {
+            try {
 
+                if (e.RowIndex >= 0 && e.ColumnIndex>=1)
+                {
+                    frmAsignarPersonalPuntoAtencion formAsignarPersonal = new frmAsignarPersonalPuntoAtencion();
+                    formAsignarPersonal.ShowDialog();
+                }
+            }
+            catch (Exception) {
+                System.Console.Write("Error");
+
+            }
         }
     }
 }
