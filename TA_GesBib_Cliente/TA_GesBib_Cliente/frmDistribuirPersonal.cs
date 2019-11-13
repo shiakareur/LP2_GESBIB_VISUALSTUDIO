@@ -21,5 +21,10 @@ namespace TA_GesBib_Cliente
         {
 
         }
+
+        private void dgvDitribucion_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }
