@@ -41,22 +41,23 @@
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.lblHoraInicio = new System.Windows.Forms.Label();
             this.lblHoraFin = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.cmbHoraIni = new System.Windows.Forms.ComboBox();
+            this.cmbHoraFin = new System.Windows.Forms.ComboBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.lblNombreCompleto = new System.Windows.Forms.Label();
-            this.lblCodigo = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.btnAdd = new System.Windows.Forms.Button();
+            this.btnBuscarPersonal = new System.Windows.Forms.Button();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
+            this.btnAdd = new System.Windows.Forms.Button();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.Codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PerfilExperiencia = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.lblNombreCompleto = new System.Windows.Forms.Label();
+            this.lblCodigo = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -195,28 +196,28 @@
             this.lblHoraFin.Text = "Hora Fin:";
             this.lblHoraFin.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // comboBox1
+            // cmbHoraIni
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(185, 163);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(278, 24);
-            this.comboBox1.TabIndex = 147;
+            this.cmbHoraIni.FormattingEnabled = true;
+            this.cmbHoraIni.Location = new System.Drawing.Point(185, 163);
+            this.cmbHoraIni.Name = "cmbHoraIni";
+            this.cmbHoraIni.Size = new System.Drawing.Size(278, 24);
+            this.cmbHoraIni.TabIndex = 147;
             // 
-            // comboBox2
+            // cmbHoraFin
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(185, 194);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(278, 24);
-            this.comboBox2.TabIndex = 148;
+            this.cmbHoraFin.FormattingEnabled = true;
+            this.cmbHoraFin.Location = new System.Drawing.Point(185, 194);
+            this.cmbHoraFin.Name = "cmbHoraFin";
+            this.cmbHoraFin.Size = new System.Drawing.Size(278, 24);
+            this.cmbHoraFin.TabIndex = 148;
             // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.txtPerfil);
-            this.groupBox1.Controls.Add(this.comboBox2);
+            this.groupBox1.Controls.Add(this.cmbHoraFin);
             this.groupBox1.Controls.Add(this.lblBiblioteca);
-            this.groupBox1.Controls.Add(this.comboBox1);
+            this.groupBox1.Controls.Add(this.cmbHoraIni);
             this.groupBox1.Controls.Add(this.cmbBiblioteca);
             this.groupBox1.Controls.Add(this.lblHoraFin);
             this.groupBox1.Controls.Add(this.lblPuntoAtencion);
@@ -235,6 +236,7 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.btnBuscarPersonal);
             this.groupBox2.Controls.Add(this.textBox2);
             this.groupBox2.Controls.Add(this.label1);
             this.groupBox2.Controls.Add(this.button1);
@@ -251,6 +253,94 @@
             this.groupBox2.TabIndex = 150;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Personal Asignado";
+            // 
+            // btnBuscarPersonal
+            // 
+            this.btnBuscarPersonal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(175)))), ((int)(((byte)(169)))));
+            this.btnBuscarPersonal.FlatAppearance.BorderSize = 0;
+            this.btnBuscarPersonal.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBuscarPersonal.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
+            this.btnBuscarPersonal.Image = global::TA_GesBib_Cliente.Properties.Resources.icono_buscar;
+            this.btnBuscarPersonal.Location = new System.Drawing.Point(294, 23);
+            this.btnBuscarPersonal.Margin = new System.Windows.Forms.Padding(2);
+            this.btnBuscarPersonal.Name = "btnBuscarPersonal";
+            this.btnBuscarPersonal.Size = new System.Drawing.Size(35, 34);
+            this.btnBuscarPersonal.TabIndex = 151;
+            this.btnBuscarPersonal.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnBuscarPersonal.UseVisualStyleBackColor = false;
+            // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(185, 95);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(197, 23);
+            this.textBox2.TabIndex = 152;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(37)))), ((int)(((byte)(42)))));
+            this.label1.Location = new System.Drawing.Point(18, 95);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(56, 22);
+            this.label1.TabIndex = 151;
+            this.label1.Text = "Perfil:";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(429, 94);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(34, 26);
+            this.button1.TabIndex = 150;
+            this.button1.Text = "-";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // btnAdd
+            // 
+            this.btnAdd.Location = new System.Drawing.Point(392, 94);
+            this.btnAdd.Name = "btnAdd";
+            this.btnAdd.Size = new System.Drawing.Size(34, 26);
+            this.btnAdd.TabIndex = 149;
+            this.btnAdd.Text = "+";
+            this.btnAdd.UseVisualStyleBackColor = true;
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Codigo,
+            this.Nombre,
+            this.PerfilExperiencia});
+            this.dataGridView1.Location = new System.Drawing.Point(22, 136);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(441, 126);
+            this.dataGridView1.TabIndex = 149;
+            // 
+            // Codigo
+            // 
+            this.Codigo.HeaderText = "Código";
+            this.Codigo.Name = "Codigo";
+            // 
+            // Nombre
+            // 
+            this.Nombre.HeaderText = "Nombre";
+            this.Nombre.Name = "Nombre";
+            // 
+            // PerfilExperiencia
+            // 
+            this.PerfilExperiencia.HeaderText = "Perfil Experiencia";
+            this.PerfilExperiencia.Name = "PerfilExperiencia";
+            this.PerfilExperiencia.Width = 197;
+            // 
+            // textBox3
+            // 
+            this.textBox3.Location = new System.Drawing.Point(185, 61);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(278, 23);
+            this.textBox3.TabIndex = 148;
             // 
             // textBox1
             // 
@@ -285,79 +375,6 @@
             this.lblCodigo.Text = "Código:";
             this.lblCodigo.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // textBox3
-            // 
-            this.textBox3.Location = new System.Drawing.Point(185, 61);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(278, 23);
-            this.textBox3.TabIndex = 148;
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Codigo,
-            this.Nombre,
-            this.PerfilExperiencia});
-            this.dataGridView1.Location = new System.Drawing.Point(22, 136);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(441, 126);
-            this.dataGridView1.TabIndex = 149;
-            // 
-            // btnAdd
-            // 
-            this.btnAdd.Location = new System.Drawing.Point(392, 94);
-            this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(34, 26);
-            this.btnAdd.TabIndex = 149;
-            this.btnAdd.Text = "+";
-            this.btnAdd.UseVisualStyleBackColor = true;
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(429, 94);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(34, 26);
-            this.button1.TabIndex = 150;
-            this.button1.Text = "-";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // Codigo
-            // 
-            this.Codigo.HeaderText = "Código";
-            this.Codigo.Name = "Codigo";
-            // 
-            // Nombre
-            // 
-            this.Nombre.HeaderText = "Nombre";
-            this.Nombre.Name = "Nombre";
-            // 
-            // PerfilExperiencia
-            // 
-            this.PerfilExperiencia.HeaderText = "Perfil Experiencia";
-            this.PerfilExperiencia.Name = "PerfilExperiencia";
-            this.PerfilExperiencia.Width = 197;
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(185, 95);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(197, 23);
-            this.textBox2.TabIndex = 152;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(37)))), ((int)(((byte)(42)))));
-            this.label1.Location = new System.Drawing.Point(18, 95);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(56, 22);
-            this.label1.TabIndex = 151;
-            this.label1.Text = "Perfil:";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
             // frmAsignarPersonalPuntoAtencion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -370,7 +387,7 @@
             this.Controls.Add(this.label6);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmAsignarPersonalPuntoAtencion";
-            this.Text = "frmAsignarPersonalPuntoAtencion";
+            this.Text = "Asignar Personal";
             this.Load += new System.EventHandler(this.frmAsignarPersonalPuntoAtencion_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
@@ -396,8 +413,8 @@
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.Label lblHoraInicio;
         private System.Windows.Forms.Label lblHoraFin;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.ComboBox cmbHoraIni;
+        private System.Windows.Forms.ComboBox cmbHoraFin;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.TextBox textBox1;
@@ -412,5 +429,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn PerfilExperiencia;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button btnBuscarPersonal;
     }
 }

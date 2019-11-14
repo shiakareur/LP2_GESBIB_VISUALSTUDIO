@@ -12,14 +12,27 @@ namespace TA_GesBib_Cliente
 {
     public partial class frmAsignarPersonalPuntoAtencion : Form
     {
+
+        System.Windows.Forms.BindingSource bindingSource1 = new System.Windows.Forms.BindingSource();
+        List<String> horas = new List<String> { "8:00", "9:00", "10:00", "11:00", "12:00", "13:00", "14:00", "15:00", "16:00", "17:00", "18:00", "19:00", "20:00", "21:00", "22:00"};
+
+
         public frmAsignarPersonalPuntoAtencion()
         {
             InitializeComponent();
+            bindingSource1.DataSource = horas;
+
+            cmbHoraIni.DataSource = bindingSource1.DataSource;
+            cmbHoraFin.DataSource = bindingSource1.DataSource;
+            //comboBox1.DisplayMember = "Name";
+            //comboBox1.ValueMember = "Name";
         }
 
         private void frmAsignarPersonalPuntoAtencion_Load(object sender, EventArgs e)
         {
 
         }
+
+
     }
 }
