@@ -20,6 +20,7 @@ namespace TA_GesBib_Cliente
             InitializeComponent();
 
             //Al abrir el form, este es el estado de los componentes
+			// Jin SSJ was here
             limpiarComponentes();
             estadoComponentes(Estado.Inicial);
         }
