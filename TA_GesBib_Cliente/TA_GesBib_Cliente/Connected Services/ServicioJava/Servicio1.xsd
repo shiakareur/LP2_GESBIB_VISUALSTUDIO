@@ -454,12 +454,12 @@
       <xs:element name="return" type="xs:int" />
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="actualizarPracticante">
+  <xs:complexType name="insertarInasistencia">
     <xs:sequence>
-      <xs:element minOccurs="0" name="practicante" type="tns:practicante" />
+      <xs:element minOccurs="0" name="inasistencia" type="tns:inasistencia" />
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="actualizarPracticanteResponse">
+  <xs:complexType name="insertarInasistenciaResponse">
     <xs:sequence>
       <xs:element name="return" type="xs:int" />
     </xs:sequence>
@@ -472,12 +472,12 @@
       <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:tipoInasistencia" />
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="insertarInasistencia">
+  <xs:complexType name="actualizarPracticante">
     <xs:sequence>
-      <xs:element minOccurs="0" name="inasistencia" type="tns:inasistencia" />
+      <xs:element minOccurs="0" name="practicante" type="tns:practicante" />
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="insertarInasistenciaResponse">
+  <xs:complexType name="actualizarPracticanteResponse">
     <xs:sequence>
       <xs:element name="return" type="xs:int" />
     </xs:sequence>

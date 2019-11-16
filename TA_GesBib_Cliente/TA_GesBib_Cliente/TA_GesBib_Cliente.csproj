@@ -66,6 +66,12 @@
     <Compile Include="frmAsignarTurnos.Designer.cs">
       <DependentUpon>frmAsignarTurnos.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmBuscarHL.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBuscarHL.Designer.cs">
+      <DependentUpon>frmBuscarHL.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmCapacitaciones.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -228,6 +234,9 @@
     <EmbeddedResource Include="frmBuscarGestores.resx">
       <DependentUpon>frmBuscarGestores.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmBuscarHL.resx">
+      <DependentUpon>frmBuscarHL.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmCapacitaciones.resx">
       <DependentUpon>frmCapacitaciones.cs</DependentUpon>
     </EmbeddedResource>
@@ -290,8 +299,8 @@
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <None Include="Connected Services\ServicioJava\Servicio.wsdl" />
-    <None Include="Connected Services\ServicioJava\Servicio.xsd">
+    <None Include="Connected Services\ServicioJava\Servicio1.wsdl" />
+    <None Include="Connected Services\ServicioJava\Servicio1.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="Connected Services\ServicioJava\TA_GesBib_Cliente.ServicioJava.actualizarAuxiliarBibliotecaResponse.datasource">

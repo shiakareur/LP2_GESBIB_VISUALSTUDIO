@@ -168,5 +168,12 @@ namespace TA_GesBib_Cliente
                     break;
             }
         }
+
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
+            frmBuscarHL formBuscarHL = new frmBuscarHL();
+            formBuscarHL.ShowDialog();
+
+        }
     }
 }
