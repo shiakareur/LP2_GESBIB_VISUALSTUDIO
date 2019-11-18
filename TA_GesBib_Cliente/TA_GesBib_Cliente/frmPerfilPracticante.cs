@@ -280,7 +280,8 @@ namespace TA_GesBib_Cliente
                 //aca llamamos al formulario de solicitar horas libres
                 if (var_frmSolicitarHL_Practicante == null)
                 {
-                    var_frmSolicitarHL_Practicante = new frmSolicitarHL(this, TipoPerfil.PerfilPracticante);
+                    var_frmSolicitarHL_Practicante = new frmSolicitarHL(this, TipoPerfil.PerfilPracticante,
+                        var_usuario);
                     var_frmSolicitarHL_Practicante.MdiParent = this;
 
                     //...add

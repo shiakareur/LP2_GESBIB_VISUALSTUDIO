@@ -25,13 +25,10 @@ namespace TA_GesBib_Cliente
         //se agrego
         private ServicioJava.usuario var_usuario;
         private frmLogin var_formLogin;
-
         private frmRegHE var_frmRegistrarHE_Auxiliar;
         private frmRegInasistencias var_frmRegistrarInasis_Auxiliar;
-
         private frmSolicitarHL var_frmSolicitarHL_Auxiliar;
         private frmSolicitarCambioTurno var_frmSolicitarCambioTurno_Auxiliar;
-
         private frmRespuestaValidaciones var_frmRespuestasSolicitudes_Auxiliar;
         private frmVisualizarHorarios var_frmVerHorarios_Auxiliar;
 
@@ -285,7 +282,8 @@ namespace TA_GesBib_Cliente
                 //aca llamamos al formulario de solicitar horas libres
                 if (var_frmSolicitarHL_Auxiliar == null)
                 {
-                    var_frmSolicitarHL_Auxiliar = new frmSolicitarHL(this, TipoPerfil.PerfilAuxiliar);
+                    var_frmSolicitarHL_Auxiliar = new frmSolicitarHL(this, TipoPerfil.PerfilAuxiliar,
+                        var_usuario);
                     var_frmSolicitarHL_Auxiliar.MdiParent = this;
 
                     //...add

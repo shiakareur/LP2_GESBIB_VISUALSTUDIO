@@ -15,6 +15,8 @@ namespace TA_GesBib_Cliente
 
         ServicioJava.ServicioClient servTA = new ServicioJava.ServicioClient();
 
+        private ServicioJava.usuario var_usuario;
+
         private Form var_perfilPersonal;
         private TipoPerfil var_tipoPerfil = TipoPerfil.PerfilBibliotecario;
 
@@ -27,8 +29,11 @@ namespace TA_GesBib_Cliente
         }
 
 
-        public frmSolicitarHL(Form formPerfilPersonal, TipoPerfil tipoPerfil)
+        public frmSolicitarHL(Form formPerfilPersonal, TipoPerfil tipoPerfil,
+            ServicioJava.usuario _user)
         {
+
+            var_usuario = _user;
             var_perfilPersonal = formPerfilPersonal;
             var_tipoPerfil = tipoPerfil;
             InitializeComponent();
@@ -56,26 +61,29 @@ namespace TA_GesBib_Cliente
         private void btnGuardar_Click(object sender, EventArgs e)
         {
             ServicioJava.inasistencia inaHL = new ServicioJava.inasistencia();
-
-            //el ID de INASISTENCIA ES 4
-            inaHL.personal.id = 2;  //************************************************
-            inaHL.tipoInasistencia.id = 4;
-            //vamos a REGISTRAR una hora libre que es de tipo INASISTENCIA
-
+            /*sacamos el id del personal y lo asignamos*/                        
+            inaHL.personal = new ServicioJava.personal();
+            inaHL.personal.id = var_usuario.id;
+            //vamos a REGISTRAR una hora libre que es de tipo INASISTENCIA         
+            ServicioJava.tipoInasistencia _tipoIna = new ServicioJava.tipoInasistencia();
+            _tipoIna.id = 4;  //el ID de INASISTENCIA ES 4     
+            inaHL.tipoInasistencia = _tipoIna;
+            //fecha
             inaHL.fecha = dtpSoliHL.Value;
+            inaHL.fechaSpecified = true;
+            //hora inicio
             inaHL.horaInicio = txtHIni_HL.Text;
             inaHL.horaFin = txtHFin_HL.Text;
-            //inaHL.motivo = 
+            //motivo
+            inaHL.motivo = txtMotivo_HL.Text;
 
             //llamamos al SERVICIO RESPECTIVO
+            servTA.insertarInasistencia(inaHL);
 
-            //servTA.insertarInasistencia(inaHL);
-
-            //mostramos mensaje de registro exitoso
-            //....
+            //mostramos mensaje de registro exitoso                    
+            this.muestraMensajeExitoso();
 
             estadoComponentes(Estado.Inicial);
-            this.muestraMensajeExitoso();
         }
 
         public void estadoComponentes(Estado estado)
@@ -93,6 +101,7 @@ namespace TA_GesBib_Cliente
                     lblHMS_fin.Enabled = false;
 
                     //Botones
+                    btnBuscar.Enabled = true;
                     btnNuevo.Enabled = true;
                     btnGuardar.Enabled = false;
                     btnCancelar.Enabled = false;
@@ -171,7 +180,7 @@ namespace TA_GesBib_Cliente
 
         private void btnBuscar_Click(object sender, EventArgs e)
         {
-            frmBuscarHL formBuscarHL = new frmBuscarHL();
+            frmBuscarHL formBuscarHL = new frmBuscarHL(var_usuario);
             formBuscarHL.ShowDialog();
 
         }
