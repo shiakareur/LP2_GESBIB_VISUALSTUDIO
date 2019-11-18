@@ -11,12 +11,13 @@ namespace TA_GesBib_Cliente
         /// <summary>
         /// Punto de entrada principal para la aplicación.
         /// </summary>
+        public static ServicioJava.ServicioClient DBController = new ServicioJava.ServicioClient();
         [STAThread]
         static void Main()
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmLogin());
+            Application.Run(new frmAdministrarBibliotecas());
         }
     }
 }

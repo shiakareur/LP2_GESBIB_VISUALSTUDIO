@@ -41,9 +41,9 @@ namespace TA_GesBib_Cliente
                 case Estado.Inicial:
 
                     //Etiquetas
-                    lblCodigo.Enabled = false;
-                    lblNombres.Enabled = false;
-                    lblApellidos.Enabled = false;
+                    lblcodigoPers.Enabled = false;
+                    lblNomPer.Enabled = false;
+                    lblNomApe.Enabled = false;
                     lblFechaIng.Enabled = false;
                     lblCorreo.Enabled = false;
                     lblClave.Enabled = false;
@@ -72,9 +72,9 @@ namespace TA_GesBib_Cliente
 
                 case Estado.Nuevo:
                     //Etiquetas
-                    lblCodigo.Enabled = true;
-                    lblNombres.Enabled = true;
-                    lblApellidos.Enabled = true;
+                    lblcodigoPers.Enabled = true;
+                    lblNomPer.Enabled = true;
+                    lblNomApe.Enabled = true;
                     lblFechaIng.Enabled = true;
                     lblCorreo.Enabled = true;
                     lblClave.Enabled = true;
@@ -110,9 +110,9 @@ namespace TA_GesBib_Cliente
                     break;
                 case Estado.Modificar:
                     //Etiquetas
-                    lblCodigo.Enabled = true;
-                    lblNombres.Enabled = true;
-                    lblApellidos.Enabled = true;
+                    lblcodigoPers.Enabled = true;
+                    lblNomPer.Enabled = true;
+                    lblNomApe.Enabled = true;
                     lblFechaIng.Enabled = true;
                     lblCorreo.Enabled = true;
                     lblClave.Enabled = true;
@@ -172,16 +172,6 @@ namespace TA_GesBib_Cliente
             //var_formPerfilAdmin.PanelAviso.Visible = true;
         }
 
-        private void lblFechaNac_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnGuardar_Click(object sender, EventArgs e)
         {
             //Volver al estado inicial
@@ -216,9 +206,5 @@ namespace TA_GesBib_Cliente
             this.Dispose();
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            this.Dispose();
-        }
     }
 }

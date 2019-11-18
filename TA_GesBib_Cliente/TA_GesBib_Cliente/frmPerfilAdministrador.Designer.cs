@@ -42,8 +42,6 @@
             this.lblTipoPerfil = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lblNombreUsuario = new System.Windows.Forms.Label();
-            this.panelAviso = new System.Windows.Forms.Panel();
-            this.lblBienvenido = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -83,12 +81,12 @@
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Bahnschrift", 14.25F, System.Drawing.FontStyle.Bold);
             this.button2.Image = global::TA_GesBib_Cliente.Properties.Resources.icono_ver_grande;
-            this.button2.Location = new System.Drawing.Point(25, 374);
+            this.button2.Location = new System.Drawing.Point(25, 373);
             this.button2.Margin = new System.Windows.Forms.Padding(4);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(200, 60);
             this.button2.TabIndex = 61;
-            this.button2.Text = "VER COMO";
+            this.button2.Text = "Ver como...";
             this.button2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button2.UseVisualStyleBackColor = false;
             // 
@@ -106,7 +104,7 @@
             this.btnAdmGestores.Name = "btnAdmGestores";
             this.btnAdmGestores.Size = new System.Drawing.Size(200, 60);
             this.btnAdmGestores.TabIndex = 60;
-            this.btnAdmGestores.Text = "ADMINISTRAR\r\nGESTORES";
+            this.btnAdmGestores.Text = "Administración de gestores";
             this.btnAdmGestores.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnAdmGestores.UseVisualStyleBackColor = false;
             this.btnAdmGestores.Click += new System.EventHandler(this.btnAdmGestores_Click);
@@ -121,12 +119,12 @@
             this.btnCerrarSesion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCerrarSesion.Font = new System.Drawing.Font("Bahnschrift", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCerrarSesion.Image = global::TA_GesBib_Cliente.Properties.Resources.icono_cerrar_sesion_pequeño;
-            this.btnCerrarSesion.Location = new System.Drawing.Point(25, 519);
+            this.btnCerrarSesion.Location = new System.Drawing.Point(24, 526);
             this.btnCerrarSesion.Margin = new System.Windows.Forms.Padding(4);
             this.btnCerrarSesion.Name = "btnCerrarSesion";
-            this.btnCerrarSesion.Size = new System.Drawing.Size(200, 50);
+            this.btnCerrarSesion.Size = new System.Drawing.Size(200, 60);
             this.btnCerrarSesion.TabIndex = 59;
-            this.btnCerrarSesion.Text = "CERRAR SESIÓN";
+            this.btnCerrarSesion.Text = "Cerrar sesión";
             this.btnCerrarSesion.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnCerrarSesion.UseVisualStyleBackColor = false;
             this.btnCerrarSesion.Click += new System.EventHandler(this.btnCerrarSesion_Click);
@@ -139,12 +137,12 @@
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Font = new System.Drawing.Font("Bahnschrift", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.Image = global::TA_GesBib_Cliente.Properties.Resources.icono_configuracion_pequeño;
-            this.button3.Location = new System.Drawing.Point(25, 470);
+            this.button3.Location = new System.Drawing.Point(24, 462);
             this.button3.Margin = new System.Windows.Forms.Padding(4);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(200, 50);
+            this.button3.Size = new System.Drawing.Size(200, 60);
             this.button3.TabIndex = 58;
-            this.button3.Text = "CONFIGURACIÓN";
+            this.button3.Text = "Configuración";
             this.button3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button3.UseVisualStyleBackColor = false;
             // 
@@ -162,7 +160,7 @@
             this.btnAdmBibliotecas.Name = "btnAdmBibliotecas";
             this.btnAdmBibliotecas.Size = new System.Drawing.Size(200, 60);
             this.btnAdmBibliotecas.TabIndex = 57;
-            this.btnAdmBibliotecas.Text = "ADMINISTRAR BIBLIOTECAS";
+            this.btnAdmBibliotecas.Text = "Administración de bibliotecas";
             this.btnAdmBibliotecas.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnAdmBibliotecas.UseVisualStyleBackColor = false;
             this.btnAdmBibliotecas.Click += new System.EventHandler(this.btnAdmBibliotecas_Click);
@@ -181,7 +179,7 @@
             this.btnAdmPersonal.Name = "btnAdmPersonal";
             this.btnAdmPersonal.Size = new System.Drawing.Size(200, 60);
             this.btnAdmPersonal.TabIndex = 41;
-            this.btnAdmPersonal.Text = "ADMINISTRAR\r\nPERSONAL";
+            this.btnAdmPersonal.Text = "Administración de personal";
             this.btnAdmPersonal.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnAdmPersonal.UseVisualStyleBackColor = false;
             this.btnAdmPersonal.Click += new System.EventHandler(this.btnAdministrarPersonal_Click_1);
@@ -250,33 +248,10 @@
             this.lblNombreUsuario.Location = new System.Drawing.Point(93, 77);
             this.lblNombreUsuario.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblNombreUsuario.Name = "lblNombreUsuario";
-            this.lblNombreUsuario.Size = new System.Drawing.Size(90, 23);
+            this.lblNombreUsuario.Size = new System.Drawing.Size(131, 23);
             this.lblNombreUsuario.TabIndex = 0;
-            this.lblNombreUsuario.Text = "Arianator";
+            this.lblNombreUsuario.Text = "Administrador";
             this.lblNombreUsuario.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // panelAviso
-            // 
-            this.panelAviso.BackColor = System.Drawing.Color.Yellow;
-            this.panelAviso.BackgroundImage = global::TA_GesBib_Cliente.Properties.Resources.posit;
-            this.panelAviso.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panelAviso.Location = new System.Drawing.Point(554, 196);
-            this.panelAviso.Name = "panelAviso";
-            this.panelAviso.Size = new System.Drawing.Size(343, 285);
-            this.panelAviso.TabIndex = 59;
-            // 
-            // lblBienvenido
-            // 
-            this.lblBienvenido.AutoSize = true;
-            this.lblBienvenido.BackColor = System.Drawing.SystemColors.Window;
-            this.lblBienvenido.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblBienvenido.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.lblBienvenido.Location = new System.Drawing.Point(430, 89);
-            this.lblBienvenido.Name = "lblBienvenido";
-            this.lblBienvenido.Size = new System.Drawing.Size(449, 33);
-            this.lblBienvenido.TabIndex = 58;
-            this.lblBienvenido.Text = "Bienvenido, te informamos que ...";
-            this.lblBienvenido.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // frmPerfilAdministrador
             // 
@@ -286,8 +261,6 @@
             this.BackgroundImage = global::TA_GesBib_Cliente.Properties.Resources.biblio_ari_borroso;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1188, 679);
-            this.Controls.Add(this.lblBienvenido);
-            this.Controls.Add(this.panelAviso);
             this.Controls.Add(this.panel1);
             this.DoubleBuffered = true;
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
@@ -304,7 +277,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -322,7 +294,5 @@
         private System.Windows.Forms.Button btnAdmPersonal;
         private System.Windows.Forms.Button btnAdmGestores;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Panel panelAviso;
-        private System.Windows.Forms.Label lblBienvenido;
     }
 }

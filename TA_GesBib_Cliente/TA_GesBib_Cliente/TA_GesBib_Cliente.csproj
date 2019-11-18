@@ -84,6 +84,12 @@
     <Compile Include="frmCrearDiaCapacitacion.Designer.cs">
       <DependentUpon>frmCrearDiaCapacitacion.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmModificarPuntoAtencion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmModificarPuntoAtencion.designer.cs">
+      <DependentUpon>frmModificarPuntoAtencion.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmCrearPuntoAtencion.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -236,6 +242,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmCrearDiaCapacitacion.resx">
       <DependentUpon>frmCrearDiaCapacitacion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmModificarPuntoAtencion.resx">
+      <DependentUpon>frmModificarPuntoAtencion.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmCrearPuntoAtencion.resx">
       <DependentUpon>frmCrearPuntoAtencion.cs</DependentUpon>
@@ -581,6 +590,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\icono-regresar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-menos-30.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-más-30.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-lápiz-30.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

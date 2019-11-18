@@ -15,8 +15,6 @@ namespace TA_GesBib_Cliente
         private ServicioJava.usuario var_usuario;
 
         private frmLogin var_formLogin;
-        public Panel PanelAviso { get => panelAviso; set => panelAviso = value; }
-        public Label LblBienvenido { get => lblBienvenido; set => lblBienvenido = value; }
 
         public frmPerfilAdministrador()
         {
@@ -85,8 +83,6 @@ namespace TA_GesBib_Cliente
 
         private void btnAdministrarPersonal_Click_1(object sender, EventArgs e)
         {
-            lblBienvenido.Visible = false;
-            panelAviso.Visible = false;
 
             
             frmAdministrarPersonal formAdminPersonal = new frmAdministrarPersonal(this);
@@ -108,11 +104,6 @@ namespace TA_GesBib_Cliente
 
         private void btnAdmGestores_Click(object sender, EventArgs e)
         {
-
-            lblBienvenido.Visible = false;
-            panelAviso.Visible = false;
-
-
             frmAdministrarGestores frmAdmGestores = new frmAdministrarGestores(this);
             frmAdmGestores.MdiParent = this;
             frmAdmGestores.Show();
@@ -123,20 +114,11 @@ namespace TA_GesBib_Cliente
         private void btnAdmBibliotecas_Click(object sender, EventArgs e)
         {
 
-            lblBienvenido.Visible = false;
-            panelAviso.Visible = false;
-
-
             frmAdministrarBibliotecas frmAdmBibliotecas = new frmAdministrarBibliotecas(this);
             frmAdmBibliotecas.MdiParent = this;
             frmAdmBibliotecas.Show();
             frmAdmBibliotecas.Location = new Point(0, 0);
             frmAdmBibliotecas.Size = new Size(934, 675);
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void btnCerrarSesion_Click(object sender, EventArgs e)

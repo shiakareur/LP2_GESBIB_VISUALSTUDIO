@@ -99,7 +99,7 @@
             // 
             this.lblApellido.AutoSize = true;
             this.lblApellido.Font = new System.Drawing.Font("Bahnschrift", 14.25F, System.Drawing.FontStyle.Bold);
-            this.lblApellido.Location = new System.Drawing.Point(384, 14);
+            this.lblApellido.Location = new System.Drawing.Point(380, 12);
             this.lblApellido.Name = "lblApellido";
             this.lblApellido.Size = new System.Drawing.Size(83, 23);
             this.lblApellido.TabIndex = 21;
@@ -131,7 +131,7 @@
             // 
             this.lblNombre.AutoSize = true;
             this.lblNombre.Font = new System.Drawing.Font("Bahnschrift", 14.25F, System.Drawing.FontStyle.Bold);
-            this.lblNombre.Location = new System.Drawing.Point(26, 15);
+            this.lblNombre.Location = new System.Drawing.Point(24, 12);
             this.lblNombre.Name = "lblNombre";
             this.lblNombre.Size = new System.Drawing.Size(81, 23);
             this.lblNombre.TabIndex = 18;
@@ -154,17 +154,17 @@
             this.Nombre.HeaderText = "Nombres";
             this.Nombre.Name = "Nombre";
             this.Nombre.ReadOnly = true;
-            this.Nombre.Width = 300;
+            this.Nombre.Width = 400;
             // 
             // Especialidad
             // 
+            this.Especialidad.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.Especialidad.DataPropertyName = "Apellido";
             dataGridViewCellStyle4.Font = new System.Drawing.Font("Bahnschrift", 14.25F, System.Drawing.FontStyle.Bold);
             this.Especialidad.DefaultCellStyle = dataGridViewCellStyle4;
             this.Especialidad.HeaderText = "Apellidos";
             this.Especialidad.Name = "Especialidad";
             this.Especialidad.ReadOnly = true;
-            this.Especialidad.Width = 350;
             // 
             // frmBuscarGestores
             // 
