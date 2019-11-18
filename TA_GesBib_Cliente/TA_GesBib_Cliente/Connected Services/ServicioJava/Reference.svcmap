@@ -19,11 +19,11 @@
     <ServiceContractMappings />
   </ClientOptions>
   <MetadataSources>
-    <MetadataSource Address="http://192.168.205.106:8080/GesBibServices/Servicio?WSDL" Protocol="http" SourceId="1" />
+    <MetadataSource Address="http://192.168.0.4:8080/GesBibServices/Servicio?WSDL" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="Servicio1.wsdl" MetadataType="Wsdl" ID="bc6307a4-cbb8-4c5c-8cc4-4ffd31693007" SourceId="1" SourceUrl="http://192.168.205.106:8080/GesBibServices/Servicio?WSDL" />
-    <MetadataFile FileName="Servicio1.xsd" MetadataType="Schema" ID="f22f0769-d3b6-43f5-abb9-5b817690c686" SourceId="1" SourceUrl="http://192.168.205.106:8080/GesBibServices/Servicio?xsd=1" />
+    <MetadataFile FileName="Servicio.wsdl" MetadataType="Wsdl" ID="ae25aef1-0932-46f6-9537-7ebb4521a76e" SourceId="1" SourceUrl="http://192.168.0.4:8080/GesBibServices/Servicio?WSDL" />
+    <MetadataFile FileName="Servicio.xsd" MetadataType="Schema" ID="f7b8b864-a4f3-495c-aa7c-a17dfe5022b1" SourceId="1" SourceUrl="http://192.168.0.4:8080/GesBibServices/Servicio?xsd=1" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

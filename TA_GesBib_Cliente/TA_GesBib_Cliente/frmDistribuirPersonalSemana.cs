@@ -10,19 +10,24 @@ using System.Windows.Forms;
 
 namespace TA_GesBib_Cliente
 {
-    public partial class frmDistribuirPersonal : Form
+    public partial class frmDistribuirPersonalSemana : Form
     {
         private ServicioJava.distribucionPersonal distrib = new ServicioJava.distribucionPersonal();
         ServicioJava.ServicioClient DBController = new ServicioJava.ServicioClient();
 
-        public frmDistribuirPersonal()
+        public frmDistribuirPersonalSemana()
         {
             InitializeComponent();
             dgvDitribucion.Rows[0].Cells[1].Style.BackColor = Color.PowderBlue;
             //dgvDitribucion.Columns[1].SortMode = DataGridViewColumnSortMode.NotSortable;
             //Daywisegrid.Rows[RowIndex].Cells[columnIndex].Style.BackColor = Color.Red;
         }
+        public frmDistribuirPersonalSemana(ServicioJava.usuario usuario)
+        {
+            InitializeComponent();
+            dgvDitribucion.Rows[0].Cells[1].Style.BackColor = Color.PowderBlue;
 
+        }
         private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
         {
 

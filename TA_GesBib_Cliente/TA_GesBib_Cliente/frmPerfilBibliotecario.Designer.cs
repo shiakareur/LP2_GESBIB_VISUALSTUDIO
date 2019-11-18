@@ -67,11 +67,11 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Arial Unicode MS", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(67)))), ((int)(((byte)(232)))));
             this.label3.Location = new System.Drawing.Point(18, 84);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(196, 15);
+            this.label3.Size = new System.Drawing.Size(196, 13);
             this.label3.TabIndex = 13;
             this.label3.Text = "___________________________";
             // 
@@ -163,11 +163,11 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Arial Unicode MS", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(67)))), ((int)(((byte)(232)))));
             this.label2.Location = new System.Drawing.Point(15, 520);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(224, 15);
+            this.label2.Size = new System.Drawing.Size(224, 13);
             this.label2.TabIndex = 15;
             this.label2.Text = "_______________________________";
             // 

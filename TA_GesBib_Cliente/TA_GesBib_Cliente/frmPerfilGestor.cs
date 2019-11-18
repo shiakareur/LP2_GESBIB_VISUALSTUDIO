@@ -26,11 +26,14 @@ namespace TA_GesBib_Cliente
             InitializeComponent();
         }
 
-        public frmPerfilGestor(frmLogin formLogin,ServicioJava.usuario _user) //con paramtero this 
+        public frmPerfilGestor(frmLogin formLogin, ServicioJava.usuario _user) //con paramtero this 
         {
             var_formLogin = formLogin;
             var_usuario = _user;
+            
             InitializeComponent();
+            lblNombreUsuario.Text = var_usuario.nombre;
+            customizeDesign(); // <---- para los PANELES
         }
 
         private void btnCerrarSesion_Click(object sender, EventArgs e)
@@ -56,6 +59,33 @@ namespace TA_GesBib_Cliente
 
 
         }
+        //...................PANELES v2 ................................
+
+        private void customizeDesign()
+        {
+            panelDistribucion.Visible = false;
+        }
+
+        private void hideSubMenu()
+        {
+            if (panelDistribucion.Visible == true)
+                panelDistribucion.Visible = false;
+        }
+
+        private void showSubMenu(Panel subMenu)
+        {
+            //alterna la visibilidad del submenu actual con el submenu anterior
+
+            if (subMenu.Visible == false)
+            {
+                hideSubMenu();
+                subMenu.Visible = true;
+            }
+            else
+                subMenu.Visible = false;
+        }
+        //...................PANELES v2 ................................
+
 
         private void btnAdmPerfilesExp_Click(object sender, EventArgs e)
         {
@@ -83,6 +113,33 @@ namespace TA_GesBib_Cliente
             frmCapa.MdiParent = this;
             frmCapa.Show();
             frmCapa.Location = new Point(0, 0);
+        }
+
+        private void btnDistribucionPersonal_Click(object sender, EventArgs e)
+        {
+            showSubMenu(panelDistribucion);
+        }
+
+        private void btnSemestre_Click(object sender, EventArgs e)
+        {
+            frmDistribucionSemestre formDistSemestre = new frmDistribucionSemestre(var_usuario);
+            formDistSemestre.MdiParent = this;
+            formDistSemestre.Show();
+            formDistSemestre.Location = new Point(0, 0);
+            formDistSemestre.Size = new Size(934, 675);
+
+            hideSubMenu();
+        }
+
+        private void btnSemana_Click(object sender, EventArgs e)
+        {
+            frmDistribuirPersonalSemana formDistSemana = new frmDistribuirPersonalSemana(var_usuario);
+            formDistSemana.MdiParent = this;
+            formDistSemana.Show();
+            formDistSemana.Location = new Point(0, 0);
+            formDistSemana.Size = new Size(934, 675);
+
+            hideSubMenu();
         }
     }
 }

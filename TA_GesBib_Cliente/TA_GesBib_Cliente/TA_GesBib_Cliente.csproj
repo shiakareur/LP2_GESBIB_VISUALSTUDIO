@@ -109,11 +109,17 @@
     <Compile Include="frmBuscarGestores.Designer.cs">
       <DependentUpon>frmBuscarGestores.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmDistribuirPersonal.cs">
+    <Compile Include="frmDistribucionSemestre.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmDistribuirPersonal.Designer.cs">
-      <DependentUpon>frmDistribuirPersonal.cs</DependentUpon>
+    <Compile Include="frmDistribucionSemestre.Designer.cs">
+      <DependentUpon>frmDistribucionSemestre.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmDistribuirPersonalSemana.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDistribuirPersonalSemana.Designer.cs">
+      <DependentUpon>frmDistribuirPersonalSemana.cs</DependentUpon>
     </Compile>
     <Compile Include="frmPerfilAuxiliar.cs">
       <SubType>Form</SubType>
@@ -265,8 +271,8 @@
     <EmbeddedResource Include="frmBuscarPersonalBiblioteca.resx">
       <DependentUpon>frmBuscarPersonalBiblioteca.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmDistribuirPersonal.resx">
-      <DependentUpon>frmDistribuirPersonal.cs</DependentUpon>
+    <EmbeddedResource Include="frmDistribuirPersonalSemana.resx">
+      <DependentUpon>frmDistribuirPersonalSemana.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
@@ -309,8 +315,8 @@
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <None Include="Connected Services\ServicioJava\Servicio1.wsdl" />
-    <None Include="Connected Services\ServicioJava\Servicio1.xsd">
+    <None Include="Connected Services\ServicioJava\Servicio.wsdl" />
+    <None Include="Connected Services\ServicioJava\Servicio.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="Connected Services\ServicioJava\TA_GesBib_Cliente.ServicioJava.actualizarAuxiliarBibliotecaResponse.datasource">
@@ -600,6 +606,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\icono-regresar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-editar-2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-notas-del-orador-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-aula-50.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

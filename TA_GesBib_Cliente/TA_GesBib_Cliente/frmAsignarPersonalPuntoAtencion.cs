@@ -33,6 +33,44 @@ namespace TA_GesBib_Cliente
 
         }
 
+        private void lblPuntoAtencion_Click(object sender, EventArgs e)
+        {
 
+        }
+
+        private void textBox5_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblHoraFin_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblHoraInicio_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cmbHoraIni_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cmbHoraFin_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }
