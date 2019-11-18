@@ -35,10 +35,10 @@
             this.lblNombre = new System.Windows.Forms.Label();
             this.btnSeleccionar = new System.Windows.Forms.Button();
             this.dgvBibliotecas = new System.Windows.Forms.DataGridView();
-            this.DNI = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Gestor = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnBuscarBib = new System.Windows.Forms.Button();
             this.btnSeleccionarBib = new System.Windows.Forms.Button();
+            this.DNI = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Gestor = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvBibliotecas)).BeginInit();
             this.SuspendLayout();
             // 
@@ -99,27 +99,7 @@
             this.dgvBibliotecas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvBibliotecas.Size = new System.Drawing.Size(864, 239);
             this.dgvBibliotecas.TabIndex = 5;
-            // 
-            // DNI
-            // 
-            this.DNI.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.DNI.DataPropertyName = "Nombre";
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Bahnschrift Condensed", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DNI.DefaultCellStyle = dataGridViewCellStyle2;
-            this.DNI.Frozen = true;
-            this.DNI.HeaderText = "Nombre";
-            this.DNI.Name = "DNI";
-            this.DNI.ReadOnly = true;
-            this.DNI.Width = 104;
-            // 
-            // Gestor
-            // 
-            this.Gestor.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Bahnschrift", 14.25F, System.Drawing.FontStyle.Bold);
-            this.Gestor.DefaultCellStyle = dataGridViewCellStyle3;
-            this.Gestor.HeaderText = "Gestor";
-            this.Gestor.Name = "Gestor";
-            this.Gestor.ReadOnly = true;
+            this.dgvBibliotecas.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgvBibliotecas_CellFormatting_1);
             // 
             // btnBuscarBib
             // 
@@ -149,6 +129,26 @@
             this.btnSeleccionarBib.UseVisualStyleBackColor = false;
             this.btnSeleccionarBib.Click += new System.EventHandler(this.btnSeleccionarBib_Click);
             // 
+            // DNI
+            // 
+            this.DNI.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Bahnschrift Condensed", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DNI.DefaultCellStyle = dataGridViewCellStyle2;
+            this.DNI.Frozen = true;
+            this.DNI.HeaderText = "Nombre";
+            this.DNI.Name = "DNI";
+            this.DNI.ReadOnly = true;
+            this.DNI.Width = 104;
+            // 
+            // Gestor
+            // 
+            this.Gestor.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Bahnschrift", 14.25F, System.Drawing.FontStyle.Bold);
+            this.Gestor.DefaultCellStyle = dataGridViewCellStyle3;
+            this.Gestor.HeaderText = "Gestor";
+            this.Gestor.Name = "Gestor";
+            this.Gestor.ReadOnly = true;
+            // 
             // frmBuscarBiblioteca
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -162,7 +162,6 @@
             this.Controls.Add(this.btnSeleccionar);
             this.Controls.Add(this.dgvBibliotecas);
             this.Name = "frmBuscarBiblioteca";
-            this.Load += new System.EventHandler(this.frmBuscarBiblioteca_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvBibliotecas)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -12,65 +12,69 @@ namespace TA_GesBib_Cliente
 {
     public partial class frmAdministrarBibliotecas : Form
     {
-        //para estados
-        Estado estadoObjBiblioteca;
-        //Servicio
-        ServicioJava.ServicioClient servGesBib = new ServicioJava.ServicioClient();
-        //Gestor
-        ServicioJava.biblioteca biblioteca = new ServicioJava.biblioteca();
-        private frmPerfilAdministrador var_formPerfilAdmin;
+        private ServicioJava.biblioteca biblioteca;
+        private ServicioJava.gestor gestor;
+        private Estado estadoBiblioteca;
+        private BindingList<ServicioJava.puntosAtencion> listaPAasignados;
+
+        //Si lo abro sin LOGIN
         public frmAdministrarBibliotecas()
         {
             InitializeComponent();
-
-            //Al abrir el form, este es el estado de los componentes
-            limpiarComponentes();
             estadoComponentes(Estado.Inicial);
-            
         }
-
+        //Si lo abro con LOGIN
         public frmAdministrarBibliotecas(frmPerfilAdministrador formPerfilAdmin)
         {
-            //var_formPerfilAdmin = formPerfilAdmin;
             InitializeComponent();
-            
+            estadoComponentes(Estado.Inicial);
         }
 
         //Estados
-        public void estadoComponentes(Estado estado)
-        {
-            switch (estado)
-            {
-                case Estado.Inicial:
+        public void estadoComponentes(Estado estado){
 
+            switch (estado){
+                case Estado.Inicial:
                     //Etiquetas
-                    lblNombre.Enabled = false;
-                    lblGestorAsig.Enabled = false;
+                    lblCodGestor.Enabled = false;
+                    lblNomBib.Enabled = false;
+                    lblNomGes.Enabled = false;                   
                     //Botones
                     btnNuevo.Enabled = true;
                     btnModificar.Enabled = false;
                     btnGuardar.Enabled = false;
                     btnCancelar.Enabled = false;
                     btnBuscar.Enabled = true;
+                    btnAgregarPA.Enabled = false;
+                    btnQuitarPA.Enabled = false;
+                    btnEliminar.Enabled = false;
+                    btnBuscarGestor.Enabled = false;
+                    //DGV
+                    dgvPuntosAtencion.Enabled = false;
                     //Campos de Texto
                     txtNombreBib.Enabled = false;
-
+                    txtCodigo.Enabled = false;
+                    txtNombreGestor.Enabled = false;
                     break;
-
                 case Estado.Nuevo:
                     //Etiquetas
-                    lblNombre.Enabled = true;
-                    lblGestorAsig.Enabled = true;
-
+                    lblCodGestor.Enabled = true;
+                    lblNomBib.Enabled = true;
+                    lblNomGes.Enabled = true;
                     //Botones
                     btnNuevo.Enabled = false;
                     btnGuardar.Enabled = true;
                     btnModificar.Enabled = false;
                     btnCancelar.Enabled = true;
                     btnBuscar.Enabled = false;
+                    btnAgregarPA.Enabled = true;
+                    btnQuitarPA.Enabled = true;
+                    btnEliminar.Enabled = false;
+                    btnBuscarGestor.Enabled = true;
                     //Campos de Texto
                     txtNombreBib.Enabled = true;
-
+                    txtCodigo.Enabled = true;
+                    txtNombreGestor.Enabled = true;
                     break;
                 case Estado.Buscar:
                     //Botones
@@ -82,10 +86,9 @@ namespace TA_GesBib_Cliente
                     break;
                 case Estado.Modificar:
                     //Etiquetas
-                    lblNombre.Enabled = true;
-                    lblGestorAsig.Enabled = true;
-
-
+                    lblCodGestor.Enabled = true;
+                    lblNomBib.Enabled = true;
+                    lblNomGes.Enabled = true;
                     //Botones
                     btnNuevo.Enabled = false;
                     btnGuardar.Enabled = true;
@@ -94,39 +97,15 @@ namespace TA_GesBib_Cliente
                     btnBuscar.Enabled = false;
                     //Campos de Texto
                     txtNombreBib.Enabled = true;
-
                     break;
             }
         }
-
         public void limpiarComponentes()
         {
             txtNombreBib.Text = "";
-
-
-        }
-
-        private void frmAdministrarPersonal_Load(object sender, EventArgs e)
-        {   
-           
-            //this.WindowState = FormWindowState.Maximized;
-        }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-            this.Dispose();
-            //var_formPerfilAdmin.LblBienvenido.Visible = true;
-            //var_formPerfilAdmin.PanelAviso.Visible = true;
-        }
-
-        private void lblFechaNac_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
+            txtCodigo.Text = "";
+            txtNombreGestor.Text = "";
+            dgvPuntosAtencion.DataSource = null;
         }
 
         private void btnGuardar_Click(object sender, EventArgs e)
@@ -145,21 +124,20 @@ namespace TA_GesBib_Cliente
             
             bib.gestor.codigo = txtCodigo.Text;
 
-            if (estadoObjBiblioteca == Estado.Nuevo)
+            if (estadoBiblioteca == Estado.Nuevo)
             {
-                servGesBib.insertarBiblioteca(bib);
+                Program.DBController.insertarBiblioteca(bib);
                 //Mostramos un mensaje de exito
                 MessageBox.Show("Biblioteca Registrada exitosamente", "Mensaje Confirmacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
-            else if (estadoObjBiblioteca == Estado.Modificar)
+            else if (estadoBiblioteca == Estado.Modificar)
             {
-                servGesBib.actualizarBiblioteca(bib);
+                Program.DBController.actualizarBiblioteca(bib);
                 MessageBox.Show("Se han actualizado los datos", "Mensaje Confirmacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             estadoComponentes(Estado.Inicial);
 
         }
-
         private void btnCancelar_Click(object sender, EventArgs e)
         {
             //Volver al estado inicial
@@ -169,68 +147,79 @@ namespace TA_GesBib_Cliente
 
         private void btnNuevo_Click(object sender, EventArgs e)
         {
-            limpiarComponentes();
-
-            //Instanciamos uno nuevo
-            biblioteca = new ServicioJava.biblioteca();
-
-            estadoObjBiblioteca = Estado.Nuevo;
             estadoComponentes(Estado.Nuevo);
+            limpiarComponentes();
+            biblioteca = new ServicioJava.biblioteca();
+            listaPAasignados = new BindingList<ServicioJava.puntosAtencion>();
+            dgvPuntosAtencion.AutoGenerateColumns = false;
+            dgvPuntosAtencion.DataSource = listaPAasignados;
+            estadoBiblioteca = Estado.Nuevo;
         }
 
         private void btnBuscar_Click(object sender, EventArgs e)
         {
-            //frmBuscarBiblioteca frmBuscarBib = new frmBuscarBiblioteca();
-            //if (frmBuscarBib.ShowDialog() == DialogResult.OK)
-            //{
-            //    estadoComponentes(Estado.Buscar);
-            //}
-
             frmBuscarBiblioteca frmBuscarBib = new frmBuscarBiblioteca();
             if (frmBuscarBib.ShowDialog() == DialogResult.OK)
             {
-                try
-                {
+                try{
                     biblioteca = frmBuscarBib.BibliotecaSeleccionada;
                     txtNombreBib.Text = biblioteca.nombre;
                     txtNombreGestor.Text = biblioteca.gestor.nombre + " " + biblioteca.gestor.apellido;
-
                     txtCodigo.Text = biblioteca.gestor.id.ToString();
 
-                    dgvPuntosAtencion.DataSource = servGesBib.listarPuntosAtencion(biblioteca.id);
-
+                    listaPAasignados = new BindingList<ServicioJava.puntosAtencion>(biblioteca.listaPuntosAtencion);
+                    dgvPuntosAtencion.AutoGenerateColumns = false;
+                    dgvPuntosAtencion.DataSource = listaPAasignados;
                     estadoComponentes(Estado.Buscar);
                 }
-                catch (Exception ex)
-                {
+                catch (Exception ex){
                     System.Console.WriteLine("Error");
-                }
-               
-                }
-
+                }   
+            }
         }
 
         private void btnCerrar_Click(object sender, EventArgs e)
         {
             this.Dispose();
         }
-
         private void btnCrearPuntoAtencion_Click(object sender, EventArgs e)
         {
             frmCrearPuntoAtencion frmCrearPA = new frmCrearPuntoAtencion();
             frmCrearPA.Show();
             frmCrearPA.Location = new Point(0, 0);
         }
-
-        private void btnCerrar_Click_1(object sender, EventArgs e)
+        private void btnBuscarGestor_Click(object sender, EventArgs e)
         {
-            this.Dispose();
+            frmBuscarGestores formBuscarGestores = new frmBuscarGestores();
+            formBuscarGestores.Show();
+            formBuscarGestores.Location = new Point(0, 0);
+        }
+        private void btnAgregarPA_Click(object sender, EventArgs e)
+        {
+            frmCrearPuntoAtencion formCrearPA = new frmCrearPuntoAtencion();
+            formCrearPA.Show();
+            formCrearPA.Location = new Point(0, 0);
+        }
+        private void btnEditarPA_Click(object sender, EventArgs e)
+        {
+            frmModificarPuntoAtencion formmodificarPA = new frmModificarPuntoAtencion();
+            formmodificarPA.Show();
+            formmodificarPA.Location = new Point(0, 0);
         }
 
-        private void btnCerrar_Click_2(object sender, EventArgs e)
+        private void dgvPuntosAtencion_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
         {
-            this.Dispose();
-        }
+            try { 
+                ServicioJava.puntosAtencion objPA = dgvPuntosAtencion.Rows[e.RowIndex].DataBoundItem as ServicioJava.puntosAtencion;
+                dgvPuntosAtencion.Rows[e.RowIndex].Cells[0].Value = objPA.nombre;
+                dgvPuntosAtencion.Rows[e.RowIndex].Cells[1].Value = objPA.piso;
+                dgvPuntosAtencion.Rows[e.RowIndex].Cells[2].Value = objPA.cant_min_pers;
+                dgvPuntosAtencion.Rows[e.RowIndex].Cells[3].Value = objPA.cant_opt_pers;
+                dgvPuntosAtencion.Rows[e.RowIndex].Cells[4].Value = objPA.perfilExperiencia.nombrePerfil;
+            }catch(Exception ex)
+                {
 
+                }
+}
     }
 }

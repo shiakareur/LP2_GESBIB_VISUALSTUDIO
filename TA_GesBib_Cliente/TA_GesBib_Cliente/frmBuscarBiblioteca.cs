@@ -9,34 +9,18 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace TA_GesBib_Cliente
-{
-    
+{  
     public partial class frmBuscarBiblioteca : Form
     {
         private ServicioJava.biblioteca bibliotecaSeleccionada;
-        ServicioJava.ServicioClient DBController = new ServicioJava.ServicioClient();
-
-        
         public frmBuscarBiblioteca()
         {
             InitializeComponent();
             dgvBibliotecas.AutoGenerateColumns = false;
-            dgvBibliotecas.DataSource = DBController.listarBibliotecasPorNombre("");
+            dgvBibliotecas.DataSource = Program.DBController.listarBibliotecasPorNombre(txtNombre.Text);
         }
 
         public ServicioJava.biblioteca BibliotecaSeleccionada { get => bibliotecaSeleccionada; set => bibliotecaSeleccionada = value; }
-
-        private void dgvGestores_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
-        {
-            ServicioJava.biblioteca bibliotecaFila = dgvBibliotecas.Rows[e.RowIndex].DataBoundItem as ServicioJava.biblioteca;
-            try
-            {
-                dgvBibliotecas.Rows[e.RowIndex].Cells[1].Value = bibliotecaFila.gestor.nombre + " " + bibliotecaFila.gestor.apellido;
-            }
-            catch (Exception ex) {
-                System.Console.WriteLine("Error");
-            }
-        }
 
         private void btnSeleccionarBib_Click(object sender, EventArgs e)
         {
@@ -46,12 +30,14 @@ namespace TA_GesBib_Cliente
 
         private void btnBuscarBib_Click(object sender, EventArgs e)
         {
-            dgvBibliotecas.DataSource = DBController.listarBibliotecasPorNombre(txtNombre.Text);
+            dgvBibliotecas.DataSource = Program.DBController.listarBibliotecasPorNombre(txtNombre.Text);
         }
 
-        private void frmBuscarBiblioteca_Load(object sender, EventArgs e)
+        private void dgvBibliotecas_CellFormatting_1(object sender, DataGridViewCellFormattingEventArgs e)
         {
-
+            ServicioJava.biblioteca objBiblio = dgvBibliotecas.Rows[e.RowIndex].DataBoundItem as ServicioJava.biblioteca;
+            dgvBibliotecas.Rows[e.RowIndex].Cells[0].Value = objBiblio.nombre;
+            dgvBibliotecas.Rows[e.RowIndex].Cells[1].Value = objBiblio.gestor.nombre + " " + objBiblio.gestor.apellido;
         }
     }
 }

@@ -1,6 +1,6 @@
 ﻿namespace TA_GesBib_Cliente
 {
-    partial class frmCrearPuntoAtencion
+    partial class frmModificarPuntoAtencion
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCrearPuntoAtencion));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmModificarPuntoAtencion));
             this.btnCerrar = new System.Windows.Forms.Button();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
@@ -41,8 +41,8 @@
             this.label2 = new System.Windows.Forms.Label();
             this.lblNombre = new System.Windows.Forms.Label();
             this.gbCrearPuntoAtencion = new System.Windows.Forms.GroupBox();
-            this.button1 = new System.Windows.Forms.Button();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.gbCrearPuntoAtencion.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -52,11 +52,11 @@
             this.btnCerrar.FlatAppearance.BorderSize = 0;
             this.btnCerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCerrar.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Bold);
-            this.btnCerrar.Location = new System.Drawing.Point(794, 12);
+            this.btnCerrar.Location = new System.Drawing.Point(786, 12);
             this.btnCerrar.Name = "btnCerrar";
-            this.btnCerrar.Size = new System.Drawing.Size(89, 33);
+            this.btnCerrar.Size = new System.Drawing.Size(97, 33);
             this.btnCerrar.TabIndex = 46;
-            this.btnCerrar.Text = "CERRAR";
+            this.btnCerrar.Text = "CANCELAR";
             this.btnCerrar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnCerrar.UseVisualStyleBackColor = false;
             this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
@@ -159,9 +159,9 @@
             this.lblNombre.Font = new System.Drawing.Font("Bahnschrift", 14.25F, System.Drawing.FontStyle.Bold);
             this.lblNombre.Location = new System.Drawing.Point(27, 16);
             this.lblNombre.Name = "lblNombre";
-            this.lblNombre.Size = new System.Drawing.Size(246, 23);
+            this.lblNombre.Size = new System.Drawing.Size(283, 23);
             this.lblNombre.TabIndex = 48;
-            this.lblNombre.Text = "CREAR PUNTO DE ATENCIÓN";
+            this.lblNombre.Text = "MODIFICAR PUNTO DE ATENCIÓN";
             // 
             // gbCrearPuntoAtencion
             // 
@@ -183,21 +183,6 @@
             this.gbCrearPuntoAtencion.TabIndex = 47;
             this.gbCrearPuntoAtencion.TabStop = false;
             // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(175)))), ((int)(((byte)(169)))));
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Bold);
-            this.button1.ForeColor = System.Drawing.Color.Black;
-            this.button1.Location = new System.Drawing.Point(689, 12);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(89, 33);
-            this.button1.TabIndex = 49;
-            this.button1.Text = "CREAR";
-            this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button1.UseVisualStyleBackColor = false;
-            // 
             // comboBox1
             // 
             this.comboBox1.FormattingEnabled = true;
@@ -206,7 +191,22 @@
             this.comboBox1.Size = new System.Drawing.Size(331, 27);
             this.comboBox1.TabIndex = 54;
             // 
-            // frmCrearPuntoAtencion
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(175)))), ((int)(((byte)(169)))));
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Bold);
+            this.button1.ForeColor = System.Drawing.Color.Black;
+            this.button1.Location = new System.Drawing.Point(681, 12);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(89, 33);
+            this.button1.TabIndex = 49;
+            this.button1.Text = "ACEPTAR";
+            this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button1.UseVisualStyleBackColor = false;
+            // 
+            // frmModificarPuntoAtencion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -217,7 +217,7 @@
             this.Controls.Add(this.gbCrearPuntoAtencion);
             this.Controls.Add(this.btnCerrar);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "frmCrearPuntoAtencion";
+            this.Name = "frmModificarPuntoAtencion";
             this.gbCrearPuntoAtencion.ResumeLayout(false);
             this.gbCrearPuntoAtencion.PerformLayout();
             this.ResumeLayout(false);
