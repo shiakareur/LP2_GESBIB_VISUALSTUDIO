@@ -221,5 +221,10 @@ namespace TA_GesBib_Cliente
 
                 }
 }
+
+        private void frmAdministrarBibliotecas_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

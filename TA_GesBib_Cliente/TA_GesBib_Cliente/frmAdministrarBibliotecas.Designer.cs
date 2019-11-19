@@ -33,6 +33,11 @@
             this.lblNomBib = new System.Windows.Forms.Label();
             this.txtNombreBib = new System.Windows.Forms.TextBox();
             this.dgvPuntosAtencion = new System.Windows.Forms.DataGridView();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Piso = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CantMin = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CantOpt = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Perfil = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gbPuntosAtencion = new System.Windows.Forms.GroupBox();
             this.btnEditarPA = new System.Windows.Forms.Button();
             this.btnAgregarPA = new System.Windows.Forms.Button();
@@ -53,11 +58,6 @@
             this.btnModificar = new System.Windows.Forms.Button();
             this.btnGuardar = new System.Windows.Forms.Button();
             this.btnNuevo = new System.Windows.Forms.Button();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Piso = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.CantMin = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.CantOpt = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Perfil = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gbDatosGenerales.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPuntosAtencion)).BeginInit();
             this.gbPuntosAtencion.SuspendLayout();
@@ -127,6 +127,43 @@
             this.dgvPuntosAtencion.Size = new System.Drawing.Size(659, 189);
             this.dgvPuntosAtencion.TabIndex = 52;
             this.dgvPuntosAtencion.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgvPuntosAtencion_CellFormatting);
+            // 
+            // Column1
+            // 
+            this.Column1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.Column1.HeaderText = "Puntos de Atención";
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            this.Column1.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.Column1.Width = 158;
+            // 
+            // Piso
+            // 
+            this.Piso.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.Piso.HeaderText = "Piso";
+            this.Piso.Name = "Piso";
+            this.Piso.ReadOnly = true;
+            this.Piso.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Piso.Width = 60;
+            // 
+            // CantMin
+            // 
+            this.CantMin.HeaderText = "Cantidad Mínima";
+            this.CantMin.Name = "CantMin";
+            this.CantMin.ReadOnly = true;
+            // 
+            // CantOpt
+            // 
+            this.CantOpt.HeaderText = "Cantidad Óptima";
+            this.CantOpt.Name = "CantOpt";
+            this.CantOpt.ReadOnly = true;
+            // 
+            // Perfil
+            // 
+            this.Perfil.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Perfil.HeaderText = "Perfil Requerido";
+            this.Perfil.Name = "Perfil";
+            this.Perfil.ReadOnly = true;
             // 
             // gbPuntosAtencion
             // 
@@ -406,43 +443,6 @@
             this.btnNuevo.UseVisualStyleBackColor = false;
             this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click);
             // 
-            // Column1
-            // 
-            this.Column1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.Column1.HeaderText = "Puntos de Atención";
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            this.Column1.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.Column1.Width = 158;
-            // 
-            // Piso
-            // 
-            this.Piso.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.Piso.HeaderText = "Piso";
-            this.Piso.Name = "Piso";
-            this.Piso.ReadOnly = true;
-            this.Piso.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.Piso.Width = 60;
-            // 
-            // CantMin
-            // 
-            this.CantMin.HeaderText = "Cantidad Mínima";
-            this.CantMin.Name = "CantMin";
-            this.CantMin.ReadOnly = true;
-            // 
-            // CantOpt
-            // 
-            this.CantOpt.HeaderText = "Cantidad Óptima";
-            this.CantOpt.Name = "CantOpt";
-            this.CantOpt.ReadOnly = true;
-            // 
-            // Perfil
-            // 
-            this.Perfil.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Perfil.HeaderText = "Perfil Requerido";
-            this.Perfil.Name = "Perfil";
-            this.Perfil.ReadOnly = true;
-            // 
             // frmAdministrarBibliotecas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 13F);
@@ -464,6 +464,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmAdministrarBibliotecas";
             this.Text = "frmAdministrarPersonal";
+            this.Load += new System.EventHandler(this.frmAdministrarBibliotecas_Load);
             this.gbDatosGenerales.ResumeLayout(false);
             this.gbDatosGenerales.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPuntosAtencion)).EndInit();
