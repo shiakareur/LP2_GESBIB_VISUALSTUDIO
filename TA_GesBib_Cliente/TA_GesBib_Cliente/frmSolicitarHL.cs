@@ -13,7 +13,9 @@ namespace TA_GesBib_Cliente
     public partial class frmSolicitarHL : Form
     {
 
+        Estado estadoInasistencia;
         ServicioJava.ServicioClient servTA = new ServicioJava.ServicioClient();
+        private ServicioJava.inasistencia inaSelec;
         private ServicioJava.usuario var_usuario;
         private Form var_perfilPersonal;
         private TipoPerfil var_tipoPerfil = TipoPerfil.PerfilBibliotecario;
@@ -44,6 +46,7 @@ namespace TA_GesBib_Cliente
             //se pone los LABELS ENABLES
             limpiarComponentes();
             estadoComponentes(Estado.Nuevo);
+            estadoInasistencia = Estado.Nuevo;
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)
@@ -78,7 +81,23 @@ namespace TA_GesBib_Cliente
             inaHL.motivo = txtMotivo_HL.Text;
 
             //llamamos al SERVICIO RESPECTIVO
-            servTA.insertarInasistencia(inaHL);
+            if (estadoInasistencia == Estado.Nuevo)
+            {
+                servTA.insertarInasistencia(inaHL);
+            }
+            else if(estadoInasistencia == Estado.Modificar)
+            {
+                
+                //sacar el id de la inaistencia seleccionada
+                inaHL.id = inaSelec.id;
+                inaHL.justificado = -1;
+                //inaHL.activo = 1 //??????????????????????????????
+
+                servTA.actualizarInasistencia(inaHL);
+
+                System.Console.WriteLine("llego al modificar");
+            }
+            
 
             //mostramos mensaje de registro exitoso                    
             this.muestraMensajeExitoso();
@@ -106,6 +125,7 @@ namespace TA_GesBib_Cliente
                     btnGuardar.Enabled = false;
                     btnCancelar.Enabled = false;
                     //Campos de Texto
+                    
                     txtMotivo_HL.Enabled = false;
                     txtHIni_HL.Enabled = false;
                     txtHFin_HL.Enabled = false;
@@ -113,6 +133,7 @@ namespace TA_GesBib_Cliente
                     break;
                 case Estado.Nuevo:
                     //Etiquetas
+                    lblDescripcion.Enabled = true;
                     lblFecha.Enabled = true;
                     lblHIni.Enabled = true;
                     lblHFin.Enabled = true;
@@ -123,6 +144,7 @@ namespace TA_GesBib_Cliente
                     btnGuardar.Enabled = true;
                     btnCancelar.Enabled = true;
                     //Campos de Texto
+                    txtMotivo_HL.Enabled = true;
                     txtHIni_HL.Enabled = true;
                     txtHFin_HL.Enabled = true;
                     dtpSoliHL.Enabled = true;
@@ -136,13 +158,15 @@ namespace TA_GesBib_Cliente
                     lblHMS_ini.Enabled = false;
                     lblHMS_fin.Enabled = false;
                     //Botones
+                    btnEliminar.Enabled = true;
+                    btnModificar.Enabled = true;
                     btnNuevo.Enabled = false;
-                    btnGuardar.Enabled = true;
+                    btnGuardar.Enabled = false;
                     btnCancelar.Enabled = true;
                     //Campos de Texto
-                    txtHIni_HL.Enabled = true;
-                    txtHFin_HL.Enabled = true;
-                    dtpSoliHL.Enabled = true;
+                    txtHIni_HL.Enabled = false;
+                    txtHFin_HL.Enabled = false;
+                    dtpSoliHL.Enabled = false;
                     break;
 
                 case Estado.Modificar:
@@ -154,10 +178,12 @@ namespace TA_GesBib_Cliente
                     lblHMS_ini.Enabled = true;
                     lblHMS_fin.Enabled = true;
                     //Botones
+                    btnEliminar.Enabled = true;
                     btnNuevo.Enabled = false;
                     btnGuardar.Enabled = true;
                     btnCancelar.Enabled = true;
                     //Campos de Texto
+                    txtMotivo_HL.Enabled = true;
                     txtHIni_HL.Enabled = true;
                     txtHFin_HL.Enabled = true;
                     dtpSoliHL.Enabled = true;
@@ -173,6 +199,7 @@ namespace TA_GesBib_Cliente
 
             txtHIni_HL.Text = "";
             txtHFin_HL.Text = "";
+            txtMotivo_HL.Text = "";
             dtpSoliHL.Value = DateTime.Today;
 
         }
@@ -216,27 +243,34 @@ namespace TA_GesBib_Cliente
         private void btnBuscar_Click(object sender, EventArgs e)
         {
             frmBuscarHL formBuscarHL = new frmBuscarHL(var_usuario);
-            formBuscarHL.ShowDialog();
 
 
             if (formBuscarHL.ShowDialog() == DialogResult.OK)
             {
                 //pasamos al form la solicitud de la inasistencia seleccionada
-
-                dtpSoliHL.Value = formBuscarHL.Ina_HoraLibSelecc.fecha;
-                txtHIni_HL.Text = formBuscarHL.Ina_HoraLibSelecc.horaInicio;
-                txtHFin_HL.Text = formBuscarHL.Ina_HoraLibSelecc.horaFin;
-                txtMotivo_HL.Text = formBuscarHL.Ina_HoraLibSelecc.motivo;
+                inaSelec = new ServicioJava.inasistencia();
+                inaSelec = formBuscarHL.Ina_HoraLibSelecc;
 
 
-
+                dtpSoliHL.Value = inaSelec.fecha;
+                txtHIni_HL.Text = inaSelec.horaInicio;
+                txtHFin_HL.Text = inaSelec.horaFin;
+                txtMotivo_HL.Text = inaSelec.motivo;
 
                 estadoComponentes(Estado.Buscar);
             }
 
+        }
 
+        private void btnModificar_Click(object sender, EventArgs e)
+        {
+            estadoComponentes(Estado.Modificar);
+            estadoInasistencia = Estado.Modificar;
+        }
 
-
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            //servTA.eliminari(inaHL);
         }
     }
 }
