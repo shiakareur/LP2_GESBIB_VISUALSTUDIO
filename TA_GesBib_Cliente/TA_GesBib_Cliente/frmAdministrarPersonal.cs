@@ -18,18 +18,13 @@ namespace TA_GesBib_Cliente
         public frmAdministrarPersonal()
         {
             InitializeComponent();
-
-            //Al abrir el form, este es el estado de los componentes
-			// Jin SSJ was here
             limpiarComponentes();
             estadoComponentes(Estado.Inicial);
         }
 
         public frmAdministrarPersonal(frmPerfilAdministrador formPerfilAdmin)
         {
-            var_formPerfilAdmin = formPerfilAdmin;
             InitializeComponent();
-            //Al abrir el form, este es el estado de los componentes
             limpiarComponentes();
             estadoComponentes(Estado.Inicial);
         }

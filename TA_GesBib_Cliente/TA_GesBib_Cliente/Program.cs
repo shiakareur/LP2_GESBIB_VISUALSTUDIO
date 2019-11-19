@@ -17,7 +17,7 @@ namespace TA_GesBib_Cliente
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmPerfilAdministrador());
+            Application.Run(new frmAdministrarGestores());
 
         }
     }
