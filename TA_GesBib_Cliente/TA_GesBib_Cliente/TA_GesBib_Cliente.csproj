@@ -66,6 +66,12 @@
     <Compile Include="frmAsignarTurnos.Designer.cs">
       <DependentUpon>frmAsignarTurnos.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmBuscarHE.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBuscarHE.Designer.cs">
+      <DependentUpon>frmBuscarHE.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmCapacitaciones.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -228,6 +234,9 @@
     <EmbeddedResource Include="frmBuscarGestores.resx">
       <DependentUpon>frmBuscarGestores.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmBuscarHE.resx">
+      <DependentUpon>frmBuscarHE.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmCapacitaciones.resx">
       <DependentUpon>frmCapacitaciones.cs</DependentUpon>
     </EmbeddedResource>
@@ -290,8 +299,8 @@
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <None Include="Connected Services\ServicioJava\Servicio.wsdl" />
-    <None Include="Connected Services\ServicioJava\Servicio.xsd">
+    <None Include="Connected Services\ServicioJava\Servicio1.wsdl" />
+    <None Include="Connected Services\ServicioJava\Servicio1.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="Connected Services\ServicioJava\TA_GesBib_Cliente.ServicioJava.actualizarAuxiliarBibliotecaResponse.datasource">
@@ -339,6 +348,12 @@
     <None Include="Connected Services\ServicioJava\TA_GesBib_Cliente.ServicioJava.capacitacion.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
+    <None Include="Connected Services\ServicioJava\TA_GesBib_Cliente.ServicioJava.distribucionPersonal.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServicioJava\TA_GesBib_Cliente.ServicioJava.elimDistribucionPersonalResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Connected Services\ServicioJava\TA_GesBib_Cliente.ServicioJava.eliminarBibliotecaResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
@@ -351,6 +366,9 @@
     <None Include="Connected Services\ServicioJava\TA_GesBib_Cliente.ServicioJava.eliminarGestorResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
+    <None Include="Connected Services\ServicioJava\TA_GesBib_Cliente.ServicioJava.eliminarHoraExtraResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Connected Services\ServicioJava\TA_GesBib_Cliente.ServicioJava.gestor.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
@@ -358,6 +376,12 @@
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\ServicioJava\TA_GesBib_Cliente.ServicioJava.helloResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServicioJava\TA_GesBib_Cliente.ServicioJava.horaExtra.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServicioJava\TA_GesBib_Cliente.ServicioJava.inasistencia.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\ServicioJava\TA_GesBib_Cliente.ServicioJava.insertarAuxiliarBibliotecaResponse.datasource">
@@ -370,6 +394,9 @@
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\ServicioJava\TA_GesBib_Cliente.ServicioJava.insertarCapacitacionResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServicioJava\TA_GesBib_Cliente.ServicioJava.insertarDistribucionPersonalResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\ServicioJava\TA_GesBib_Cliente.ServicioJava.insertarGestorResponse.datasource">
@@ -405,7 +432,19 @@
     <None Include="Connected Services\ServicioJava\TA_GesBib_Cliente.ServicioJava.listarCapacitacionesResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
+    <None Include="Connected Services\ServicioJava\TA_GesBib_Cliente.ServicioJava.listarDistribucionPersonalPorFechaHoraResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Connected Services\ServicioJava\TA_GesBib_Cliente.ServicioJava.listarGestoresResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServicioJava\TA_GesBib_Cliente.ServicioJava.listarHorasExtraPorFechaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServicioJava\TA_GesBib_Cliente.ServicioJava.listarHorasExtraResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServicioJava\TA_GesBib_Cliente.ServicioJava.listarHorasLibreResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\ServicioJava\TA_GesBib_Cliente.ServicioJava.listarPerfilExperienciaResponse.datasource">
@@ -420,10 +459,16 @@
     <None Include="Connected Services\ServicioJava\TA_GesBib_Cliente.ServicioJava.listarTipoInasistenciaResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
+    <None Include="Connected Services\ServicioJava\TA_GesBib_Cliente.ServicioJava.listarUsuariosLibresResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Connected Services\ServicioJava\TA_GesBib_Cliente.ServicioJava.pairStringUsuario.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\ServicioJava\TA_GesBib_Cliente.ServicioJava.perfilExperiencia.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServicioJava\TA_GesBib_Cliente.ServicioJava.personal.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\ServicioJava\TA_GesBib_Cliente.ServicioJava.practicante.datasource">

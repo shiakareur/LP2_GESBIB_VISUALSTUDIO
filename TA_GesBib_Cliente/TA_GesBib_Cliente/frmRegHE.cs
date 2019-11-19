@@ -97,20 +97,20 @@ namespace TA_GesBib_Cliente
 
         private void btnBuscar_Click(object sender, EventArgs e)
         {
-            //frmBuscarHE var_frmBuscarHe = new frmBuscarHE(var_usuario.id);
-            //if (var_frmBuscarHe.ShowDialog() == DialogResult.OK)
-            //{
-            //    var_hora_extra_seleccionada = var_frmBuscarHe.HESeleccionada;
+            frmBuscarHE var_frmBuscarHe = new frmBuscarHE(var_usuario.id);
+            if (var_frmBuscarHe.ShowDialog() == DialogResult.OK)
+            {
+                var_hora_extra_seleccionada = var_frmBuscarHe.HESeleccionada;
 
-            //    dtpFechaHE.Value = var_hora_extra_seleccionada.fecha;
+                dtpFechaHE.Value = var_hora_extra_seleccionada.fecha;
 
-            //    //la hora en time
-            //    txtHIni_HE.Text = var_hora_extra_seleccionada.horaInicio;
-            //    txtHFin_HE.Text = var_hora_extra_seleccionada.horaFin;
+                //la hora en time
+                txtHIni_HE.Text = var_hora_extra_seleccionada.horaInicio;
+                txtHFin_HE.Text = var_hora_extra_seleccionada.horaFin;
 
-            //    txtCantHoras_HE.Text = String.valueOf(var_hora_extra_seleccionada.cantidadHoras);
-            //    txtDescripcion_HE.Text = hora_extra.descripcion;
-            //}
+                txtCantHoras_HE.Text = var_hora_extra_seleccionada.cantidadHoras.ToString();
+                txtDescripcion_HE.Text = var_hora_extra_seleccionada.descripcion;
+            }
 
             estadoForm = Estado.Buscar;
             estadoComponentes(estadoForm);
@@ -128,8 +128,8 @@ namespace TA_GesBib_Cliente
             try
             {
 
-                //servTA.eliminarHE(var_hora_extra_seleccionada.id);
-
+                servTA.eliminarHoraExtra(var_hora_extra_seleccionada.id);
+                limpiarComponentes();
             }
             catch (Exception ex)
             {
