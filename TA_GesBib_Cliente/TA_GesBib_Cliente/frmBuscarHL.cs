@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using TA_GesBib_Cliente.ServicioJava;
 
 namespace TA_GesBib_Cliente
 {
@@ -14,6 +15,9 @@ namespace TA_GesBib_Cliente
     {
 
         ServicioJava.ServicioClient servTA = new ServicioJava.ServicioClient();
+        private ServicioJava.inasistencia ina_HoraLibSelecc;
+
+        public inasistencia Ina_HoraLibSelecc { get => ina_HoraLibSelecc; set => ina_HoraLibSelecc = value; }
 
         public frmBuscarHL(ServicioJava.usuario _user)
         {
@@ -23,6 +27,8 @@ namespace TA_GesBib_Cliente
 
 
         }
+
+       
 
         private void dgvListaHL_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
         {
@@ -34,6 +40,12 @@ namespace TA_GesBib_Cliente
             dgvListaHL.Rows[e.RowIndex].Cells[2].Value = _inasis.horaFin;
             dgvListaHL.Rows[e.RowIndex].Cells[3].Value = _inasis.motivo;
 
+        }
+
+        private void btnSeleccionar_Click(object sender, EventArgs e)
+        {
+            Ina_HoraLibSelecc = (ServicioJava.inasistencia)dgvListaHL.CurrentRow.DataBoundItem;
+            this.DialogResult = DialogResult.OK;
         }
     }
 }

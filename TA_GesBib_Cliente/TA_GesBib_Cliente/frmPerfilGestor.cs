@@ -13,11 +13,16 @@ namespace TA_GesBib_Cliente
     public partial class frmPerfilGestor : Form
     {
 
+        /*by tys */
+
+        private frmDistribuirPersonalSemana var_formDistSemana;
+
+
         private frmLogin var_formLogin;
         private ServicioJava.usuario var_usuario;
 
-        public Panel PanelAviso { get => panelAviso; set => panelAviso = value; }
-        public Label LblBienvenido { get => lblBienvenido; set => lblBienvenido = value; }
+        //public Panel PanelAviso { get => panelAviso; set => panelAviso = value; }
+//        public Label LblBienvenido { get => lblBienvenido; set => lblBienvenido = value; }
 
 
 
@@ -48,7 +53,7 @@ namespace TA_GesBib_Cliente
             //lblBienvenido.Visible = false;
             //panelAviso.Visible = false;
 
-            panelBIPO.Visible = false;
+            //panelBIPO.Visible = false;
 
             frmAsignarTurnos frmAsignar_turno = new frmAsignarTurnos(this);
             frmAsignar_turno.MdiParent = this;
@@ -92,7 +97,7 @@ namespace TA_GesBib_Cliente
             //lblBienvenido.Visible = false;
             //panelAviso.Visible = false;
 
-            panelBIPO.Visible = false;
+            //panelBIPO.Visible = false;
 
             frmAdminPerfilesExp frmAdminPerfilExp = new frmAdminPerfilesExp(this);
             frmAdminPerfilExp.MdiParent = this;
@@ -102,12 +107,12 @@ namespace TA_GesBib_Cliente
 
         private void picHome_Click(object sender, EventArgs e)
         {
-            panelBIPO.Visible = true;
+            //panelBIPO.Visible = true;
         }
 
         private void btnCapacitacion_Click(object sender, EventArgs e)
         {
-            panelBIPO.Visible = false;
+            //panelBIPO.Visible = false;
 
             frmCapacitaciones frmCapa = new frmCapacitaciones();
             frmCapa.MdiParent = this;
@@ -133,13 +138,36 @@ namespace TA_GesBib_Cliente
 
         private void btnSemana_Click(object sender, EventArgs e)
         {
-            frmDistribuirPersonalSemana formDistSemana = new frmDistribuirPersonalSemana(var_usuario);
+            /*frmDistribuirPersonalSemana formDistSemana = new frmDistribuirPersonalSemana(var_usuario);
+            
             formDistSemana.MdiParent = this;
-            formDistSemana.Show();
-            formDistSemana.Location = new Point(0, 0);
-            formDistSemana.Size = new Size(934, 675);
 
+            //formDistSemana.Location = new Point(0, 0);
+            //formDistSemana.Size = new Size(934, 675);
+
+            formDistSemana.StartPosition = FormStartPosition.Manual;
+            formDistSemana.Left = 0;
+            formDistSemana.Top = 0;
+
+            formDistSemana.Show();
             hideSubMenu();
+            */
+
+            var_formDistSemana = new frmDistribuirPersonalSemana(var_usuario);
+            panelBIPO.Visible = false;
+            var_formDistSemana.MdiParent = this;
+
+
+            var_formDistSemana.StartPosition = FormStartPosition.Manual;
+            var_formDistSemana.Left = 0;
+            var_formDistSemana.Top = 0;
+
+            var_formDistSemana.Show();
+            hideSubMenu();
+            
+
+
+
         }
     }
 }

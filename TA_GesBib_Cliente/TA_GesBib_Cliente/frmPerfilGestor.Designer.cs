@@ -37,26 +37,26 @@
             this.lblTipoPerfil = new System.Windows.Forms.Label();
             this.lblNombreUsuario = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.btnAvisos = new System.Windows.Forms.Button();
+            this.btnDistribucionPersonal = new System.Windows.Forms.Button();
             this.panelDistribucion = new System.Windows.Forms.Panel();
             this.btnSemana = new System.Windows.Forms.Button();
             this.btnSemestre = new System.Windows.Forms.Button();
-            this.btnAvisos = new System.Windows.Forms.Button();
-            this.btnDistribucionPersonal = new System.Windows.Forms.Button();
-            this.btnValidaciones = new System.Windows.Forms.Button();
             this.btnCapacitacion = new System.Windows.Forms.Button();
+            this.btnValidaciones = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label6 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lblBienvenido = new System.Windows.Forms.Label();
             this.panelAviso = new System.Windows.Forms.Panel();
             this.panelBIPO = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.panel1.SuspendLayout();
+            this.panel3.SuspendLayout();
             this.panelDistribucion.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panelBIPO.SuspendLayout();
-            this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnAsignarTurnos
@@ -193,50 +193,19 @@
             this.panel1.TabIndex = 3;
             this.panel1.TabStop = true;
             // 
-            // panelDistribucion
+            // panel3
             // 
-            this.panelDistribucion.Controls.Add(this.btnSemana);
-            this.panelDistribucion.Controls.Add(this.btnSemestre);
-            this.panelDistribucion.Location = new System.Drawing.Point(4, 378);
-            this.panelDistribucion.Name = "panelDistribucion";
-            this.panelDistribucion.Size = new System.Drawing.Size(253, 82);
-            this.panelDistribucion.TabIndex = 66;
-            // 
-            // btnSemana
-            // 
-            this.btnSemana.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(242)))), ((int)(((byte)(241)))));
-            this.btnSemana.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.btnSemana.FlatAppearance.BorderSize = 0;
-            this.btnSemana.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSemana.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSemana.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnSemana.Location = new System.Drawing.Point(0, 0);
-            this.btnSemana.Name = "btnSemana";
-            this.btnSemana.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
-            this.btnSemana.Size = new System.Drawing.Size(253, 40);
-            this.btnSemana.TabIndex = 64;
-            this.btnSemana.Text = "> Semanal";
-            this.btnSemana.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSemana.UseVisualStyleBackColor = false;
-            this.btnSemana.Click += new System.EventHandler(this.btnSemana_Click);
-            // 
-            // btnSemestre
-            // 
-            this.btnSemestre.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(242)))), ((int)(((byte)(241)))));
-            this.btnSemestre.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.btnSemestre.FlatAppearance.BorderSize = 0;
-            this.btnSemestre.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSemestre.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSemestre.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnSemestre.Location = new System.Drawing.Point(0, 42);
-            this.btnSemestre.Name = "btnSemestre";
-            this.btnSemestre.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
-            this.btnSemestre.Size = new System.Drawing.Size(253, 40);
-            this.btnSemestre.TabIndex = 63;
-            this.btnSemestre.Text = "> Semestral";
-            this.btnSemestre.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSemestre.UseVisualStyleBackColor = false;
-            this.btnSemestre.Click += new System.EventHandler(this.btnSemestre_Click);
+            this.panel3.Controls.Add(this.btnAvisos);
+            this.panel3.Controls.Add(this.btnDistribucionPersonal);
+            this.panel3.Controls.Add(this.panelDistribucion);
+            this.panel3.Controls.Add(this.btnCapacitacion);
+            this.panel3.Controls.Add(this.btnAdmPerfilesExp);
+            this.panel3.Controls.Add(this.btnValidaciones);
+            this.panel3.Controls.Add(this.btnAsignarTurnos);
+            this.panel3.Location = new System.Drawing.Point(10, 96);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(270, 487);
+            this.panel3.TabIndex = 66;
             // 
             // btnAvisos
             // 
@@ -276,23 +245,50 @@
             this.btnDistribucionPersonal.UseVisualStyleBackColor = false;
             this.btnDistribucionPersonal.Click += new System.EventHandler(this.btnDistribucionPersonal_Click);
             // 
-            // btnValidaciones
+            // panelDistribucion
             // 
-            this.btnValidaciones.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(175)))), ((int)(((byte)(169)))));
-            this.btnValidaciones.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnValidaciones.FlatAppearance.BorderSize = 0;
-            this.btnValidaciones.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnValidaciones.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnValidaciones.Image = global::TA_GesBib_Cliente.Properties.Resources.icon_validar;
-            this.btnValidaciones.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnValidaciones.Location = new System.Drawing.Point(4, 4);
-            this.btnValidaciones.Margin = new System.Windows.Forms.Padding(4);
-            this.btnValidaciones.Name = "btnValidaciones";
-            this.btnValidaciones.Size = new System.Drawing.Size(251, 60);
-            this.btnValidaciones.TabIndex = 63;
-            this.btnValidaciones.Text = "Validaciones";
-            this.btnValidaciones.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnValidaciones.UseVisualStyleBackColor = false;
+            this.panelDistribucion.Controls.Add(this.btnSemana);
+            this.panelDistribucion.Controls.Add(this.btnSemestre);
+            this.panelDistribucion.Location = new System.Drawing.Point(4, 378);
+            this.panelDistribucion.Name = "panelDistribucion";
+            this.panelDistribucion.Size = new System.Drawing.Size(253, 82);
+            this.panelDistribucion.TabIndex = 66;
+            // 
+            // btnSemana
+            // 
+            this.btnSemana.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(242)))), ((int)(((byte)(241)))));
+            this.btnSemana.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnSemana.FlatAppearance.BorderSize = 0;
+            this.btnSemana.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSemana.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSemana.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btnSemana.Location = new System.Drawing.Point(0, 0);
+            this.btnSemana.Name = "btnSemana";
+            this.btnSemana.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
+            this.btnSemana.Size = new System.Drawing.Size(253, 40);
+            this.btnSemana.TabIndex = 64;
+            this.btnSemana.Text = "> Semanal";
+            this.btnSemana.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSemana.UseVisualStyleBackColor = false;
+            this.btnSemana.Click += new System.EventHandler(this.btnSemana_Click);
+            // 
+            // btnSemestre
+            // 
+            this.btnSemestre.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(242)))), ((int)(((byte)(241)))));
+            this.btnSemestre.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnSemestre.FlatAppearance.BorderSize = 0;
+            this.btnSemestre.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSemestre.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSemestre.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btnSemestre.Location = new System.Drawing.Point(0, 39);
+            this.btnSemestre.Name = "btnSemestre";
+            this.btnSemestre.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
+            this.btnSemestre.Size = new System.Drawing.Size(253, 40);
+            this.btnSemestre.TabIndex = 63;
+            this.btnSemestre.Text = "> Semestral";
+            this.btnSemestre.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSemestre.UseVisualStyleBackColor = false;
+            this.btnSemestre.Click += new System.EventHandler(this.btnSemestre_Click);
             // 
             // btnCapacitacion
             // 
@@ -312,6 +308,24 @@
             this.btnCapacitacion.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnCapacitacion.UseVisualStyleBackColor = false;
             this.btnCapacitacion.Click += new System.EventHandler(this.btnCapacitacion_Click);
+            // 
+            // btnValidaciones
+            // 
+            this.btnValidaciones.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(175)))), ((int)(((byte)(169)))));
+            this.btnValidaciones.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnValidaciones.FlatAppearance.BorderSize = 0;
+            this.btnValidaciones.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnValidaciones.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnValidaciones.Image = global::TA_GesBib_Cliente.Properties.Resources.icon_validar;
+            this.btnValidaciones.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnValidaciones.Location = new System.Drawing.Point(4, 4);
+            this.btnValidaciones.Margin = new System.Windows.Forms.Padding(4);
+            this.btnValidaciones.Name = "btnValidaciones";
+            this.btnValidaciones.Size = new System.Drawing.Size(251, 60);
+            this.btnValidaciones.TabIndex = 63;
+            this.btnValidaciones.Text = "Validaciones";
+            this.btnValidaciones.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnValidaciones.UseVisualStyleBackColor = false;
             // 
             // panel2
             // 
@@ -362,7 +376,7 @@
             this.panelAviso.BackColor = System.Drawing.Color.Transparent;
             this.panelAviso.BackgroundImage = global::TA_GesBib_Cliente.Properties.Resources.posit;
             this.panelAviso.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panelAviso.Location = new System.Drawing.Point(579, 332);
+            this.panelAviso.Location = new System.Drawing.Point(226, 195);
             this.panelAviso.Name = "panelAviso";
             this.panelAviso.Size = new System.Drawing.Size(477, 348);
             this.panelAviso.TabIndex = 61;
@@ -373,24 +387,10 @@
             this.panelBIPO.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.panelBIPO.Controls.Add(this.panelAviso);
             this.panelBIPO.Controls.Add(this.lblBienvenido);
-            this.panelBIPO.Location = new System.Drawing.Point(288, 0);
+            this.panelBIPO.Location = new System.Drawing.Point(296, 0);
             this.panelBIPO.Name = "panelBIPO";
-            this.panelBIPO.Size = new System.Drawing.Size(1108, 773);
+            this.panelBIPO.Size = new System.Drawing.Size(1060, 759);
             this.panelBIPO.TabIndex = 63;
-            // 
-            // panel3
-            // 
-            this.panel3.Controls.Add(this.btnAvisos);
-            this.panel3.Controls.Add(this.btnDistribucionPersonal);
-            this.panel3.Controls.Add(this.panelDistribucion);
-            this.panel3.Controls.Add(this.btnCapacitacion);
-            this.panel3.Controls.Add(this.btnAdmPerfilesExp);
-            this.panel3.Controls.Add(this.btnValidaciones);
-            this.panel3.Controls.Add(this.btnAsignarTurnos);
-            this.panel3.Location = new System.Drawing.Point(10, 96);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(270, 487);
-            this.panel3.TabIndex = 66;
             // 
             // frmPerfilGestor
             // 
@@ -410,11 +410,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            this.panel3.ResumeLayout(false);
             this.panelDistribucion.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panelBIPO.ResumeLayout(false);
             this.panelBIPO.PerformLayout();
-            this.panel3.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -431,9 +431,6 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label lblBienvenido;
-        private System.Windows.Forms.Panel panelAviso;
-        private System.Windows.Forms.Panel panelBIPO;
         private System.Windows.Forms.Button btnValidaciones;
         private System.Windows.Forms.Button btnCapacitacion;
         private System.Windows.Forms.Button btnDistribucionPersonal;
@@ -442,5 +439,8 @@
         private System.Windows.Forms.Button btnSemana;
         private System.Windows.Forms.Button btnSemestre;
         private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Label lblBienvenido;
+        private System.Windows.Forms.Panel panelAviso;
+        private System.Windows.Forms.Panel panelBIPO;
     }
 }
