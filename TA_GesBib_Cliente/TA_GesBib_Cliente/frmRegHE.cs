@@ -13,12 +13,16 @@ namespace TA_GesBib_Cliente
     public partial class frmRegHE : Form
     {
 
-        ServicioJava.ServicioClient servTA = new ServicioJava.ServicioClient();
+        private Estado estadoForm;
 
-        private ServicioJava.usuario  var_usuario;
+        private ServicioJava.ServicioClient servTA = new ServicioJava.ServicioClient();
+
+        private ServicioJava.usuario var_usuario;
 
         private Form var_perfilPersonal;
         private TipoPerfil var_tipoPerfil = TipoPerfil.PerfilBibliotecario;
+
+        private ServicioJava.horaExtra var_hora_extra_seleccionada;
 
         public frmRegHE()
         {
@@ -28,9 +32,9 @@ namespace TA_GesBib_Cliente
         }
 
         //se agrego
- 
 
-        public frmRegHE(Form formPerfilPersonal, TipoPerfil tipoPerfil,ServicioJava.usuario _user)
+
+        public frmRegHE(Form formPerfilPersonal, TipoPerfil tipoPerfil, ServicioJava.usuario _user)
         {
             var_usuario = _user;
             var_perfilPersonal = formPerfilPersonal;
@@ -39,30 +43,26 @@ namespace TA_GesBib_Cliente
             limpiarComponentes();
             estadoComponentes(Estado.Inicial);
         }
-                        
+
 
         private void btnNuevo_Click(object sender, EventArgs e)
         {
             //se pone los LABELS ENABLES
             limpiarComponentes();
-            estadoComponentes(Estado.Nuevo);
 
-        }
+            estadoForm = Estado.Nuevo;
+            estadoComponentes(estadoForm);
 
-        private void btnCancelar_Click(object sender, EventArgs e)
-        {
-            //poner limpiar los labels
-            limpiarComponentes();
-            estadoComponentes(Estado.Inicial);
         }
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
-           
+
             //saco la data del form
 
             ServicioJava.horaExtra hora_extra = new ServicioJava.horaExtra();
-            hora_extra.personal= new ServicioJava.personal();
+
+            hora_extra.personal = new ServicioJava.personal();
             hora_extra.personal.id = var_usuario.id;
 
             hora_extra.fecha = dtpFechaHE.Value;
@@ -78,91 +78,81 @@ namespace TA_GesBib_Cliente
             //llamamos al SERVICIO RESPECTIVO
             try
             {
-                servTA.insertarHoraExtra(hora_extra);
-            }catch (Exception ex)
+                if (estadoForm == Estado.Nuevo)
+                    servTA.insertarHoraExtra(hora_extra);
+                else if (estadoForm == Estado.Modificar)
+                    servTA.actualizarHoraExtra(hora_extra);
+            }
+            catch (Exception ex)
             {
                 System.Console.WriteLine("Error");
             }
-            
-            //mostramos mensaje de registro exitoso
-            //....
 
-            estadoComponentes(Estado.Inicial);
+            estadoForm = Estado.Inicial;
+            estadoComponentes(estadoForm);
+
+            //mostramos mensaje de registro exitoso
             this.muestraMensajeExitoso();
         }
 
-
-        public void estadoComponentes(Estado estado)
+        private void btnBuscar_Click(object sender, EventArgs e)
         {
-            
-            switch (estado)
+            //frmBuscarHE var_frmBuscarHe = new frmBuscarHE(var_usuario.id);
+            //if (var_frmBuscarHe.ShowDialog() == DialogResult.OK)
+            //{
+            //    var_hora_extra_seleccionada = var_frmBuscarHe.HESeleccionada;
+
+            //    dtpFechaHE.Value = var_hora_extra_seleccionada.fecha;
+
+            //    //la hora en time
+            //    txtHIni_HE.Text = var_hora_extra_seleccionada.horaInicio;
+            //    txtHFin_HE.Text = var_hora_extra_seleccionada.horaFin;
+
+            //    txtCantHoras_HE.Text = String.valueOf(var_hora_extra_seleccionada.cantidadHoras);
+            //    txtDescripcion_HE.Text = hora_extra.descripcion;
+            //}
+
+            estadoForm = Estado.Buscar;
+            estadoComponentes(estadoForm);
+        }
+
+        private void btnModificar_Click(object sender, EventArgs e)
+        {
+            estadoForm = Estado.Modificar;
+            estadoComponentes(estadoForm);
+        }
+
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            try
             {
-                case Estado.Inicial:
 
-                    //Etiquetas
-                    lblFecha.Enabled = false;
-                    lblHIni.Enabled = false;
-                    lblHFin.Enabled = false;
-                    lblCantHoras.Enabled = false;
-                    lblDescripcion.Enabled = false;
-                    lblHMS_ini.Enabled = false;
-                    lblHMS_fin.Enabled = false;
-                   
-                    //Botones
-                    btnNuevo.Enabled = true;
-                    btnGuardar.Enabled = false;
-                    btnCancelar.Enabled = false;
-                    //Campos de Texto
-                    txtHIni_HE.Enabled = false;
-                    txtHFin_HE.Enabled = false;
-                    txtCantHoras_HE.Enabled = false;
-                    dtpFechaHE.Enabled = false;
-                    txtDescripcion_HE.Enabled = false;                  
-                    break;
+                //servTA.eliminarHE(var_hora_extra_seleccionada.id);
 
-                case Estado.Nuevo:
-                    //Etiquetas
-                    lblFecha.Enabled = true;
-                    lblHIni.Enabled = true;
-                    lblHFin.Enabled = true;
-                    lblCantHoras.Enabled = true;
-                    lblDescripcion.Enabled = true;
-                    lblHMS_ini.Enabled = true;
-                    lblHMS_fin.Enabled = true;
-                    //Botones
-                    btnNuevo.Enabled = false;
-                    btnGuardar.Enabled = true;                  
-                    btnCancelar.Enabled = true;
-                    //Campos de Texto
-                    txtHIni_HE.Enabled = true;
-                    txtHFin_HE.Enabled = true;
-                    txtCantHoras_HE.Enabled = true;
-                    dtpFechaHE.Enabled = true;
-                    txtDescripcion_HE.Enabled = true;
-                    break;
-            
             }
-            
+            catch (Exception ex)
+            {
+                System.Console.WriteLine("Error");
+            }
+
+            estadoForm = Estado.Inicial;
+            estadoComponentes(estadoForm);
+
+
+            this.muestraMensajeExitoso();
         }
 
-
-        public void limpiarComponentes()
+        private void btnCancelar_Click(object sender, EventArgs e)
         {
-            
-            txtHIni_HE.Text = "";
-            txtHFin_HE.Text = "";
-            txtCantHoras_HE.Text = "";
-            txtDescripcion_HE.Text = "";
-            dtpFechaHE.Value = DateTime.Today;           
-            
+            //poner limpiar los labels
+            limpiarComponentes();
+
+            estadoForm = Estado.Inicial;
+            estadoComponentes(estadoForm);
         }
 
-        private void muestraMensajeExitoso()
-        {
-            //mostramos mensaje de error
-            MessageBox.Show("Se guardaron los cambios exitosamente !",
-                "Mensajillo");
-        }
+
 
         private void btnCerrar_Click(object sender, EventArgs e)
         {
@@ -192,5 +182,120 @@ namespace TA_GesBib_Cliente
                     break;
             }
         }
+
+        public void estadoComponentes(Estado estado)
+        {
+
+            switch (estado)
+            {
+                case Estado.Inicial:
+
+                    //Etiquetas
+                    lblFecha.Enabled = false;
+                    lblHIni.Enabled = false;
+                    lblHFin.Enabled = false;
+                    lblCantHoras.Enabled = false;
+                    lblDescripcion.Enabled = false;
+                    lblHMS_ini.Enabled = false;
+                    lblHMS_fin.Enabled = false;
+
+                    //Botones
+                    btnNuevo.Enabled = true;
+                    btnGuardar.Enabled = false;
+                    btnBuscar.Enabled = true;
+                    btnModificar.Enabled = false;
+                    btnEliminar.Enabled = false;
+                    btnCancelar.Enabled = false;
+                    //Campos de Texto
+                    txtHIni_HE.Enabled = false;
+                    txtHFin_HE.Enabled = false;
+                    txtCantHoras_HE.Enabled = false;
+                    dtpFechaHE.Enabled = false;
+                    txtDescripcion_HE.Enabled = false;
+                    break;
+
+                case Estado.Nuevo:
+                    //Etiquetas
+                    lblFecha.Enabled = true;
+                    lblHIni.Enabled = true;
+                    lblHFin.Enabled = true;
+                    lblCantHoras.Enabled = true;
+                    lblDescripcion.Enabled = true;
+                    lblHMS_ini.Enabled = true;
+                    lblHMS_fin.Enabled = true;
+                    //Botones
+                    btnNuevo.Enabled = false;
+                    btnGuardar.Enabled = true;
+                    btnBuscar.Enabled = false;
+                    btnModificar.Enabled = false;
+                    btnEliminar.Enabled = false;
+                    btnCancelar.Enabled = true;
+                    //Campos de Texto
+                    txtHIni_HE.Enabled = true;
+                    txtHFin_HE.Enabled = true;
+                    txtCantHoras_HE.Enabled = true;
+                    dtpFechaHE.Enabled = true;
+                    txtDescripcion_HE.Enabled = true;
+                    break;
+
+                case Estado.Buscar:
+                    //Botones
+                    btnNuevo.Enabled = false;
+                    btnGuardar.Enabled = false;
+                    btnBuscar.Enabled = false;
+                    btnModificar.Enabled = true;
+                    btnEliminar.Enabled = true;
+                    btnCancelar.Enabled = true;
+                    break;
+
+                case Estado.Modificar:
+                    //Etiquetas
+                    lblFecha.Enabled = true;
+                    lblHIni.Enabled = true;
+                    lblHFin.Enabled = true;
+                    lblCantHoras.Enabled = true;
+                    lblDescripcion.Enabled = true;
+                    lblHMS_ini.Enabled = true;
+                    lblHMS_fin.Enabled = true;
+                    //Botones
+                    btnNuevo.Enabled = false;
+                    btnGuardar.Enabled = true;
+                    btnBuscar.Enabled = false;
+                    btnModificar.Enabled = false;
+                    btnEliminar.Enabled = false;
+                    btnCancelar.Enabled = true;
+                    //Campos de Texto
+                    txtHIni_HE.Enabled = true;
+                    txtHFin_HE.Enabled = true;
+                    txtCantHoras_HE.Enabled = true;
+                    dtpFechaHE.Enabled = true;
+                    txtDescripcion_HE.Enabled = true;
+                    break;
+
+
+            }
+
+        }
+
+
+        public void limpiarComponentes()
+        {
+
+            txtHIni_HE.Text = "";
+            txtHFin_HE.Text = "";
+            txtCantHoras_HE.Text = "";
+            txtDescripcion_HE.Text = "";
+            dtpFechaHE.Value = DateTime.Today;
+
+        }
+
+        private void muestraMensajeExitoso()
+        {
+            //mostramos mensaje de error
+            MessageBox.Show("Se guardaron los cambios exitosamente!",
+                "Mensaje");
+        }
+
+
     }
 }
