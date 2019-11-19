@@ -23,19 +23,12 @@ namespace TA_GesBib_Cliente
     public partial class frmPerfilBibliotecario : Form
     {
         //se agrego
-
-
         private ServicioJava.usuario var_usuario;
-
-
         private frmLogin var_formLogin;
-
         private frmRegHE var_frmRegistrarHE_Bibliotecario;
         private frmRegInasistencias var_frmRegistrarInasis_Bibliotecario;
-
         private frmSolicitarHL var_frmSolicitarHL_Bibliotecario;
         private frmSolicitarCambioTurno var_frmSolicitarCambioTurno_Bibliotecario;
-
         private frmRespuestaValidaciones var_frmRespuestasSolicitudes_Bibliotecario;
         private frmVisualizarHorarios var_frmVerHorarios_Bibliotecario;
 
@@ -290,7 +283,8 @@ namespace TA_GesBib_Cliente
                 //aca llamamos al formulario de solicitar horas libres
                 if (var_frmSolicitarHL_Bibliotecario == null)
                 {
-                    var_frmSolicitarHL_Bibliotecario = new frmSolicitarHL(this,TipoPerfil.PerfilBibliotecario);
+                    var_frmSolicitarHL_Bibliotecario = new frmSolicitarHL(this,TipoPerfil.PerfilBibliotecario,
+                        var_usuario);
                     var_frmSolicitarHL_Bibliotecario.MdiParent = this;
 
                     //...add

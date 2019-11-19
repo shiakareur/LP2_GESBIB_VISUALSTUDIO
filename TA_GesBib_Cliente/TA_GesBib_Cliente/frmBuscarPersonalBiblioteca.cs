@@ -15,6 +15,7 @@ namespace TA_GesBib_Cliente
         public frmBuscarPersonalBiblioteca()
         {
             InitializeComponent();
+			/* pa eso vas a clases con la Pazita ?*/
         }
     }
 }
