@@ -12,21 +12,43 @@ namespace TA_GesBib_Cliente
 {
     public partial class frmAdministrarPersonal : Form
     {
-        Estado estadoForm;
+        Estado estadoPersonal;
+        private ServicioJava.bibliotecario bibliotecario;
+        private ServicioJava.auxiliar auxiliar;
+        private ServicioJava.practicante practicante;
 
-        private frmPerfilAdministrador var_formPerfilAdmin;
         public frmAdministrarPersonal()
         {
             InitializeComponent();
-            limpiarComponentes();
             estadoComponentes(Estado.Inicial);
+            //Obtenemos las bibliotecas desde BD
+            BindingList<ServicioJava.biblioteca> bibliotecas =
+                new BindingList<ServicioJava.biblioteca>(
+            Program.DBController.listarBibliotecas());
+
+            //Enlazamos el ComboBox con las bibliotecas obtenidas
+            cmbBibAisg.DataSource = Program.DBController.listarBibliotecas();
+
+            //Indicamos la Propiedad que debería visualizarse
+            cmbBibAisg.DisplayMember = "Nombre";
+            cmbBibAisg.ValueMember = "Id";
         }
 
         public frmAdministrarPersonal(frmPerfilAdministrador formPerfilAdmin)
         {
             InitializeComponent();
-            limpiarComponentes();
             estadoComponentes(Estado.Inicial);
+            //Obtenemos las bibliotecas desde BD
+            BindingList<ServicioJava.biblioteca> bibliotecas =
+                new BindingList<ServicioJava.biblioteca>(
+            Program.DBController.listarBibliotecas());
+
+            //Enlazamos el ComboBox con las bibliotecas obtenidas
+            cmbBibAisg.DataSource = Program.DBController.listarBibliotecas();
+
+            //Indicamos la Propiedad que debería visualizarse
+            cmbBibAisg.DisplayMember = "Nombre";
+            cmbBibAisg.ValueMember = "Id";
         }
 
         //Estados
@@ -155,52 +177,86 @@ namespace TA_GesBib_Cliente
 
         }
 
-        private void frmAdministrarPersonal_Load(object sender, EventArgs e)
-        {   
-           
-            //this.WindowState = FormWindowState.Maximized;
-        }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
+        private void btnNuevo_Click(object sender, EventArgs e)
         {
-            this.Dispose();
-            //var_formPerfilAdmin.LblBienvenido.Visible = true;
-            //var_formPerfilAdmin.PanelAviso.Visible = true;
+            limpiarComponentes();
+
+            //Instanciamos uno nuevo
+            bibliotecario = new ServicioJava.bibliotecario();
+            auxiliar = new ServicioJava.auxiliar();
+            practicante = new ServicioJava.practicante();
+
+            estadoPersonal = Estado.Nuevo;
+            estadoComponentes(Estado.Nuevo);
         }
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
-            //Volver al estado inicial
-            estadoComponentes(Estado.Inicial);
-        }
-
-        private void btnCancelar_Click(object sender, EventArgs e)
-        {
-            //Volver al estado inicial
-            limpiarComponentes();
-            estadoComponentes(Estado.Inicial);
-        }
-
-        private void btnNuevo_Click(object sender, EventArgs e)
-        {
-            //Volver al estado inicial
-            limpiarComponentes();
-            estadoComponentes(Estado.Nuevo);
-        }
-
-        private void btnBuscar_Click(object sender, EventArgs e)
-        {
-            frmBuscarPersonalBiblioteca frmBuscarPersonalBib = new frmBuscarPersonalBiblioteca();
-            if (frmBuscarPersonalBib.ShowDialog() == DialogResult.OK)
+            if (rbBibliotecario.Checked==true)
             {
-                estadoComponentes(Estado.Buscar);
+                ServicioJava.bibliotecario bib = new ServicioJava.bibliotecario();
+                bib.codigo = txtCodigo.Text;
+                bib.nombre = txtNombres.Text;
+                bib.apellido = txtApellidos.Text;
+                bib.fecha_ingreso = dtpFechaIng.Value;
+                bib.email = txtCorreo.Text;
+                bib.contrasenia = txtClave.Text;
+                bib.biblioteca = (ServicioJava.biblioteca)cmbBibAisg.SelectedItem;
+                bib.diaSemana = cmbDiaAsig.SelectedItem.ToString();
+                if (estadoPersonal == Estado.Nuevo)
+                {
+                    Program.DBController.insertarBibliotecario(bib);
+                    MessageBox.Show("Bibliotecario Registrado exitosamente", "Mensaje Confirmacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else if (estadoPersonal == Estado.Modificar)
+                {
+                    bib.id = bibliotecario.id;
+                    Program.DBController.actualizarBibliotecario(bib);
+                    MessageBox.Show("Se han actualizado los datos del bibliotecario", "Mensaje Confirmacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            }else if (rbAuxiliar.Checked == true)
+            {
+                ServicioJava.auxiliar aux = new ServicioJava.auxiliar();
+                aux.codigo = txtCodigo.Text;
+                aux.nombre = txtNombres.Text;
+                aux.apellido = txtApellidos.Text;
+                aux.fecha_ingreso = dtpFechaIng.Value;
+                aux.email = txtCorreo.Text;
+                aux.contrasenia = txtClave.Text;
+                aux.biblioteca = (ServicioJava.biblioteca)cmbBibAisg.SelectedItem;
+                if (estadoPersonal == Estado.Nuevo)
+                {
+                    Program.DBController.insertarAuxiliarBiblioteca(aux);
+                    MessageBox.Show("Auxiliar registrado exitosamente", "Mensaje Confirmacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else if (estadoPersonal == Estado.Modificar)
+                {
+                    aux.id = auxiliar.id;
+                    Program.DBController.actualizarAuxiliarBiblioteca(aux);
+                    MessageBox.Show("Se han actualizado los datos del auxiliar", "Mensaje Confirmacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            }else if(rbPracticante.Checked==true){
+                ServicioJava.practicante prac = new ServicioJava.practicante();
+                prac.codigo = txtCodigo.Text;
+                prac.nombre = txtNombres.Text;
+                prac.apellido = txtApellidos.Text;
+                prac.fecha_ingreso = dtpFechaIng.Value;
+                prac.email = txtCorreo.Text;
+                prac.contrasenia = txtClave.Text;
+                prac.biblioteca = (ServicioJava.biblioteca)cmbBibAisg.SelectedItem;
+                if (estadoPersonal == Estado.Nuevo)
+                {
+                    Program.DBController.insertarPracticante(prac);
+                    MessageBox.Show("Practicante registrado exitosamente", "Mensaje Confirmacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else if (estadoPersonal == Estado.Modificar)
+                {
+                    prac.id = auxiliar.id;
+                    Program.DBController.actualizarPracticante(prac);
+                    MessageBox.Show("Se han actualizado los datos del practicante", "Mensaje Confirmacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
             }
+            estadoComponentes(Estado.Inicial);
         }
-
-        private void btnCerrar_Click(object sender, EventArgs e)
-        {
-            this.Dispose();
-        }
-
     }
 }

@@ -10,6 +10,7 @@ using System.Windows.Forms;
 
 namespace TA_GesBib_Cliente
 {
+
     public partial class frmAdministrarGestores : Form
     {
         Estado estadoGestor;
@@ -24,7 +25,7 @@ namespace TA_GesBib_Cliente
                 new BindingList<ServicioJava.biblioteca>(
             Program.DBController.listarBibliotecas());
 
-            //Enlazamos el ComboBox con las especialidades obtenidas
+            //Enlazamos el ComboBox con las bibliotecas obtenidas
             cmbBibAisg.DataSource = Program.DBController.listarBibliotecas();
 
             //Indicamos la Propiedad que debería visualizarse
@@ -177,6 +178,7 @@ namespace TA_GesBib_Cliente
             }
             else if (estadoGestor == Estado.Modificar)
             {
+                ges.id = gestor.id;
               
                 Program.DBController.actualizarGestor(ges);
 
@@ -185,8 +187,6 @@ namespace TA_GesBib_Cliente
                 MessageBox.Show("Se han actualizado los datos", "Mensaje Confirmacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             estadoComponentes(Estado.Inicial);
-        
-
     }
 
     private void btnCancelar_Click(object sender, EventArgs e)
@@ -213,6 +213,7 @@ namespace TA_GesBib_Cliente
         if (frmBuscarGestor.ShowDialog() == DialogResult.OK)
         {
             gestor = frmBuscarGestor.GestorSeleccionado;
+            
             txtCodigo.Text = gestor.codigo;
             txtNombres.Text = gestor.nombre;
             txtApellidos.Text = gestor.apellido;
@@ -235,5 +236,14 @@ namespace TA_GesBib_Cliente
         estadoComponentes(Estado.Modificar);
     }
 
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            if (DialogResult.Yes == MessageBox.Show("¿Está seguro que desea eliminar este gestor?", "", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation))
+            {
+                Program.DBController.eliminarGestor(gestor.id);
+                MessageBox.Show("El gestor ha sido eliminado", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                estadoComponentes(Estado.Inicial);
+            }
+        }
     }
 }
