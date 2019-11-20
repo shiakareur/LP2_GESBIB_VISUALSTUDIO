@@ -76,6 +76,7 @@
             this.btnAsignarTurnos.Text = "Turnos del Personal";
             this.btnAsignarTurnos.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnAsignarTurnos.UseVisualStyleBackColor = false;
+            this.btnAsignarTurnos.BackColorChanged += new System.EventHandler(this.btnAsignarTurnos_BackColorChanged);
             this.btnAsignarTurnos.Click += new System.EventHandler(this.btnAsignarTurnos_Click);
             // 
             // btnCerrarSesion

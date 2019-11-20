@@ -31,5 +31,11 @@ namespace TA_GesBib_Cliente
         {
 
         }
+
+        private void btnCerrar_Click(object sender, EventArgs e)
+        {
+            this.Visible = false;
+            var_formPerfilGestor.PanelBIPO.Visible = true;
+        }
     }
 }

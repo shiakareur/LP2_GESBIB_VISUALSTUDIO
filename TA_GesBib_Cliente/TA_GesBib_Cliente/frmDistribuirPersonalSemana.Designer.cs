@@ -56,13 +56,14 @@
             this.tbpViernes = new System.Windows.Forms.TabPage();
             this.tbpSabado = new System.Windows.Forms.TabPage();
             this.tbpDomingo = new System.Windows.Forms.TabPage();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.lblFechaIni = new System.Windows.Forms.Label();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.btnBuscarDistribucion = new System.Windows.Forms.Button();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.btnCerrar = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tbpLunes.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDitribucion)).BeginInit();
@@ -76,7 +77,7 @@
             this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(37)))), ((int)(((byte)(42)))));
-            this.label6.Location = new System.Drawing.Point(16, 57);
+            this.label6.Location = new System.Drawing.Point(74, 57);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(364, 13);
             this.label6.TabIndex = 134;
@@ -88,7 +89,7 @@
             this.label9.BackColor = System.Drawing.Color.Transparent;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(37)))), ((int)(((byte)(42)))));
-            this.label9.Location = new System.Drawing.Point(20, 24);
+            this.label9.Location = new System.Drawing.Point(78, 24);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(356, 33);
             this.label9.TabIndex = 133;
@@ -264,7 +265,7 @@
             this.tbpMiercoles.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F);
             this.tbpMiercoles.Location = new System.Drawing.Point(4, 25);
             this.tbpMiercoles.Name = "tbpMiercoles";
-            this.tbpMiercoles.Size = new System.Drawing.Size(999, 420);
+            this.tbpMiercoles.Size = new System.Drawing.Size(999, 398);
             this.tbpMiercoles.TabIndex = 3;
             this.tbpMiercoles.Text = "MIERCOLES";
             this.tbpMiercoles.UseVisualStyleBackColor = true;
@@ -274,7 +275,7 @@
             this.tbpJueves.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F);
             this.tbpJueves.Location = new System.Drawing.Point(4, 25);
             this.tbpJueves.Name = "tbpJueves";
-            this.tbpJueves.Size = new System.Drawing.Size(999, 420);
+            this.tbpJueves.Size = new System.Drawing.Size(999, 398);
             this.tbpJueves.TabIndex = 4;
             this.tbpJueves.Text = "JUEVES";
             this.tbpJueves.UseVisualStyleBackColor = true;
@@ -308,6 +309,35 @@
             this.tbpDomingo.TabIndex = 7;
             this.tbpDomingo.Text = "DOMINGO";
             this.tbpDomingo.UseVisualStyleBackColor = true;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(74, 254);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(1083, 17);
+            this.label4.TabIndex = 152;
+            this.label4.Text = "FALTA: Ver eso de la búsqueda de un personal que cumpla el perfil, creo que podrí" +
+    "a colocar un checkBox para que el gestotr decida que solo le muestre los que cum" +
+    "plan";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(188, 153);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(208, 17);
+            this.label3.TabIndex = 151;
+            this.label3.Text = "FALTA: Todo respecto a Avisos";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(188, 112);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(339, 17);
+            this.label2.TabIndex = 150;
+            this.label2.Text = "FALTA: colocar el botón que lleve a este formulario, ";
             // 
             // groupBox1
             // 
@@ -353,34 +383,20 @@
             this.btnBuscarDistribucion.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnBuscarDistribucion.UseVisualStyleBackColor = false;
             // 
-            // label4
+            // btnCerrar
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(74, 254);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(1083, 17);
-            this.label4.TabIndex = 152;
-            this.label4.Text = "FALTA: Ver eso de la búsqueda de un personal que cumpla el perfil, creo que podrí" +
-    "a colocar un checkBox para que el gestotr decida que solo le muestre los que cum" +
-    "plan";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(188, 153);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(208, 17);
-            this.label3.TabIndex = 151;
-            this.label3.Text = "FALTA: Todo respecto a Avisos";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(188, 112);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(339, 17);
-            this.label2.TabIndex = 150;
-            this.label2.Text = "FALTA: colocar el botón que lleve a este formulario, ";
+            this.btnCerrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(242)))), ((int)(((byte)(241)))));
+            this.btnCerrar.FlatAppearance.BorderSize = 0;
+            this.btnCerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCerrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.btnCerrar.Image = global::TA_GesBib_Cliente.Properties.Resources.icono_regresar;
+            this.btnCerrar.Location = new System.Drawing.Point(7, 23);
+            this.btnCerrar.Name = "btnCerrar";
+            this.btnCerrar.Size = new System.Drawing.Size(65, 40);
+            this.btnCerrar.TabIndex = 144;
+            this.btnCerrar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnCerrar.UseVisualStyleBackColor = false;
+            this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
             // 
             // frmDistribuirPersonalSemana
             // 
@@ -388,6 +404,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(242)))), ((int)(((byte)(241)))));
             this.ClientSize = new System.Drawing.Size(1031, 683);
+            this.Controls.Add(this.btnCerrar);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.label6);
@@ -444,5 +461,6 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button btnCerrar;
     }
 }

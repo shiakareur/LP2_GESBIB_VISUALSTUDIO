@@ -12,6 +12,9 @@ namespace TA_GesBib_Cliente
 {
     public partial class frmDistribuirPersonalSemana : Form
     {
+
+        private Form var_formPerfil; //byTyS
+
         private ServicioJava.distribucionPersonal distrib = new ServicioJava.distribucionPersonal();
         ServicioJava.ServicioClient DBController = new ServicioJava.ServicioClient();
 
@@ -22,8 +25,12 @@ namespace TA_GesBib_Cliente
             //dgvDitribucion.Columns[1].SortMode = DataGridViewColumnSortMode.NotSortable;
             //Daywisegrid.Rows[RowIndex].Cells[columnIndex].Style.BackColor = Color.Red;
         }
-        public frmDistribuirPersonalSemana(ServicioJava.usuario usuario)
+    
+
+        public frmDistribuirPersonalSemana(Form formPerfil, ServicioJava.usuario usuario)
         {
+
+            var_formPerfil = formPerfil; //byTyS
             InitializeComponent();
             dgvDitribucion.Rows[0].Cells[1].Style.BackColor = Color.PowderBlue;
 
@@ -49,6 +56,10 @@ namespace TA_GesBib_Cliente
             }
         }
 
-
+        private void btnCerrar_Click(object sender, EventArgs e)
+        {
+            this.Visible = false;
+            ((frmPerfilGestor)this.var_formPerfil).PanelBIPO.Visible = true;
+        }
     }
 }

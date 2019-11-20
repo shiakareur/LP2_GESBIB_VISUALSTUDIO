@@ -21,13 +21,16 @@ namespace TA_GesBib_Cliente
         private frmAdminPerfilesExp var_formPerfilExp;
         private frmCapacitaciones var_formCapa;
 
+
+        public Panel PanelBIPO { get => panelBIPO; set => panelBIPO = value; }
+
         /*by tys */
 
         private frmLogin var_formLogin;
         private ServicioJava.usuario var_usuario;
 
         //public Panel PanelAviso { get => panelAviso; set => panelAviso = value; }
-//        public Label LblBienvenido { get => lblBienvenido; set => lblBienvenido = value; }
+        //public Label LblBienvenido { get => lblBienvenido; set => lblBienvenido = value; }
 
 
 
@@ -56,6 +59,17 @@ namespace TA_GesBib_Cliente
         {
             //lblBienvenido.Visible = false;
             //panelAviso.Visible = false;
+
+
+            //cambiar el color del boton "sombreado"
+            this.btnAsignarTurnos.BackColor = Color.Red;
+            //..y poner los otros botones a color normal 
+            this.btnValidaciones.BackColor = Color.FromArgb(58, 175, 169);
+            this.btnAdmPerfilesExp.BackColor = Color.FromArgb(58, 175, 169);
+            this.btnAvisos.BackColor = Color.FromArgb(58, 175, 169);
+            this.btnCapacitacion.BackColor = Color.FromArgb(58, 175, 169);
+            this.btnDistribucionPersonal.BackColor = Color.FromArgb(58, 175, 169);
+
 
             panelBIPO.Visible = false;
             //poner los demas forms no visibles (si existen)
@@ -114,6 +128,17 @@ namespace TA_GesBib_Cliente
             //lblBienvenido.Visible = false;
             //panelAviso.Visible = false;
 
+            //byTyS........................................................................
+
+            //cambiar el color del boton "sombreado"
+            this.btnAdmPerfilesExp.BackColor = Color.Red;
+            //..y poner los otros botones a color normal 
+            this.btnValidaciones.BackColor = Color.FromArgb(58, 175, 169);
+            this.btnAsignarTurnos.BackColor = Color.FromArgb(58, 175, 169);
+            this.btnAvisos.BackColor = Color.FromArgb(58, 175, 169);
+            this.btnCapacitacion.BackColor = Color.FromArgb(58, 175, 169);
+            this.btnDistribucionPersonal.BackColor = Color.FromArgb(58, 175, 169);
+
             panelBIPO.Visible = false;
             //poner los demas forms no visibles (si existen)
             if (var_formAsignarTurnos != null) var_formAsignarTurnos.Visible = false;
@@ -146,8 +171,19 @@ namespace TA_GesBib_Cliente
 
         private void btnCapacitacion_Click(object sender, EventArgs e)
         {
-            panelBIPO.Visible = false;
 
+            //cambiar el color del boton "sombreado"
+            this.btnCapacitacion.BackColor = Color.Red;
+            //..y poner los otros botones a color normal 
+            this.btnValidaciones.BackColor = Color.FromArgb(58, 175, 169);
+            this.btnAsignarTurnos.BackColor = Color.FromArgb(58, 175, 169);
+            this.btnAdmPerfilesExp.BackColor = Color.FromArgb(58, 175, 169);
+            this.btnAvisos.BackColor = Color.FromArgb(58, 175, 169);
+            this.btnDistribucionPersonal.BackColor = Color.FromArgb(58, 175, 169);
+
+
+            panelBIPO.Visible = false;            
+            
             /*poner los demas forms no visibles (si existen)*/
             if (var_formAsignarTurnos != null) var_formAsignarTurnos.Visible = false;
             if (var_formDistSemana != null) var_formDistSemana.Visible = false;
@@ -156,7 +192,7 @@ namespace TA_GesBib_Cliente
 
             if (var_formCapa == null)
             {
-                var_formCapa =  new frmCapacitaciones();
+                var_formCapa =  new frmCapacitaciones(this);
                 var_formCapa.MdiParent = this;
                 var_formCapa.Show();
                 var_formCapa.Location = new Point(0, 0);
@@ -167,6 +203,7 @@ namespace TA_GesBib_Cliente
                 var_formCapa.Left = 0;
                 var_formCapa.Top = 0;
                 var_formCapa.Visible = true;
+                System.Console.WriteLine("paso el visible");
             }
 
             
@@ -174,6 +211,17 @@ namespace TA_GesBib_Cliente
 
         private void btnDistribucionPersonal_Click(object sender, EventArgs e)
         {
+
+            //cambiar el color del boton "sombreado"
+            this.btnDistribucionPersonal.BackColor = Color.Red;
+            //..y poner los otros botones a color normal 
+            this.btnValidaciones.BackColor = Color.FromArgb(58, 175, 169);
+            this.btnAsignarTurnos.BackColor = Color.FromArgb(58, 175, 169);
+            this.btnAdmPerfilesExp.BackColor = Color.FromArgb(58, 175, 169);
+            this.btnAvisos.BackColor = Color.FromArgb(58, 175, 169);
+            this.btnCapacitacion.BackColor = Color.FromArgb(58, 175, 169);
+
+
             showSubMenu(panelDistribucion);
         }
 
@@ -187,7 +235,7 @@ namespace TA_GesBib_Cliente
 
             if (var_formDistSemestre == null)
             {
-                var_formDistSemestre = new frmDistribucionSemestre(var_usuario);
+                var_formDistSemestre = new frmDistribucionSemestre(this,var_usuario);
                 var_formDistSemestre.MdiParent = this;
                 var_formDistSemestre.Show();
                 var_formDistSemestre.Location = new Point(0, 0);
@@ -226,7 +274,7 @@ namespace TA_GesBib_Cliente
 
             if (var_formDistSemana == null)
             {              
-                var_formDistSemana = new frmDistribuirPersonalSemana(var_usuario);
+                var_formDistSemana = new frmDistribuirPersonalSemana(this,var_usuario);
                 var_formDistSemana.MdiParent = this;
                 var_formDistSemana.StartPosition = FormStartPosition.Manual;
                 var_formDistSemana.Left = 0;
@@ -255,10 +303,29 @@ namespace TA_GesBib_Cliente
 
         private void btnValidaciones_Click(object sender, EventArgs e)
         {
-
+            //cambiar el color del boton "sombreado"
+            this.btnValidaciones.BackColor = Color.Red;
+            //..y poner los otros botones a color normal 
+            this.btnAsignarTurnos.BackColor = Color.FromArgb(58, 175, 169);
+            this.btnAdmPerfilesExp.BackColor = Color.FromArgb(58, 175, 169);
+            this.btnAvisos.BackColor = Color.FromArgb(58, 175, 169);
+            this.btnCapacitacion.BackColor = Color.FromArgb(58, 175, 169);
+            this.btnDistribucionPersonal.BackColor = Color.FromArgb(58, 175, 169);
         }
 
         private void btnAvisos_Click(object sender, EventArgs e)
+        {
+            //cambiar el color del boton "sombreado"
+            this.btnAvisos.BackColor = Color.Red;
+            //..y poner los otros botones a color normal 
+            this.btnValidaciones.BackColor = Color.FromArgb(58, 175, 169);
+            this.btnAsignarTurnos.BackColor = Color.FromArgb(58, 175, 169);
+            this.btnAdmPerfilesExp.BackColor = Color.FromArgb(58, 175, 169);
+            this.btnCapacitacion.BackColor = Color.FromArgb(58, 175, 169);
+            this.btnDistribucionPersonal.BackColor = Color.FromArgb(58, 175, 169);
+        }
+
+        private void btnAsignarTurnos_BackColorChanged(object sender, EventArgs e)
         {
 
         }

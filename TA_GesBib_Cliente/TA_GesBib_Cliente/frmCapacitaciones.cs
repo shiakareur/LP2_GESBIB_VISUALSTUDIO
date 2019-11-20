@@ -12,15 +12,24 @@ namespace TA_GesBib_Cliente
 {
     public partial class frmCapacitaciones : Form
     {
+        private Form var_formGestor;
+
         public frmCapacitaciones()
         {
             InitializeComponent();
         }
 
+        public frmCapacitaciones(Form _formPerfilGestor)
+        {
+            var_formGestor = _formPerfilGestor;
+            InitializeComponent();
+        }
+
         private void btnCerrar_Click(object sender, EventArgs e)
         {
-            this.Dispose();
+            this.Visible=false;
             //poner el panel BIPO en visible
+            ((frmPerfilGestor)var_formGestor).PanelBIPO.Visible = true;
 
         }
 
