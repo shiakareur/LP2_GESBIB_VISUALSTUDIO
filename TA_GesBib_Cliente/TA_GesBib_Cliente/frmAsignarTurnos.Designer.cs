@@ -29,14 +29,22 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmAsignarTurnos));
-            this.txtNombres = new System.Windows.Forms.TextBox();
-            this.lblNombres = new System.Windows.Forms.Label();
-            this.dgvDistri_Personal = new System.Windows.Forms.DataGridView();
-            this.nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.apellidos = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tipo_personal = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.punto_atencion = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.fecha_nac = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.btnEliminar = new System.Windows.Forms.Button();
+            this.btnCancelar = new System.Windows.Forms.Button();
+            this.btnModificar = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.btnAgregarPA = new System.Windows.Forms.Button();
+            this.btnBuscarPersonal = new System.Windows.Forms.Button();
+            this.btnQuitarPA = new System.Windows.Forms.Button();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.lblNombreCompleto = new System.Windows.Forms.Label();
+            this.lblCodigo = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -52,87 +60,231 @@
             this.lblMiH_ini = new System.Windows.Forms.Label();
             this.txtMiPA = new System.Windows.Forms.TextBox();
             this.lblMiPA = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.btnGuardar = new System.Windows.Forms.Button();
-            this.btnBuscar = new System.Windows.Forms.Button();
-            this.btnNuevo = new System.Windows.Forms.Button();
-            this.btnEliminar = new System.Windows.Forms.Button();
-            this.btnCancelar = new System.Windows.Forms.Button();
-            this.btnBuscarTurno = new System.Windows.Forms.Button();
-            this.btnModificar = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvDistri_Personal)).BeginInit();
+            this.Codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Apellido = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TipoPersonal = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.groupBox3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
-            // txtNombres
+            // label6
             // 
-            this.txtNombres.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.txtNombres.Location = new System.Drawing.Point(336, 434);
-            this.txtNombres.Name = "txtNombres";
-            this.txtNombres.Size = new System.Drawing.Size(425, 26);
-            this.txtNombres.TabIndex = 22;
+            this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.Color.Transparent;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(37)))), ((int)(((byte)(42)))));
+            this.label6.Location = new System.Drawing.Point(92, 53);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(308, 13);
+            this.label6.TabIndex = 132;
+            this.label6.Text = "___________________________________________";
             // 
-            // lblNombres
+            // label9
             // 
-            this.lblNombres.AutoSize = true;
-            this.lblNombres.BackColor = System.Drawing.Color.Transparent;
-            this.lblNombres.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNombres.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(37)))), ((int)(((byte)(42)))));
-            this.lblNombres.Location = new System.Drawing.Point(126, 388);
-            this.lblNombres.Name = "lblNombres";
-            this.lblNombres.Size = new System.Drawing.Size(199, 25);
-            this.lblNombres.TabIndex = 21;
-            this.lblNombres.Text = "Buscar Personal :";
+            this.label9.AutoSize = true;
+            this.label9.BackColor = System.Drawing.Color.Transparent;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(37)))), ((int)(((byte)(42)))));
+            this.label9.Location = new System.Drawing.Point(90, 19);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(297, 33);
+            this.label9.TabIndex = 131;
+            this.label9.Text = "Asignación de Turnos\r\n";
+            this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // dgvDistri_Personal
+            // btnEliminar
             // 
-            this.dgvDistri_Personal.AllowUserToAddRows = false;
-            this.dgvDistri_Personal.AllowUserToDeleteRows = false;
-            this.dgvDistri_Personal.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvDistri_Personal.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.nombre,
-            this.apellidos,
-            this.tipo_personal,
-            this.punto_atencion,
-            this.fecha_nac});
-            this.dgvDistri_Personal.Location = new System.Drawing.Point(264, 491);
-            this.dgvDistri_Personal.Margin = new System.Windows.Forms.Padding(2);
-            this.dgvDistri_Personal.Name = "dgvDistri_Personal";
-            this.dgvDistri_Personal.ReadOnly = true;
-            this.dgvDistri_Personal.RowTemplate.Height = 24;
-            this.dgvDistri_Personal.Size = new System.Drawing.Size(543, 171);
-            this.dgvDistri_Personal.TabIndex = 45;
+            this.btnEliminar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(175)))), ((int)(((byte)(169)))));
+            this.btnEliminar.FlatAppearance.BorderSize = 0;
+            this.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEliminar.Font = new System.Drawing.Font("Bahnschrift", 12.75F, System.Drawing.FontStyle.Bold);
+            this.btnEliminar.Image = global::TA_GesBib_Cliente.Properties.Resources.icono_eliminar;
+            this.btnEliminar.Location = new System.Drawing.Point(546, 90);
+            this.btnEliminar.Name = "btnEliminar";
+            this.btnEliminar.Size = new System.Drawing.Size(131, 40);
+            this.btnEliminar.TabIndex = 165;
+            this.btnEliminar.Text = "ELIMINAR";
+            this.btnEliminar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnEliminar.UseVisualStyleBackColor = false;
             // 
-            // nombre
+            // btnCancelar
             // 
-            this.nombre.HeaderText = "Nombres";
-            this.nombre.Name = "nombre";
-            this.nombre.ReadOnly = true;
+            this.btnCancelar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(175)))), ((int)(((byte)(169)))));
+            this.btnCancelar.FlatAppearance.BorderSize = 0;
+            this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCancelar.Font = new System.Drawing.Font("Bahnschrift", 12.75F, System.Drawing.FontStyle.Bold);
+            this.btnCancelar.Image = global::TA_GesBib_Cliente.Properties.Resources.icons8_cancelar_2_30;
+            this.btnCancelar.Location = new System.Drawing.Point(677, 90);
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Size = new System.Drawing.Size(135, 40);
+            this.btnCancelar.TabIndex = 164;
+            this.btnCancelar.Text = "CANCELAR";
+            this.btnCancelar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnCancelar.UseVisualStyleBackColor = false;
             // 
-            // apellidos
+            // btnModificar
             // 
-            this.apellidos.HeaderText = "Apellidos";
-            this.apellidos.Name = "apellidos";
-            this.apellidos.ReadOnly = true;
+            this.btnModificar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(175)))), ((int)(((byte)(169)))));
+            this.btnModificar.FlatAppearance.BorderSize = 0;
+            this.btnModificar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnModificar.Font = new System.Drawing.Font("Bahnschrift", 12.75F, System.Drawing.FontStyle.Bold);
+            this.btnModificar.Image = global::TA_GesBib_Cliente.Properties.Resources.icono_modificar;
+            this.btnModificar.Location = new System.Drawing.Point(410, 90);
+            this.btnModificar.Name = "btnModificar";
+            this.btnModificar.Size = new System.Drawing.Size(136, 40);
+            this.btnModificar.TabIndex = 162;
+            this.btnModificar.Text = "MODIFICAR";
+            this.btnModificar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnModificar.UseVisualStyleBackColor = false;
             // 
-            // tipo_personal
+            // button2
             // 
-            this.tipo_personal.HeaderText = "Tipo Personal";
-            this.tipo_personal.Name = "tipo_personal";
-            this.tipo_personal.ReadOnly = true;
+            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(175)))), ((int)(((byte)(169)))));
+            this.button2.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.button2.FlatAppearance.BorderSize = 0;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("Bahnschrift", 12.75F, System.Drawing.FontStyle.Bold);
+            this.button2.Image = global::TA_GesBib_Cliente.Properties.Resources.icono_guardar;
+            this.button2.Location = new System.Drawing.Point(284, 90);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(126, 40);
+            this.button2.TabIndex = 161;
+            this.button2.Text = "GUARDAR";
+            this.button2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button2.UseVisualStyleBackColor = false;
             // 
-            // punto_atencion
+            // button3
             // 
-            this.punto_atencion.HeaderText = "Punto de Atención";
-            this.punto_atencion.Name = "punto_atencion";
-            this.punto_atencion.ReadOnly = true;
+            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(175)))), ((int)(((byte)(169)))));
+            this.button3.FlatAppearance.BorderSize = 0;
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.Font = new System.Drawing.Font("Bahnschrift", 12.75F, System.Drawing.FontStyle.Bold);
+            this.button3.Image = global::TA_GesBib_Cliente.Properties.Resources.icono_crear_nuevo;
+            this.button3.Location = new System.Drawing.Point(182, 90);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(102, 40);
+            this.button3.TabIndex = 160;
+            this.button3.Text = "NUEVO";
+            this.button3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button3.UseVisualStyleBackColor = false;
             // 
-            // fecha_nac
+            // groupBox3
             // 
-            this.fecha_nac.HeaderText = "Fecha Nacimiento";
-            this.fecha_nac.Name = "fecha_nac";
-            this.fecha_nac.ReadOnly = true;
+            this.groupBox3.Controls.Add(this.btnAgregarPA);
+            this.groupBox3.Controls.Add(this.btnBuscarPersonal);
+            this.groupBox3.Controls.Add(this.btnQuitarPA);
+            this.groupBox3.Controls.Add(this.dataGridView1);
+            this.groupBox3.Controls.Add(this.textBox3);
+            this.groupBox3.Controls.Add(this.textBox6);
+            this.groupBox3.Controls.Add(this.lblNombreCompleto);
+            this.groupBox3.Controls.Add(this.lblCodigo);
+            this.groupBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.groupBox3.Location = new System.Drawing.Point(154, 386);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(682, 269);
+            this.groupBox3.TabIndex = 159;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "Personal Asignado";
+            // 
+            // btnAgregarPA
+            // 
+            this.btnAgregarPA.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(175)))), ((int)(((byte)(169)))));
+            this.btnAgregarPA.FlatAppearance.BorderSize = 0;
+            this.btnAgregarPA.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAgregarPA.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAgregarPA.Image = global::TA_GesBib_Cliente.Properties.Resources.icons8_más_30;
+            this.btnAgregarPA.Location = new System.Drawing.Point(585, 47);
+            this.btnAgregarPA.Margin = new System.Windows.Forms.Padding(2);
+            this.btnAgregarPA.Name = "btnAgregarPA";
+            this.btnAgregarPA.Size = new System.Drawing.Size(35, 34);
+            this.btnAgregarPA.TabIndex = 159;
+            this.btnAgregarPA.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnAgregarPA.UseVisualStyleBackColor = false;
+            // 
+            // btnBuscarPersonal
+            // 
+            this.btnBuscarPersonal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(175)))), ((int)(((byte)(169)))));
+            this.btnBuscarPersonal.FlatAppearance.BorderSize = 0;
+            this.btnBuscarPersonal.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBuscarPersonal.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
+            this.btnBuscarPersonal.Image = global::TA_GesBib_Cliente.Properties.Resources.icono_buscar;
+            this.btnBuscarPersonal.Location = new System.Drawing.Point(294, 18);
+            this.btnBuscarPersonal.Margin = new System.Windows.Forms.Padding(2);
+            this.btnBuscarPersonal.Name = "btnBuscarPersonal";
+            this.btnBuscarPersonal.Size = new System.Drawing.Size(35, 34);
+            this.btnBuscarPersonal.TabIndex = 151;
+            this.btnBuscarPersonal.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnBuscarPersonal.UseVisualStyleBackColor = false;
+            // 
+            // btnQuitarPA
+            // 
+            this.btnQuitarPA.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(175)))), ((int)(((byte)(169)))));
+            this.btnQuitarPA.FlatAppearance.BorderSize = 0;
+            this.btnQuitarPA.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnQuitarPA.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnQuitarPA.Image = global::TA_GesBib_Cliente.Properties.Resources.icons8_menos_30;
+            this.btnQuitarPA.Location = new System.Drawing.Point(631, 47);
+            this.btnQuitarPA.Margin = new System.Windows.Forms.Padding(2);
+            this.btnQuitarPA.Name = "btnQuitarPA";
+            this.btnQuitarPA.Size = new System.Drawing.Size(35, 34);
+            this.btnQuitarPA.TabIndex = 158;
+            this.btnQuitarPA.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnQuitarPA.UseVisualStyleBackColor = false;
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Codigo,
+            this.dataGridViewTextBoxColumn1,
+            this.Apellido,
+            this.TipoPersonal});
+            this.dataGridView1.Location = new System.Drawing.Point(22, 99);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(644, 150);
+            this.dataGridView1.TabIndex = 149;
+            // 
+            // textBox3
+            // 
+            this.textBox3.Location = new System.Drawing.Point(185, 58);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(340, 23);
+            this.textBox3.TabIndex = 148;
+            // 
+            // textBox6
+            // 
+            this.textBox6.Location = new System.Drawing.Point(185, 29);
+            this.textBox6.Name = "textBox6";
+            this.textBox6.Size = new System.Drawing.Size(103, 23);
+            this.textBox6.TabIndex = 142;
+            // 
+            // lblNombreCompleto
+            // 
+            this.lblNombreCompleto.AutoSize = true;
+            this.lblNombreCompleto.BackColor = System.Drawing.Color.Transparent;
+            this.lblNombreCompleto.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
+            this.lblNombreCompleto.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(37)))), ((int)(((byte)(42)))));
+            this.lblNombreCompleto.Location = new System.Drawing.Point(18, 58);
+            this.lblNombreCompleto.Name = "lblNombreCompleto";
+            this.lblNombreCompleto.Size = new System.Drawing.Size(159, 22);
+            this.lblNombreCompleto.TabIndex = 145;
+            this.lblNombreCompleto.Text = "Nombre Completo:";
+            this.lblNombreCompleto.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // lblCodigo
+            // 
+            this.lblCodigo.AutoSize = true;
+            this.lblCodigo.BackColor = System.Drawing.Color.Transparent;
+            this.lblCodigo.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
+            this.lblCodigo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(37)))), ((int)(((byte)(42)))));
+            this.lblCodigo.Location = new System.Drawing.Point(18, 28);
+            this.lblCodigo.Name = "lblCodigo";
+            this.lblCodigo.Size = new System.Drawing.Size(72, 22);
+            this.lblCodigo.TabIndex = 141;
+            this.lblCodigo.Text = "Código:";
+            this.lblCodigo.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // groupBox2
             // 
@@ -151,12 +303,12 @@
             this.groupBox2.Controls.Add(this.txtMiPA);
             this.groupBox2.Controls.Add(this.lblMiPA);
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox2.Location = new System.Drawing.Point(131, 149);
+            this.groupBox2.Location = new System.Drawing.Point(154, 152);
             this.groupBox2.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox2.Size = new System.Drawing.Size(793, 212);
-            this.groupBox2.TabIndex = 127;
+            this.groupBox2.Size = new System.Drawing.Size(682, 212);
+            this.groupBox2.TabIndex = 158;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Asignar :";
             // 
@@ -166,7 +318,7 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(37)))), ((int)(((byte)(42)))));
-            this.label1.Location = new System.Drawing.Point(373, 153);
+            this.label1.Location = new System.Drawing.Point(348, 153);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(71, 20);
             this.label1.TabIndex = 110;
@@ -179,7 +331,7 @@
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(37)))), ((int)(((byte)(42)))));
-            this.label2.Location = new System.Drawing.Point(372, 122);
+            this.label2.Location = new System.Drawing.Point(347, 122);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(71, 20);
             this.label2.TabIndex = 109;
@@ -192,7 +344,7 @@
             this.label13.BackColor = System.Drawing.Color.Transparent;
             this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(37)))), ((int)(((byte)(42)))));
-            this.label13.Location = new System.Drawing.Point(325, 93);
+            this.label13.Location = new System.Drawing.Point(348, 93);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(71, 20);
             this.label13.TabIndex = 108;
@@ -205,7 +357,7 @@
             this.txtMiRefFin.Location = new System.Drawing.Point(219, 149);
             this.txtMiRefFin.Margin = new System.Windows.Forms.Padding(2);
             this.txtMiRefFin.Name = "txtMiRefFin";
-            this.txtMiRefFin.Size = new System.Drawing.Size(140, 26);
+            this.txtMiRefFin.Size = new System.Drawing.Size(125, 26);
             this.txtMiRefFin.TabIndex = 41;
             // 
             // label14
@@ -214,7 +366,7 @@
             this.label14.BackColor = System.Drawing.Color.Transparent;
             this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(37)))), ((int)(((byte)(42)))));
-            this.label14.Location = new System.Drawing.Point(326, 62);
+            this.label14.Location = new System.Drawing.Point(349, 62);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(71, 20);
             this.label14.TabIndex = 107;
@@ -240,7 +392,7 @@
             this.txtMiHFin.Location = new System.Drawing.Point(219, 89);
             this.txtMiHFin.Margin = new System.Windows.Forms.Padding(2);
             this.txtMiHFin.Name = "txtMiHFin";
-            this.txtMiHFin.Size = new System.Drawing.Size(85, 26);
+            this.txtMiHFin.Size = new System.Drawing.Size(125, 26);
             this.txtMiHFin.TabIndex = 39;
             // 
             // lblMiH_fin
@@ -262,7 +414,7 @@
             this.txtMiRefIni.Location = new System.Drawing.Point(219, 119);
             this.txtMiRefIni.Margin = new System.Windows.Forms.Padding(2);
             this.txtMiRefIni.Name = "txtMiRefIni";
-            this.txtMiRefIni.Size = new System.Drawing.Size(140, 26);
+            this.txtMiRefIni.Size = new System.Drawing.Size(125, 26);
             this.txtMiRefIni.TabIndex = 37;
             // 
             // lblMiRef_ini
@@ -284,7 +436,7 @@
             this.txtMiHini.Location = new System.Drawing.Point(219, 59);
             this.txtMiHini.Margin = new System.Windows.Forms.Padding(2);
             this.txtMiHini.Name = "txtMiHini";
-            this.txtMiHini.Size = new System.Drawing.Size(85, 26);
+            this.txtMiHini.Size = new System.Drawing.Size(125, 26);
             this.txtMiHini.TabIndex = 35;
             // 
             // lblMiH_ini
@@ -322,136 +474,29 @@
             this.lblMiPA.TabIndex = 19;
             this.lblMiPA.Text = "Semestre :";
             // 
-            // label6
+            // Codigo
             // 
-            this.label6.AutoSize = true;
-            this.label6.BackColor = System.Drawing.Color.Transparent;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(37)))), ((int)(((byte)(42)))));
-            this.label6.Location = new System.Drawing.Point(92, 53);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(308, 13);
-            this.label6.TabIndex = 132;
-            this.label6.Text = "___________________________________________";
+            this.Codigo.HeaderText = "Código";
+            this.Codigo.Name = "Codigo";
+            this.Codigo.Width = 90;
             // 
-            // label9
+            // dataGridViewTextBoxColumn1
             // 
-            this.label9.AutoSize = true;
-            this.label9.BackColor = System.Drawing.Color.Transparent;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(37)))), ((int)(((byte)(42)))));
-            this.label9.Location = new System.Drawing.Point(90, 19);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(297, 33);
-            this.label9.TabIndex = 131;
-            this.label9.Text = "Asignación de Turnos\r\n";
-            this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.dataGridViewTextBoxColumn1.HeaderText = "Nombre";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.Width = 180;
             // 
-            // btnGuardar
+            // Apellido
             // 
-            this.btnGuardar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(175)))), ((int)(((byte)(169)))));
-            this.btnGuardar.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.btnGuardar.FlatAppearance.BorderSize = 0;
-            this.btnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnGuardar.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Bold);
-            this.btnGuardar.Image = global::TA_GesBib_Cliente.Properties.Resources.icono_guardar;
-            this.btnGuardar.Location = new System.Drawing.Point(239, 85);
-            this.btnGuardar.Name = "btnGuardar";
-            this.btnGuardar.Size = new System.Drawing.Size(134, 40);
-            this.btnGuardar.TabIndex = 129;
-            this.btnGuardar.Text = "GUARDAR";
-            this.btnGuardar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnGuardar.UseVisualStyleBackColor = false;
+            this.Apellido.HeaderText = "Apellido";
+            this.Apellido.Name = "Apellido";
+            this.Apellido.Width = 180;
             // 
-            // btnBuscar
+            // TipoPersonal
             // 
-            this.btnBuscar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(175)))), ((int)(((byte)(169)))));
-            this.btnBuscar.FlatAppearance.BorderSize = 0;
-            this.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.btnBuscar.Image = global::TA_GesBib_Cliente.Properties.Resources.icono_buscar;
-            this.btnBuscar.Location = new System.Drawing.Point(159, 427);
-            this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(140, 40);
-            this.btnBuscar.TabIndex = 44;
-            this.btnBuscar.Text = "BUSCAR";
-            this.btnBuscar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnBuscar.UseVisualStyleBackColor = false;
-            // 
-            // btnNuevo
-            // 
-            this.btnNuevo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(175)))), ((int)(((byte)(169)))));
-            this.btnNuevo.FlatAppearance.BorderSize = 0;
-            this.btnNuevo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnNuevo.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnNuevo.Image = global::TA_GesBib_Cliente.Properties.Resources.icono_crear_nuevo;
-            this.btnNuevo.Location = new System.Drawing.Point(131, 85);
-            this.btnNuevo.Name = "btnNuevo";
-            this.btnNuevo.Size = new System.Drawing.Size(126, 40);
-            this.btnNuevo.TabIndex = 128;
-            this.btnNuevo.Text = "NUEVO";
-            this.btnNuevo.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnNuevo.UseVisualStyleBackColor = false;
-            // 
-            // btnEliminar
-            // 
-            this.btnEliminar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(175)))), ((int)(((byte)(169)))));
-            this.btnEliminar.FlatAppearance.BorderSize = 0;
-            this.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEliminar.Font = new System.Drawing.Font("Bahnschrift", 12.75F, System.Drawing.FontStyle.Bold);
-            this.btnEliminar.Image = global::TA_GesBib_Cliente.Properties.Resources.icono_eliminar;
-            this.btnEliminar.Location = new System.Drawing.Point(637, 85);
-            this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(158, 40);
-            this.btnEliminar.TabIndex = 139;
-            this.btnEliminar.Text = "ELIMINAR";
-            this.btnEliminar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnEliminar.UseVisualStyleBackColor = false;
-            // 
-            // btnCancelar
-            // 
-            this.btnCancelar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(175)))), ((int)(((byte)(169)))));
-            this.btnCancelar.FlatAppearance.BorderSize = 0;
-            this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCancelar.Font = new System.Drawing.Font("Bahnschrift", 12.75F, System.Drawing.FontStyle.Bold);
-            this.btnCancelar.Image = global::TA_GesBib_Cliente.Properties.Resources.icons8_cancelar_2_30;
-            this.btnCancelar.Location = new System.Drawing.Point(789, 85);
-            this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(135, 40);
-            this.btnCancelar.TabIndex = 138;
-            this.btnCancelar.Text = "CANCELAR";
-            this.btnCancelar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnCancelar.UseVisualStyleBackColor = false;
-            // 
-            // btnBuscarTurno
-            // 
-            this.btnBuscarTurno.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(175)))), ((int)(((byte)(169)))));
-            this.btnBuscarTurno.FlatAppearance.BorderSize = 0;
-            this.btnBuscarTurno.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBuscarTurno.Font = new System.Drawing.Font("Bahnschrift", 12.75F, System.Drawing.FontStyle.Bold);
-            this.btnBuscarTurno.Image = global::TA_GesBib_Cliente.Properties.Resources.icono_buscar;
-            this.btnBuscarTurno.Location = new System.Drawing.Point(506, 85);
-            this.btnBuscarTurno.Name = "btnBuscarTurno";
-            this.btnBuscarTurno.Size = new System.Drawing.Size(154, 40);
-            this.btnBuscarTurno.TabIndex = 137;
-            this.btnBuscarTurno.Text = "BUSCAR";
-            this.btnBuscarTurno.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnBuscarTurno.UseVisualStyleBackColor = false;
-            // 
-            // btnModificar
-            // 
-            this.btnModificar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(175)))), ((int)(((byte)(169)))));
-            this.btnModificar.FlatAppearance.BorderSize = 0;
-            this.btnModificar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnModificar.Font = new System.Drawing.Font("Bahnschrift", 12.75F, System.Drawing.FontStyle.Bold);
-            this.btnModificar.Image = global::TA_GesBib_Cliente.Properties.Resources.icono_modificar;
-            this.btnModificar.Location = new System.Drawing.Point(369, 85);
-            this.btnModificar.Name = "btnModificar";
-            this.btnModificar.Size = new System.Drawing.Size(159, 40);
-            this.btnModificar.TabIndex = 136;
-            this.btnModificar.Text = "MODIFICAR";
-            this.btnModificar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnModificar.UseVisualStyleBackColor = false;
+            this.TipoPersonal.HeaderText = "Tipo Personal";
+            this.TipoPersonal.Name = "TipoPersonal";
+            this.TipoPersonal.Width = 150;
             // 
             // frmAsignarTurnos
             // 
@@ -460,24 +505,22 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(242)))), ((int)(((byte)(241)))));
             this.ClientSize = new System.Drawing.Size(1055, 745);
             this.Controls.Add(this.btnEliminar);
-            this.Controls.Add(this.btnBuscarTurno);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnModificar);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.button3);
+            this.Controls.Add(this.groupBox3);
+            this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label9);
-            this.Controls.Add(this.btnGuardar);
-            this.Controls.Add(this.btnNuevo);
-            this.Controls.Add(this.groupBox2);
-            this.Controls.Add(this.dgvDistri_Personal);
-            this.Controls.Add(this.btnBuscar);
-            this.Controls.Add(this.txtNombres);
-            this.Controls.Add(this.lblNombres);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmAsignarTurnos";
-            this.Text = "frmAsignarTurnos";
+            this.Text = "-";
             this.Load += new System.EventHandler(this.frmAsignarTurnos_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvDistri_Personal)).EndInit();
+            this.groupBox3.ResumeLayout(false);
+            this.groupBox3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.ResumeLayout(false);
@@ -486,12 +529,29 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.TextBox txtNombres;
-        private System.Windows.Forms.Label lblNombres;
-        private System.Windows.Forms.Button btnBuscar;
-        private System.Windows.Forms.DataGridView dgvDistri_Personal;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Button btnEliminar;
+        private System.Windows.Forms.Button btnCancelar;
+        private System.Windows.Forms.Button btnModificar;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.Button btnAgregarPA;
+        private System.Windows.Forms.Button btnBuscarPersonal;
+        private System.Windows.Forms.Button btnQuitarPA;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Codigo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Apellido;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TipoPersonal;
+        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.Label lblNombreCompleto;
+        private System.Windows.Forms.Label lblCodigo;
         private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.TextBox txtMiRefFin;
         private System.Windows.Forms.Label label14;
@@ -504,20 +564,5 @@
         private System.Windows.Forms.Label lblMiH_ini;
         private System.Windows.Forms.TextBox txtMiPA;
         private System.Windows.Forms.Label lblMiPA;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nombre;
-        private System.Windows.Forms.DataGridViewTextBoxColumn apellidos;
-        private System.Windows.Forms.DataGridViewTextBoxColumn tipo_personal;
-        private System.Windows.Forms.DataGridViewTextBoxColumn punto_atencion;
-        private System.Windows.Forms.DataGridViewTextBoxColumn fecha_nac;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button btnGuardar;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Button btnNuevo;
-        private System.Windows.Forms.Button btnEliminar;
-        private System.Windows.Forms.Button btnCancelar;
-        private System.Windows.Forms.Button btnBuscarTurno;
-        private System.Windows.Forms.Button btnModificar;
     }
 }
