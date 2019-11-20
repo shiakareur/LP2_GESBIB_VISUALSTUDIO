@@ -54,21 +54,33 @@ namespace TA_GesBib_Cliente
 
         private void btnAsignarTurnos_Click(object sender, EventArgs e)
         {
-
             //lblBienvenido.Visible = false;
             //panelAviso.Visible = false;
 
-            //panelBIPO.Visible = false;
+            panelBIPO.Visible = false;
+            //poner los demas forms no visibles (si existen)
+            if (var_formCapa != null) var_formCapa.Visible = false;
+            if (var_formDistSemana != null) var_formDistSemana.Visible = false;
+            if (var_formDistSemestre != null) var_formDistSemestre.Visible = false;
+            if (var_formPerfilExp != null) var_formPerfilExp.Visible = false;
 
-            frmAsignarTurnos frmAsignar_turno = new frmAsignarTurnos(this);
-            frmAsignar_turno.MdiParent = this;
-            frmAsignar_turno.Show();
-            frmAsignar_turno.Location = new Point(0, 0);
-
-
-
-
+            if (var_formAsignarTurnos == null)
+            {
+                var_formAsignarTurnos = new frmAsignarTurnos(this);
+                var_formAsignarTurnos.MdiParent = this;
+                var_formAsignarTurnos.Show();
+                var_formAsignarTurnos.Location = new Point(0, 0);
+            }
+            else
+            {
+                var_formAsignarTurnos.StartPosition = FormStartPosition.Manual;
+                var_formAsignarTurnos.Left = 0;
+                var_formAsignarTurnos.Top = 0;
+                var_formAsignarTurnos.Visible = true;
+            }
+                     
         }
+
         //...................PANELES v2 ................................
 
         private void customizeDesign()
@@ -102,12 +114,29 @@ namespace TA_GesBib_Cliente
             //lblBienvenido.Visible = false;
             //panelAviso.Visible = false;
 
-            //panelBIPO.Visible = false;
+            panelBIPO.Visible = false;
+            //poner los demas forms no visibles (si existen)
+            if (var_formAsignarTurnos != null) var_formAsignarTurnos.Visible = false;
+            if (var_formDistSemana != null) var_formDistSemana.Visible = false;
+            if (var_formDistSemestre != null) var_formDistSemestre.Visible = false;
+            if (var_formCapa != null) var_formCapa.Visible = false;
 
-            frmAdminPerfilesExp frmAdminPerfilExp = new frmAdminPerfilesExp(this);
-            frmAdminPerfilExp.MdiParent = this;
-            frmAdminPerfilExp.Show();
-            frmAdminPerfilExp.Location = new Point(0, 0);
+            if (var_formPerfilExp == null)
+            {
+                var_formPerfilExp = new frmAdminPerfilesExp(this);
+                var_formPerfilExp.MdiParent = this;
+                var_formPerfilExp.Show();
+                var_formPerfilExp.Location = new Point(0, 0);
+            }
+            else
+            {
+                var_formPerfilExp.StartPosition = FormStartPosition.Manual;
+                var_formPerfilExp.Left = 0;
+                var_formPerfilExp.Top = 0;
+                var_formPerfilExp.Visible = true;
+            }
+                
+ 
         }
 
         private void picHome_Click(object sender, EventArgs e)
@@ -134,6 +163,9 @@ namespace TA_GesBib_Cliente
             }
             else
             {
+                var_formCapa.StartPosition = FormStartPosition.Manual;
+                var_formCapa.Left = 0;
+                var_formCapa.Top = 0;
                 var_formCapa.Visible = true;
             }
 
@@ -146,12 +178,28 @@ namespace TA_GesBib_Cliente
         }
 
         private void btnSemestre_Click(object sender, EventArgs e)
-        {
-            frmDistribucionSemestre formDistSemestre = new frmDistribucionSemestre(var_usuario);
-            formDistSemestre.MdiParent = this;
-            formDistSemestre.Show();
-            formDistSemestre.Location = new Point(0, 0);
-            formDistSemestre.Size = new Size(934, 675);
+        {                      
+            panelBIPO.Visible = false;
+            if (var_formAsignarTurnos != null) var_formAsignarTurnos.Visible = false;
+            if (var_formDistSemana != null) var_formDistSemana.Visible = false;
+            if (var_formCapa != null) var_formCapa.Visible = false;
+            if (var_formPerfilExp != null) var_formPerfilExp.Visible = false;
+
+            if (var_formDistSemestre == null)
+            {
+                var_formDistSemestre = new frmDistribucionSemestre(var_usuario);
+                var_formDistSemestre.MdiParent = this;
+                var_formDistSemestre.Show();
+                var_formDistSemestre.Location = new Point(0, 0);
+                var_formDistSemestre.Size = new Size(934, 675);
+            }
+            else
+            {
+                var_formDistSemestre.StartPosition = FormStartPosition.Manual;
+                var_formDistSemestre.Left = 0;
+                var_formDistSemestre.Top = 0;
+                var_formDistSemestre.Visible = true;
+            }                
 
             hideSubMenu();
         }
@@ -170,7 +218,6 @@ namespace TA_GesBib_Cliente
             */
 
             panelBIPO.Visible = false;
-
             /*poner los demas forms no visibles (si existen)*/
             if (var_formAsignarTurnos != null) var_formAsignarTurnos.Visible = false;
             if (var_formCapa != null) var_formCapa.Visible = false;
@@ -178,25 +225,23 @@ namespace TA_GesBib_Cliente
             if (var_formPerfilExp != null) var_formPerfilExp.Visible = false;
 
             if (var_formDistSemana == null)
-            {
-                
-
+            {              
                 var_formDistSemana = new frmDistribuirPersonalSemana(var_usuario);
                 var_formDistSemana.MdiParent = this;
                 var_formDistSemana.StartPosition = FormStartPosition.Manual;
                 var_formDistSemana.Left = 0;
                 var_formDistSemana.Top = 0;
-                var_formDistSemana.Show();
-
-             
+                var_formDistSemana.Show();            
             }
             else
             {
+                var_formDistSemana.StartPosition = FormStartPosition.Manual;
+                var_formDistSemana.Left = 0;
+                var_formDistSemana.Top = 0;
                 var_formDistSemana.Visible = true;
-            }
-
-            
-
+            }            
+                       
+                        
             /*var_formDistSemana = new frmDistribuirPersonalSemana(var_usuario);           
             var_formDistSemana.MdiParent = this;
             var_formDistSemana.StartPosition = FormStartPosition.Manual;
@@ -204,10 +249,7 @@ namespace TA_GesBib_Cliente
             var_formDistSemana.Top = 0;
             var_formDistSemana.Show();*/
 
-            hideSubMenu();
-            
-
-
+            hideSubMenu();                     
 
         }
 

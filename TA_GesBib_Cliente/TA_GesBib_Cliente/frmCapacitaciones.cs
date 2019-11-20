@@ -19,7 +19,8 @@ namespace TA_GesBib_Cliente
 
         private void btnCerrar_Click(object sender, EventArgs e)
         {
-
+            this.Dispose();
+            //poner el panel BIPO en visible
 
         }
 
