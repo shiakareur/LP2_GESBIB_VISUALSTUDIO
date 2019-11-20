@@ -28,7 +28,8 @@ namespace TA_GesBib_Cliente
         {
             InitializeComponent();
             limpiarComponentes();
-            estadoComponentes(Estado.Inicial);
+            estadoForm = Estado.Inicial;
+            estadoComponentes(estadoForm);
         }
 
         //se agrego
@@ -41,7 +42,8 @@ namespace TA_GesBib_Cliente
             var_tipoPerfil = tipoPerfil;
             InitializeComponent();
             limpiarComponentes();
-            estadoComponentes(Estado.Inicial);
+            estadoForm = Estado.Inicial;
+            estadoComponentes(estadoForm);
         }
 
 
@@ -85,7 +87,7 @@ namespace TA_GesBib_Cliente
             }
             catch (Exception ex)
             {
-                System.Console.WriteLine("Error");
+                System.Console.WriteLine(ex);
             }
 
             estadoForm = Estado.Inicial;
@@ -133,7 +135,7 @@ namespace TA_GesBib_Cliente
             }
             catch (Exception ex)
             {
-                System.Console.WriteLine("Error");
+                System.Console.WriteLine(ex);
             }
 
             estadoForm = Estado.Inicial;

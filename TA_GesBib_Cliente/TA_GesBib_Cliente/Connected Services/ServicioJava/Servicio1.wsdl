@@ -5,17 +5,17 @@
       <xsd:import schemaLocation="http://localhost:8080/GesBibServices/Servicio?xsd=1" namespace="http://services.lp2soft.pucp.edu.pe/" />
     </xsd:schema>
   </types>
-  <message name="listarHorasExtra">
-    <part name="parameters" element="tns:listarHorasExtra" />
-  </message>
-  <message name="listarHorasExtraResponse">
-    <part name="parameters" element="tns:listarHorasExtraResponse" />
-  </message>
   <message name="listarDistribucionPersonalPorFechaHora">
     <part name="parameters" element="tns:listarDistribucionPersonalPorFechaHora" />
   </message>
   <message name="listarDistribucionPersonalPorFechaHoraResponse">
     <part name="parameters" element="tns:listarDistribucionPersonalPorFechaHoraResponse" />
+  </message>
+  <message name="eliminarInasistencia">
+    <part name="parameters" element="tns:eliminarInasistencia" />
+  </message>
+  <message name="eliminarInasistenciaResponse">
+    <part name="parameters" element="tns:eliminarInasistenciaResponse" />
   </message>
   <message name="hallarTipoUsuario">
     <part name="parameters" element="tns:hallarTipoUsuario" />
@@ -185,6 +185,18 @@
   <message name="actualizarHoraExtraResponse">
     <part name="parameters" element="tns:actualizarHoraExtraResponse" />
   </message>
+  <message name="listarHorasExtraPorFecha">
+    <part name="parameters" element="tns:listarHorasExtraPorFecha" />
+  </message>
+  <message name="listarHorasExtraPorFechaResponse">
+    <part name="parameters" element="tns:listarHorasExtraPorFechaResponse" />
+  </message>
+  <message name="eliminarHoraExtra">
+    <part name="parameters" element="tns:eliminarHoraExtra" />
+  </message>
+  <message name="eliminarHoraExtraResponse">
+    <part name="parameters" element="tns:eliminarHoraExtraResponse" />
+  </message>
   <message name="insertarInasistencia">
     <part name="parameters" element="tns:insertarInasistencia" />
   </message>
@@ -203,6 +215,18 @@
   <message name="listarTipoInasistenciaResponse">
     <part name="parameters" element="tns:listarTipoInasistenciaResponse" />
   </message>
+  <message name="listarInasistencias">
+    <part name="parameters" element="tns:listarInasistencias" />
+  </message>
+  <message name="listarInasistenciasResponse">
+    <part name="parameters" element="tns:listarInasistenciasResponse" />
+  </message>
+  <message name="listarInasistenciasPorFecha">
+    <part name="parameters" element="tns:listarInasistenciasPorFecha" />
+  </message>
+  <message name="listarInasistenciasPorFechaResponse">
+    <part name="parameters" element="tns:listarInasistenciasPorFechaResponse" />
+  </message>
   <message name="elimDistribucionPersonal">
     <part name="parameters" element="tns:elimDistribucionPersonal" />
   </message>
@@ -214,18 +238,6 @@
   </message>
   <message name="insertarDistribucionPersonalResponse">
     <part name="parameters" element="tns:insertarDistribucionPersonalResponse" />
-  </message>
-  <message name="listarHorasExtraPorFecha">
-    <part name="parameters" element="tns:listarHorasExtraPorFecha" />
-  </message>
-  <message name="listarHorasExtraPorFechaResponse">
-    <part name="parameters" element="tns:listarHorasExtraPorFechaResponse" />
-  </message>
-  <message name="eliminarHoraExtra">
-    <part name="parameters" element="tns:eliminarHoraExtra" />
-  </message>
-  <message name="eliminarHoraExtraResponse">
-    <part name="parameters" element="tns:eliminarHoraExtraResponse" />
   </message>
   <message name="validarUsuario">
     <part name="parameters" element="tns:validarUsuario" />
@@ -275,6 +287,12 @@
   <message name="listarGestoresResponse">
     <part name="parameters" element="tns:listarGestoresResponse" />
   </message>
+  <message name="listarHorasExtra">
+    <part name="parameters" element="tns:listarHorasExtra" />
+  </message>
+  <message name="listarHorasExtraResponse">
+    <part name="parameters" element="tns:listarHorasExtraResponse" />
+  </message>
   <message name="listarHorasLibre">
     <part name="parameters" element="tns:listarHorasLibre" />
   </message>
@@ -282,13 +300,13 @@
     <part name="parameters" element="tns:listarHorasLibreResponse" />
   </message>
   <portType name="Servicio">
-    <operation name="listarHorasExtra">
-      <input wsam:Action="http://services.lp2soft.pucp.edu.pe/Servicio/listarHorasExtraRequest" message="tns:listarHorasExtra" />
-      <output wsam:Action="http://services.lp2soft.pucp.edu.pe/Servicio/listarHorasExtraResponse" message="tns:listarHorasExtraResponse" />
-    </operation>
     <operation name="listarDistribucionPersonalPorFechaHora">
       <input wsam:Action="http://services.lp2soft.pucp.edu.pe/Servicio/listarDistribucionPersonalPorFechaHoraRequest" message="tns:listarDistribucionPersonalPorFechaHora" />
       <output wsam:Action="http://services.lp2soft.pucp.edu.pe/Servicio/listarDistribucionPersonalPorFechaHoraResponse" message="tns:listarDistribucionPersonalPorFechaHoraResponse" />
+    </operation>
+    <operation name="eliminarInasistencia">
+      <input wsam:Action="http://services.lp2soft.pucp.edu.pe/Servicio/eliminarInasistenciaRequest" message="tns:eliminarInasistencia" />
+      <output wsam:Action="http://services.lp2soft.pucp.edu.pe/Servicio/eliminarInasistenciaResponse" message="tns:eliminarInasistenciaResponse" />
     </operation>
     <operation name="hallarTipoUsuario">
       <input wsam:Action="http://services.lp2soft.pucp.edu.pe/Servicio/hallarTipoUsuarioRequest" message="tns:hallarTipoUsuario" />
@@ -402,6 +420,14 @@
       <input wsam:Action="http://services.lp2soft.pucp.edu.pe/Servicio/actualizarHoraExtraRequest" message="tns:actualizarHoraExtra" />
       <output wsam:Action="http://services.lp2soft.pucp.edu.pe/Servicio/actualizarHoraExtraResponse" message="tns:actualizarHoraExtraResponse" />
     </operation>
+    <operation name="listarHorasExtraPorFecha">
+      <input wsam:Action="http://services.lp2soft.pucp.edu.pe/Servicio/listarHorasExtraPorFechaRequest" message="tns:listarHorasExtraPorFecha" />
+      <output wsam:Action="http://services.lp2soft.pucp.edu.pe/Servicio/listarHorasExtraPorFechaResponse" message="tns:listarHorasExtraPorFechaResponse" />
+    </operation>
+    <operation name="eliminarHoraExtra">
+      <input wsam:Action="http://services.lp2soft.pucp.edu.pe/Servicio/eliminarHoraExtraRequest" message="tns:eliminarHoraExtra" />
+      <output wsam:Action="http://services.lp2soft.pucp.edu.pe/Servicio/eliminarHoraExtraResponse" message="tns:eliminarHoraExtraResponse" />
+    </operation>
     <operation name="insertarInasistencia">
       <input wsam:Action="http://services.lp2soft.pucp.edu.pe/Servicio/insertarInasistenciaRequest" message="tns:insertarInasistencia" />
       <output wsam:Action="http://services.lp2soft.pucp.edu.pe/Servicio/insertarInasistenciaResponse" message="tns:insertarInasistenciaResponse" />
@@ -414,6 +440,14 @@
       <input wsam:Action="http://services.lp2soft.pucp.edu.pe/Servicio/listarTipoInasistenciaRequest" message="tns:listarTipoInasistencia" />
       <output wsam:Action="http://services.lp2soft.pucp.edu.pe/Servicio/listarTipoInasistenciaResponse" message="tns:listarTipoInasistenciaResponse" />
     </operation>
+    <operation name="listarInasistencias">
+      <input wsam:Action="http://services.lp2soft.pucp.edu.pe/Servicio/listarInasistenciasRequest" message="tns:listarInasistencias" />
+      <output wsam:Action="http://services.lp2soft.pucp.edu.pe/Servicio/listarInasistenciasResponse" message="tns:listarInasistenciasResponse" />
+    </operation>
+    <operation name="listarInasistenciasPorFecha">
+      <input wsam:Action="http://services.lp2soft.pucp.edu.pe/Servicio/listarInasistenciasPorFechaRequest" message="tns:listarInasistenciasPorFecha" />
+      <output wsam:Action="http://services.lp2soft.pucp.edu.pe/Servicio/listarInasistenciasPorFechaResponse" message="tns:listarInasistenciasPorFechaResponse" />
+    </operation>
     <operation name="elimDistribucionPersonal">
       <input wsam:Action="http://services.lp2soft.pucp.edu.pe/Servicio/elimDistribucionPersonalRequest" message="tns:elimDistribucionPersonal" />
       <output wsam:Action="http://services.lp2soft.pucp.edu.pe/Servicio/elimDistribucionPersonalResponse" message="tns:elimDistribucionPersonalResponse" />
@@ -421,14 +455,6 @@
     <operation name="insertarDistribucionPersonal">
       <input wsam:Action="http://services.lp2soft.pucp.edu.pe/Servicio/insertarDistribucionPersonalRequest" message="tns:insertarDistribucionPersonal" />
       <output wsam:Action="http://services.lp2soft.pucp.edu.pe/Servicio/insertarDistribucionPersonalResponse" message="tns:insertarDistribucionPersonalResponse" />
-    </operation>
-    <operation name="listarHorasExtraPorFecha">
-      <input wsam:Action="http://services.lp2soft.pucp.edu.pe/Servicio/listarHorasExtraPorFechaRequest" message="tns:listarHorasExtraPorFecha" />
-      <output wsam:Action="http://services.lp2soft.pucp.edu.pe/Servicio/listarHorasExtraPorFechaResponse" message="tns:listarHorasExtraPorFechaResponse" />
-    </operation>
-    <operation name="eliminarHoraExtra">
-      <input wsam:Action="http://services.lp2soft.pucp.edu.pe/Servicio/eliminarHoraExtraRequest" message="tns:eliminarHoraExtra" />
-      <output wsam:Action="http://services.lp2soft.pucp.edu.pe/Servicio/eliminarHoraExtraResponse" message="tns:eliminarHoraExtraResponse" />
     </operation>
     <operation name="validarUsuario">
       <input wsam:Action="http://services.lp2soft.pucp.edu.pe/Servicio/validarUsuarioRequest" message="tns:validarUsuario" />
@@ -462,6 +488,10 @@
       <input wsam:Action="http://services.lp2soft.pucp.edu.pe/Servicio/listarGestoresRequest" message="tns:listarGestores" />
       <output wsam:Action="http://services.lp2soft.pucp.edu.pe/Servicio/listarGestoresResponse" message="tns:listarGestoresResponse" />
     </operation>
+    <operation name="listarHorasExtra">
+      <input wsam:Action="http://services.lp2soft.pucp.edu.pe/Servicio/listarHorasExtraRequest" message="tns:listarHorasExtra" />
+      <output wsam:Action="http://services.lp2soft.pucp.edu.pe/Servicio/listarHorasExtraResponse" message="tns:listarHorasExtraResponse" />
+    </operation>
     <operation name="listarHorasLibre">
       <input wsam:Action="http://services.lp2soft.pucp.edu.pe/Servicio/listarHorasLibreRequest" message="tns:listarHorasLibre" />
       <output wsam:Action="http://services.lp2soft.pucp.edu.pe/Servicio/listarHorasLibreResponse" message="tns:listarHorasLibreResponse" />
@@ -469,7 +499,7 @@
   </portType>
   <binding name="ServicioPortBinding" type="tns:Servicio">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
-    <operation name="listarHorasExtra">
+    <operation name="listarDistribucionPersonalPorFechaHora">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -478,7 +508,7 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="listarDistribucionPersonalPorFechaHora">
+    <operation name="eliminarInasistencia">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -739,6 +769,24 @@
         <soap:body use="literal" />
       </output>
     </operation>
+    <operation name="listarHorasExtraPorFecha">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="eliminarHoraExtra">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
     <operation name="insertarInasistencia">
       <soap:operation soapAction="" />
       <input>
@@ -766,6 +814,24 @@
         <soap:body use="literal" />
       </output>
     </operation>
+    <operation name="listarInasistencias">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarInasistenciasPorFecha">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
     <operation name="elimDistribucionPersonal">
       <soap:operation soapAction="" />
       <input>
@@ -776,24 +842,6 @@
       </output>
     </operation>
     <operation name="insertarDistribucionPersonal">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="listarHorasExtraPorFecha">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="eliminarHoraExtra">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -866,6 +914,15 @@
       </output>
     </operation>
     <operation name="listarGestores">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarHorasExtra">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />

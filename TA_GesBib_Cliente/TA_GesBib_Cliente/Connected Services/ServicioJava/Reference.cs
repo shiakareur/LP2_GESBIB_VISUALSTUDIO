@@ -16,15 +16,6 @@ namespace TA_GesBib_Cliente.ServicioJava {
     public interface Servicio {
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2soft.pucp.edu.pe/Servicio/listarHorasExtraRequest", ReplyAction="http://services.lp2soft.pucp.edu.pe/Servicio/listarHorasExtraResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        TA_GesBib_Cliente.ServicioJava.listarHorasExtraResponse listarHorasExtra(TA_GesBib_Cliente.ServicioJava.listarHorasExtraRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2soft.pucp.edu.pe/Servicio/listarHorasExtraRequest", ReplyAction="http://services.lp2soft.pucp.edu.pe/Servicio/listarHorasExtraResponse")]
-        System.Threading.Tasks.Task<TA_GesBib_Cliente.ServicioJava.listarHorasExtraResponse> listarHorasExtraAsync(TA_GesBib_Cliente.ServicioJava.listarHorasExtraRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2soft.pucp.edu.pe/Servicio/listarDistribucionPersonalPorFechaHo" +
             "raRequest", ReplyAction="http://services.lp2soft.pucp.edu.pe/Servicio/listarDistribucionPersonalPorFechaHo" +
             "raResponse")]
@@ -36,6 +27,14 @@ namespace TA_GesBib_Cliente.ServicioJava {
             "raRequest", ReplyAction="http://services.lp2soft.pucp.edu.pe/Servicio/listarDistribucionPersonalPorFechaHo" +
             "raResponse")]
         System.Threading.Tasks.Task<TA_GesBib_Cliente.ServicioJava.listarDistribucionPersonalPorFechaHoraResponse> listarDistribucionPersonalPorFechaHoraAsync(TA_GesBib_Cliente.ServicioJava.listarDistribucionPersonalPorFechaHoraRequest request);
+        
+        // CODEGEN: El parámetro 'idPersonal' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2soft.pucp.edu.pe/Servicio/eliminarInasistenciaRequest", ReplyAction="http://services.lp2soft.pucp.edu.pe/Servicio/eliminarInasistenciaResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        TA_GesBib_Cliente.ServicioJava.eliminarInasistenciaResponse eliminarInasistencia(TA_GesBib_Cliente.ServicioJava.eliminarInasistenciaRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2soft.pucp.edu.pe/Servicio/eliminarInasistenciaRequest", ReplyAction="http://services.lp2soft.pucp.edu.pe/Servicio/eliminarInasistenciaResponse")]
+        System.Threading.Tasks.Task<TA_GesBib_Cliente.ServicioJava.eliminarInasistenciaResponse> eliminarInasistenciaAsync(TA_GesBib_Cliente.ServicioJava.eliminarInasistenciaRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2soft.pucp.edu.pe/Servicio/hallarTipoUsuarioRequest", ReplyAction="http://services.lp2soft.pucp.edu.pe/Servicio/hallarTipoUsuarioResponse")]
@@ -292,6 +291,23 @@ namespace TA_GesBib_Cliente.ServicioJava {
         System.Threading.Tasks.Task<TA_GesBib_Cliente.ServicioJava.actualizarHoraExtraResponse> actualizarHoraExtraAsync(TA_GesBib_Cliente.ServicioJava.actualizarHoraExtraRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2soft.pucp.edu.pe/Servicio/listarHorasExtraPorFechaRequest", ReplyAction="http://services.lp2soft.pucp.edu.pe/Servicio/listarHorasExtraPorFechaResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        TA_GesBib_Cliente.ServicioJava.listarHorasExtraPorFechaResponse listarHorasExtraPorFecha(TA_GesBib_Cliente.ServicioJava.listarHorasExtraPorFechaRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2soft.pucp.edu.pe/Servicio/listarHorasExtraPorFechaRequest", ReplyAction="http://services.lp2soft.pucp.edu.pe/Servicio/listarHorasExtraPorFechaResponse")]
+        System.Threading.Tasks.Task<TA_GesBib_Cliente.ServicioJava.listarHorasExtraPorFechaResponse> listarHorasExtraPorFechaAsync(TA_GesBib_Cliente.ServicioJava.listarHorasExtraPorFechaRequest request);
+        
+        // CODEGEN: El parámetro 'idHoraExtra' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2soft.pucp.edu.pe/Servicio/eliminarHoraExtraRequest", ReplyAction="http://services.lp2soft.pucp.edu.pe/Servicio/eliminarHoraExtraResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        TA_GesBib_Cliente.ServicioJava.eliminarHoraExtraResponse eliminarHoraExtra(TA_GesBib_Cliente.ServicioJava.eliminarHoraExtraRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2soft.pucp.edu.pe/Servicio/eliminarHoraExtraRequest", ReplyAction="http://services.lp2soft.pucp.edu.pe/Servicio/eliminarHoraExtraResponse")]
+        System.Threading.Tasks.Task<TA_GesBib_Cliente.ServicioJava.eliminarHoraExtraResponse> eliminarHoraExtraAsync(TA_GesBib_Cliente.ServicioJava.eliminarHoraExtraRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2soft.pucp.edu.pe/Servicio/insertarInasistenciaRequest", ReplyAction="http://services.lp2soft.pucp.edu.pe/Servicio/insertarInasistenciaResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
@@ -318,6 +334,24 @@ namespace TA_GesBib_Cliente.ServicioJava {
         [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2soft.pucp.edu.pe/Servicio/listarTipoInasistenciaRequest", ReplyAction="http://services.lp2soft.pucp.edu.pe/Servicio/listarTipoInasistenciaResponse")]
         System.Threading.Tasks.Task<TA_GesBib_Cliente.ServicioJava.listarTipoInasistenciaResponse> listarTipoInasistenciaAsync(TA_GesBib_Cliente.ServicioJava.listarTipoInasistenciaRequest request);
         
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2soft.pucp.edu.pe/Servicio/listarInasistenciasRequest", ReplyAction="http://services.lp2soft.pucp.edu.pe/Servicio/listarInasistenciasResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        TA_GesBib_Cliente.ServicioJava.listarInasistenciasResponse listarInasistencias(TA_GesBib_Cliente.ServicioJava.listarInasistenciasRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2soft.pucp.edu.pe/Servicio/listarInasistenciasRequest", ReplyAction="http://services.lp2soft.pucp.edu.pe/Servicio/listarInasistenciasResponse")]
+        System.Threading.Tasks.Task<TA_GesBib_Cliente.ServicioJava.listarInasistenciasResponse> listarInasistenciasAsync(TA_GesBib_Cliente.ServicioJava.listarInasistenciasRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2soft.pucp.edu.pe/Servicio/listarInasistenciasPorFechaRequest", ReplyAction="http://services.lp2soft.pucp.edu.pe/Servicio/listarInasistenciasPorFechaResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        TA_GesBib_Cliente.ServicioJava.listarInasistenciasPorFechaResponse listarInasistenciasPorFecha(TA_GesBib_Cliente.ServicioJava.listarInasistenciasPorFechaRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2soft.pucp.edu.pe/Servicio/listarInasistenciasPorFechaRequest", ReplyAction="http://services.lp2soft.pucp.edu.pe/Servicio/listarInasistenciasPorFechaResponse")]
+        System.Threading.Tasks.Task<TA_GesBib_Cliente.ServicioJava.listarInasistenciasPorFechaResponse> listarInasistenciasPorFechaAsync(TA_GesBib_Cliente.ServicioJava.listarInasistenciasPorFechaRequest request);
+        
         // CODEGEN: El parámetro 'idDistrib_Per' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2soft.pucp.edu.pe/Servicio/elimDistribucionPersonalRequest", ReplyAction="http://services.lp2soft.pucp.edu.pe/Servicio/elimDistribucionPersonalResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
@@ -335,23 +369,6 @@ namespace TA_GesBib_Cliente.ServicioJava {
         [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2soft.pucp.edu.pe/Servicio/insertarDistribucionPersonalRequest", ReplyAction="http://services.lp2soft.pucp.edu.pe/Servicio/insertarDistribucionPersonalResponse" +
             "")]
         System.Threading.Tasks.Task<TA_GesBib_Cliente.ServicioJava.insertarDistribucionPersonalResponse> insertarDistribucionPersonalAsync(TA_GesBib_Cliente.ServicioJava.insertarDistribucionPersonalRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2soft.pucp.edu.pe/Servicio/listarHorasExtraPorFechaRequest", ReplyAction="http://services.lp2soft.pucp.edu.pe/Servicio/listarHorasExtraPorFechaResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        TA_GesBib_Cliente.ServicioJava.listarHorasExtraPorFechaResponse listarHorasExtraPorFecha(TA_GesBib_Cliente.ServicioJava.listarHorasExtraPorFechaRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2soft.pucp.edu.pe/Servicio/listarHorasExtraPorFechaRequest", ReplyAction="http://services.lp2soft.pucp.edu.pe/Servicio/listarHorasExtraPorFechaResponse")]
-        System.Threading.Tasks.Task<TA_GesBib_Cliente.ServicioJava.listarHorasExtraPorFechaResponse> listarHorasExtraPorFechaAsync(TA_GesBib_Cliente.ServicioJava.listarHorasExtraPorFechaRequest request);
-        
-        // CODEGEN: El parámetro 'idHoraExtra' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2soft.pucp.edu.pe/Servicio/eliminarHoraExtraRequest", ReplyAction="http://services.lp2soft.pucp.edu.pe/Servicio/eliminarHoraExtraResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        TA_GesBib_Cliente.ServicioJava.eliminarHoraExtraResponse eliminarHoraExtra(TA_GesBib_Cliente.ServicioJava.eliminarHoraExtraRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2soft.pucp.edu.pe/Servicio/eliminarHoraExtraRequest", ReplyAction="http://services.lp2soft.pucp.edu.pe/Servicio/eliminarHoraExtraResponse")]
-        System.Threading.Tasks.Task<TA_GesBib_Cliente.ServicioJava.eliminarHoraExtraResponse> eliminarHoraExtraAsync(TA_GesBib_Cliente.ServicioJava.eliminarHoraExtraRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2soft.pucp.edu.pe/Servicio/validarUsuarioRequest", ReplyAction="http://services.lp2soft.pucp.edu.pe/Servicio/validarUsuarioResponse")]
@@ -426,6 +443,15 @@ namespace TA_GesBib_Cliente.ServicioJava {
         System.Threading.Tasks.Task<TA_GesBib_Cliente.ServicioJava.listarGestoresResponse> listarGestoresAsync(TA_GesBib_Cliente.ServicioJava.listarGestoresRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2soft.pucp.edu.pe/Servicio/listarHorasExtraRequest", ReplyAction="http://services.lp2soft.pucp.edu.pe/Servicio/listarHorasExtraResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        TA_GesBib_Cliente.ServicioJava.listarHorasExtraResponse listarHorasExtra(TA_GesBib_Cliente.ServicioJava.listarHorasExtraRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2soft.pucp.edu.pe/Servicio/listarHorasExtraRequest", ReplyAction="http://services.lp2soft.pucp.edu.pe/Servicio/listarHorasExtraResponse")]
+        System.Threading.Tasks.Task<TA_GesBib_Cliente.ServicioJava.listarHorasExtraResponse> listarHorasExtraAsync(TA_GesBib_Cliente.ServicioJava.listarHorasExtraRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2soft.pucp.edu.pe/Servicio/listarHorasLibreRequest", ReplyAction="http://services.lp2soft.pucp.edu.pe/Servicio/listarHorasLibreResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
@@ -441,100 +467,126 @@ namespace TA_GesBib_Cliente.ServicioJava {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://services.lp2soft.pucp.edu.pe/")]
-    public partial class horaExtra : object, System.ComponentModel.INotifyPropertyChanged {
+    public partial class time : object, System.ComponentModel.INotifyPropertyChanged {
         
-        private float cantidadHorasField;
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
         
-        private string descripcionField;
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3062.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://services.lp2soft.pucp.edu.pe/")]
+    public partial class pairStringUsuario : object, System.ComponentModel.INotifyPropertyChanged {
         
-        private System.DateTime fechaField;
+        private string nombreTipoField;
         
-        private bool fechaFieldSpecified;
-        
-        private string horaFinField;
-        
-        private string horaInicioField;
-        
-        private int idField;
-        
-        private bool justificadoField;
-        
-        private personal personalField;
+        private usuario userField;
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
-        public float cantidadHoras {
+        public string nombreTipo {
             get {
-                return this.cantidadHorasField;
+                return this.nombreTipoField;
             }
             set {
-                this.cantidadHorasField = value;
-                this.RaisePropertyChanged("cantidadHoras");
+                this.nombreTipoField = value;
+                this.RaisePropertyChanged("nombreTipo");
             }
         }
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
-        public string descripcion {
+        public usuario user {
             get {
-                return this.descripcionField;
+                return this.userField;
             }
             set {
-                this.descripcionField = value;
-                this.RaisePropertyChanged("descripcion");
+                this.userField = value;
+                this.RaisePropertyChanged("user");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(personal))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(personalBiblioteca))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(auxiliar))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(practicante))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(bibliotecario))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(gestor))]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3062.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://services.lp2soft.pucp.edu.pe/")]
+    public partial class usuario : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private string apellidoField;
+        
+        private string contraseniaField;
+        
+        private string emailField;
+        
+        private int idField;
+        
+        private string nombreField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
+        public string apellido {
+            get {
+                return this.apellidoField;
+            }
+            set {
+                this.apellidoField = value;
+                this.RaisePropertyChanged("apellido");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
+        public string contrasenia {
+            get {
+                return this.contraseniaField;
+            }
+            set {
+                this.contraseniaField = value;
+                this.RaisePropertyChanged("contrasenia");
             }
         }
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
-        public System.DateTime fecha {
+        public string email {
             get {
-                return this.fechaField;
+                return this.emailField;
             }
             set {
-                this.fechaField = value;
-                this.RaisePropertyChanged("fecha");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool fechaSpecified {
-            get {
-                return this.fechaFieldSpecified;
-            }
-            set {
-                this.fechaFieldSpecified = value;
-                this.RaisePropertyChanged("fechaSpecified");
+                this.emailField = value;
+                this.RaisePropertyChanged("email");
             }
         }
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
-        public string horaFin {
-            get {
-                return this.horaFinField;
-            }
-            set {
-                this.horaFinField = value;
-                this.RaisePropertyChanged("horaFin");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=4)]
-        public string horaInicio {
-            get {
-                return this.horaInicioField;
-            }
-            set {
-                this.horaInicioField = value;
-                this.RaisePropertyChanged("horaInicio");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=5)]
         public int id {
             get {
                 return this.idField;
@@ -546,26 +598,14 @@ namespace TA_GesBib_Cliente.ServicioJava {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=6)]
-        public bool justificado {
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=4)]
+        public string nombre {
             get {
-                return this.justificadoField;
+                return this.nombreField;
             }
             set {
-                this.justificadoField = value;
-                this.RaisePropertyChanged("justificado");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=7)]
-        public personal personal {
-            get {
-                return this.personalField;
-            }
-            set {
-                this.personalField = value;
-                this.RaisePropertyChanged("personal");
+                this.nombreField = value;
+                this.RaisePropertyChanged("nombre");
             }
         }
         
@@ -581,9 +621,9 @@ namespace TA_GesBib_Cliente.ServicioJava {
     
     /// <remarks/>
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(personalBiblioteca))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(bibliotecario))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(practicante))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(auxiliar))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(practicante))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(bibliotecario))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(gestor))]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3062.0")]
     [System.SerializableAttribute()]
@@ -1193,141 +1233,27 @@ namespace TA_GesBib_Cliente.ServicioJava {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3062.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://services.lp2soft.pucp.edu.pe/")]
-    public partial class pairStringUsuario : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        private string nombreTipoField;
-        
-        private usuario userField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
-        public string nombreTipo {
-            get {
-                return this.nombreTipoField;
-            }
-            set {
-                this.nombreTipoField = value;
-                this.RaisePropertyChanged("nombreTipo");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
-        public usuario user {
-            get {
-                return this.userField;
-            }
-            set {
-                this.userField = value;
-                this.RaisePropertyChanged("user");
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(personal))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(personalBiblioteca))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(bibliotecario))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(practicante))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(auxiliar))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(gestor))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(practicante))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(bibliotecario))]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3062.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://services.lp2soft.pucp.edu.pe/")]
-    public partial class usuario : object, System.ComponentModel.INotifyPropertyChanged {
+    public partial class personalBiblioteca : personal {
         
-        private string apellidoField;
-        
-        private string contraseniaField;
-        
-        private string emailField;
-        
-        private int idField;
-        
-        private string nombreField;
+        private biblioteca bibliotecaField;
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
-        public string apellido {
+        public biblioteca biblioteca {
             get {
-                return this.apellidoField;
+                return this.bibliotecaField;
             }
             set {
-                this.apellidoField = value;
-                this.RaisePropertyChanged("apellido");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
-        public string contrasenia {
-            get {
-                return this.contraseniaField;
-            }
-            set {
-                this.contraseniaField = value;
-                this.RaisePropertyChanged("contrasenia");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
-        public string email {
-            get {
-                return this.emailField;
-            }
-            set {
-                this.emailField = value;
-                this.RaisePropertyChanged("email");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
-        public int id {
-            get {
-                return this.idField;
-            }
-            set {
-                this.idField = value;
-                this.RaisePropertyChanged("id");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=4)]
-        public string nombre {
-            get {
-                return this.nombreField;
-            }
-            set {
-                this.nombreField = value;
-                this.RaisePropertyChanged("nombre");
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+                this.bibliotecaField = value;
+                this.RaisePropertyChanged("biblioteca");
             }
         }
     }
@@ -1338,16 +1264,7 @@ namespace TA_GesBib_Cliente.ServicioJava {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://services.lp2soft.pucp.edu.pe/")]
-    public partial class time : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
+    public partial class auxiliar : personalBiblioteca {
     }
     
     /// <remarks/>
@@ -1356,215 +1273,29 @@ namespace TA_GesBib_Cliente.ServicioJava {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://services.lp2soft.pucp.edu.pe/")]
-    public partial class turno : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        private string horaFinField;
-        
-        private string horaInicioField;
+    public partial class practicante : personalBiblioteca {
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3062.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://services.lp2soft.pucp.edu.pe/")]
+    public partial class bibliotecario : personalBiblioteca {
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3062.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://services.lp2soft.pucp.edu.pe/")]
+    public partial class perfilExperiencia : object, System.ComponentModel.INotifyPropertyChanged {
         
         private int idField;
         
-        private string refrigerioFinField;
-        
-        private string refrigerioInicioField;
-        
-        private string semestreField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
-        public string horaFin {
-            get {
-                return this.horaFinField;
-            }
-            set {
-                this.horaFinField = value;
-                this.RaisePropertyChanged("horaFin");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
-        public string horaInicio {
-            get {
-                return this.horaInicioField;
-            }
-            set {
-                this.horaInicioField = value;
-                this.RaisePropertyChanged("horaInicio");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
-        public int id {
-            get {
-                return this.idField;
-            }
-            set {
-                this.idField = value;
-                this.RaisePropertyChanged("id");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
-        public string refrigerioFin {
-            get {
-                return this.refrigerioFinField;
-            }
-            set {
-                this.refrigerioFinField = value;
-                this.RaisePropertyChanged("refrigerioFin");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=4)]
-        public string refrigerioInicio {
-            get {
-                return this.refrigerioInicioField;
-            }
-            set {
-                this.refrigerioInicioField = value;
-                this.RaisePropertyChanged("refrigerioInicio");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=5)]
-        public string semestre {
-            get {
-                return this.semestreField;
-            }
-            set {
-                this.semestreField = value;
-                this.RaisePropertyChanged("semestre");
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3062.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://services.lp2soft.pucp.edu.pe/")]
-    public partial class vacaciones : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        private System.DateTime fecha_finField;
-        
-        private bool fecha_finFieldSpecified;
-        
-        private System.DateTime fecha_inicioField;
-        
-        private bool fecha_inicioFieldSpecified;
-        
-        private int idField;
-        
-        private personal personalField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
-        public System.DateTime fecha_fin {
-            get {
-                return this.fecha_finField;
-            }
-            set {
-                this.fecha_finField = value;
-                this.RaisePropertyChanged("fecha_fin");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool fecha_finSpecified {
-            get {
-                return this.fecha_finFieldSpecified;
-            }
-            set {
-                this.fecha_finFieldSpecified = value;
-                this.RaisePropertyChanged("fecha_finSpecified");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
-        public System.DateTime fecha_inicio {
-            get {
-                return this.fecha_inicioField;
-            }
-            set {
-                this.fecha_inicioField = value;
-                this.RaisePropertyChanged("fecha_inicio");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool fecha_inicioSpecified {
-            get {
-                return this.fecha_inicioFieldSpecified;
-            }
-            set {
-                this.fecha_inicioFieldSpecified = value;
-                this.RaisePropertyChanged("fecha_inicioSpecified");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
-        public int id {
-            get {
-                return this.idField;
-            }
-            set {
-                this.idField = value;
-                this.RaisePropertyChanged("id");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
-        public personal personal {
-            get {
-                return this.personalField;
-            }
-            set {
-                this.personalField = value;
-                this.RaisePropertyChanged("personal");
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3062.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://services.lp2soft.pucp.edu.pe/")]
-    public partial class tipoInasistencia : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        private int idField;
-        
-        private string nombreField;
+        private string nombrePerfilField;
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
@@ -1580,273 +1311,13 @@ namespace TA_GesBib_Cliente.ServicioJava {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
-        public string nombre {
+        public string nombrePerfil {
             get {
-                return this.nombreField;
+                return this.nombrePerfilField;
             }
             set {
-                this.nombreField = value;
-                this.RaisePropertyChanged("nombre");
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3062.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://services.lp2soft.pucp.edu.pe/")]
-    public partial class inasistencia : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        private System.DateTime fechaField;
-        
-        private bool fechaFieldSpecified;
-        
-        private string horaFinField;
-        
-        private string horaInicioField;
-        
-        private int idField;
-        
-        private int justificadoField;
-        
-        private string motivoField;
-        
-        private personal personalField;
-        
-        private tipoInasistencia tipoInasistenciaField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
-        public System.DateTime fecha {
-            get {
-                return this.fechaField;
-            }
-            set {
-                this.fechaField = value;
-                this.RaisePropertyChanged("fecha");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool fechaSpecified {
-            get {
-                return this.fechaFieldSpecified;
-            }
-            set {
-                this.fechaFieldSpecified = value;
-                this.RaisePropertyChanged("fechaSpecified");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
-        public string horaFin {
-            get {
-                return this.horaFinField;
-            }
-            set {
-                this.horaFinField = value;
-                this.RaisePropertyChanged("horaFin");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
-        public string horaInicio {
-            get {
-                return this.horaInicioField;
-            }
-            set {
-                this.horaInicioField = value;
-                this.RaisePropertyChanged("horaInicio");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
-        public int id {
-            get {
-                return this.idField;
-            }
-            set {
-                this.idField = value;
-                this.RaisePropertyChanged("id");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=4)]
-        public int justificado {
-            get {
-                return this.justificadoField;
-            }
-            set {
-                this.justificadoField = value;
-                this.RaisePropertyChanged("justificado");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=5)]
-        public string motivo {
-            get {
-                return this.motivoField;
-            }
-            set {
-                this.motivoField = value;
-                this.RaisePropertyChanged("motivo");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=6)]
-        public personal personal {
-            get {
-                return this.personalField;
-            }
-            set {
-                this.personalField = value;
-                this.RaisePropertyChanged("personal");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=7)]
-        public tipoInasistencia tipoInasistencia {
-            get {
-                return this.tipoInasistenciaField;
-            }
-            set {
-                this.tipoInasistenciaField = value;
-                this.RaisePropertyChanged("tipoInasistencia");
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3062.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://services.lp2soft.pucp.edu.pe/")]
-    public partial class diaCapacitacion : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        private int activoField;
-        
-        private capacitacion capacitacionField;
-        
-        private System.DateTime fechaField;
-        
-        private bool fechaFieldSpecified;
-        
-        private string hora_finField;
-        
-        private string hora_iniField;
-        
-        private int idDiaCapacitacionField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
-        public int activo {
-            get {
-                return this.activoField;
-            }
-            set {
-                this.activoField = value;
-                this.RaisePropertyChanged("activo");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
-        public capacitacion capacitacion {
-            get {
-                return this.capacitacionField;
-            }
-            set {
-                this.capacitacionField = value;
-                this.RaisePropertyChanged("capacitacion");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
-        public System.DateTime fecha {
-            get {
-                return this.fechaField;
-            }
-            set {
-                this.fechaField = value;
-                this.RaisePropertyChanged("fecha");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool fechaSpecified {
-            get {
-                return this.fechaFieldSpecified;
-            }
-            set {
-                this.fechaFieldSpecified = value;
-                this.RaisePropertyChanged("fechaSpecified");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
-        public string hora_fin {
-            get {
-                return this.hora_finField;
-            }
-            set {
-                this.hora_finField = value;
-                this.RaisePropertyChanged("hora_fin");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=4)]
-        public string hora_ini {
-            get {
-                return this.hora_iniField;
-            }
-            set {
-                this.hora_iniField = value;
-                this.RaisePropertyChanged("hora_ini");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=5)]
-        public int idDiaCapacitacion {
-            get {
-                return this.idDiaCapacitacionField;
-            }
-            set {
-                this.idDiaCapacitacionField = value;
-                this.RaisePropertyChanged("idDiaCapacitacion");
+                this.nombrePerfilField = value;
+                this.RaisePropertyChanged("nombrePerfil");
             }
         }
         
@@ -2080,11 +1551,415 @@ namespace TA_GesBib_Cliente.ServicioJava {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://services.lp2soft.pucp.edu.pe/")]
-    public partial class perfilExperiencia : object, System.ComponentModel.INotifyPropertyChanged {
+    public partial class diaCapacitacion : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private int activoField;
+        
+        private capacitacion capacitacionField;
+        
+        private System.DateTime fechaField;
+        
+        private bool fechaFieldSpecified;
+        
+        private string hora_finField;
+        
+        private string hora_iniField;
+        
+        private int idDiaCapacitacionField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
+        public int activo {
+            get {
+                return this.activoField;
+            }
+            set {
+                this.activoField = value;
+                this.RaisePropertyChanged("activo");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
+        public capacitacion capacitacion {
+            get {
+                return this.capacitacionField;
+            }
+            set {
+                this.capacitacionField = value;
+                this.RaisePropertyChanged("capacitacion");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
+        public System.DateTime fecha {
+            get {
+                return this.fechaField;
+            }
+            set {
+                this.fechaField = value;
+                this.RaisePropertyChanged("fecha");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool fechaSpecified {
+            get {
+                return this.fechaFieldSpecified;
+            }
+            set {
+                this.fechaFieldSpecified = value;
+                this.RaisePropertyChanged("fechaSpecified");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
+        public string hora_fin {
+            get {
+                return this.hora_finField;
+            }
+            set {
+                this.hora_finField = value;
+                this.RaisePropertyChanged("hora_fin");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=4)]
+        public string hora_ini {
+            get {
+                return this.hora_iniField;
+            }
+            set {
+                this.hora_iniField = value;
+                this.RaisePropertyChanged("hora_ini");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=5)]
+        public int idDiaCapacitacion {
+            get {
+                return this.idDiaCapacitacionField;
+            }
+            set {
+                this.idDiaCapacitacionField = value;
+                this.RaisePropertyChanged("idDiaCapacitacion");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3062.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://services.lp2soft.pucp.edu.pe/")]
+    public partial class horaExtra : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private float cantidadHorasField;
+        
+        private string descripcionField;
+        
+        private System.DateTime fechaField;
+        
+        private bool fechaFieldSpecified;
+        
+        private string horaFinField;
+        
+        private string horaInicioField;
         
         private int idField;
         
-        private string nombrePerfilField;
+        private bool justificadoField;
+        
+        private personal personalField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
+        public float cantidadHoras {
+            get {
+                return this.cantidadHorasField;
+            }
+            set {
+                this.cantidadHorasField = value;
+                this.RaisePropertyChanged("cantidadHoras");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
+        public string descripcion {
+            get {
+                return this.descripcionField;
+            }
+            set {
+                this.descripcionField = value;
+                this.RaisePropertyChanged("descripcion");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
+        public System.DateTime fecha {
+            get {
+                return this.fechaField;
+            }
+            set {
+                this.fechaField = value;
+                this.RaisePropertyChanged("fecha");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool fechaSpecified {
+            get {
+                return this.fechaFieldSpecified;
+            }
+            set {
+                this.fechaFieldSpecified = value;
+                this.RaisePropertyChanged("fechaSpecified");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
+        public string horaFin {
+            get {
+                return this.horaFinField;
+            }
+            set {
+                this.horaFinField = value;
+                this.RaisePropertyChanged("horaFin");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=4)]
+        public string horaInicio {
+            get {
+                return this.horaInicioField;
+            }
+            set {
+                this.horaInicioField = value;
+                this.RaisePropertyChanged("horaInicio");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=5)]
+        public int id {
+            get {
+                return this.idField;
+            }
+            set {
+                this.idField = value;
+                this.RaisePropertyChanged("id");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=6)]
+        public bool justificado {
+            get {
+                return this.justificadoField;
+            }
+            set {
+                this.justificadoField = value;
+                this.RaisePropertyChanged("justificado");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=7)]
+        public personal personal {
+            get {
+                return this.personalField;
+            }
+            set {
+                this.personalField = value;
+                this.RaisePropertyChanged("personal");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3062.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://services.lp2soft.pucp.edu.pe/")]
+    public partial class inasistencia : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private System.DateTime fechaField;
+        
+        private bool fechaFieldSpecified;
+        
+        private string horaFinField;
+        
+        private string horaInicioField;
+        
+        private int idField;
+        
+        private int justificadoField;
+        
+        private string motivoField;
+        
+        private personal personalField;
+        
+        private tipoInasistencia tipoInasistenciaField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
+        public System.DateTime fecha {
+            get {
+                return this.fechaField;
+            }
+            set {
+                this.fechaField = value;
+                this.RaisePropertyChanged("fecha");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool fechaSpecified {
+            get {
+                return this.fechaFieldSpecified;
+            }
+            set {
+                this.fechaFieldSpecified = value;
+                this.RaisePropertyChanged("fechaSpecified");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
+        public string horaFin {
+            get {
+                return this.horaFinField;
+            }
+            set {
+                this.horaFinField = value;
+                this.RaisePropertyChanged("horaFin");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
+        public string horaInicio {
+            get {
+                return this.horaInicioField;
+            }
+            set {
+                this.horaInicioField = value;
+                this.RaisePropertyChanged("horaInicio");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
+        public int id {
+            get {
+                return this.idField;
+            }
+            set {
+                this.idField = value;
+                this.RaisePropertyChanged("id");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=4)]
+        public int justificado {
+            get {
+                return this.justificadoField;
+            }
+            set {
+                this.justificadoField = value;
+                this.RaisePropertyChanged("justificado");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=5)]
+        public string motivo {
+            get {
+                return this.motivoField;
+            }
+            set {
+                this.motivoField = value;
+                this.RaisePropertyChanged("motivo");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=6)]
+        public personal personal {
+            get {
+                return this.personalField;
+            }
+            set {
+                this.personalField = value;
+                this.RaisePropertyChanged("personal");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=7)]
+        public tipoInasistencia tipoInasistencia {
+            get {
+                return this.tipoInasistenciaField;
+            }
+            set {
+                this.tipoInasistenciaField = value;
+                this.RaisePropertyChanged("tipoInasistencia");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3062.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://services.lp2soft.pucp.edu.pe/")]
+    public partial class tipoInasistencia : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private int idField;
+        
+        private string nombreField;
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
@@ -2100,13 +1975,13 @@ namespace TA_GesBib_Cliente.ServicioJava {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
-        public string nombrePerfil {
+        public string nombre {
             get {
-                return this.nombrePerfilField;
+                return this.nombreField;
             }
             set {
-                this.nombrePerfilField = value;
-                this.RaisePropertyChanged("nombrePerfil");
+                this.nombreField = value;
+                this.RaisePropertyChanged("nombre");
             }
         }
         
@@ -2121,27 +1996,103 @@ namespace TA_GesBib_Cliente.ServicioJava {
     }
     
     /// <remarks/>
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(bibliotecario))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(practicante))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(auxiliar))]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3062.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://services.lp2soft.pucp.edu.pe/")]
-    public partial class personalBiblioteca : personal {
+    public partial class vacaciones : object, System.ComponentModel.INotifyPropertyChanged {
         
-        private biblioteca bibliotecaField;
+        private System.DateTime fecha_finField;
+        
+        private bool fecha_finFieldSpecified;
+        
+        private System.DateTime fecha_inicioField;
+        
+        private bool fecha_inicioFieldSpecified;
+        
+        private int idField;
+        
+        private personal personalField;
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
-        public biblioteca biblioteca {
+        public System.DateTime fecha_fin {
             get {
-                return this.bibliotecaField;
+                return this.fecha_finField;
             }
             set {
-                this.bibliotecaField = value;
-                this.RaisePropertyChanged("biblioteca");
+                this.fecha_finField = value;
+                this.RaisePropertyChanged("fecha_fin");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool fecha_finSpecified {
+            get {
+                return this.fecha_finFieldSpecified;
+            }
+            set {
+                this.fecha_finFieldSpecified = value;
+                this.RaisePropertyChanged("fecha_finSpecified");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
+        public System.DateTime fecha_inicio {
+            get {
+                return this.fecha_inicioField;
+            }
+            set {
+                this.fecha_inicioField = value;
+                this.RaisePropertyChanged("fecha_inicio");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool fecha_inicioSpecified {
+            get {
+                return this.fecha_inicioFieldSpecified;
+            }
+            set {
+                this.fecha_inicioFieldSpecified = value;
+                this.RaisePropertyChanged("fecha_inicioSpecified");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
+        public int id {
+            get {
+                return this.idField;
+            }
+            set {
+                this.idField = value;
+                this.RaisePropertyChanged("id");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
+        public personal personal {
+            get {
+                return this.personalField;
+            }
+            set {
+                this.personalField = value;
+                this.RaisePropertyChanged("personal");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
             }
         }
     }
@@ -2152,60 +2103,99 @@ namespace TA_GesBib_Cliente.ServicioJava {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://services.lp2soft.pucp.edu.pe/")]
-    public partial class bibliotecario : personalBiblioteca {
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3062.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://services.lp2soft.pucp.edu.pe/")]
-    public partial class practicante : personalBiblioteca {
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3062.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://services.lp2soft.pucp.edu.pe/")]
-    public partial class auxiliar : personalBiblioteca {
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarHorasExtra", WrapperNamespace="http://services.lp2soft.pucp.edu.pe/", IsWrapped=true)]
-    public partial class listarHorasExtraRequest {
+    public partial class turno : object, System.ComponentModel.INotifyPropertyChanged {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.lp2soft.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int idPersonal;
+        private string horaFinField;
         
-        public listarHorasExtraRequest() {
+        private string horaInicioField;
+        
+        private int idField;
+        
+        private string refrigerioFinField;
+        
+        private string refrigerioInicioField;
+        
+        private string semestreField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
+        public string horaFin {
+            get {
+                return this.horaFinField;
+            }
+            set {
+                this.horaFinField = value;
+                this.RaisePropertyChanged("horaFin");
+            }
         }
         
-        public listarHorasExtraRequest(int idPersonal) {
-            this.idPersonal = idPersonal;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarHorasExtraResponse", WrapperNamespace="http://services.lp2soft.pucp.edu.pe/", IsWrapped=true)]
-    public partial class listarHorasExtraResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.lp2soft.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public TA_GesBib_Cliente.ServicioJava.horaExtra[] @return;
-        
-        public listarHorasExtraResponse() {
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
+        public string horaInicio {
+            get {
+                return this.horaInicioField;
+            }
+            set {
+                this.horaInicioField = value;
+                this.RaisePropertyChanged("horaInicio");
+            }
         }
         
-        public listarHorasExtraResponse(TA_GesBib_Cliente.ServicioJava.horaExtra[] @return) {
-            this.@return = @return;
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
+        public int id {
+            get {
+                return this.idField;
+            }
+            set {
+                this.idField = value;
+                this.RaisePropertyChanged("id");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
+        public string refrigerioFin {
+            get {
+                return this.refrigerioFinField;
+            }
+            set {
+                this.refrigerioFinField = value;
+                this.RaisePropertyChanged("refrigerioFin");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=4)]
+        public string refrigerioInicio {
+            get {
+                return this.refrigerioInicioField;
+            }
+            set {
+                this.refrigerioInicioField = value;
+                this.RaisePropertyChanged("refrigerioInicio");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=5)]
+        public string semestre {
+            get {
+                return this.semestreField;
+            }
+            set {
+                this.semestreField = value;
+                this.RaisePropertyChanged("semestre");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
         }
     }
     
@@ -2262,6 +2252,34 @@ namespace TA_GesBib_Cliente.ServicioJava {
         
         public listarDistribucionPersonalPorFechaHoraResponse(TA_GesBib_Cliente.ServicioJava.distribucionPersonal[] @return) {
             this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarInasistencia", WrapperNamespace="http://services.lp2soft.pucp.edu.pe/", IsWrapped=true)]
+    public partial class eliminarInasistenciaRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.lp2soft.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int idPersonal;
+        
+        public eliminarInasistenciaRequest() {
+        }
+        
+        public eliminarInasistenciaRequest(int idPersonal) {
+            this.idPersonal = idPersonal;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarInasistenciaResponse", WrapperNamespace="http://services.lp2soft.pucp.edu.pe/", IsWrapped=true)]
+    public partial class eliminarInasistenciaResponse {
+        
+        public eliminarInasistenciaResponse() {
         }
     }
     
@@ -3277,6 +3295,75 @@ namespace TA_GesBib_Cliente.ServicioJava {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarHorasExtraPorFecha", WrapperNamespace="http://services.lp2soft.pucp.edu.pe/", IsWrapped=true)]
+    public partial class listarHorasExtraPorFechaRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.lp2soft.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int idPersonal;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.lp2soft.pucp.edu.pe/", Order=1)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public System.DateTime fecha;
+        
+        public listarHorasExtraPorFechaRequest() {
+        }
+        
+        public listarHorasExtraPorFechaRequest(int idPersonal, System.DateTime fecha) {
+            this.idPersonal = idPersonal;
+            this.fecha = fecha;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarHorasExtraPorFechaResponse", WrapperNamespace="http://services.lp2soft.pucp.edu.pe/", IsWrapped=true)]
+    public partial class listarHorasExtraPorFechaResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.lp2soft.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public TA_GesBib_Cliente.ServicioJava.horaExtra[] @return;
+        
+        public listarHorasExtraPorFechaResponse() {
+        }
+        
+        public listarHorasExtraPorFechaResponse(TA_GesBib_Cliente.ServicioJava.horaExtra[] @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarHoraExtra", WrapperNamespace="http://services.lp2soft.pucp.edu.pe/", IsWrapped=true)]
+    public partial class eliminarHoraExtraRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.lp2soft.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int idHoraExtra;
+        
+        public eliminarHoraExtraRequest() {
+        }
+        
+        public eliminarHoraExtraRequest(int idHoraExtra) {
+            this.idHoraExtra = idHoraExtra;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarHoraExtraResponse", WrapperNamespace="http://services.lp2soft.pucp.edu.pe/", IsWrapped=true)]
+    public partial class eliminarHoraExtraResponse {
+        
+        public eliminarHoraExtraResponse() {
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     [System.ServiceModel.MessageContractAttribute(WrapperName="insertarInasistencia", WrapperNamespace="http://services.lp2soft.pucp.edu.pe/", IsWrapped=true)]
     public partial class insertarInasistenciaRequest {
         
@@ -3377,6 +3464,83 @@ namespace TA_GesBib_Cliente.ServicioJava {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarInasistencias", WrapperNamespace="http://services.lp2soft.pucp.edu.pe/", IsWrapped=true)]
+    public partial class listarInasistenciasRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.lp2soft.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int idPersonal;
+        
+        public listarInasistenciasRequest() {
+        }
+        
+        public listarInasistenciasRequest(int idPersonal) {
+            this.idPersonal = idPersonal;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarInasistenciasResponse", WrapperNamespace="http://services.lp2soft.pucp.edu.pe/", IsWrapped=true)]
+    public partial class listarInasistenciasResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.lp2soft.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public TA_GesBib_Cliente.ServicioJava.inasistencia[] @return;
+        
+        public listarInasistenciasResponse() {
+        }
+        
+        public listarInasistenciasResponse(TA_GesBib_Cliente.ServicioJava.inasistencia[] @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarInasistenciasPorFecha", WrapperNamespace="http://services.lp2soft.pucp.edu.pe/", IsWrapped=true)]
+    public partial class listarInasistenciasPorFechaRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.lp2soft.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int idPersonal;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.lp2soft.pucp.edu.pe/", Order=1)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public System.DateTime fecha;
+        
+        public listarInasistenciasPorFechaRequest() {
+        }
+        
+        public listarInasistenciasPorFechaRequest(int idPersonal, System.DateTime fecha) {
+            this.idPersonal = idPersonal;
+            this.fecha = fecha;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarInasistenciasPorFechaResponse", WrapperNamespace="http://services.lp2soft.pucp.edu.pe/", IsWrapped=true)]
+    public partial class listarInasistenciasPorFechaResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.lp2soft.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public TA_GesBib_Cliente.ServicioJava.inasistencia[] @return;
+        
+        public listarInasistenciasPorFechaResponse() {
+        }
+        
+        public listarInasistenciasPorFechaResponse(TA_GesBib_Cliente.ServicioJava.inasistencia[] @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     [System.ServiceModel.MessageContractAttribute(WrapperName="elimDistribucionPersonal", WrapperNamespace="http://services.lp2soft.pucp.edu.pe/", IsWrapped=true)]
     public partial class elimDistribucionPersonalRequest {
         
@@ -3432,75 +3596,6 @@ namespace TA_GesBib_Cliente.ServicioJava {
     public partial class insertarDistribucionPersonalResponse {
         
         public insertarDistribucionPersonalResponse() {
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarHorasExtraPorFecha", WrapperNamespace="http://services.lp2soft.pucp.edu.pe/", IsWrapped=true)]
-    public partial class listarHorasExtraPorFechaRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.lp2soft.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int idPersonal;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.lp2soft.pucp.edu.pe/", Order=1)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public System.DateTime fecha;
-        
-        public listarHorasExtraPorFechaRequest() {
-        }
-        
-        public listarHorasExtraPorFechaRequest(int idPersonal, System.DateTime fecha) {
-            this.idPersonal = idPersonal;
-            this.fecha = fecha;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarHorasExtraPorFechaResponse", WrapperNamespace="http://services.lp2soft.pucp.edu.pe/", IsWrapped=true)]
-    public partial class listarHorasExtraPorFechaResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.lp2soft.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public TA_GesBib_Cliente.ServicioJava.horaExtra[] @return;
-        
-        public listarHorasExtraPorFechaResponse() {
-        }
-        
-        public listarHorasExtraPorFechaResponse(TA_GesBib_Cliente.ServicioJava.horaExtra[] @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarHoraExtra", WrapperNamespace="http://services.lp2soft.pucp.edu.pe/", IsWrapped=true)]
-    public partial class eliminarHoraExtraRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.lp2soft.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int idHoraExtra;
-        
-        public eliminarHoraExtraRequest() {
-        }
-        
-        public eliminarHoraExtraRequest(int idHoraExtra) {
-            this.idHoraExtra = idHoraExtra;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarHoraExtraResponse", WrapperNamespace="http://services.lp2soft.pucp.edu.pe/", IsWrapped=true)]
-    public partial class eliminarHoraExtraResponse {
-        
-        public eliminarHoraExtraResponse() {
         }
     }
     
@@ -3815,6 +3910,42 @@ namespace TA_GesBib_Cliente.ServicioJava {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarHorasExtra", WrapperNamespace="http://services.lp2soft.pucp.edu.pe/", IsWrapped=true)]
+    public partial class listarHorasExtraRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.lp2soft.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int idPersonal;
+        
+        public listarHorasExtraRequest() {
+        }
+        
+        public listarHorasExtraRequest(int idPersonal) {
+            this.idPersonal = idPersonal;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarHorasExtraResponse", WrapperNamespace="http://services.lp2soft.pucp.edu.pe/", IsWrapped=true)]
+    public partial class listarHorasExtraResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.lp2soft.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public TA_GesBib_Cliente.ServicioJava.horaExtra[] @return;
+        
+        public listarHorasExtraResponse() {
+        }
+        
+        public listarHorasExtraResponse(TA_GesBib_Cliente.ServicioJava.horaExtra[] @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     [System.ServiceModel.MessageContractAttribute(WrapperName="listarHorasLibre", WrapperNamespace="http://services.lp2soft.pucp.edu.pe/", IsWrapped=true)]
     public partial class listarHorasLibreRequest {
         
@@ -3881,29 +4012,6 @@ namespace TA_GesBib_Cliente.ServicioJava {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        TA_GesBib_Cliente.ServicioJava.listarHorasExtraResponse TA_GesBib_Cliente.ServicioJava.Servicio.listarHorasExtra(TA_GesBib_Cliente.ServicioJava.listarHorasExtraRequest request) {
-            return base.Channel.listarHorasExtra(request);
-        }
-        
-        public TA_GesBib_Cliente.ServicioJava.horaExtra[] listarHorasExtra(int idPersonal) {
-            TA_GesBib_Cliente.ServicioJava.listarHorasExtraRequest inValue = new TA_GesBib_Cliente.ServicioJava.listarHorasExtraRequest();
-            inValue.idPersonal = idPersonal;
-            TA_GesBib_Cliente.ServicioJava.listarHorasExtraResponse retVal = ((TA_GesBib_Cliente.ServicioJava.Servicio)(this)).listarHorasExtra(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<TA_GesBib_Cliente.ServicioJava.listarHorasExtraResponse> TA_GesBib_Cliente.ServicioJava.Servicio.listarHorasExtraAsync(TA_GesBib_Cliente.ServicioJava.listarHorasExtraRequest request) {
-            return base.Channel.listarHorasExtraAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<TA_GesBib_Cliente.ServicioJava.listarHorasExtraResponse> listarHorasExtraAsync(int idPersonal) {
-            TA_GesBib_Cliente.ServicioJava.listarHorasExtraRequest inValue = new TA_GesBib_Cliente.ServicioJava.listarHorasExtraRequest();
-            inValue.idPersonal = idPersonal;
-            return ((TA_GesBib_Cliente.ServicioJava.Servicio)(this)).listarHorasExtraAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         TA_GesBib_Cliente.ServicioJava.listarDistribucionPersonalPorFechaHoraResponse TA_GesBib_Cliente.ServicioJava.Servicio.listarDistribucionPersonalPorFechaHora(TA_GesBib_Cliente.ServicioJava.listarDistribucionPersonalPorFechaHoraRequest request) {
             return base.Channel.listarDistribucionPersonalPorFechaHora(request);
         }
@@ -3932,6 +4040,28 @@ namespace TA_GesBib_Cliente.ServicioJava {
             inValue.horaIni = horaIni;
             inValue.horaFin = horaFin;
             return ((TA_GesBib_Cliente.ServicioJava.Servicio)(this)).listarDistribucionPersonalPorFechaHoraAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        TA_GesBib_Cliente.ServicioJava.eliminarInasistenciaResponse TA_GesBib_Cliente.ServicioJava.Servicio.eliminarInasistencia(TA_GesBib_Cliente.ServicioJava.eliminarInasistenciaRequest request) {
+            return base.Channel.eliminarInasistencia(request);
+        }
+        
+        public void eliminarInasistencia(int idPersonal) {
+            TA_GesBib_Cliente.ServicioJava.eliminarInasistenciaRequest inValue = new TA_GesBib_Cliente.ServicioJava.eliminarInasistenciaRequest();
+            inValue.idPersonal = idPersonal;
+            TA_GesBib_Cliente.ServicioJava.eliminarInasistenciaResponse retVal = ((TA_GesBib_Cliente.ServicioJava.Servicio)(this)).eliminarInasistencia(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<TA_GesBib_Cliente.ServicioJava.eliminarInasistenciaResponse> TA_GesBib_Cliente.ServicioJava.Servicio.eliminarInasistenciaAsync(TA_GesBib_Cliente.ServicioJava.eliminarInasistenciaRequest request) {
+            return base.Channel.eliminarInasistenciaAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<TA_GesBib_Cliente.ServicioJava.eliminarInasistenciaResponse> eliminarInasistenciaAsync(int idPersonal) {
+            TA_GesBib_Cliente.ServicioJava.eliminarInasistenciaRequest inValue = new TA_GesBib_Cliente.ServicioJava.eliminarInasistenciaRequest();
+            inValue.idPersonal = idPersonal;
+            return ((TA_GesBib_Cliente.ServicioJava.Servicio)(this)).eliminarInasistenciaAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -4583,6 +4713,53 @@ namespace TA_GesBib_Cliente.ServicioJava {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        TA_GesBib_Cliente.ServicioJava.listarHorasExtraPorFechaResponse TA_GesBib_Cliente.ServicioJava.Servicio.listarHorasExtraPorFecha(TA_GesBib_Cliente.ServicioJava.listarHorasExtraPorFechaRequest request) {
+            return base.Channel.listarHorasExtraPorFecha(request);
+        }
+        
+        public TA_GesBib_Cliente.ServicioJava.horaExtra[] listarHorasExtraPorFecha(int idPersonal, System.DateTime fecha) {
+            TA_GesBib_Cliente.ServicioJava.listarHorasExtraPorFechaRequest inValue = new TA_GesBib_Cliente.ServicioJava.listarHorasExtraPorFechaRequest();
+            inValue.idPersonal = idPersonal;
+            inValue.fecha = fecha;
+            TA_GesBib_Cliente.ServicioJava.listarHorasExtraPorFechaResponse retVal = ((TA_GesBib_Cliente.ServicioJava.Servicio)(this)).listarHorasExtraPorFecha(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<TA_GesBib_Cliente.ServicioJava.listarHorasExtraPorFechaResponse> TA_GesBib_Cliente.ServicioJava.Servicio.listarHorasExtraPorFechaAsync(TA_GesBib_Cliente.ServicioJava.listarHorasExtraPorFechaRequest request) {
+            return base.Channel.listarHorasExtraPorFechaAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<TA_GesBib_Cliente.ServicioJava.listarHorasExtraPorFechaResponse> listarHorasExtraPorFechaAsync(int idPersonal, System.DateTime fecha) {
+            TA_GesBib_Cliente.ServicioJava.listarHorasExtraPorFechaRequest inValue = new TA_GesBib_Cliente.ServicioJava.listarHorasExtraPorFechaRequest();
+            inValue.idPersonal = idPersonal;
+            inValue.fecha = fecha;
+            return ((TA_GesBib_Cliente.ServicioJava.Servicio)(this)).listarHorasExtraPorFechaAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        TA_GesBib_Cliente.ServicioJava.eliminarHoraExtraResponse TA_GesBib_Cliente.ServicioJava.Servicio.eliminarHoraExtra(TA_GesBib_Cliente.ServicioJava.eliminarHoraExtraRequest request) {
+            return base.Channel.eliminarHoraExtra(request);
+        }
+        
+        public void eliminarHoraExtra(int idHoraExtra) {
+            TA_GesBib_Cliente.ServicioJava.eliminarHoraExtraRequest inValue = new TA_GesBib_Cliente.ServicioJava.eliminarHoraExtraRequest();
+            inValue.idHoraExtra = idHoraExtra;
+            TA_GesBib_Cliente.ServicioJava.eliminarHoraExtraResponse retVal = ((TA_GesBib_Cliente.ServicioJava.Servicio)(this)).eliminarHoraExtra(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<TA_GesBib_Cliente.ServicioJava.eliminarHoraExtraResponse> TA_GesBib_Cliente.ServicioJava.Servicio.eliminarHoraExtraAsync(TA_GesBib_Cliente.ServicioJava.eliminarHoraExtraRequest request) {
+            return base.Channel.eliminarHoraExtraAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<TA_GesBib_Cliente.ServicioJava.eliminarHoraExtraResponse> eliminarHoraExtraAsync(int idHoraExtra) {
+            TA_GesBib_Cliente.ServicioJava.eliminarHoraExtraRequest inValue = new TA_GesBib_Cliente.ServicioJava.eliminarHoraExtraRequest();
+            inValue.idHoraExtra = idHoraExtra;
+            return ((TA_GesBib_Cliente.ServicioJava.Servicio)(this)).eliminarHoraExtraAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         TA_GesBib_Cliente.ServicioJava.insertarInasistenciaResponse TA_GesBib_Cliente.ServicioJava.Servicio.insertarInasistencia(TA_GesBib_Cliente.ServicioJava.insertarInasistenciaRequest request) {
             return base.Channel.insertarInasistencia(request);
         }
@@ -4650,6 +4827,54 @@ namespace TA_GesBib_Cliente.ServicioJava {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        TA_GesBib_Cliente.ServicioJava.listarInasistenciasResponse TA_GesBib_Cliente.ServicioJava.Servicio.listarInasistencias(TA_GesBib_Cliente.ServicioJava.listarInasistenciasRequest request) {
+            return base.Channel.listarInasistencias(request);
+        }
+        
+        public TA_GesBib_Cliente.ServicioJava.inasistencia[] listarInasistencias(int idPersonal) {
+            TA_GesBib_Cliente.ServicioJava.listarInasistenciasRequest inValue = new TA_GesBib_Cliente.ServicioJava.listarInasistenciasRequest();
+            inValue.idPersonal = idPersonal;
+            TA_GesBib_Cliente.ServicioJava.listarInasistenciasResponse retVal = ((TA_GesBib_Cliente.ServicioJava.Servicio)(this)).listarInasistencias(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<TA_GesBib_Cliente.ServicioJava.listarInasistenciasResponse> TA_GesBib_Cliente.ServicioJava.Servicio.listarInasistenciasAsync(TA_GesBib_Cliente.ServicioJava.listarInasistenciasRequest request) {
+            return base.Channel.listarInasistenciasAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<TA_GesBib_Cliente.ServicioJava.listarInasistenciasResponse> listarInasistenciasAsync(int idPersonal) {
+            TA_GesBib_Cliente.ServicioJava.listarInasistenciasRequest inValue = new TA_GesBib_Cliente.ServicioJava.listarInasistenciasRequest();
+            inValue.idPersonal = idPersonal;
+            return ((TA_GesBib_Cliente.ServicioJava.Servicio)(this)).listarInasistenciasAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        TA_GesBib_Cliente.ServicioJava.listarInasistenciasPorFechaResponse TA_GesBib_Cliente.ServicioJava.Servicio.listarInasistenciasPorFecha(TA_GesBib_Cliente.ServicioJava.listarInasistenciasPorFechaRequest request) {
+            return base.Channel.listarInasistenciasPorFecha(request);
+        }
+        
+        public TA_GesBib_Cliente.ServicioJava.inasistencia[] listarInasistenciasPorFecha(int idPersonal, System.DateTime fecha) {
+            TA_GesBib_Cliente.ServicioJava.listarInasistenciasPorFechaRequest inValue = new TA_GesBib_Cliente.ServicioJava.listarInasistenciasPorFechaRequest();
+            inValue.idPersonal = idPersonal;
+            inValue.fecha = fecha;
+            TA_GesBib_Cliente.ServicioJava.listarInasistenciasPorFechaResponse retVal = ((TA_GesBib_Cliente.ServicioJava.Servicio)(this)).listarInasistenciasPorFecha(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<TA_GesBib_Cliente.ServicioJava.listarInasistenciasPorFechaResponse> TA_GesBib_Cliente.ServicioJava.Servicio.listarInasistenciasPorFechaAsync(TA_GesBib_Cliente.ServicioJava.listarInasistenciasPorFechaRequest request) {
+            return base.Channel.listarInasistenciasPorFechaAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<TA_GesBib_Cliente.ServicioJava.listarInasistenciasPorFechaResponse> listarInasistenciasPorFechaAsync(int idPersonal, System.DateTime fecha) {
+            TA_GesBib_Cliente.ServicioJava.listarInasistenciasPorFechaRequest inValue = new TA_GesBib_Cliente.ServicioJava.listarInasistenciasPorFechaRequest();
+            inValue.idPersonal = idPersonal;
+            inValue.fecha = fecha;
+            return ((TA_GesBib_Cliente.ServicioJava.Servicio)(this)).listarInasistenciasPorFechaAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         TA_GesBib_Cliente.ServicioJava.elimDistribucionPersonalResponse TA_GesBib_Cliente.ServicioJava.Servicio.elimDistribucionPersonal(TA_GesBib_Cliente.ServicioJava.elimDistribucionPersonalRequest request) {
             return base.Channel.elimDistribucionPersonal(request);
         }
@@ -4693,53 +4918,6 @@ namespace TA_GesBib_Cliente.ServicioJava {
             TA_GesBib_Cliente.ServicioJava.insertarDistribucionPersonalRequest inValue = new TA_GesBib_Cliente.ServicioJava.insertarDistribucionPersonalRequest();
             inValue.distrib_Per = distrib_Per;
             return ((TA_GesBib_Cliente.ServicioJava.Servicio)(this)).insertarDistribucionPersonalAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        TA_GesBib_Cliente.ServicioJava.listarHorasExtraPorFechaResponse TA_GesBib_Cliente.ServicioJava.Servicio.listarHorasExtraPorFecha(TA_GesBib_Cliente.ServicioJava.listarHorasExtraPorFechaRequest request) {
-            return base.Channel.listarHorasExtraPorFecha(request);
-        }
-        
-        public TA_GesBib_Cliente.ServicioJava.horaExtra[] listarHorasExtraPorFecha(int idPersonal, System.DateTime fecha) {
-            TA_GesBib_Cliente.ServicioJava.listarHorasExtraPorFechaRequest inValue = new TA_GesBib_Cliente.ServicioJava.listarHorasExtraPorFechaRequest();
-            inValue.idPersonal = idPersonal;
-            inValue.fecha = fecha;
-            TA_GesBib_Cliente.ServicioJava.listarHorasExtraPorFechaResponse retVal = ((TA_GesBib_Cliente.ServicioJava.Servicio)(this)).listarHorasExtraPorFecha(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<TA_GesBib_Cliente.ServicioJava.listarHorasExtraPorFechaResponse> TA_GesBib_Cliente.ServicioJava.Servicio.listarHorasExtraPorFechaAsync(TA_GesBib_Cliente.ServicioJava.listarHorasExtraPorFechaRequest request) {
-            return base.Channel.listarHorasExtraPorFechaAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<TA_GesBib_Cliente.ServicioJava.listarHorasExtraPorFechaResponse> listarHorasExtraPorFechaAsync(int idPersonal, System.DateTime fecha) {
-            TA_GesBib_Cliente.ServicioJava.listarHorasExtraPorFechaRequest inValue = new TA_GesBib_Cliente.ServicioJava.listarHorasExtraPorFechaRequest();
-            inValue.idPersonal = idPersonal;
-            inValue.fecha = fecha;
-            return ((TA_GesBib_Cliente.ServicioJava.Servicio)(this)).listarHorasExtraPorFechaAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        TA_GesBib_Cliente.ServicioJava.eliminarHoraExtraResponse TA_GesBib_Cliente.ServicioJava.Servicio.eliminarHoraExtra(TA_GesBib_Cliente.ServicioJava.eliminarHoraExtraRequest request) {
-            return base.Channel.eliminarHoraExtra(request);
-        }
-        
-        public void eliminarHoraExtra(int idHoraExtra) {
-            TA_GesBib_Cliente.ServicioJava.eliminarHoraExtraRequest inValue = new TA_GesBib_Cliente.ServicioJava.eliminarHoraExtraRequest();
-            inValue.idHoraExtra = idHoraExtra;
-            TA_GesBib_Cliente.ServicioJava.eliminarHoraExtraResponse retVal = ((TA_GesBib_Cliente.ServicioJava.Servicio)(this)).eliminarHoraExtra(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<TA_GesBib_Cliente.ServicioJava.eliminarHoraExtraResponse> TA_GesBib_Cliente.ServicioJava.Servicio.eliminarHoraExtraAsync(TA_GesBib_Cliente.ServicioJava.eliminarHoraExtraRequest request) {
-            return base.Channel.eliminarHoraExtraAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<TA_GesBib_Cliente.ServicioJava.eliminarHoraExtraResponse> eliminarHoraExtraAsync(int idHoraExtra) {
-            TA_GesBib_Cliente.ServicioJava.eliminarHoraExtraRequest inValue = new TA_GesBib_Cliente.ServicioJava.eliminarHoraExtraRequest();
-            inValue.idHoraExtra = idHoraExtra;
-            return ((TA_GesBib_Cliente.ServicioJava.Servicio)(this)).eliminarHoraExtraAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -4932,6 +5110,29 @@ namespace TA_GesBib_Cliente.ServicioJava {
             inValue.nombre = nombre;
             inValue.apellido = apellido;
             return ((TA_GesBib_Cliente.ServicioJava.Servicio)(this)).listarGestoresAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        TA_GesBib_Cliente.ServicioJava.listarHorasExtraResponse TA_GesBib_Cliente.ServicioJava.Servicio.listarHorasExtra(TA_GesBib_Cliente.ServicioJava.listarHorasExtraRequest request) {
+            return base.Channel.listarHorasExtra(request);
+        }
+        
+        public TA_GesBib_Cliente.ServicioJava.horaExtra[] listarHorasExtra(int idPersonal) {
+            TA_GesBib_Cliente.ServicioJava.listarHorasExtraRequest inValue = new TA_GesBib_Cliente.ServicioJava.listarHorasExtraRequest();
+            inValue.idPersonal = idPersonal;
+            TA_GesBib_Cliente.ServicioJava.listarHorasExtraResponse retVal = ((TA_GesBib_Cliente.ServicioJava.Servicio)(this)).listarHorasExtra(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<TA_GesBib_Cliente.ServicioJava.listarHorasExtraResponse> TA_GesBib_Cliente.ServicioJava.Servicio.listarHorasExtraAsync(TA_GesBib_Cliente.ServicioJava.listarHorasExtraRequest request) {
+            return base.Channel.listarHorasExtraAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<TA_GesBib_Cliente.ServicioJava.listarHorasExtraResponse> listarHorasExtraAsync(int idPersonal) {
+            TA_GesBib_Cliente.ServicioJava.listarHorasExtraRequest inValue = new TA_GesBib_Cliente.ServicioJava.listarHorasExtraRequest();
+            inValue.idPersonal = idPersonal;
+            return ((TA_GesBib_Cliente.ServicioJava.Servicio)(this)).listarHorasExtraAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
