@@ -224,6 +224,7 @@
             this.btnAvisos.Text = "Avisos";
             this.btnAvisos.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnAvisos.UseVisualStyleBackColor = false;
+            this.btnAvisos.Click += new System.EventHandler(this.btnAvisos_Click);
             // 
             // btnDistribucionPersonal
             // 
@@ -326,6 +327,7 @@
             this.btnValidaciones.Text = "Validaciones";
             this.btnValidaciones.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnValidaciones.UseVisualStyleBackColor = false;
+            this.btnValidaciones.Click += new System.EventHandler(this.btnValidaciones_Click);
             // 
             // panel2
             // 

@@ -16,7 +16,11 @@ namespace TA_GesBib_Cliente
         /*by tys */
 
         private frmDistribuirPersonalSemana var_formDistSemana;
+        private frmAsignarTurnos var_formAsignarTurnos;
+        private frmAdminPerfilesExp var_formPerfilExp;
+        private frmCapacitaciones var_formCapa;
 
+        /*by tys */
 
         private frmLogin var_formLogin;
         private ServicioJava.usuario var_usuario;
@@ -112,7 +116,7 @@ namespace TA_GesBib_Cliente
 
         private void btnCapacitacion_Click(object sender, EventArgs e)
         {
-            //panelBIPO.Visible = false;
+            panelBIPO.Visible = false;
 
             frmCapacitaciones frmCapa = new frmCapacitaciones();
             frmCapa.MdiParent = this;
@@ -153,20 +157,50 @@ namespace TA_GesBib_Cliente
             hideSubMenu();
             */
 
-            var_formDistSemana = new frmDistribuirPersonalSemana(var_usuario);
             panelBIPO.Visible = false;
+
+            if (var_formDistSemana == null)
+            {
+                var_formDistSemana = new frmDistribuirPersonalSemana(var_usuario);
+                var_formDistSemana.MdiParent = this;
+                var_formDistSemana.StartPosition = FormStartPosition.Manual;
+                var_formDistSemana.Left = 0;
+                var_formDistSemana.Top = 0;
+                var_formDistSemana.Show();
+
+                /*poner los demas forms no visibles (si existen)*/
+                if (var_formAsignarTurnos != null) var_formAsignarTurnos.Visible = false;
+                if (var_formCapa != null) var_formCapa.Visible = false;
+                if (var_formPerfilExp != null) var_formCapa.Visible = false;
+            }
+            else
+            {
+                var_formDistSemana.Visible = true;
+            }
+
+            
+
+            /*var_formDistSemana = new frmDistribuirPersonalSemana(var_usuario);           
             var_formDistSemana.MdiParent = this;
-
-
             var_formDistSemana.StartPosition = FormStartPosition.Manual;
             var_formDistSemana.Left = 0;
             var_formDistSemana.Top = 0;
+            var_formDistSemana.Show();*/
 
-            var_formDistSemana.Show();
             hideSubMenu();
             
 
 
+
+        }
+
+        private void btnValidaciones_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnAvisos_Click(object sender, EventArgs e)
+        {
 
         }
     }

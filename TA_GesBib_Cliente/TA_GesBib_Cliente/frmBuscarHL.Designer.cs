@@ -31,11 +31,11 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmBuscarHL));
             this.lblNombre = new System.Windows.Forms.Label();
             this.dgvListaHL = new System.Windows.Forms.DataGridView();
+            this.btnSeleccionar = new System.Windows.Forms.Button();
             this.fecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.hora_ini = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.hora_fin = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Motivo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnSeleccionar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvListaHL)).BeginInit();
             this.SuspendLayout();
             // 
@@ -63,41 +63,13 @@
             this.hora_fin,
             this.Motivo});
             this.dgvListaHL.Location = new System.Drawing.Point(29, 178);
-            this.dgvListaHL.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dgvListaHL.Margin = new System.Windows.Forms.Padding(2);
             this.dgvListaHL.Name = "dgvListaHL";
             this.dgvListaHL.ReadOnly = true;
             this.dgvListaHL.RowTemplate.Height = 24;
-            this.dgvListaHL.Size = new System.Drawing.Size(700, 302);
+            this.dgvListaHL.Size = new System.Drawing.Size(794, 302);
             this.dgvListaHL.TabIndex = 46;
             this.dgvListaHL.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgvListaHL_CellFormatting);
-            // 
-            // fecha
-            // 
-            this.fecha.HeaderText = "Fecha";
-            this.fecha.Name = "fecha";
-            this.fecha.ReadOnly = true;
-            this.fecha.Width = 250;
-            // 
-            // hora_ini
-            // 
-            this.hora_ini.HeaderText = "Hora Inicio";
-            this.hora_ini.Name = "hora_ini";
-            this.hora_ini.ReadOnly = true;
-            this.hora_ini.Width = 250;
-            // 
-            // hora_fin
-            // 
-            this.hora_fin.HeaderText = "Hora Fin";
-            this.hora_fin.Name = "hora_fin";
-            this.hora_fin.ReadOnly = true;
-            this.hora_fin.Width = 250;
-            // 
-            // Motivo
-            // 
-            this.Motivo.HeaderText = "motivo";
-            this.Motivo.Name = "Motivo";
-            this.Motivo.ReadOnly = true;
-            this.Motivo.Width = 300;
             // 
             // btnSeleccionar
             // 
@@ -107,7 +79,7 @@
             this.btnSeleccionar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.btnSeleccionar.Image = global::TA_GesBib_Cliente.Properties.Resources.icono_crear_nuevo;
             this.btnSeleccionar.Location = new System.Drawing.Point(541, 109);
-            this.btnSeleccionar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnSeleccionar.Margin = new System.Windows.Forms.Padding(2);
             this.btnSeleccionar.Name = "btnSeleccionar";
             this.btnSeleccionar.Size = new System.Drawing.Size(188, 32);
             this.btnSeleccionar.TabIndex = 50;
@@ -116,12 +88,40 @@
             this.btnSeleccionar.UseVisualStyleBackColor = false;
             this.btnSeleccionar.Click += new System.EventHandler(this.btnSeleccionar_Click);
             // 
+            // fecha
+            // 
+            this.fecha.HeaderText = "Fecha";
+            this.fecha.Name = "fecha";
+            this.fecha.ReadOnly = true;
+            this.fecha.Width = 150;
+            // 
+            // hora_ini
+            // 
+            this.hora_ini.HeaderText = "Hora Inicio";
+            this.hora_ini.Name = "hora_ini";
+            this.hora_ini.ReadOnly = true;
+            this.hora_ini.Width = 150;
+            // 
+            // hora_fin
+            // 
+            this.hora_fin.HeaderText = "Hora Fin";
+            this.hora_fin.Name = "hora_fin";
+            this.hora_fin.ReadOnly = true;
+            this.hora_fin.Width = 150;
+            // 
+            // Motivo
+            // 
+            this.Motivo.HeaderText = "motivo";
+            this.Motivo.Name = "Motivo";
+            this.Motivo.ReadOnly = true;
+            this.Motivo.Width = 300;
+            // 
             // frmBuscarHL
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(242)))), ((int)(((byte)(241)))));
-            this.ClientSize = new System.Drawing.Size(827, 553);
+            this.ClientSize = new System.Drawing.Size(900, 576);
             this.Controls.Add(this.btnSeleccionar);
             this.Controls.Add(this.lblNombre);
             this.Controls.Add(this.dgvListaHL);

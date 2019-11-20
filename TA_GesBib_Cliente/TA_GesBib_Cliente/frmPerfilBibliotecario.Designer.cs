@@ -229,7 +229,7 @@
             this.lblBienvenido.BackColor = System.Drawing.SystemColors.Window;
             this.lblBienvenido.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblBienvenido.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.lblBienvenido.Location = new System.Drawing.Point(89, 88);
+            this.lblBienvenido.Location = new System.Drawing.Point(89, 86);
             this.lblBienvenido.Name = "lblBienvenido";
             this.lblBienvenido.Size = new System.Drawing.Size(449, 33);
             this.lblBienvenido.TabIndex = 56;
@@ -251,7 +251,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(279, 751);
+            this.panel1.Size = new System.Drawing.Size(279, 769);
             this.panel1.TabIndex = 55;
             this.panel1.TabStop = true;
             // 
@@ -438,7 +438,7 @@
             this.panelBIPO.Controls.Add(this.panelAviso);
             this.panelBIPO.Location = new System.Drawing.Point(280, 2);
             this.panelBIPO.Name = "panelBIPO";
-            this.panelBIPO.Size = new System.Drawing.Size(901, 749);
+            this.panelBIPO.Size = new System.Drawing.Size(1040, 767);
             this.panelBIPO.TabIndex = 64;
             // 
             // frmPerfilBibliotecario
@@ -447,7 +447,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::TA_GesBib_Cliente.Properties.Resources.biblio_ari_borroso;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1180, 751);
+            this.ClientSize = new System.Drawing.Size(1322, 769);
             this.Controls.Add(this.panelBIPO);
             this.Controls.Add(this.panel1);
             this.DoubleBuffered = true;

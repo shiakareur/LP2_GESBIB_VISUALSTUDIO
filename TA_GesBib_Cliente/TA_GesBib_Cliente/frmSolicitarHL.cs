@@ -43,6 +43,9 @@ namespace TA_GesBib_Cliente
 
         private void btnNuevo_Click(object sender, EventArgs e)
         {
+
+            //this.var_perfilPersonal.pan
+
             //se pone los LABELS ENABLES
             limpiarComponentes();
             estadoComponentes(Estado.Nuevo);
@@ -86,16 +89,12 @@ namespace TA_GesBib_Cliente
                 servTA.insertarInasistencia(inaHL);
             }
             else if(estadoInasistencia == Estado.Modificar)
-            {
-                
+            {                
                 //sacar el id de la inaistencia seleccionada
                 inaHL.id = inaSelec.id;
                 inaHL.justificado = -1;
                 //inaHL.activo = 1 //??????????????????????????????
-
                 servTA.actualizarInasistencia(inaHL);
-
-                System.Console.WriteLine("llego al modificar");
             }
             
 
@@ -103,6 +102,75 @@ namespace TA_GesBib_Cliente
             this.muestraMensajeExitoso();
 
             estadoComponentes(Estado.Inicial);
+        }
+
+        
+
+
+        public void limpiarComponentes()
+        {
+
+            txtHIni_HL.Text = "";
+            txtHFin_HL.Text = "";
+            txtMotivo_HL.Text = "";
+            dtpSoliHL.Value = DateTime.Today;
+
+        }
+
+      
+
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
+            frmBuscarHL formBuscarHL = new frmBuscarHL(var_usuario);
+
+
+            if (formBuscarHL.ShowDialog() == DialogResult.OK)
+            {
+                //pasamos al form la solicitud de la inasistencia seleccionada
+                inaSelec = new ServicioJava.inasistencia();
+                inaSelec = formBuscarHL.Ina_HoraLibSelecc;
+
+
+                dtpSoliHL.Value = inaSelec.fecha;
+                txtHIni_HL.Text = inaSelec.horaInicio;
+                txtHFin_HL.Text = inaSelec.horaFin;
+                txtMotivo_HL.Text = inaSelec.motivo;
+
+                estadoComponentes(Estado.Buscar);
+            }
+
+        }
+
+        private void btnModificar_Click(object sender, EventArgs e)
+        {
+            estadoComponentes(Estado.Modificar);
+            estadoInasistencia = Estado.Modificar;
+        }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            //esta seguro que desea eliminar            
+
+            DialogResult result = MessageBox.Show("Seguro que desea eliminar esta solicitud?", "Eliminar", 
+                MessageBoxButtons.YesNoCancel);
+
+            if (result == DialogResult.Yes)
+            {
+                servTA.eliminarInasistencia(inaSelec.id);
+                //mostramos mensaje de eliminacion exitosa
+                MessageBox.Show("Se elimino correctamente la solicitud de Hora Libre !",
+                    "Mensajillo");
+            }
+            else if (result == DialogResult.No)
+            {
+            }
+            else if (result == DialogResult.Cancel)
+            {
+            }          
+
+
+
+
         }
 
         public void estadoComponentes(Estado estado)
@@ -125,7 +193,7 @@ namespace TA_GesBib_Cliente
                     btnGuardar.Enabled = false;
                     btnCancelar.Enabled = false;
                     //Campos de Texto
-                    
+
                     txtMotivo_HL.Enabled = false;
                     txtHIni_HL.Enabled = false;
                     txtHFin_HL.Enabled = false;
@@ -193,17 +261,6 @@ namespace TA_GesBib_Cliente
 
         }
 
-
-        public void limpiarComponentes()
-        {
-
-            txtHIni_HL.Text = "";
-            txtHFin_HL.Text = "";
-            txtMotivo_HL.Text = "";
-            dtpSoliHL.Value = DateTime.Today;
-
-        }
-
         private void muestraMensajeExitoso()
         {
             //mostramos mensaje de error
@@ -212,7 +269,8 @@ namespace TA_GesBib_Cliente
         }
 
         private void btnCerrar_Click(object sender, EventArgs e)
-        {
+        {          
+
             switch (var_tipoPerfil)
             {
                 /*case TipoPerfil.PerfilBibliotecario:
@@ -224,6 +282,8 @@ namespace TA_GesBib_Cliente
                     this.Visible = false;
                     ((frmPerfilBibliotecario)this.var_perfilPersonal).LblBienvenido.Visible = true;
                     ((frmPerfilBibliotecario)this.var_perfilPersonal).PanelAviso.Visible = true;
+                    ((frmPerfilBibliotecario)this.var_perfilPersonal).PanelBIPO.Visible = true;
+
                     break;
                 case TipoPerfil.PerfilAuxiliar:
                     this.Visible = false;
@@ -240,37 +300,5 @@ namespace TA_GesBib_Cliente
             }
         }
 
-        private void btnBuscar_Click(object sender, EventArgs e)
-        {
-            frmBuscarHL formBuscarHL = new frmBuscarHL(var_usuario);
-
-
-            if (formBuscarHL.ShowDialog() == DialogResult.OK)
-            {
-                //pasamos al form la solicitud de la inasistencia seleccionada
-                inaSelec = new ServicioJava.inasistencia();
-                inaSelec = formBuscarHL.Ina_HoraLibSelecc;
-
-
-                dtpSoliHL.Value = inaSelec.fecha;
-                txtHIni_HL.Text = inaSelec.horaInicio;
-                txtHFin_HL.Text = inaSelec.horaFin;
-                txtMotivo_HL.Text = inaSelec.motivo;
-
-                estadoComponentes(Estado.Buscar);
-            }
-
-        }
-
-        private void btnModificar_Click(object sender, EventArgs e)
-        {
-            estadoComponentes(Estado.Modificar);
-            estadoInasistencia = Estado.Modificar;
-        }
-
-        private void btnEliminar_Click(object sender, EventArgs e)
-        {
-            //servTA.eliminari(inaHL);
-        }
     }
 }

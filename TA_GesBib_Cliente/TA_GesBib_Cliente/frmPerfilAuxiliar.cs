@@ -422,7 +422,8 @@ namespace TA_GesBib_Cliente
                 //aca llamamos al formulario de registrar Horas extras
                 if (var_frmRespuestasSolicitudes_Auxiliar == null)
                 {
-                    var_frmRespuestasSolicitudes_Auxiliar = new frmRespuestaValidaciones(this, TipoPerfil.PerfilAuxiliar);
+                    var_frmRespuestasSolicitudes_Auxiliar = new frmRespuestaValidaciones(this, TipoPerfil.PerfilAuxiliar,
+                        var_usuario);
                     var_frmRespuestasSolicitudes_Auxiliar.MdiParent = this;
 
                     //...add

@@ -32,6 +32,10 @@ namespace TA_GesBib_Cliente
         private frmRespuestaValidaciones var_frmRespuestasSolicitudes_Bibliotecario;
         private frmVisualizarHorarios var_frmVerHorarios_Bibliotecario;
 
+
+        public Panel PanelBIPO { get => panelBIPO; set => panelBIPO = value; }
+
+
         public Panel PanelAviso { get => panelAviso; set => panelAviso = value; }
         public Label LblBienvenido { get => lblBienvenido; set => lblBienvenido = value; }                   
          
@@ -48,6 +52,7 @@ namespace TA_GesBib_Cliente
             var_usuario = _usuario;
             var_formLogin = formLogin;
             InitializeComponent();
+            this.lblNombreUsuario.Text = var_usuario.nombre;
             customizeDesign(); // <---- para los PANELES
         }
 
@@ -283,6 +288,7 @@ namespace TA_GesBib_Cliente
                 //aca llamamos al formulario de solicitar horas libres
                 if (var_frmSolicitarHL_Bibliotecario == null)
                 {
+                    
                     var_frmSolicitarHL_Bibliotecario = new frmSolicitarHL(this,TipoPerfil.PerfilBibliotecario,
                         var_usuario);
                     var_frmSolicitarHL_Bibliotecario.MdiParent = this;
@@ -423,7 +429,8 @@ namespace TA_GesBib_Cliente
                 //aca llamamos al formulario de registrar Horas extras
                 if (var_frmRespuestasSolicitudes_Bibliotecario == null)
                 {
-                    var_frmRespuestasSolicitudes_Bibliotecario = new frmRespuestaValidaciones(this, TipoPerfil.PerfilBibliotecario);
+                    var_frmRespuestasSolicitudes_Bibliotecario = new frmRespuestaValidaciones(this, TipoPerfil.PerfilBibliotecario,
+                        var_usuario);
                     var_frmRespuestasSolicitudes_Bibliotecario.MdiParent = this;
 
                     //...add
