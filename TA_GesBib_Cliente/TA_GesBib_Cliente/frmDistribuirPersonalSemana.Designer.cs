@@ -61,7 +61,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.lblFechaIni = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.dtpSemana = new System.Windows.Forms.DateTimePicker();
             this.btnBuscarDistribucion = new System.Windows.Forms.Button();
             this.btnCerrar = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
@@ -342,7 +342,7 @@
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.lblFechaIni);
-            this.groupBox1.Controls.Add(this.dateTimePicker1);
+            this.groupBox1.Controls.Add(this.dtpSemana);
             this.groupBox1.Controls.Add(this.btnBuscarDistribucion);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.groupBox1.Location = new System.Drawing.Point(12, 86);
@@ -361,12 +361,12 @@
             this.lblFechaIni.TabIndex = 145;
             this.lblFechaIni.Text = "Inicio de Semana:";
             // 
-            // dateTimePicker1
+            // dtpSemana
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(155, 32);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(255, 23);
-            this.dateTimePicker1.TabIndex = 143;
+            this.dtpSemana.Location = new System.Drawing.Point(155, 32);
+            this.dtpSemana.Name = "dtpSemana";
+            this.dtpSemana.Size = new System.Drawing.Size(255, 23);
+            this.dtpSemana.TabIndex = 143;
             // 
             // btnBuscarDistribucion
             // 
@@ -456,7 +456,7 @@
         private System.Windows.Forms.TabPage tbpViernes;
         private System.Windows.Forms.TabPage tbpSabado;
         private System.Windows.Forms.TabPage tbpDomingo;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker dtpSemana;
         private System.Windows.Forms.Label lblFechaIni;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;

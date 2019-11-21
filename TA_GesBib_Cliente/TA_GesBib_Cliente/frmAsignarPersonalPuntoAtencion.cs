@@ -24,6 +24,9 @@ namespace TA_GesBib_Cliente
 
             cmbHoraIni.DataSource = bindingSource1.DataSource;
             cmbHoraFin.DataSource = bindingSource1.DataSource;
+            dgvPersonal.AutoGenerateColumns = false;
+
+            dgvPersonal.DataSource = Program.DBController.listarUsuariosLibres(dtpFecha.Value, (string)cmbHoraFin.SelectedItem, (string)cmbHoraFin.SelectedValue, txtPerfil.Text);
             //comboBox1.DisplayMember = "Name";
             //comboBox1.ValueMember = "Name";
         }
@@ -69,6 +72,11 @@ namespace TA_GesBib_Cliente
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void btnBuscarPersonal_Click(object sender, EventArgs e)
         {
 
         }

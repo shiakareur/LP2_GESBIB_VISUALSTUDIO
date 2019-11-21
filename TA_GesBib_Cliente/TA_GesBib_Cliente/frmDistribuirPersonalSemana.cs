@@ -14,16 +14,18 @@ namespace TA_GesBib_Cliente
     {
 
         private Form var_formPerfil; //byTyS
-
+        private ServicioJava.personal personal = new ServicioJava.personal();
         private ServicioJava.distribucionPersonal distrib = new ServicioJava.distribucionPersonal();
         ServicioJava.ServicioClient DBController = new ServicioJava.ServicioClient();
 
         public frmDistribuirPersonalSemana()
         {
             InitializeComponent();
-            dgvDitribucion.Rows[0].Cells[1].Style.BackColor = Color.PowderBlue;
+            
+            //dgvDitribucion.Rows[0].Cells[1].Style.BackColor = Color.PowderBlue;
             //dgvDitribucion.Columns[1].SortMode = DataGridViewColumnSortMode.NotSortable;
             //Daywisegrid.Rows[RowIndex].Cells[columnIndex].Style.BackColor = Color.Red;
+
         }
     
 
@@ -32,6 +34,11 @@ namespace TA_GesBib_Cliente
 
             var_formPerfil = formPerfil; //byTyS
             InitializeComponent();
+            personal.id = usuario.id;
+            
+            dgvDitribucion.AutoGenerateColumns = false;
+            //dgvDitribucion.DataSource = DBController.listarPuntosAtencion();
+
             dgvDitribucion.Rows[0].Cells[1].Style.BackColor = Color.PowderBlue;
 
         }
