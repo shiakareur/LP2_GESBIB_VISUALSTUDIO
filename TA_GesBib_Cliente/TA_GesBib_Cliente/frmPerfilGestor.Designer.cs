@@ -264,7 +264,7 @@
             this.btnSemana.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSemana.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSemana.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnSemana.Location = new System.Drawing.Point(0, 0);
+            this.btnSemana.Location = new System.Drawing.Point(-2, 0);
             this.btnSemana.Name = "btnSemana";
             this.btnSemana.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
             this.btnSemana.Size = new System.Drawing.Size(253, 40);
@@ -282,7 +282,7 @@
             this.btnSemestre.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSemestre.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSemestre.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnSemestre.Location = new System.Drawing.Point(0, 39);
+            this.btnSemestre.Location = new System.Drawing.Point(-2, 39);
             this.btnSemestre.Name = "btnSemestre";
             this.btnSemestre.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
             this.btnSemestre.Size = new System.Drawing.Size(253, 40);
@@ -301,7 +301,7 @@
             this.btnCapacitacion.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCapacitacion.Image = global::TA_GesBib_Cliente.Properties.Resources.icons8_aula_50;
             this.btnCapacitacion.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCapacitacion.Location = new System.Drawing.Point(0, 249);
+            this.btnCapacitacion.Location = new System.Drawing.Point(4, 249);
             this.btnCapacitacion.Margin = new System.Windows.Forms.Padding(4);
             this.btnCapacitacion.Name = "btnCapacitacion";
             this.btnCapacitacion.Size = new System.Drawing.Size(251, 60);

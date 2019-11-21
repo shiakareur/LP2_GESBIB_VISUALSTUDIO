@@ -62,7 +62,7 @@ namespace TA_GesBib_Cliente
 
 
             //cambiar el color del boton "sombreado"
-            this.btnAsignarTurnos.BackColor = Color.Red;
+            this.btnAsignarTurnos.BackColor = Color.PowderBlue;
             //..y poner los otros botones a color normal 
             this.btnValidaciones.BackColor = Color.FromArgb(58, 175, 169);
             this.btnAdmPerfilesExp.BackColor = Color.FromArgb(58, 175, 169);
@@ -131,7 +131,7 @@ namespace TA_GesBib_Cliente
             //byTyS........................................................................
 
             //cambiar el color del boton "sombreado"
-            this.btnAdmPerfilesExp.BackColor = Color.Red;
+            this.btnAdmPerfilesExp.BackColor = Color.PowderBlue;
             //..y poner los otros botones a color normal 
             this.btnValidaciones.BackColor = Color.FromArgb(58, 175, 169);
             this.btnAsignarTurnos.BackColor = Color.FromArgb(58, 175, 169);
@@ -173,7 +173,7 @@ namespace TA_GesBib_Cliente
         {
 
             //cambiar el color del boton "sombreado"
-            this.btnCapacitacion.BackColor = Color.Red;
+            this.btnCapacitacion.BackColor = Color.PowderBlue;
             //..y poner los otros botones a color normal 
             this.btnValidaciones.BackColor = Color.FromArgb(58, 175, 169);
             this.btnAsignarTurnos.BackColor = Color.FromArgb(58, 175, 169);
@@ -213,7 +213,7 @@ namespace TA_GesBib_Cliente
         {
 
             //cambiar el color del boton "sombreado"
-            this.btnDistribucionPersonal.BackColor = Color.Red;
+            this.btnDistribucionPersonal.BackColor = Color.PowderBlue;
             //..y poner los otros botones a color normal 
             this.btnValidaciones.BackColor = Color.FromArgb(58, 175, 169);
             this.btnAsignarTurnos.BackColor = Color.FromArgb(58, 175, 169);
@@ -304,7 +304,7 @@ namespace TA_GesBib_Cliente
         private void btnValidaciones_Click(object sender, EventArgs e)
         {
             //cambiar el color del boton "sombreado"
-            this.btnValidaciones.BackColor = Color.Red;
+            this.btnValidaciones.BackColor = Color.PowderBlue;
             //..y poner los otros botones a color normal 
             this.btnAsignarTurnos.BackColor = Color.FromArgb(58, 175, 169);
             this.btnAdmPerfilesExp.BackColor = Color.FromArgb(58, 175, 169);
@@ -316,7 +316,7 @@ namespace TA_GesBib_Cliente
         private void btnAvisos_Click(object sender, EventArgs e)
         {
             //cambiar el color del boton "sombreado"
-            this.btnAvisos.BackColor = Color.Red;
+            this.btnAvisos.BackColor = Color.PowderBlue;
             //..y poner los otros botones a color normal 
             this.btnValidaciones.BackColor = Color.FromArgb(58, 175, 169);
             this.btnAsignarTurnos.BackColor = Color.FromArgb(58, 175, 169);

@@ -113,10 +113,10 @@
             this.btnDistribuir_Personal.Location = new System.Drawing.Point(0, 0);
             this.btnDistribuir_Personal.Name = "btnDistribuir_Personal";
             this.btnDistribuir_Personal.Padding = new System.Windows.Forms.Padding(10, 0, 5, 0);
-            this.btnDistribuir_Personal.Size = new System.Drawing.Size(234, 40);
+            this.btnDistribuir_Personal.Size = new System.Drawing.Size(253, 59);
             this.btnDistribuir_Personal.TabIndex = 10;
-            this.btnDistribuir_Personal.Text = "Distribuir Personal";
-            this.btnDistribuir_Personal.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnDistribuir_Personal.Text = "Distribución Personal";
+            this.btnDistribuir_Personal.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnDistribuir_Personal.UseVisualStyleBackColor = false;
             this.btnDistribuir_Personal.Click += new System.EventHandler(this.btnDistribuir_Personal_Click);
             // 
@@ -131,10 +131,10 @@
             this.btnRegistrar.ForeColor = System.Drawing.SystemColors.ControlText;
             this.btnRegistrar.Image = global::TA_GesBib_Cliente.Properties.Resources.icono_modificar;
             this.btnRegistrar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnRegistrar.Location = new System.Drawing.Point(0, 80);
+            this.btnRegistrar.Location = new System.Drawing.Point(0, 108);
             this.btnRegistrar.Name = "btnRegistrar";
             this.btnRegistrar.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
-            this.btnRegistrar.Size = new System.Drawing.Size(234, 40);
+            this.btnRegistrar.Size = new System.Drawing.Size(253, 40);
             this.btnRegistrar.TabIndex = 10;
             this.btnRegistrar.Text = "Registrar ";
             this.btnRegistrar.UseVisualStyleBackColor = false;
@@ -151,10 +151,10 @@
             this.btnSolicitar.ForeColor = System.Drawing.SystemColors.ControlText;
             this.btnSolicitar.Image = global::TA_GesBib_Cliente.Properties.Resources.icono_crear_nuevo;
             this.btnSolicitar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSolicitar.Location = new System.Drawing.Point(0, 209);
+            this.btnSolicitar.Location = new System.Drawing.Point(0, 237);
             this.btnSolicitar.Name = "btnSolicitar";
             this.btnSolicitar.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.btnSolicitar.Size = new System.Drawing.Size(234, 40);
+            this.btnSolicitar.Size = new System.Drawing.Size(253, 40);
             this.btnSolicitar.TabIndex = 50;
             this.btnSolicitar.Text = "Solicitar";
             this.btnSolicitar.UseVisualStyleBackColor = false;
@@ -273,9 +273,9 @@
             this.panel3.Controls.Add(this.btnRegistrar);
             this.panel3.Controls.Add(this.btnVisualizarHorarios);
             this.panel3.Controls.Add(this.btnDistribuir_Personal);
-            this.panel3.Location = new System.Drawing.Point(21, 117);
+            this.panel3.Location = new System.Drawing.Point(12, 117);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(234, 400);
+            this.panel3.Size = new System.Drawing.Size(253, 400);
             this.panel3.TabIndex = 16;
             // 
             // btnNotificaciones
@@ -289,10 +289,10 @@
             this.btnNotificaciones.ForeColor = System.Drawing.SystemColors.ControlText;
             this.btnNotificaciones.Image = global::TA_GesBib_Cliente.Properties.Resources.tinker_45;
             this.btnNotificaciones.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnNotificaciones.Location = new System.Drawing.Point(0, 337);
+            this.btnNotificaciones.Location = new System.Drawing.Point(0, 365);
             this.btnNotificaciones.Name = "btnNotificaciones";
             this.btnNotificaciones.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
-            this.btnNotificaciones.Size = new System.Drawing.Size(234, 40);
+            this.btnNotificaciones.Size = new System.Drawing.Size(253, 40);
             this.btnNotificaciones.TabIndex = 61;
             this.btnNotificaciones.Text = "     Notificaciones";
             this.btnNotificaciones.UseVisualStyleBackColor = false;
@@ -303,9 +303,9 @@
             this.panelBtn_Solicitar.Controls.Add(this.btnSolicitar_CambioTurno);
             this.panelBtn_Solicitar.Controls.Add(this.btnSolicitar_HLibres);
             this.panelBtn_Solicitar.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelBtn_Solicitar.Location = new System.Drawing.Point(0, 249);
+            this.panelBtn_Solicitar.Location = new System.Drawing.Point(0, 277);
             this.panelBtn_Solicitar.Name = "panelBtn_Solicitar";
-            this.panelBtn_Solicitar.Size = new System.Drawing.Size(234, 88);
+            this.panelBtn_Solicitar.Size = new System.Drawing.Size(253, 88);
             this.panelBtn_Solicitar.TabIndex = 60;
             // 
             // btnSolicitar_CambioTurno
@@ -319,7 +319,7 @@
             this.btnSolicitar_CambioTurno.Location = new System.Drawing.Point(1, 40);
             this.btnSolicitar_CambioTurno.Name = "btnSolicitar_CambioTurno";
             this.btnSolicitar_CambioTurno.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
-            this.btnSolicitar_CambioTurno.Size = new System.Drawing.Size(234, 40);
+            this.btnSolicitar_CambioTurno.Size = new System.Drawing.Size(252, 40);
             this.btnSolicitar_CambioTurno.TabIndex = 62;
             this.btnSolicitar_CambioTurno.Text = "> Cambio de Turno";
             this.btnSolicitar_CambioTurno.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -337,7 +337,7 @@
             this.btnSolicitar_HLibres.Location = new System.Drawing.Point(1, 0);
             this.btnSolicitar_HLibres.Name = "btnSolicitar_HLibres";
             this.btnSolicitar_HLibres.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
-            this.btnSolicitar_HLibres.Size = new System.Drawing.Size(234, 40);
+            this.btnSolicitar_HLibres.Size = new System.Drawing.Size(252, 40);
             this.btnSolicitar_HLibres.TabIndex = 61;
             this.btnSolicitar_HLibres.Text = "> Horas Libres";
             this.btnSolicitar_HLibres.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -349,9 +349,9 @@
             this.panelBtn_Registrar.Controls.Add(this.btnReg_Inas);
             this.panelBtn_Registrar.Controls.Add(this.btnReg_HE);
             this.panelBtn_Registrar.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelBtn_Registrar.Location = new System.Drawing.Point(0, 120);
+            this.panelBtn_Registrar.Location = new System.Drawing.Point(0, 148);
             this.panelBtn_Registrar.Name = "panelBtn_Registrar";
-            this.panelBtn_Registrar.Size = new System.Drawing.Size(234, 89);
+            this.panelBtn_Registrar.Size = new System.Drawing.Size(253, 89);
             this.panelBtn_Registrar.TabIndex = 59;
             // 
             // btnReg_Inas
@@ -365,7 +365,7 @@
             this.btnReg_Inas.Location = new System.Drawing.Point(0, 40);
             this.btnReg_Inas.Name = "btnReg_Inas";
             this.btnReg_Inas.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
-            this.btnReg_Inas.Size = new System.Drawing.Size(234, 40);
+            this.btnReg_Inas.Size = new System.Drawing.Size(253, 40);
             this.btnReg_Inas.TabIndex = 62;
             this.btnReg_Inas.Text = "> Inasistencias";
             this.btnReg_Inas.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -383,7 +383,7 @@
             this.btnReg_HE.Location = new System.Drawing.Point(0, 0);
             this.btnReg_HE.Name = "btnReg_HE";
             this.btnReg_HE.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
-            this.btnReg_HE.Size = new System.Drawing.Size(234, 40);
+            this.btnReg_HE.Size = new System.Drawing.Size(253, 40);
             this.btnReg_HE.TabIndex = 61;
             this.btnReg_HE.Text = "> Horas Extras";
             this.btnReg_HE.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -401,13 +401,13 @@
             this.btnVisualizarHorarios.ForeColor = System.Drawing.SystemColors.ControlText;
             this.btnVisualizarHorarios.Image = global::TA_GesBib_Cliente.Properties.Resources.icono_ver_grande;
             this.btnVisualizarHorarios.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnVisualizarHorarios.Location = new System.Drawing.Point(0, 40);
+            this.btnVisualizarHorarios.Location = new System.Drawing.Point(0, 59);
             this.btnVisualizarHorarios.Name = "btnVisualizarHorarios";
             this.btnVisualizarHorarios.Padding = new System.Windows.Forms.Padding(3, 0, 0, 0);
-            this.btnVisualizarHorarios.Size = new System.Drawing.Size(234, 40);
+            this.btnVisualizarHorarios.Size = new System.Drawing.Size(253, 49);
             this.btnVisualizarHorarios.TabIndex = 11;
-            this.btnVisualizarHorarios.Text = "Visualizar Horarios";
-            this.btnVisualizarHorarios.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnVisualizarHorarios.Text = "Horarios";
+            this.btnVisualizarHorarios.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnVisualizarHorarios.UseVisualStyleBackColor = false;
             this.btnVisualizarHorarios.Click += new System.EventHandler(this.btnVisualizarHorarios_Click);
             // 
