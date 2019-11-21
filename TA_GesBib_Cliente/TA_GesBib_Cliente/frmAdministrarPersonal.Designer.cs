@@ -430,6 +430,14 @@
             // 
             this.cmbDiaAsig.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.cmbDiaAsig.FormattingEnabled = true;
+            this.cmbDiaAsig.Items.AddRange(new object[] {
+            "Lunes",
+            "Martes",
+            "Miercoles",
+            "Jueves",
+            "Viernes",
+            "Sábado",
+            "Domingo"});
             this.cmbDiaAsig.Location = new System.Drawing.Point(203, 133);
             this.cmbDiaAsig.Name = "cmbDiaAsig";
             this.cmbDiaAsig.Size = new System.Drawing.Size(405, 28);
@@ -458,7 +466,6 @@
             this.btnCancelar.Text = "CANCELAR";
             this.btnCancelar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnCancelar.UseVisualStyleBackColor = false;
-            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // btnBuscar
             // 
@@ -474,7 +481,6 @@
             this.btnBuscar.Text = "BUSCAR";
             this.btnBuscar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnBuscar.UseVisualStyleBackColor = false;
-            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
             // btnModificar
             // 
@@ -587,7 +593,6 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmAdministrarPersonal";
             this.Text = "frmAdministrarPersonal";
-            this.Load += new System.EventHandler(this.frmAdministrarPersonal_Load);
             this.gbDatosGenerales.ResumeLayout(false);
             this.gbDatosGenerales.PerformLayout();
             this.groupBox1.ResumeLayout(false);

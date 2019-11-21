@@ -10,27 +10,31 @@ using System.Windows.Forms;
 
 namespace TA_GesBib_Cliente
 {
+
     public partial class frmAdministrarGestores : Form
     {
-        //para estados
-        Estado estadoObjGestor;
-        //Servicio
-        ServicioJava.ServicioClient servGesBib = new ServicioJava.ServicioClient();
-        //Gestor
-        ServicioJava.gestor gestor = new ServicioJava.gestor();
-        private frmPerfilAdministrador var_formPerfilAdmin;
+        Estado estadoGestor;
+        private ServicioJava.gestor gestor;
+        
         public frmAdministrarGestores()
         {
             InitializeComponent();
-
-            //Al abrir el form, este es el estado de los componentes
-            limpiarComponentes();
             estadoComponentes(Estado.Inicial);
+            //Obtenemos las bibliotecas desde BD
+            BindingList<ServicioJava.biblioteca> bibliotecas =
+                new BindingList<ServicioJava.biblioteca>(
+            Program.DBController.listarBibliotecas());
+
+            //Enlazamos el ComboBox con las bibliotecas obtenidas
+            cmbBibAisg.DataSource = Program.DBController.listarBibliotecas();
+
+            //Indicamos la Propiedad que debería visualizarse
+            cmbBibAisg.DisplayMember = "Nombre";
+            cmbBibAisg.ValueMember = "Id";
         }
 
         public frmAdministrarGestores(frmPerfilAdministrador formPerfilAdmin)
         {
-            var_formPerfilAdmin = formPerfilAdmin;
             InitializeComponent();
             //Al abrir el form, este es el estado de los componentes
             limpiarComponentes();
@@ -38,10 +42,10 @@ namespace TA_GesBib_Cliente
             //Obtenemos las bibliotecas desde BD
             BindingList<ServicioJava.biblioteca> bibliotecas =
                 new BindingList<ServicioJava.biblioteca>(
-            servGesBib.listarBibliotecas());
+            Program.DBController.listarBibliotecas());
 
             //Enlazamos el ComboBox con las especialidades obtenidas
-            cmbBibAisg.DataSource = servGesBib.listarBibliotecas();
+            cmbBibAisg.DataSource = Program.DBController.listarBibliotecas();
 
             //Indicamos la Propiedad que debería visualizarse
             cmbBibAisg.DisplayMember = "Nombre";
@@ -147,7 +151,6 @@ namespace TA_GesBib_Cliente
             dtpFechaIng.Value = DateTime.Today;
             txtCorreo.Text = "";
             txtClave.Text = "";
-
             txtCorreo.Text = "";
 
         }
@@ -167,20 +170,23 @@ namespace TA_GesBib_Cliente
 
             ges.biblioteca = (ServicioJava.biblioteca)cmbBibAisg.SelectedItem;
 
-            if (estadoObjGestor == Estado.Nuevo)
+            if (estadoGestor == Estado.Nuevo)
             {
-                servGesBib.insertarGestor(ges);
+                Program.DBController.insertarGestor(ges);
                 //Mostramos un mensaje de exito
                 MessageBox.Show("Gestor Registrado exitosamente", "Mensaje Confirmacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
-            else if (estadoObjGestor == Estado.Modificar)
+            else if (estadoGestor == Estado.Modificar)
             {
-                servGesBib.actualizarGestor(ges);
+                ges.id = gestor.id;
+              
+                Program.DBController.actualizarGestor(ges);
+
+                System.Console.WriteLine("hola bbita");
+
                 MessageBox.Show("Se han actualizado los datos", "Mensaje Confirmacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             estadoComponentes(Estado.Inicial);
-        
-
     }
 
     private void btnCancelar_Click(object sender, EventArgs e)
@@ -197,7 +203,7 @@ namespace TA_GesBib_Cliente
         //Instanciamos uno nuevo
         gestor = new ServicioJava.gestor();
 
-        estadoObjGestor = Estado.Nuevo;
+        estadoGestor = Estado.Nuevo;
         estadoComponentes(Estado.Nuevo);
     }
 
@@ -207,6 +213,7 @@ namespace TA_GesBib_Cliente
         if (frmBuscarGestor.ShowDialog() == DialogResult.OK)
         {
             gestor = frmBuscarGestor.GestorSeleccionado;
+            
             txtCodigo.Text = gestor.codigo;
             txtNombres.Text = gestor.nombre;
             txtApellidos.Text = gestor.apellido;
@@ -225,9 +232,18 @@ namespace TA_GesBib_Cliente
 
     private void btnModificar_Click(object sender, EventArgs e)
     {
-        estadoObjGestor = Estado.Modificar;
+        estadoGestor = Estado.Modificar;
         estadoComponentes(Estado.Modificar);
     }
 
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            if (DialogResult.Yes == MessageBox.Show("¿Está seguro que desea eliminar este gestor?", "", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation))
+            {
+                Program.DBController.eliminarGestor(gestor.id);
+                MessageBox.Show("El gestor ha sido eliminado", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                estadoComponentes(Estado.Inicial);
+            }
+        }
     }
 }
