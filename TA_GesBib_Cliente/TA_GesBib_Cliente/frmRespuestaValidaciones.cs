@@ -42,8 +42,9 @@ namespace TA_GesBib_Cliente
 
 
             //se carga con las validaciones
-            dgvVal_HoLibre.DataSource = servTA.listarHorasLibre(_user.id, -1); 
-            
+            dgvVal_HoLibre.DataSource = servTA.listarTodasHorasLibre(_user.id);
+            dgvVal_Inasis.DataSource = servTA.listarInasistencias(_user.id);
+            dgvRespValida_HE.DataSource = servTA.listarHorasExtra(_user.id);
             //......
 
 
@@ -66,19 +67,19 @@ namespace TA_GesBib_Cliente
                     break;*/
                 case TipoPerfil.PerfilBibliotecario:
                     this.Visible = false;
-                    ((frmPerfilBibliotecario)this.var_perfilPersonal).LblBienvenido.Visible = true;
+                    //((frmPerfilBibliotecario)this.var_perfilPersonal).LblBienvenido.Visible = true;
                     ((frmPerfilBibliotecario)this.var_perfilPersonal).PanelAviso.Visible = true;
                     ((frmPerfilBibliotecario)this.var_perfilPersonal).PanelBIPO.Visible = true;
                     break;
                 case TipoPerfil.PerfilAuxiliar:
                     this.Visible = false;
-                    ((frmPerfilAuxiliar)this.var_perfilPersonal).LblBienvenido.Visible = true;
+                    //((frmPerfilAuxiliar)this.var_perfilPersonal).LblBienvenido.Visible = true;
                     ((frmPerfilAuxiliar)this.var_perfilPersonal).PanelAviso.Visible = true;
                     //((frmPerfilAuxiliar)this.var_perfilPersonal).PanelBIPO.Visible = true;
                     break;
                 case TipoPerfil.PerfilPracticante:
                     this.Visible = false;
-                    ((frmPerfilPracticante)this.var_perfilPersonal).LblBienvenido.Visible = true;
+                    //((frmPerfilPracticante)this.var_perfilPersonal).LblBienvenido.Visible = true;
                     ((frmPerfilPracticante)this.var_perfilPersonal).PanelAviso.Visible = true;
                     //((frmPerfilPracticante)this.var_perfilPersonal).PanelBIPO.Visible = true;
                     break;
@@ -89,12 +90,34 @@ namespace TA_GesBib_Cliente
 
         private void dgvRespValida_HE_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
         {
+            String validacion = "";
+            ServicioJava.horaExtra _inasis = dgvRespValida_HE.Rows[e.RowIndex].DataBoundItem
+                         as ServicioJava.horaExtra;
+            dgvRespValida_HE.Rows[e.RowIndex].Cells[0].Value = _inasis.descripcion;
+            if (_inasis.justificado == -1)
+                validacion = "PENDIENTE";
+            else if (_inasis.justificado == 0)
+                validacion = "NO VALIDADO";
+            else if (_inasis.justificado == 1)
+                validacion = "VALIDADO";
 
+            dgvRespValida_HE.Rows[e.RowIndex].Cells[1].Value = validacion;
         }
 
         private void dgvVal_Inasis_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
         {
+            String validacion = "";
+            ServicioJava.inasistencia _inasis = dgvVal_Inasis.Rows[e.RowIndex].DataBoundItem
+                         as ServicioJava.inasistencia;
+            dgvVal_Inasis.Rows[e.RowIndex].Cells[0].Value = _inasis.motivo;
+            if (_inasis.justificado == -1)
+                validacion = "PENDIENTE";
+            else if (_inasis.justificado == 0)
+                validacion = "NO VALIDADO";
+            else if (_inasis.justificado == 1)
+                validacion = "VALIDADO";
 
+            dgvVal_Inasis.Rows[e.RowIndex].Cells[1].Value = validacion;
         }
 
         private void dgvVal_HoLibre_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
@@ -119,6 +142,11 @@ namespace TA_GesBib_Cliente
         }
 
         private void dgvVal_HoLibre_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void btnSeleccionar_Click(object sender, EventArgs e)
         {
 
         }

@@ -84,6 +84,8 @@
             this.label18 = new System.Windows.Forms.Label();
             this.btnGuardar = new System.Windows.Forms.Button();
             this.btnBuscar = new System.Windows.Forms.Button();
+            this.btnAnt = new System.Windows.Forms.Button();
+            this.btnSig = new System.Windows.Forms.Button();
             this.gboValidacion1.SuspendLayout();
             this.gboValidacion2.SuspendLayout();
             this.gboValidacion4.SuspendLayout();
@@ -116,6 +118,7 @@
             this.btnCerrar.TabIndex = 146;
             this.btnCerrar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnCerrar.UseVisualStyleBackColor = false;
+            this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
             // 
             // label6
             // 
@@ -179,9 +182,9 @@
             this.gboValidacion1.Controls.Add(this.label1);
             this.gboValidacion1.Controls.Add(this.label2);
             this.gboValidacion1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gboValidacion1.Location = new System.Drawing.Point(47, 112);
+            this.gboValidacion1.Location = new System.Drawing.Point(47, 153);
             this.gboValidacion1.Name = "gboValidacion1";
-            this.gboValidacion1.Size = new System.Drawing.Size(442, 227);
+            this.gboValidacion1.Size = new System.Drawing.Size(442, 208);
             this.gboValidacion1.TabIndex = 157;
             this.gboValidacion1.TabStop = false;
             this.gboValidacion1.Text = "Validación N°1";
@@ -193,7 +196,7 @@
             this.label19.BackColor = System.Drawing.Color.Transparent;
             this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
             this.label19.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(37)))), ((int)(((byte)(42)))));
-            this.label19.Location = new System.Drawing.Point(328, 160);
+            this.label19.Location = new System.Drawing.Point(328, 141);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(86, 22);
             this.label19.TabIndex = 171;
@@ -203,7 +206,7 @@
             // rbNo1
             // 
             this.rbNo1.AutoSize = true;
-            this.rbNo1.Location = new System.Drawing.Point(368, 191);
+            this.rbNo1.Location = new System.Drawing.Point(368, 172);
             this.rbNo1.Name = "rbNo1";
             this.rbNo1.Size = new System.Drawing.Size(46, 20);
             this.rbNo1.TabIndex = 170;
@@ -214,7 +217,7 @@
             // rbSi1
             // 
             this.rbSi1.AutoSize = true;
-            this.rbSi1.Location = new System.Drawing.Point(330, 191);
+            this.rbSi1.Location = new System.Drawing.Point(330, 172);
             this.rbSi1.Name = "rbSi1";
             this.rbSi1.Size = new System.Drawing.Size(38, 20);
             this.rbSi1.TabIndex = 169;
@@ -224,7 +227,7 @@
             // 
             // txtDescripcionVal1
             // 
-            this.txtDescripcionVal1.Location = new System.Drawing.Point(130, 49);
+            this.txtDescripcionVal1.Location = new System.Drawing.Point(130, 30);
             this.txtDescripcionVal1.Margin = new System.Windows.Forms.Padding(2);
             this.txtDescripcionVal1.Multiline = true;
             this.txtDescripcionVal1.Name = "txtDescripcionVal1";
@@ -234,14 +237,14 @@
             // dtpFecha1
             // 
             this.dtpFecha1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpFecha1.Location = new System.Drawing.Point(130, 134);
+            this.dtpFecha1.Location = new System.Drawing.Point(130, 115);
             this.dtpFecha1.Name = "dtpFecha1";
             this.dtpFecha1.Size = new System.Drawing.Size(130, 22);
             this.dtpFecha1.TabIndex = 167;
             // 
             // txtHoraFin1
             // 
-            this.txtHoraFin1.Location = new System.Drawing.Point(130, 189);
+            this.txtHoraFin1.Location = new System.Drawing.Point(130, 170);
             this.txtHoraFin1.Name = "txtHoraFin1";
             this.txtHoraFin1.Size = new System.Drawing.Size(97, 22);
             this.txtHoraFin1.TabIndex = 165;
@@ -252,7 +255,7 @@
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(37)))), ((int)(((byte)(42)))));
-            this.label4.Location = new System.Drawing.Point(15, 186);
+            this.label4.Location = new System.Drawing.Point(15, 167);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(84, 22);
             this.label4.TabIndex = 166;
@@ -261,7 +264,7 @@
             // 
             // txtHoraIni1
             // 
-            this.txtHoraIni1.Location = new System.Drawing.Point(130, 160);
+            this.txtHoraIni1.Location = new System.Drawing.Point(130, 141);
             this.txtHoraIni1.Name = "txtHoraIni1";
             this.txtHoraIni1.Size = new System.Drawing.Size(97, 22);
             this.txtHoraIni1.TabIndex = 163;
@@ -272,7 +275,7 @@
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(37)))), ((int)(((byte)(42)))));
-            this.label3.Location = new System.Drawing.Point(15, 157);
+            this.label3.Location = new System.Drawing.Point(15, 138);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(100, 22);
             this.label3.TabIndex = 164;
@@ -285,7 +288,7 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(37)))), ((int)(((byte)(42)))));
-            this.label1.Location = new System.Drawing.Point(15, 131);
+            this.label1.Location = new System.Drawing.Point(15, 112);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(65, 22);
             this.label1.TabIndex = 162;
@@ -298,7 +301,7 @@
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(37)))), ((int)(((byte)(42)))));
-            this.label2.Location = new System.Drawing.Point(16, 46);
+            this.label2.Location = new System.Drawing.Point(16, 27);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(109, 22);
             this.label2.TabIndex = 160;
@@ -319,9 +322,9 @@
             this.gboValidacion2.Controls.Add(this.label8);
             this.gboValidacion2.Controls.Add(this.label10);
             this.gboValidacion2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gboValidacion2.Location = new System.Drawing.Point(495, 112);
+            this.gboValidacion2.Location = new System.Drawing.Point(495, 153);
             this.gboValidacion2.Name = "gboValidacion2";
-            this.gboValidacion2.Size = new System.Drawing.Size(442, 227);
+            this.gboValidacion2.Size = new System.Drawing.Size(442, 208);
             this.gboValidacion2.TabIndex = 169;
             this.gboValidacion2.TabStop = false;
             this.gboValidacion2.Text = "Validación N°2";
@@ -332,7 +335,7 @@
             this.label20.BackColor = System.Drawing.Color.Transparent;
             this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
             this.label20.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(37)))), ((int)(((byte)(42)))));
-            this.label20.Location = new System.Drawing.Point(339, 159);
+            this.label20.Location = new System.Drawing.Point(339, 140);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(86, 22);
             this.label20.TabIndex = 174;
@@ -342,7 +345,7 @@
             // rbNo2
             // 
             this.rbNo2.AutoSize = true;
-            this.rbNo2.Location = new System.Drawing.Point(379, 190);
+            this.rbNo2.Location = new System.Drawing.Point(379, 171);
             this.rbNo2.Name = "rbNo2";
             this.rbNo2.Size = new System.Drawing.Size(46, 20);
             this.rbNo2.TabIndex = 173;
@@ -352,7 +355,7 @@
             // 
             // txtDescripcionVal2
             // 
-            this.txtDescripcionVal2.Location = new System.Drawing.Point(130, 49);
+            this.txtDescripcionVal2.Location = new System.Drawing.Point(130, 30);
             this.txtDescripcionVal2.Margin = new System.Windows.Forms.Padding(2);
             this.txtDescripcionVal2.Multiline = true;
             this.txtDescripcionVal2.Name = "txtDescripcionVal2";
@@ -362,7 +365,7 @@
             // rbSi2
             // 
             this.rbSi2.AutoSize = true;
-            this.rbSi2.Location = new System.Drawing.Point(341, 190);
+            this.rbSi2.Location = new System.Drawing.Point(341, 171);
             this.rbSi2.Name = "rbSi2";
             this.rbSi2.Size = new System.Drawing.Size(38, 20);
             this.rbSi2.TabIndex = 172;
@@ -373,14 +376,14 @@
             // dtpFecha2
             // 
             this.dtpFecha2.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpFecha2.Location = new System.Drawing.Point(130, 134);
+            this.dtpFecha2.Location = new System.Drawing.Point(130, 115);
             this.dtpFecha2.Name = "dtpFecha2";
             this.dtpFecha2.Size = new System.Drawing.Size(130, 22);
             this.dtpFecha2.TabIndex = 167;
             // 
             // txtHoraFin2
             // 
-            this.txtHoraFin2.Location = new System.Drawing.Point(130, 189);
+            this.txtHoraFin2.Location = new System.Drawing.Point(130, 170);
             this.txtHoraFin2.Name = "txtHoraFin2";
             this.txtHoraFin2.Size = new System.Drawing.Size(97, 22);
             this.txtHoraFin2.TabIndex = 165;
@@ -391,7 +394,7 @@
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(37)))), ((int)(((byte)(42)))));
-            this.label5.Location = new System.Drawing.Point(15, 186);
+            this.label5.Location = new System.Drawing.Point(15, 167);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(84, 22);
             this.label5.TabIndex = 166;
@@ -400,7 +403,7 @@
             // 
             // txtHoraIni2
             // 
-            this.txtHoraIni2.Location = new System.Drawing.Point(130, 160);
+            this.txtHoraIni2.Location = new System.Drawing.Point(130, 141);
             this.txtHoraIni2.Name = "txtHoraIni2";
             this.txtHoraIni2.Size = new System.Drawing.Size(97, 22);
             this.txtHoraIni2.TabIndex = 163;
@@ -411,7 +414,7 @@
             this.label7.BackColor = System.Drawing.Color.Transparent;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
             this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(37)))), ((int)(((byte)(42)))));
-            this.label7.Location = new System.Drawing.Point(15, 157);
+            this.label7.Location = new System.Drawing.Point(15, 138);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(100, 22);
             this.label7.TabIndex = 164;
@@ -424,7 +427,7 @@
             this.label8.BackColor = System.Drawing.Color.Transparent;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
             this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(37)))), ((int)(((byte)(42)))));
-            this.label8.Location = new System.Drawing.Point(15, 131);
+            this.label8.Location = new System.Drawing.Point(15, 112);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(65, 22);
             this.label8.TabIndex = 162;
@@ -437,7 +440,7 @@
             this.label10.BackColor = System.Drawing.Color.Transparent;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
             this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(37)))), ((int)(((byte)(42)))));
-            this.label10.Location = new System.Drawing.Point(16, 46);
+            this.label10.Location = new System.Drawing.Point(16, 27);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(109, 22);
             this.label10.TabIndex = 160;
@@ -458,9 +461,9 @@
             this.gboValidacion4.Controls.Add(this.label13);
             this.gboValidacion4.Controls.Add(this.label14);
             this.gboValidacion4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gboValidacion4.Location = new System.Drawing.Point(495, 345);
+            this.gboValidacion4.Location = new System.Drawing.Point(495, 370);
             this.gboValidacion4.Name = "gboValidacion4";
-            this.gboValidacion4.Size = new System.Drawing.Size(442, 227);
+            this.gboValidacion4.Size = new System.Drawing.Size(442, 206);
             this.gboValidacion4.TabIndex = 169;
             this.gboValidacion4.TabStop = false;
             this.gboValidacion4.Text = "Validación N°4";
@@ -471,17 +474,18 @@
             this.label21.BackColor = System.Drawing.Color.Transparent;
             this.label21.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
             this.label21.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(37)))), ((int)(((byte)(42)))));
-            this.label21.Location = new System.Drawing.Point(339, 159);
+            this.label21.Location = new System.Drawing.Point(339, 143);
             this.label21.Name = "label21";
             this.label21.Size = new System.Drawing.Size(86, 22);
             this.label21.TabIndex = 177;
             this.label21.Text = "¿Validar?";
             this.label21.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.label21.Click += new System.EventHandler(this.label21_Click);
             // 
             // rbNo4
             // 
             this.rbNo4.AutoSize = true;
-            this.rbNo4.Location = new System.Drawing.Point(379, 190);
+            this.rbNo4.Location = new System.Drawing.Point(379, 174);
             this.rbNo4.Name = "rbNo4";
             this.rbNo4.Size = new System.Drawing.Size(46, 20);
             this.rbNo4.TabIndex = 176;
@@ -491,38 +495,42 @@
             // 
             // txtDescripcionVal4
             // 
-            this.txtDescripcionVal4.Location = new System.Drawing.Point(130, 49);
+            this.txtDescripcionVal4.Location = new System.Drawing.Point(130, 33);
             this.txtDescripcionVal4.Margin = new System.Windows.Forms.Padding(2);
             this.txtDescripcionVal4.Multiline = true;
             this.txtDescripcionVal4.Name = "txtDescripcionVal4";
             this.txtDescripcionVal4.Size = new System.Drawing.Size(295, 66);
             this.txtDescripcionVal4.TabIndex = 168;
+            this.txtDescripcionVal4.TextChanged += new System.EventHandler(this.txtDescripcionVal4_TextChanged);
             // 
             // rbSi4
             // 
             this.rbSi4.AutoSize = true;
-            this.rbSi4.Location = new System.Drawing.Point(341, 190);
+            this.rbSi4.Location = new System.Drawing.Point(341, 174);
             this.rbSi4.Name = "rbSi4";
             this.rbSi4.Size = new System.Drawing.Size(38, 20);
             this.rbSi4.TabIndex = 175;
             this.rbSi4.TabStop = true;
             this.rbSi4.Text = "SI";
             this.rbSi4.UseVisualStyleBackColor = true;
+            this.rbSi4.CheckedChanged += new System.EventHandler(this.rbSi4_CheckedChanged);
             // 
             // dtpFecha4
             // 
             this.dtpFecha4.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpFecha4.Location = new System.Drawing.Point(130, 134);
+            this.dtpFecha4.Location = new System.Drawing.Point(130, 118);
             this.dtpFecha4.Name = "dtpFecha4";
             this.dtpFecha4.Size = new System.Drawing.Size(130, 22);
             this.dtpFecha4.TabIndex = 167;
+            this.dtpFecha4.ValueChanged += new System.EventHandler(this.dtpFecha4_ValueChanged);
             // 
             // txtHoraFin4
             // 
-            this.txtHoraFin4.Location = new System.Drawing.Point(130, 189);
+            this.txtHoraFin4.Location = new System.Drawing.Point(130, 173);
             this.txtHoraFin4.Name = "txtHoraFin4";
             this.txtHoraFin4.Size = new System.Drawing.Size(97, 22);
             this.txtHoraFin4.TabIndex = 165;
+            this.txtHoraFin4.TextChanged += new System.EventHandler(this.txtHoraFin4_TextChanged);
             // 
             // label11
             // 
@@ -530,19 +538,21 @@
             this.label11.BackColor = System.Drawing.Color.Transparent;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
             this.label11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(37)))), ((int)(((byte)(42)))));
-            this.label11.Location = new System.Drawing.Point(15, 186);
+            this.label11.Location = new System.Drawing.Point(15, 170);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(84, 22);
             this.label11.TabIndex = 166;
             this.label11.Text = "Hora Fin:";
             this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.label11.Click += new System.EventHandler(this.label11_Click);
             // 
             // txtHoraIni4
             // 
-            this.txtHoraIni4.Location = new System.Drawing.Point(130, 160);
+            this.txtHoraIni4.Location = new System.Drawing.Point(130, 144);
             this.txtHoraIni4.Name = "txtHoraIni4";
             this.txtHoraIni4.Size = new System.Drawing.Size(97, 22);
             this.txtHoraIni4.TabIndex = 163;
+            this.txtHoraIni4.TextChanged += new System.EventHandler(this.txtHoraIni4_TextChanged);
             // 
             // label12
             // 
@@ -550,12 +560,13 @@
             this.label12.BackColor = System.Drawing.Color.Transparent;
             this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
             this.label12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(37)))), ((int)(((byte)(42)))));
-            this.label12.Location = new System.Drawing.Point(15, 157);
+            this.label12.Location = new System.Drawing.Point(15, 141);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(100, 22);
             this.label12.TabIndex = 164;
             this.label12.Text = "Hora Inicio:";
             this.label12.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.label12.Click += new System.EventHandler(this.label12_Click);
             // 
             // label13
             // 
@@ -563,12 +574,13 @@
             this.label13.BackColor = System.Drawing.Color.Transparent;
             this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
             this.label13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(37)))), ((int)(((byte)(42)))));
-            this.label13.Location = new System.Drawing.Point(15, 131);
+            this.label13.Location = new System.Drawing.Point(15, 115);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(65, 22);
             this.label13.TabIndex = 162;
             this.label13.Text = "Fecha:";
             this.label13.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.label13.Click += new System.EventHandler(this.label13_Click);
             // 
             // label14
             // 
@@ -576,12 +588,13 @@
             this.label14.BackColor = System.Drawing.Color.Transparent;
             this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
             this.label14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(37)))), ((int)(((byte)(42)))));
-            this.label14.Location = new System.Drawing.Point(16, 46);
+            this.label14.Location = new System.Drawing.Point(16, 30);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(109, 22);
             this.label14.TabIndex = 160;
             this.label14.Text = "Descripción:";
             this.label14.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.label14.Click += new System.EventHandler(this.label14_Click);
             // 
             // gboValidacion3
             // 
@@ -597,9 +610,9 @@
             this.gboValidacion3.Controls.Add(this.label17);
             this.gboValidacion3.Controls.Add(this.label18);
             this.gboValidacion3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gboValidacion3.Location = new System.Drawing.Point(47, 345);
+            this.gboValidacion3.Location = new System.Drawing.Point(48, 370);
             this.gboValidacion3.Name = "gboValidacion3";
-            this.gboValidacion3.Size = new System.Drawing.Size(442, 227);
+            this.gboValidacion3.Size = new System.Drawing.Size(442, 206);
             this.gboValidacion3.TabIndex = 169;
             this.gboValidacion3.TabStop = false;
             this.gboValidacion3.Text = "Validación N°3";
@@ -610,7 +623,7 @@
             this.label22.BackColor = System.Drawing.Color.Transparent;
             this.label22.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
             this.label22.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(37)))), ((int)(((byte)(42)))));
-            this.label22.Location = new System.Drawing.Point(328, 159);
+            this.label22.Location = new System.Drawing.Point(327, 143);
             this.label22.Name = "label22";
             this.label22.Size = new System.Drawing.Size(86, 22);
             this.label22.TabIndex = 180;
@@ -620,7 +633,7 @@
             // rbNo3
             // 
             this.rbNo3.AutoSize = true;
-            this.rbNo3.Location = new System.Drawing.Point(368, 190);
+            this.rbNo3.Location = new System.Drawing.Point(367, 174);
             this.rbNo3.Name = "rbNo3";
             this.rbNo3.Size = new System.Drawing.Size(46, 20);
             this.rbNo3.TabIndex = 179;
@@ -630,7 +643,7 @@
             // 
             // txtDescripcionVal3
             // 
-            this.txtDescripcionVal3.Location = new System.Drawing.Point(130, 49);
+            this.txtDescripcionVal3.Location = new System.Drawing.Point(129, 33);
             this.txtDescripcionVal3.Margin = new System.Windows.Forms.Padding(2);
             this.txtDescripcionVal3.Multiline = true;
             this.txtDescripcionVal3.Name = "txtDescripcionVal3";
@@ -640,7 +653,7 @@
             // rbSi3
             // 
             this.rbSi3.AutoSize = true;
-            this.rbSi3.Location = new System.Drawing.Point(330, 190);
+            this.rbSi3.Location = new System.Drawing.Point(329, 174);
             this.rbSi3.Name = "rbSi3";
             this.rbSi3.Size = new System.Drawing.Size(38, 20);
             this.rbSi3.TabIndex = 178;
@@ -651,14 +664,14 @@
             // dtpFecha3
             // 
             this.dtpFecha3.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpFecha3.Location = new System.Drawing.Point(130, 134);
+            this.dtpFecha3.Location = new System.Drawing.Point(129, 118);
             this.dtpFecha3.Name = "dtpFecha3";
             this.dtpFecha3.Size = new System.Drawing.Size(130, 22);
             this.dtpFecha3.TabIndex = 167;
             // 
             // txtHoraFin3
             // 
-            this.txtHoraFin3.Location = new System.Drawing.Point(130, 189);
+            this.txtHoraFin3.Location = new System.Drawing.Point(129, 173);
             this.txtHoraFin3.Name = "txtHoraFin3";
             this.txtHoraFin3.Size = new System.Drawing.Size(97, 22);
             this.txtHoraFin3.TabIndex = 165;
@@ -669,7 +682,7 @@
             this.label15.BackColor = System.Drawing.Color.Transparent;
             this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
             this.label15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(37)))), ((int)(((byte)(42)))));
-            this.label15.Location = new System.Drawing.Point(15, 186);
+            this.label15.Location = new System.Drawing.Point(14, 170);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(84, 22);
             this.label15.TabIndex = 166;
@@ -678,7 +691,7 @@
             // 
             // txtHoraIni3
             // 
-            this.txtHoraIni3.Location = new System.Drawing.Point(130, 160);
+            this.txtHoraIni3.Location = new System.Drawing.Point(129, 144);
             this.txtHoraIni3.Name = "txtHoraIni3";
             this.txtHoraIni3.Size = new System.Drawing.Size(97, 22);
             this.txtHoraIni3.TabIndex = 163;
@@ -689,7 +702,7 @@
             this.label16.BackColor = System.Drawing.Color.Transparent;
             this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
             this.label16.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(37)))), ((int)(((byte)(42)))));
-            this.label16.Location = new System.Drawing.Point(15, 157);
+            this.label16.Location = new System.Drawing.Point(14, 141);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(100, 22);
             this.label16.TabIndex = 164;
@@ -702,7 +715,7 @@
             this.label17.BackColor = System.Drawing.Color.Transparent;
             this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
             this.label17.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(37)))), ((int)(((byte)(42)))));
-            this.label17.Location = new System.Drawing.Point(15, 131);
+            this.label17.Location = new System.Drawing.Point(14, 115);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(65, 22);
             this.label17.TabIndex = 162;
@@ -715,7 +728,7 @@
             this.label18.BackColor = System.Drawing.Color.Transparent;
             this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
             this.label18.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(37)))), ((int)(((byte)(42)))));
-            this.label18.Location = new System.Drawing.Point(16, 46);
+            this.label18.Location = new System.Drawing.Point(15, 30);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(109, 22);
             this.label18.TabIndex = 160;
@@ -737,6 +750,7 @@
             this.btnGuardar.Text = "GUARDAR";
             this.btnGuardar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnGuardar.UseVisualStyleBackColor = false;
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
             // btnBuscar
             // 
@@ -753,12 +767,44 @@
             this.btnBuscar.UseVisualStyleBackColor = false;
             this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
+            // btnAnt
+            // 
+            this.btnAnt.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(242)))), ((int)(((byte)(241)))));
+            this.btnAnt.FlatAppearance.BorderSize = 0;
+            this.btnAnt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAnt.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAnt.Location = new System.Drawing.Point(853, 107);
+            this.btnAnt.Margin = new System.Windows.Forms.Padding(2);
+            this.btnAnt.Name = "btnAnt";
+            this.btnAnt.Size = new System.Drawing.Size(45, 40);
+            this.btnAnt.TabIndex = 172;
+            this.btnAnt.Text = "◄";
+            this.btnAnt.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnAnt.UseVisualStyleBackColor = false;
+            // 
+            // btnSig
+            // 
+            this.btnSig.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(242)))), ((int)(((byte)(241)))));
+            this.btnSig.FlatAppearance.BorderSize = 0;
+            this.btnSig.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSig.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSig.Location = new System.Drawing.Point(892, 108);
+            this.btnSig.Margin = new System.Windows.Forms.Padding(2);
+            this.btnSig.Name = "btnSig";
+            this.btnSig.Size = new System.Drawing.Size(45, 40);
+            this.btnSig.TabIndex = 173;
+            this.btnSig.Text = "►";
+            this.btnSig.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnSig.UseVisualStyleBackColor = false;
+            // 
             // frmValidaciones
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(242)))), ((int)(((byte)(241)))));
             this.ClientSize = new System.Drawing.Size(964, 652);
+            this.Controls.Add(this.btnSig);
+            this.Controls.Add(this.btnAnt);
             this.Controls.Add(this.btnBuscar);
             this.Controls.Add(this.btnGuardar);
             this.Controls.Add(this.gboValidacion2);
@@ -846,5 +892,7 @@
         private System.Windows.Forms.RadioButton rbSi3;
         private System.Windows.Forms.Button btnGuardar;
         private System.Windows.Forms.Button btnBuscar;
+        private System.Windows.Forms.Button btnAnt;
+        private System.Windows.Forms.Button btnSig;
     }
 }

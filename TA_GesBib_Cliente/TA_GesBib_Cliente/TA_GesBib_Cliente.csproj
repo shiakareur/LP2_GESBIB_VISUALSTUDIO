@@ -73,6 +73,12 @@
     <Compile Include="frmAsignarTurnos.Designer.cs">
       <DependentUpon>frmAsignarTurnos.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmAvisos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAvisos.Designer.cs">
+      <DependentUpon>frmAvisos.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmBuscarHL.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -283,6 +289,9 @@
     <EmbeddedResource Include="frmAsignarTurnos.resx">
       <DependentUpon>frmAsignarTurnos.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmAvisos.resx">
+      <DependentUpon>frmAvisos.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmBuscarGestores.resx">
       <DependentUpon>frmBuscarGestores.cs</DependentUpon>
     </EmbeddedResource>
@@ -430,9 +439,6 @@
     <None Include="Connected Services\ServicioJava\TA_GesBib_Cliente.ServicioJava.elimAvisoResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Connected Services\ServicioJava\TA_GesBib_Cliente.ServicioJava.elimAvisoResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
     <None Include="Connected Services\ServicioJava\TA_GesBib_Cliente.ServicioJava.elimDistribucionPersonalResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
@@ -557,6 +563,9 @@
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\ServicioJava\TA_GesBib_Cliente.ServicioJava.listarTipoInasistenciaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServicioJava\TA_GesBib_Cliente.ServicioJava.listarTodasHorasLibreResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\ServicioJava\TA_GesBib_Cliente.ServicioJava.listarUsuariosLibresResponse.datasource">

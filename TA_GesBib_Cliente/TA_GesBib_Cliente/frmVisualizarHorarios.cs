@@ -44,7 +44,7 @@ namespace TA_GesBib_Cliente
                     break;*/
                 case TipoPerfil.PerfilBibliotecario:
                     this.Visible = false;
-                    ((frmPerfilBibliotecario)this.var_perfilPersonal).LblBienvenido.Visible = true;
+                    //((frmPerfilBibliotecario)this.var_perfilPersonal).LblBienvenido.Visible = true;
                     ((frmPerfilBibliotecario)this.var_perfilPersonal).PanelAviso.Visible = true;
                     break;
                 case TipoPerfil.PerfilAuxiliar:

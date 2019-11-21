@@ -245,19 +245,19 @@ namespace TA_GesBib_Cliente
                     break;*/
                 case TipoPerfil.PerfilBibliotecario:
                     this.Visible = false;
-                    ((frmPerfilBibliotecario)this.var_perfilPersonal).LblBienvenido.Visible = true;
+                    //((frmPerfilBibliotecario)this.var_perfilPersonal).LblBienvenido.Visible = true;
                     ((frmPerfilBibliotecario)this.var_perfilPersonal).PanelAviso.Visible = true;
                     ((frmPerfilBibliotecario)this.var_perfilPersonal).PanelBIPO.Visible = true;
                     break;
                 case TipoPerfil.PerfilAuxiliar:
                     this.Visible = false;
-                    ((frmPerfilAuxiliar)this.var_perfilPersonal).LblBienvenido.Visible = true;
+                    //((frmPerfilAuxiliar)this.var_perfilPersonal).LblBienvenido.Visible = true;
                     ((frmPerfilAuxiliar)this.var_perfilPersonal).PanelAviso.Visible = true;
                     //((frmPerfilAuxiliar)this.var_perfilPersonal).PanelBIPO.Visible = true;
                     break;
                 case TipoPerfil.PerfilPracticante:
                     this.Visible = false;
-                    ((frmPerfilPracticante)this.var_perfilPersonal).LblBienvenido.Visible = true;
+                    //((frmPerfilPracticante)this.var_perfilPersonal).LblBienvenido.Visible = true;
                     ((frmPerfilPracticante)this.var_perfilPersonal).PanelAviso.Visible = true;
                     //((frmPerfilPracticante)this.var_perfilPersonal).PanelBIPO.Visible = true;
                     break;

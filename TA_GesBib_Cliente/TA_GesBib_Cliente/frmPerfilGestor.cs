@@ -20,6 +20,8 @@ namespace TA_GesBib_Cliente
         private frmAsignarTurnos var_formAsignarTurnos;
         private frmAdminPerfilesExp var_formPerfilExp;
         private frmCapacitaciones var_formCapa;
+        private frmValidaciones formValidaciones;
+        private frmAvisos formAvisos;
 
 
         public Panel PanelBIPO { get => panelBIPO; set => panelBIPO = value; }
@@ -311,6 +313,32 @@ namespace TA_GesBib_Cliente
             this.btnAvisos.BackColor = Color.FromArgb(58, 175, 169);
             this.btnCapacitacion.BackColor = Color.FromArgb(58, 175, 169);
             this.btnDistribucionPersonal.BackColor = Color.FromArgb(58, 175, 169);
+           
+
+
+            panelBIPO.Visible = false;
+            /*poner los demas forms no visibles (si existen)*/
+            if (var_formAsignarTurnos != null) var_formAsignarTurnos.Visible = false;
+            if (var_formCapa != null) var_formCapa.Visible = false;
+            if (var_formDistSemestre != null) var_formDistSemestre.Visible = false;
+            if (var_formPerfilExp != null) var_formPerfilExp.Visible = false;
+
+            if (formValidaciones == null)
+            {
+                formValidaciones = new frmValidaciones(this, var_usuario);
+                formValidaciones.MdiParent = this;
+                formValidaciones.StartPosition = FormStartPosition.Manual;
+                formValidaciones.Left = 0;
+                formValidaciones.Top = 0;
+                formValidaciones.Show();
+            }
+            else
+            {
+                formValidaciones.StartPosition = FormStartPosition.Manual;
+                formValidaciones.Left = 0;
+                formValidaciones.Top = 0;
+                formValidaciones.Visible = true;
+            }
 
         }
 
@@ -324,6 +352,36 @@ namespace TA_GesBib_Cliente
             this.btnAdmPerfilesExp.BackColor = Color.FromArgb(58, 175, 169);
             this.btnCapacitacion.BackColor = Color.FromArgb(58, 175, 169);
             this.btnDistribucionPersonal.BackColor = Color.FromArgb(58, 175, 169);
+
+
+            panelBIPO.Visible = false;
+            /*poner los demas forms no visibles (si existen)*/
+            if (var_formAsignarTurnos != null) var_formAsignarTurnos.Visible = false;
+            if (var_formCapa != null) var_formCapa.Visible = false;
+            if (var_formDistSemestre != null) var_formDistSemestre.Visible = false;
+            if (var_formPerfilExp != null) var_formPerfilExp.Visible = false;
+
+            if (formAvisos == null)
+            {
+                formAvisos = new frmAvisos(this, var_usuario);
+                formAvisos.MdiParent = this;
+                formAvisos.StartPosition = FormStartPosition.Manual;
+                formAvisos.Left = 0;
+                formAvisos.Top = 0;
+                formAvisos.Show();
+            }
+            else
+            {
+                formAvisos.StartPosition = FormStartPosition.Manual;
+                formAvisos.Left = 0;
+                formAvisos.Top = 0;
+                formAvisos.Visible = true;
+            }
+
+
+
+
+
         }
 
         private void btnAsignarTurnos_BackColorChanged(object sender, EventArgs e)

@@ -31,19 +31,27 @@ namespace TA_GesBib_Cliente
         private frmSolicitarCambioTurno var_frmSolicitarCambioTurno_Bibliotecario;
         private frmRespuestaValidaciones var_frmRespuestasSolicitudes_Bibliotecario;
         private frmVisualizarHorarios var_frmVerHorarios_Bibliotecario;
-
+        BindingList<ServicioJava.aviso> listaAvisos ;
+        
 
         public Panel PanelBIPO { get => panelBIPO; set => panelBIPO = value; }
 
 
         public Panel PanelAviso { get => panelAviso; set => panelAviso = value; }
-        public Label LblBienvenido { get => lblBienvenido; set => lblBienvenido = value; }                   
-         
+        //public Label LblBienvenido { get => lblBienvenido; set => lblBienvenido = value; }                   
+
 
         public frmPerfilBibliotecario()
         {
             InitializeComponent();
             customizeDesign();
+            listaAvisos= new BindingList<ServicioJava.aviso>(Program.DBController.listarAvisos());
+            foreach (ServicioJava.aviso a in listaAvisos) {
+                lblTitulo.Text = a.titulo;
+                txtDescripcion.Text = a.descripcion;
+                break;
+            }
+
         }
 
         
@@ -54,6 +62,13 @@ namespace TA_GesBib_Cliente
             InitializeComponent();
             this.lblNombreUsuario.Text = var_usuario.nombre;
             customizeDesign(); // <---- para los PANELES
+            listaAvisos = new BindingList<ServicioJava.aviso>(Program.DBController.listarAvisos());
+            foreach (ServicioJava.aviso a in listaAvisos)
+            {
+                lblTitulo.Text = a.titulo;
+                txtDescripcion.Text = a.descripcion;
+                break;
+            }
         }
 
         //...................PANELES v2 ................................
@@ -193,7 +208,7 @@ namespace TA_GesBib_Cliente
 
                 //hoy agregeishion
 
-                lblBienvenido.Visible = false;
+                //lblBienvenido.Visible = false;
                 panelAviso.Visible = false;
 
                 //escondemos el submenu
@@ -254,7 +269,7 @@ namespace TA_GesBib_Cliente
 
                 }
 
-                lblBienvenido.Visible = false;
+                //lblBienvenido.Visible = false;
                 panelAviso.Visible = false;
 
                 //escondemos el submenu
@@ -317,7 +332,7 @@ namespace TA_GesBib_Cliente
 
                 }
 
-                lblBienvenido.Visible = false;
+                //lblBienvenido.Visible = false;
                 panelAviso.Visible = false;
 
                 //escondemos el submenu
@@ -394,7 +409,7 @@ namespace TA_GesBib_Cliente
 
                 }
 
-                lblBienvenido.Visible = false;
+                //lblBienvenido.Visible = false;
                 panelAviso.Visible = false;
 
                 //escondemos el submenu
@@ -482,7 +497,7 @@ namespace TA_GesBib_Cliente
 
                 //hoy agregeishion
 
-                lblBienvenido.Visible = false;
+                //lblBienvenido.Visible = false;
                 panelAviso.Visible = false;
 
                 //escondemos el submenu
@@ -573,7 +588,7 @@ namespace TA_GesBib_Cliente
 
                 //hoy agregeishion
 
-                lblBienvenido.Visible = false;
+                //lblBienvenido.Visible = false;
                 panelAviso.Visible = false;
 
                 //escondemos el submenu
@@ -622,7 +637,7 @@ namespace TA_GesBib_Cliente
 
                 //hoy agregeishion
 
-                lblBienvenido.Visible = false;
+                //lblBienvenido.Visible = false;
                 panelAviso.Visible = false;
 
                 //escondemos el submenu

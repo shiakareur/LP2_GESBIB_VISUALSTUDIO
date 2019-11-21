@@ -12,12 +12,19 @@ namespace TA_GesBib_Cliente
 {
     public partial class frmValidaciones : Form
     {
+        List<ServicioJava.inasistencia> listaSolicitudes=new List<ServicioJava.inasistencia>();
+        private Form var_formGestor;
         ServicioJava.personal personalSeleccionado;
         BindingList<ServicioJava.inasistencia> lista;
 
         public frmValidaciones()
         {
             InitializeComponent();
+        }
+        public frmValidaciones(Form formPerfil, ServicioJava.usuario usuario)
+        {
+            InitializeComponent();
+            var_formGestor = formPerfil;
         }
 
         private void groupBox1_Enter(object sender, EventArgs e)
@@ -42,8 +49,10 @@ namespace TA_GesBib_Cliente
             List<TextBox> listaHI = new List<TextBox> { txtHoraIni1, txtHoraIni2, txtHoraIni3, txtHoraIni4};
             List<TextBox> listaHF = new List<TextBox> { txtHoraFin1, txtHoraFin2, txtHoraFin3, txtHoraFin4 };
             lista = new BindingList<ServicioJava.inasistencia>(Program.DBController.listarHorasLibre(personalSeleccionado.id, -1));
+            
             int j = 0;
             foreach (ServicioJava.inasistencia i in lista){
+                listaSolicitudes.Add(i);
                 listaTXT[j].Text = i.motivo;
                 listaDTP[j].Value = i.fecha;
                 listaHI[j].Text = i.horaInicio;
@@ -52,6 +61,103 @@ namespace TA_GesBib_Cliente
                 j++;
 
             }
+        }
+
+        private void btnCerrar_Click(object sender, EventArgs e)
+        {
+            this.Visible = false;
+            //poner el panel BIPO en visible
+            ((frmPerfilGestor)var_formGestor).PanelBIPO.Visible = true;
+        }
+
+        private void btnGuardar_Click(object sender, EventArgs e)
+        {
+            List<RadioButton> listaRBSI = new List<RadioButton> { rbSi1 , rbSi2 , rbSi3 , rbSi4 };
+            List<RadioButton> listaRBNO = new List<RadioButton> { rbNo1 , rbNo1, rbNo1, rbNo1 };
+
+
+
+            int i = 0;
+            foreach (RadioButton rSi in listaRBSI) {
+                if (rSi.Checked) {
+                    listaSolicitudes[i].personal = new ServicioJava.personal();
+                    listaSolicitudes[i].personal.id = personalSeleccionado.id;
+
+                    ServicioJava.tipoInasistencia _tipoIna = new ServicioJava.tipoInasistencia();
+                    _tipoIna.id = 4;     
+                    listaSolicitudes[i].tipoInasistencia = _tipoIna;
+                    listaSolicitudes[i].justificado = 1;
+                    Program.DBController.actualizarInasistencia(listaSolicitudes[i]);
+                }
+                i++;
+
+            }
+            int j = 0;
+            foreach (RadioButton rNo in listaRBSI)
+            {
+                if (rNo.Checked)
+                {
+                    ServicioJava.tipoInasistencia _tipoIna = new ServicioJava.tipoInasistencia();
+                    _tipoIna.id = 4;
+                    listaSolicitudes[i].tipoInasistencia = _tipoIna;
+                    listaSolicitudes[j].justificado = 0;
+                    Program.DBController.actualizarInasistencia(listaSolicitudes[j]);
+                }
+                j++;
+
+            }
+
+
+        }
+
+        private void label14_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtDescripcionVal4_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label13_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dtpFecha4_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label12_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label11_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtHoraIni4_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtHoraFin4_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label21_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void rbSi4_CheckedChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
