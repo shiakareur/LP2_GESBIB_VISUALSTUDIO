@@ -67,7 +67,7 @@ namespace TA_GesBib_Cliente
             {
                 lblTitulo.Text = a.titulo;
                 txtDescripcion.Text = a.descripcion;
-                break;
+                //break;
             }
         }
 
