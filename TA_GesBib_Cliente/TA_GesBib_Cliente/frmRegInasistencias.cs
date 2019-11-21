@@ -82,6 +82,7 @@ namespace TA_GesBib_Cliente
             inasis.tipoInasistencia = new ServicioJava.tipoInasistencia();
             inasis.tipoInasistencia = (ServicioJava.tipoInasistencia)cmbTipo_Inasistencia.SelectedItem;
             inasis.fecha = dtpRegInasis.Value;
+            inasis.fechaSpecified = true;
             inasis.horaInicio = txtHIni_Inasis.Text;
             inasis.horaFin = txtHFin_Inasis.Text;
             inasis.motivo = txtDescripcion_HE.Text;
@@ -295,6 +296,10 @@ namespace TA_GesBib_Cliente
             MessageBox.Show("Se guardaron los cambios exitosamente !",
                 "Mensaje");
         }
-        
+
+        private void frmRegInasistencias_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

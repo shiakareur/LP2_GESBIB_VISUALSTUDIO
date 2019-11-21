@@ -123,7 +123,6 @@
             // 
             // fecha
             // 
-            this.fecha.DataPropertyName = "Fecha";
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.fecha.DefaultCellStyle = dataGridViewCellStyle2;
             this.fecha.FillWeight = 10.15228F;
@@ -134,7 +133,6 @@
             // 
             // horaInicio
             // 
-            this.horaInicio.DataPropertyName = "HoraInicio";
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold);
             this.horaInicio.DefaultCellStyle = dataGridViewCellStyle3;
             this.horaInicio.FillWeight = 10.15228F;
@@ -145,7 +143,6 @@
             // 
             // horaFin
             // 
-            this.horaFin.DataPropertyName = "HoraFin";
             dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold);
             this.horaFin.DefaultCellStyle = dataGridViewCellStyle4;
             this.horaFin.FillWeight = 369.5432F;
@@ -156,7 +153,6 @@
             // 
             // tipoInasistencia
             // 
-            this.tipoInasistencia.DataPropertyName = "TipoInasistencia";
             this.tipoInasistencia.FillWeight = 10.15228F;
             this.tipoInasistencia.HeaderText = "Tipo Inasistencia";
             this.tipoInasistencia.Name = "tipoInasistencia";

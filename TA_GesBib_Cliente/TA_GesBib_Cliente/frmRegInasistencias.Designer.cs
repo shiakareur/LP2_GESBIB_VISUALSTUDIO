@@ -148,11 +148,11 @@
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Arial Unicode MS", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.Color.Black;
             this.label11.Location = new System.Drawing.Point(93, 69);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(434, 15);
+            this.label11.Size = new System.Drawing.Size(434, 13);
             this.label11.TabIndex = 102;
             this.label11.Text = "_____________________________________________________________";
             // 
@@ -349,6 +349,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmRegInasistencias";
             this.Text = "frmRegInasistencias_Bibliotecario";
+            this.Load += new System.EventHandler(this.frmRegInasistencias_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

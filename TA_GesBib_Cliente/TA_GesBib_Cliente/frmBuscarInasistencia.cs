@@ -27,7 +27,10 @@ namespace TA_GesBib_Cliente
         private void dgvInasistencias_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
         {
             ServicioJava.inasistencia inasistenciaFila = (ServicioJava.inasistencia)dgvInasistencias.Rows[e.RowIndex].DataBoundItem;
-             dgvInasistencias.Rows[e.RowIndex].Cells["tipoInasistencia"].Value = inasistenciaFila.tipoInasistencia.nombre;
+            dgvInasistencias.Rows[e.RowIndex].Cells[0].Value = inasistenciaFila.fecha;
+            dgvInasistencias.Rows[e.RowIndex].Cells[1].Value = inasistenciaFila.horaInicio;
+            dgvInasistencias.Rows[e.RowIndex].Cells[2].Value = inasistenciaFila.horaFin;
+            dgvInasistencias.Rows[e.RowIndex].Cells[3].Value = inasistenciaFila.tipoInasistencia.nombre;
         }
         //private void dgvGestores_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
         //{

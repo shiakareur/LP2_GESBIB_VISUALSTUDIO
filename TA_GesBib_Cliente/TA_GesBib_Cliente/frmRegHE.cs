@@ -83,7 +83,10 @@ namespace TA_GesBib_Cliente
                 if (estadoForm == Estado.Nuevo)
                     servTA.insertarHoraExtra(hora_extra);
                 else if (estadoForm == Estado.Modificar)
+                {
+                    hora_extra.justificado = -1;
                     servTA.actualizarHoraExtra(hora_extra);
+                }
             }
             catch (Exception ex)
             {
