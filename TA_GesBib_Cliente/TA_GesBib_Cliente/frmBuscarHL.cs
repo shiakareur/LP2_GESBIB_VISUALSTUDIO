@@ -16,6 +16,7 @@ namespace TA_GesBib_Cliente
 
         ServicioJava.ServicioClient servTA = new ServicioJava.ServicioClient();
         private ServicioJava.inasistencia ina_HoraLibSelecc;
+        private int var_id_usuario;
 
         public inasistencia Ina_HoraLibSelecc { get => ina_HoraLibSelecc; set => ina_HoraLibSelecc = value; }
 
@@ -23,6 +24,9 @@ namespace TA_GesBib_Cliente
         {
             InitializeComponent();
             dgvListaHL.AutoGenerateColumns = false;
+
+            dtpFechaSeleccionada.Value = DateTime.Today;
+            var_id_usuario = _user.id;
             dgvListaHL.DataSource = servTA.listarHorasLibre(_user.id, -1);
 
 
@@ -46,6 +50,11 @@ namespace TA_GesBib_Cliente
         {
             Ina_HoraLibSelecc = (ServicioJava.inasistencia)dgvListaHL.CurrentRow.DataBoundItem;
             this.DialogResult = DialogResult.OK;
+        }
+
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
+            dgvListaHL.DataSource = servTA.listarHorasLibrePorFecha(var_id_usuario, -1, dtpFechaSeleccionada.Value);
         }
     }
 }

@@ -22,8 +22,8 @@
     <MetadataSource Address="http://localhost:8080/GesBibServices/Servicio?WSDL" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="Servicio.xsd" MetadataType="Schema" ID="df6d90da-3530-4100-a488-6a3d0a37929b" SourceId="1" SourceUrl="http://localhost:8080/GesBibServices/Servicio?xsd=1" />
-    <MetadataFile FileName="Servicio.wsdl" MetadataType="Wsdl" ID="9cd26ea0-ee99-45a5-b5e4-14e7acc5a07c" SourceId="1" SourceUrl="http://localhost:8080/GesBibServices/Servicio?WSDL" />
+    <MetadataFile FileName="Servicio.xsd" MetadataType="Schema" ID="34181c46-02a0-475a-9ad3-abb3d4778d94" SourceId="1" SourceUrl="http://localhost:8080/GesBibServices/Servicio?xsd=1" />
+    <MetadataFile FileName="Servicio.wsdl" MetadataType="Wsdl" ID="950631ab-bdb9-4d30-9c84-f8a922b5aa64" SourceId="1" SourceUrl="http://localhost:8080/GesBibServices/Servicio?WSDL" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

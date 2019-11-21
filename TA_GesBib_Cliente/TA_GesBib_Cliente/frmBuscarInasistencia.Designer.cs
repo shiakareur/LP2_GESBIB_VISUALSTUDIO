@@ -34,13 +34,13 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.btnSeleccionar = new System.Windows.Forms.Button();
             this.dgvInasistencias = new System.Windows.Forms.DataGridView();
-            this.btnBuscar = new System.Windows.Forms.Button();
-            this.lblFecha = new System.Windows.Forms.Label();
-            this.dtpFechaSeleccionada = new System.Windows.Forms.DateTimePicker();
             this.fecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.horaInicio = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.horaFin = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tipoInasistencia = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnBuscar = new System.Windows.Forms.Button();
+            this.lblFecha = new System.Windows.Forms.Label();
+            this.dtpFechaSeleccionada = new System.Windows.Forms.DateTimePicker();
             ((System.ComponentModel.ISupportInitialize)(this.dgvInasistencias)).BeginInit();
             this.SuspendLayout();
             // 
@@ -50,11 +50,15 @@
             this.btnSeleccionar.FlatAppearance.BorderSize = 0;
             this.btnSeleccionar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSeleccionar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSeleccionar.Location = new System.Drawing.Point(869, 12);
+            this.btnSeleccionar.Image = global::TA_GesBib_Cliente.Properties.Resources.icono_crear_nuevo;
+            this.btnSeleccionar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSeleccionar.Location = new System.Drawing.Point(1143, 17);
+            this.btnSeleccionar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnSeleccionar.Name = "btnSeleccionar";
-            this.btnSeleccionar.Size = new System.Drawing.Size(132, 33);
+            this.btnSeleccionar.Size = new System.Drawing.Size(192, 41);
             this.btnSeleccionar.TabIndex = 11;
             this.btnSeleccionar.Text = "Seleccionar";
+            this.btnSeleccionar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnSeleccionar.UseVisualStyleBackColor = false;
             this.btnSeleccionar.Click += new System.EventHandler(this.btnSeleccionar_Click_1);
             // 
@@ -80,46 +84,13 @@
             this.horaInicio,
             this.horaFin,
             this.tipoInasistencia});
-            this.dgvInasistencias.Location = new System.Drawing.Point(16, 60);
+            this.dgvInasistencias.Location = new System.Drawing.Point(21, 74);
+            this.dgvInasistencias.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dgvInasistencias.Name = "dgvInasistencias";
             this.dgvInasistencias.ReadOnly = true;
             this.dgvInasistencias.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvInasistencias.Size = new System.Drawing.Size(1000, 239);
+            this.dgvInasistencias.Size = new System.Drawing.Size(1314, 294);
             this.dgvInasistencias.TabIndex = 10;
-            // 
-            // btnBuscar
-            // 
-            this.btnBuscar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(175)))), ((int)(((byte)(169)))));
-            this.btnBuscar.FlatAppearance.BorderSize = 0;
-            this.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBuscar.Image = global::TA_GesBib_Cliente.Properties.Resources.icono_buscar;
-            this.btnBuscar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnBuscar.Location = new System.Drawing.Point(445, 8);
-            this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(117, 33);
-            this.btnBuscar.TabIndex = 20;
-            this.btnBuscar.Text = "Buscar";
-            this.btnBuscar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnBuscar.UseVisualStyleBackColor = false;
-            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click_1);
-            // 
-            // lblFecha
-            // 
-            this.lblFecha.AutoSize = true;
-            this.lblFecha.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold);
-            this.lblFecha.Location = new System.Drawing.Point(24, 12);
-            this.lblFecha.Name = "lblFecha";
-            this.lblFecha.Size = new System.Drawing.Size(75, 24);
-            this.lblFecha.TabIndex = 18;
-            this.lblFecha.Text = "Fecha:";
-            // 
-            // dtpFechaSeleccionada
-            // 
-            this.dtpFechaSeleccionada.Location = new System.Drawing.Point(134, 14);
-            this.dtpFechaSeleccionada.Name = "dtpFechaSeleccionada";
-            this.dtpFechaSeleccionada.Size = new System.Drawing.Size(262, 20);
-            this.dtpFechaSeleccionada.TabIndex = 21;
             // 
             // fecha
             // 
@@ -159,17 +130,55 @@
             this.tipoInasistencia.ReadOnly = true;
             this.tipoInasistencia.Width = 250;
             // 
+            // btnBuscar
+            // 
+            this.btnBuscar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(175)))), ((int)(((byte)(169)))));
+            this.btnBuscar.FlatAppearance.BorderSize = 0;
+            this.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBuscar.Image = global::TA_GesBib_Cliente.Properties.Resources.icono_buscar;
+            this.btnBuscar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnBuscar.Location = new System.Drawing.Point(593, 10);
+            this.btnBuscar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnBuscar.Name = "btnBuscar";
+            this.btnBuscar.Size = new System.Drawing.Size(156, 41);
+            this.btnBuscar.TabIndex = 20;
+            this.btnBuscar.Text = "Buscar";
+            this.btnBuscar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnBuscar.UseVisualStyleBackColor = false;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click_1);
+            // 
+            // lblFecha
+            // 
+            this.lblFecha.AutoSize = true;
+            this.lblFecha.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold);
+            this.lblFecha.Location = new System.Drawing.Point(32, 15);
+            this.lblFecha.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblFecha.Name = "lblFecha";
+            this.lblFecha.Size = new System.Drawing.Size(92, 29);
+            this.lblFecha.TabIndex = 18;
+            this.lblFecha.Text = "Fecha:";
+            // 
+            // dtpFechaSeleccionada
+            // 
+            this.dtpFechaSeleccionada.Location = new System.Drawing.Point(179, 17);
+            this.dtpFechaSeleccionada.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dtpFechaSeleccionada.Name = "dtpFechaSeleccionada";
+            this.dtpFechaSeleccionada.Size = new System.Drawing.Size(348, 22);
+            this.dtpFechaSeleccionada.TabIndex = 21;
+            // 
             // frmBuscarInasistencia
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(242)))), ((int)(((byte)(241)))));
-            this.ClientSize = new System.Drawing.Size(1028, 311);
+            this.ClientSize = new System.Drawing.Size(1360, 383);
             this.Controls.Add(this.dtpFechaSeleccionada);
             this.Controls.Add(this.btnBuscar);
             this.Controls.Add(this.lblFecha);
             this.Controls.Add(this.btnSeleccionar);
             this.Controls.Add(this.dgvInasistencias);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "frmBuscarInasistencia";
             this.Text = "Busqueda de Inasistencias";
             ((System.ComponentModel.ISupportInitialize)(this.dgvInasistencias)).EndInit();
