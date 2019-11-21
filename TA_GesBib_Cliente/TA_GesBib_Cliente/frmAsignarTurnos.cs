@@ -37,5 +37,10 @@ namespace TA_GesBib_Cliente
             this.Visible = false;
             var_formPerfilGestor.PanelBIPO.Visible = true;
         }
+
+        private void btnBuscarPersonal_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

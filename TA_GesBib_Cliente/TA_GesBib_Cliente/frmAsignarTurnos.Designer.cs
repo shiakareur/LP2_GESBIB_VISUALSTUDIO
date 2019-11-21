@@ -199,7 +199,7 @@
             this.btnAgregarPA.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAgregarPA.Image = global::TA_GesBib_Cliente.Properties.Resources.icons8_más_30;
             this.btnAgregarPA.Location = new System.Drawing.Point(585, 47);
-            this.btnAgregarPA.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnAgregarPA.Margin = new System.Windows.Forms.Padding(2);
             this.btnAgregarPA.Name = "btnAgregarPA";
             this.btnAgregarPA.Size = new System.Drawing.Size(35, 34);
             this.btnAgregarPA.TabIndex = 159;
@@ -214,12 +214,13 @@
             this.btnBuscarPersonal.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
             this.btnBuscarPersonal.Image = global::TA_GesBib_Cliente.Properties.Resources.icono_buscar;
             this.btnBuscarPersonal.Location = new System.Drawing.Point(294, 18);
-            this.btnBuscarPersonal.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnBuscarPersonal.Margin = new System.Windows.Forms.Padding(2);
             this.btnBuscarPersonal.Name = "btnBuscarPersonal";
             this.btnBuscarPersonal.Size = new System.Drawing.Size(35, 34);
             this.btnBuscarPersonal.TabIndex = 151;
             this.btnBuscarPersonal.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnBuscarPersonal.UseVisualStyleBackColor = false;
+            this.btnBuscarPersonal.Click += new System.EventHandler(this.btnBuscarPersonal_Click);
             // 
             // btnQuitarPA
             // 
@@ -229,7 +230,7 @@
             this.btnQuitarPA.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnQuitarPA.Image = global::TA_GesBib_Cliente.Properties.Resources.icons8_menos_30;
             this.btnQuitarPA.Location = new System.Drawing.Point(631, 47);
-            this.btnQuitarPA.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnQuitarPA.Margin = new System.Windows.Forms.Padding(2);
             this.btnQuitarPA.Name = "btnQuitarPA";
             this.btnQuitarPA.Size = new System.Drawing.Size(35, 34);
             this.btnQuitarPA.TabIndex = 158;
@@ -332,9 +333,9 @@
             this.groupBox2.Controls.Add(this.lblMiPA);
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox2.Location = new System.Drawing.Point(154, 152);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox2.Size = new System.Drawing.Size(682, 212);
             this.groupBox2.TabIndex = 158;
             this.groupBox2.TabStop = false;
@@ -344,7 +345,7 @@
             // 
             this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.textBox1.Location = new System.Drawing.Point(352, 30);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(2);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(41, 26);
             this.textBox1.TabIndex = 170;
@@ -359,7 +360,7 @@
             "14:00",
             "15:00"});
             this.comboBox4.Location = new System.Drawing.Point(219, 154);
-            this.comboBox4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.comboBox4.Margin = new System.Windows.Forms.Padding(2);
             this.comboBox4.Name = "comboBox4";
             this.comboBox4.Size = new System.Drawing.Size(120, 24);
             this.comboBox4.TabIndex = 169;
@@ -374,7 +375,7 @@
             "13:00",
             "14:00"});
             this.comboBox3.Location = new System.Drawing.Point(219, 123);
-            this.comboBox3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.comboBox3.Margin = new System.Windows.Forms.Padding(2);
             this.comboBox3.Name = "comboBox3";
             this.comboBox3.Size = new System.Drawing.Size(120, 24);
             this.comboBox3.TabIndex = 168;
@@ -389,7 +390,7 @@
             "10:00",
             "11:00"});
             this.comboBox2.Location = new System.Drawing.Point(219, 93);
-            this.comboBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.comboBox2.Margin = new System.Windows.Forms.Padding(2);
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(120, 24);
             this.comboBox2.TabIndex = 167;
@@ -415,7 +416,7 @@
             "21:00",
             "22:00"});
             this.comboBox1.Location = new System.Drawing.Point(219, 63);
-            this.comboBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.comboBox1.Margin = new System.Windows.Forms.Padding(2);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(120, 24);
             this.comboBox1.TabIndex = 166;
@@ -528,7 +529,7 @@
             // 
             this.txtMiPA.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.txtMiPA.Location = new System.Drawing.Point(219, 30);
-            this.txtMiPA.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtMiPA.Margin = new System.Windows.Forms.Padding(2);
             this.txtMiPA.Name = "txtMiPA";
             this.txtMiPA.Size = new System.Drawing.Size(120, 26);
             this.txtMiPA.TabIndex = 20;

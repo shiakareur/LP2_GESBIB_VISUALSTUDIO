@@ -1,6 +1,6 @@
 ﻿namespace TA_GesBib_Cliente
 {
-    partial class frmBuscarPersonalBiblioteca
+    partial class frmBuscarPersonalDisponible
     {
         /// <summary>
         /// Required designer variable.
@@ -51,30 +51,29 @@
             this.btnBuscar.FlatAppearance.BorderSize = 0;
             this.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBuscar.Font = new System.Drawing.Font("Bahnschrift", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBuscar.Location = new System.Drawing.Point(382, 9);
+            this.btnBuscar.Location = new System.Drawing.Point(386, 15);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(89, 33);
-            this.btnBuscar.TabIndex = 9;
+            this.btnBuscar.TabIndex = 14;
             this.btnBuscar.Text = "Buscar";
             this.btnBuscar.UseVisualStyleBackColor = false;
-            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
             // txtNombre
             // 
             this.txtNombre.Font = new System.Drawing.Font("Bahnschrift Light", 12F);
-            this.txtNombre.Location = new System.Drawing.Point(106, 13);
+            this.txtNombre.Location = new System.Drawing.Point(110, 19);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(260, 27);
-            this.txtNombre.TabIndex = 8;
+            this.txtNombre.TabIndex = 13;
             // 
             // lblNombre
             // 
             this.lblNombre.AutoSize = true;
             this.lblNombre.Font = new System.Drawing.Font("Bahnschrift", 14.25F, System.Drawing.FontStyle.Bold);
-            this.lblNombre.Location = new System.Drawing.Point(21, 16);
+            this.lblNombre.Location = new System.Drawing.Point(25, 22);
             this.lblNombre.Name = "lblNombre";
             this.lblNombre.Size = new System.Drawing.Size(81, 23);
-            this.lblNombre.TabIndex = 7;
+            this.lblNombre.TabIndex = 12;
             this.lblNombre.Text = "Nombre:";
             // 
             // btnSeleccionar
@@ -83,10 +82,10 @@
             this.btnSeleccionar.FlatAppearance.BorderSize = 0;
             this.btnSeleccionar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSeleccionar.Font = new System.Drawing.Font("Bahnschrift", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSeleccionar.Location = new System.Drawing.Point(1029, 9);
+            this.btnSeleccionar.Location = new System.Drawing.Point(1033, 15);
             this.btnSeleccionar.Name = "btnSeleccionar";
             this.btnSeleccionar.Size = new System.Drawing.Size(126, 33);
-            this.btnSeleccionar.TabIndex = 6;
+            this.btnSeleccionar.TabIndex = 11;
             this.btnSeleccionar.Text = "Seleccionar";
             this.btnSeleccionar.UseVisualStyleBackColor = false;
             this.btnSeleccionar.Click += new System.EventHandler(this.btnSeleccionar_Click);
@@ -113,16 +112,16 @@
             this.Nombre,
             this.Especialidad,
             this.Correo});
-            this.dgvPersonal.Location = new System.Drawing.Point(21, 51);
+            this.dgvPersonal.Location = new System.Drawing.Point(25, 57);
             this.dgvPersonal.Name = "dgvPersonal";
             this.dgvPersonal.ReadOnly = true;
             this.dgvPersonal.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvPersonal.Size = new System.Drawing.Size(1134, 239);
-            this.dgvPersonal.TabIndex = 5;
+            this.dgvPersonal.TabIndex = 10;
             // 
             // DNI
             // 
-            this.DNI.DataPropertyName = "Codigo";
+            this.DNI.DataPropertyName = "DNI";
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Bahnschrift Condensed", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DNI.DefaultCellStyle = dataGridViewCellStyle2;
             this.DNI.HeaderText = "Código";
@@ -141,7 +140,7 @@
             // 
             // Especialidad
             // 
-            this.Especialidad.DataPropertyName = "Apellido";
+            this.Especialidad.DataPropertyName = "Apellidos";
             dataGridViewCellStyle4.Font = new System.Drawing.Font("Bahnschrift", 14.25F, System.Drawing.FontStyle.Bold);
             this.Especialidad.DefaultCellStyle = dataGridViewCellStyle4;
             this.Especialidad.HeaderText = "Apellidos";
@@ -152,14 +151,14 @@
             // Correo
             // 
             this.Correo.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Correo.DataPropertyName = "Email";
+            this.Correo.DataPropertyName = "Correo";
             dataGridViewCellStyle5.Font = new System.Drawing.Font("Bahnschrift", 14.25F, System.Drawing.FontStyle.Bold);
             this.Correo.DefaultCellStyle = dataGridViewCellStyle5;
             this.Correo.HeaderText = "Correo electrónico";
             this.Correo.Name = "Correo";
             this.Correo.ReadOnly = true;
             // 
-            // frmBuscarPersonalBiblioteca
+            // frmBuscarPersonalDisponible
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -170,7 +169,8 @@
             this.Controls.Add(this.lblNombre);
             this.Controls.Add(this.btnSeleccionar);
             this.Controls.Add(this.dgvPersonal);
-            this.Name = "frmBuscarPersonalBiblioteca";
+            this.Name = "frmBuscarPersonalDisponible";
+            this.Text = "frmBuscarPersonalDisponible";
             ((System.ComponentModel.ISupportInitialize)(this.dgvPersonal)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

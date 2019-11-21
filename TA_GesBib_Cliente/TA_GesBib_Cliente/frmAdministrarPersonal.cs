@@ -258,5 +258,10 @@ namespace TA_GesBib_Cliente
             }
             estadoComponentes(Estado.Inicial);
         }
+
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

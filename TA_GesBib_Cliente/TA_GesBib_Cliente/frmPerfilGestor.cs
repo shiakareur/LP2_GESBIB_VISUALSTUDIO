@@ -311,6 +311,7 @@ namespace TA_GesBib_Cliente
             this.btnAvisos.BackColor = Color.FromArgb(58, 175, 169);
             this.btnCapacitacion.BackColor = Color.FromArgb(58, 175, 169);
             this.btnDistribucionPersonal.BackColor = Color.FromArgb(58, 175, 169);
+
         }
 
         private void btnAvisos_Click(object sender, EventArgs e)
