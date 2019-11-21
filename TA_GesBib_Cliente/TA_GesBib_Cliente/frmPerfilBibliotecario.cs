@@ -49,7 +49,7 @@ namespace TA_GesBib_Cliente
             foreach (ServicioJava.aviso a in listaAvisos) {
                 lblTitulo.Text = a.titulo;
                 txtDescripcion.Text = a.descripcion;
-                break;
+                //break;
             }
 
         }

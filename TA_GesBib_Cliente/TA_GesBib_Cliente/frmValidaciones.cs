@@ -73,7 +73,7 @@ namespace TA_GesBib_Cliente
         private void btnGuardar_Click(object sender, EventArgs e)
         {
             List<RadioButton> listaRBSI = new List<RadioButton> { rbSi1 , rbSi2 , rbSi3 , rbSi4 };
-            List<RadioButton> listaRBNO = new List<RadioButton> { rbNo1 , rbNo1, rbNo1, rbNo1 };
+            List<RadioButton> listaRBNO = new List<RadioButton> { rbNo1 , rbNo2, rbNo3, rbNo4};
 
 
 
@@ -93,13 +93,16 @@ namespace TA_GesBib_Cliente
 
             }
             int j = 0;
-            foreach (RadioButton rNo in listaRBSI)
+            foreach (RadioButton rNo in listaRBNO)
             {
                 if (rNo.Checked)
                 {
+                    listaSolicitudes[j].personal = new ServicioJava.personal();
+                    listaSolicitudes[j].personal.id = personalSeleccionado.id;
+
                     ServicioJava.tipoInasistencia _tipoIna = new ServicioJava.tipoInasistencia();
                     _tipoIna.id = 4;
-                    listaSolicitudes[i].tipoInasistencia = _tipoIna;
+                    listaSolicitudes[j].tipoInasistencia = _tipoIna;
                     listaSolicitudes[j].justificado = 0;
                     Program.DBController.actualizarInasistencia(listaSolicitudes[j]);
                 }
