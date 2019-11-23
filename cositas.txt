@@ -31,3 +31,27 @@ https://www.youtube.com/watch?v=BDoAREFjlCw&t=457s color al seleccioanr
 https://www.youtube.com/watch?v=NiQRq_u3vQU cositas
 
 https://www.youtube.com/watch?v=3ni0V-l3Auw
+
+
+
+..............................
+
+rporras@pucp.pe
+
+1234abcd
+
+FORM DE HORAS LIBRES
+
+
+
+poner horas en desahilitadas al inicio
+falta devolver al selccionar despues de buscar
+
+
+
+VALIDACIONES
+
+VERificar q todos los campos se llenen o al menos siempre el campo MOTIVO
+
+verificar q la 2da hora sea mayor a la 1era
+_________________________________________________________________
