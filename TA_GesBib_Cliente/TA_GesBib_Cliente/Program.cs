@@ -18,7 +18,7 @@ namespace TA_GesBib_Cliente
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
 
-            Application.Run(new frmLogin());
+            Application.Run(new frmBuscarPersonalBiblioteca());
 
 
         }

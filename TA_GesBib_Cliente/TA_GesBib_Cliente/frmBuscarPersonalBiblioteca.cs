@@ -13,7 +13,7 @@ namespace TA_GesBib_Cliente
 {
     public partial class frmBuscarPersonalBiblioteca : Form
     {
-        BindingList<ServicioJava.bibliotecario> listaPersonal;
+        BindingList<ServicioJava.personalBiblioteca> listaPersonal;
         ServicioJava.personal personal;
 
         public personal Personal { get => personal; set => personal = value; }
@@ -22,7 +22,7 @@ namespace TA_GesBib_Cliente
         {
             InitializeComponent();
             dgvPersonal.AutoGenerateColumns = false;
-            listaPersonal = new BindingList<ServicioJava.bibliotecario>(Program.DBController.listarBibliotecarios("",""));
+            listaPersonal = new BindingList<ServicioJava.personalBiblioteca>(Program.DBController.listarPersonalBiblioteca("",""));
             dgvPersonal.DataSource = listaPersonal;
 
         }
