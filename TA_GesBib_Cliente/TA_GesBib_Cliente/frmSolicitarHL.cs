@@ -75,10 +75,12 @@ namespace TA_GesBib_Cliente
             //fecha
             inaHL.fecha = dtpSoliHL.Value;
             inaHL.fechaSpecified = true;
-            
+
             //hora inicio
-            inaHL.horaInicio = txtHIni_HL.Text;
-            inaHL.horaFin = txtHFin_HL.Text;
+            inaHL.horaInicio = dtpHoraIni.Value.ToString();
+            inaHL.horaFin = dtpHoraFin.Value.ToString();
+            //inaHL.horaInicio = txtHIni_HL.Text;
+            //inaHL.horaFin = txtHFin_HL.Text;
             
             //motivo
             inaHL.motivo = txtMotivo_HL.Text;
@@ -110,11 +112,21 @@ namespace TA_GesBib_Cliente
         public void limpiarComponentes()
         {
 
-            txtHIni_HL.Text = "";
-            txtHFin_HL.Text = "";
+            //txtHIni_HL.Text = "";
+            //txtHFin_HL.Text = "";
+          
+
             txtMotivo_HL.Text = "";
             dtpSoliHL.Value = DateTime.Today;
 
+            dtpHoraIni.ResetText();
+            dtpHoraFin.ResetText();
+
+            //dtpHoraIni.Format = DateTimePickerFormat.Time;
+            //dtpHoraIni.CustomFormat = "00:00";
+
+            //dtpHoraFin.Format = DateTimePickerFormat.Time;
+            //dtpHoraFin.CustomFormat = "00:00";
         }
 
       
@@ -132,8 +144,10 @@ namespace TA_GesBib_Cliente
 
 
                 dtpSoliHL.Value = inaSelec.fecha;
-                txtHIni_HL.Text = inaSelec.horaInicio;
-                txtHFin_HL.Text = inaSelec.horaFin;
+                //txtHIni_HL.Text = inaSelec.horaInicio;
+                //txtHFin_HL.Text = inaSelec.horaFin;
+                dtpHoraIni.Value = DateTime.Parse(inaSelec.horaInicio);
+                dtpHoraFin.Value = DateTime.Parse(inaSelec.horaFin);
                 txtMotivo_HL.Text = inaSelec.motivo;
 
                 estadoComponentes(Estado.Buscar);
@@ -195,9 +209,11 @@ namespace TA_GesBib_Cliente
                     //Campos de Texto
 
                     txtMotivo_HL.Enabled = false;
-                    txtHIni_HL.Enabled = false;
-                    txtHFin_HL.Enabled = false;
+                    //txtHIni_HL.Enabled = false;
+                    //txtHFin_HL.Enabled = false;
                     dtpSoliHL.Enabled = false;
+                    dtpHoraIni.Enabled = false;
+                    dtpHoraFin.Enabled = false;
                     break;
                 case Estado.Nuevo:
                     //Etiquetas
@@ -213,9 +229,11 @@ namespace TA_GesBib_Cliente
                     btnCancelar.Enabled = true;
                     //Campos de Texto
                     txtMotivo_HL.Enabled = true;
-                    txtHIni_HL.Enabled = true;
-                    txtHFin_HL.Enabled = true;
+                    //txtHIni_HL.Enabled = true;
+                    //txtHFin_HL.Enabled = true;
                     dtpSoliHL.Enabled = true;
+                    dtpHoraIni.Enabled = true;
+                    dtpHoraFin.Enabled = true;
                     break;
                 case Estado.Buscar:
                     //Etiquetas
@@ -232,8 +250,8 @@ namespace TA_GesBib_Cliente
                     btnGuardar.Enabled = false;
                     btnCancelar.Enabled = true;
                     //Campos de Texto
-                    txtHIni_HL.Enabled = false;
-                    txtHFin_HL.Enabled = false;
+                    //txtHIni_HL.Enabled = false;
+                    //txtHFin_HL.Enabled = false;
                     dtpSoliHL.Enabled = false;
                     break;
 
@@ -252,8 +270,8 @@ namespace TA_GesBib_Cliente
                     btnCancelar.Enabled = true;
                     //Campos de Texto
                     txtMotivo_HL.Enabled = true;
-                    txtHIni_HL.Enabled = true;
-                    txtHFin_HL.Enabled = true;
+                    //txtHIni_HL.Enabled = true;
+                    //txtHFin_HL.Enabled = true;
                     dtpSoliHL.Enabled = true;
                     break;
 

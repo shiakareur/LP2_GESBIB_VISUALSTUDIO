@@ -33,8 +33,6 @@
             this.label9 = new System.Windows.Forms.Label();
             this.lblHMS_fin = new System.Windows.Forms.Label();
             this.lblHMS_ini = new System.Windows.Forms.Label();
-            this.txtHFin_HL = new System.Windows.Forms.TextBox();
-            this.txtHIni_HL = new System.Windows.Forms.TextBox();
             this.lblHIni = new System.Windows.Forms.Label();
             this.lblHFin = new System.Windows.Forms.Label();
             this.dtpSoliHL = new System.Windows.Forms.DateTimePicker();
@@ -48,6 +46,8 @@
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnGuardar = new System.Windows.Forms.Button();
             this.btnNuevo = new System.Windows.Forms.Button();
+            this.dtpHoraIni = new System.Windows.Forms.DateTimePicker();
+            this.dtpHoraFin = new System.Windows.Forms.DateTimePicker();
             this.SuspendLayout();
             // 
             // label6
@@ -97,22 +97,6 @@
             this.lblHMS_ini.Text = "(hh:mm) ";
             this.lblHMS_ini.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // txtHFin_HL
-            // 
-            this.txtHFin_HL.Location = new System.Drawing.Point(279, 295);
-            this.txtHFin_HL.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.txtHFin_HL.Name = "txtHFin_HL";
-            this.txtHFin_HL.Size = new System.Drawing.Size(100, 20);
-            this.txtHFin_HL.TabIndex = 118;
-            // 
-            // txtHIni_HL
-            // 
-            this.txtHIni_HL.Location = new System.Drawing.Point(279, 249);
-            this.txtHIni_HL.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.txtHIni_HL.Name = "txtHIni_HL";
-            this.txtHIni_HL.Size = new System.Drawing.Size(100, 20);
-            this.txtHIni_HL.TabIndex = 117;
-            // 
             // lblHIni
             // 
             this.lblHIni.AutoSize = true;
@@ -140,7 +124,7 @@
             // dtpSoliHL
             // 
             this.dtpSoliHL.Location = new System.Drawing.Point(279, 188);
-            this.dtpSoliHL.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dtpSoliHL.Margin = new System.Windows.Forms.Padding(2);
             this.dtpSoliHL.Name = "dtpSoliHL";
             this.dtpSoliHL.Size = new System.Drawing.Size(423, 20);
             this.dtpSoliHL.TabIndex = 114;
@@ -160,7 +144,7 @@
             // txtMotivo_HL
             // 
             this.txtMotivo_HL.Location = new System.Drawing.Point(279, 338);
-            this.txtMotivo_HL.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtMotivo_HL.Margin = new System.Windows.Forms.Padding(2);
             this.txtMotivo_HL.Multiline = true;
             this.txtMotivo_HL.Name = "txtMotivo_HL";
             this.txtMotivo_HL.Size = new System.Drawing.Size(395, 123);
@@ -235,7 +219,7 @@
             this.btnCerrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.btnCerrar.Image = global::TA_GesBib_Cliente.Properties.Resources.icono_regresar;
             this.btnCerrar.Location = new System.Drawing.Point(21, 30);
-            this.btnCerrar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnCerrar.Margin = new System.Windows.Forms.Padding(2);
             this.btnCerrar.Name = "btnCerrar";
             this.btnCerrar.Size = new System.Drawing.Size(54, 32);
             this.btnCerrar.TabIndex = 122;
@@ -292,12 +276,36 @@
             this.btnNuevo.UseVisualStyleBackColor = false;
             this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click);
             // 
+            // dtpHoraIni
+            // 
+            this.dtpHoraIni.CustomFormat = "HH:mm";
+            this.dtpHoraIni.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtpHoraIni.Location = new System.Drawing.Point(279, 247);
+            this.dtpHoraIni.Name = "dtpHoraIni";
+            this.dtpHoraIni.ShowUpDown = true;
+            this.dtpHoraIni.Size = new System.Drawing.Size(112, 20);
+            this.dtpHoraIni.TabIndex = 128;
+            this.dtpHoraIni.Value = new System.DateTime(2019, 11, 23, 0, 0, 0, 0);
+            // 
+            // dtpHoraFin
+            // 
+            this.dtpHoraFin.CustomFormat = "HH:mm";
+            this.dtpHoraFin.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtpHoraFin.Location = new System.Drawing.Point(279, 289);
+            this.dtpHoraFin.Name = "dtpHoraFin";
+            this.dtpHoraFin.ShowUpDown = true;
+            this.dtpHoraFin.Size = new System.Drawing.Size(112, 20);
+            this.dtpHoraFin.TabIndex = 129;
+            this.dtpHoraFin.Value = new System.DateTime(2019, 11, 23, 0, 0, 0, 0);
+            // 
             // frmSolicitarHL
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(242)))), ((int)(((byte)(241)))));
             this.ClientSize = new System.Drawing.Size(915, 509);
+            this.Controls.Add(this.dtpHoraFin);
+            this.Controls.Add(this.dtpHoraIni);
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.btnModificar);
             this.Controls.Add(this.btnBuscar);
@@ -306,8 +314,6 @@
             this.Controls.Add(this.btnCerrar);
             this.Controls.Add(this.lblHMS_fin);
             this.Controls.Add(this.lblHMS_ini);
-            this.Controls.Add(this.txtHFin_HL);
-            this.Controls.Add(this.txtHIni_HL);
             this.Controls.Add(this.lblHIni);
             this.Controls.Add(this.lblHFin);
             this.Controls.Add(this.dtpSoliHL);
@@ -334,8 +340,6 @@
         private System.Windows.Forms.Button btnNuevo;
         private System.Windows.Forms.Label lblHMS_fin;
         private System.Windows.Forms.Label lblHMS_ini;
-        private System.Windows.Forms.TextBox txtHFin_HL;
-        private System.Windows.Forms.TextBox txtHIni_HL;
         private System.Windows.Forms.Label lblHIni;
         private System.Windows.Forms.Label lblHFin;
         private System.Windows.Forms.DateTimePicker dtpSoliHL;
@@ -346,5 +350,7 @@
         private System.Windows.Forms.Button btnBuscar;
         private System.Windows.Forms.Button btnModificar;
         private System.Windows.Forms.Button btnEliminar;
+        private System.Windows.Forms.DateTimePicker dtpHoraIni;
+        private System.Windows.Forms.DateTimePicker dtpHoraFin;
     }
 }
