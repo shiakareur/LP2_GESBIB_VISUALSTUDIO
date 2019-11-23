@@ -149,6 +149,7 @@ namespace TA_GesBib_Cliente
             txtNombres.Text = "";
             txtApellidos.Text = "";
             dtpFechaIng.Value = DateTime.Today;
+            cmbBibAisg.SelectedIndex = -1;
             txtCorreo.Text = "";
             txtClave.Text = "";
             txtCorreo.Text = "";

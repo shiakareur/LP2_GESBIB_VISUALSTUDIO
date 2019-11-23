@@ -50,7 +50,6 @@
             this.lblFechaIng = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.cmbBibAisg = new System.Windows.Forms.ComboBox();
             this.lblBibAsig = new System.Windows.Forms.Label();
             this.btnCerrar = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
@@ -60,6 +59,7 @@
             this.btnNuevo = new System.Windows.Forms.Button();
             this.label9 = new System.Windows.Forms.Label();
             this.btnEliminar = new System.Windows.Forms.Button();
+            this.cmbBibAisg = new System.Windows.Forms.ComboBox();
             this.gbDatosGenerales.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -290,8 +290,8 @@
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.label1);
             this.groupBox2.Controls.Add(this.cmbBibAisg);
+            this.groupBox2.Controls.Add(this.label1);
             this.groupBox2.Controls.Add(this.lblBibAsig);
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.groupBox2.Location = new System.Drawing.Point(136, 529);
@@ -311,16 +311,6 @@
             this.label1.Size = new System.Drawing.Size(20, 33);
             this.label1.TabIndex = 45;
             this.label1.Text = ":";
-            // 
-            // cmbBibAisg
-            // 
-            this.cmbBibAisg.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.cmbBibAisg.FormattingEnabled = true;
-            this.cmbBibAisg.Location = new System.Drawing.Point(203, 54);
-            this.cmbBibAisg.Name = "cmbBibAisg";
-            this.cmbBibAisg.Size = new System.Drawing.Size(425, 28);
-            this.cmbBibAisg.Sorted = true;
-            this.cmbBibAisg.TabIndex = 44;
             // 
             // lblBibAsig
             // 
@@ -458,6 +448,15 @@
             this.btnEliminar.UseVisualStyleBackColor = false;
             this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
+            // cmbBibAisg
+            // 
+            this.cmbBibAisg.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.cmbBibAisg.FormattingEnabled = true;
+            this.cmbBibAisg.Location = new System.Drawing.Point(203, 49);
+            this.cmbBibAisg.Name = "cmbBibAisg";
+            this.cmbBibAisg.Size = new System.Drawing.Size(405, 28);
+            this.cmbBibAisg.TabIndex = 136;
+            // 
             // frmAdministrarGestores
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 13F);
@@ -506,7 +505,6 @@
         private System.Windows.Forms.DateTimePicker dtpFechaIng;
         private System.Windows.Forms.Label lblFechaIng;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.ComboBox cmbBibAisg;
         private System.Windows.Forms.Label lblBibAsig;
         private System.Windows.Forms.Button btnNuevo;
         private System.Windows.Forms.Button btnGuardar;
@@ -523,5 +521,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnEliminar;
+        private System.Windows.Forms.ComboBox cmbBibAisg;
     }
 }
