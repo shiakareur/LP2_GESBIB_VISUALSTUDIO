@@ -67,7 +67,7 @@
             this.btnNuevo = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.label9 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnEliminar = new System.Windows.Forms.Button();
             this.gbDatosGenerales.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -385,6 +385,7 @@
             this.rbPracticante.TabStop = true;
             this.rbPracticante.Text = "Practicante";
             this.rbPracticante.UseVisualStyleBackColor = false;
+            this.rbPracticante.Click += new System.EventHandler(this.rbPracticante_Click);
             // 
             // rbBibliotecario
             // 
@@ -399,6 +400,7 @@
             this.rbBibliotecario.TabStop = true;
             this.rbBibliotecario.Text = "Bibliotecario";
             this.rbBibliotecario.UseVisualStyleBackColor = false;
+            this.rbBibliotecario.Click += new System.EventHandler(this.rbBibliotecario_Click);
             // 
             // rbAuxiliar
             // 
@@ -413,6 +415,7 @@
             this.rbAuxiliar.TabStop = true;
             this.rbAuxiliar.Text = "Auxiliar";
             this.rbAuxiliar.UseVisualStyleBackColor = false;
+            this.rbAuxiliar.Click += new System.EventHandler(this.rbAuxiliar_Click);
             // 
             // lblTipo
             // 
@@ -466,6 +469,7 @@
             this.btnCancelar.Text = "CANCELAR";
             this.btnCancelar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnCancelar.UseVisualStyleBackColor = false;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // btnBuscar
             // 
@@ -497,6 +501,7 @@
             this.btnModificar.Text = "MODIFICAR";
             this.btnModificar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnModificar.UseVisualStyleBackColor = false;
+            this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
             // 
             // btnGuardar
             // 
@@ -558,20 +563,21 @@
             this.label9.Text = "Administración del personal";
             this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // button2
+            // btnEliminar
             // 
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(175)))), ((int)(((byte)(169)))));
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Bahnschrift", 12.75F, System.Drawing.FontStyle.Bold);
-            this.button2.Image = global::TA_GesBib_Cliente.Properties.Resources.icono_eliminar;
-            this.button2.Location = new System.Drawing.Point(583, 83);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(131, 40);
-            this.button2.TabIndex = 137;
-            this.button2.Text = "ELIMINAR";
-            this.button2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button2.UseVisualStyleBackColor = false;
+            this.btnEliminar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(175)))), ((int)(((byte)(169)))));
+            this.btnEliminar.FlatAppearance.BorderSize = 0;
+            this.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEliminar.Font = new System.Drawing.Font("Bahnschrift", 12.75F, System.Drawing.FontStyle.Bold);
+            this.btnEliminar.Image = global::TA_GesBib_Cliente.Properties.Resources.icono_eliminar;
+            this.btnEliminar.Location = new System.Drawing.Point(583, 83);
+            this.btnEliminar.Name = "btnEliminar";
+            this.btnEliminar.Size = new System.Drawing.Size(131, 40);
+            this.btnEliminar.TabIndex = 137;
+            this.btnEliminar.Text = "ELIMINAR";
+            this.btnEliminar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnEliminar.UseVisualStyleBackColor = false;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // frmAdministrarPersonal
             // 
@@ -579,7 +585,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(242)))), ((int)(((byte)(241)))));
             this.ClientSize = new System.Drawing.Size(930, 657);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.btnCancelar);
@@ -626,14 +632,13 @@
         private System.Windows.Forms.RadioButton rbAuxiliar;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnEliminar;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label lblNomApe;
         private System.Windows.Forms.Label lblcodigoPers;
         private System.Windows.Forms.Label lblNomPer;
-        private System.Windows.Forms.DateTimePicker dtpFechaIng;
         private System.Windows.Forms.TextBox txtCorreo;
         private System.Windows.Forms.TextBox txtClave;
         private System.Windows.Forms.Label label4;
@@ -647,5 +652,6 @@
         private System.Windows.Forms.Label lblBibAsig;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.DateTimePicker dtpFechaIng;
     }
 }

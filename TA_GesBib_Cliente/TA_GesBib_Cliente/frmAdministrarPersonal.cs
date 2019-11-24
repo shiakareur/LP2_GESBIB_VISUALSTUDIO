@@ -13,6 +13,7 @@ namespace TA_GesBib_Cliente
     public partial class frmAdministrarPersonal : Form
     {
         Estado estadoPersonal;
+        private ServicioJava.personalBiblioteca personal;
         private ServicioJava.bibliotecario bibliotecario;
         private ServicioJava.auxiliar auxiliar;
         private ServicioJava.practicante practicante;
@@ -116,7 +117,7 @@ namespace TA_GesBib_Cliente
                     rbAuxiliar.Enabled = true;
                     rbPracticante.Enabled = true;
                     cmbBibAisg.Enabled = true;
-                    cmbDiaAsig.Enabled = true;
+                    cmbDiaAsig.Enabled = false;
                     break;
                 case Estado.Buscar:
                     //Botones
@@ -154,7 +155,7 @@ namespace TA_GesBib_Cliente
                     rbAuxiliar.Enabled = true;
                     rbPracticante.Enabled = true;
                     cmbBibAisg.Enabled = true;
-                    cmbDiaAsig.Enabled = true;
+                    cmbDiaAsig.Enabled = false;
                     break;
             }
         }
@@ -172,7 +173,7 @@ namespace TA_GesBib_Cliente
             rbPracticante.Checked = false;
 
             txtCorreo.Text = "";
-            cmbBibAisg.SelectedIndex = -1;
+            cmbBibAisg.SelectedIndex = 0;
             cmbDiaAsig.SelectedIndex = -1;
 
         }
@@ -199,10 +200,20 @@ namespace TA_GesBib_Cliente
                 bib.nombre = txtNombres.Text;
                 bib.apellido = txtApellidos.Text;
                 bib.fecha_ingreso = dtpFechaIng.Value;
+                bib.fecha_ingresoSpecified = true;
                 bib.email = txtCorreo.Text;
                 bib.contrasenia = txtClave.Text;
                 bib.biblioteca = (ServicioJava.biblioteca)cmbBibAisg.SelectedItem;
-                bib.diaSemana = cmbDiaAsig.SelectedItem.ToString();
+                if (cmbDiaAsig.SelectedIndex != -1)
+                {
+                    bib.diaSemana = cmbDiaAsig.SelectedItem.ToString();
+                }
+                else {
+                    bib.diaSemana = "0";
+                }
+                
+
+
                 if (estadoPersonal == Estado.Nuevo)
                 {
                     Program.DBController.insertarBibliotecario(bib);
@@ -221,6 +232,7 @@ namespace TA_GesBib_Cliente
                 aux.nombre = txtNombres.Text;
                 aux.apellido = txtApellidos.Text;
                 aux.fecha_ingreso = dtpFechaIng.Value;
+                aux.fecha_ingresoSpecified = true;
                 aux.email = txtCorreo.Text;
                 aux.contrasenia = txtClave.Text;
                 aux.biblioteca = (ServicioJava.biblioteca)cmbBibAisg.SelectedItem;
@@ -241,6 +253,7 @@ namespace TA_GesBib_Cliente
                 prac.nombre = txtNombres.Text;
                 prac.apellido = txtApellidos.Text;
                 prac.fecha_ingreso = dtpFechaIng.Value;
+                prac.fecha_ingresoSpecified = true;
                 prac.email = txtCorreo.Text;
                 prac.contrasenia = txtClave.Text;
                 prac.biblioteca = (ServicioJava.biblioteca)cmbBibAisg.SelectedItem;
@@ -261,7 +274,100 @@ namespace TA_GesBib_Cliente
 
         private void btnBuscar_Click(object sender, EventArgs e)
         {
+            frmBuscarPersonalBiblioteca frmBuscarPersonal = new frmBuscarPersonalBiblioteca();
+            if (frmBuscarPersonal.ShowDialog() == DialogResult.OK)
+            {
+                personal=(ServicioJava.personalBiblioteca)frmBuscarPersonal.Personal;
+                if (frmBuscarPersonal.Personal is ServicioJava.bibliotecario)
+                {
+                    bibliotecario = (ServicioJava.bibliotecario)frmBuscarPersonal.Personal;
+                    txtCodigo.Text = bibliotecario.codigo;
+                    txtNombres.Text = bibliotecario.nombre;
+                    txtApellidos.Text = bibliotecario.apellido;
+                    txtCorreo.Text = bibliotecario.email;
+                    txtClave.Text = bibliotecario.contrasenia;
+                    dtpFechaIng.Value = bibliotecario.fecha_ingreso;
+                    cmbBibAisg.SelectedValue = bibliotecario.biblioteca.id;
+                    if (bibliotecario.diaSemana == "0") {
+                        cmbDiaAsig.SelectedIndex = -1;
+                    }
+                    else {
+                        cmbDiaAsig.SelectedItem = bibliotecario.diaSemana;
+                    }
+                    
+                    rbBibliotecario.Checked = true;                }
+                else if (frmBuscarPersonal.Personal is ServicioJava.auxiliar)
+                {
+                    auxiliar = (ServicioJava.auxiliar)frmBuscarPersonal.Personal;
+                    txtCodigo.Text = auxiliar.codigo;
+                    txtNombres.Text = auxiliar.nombre;
+                    txtApellidos.Text = auxiliar.apellido;
+                    txtCorreo.Text = auxiliar.email;
+                    txtClave.Text = auxiliar.contrasenia;
+                    dtpFechaIng.Value = auxiliar.fecha_ingreso;
+                    cmbBibAisg.SelectedValue = auxiliar.biblioteca.id;
+                    cmbDiaAsig.Enabled = false;
+                    rbAuxiliar.Checked = true;
+                }
+                else if (frmBuscarPersonal.Personal is ServicioJava.practicante)
+                {
+                    practicante = (ServicioJava.practicante)frmBuscarPersonal.Personal;
+                    txtCodigo.Text = practicante.codigo;
+                    txtNombres.Text = practicante.nombre;
+                    txtApellidos.Text = practicante.apellido;
+                    txtCorreo.Text = practicante.email;
+                    txtClave.Text = practicante.contrasenia;
+                    dtpFechaIng.Value = practicante.fecha_ingreso;
+                    cmbBibAisg.SelectedValue = practicante.biblioteca.id;
+                    cmbDiaAsig.Enabled = false;
+                    rbPracticante.Checked = true;
+                }
+                estadoComponentes(Estado.Buscar);
 
+
+            }
+        }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            //Volver al estado inicial
+            limpiarComponentes();
+            estadoComponentes(Estado.Inicial);
+        }
+
+        private void rbBibliotecario_Click(object sender, EventArgs e)
+        {
+            cmbDiaAsig.Enabled = true;
+        }
+
+        private void rbAuxiliar_Click(object sender, EventArgs e)
+        {
+            cmbDiaAsig.SelectedIndex = -1;
+            cmbDiaAsig.Enabled = false;
+        }
+
+        private void rbPracticante_Click(object sender, EventArgs e)
+        {
+            cmbDiaAsig.SelectedIndex = -1;
+            cmbDiaAsig.Enabled = false;
+        }
+
+        private void btnModificar_Click(object sender, EventArgs e)
+        {
+            estadoPersonal = Estado.Modificar;
+            estadoComponentes(Estado.Modificar);
+            if (rbBibliotecario.Checked == true)
+                cmbDiaAsig.Enabled = true;
+        }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            if (DialogResult.Yes == MessageBox.Show("¿Está seguro que desea eliminar este trabajador?", "", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation))
+            {
+                Program.DBController.eliminarPersonalBiblioteca(personal.id);
+                MessageBox.Show("El trabajador ha sido eliminado", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                estadoComponentes(Estado.Inicial);
+            }
         }
     }
 }
