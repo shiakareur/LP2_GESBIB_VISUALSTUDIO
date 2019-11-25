@@ -105,5 +105,12 @@ namespace TA_GesBib_Cliente
         {
 
         }
+
+        private void lblOlvideCredenciales_Click(object sender, EventArgs e)
+        {
+            frmRecuperarClave formRC = new frmRecuperarClave();
+            this.Visible = false;
+            formRC.Show();
+        }
     }
 }
