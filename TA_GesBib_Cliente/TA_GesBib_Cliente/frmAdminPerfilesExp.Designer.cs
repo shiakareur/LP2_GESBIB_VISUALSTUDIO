@@ -43,7 +43,7 @@
             this.fecha_nac = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.button1 = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.cmbPerfil = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
@@ -202,7 +202,7 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.comboBox2);
+            this.groupBox1.Controls.Add(this.cmbPerfil);
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(76, 178);
@@ -214,13 +214,13 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Asignar :";
             // 
-            // comboBox2
+            // cmbPerfil
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(331, 38);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(229, 28);
-            this.comboBox2.TabIndex = 26;
+            this.cmbPerfil.FormattingEnabled = true;
+            this.cmbPerfil.Location = new System.Drawing.Point(331, 38);
+            this.cmbPerfil.Name = "cmbPerfil";
+            this.cmbPerfil.Size = new System.Drawing.Size(229, 28);
+            this.cmbPerfil.TabIndex = 26;
             // 
             // label5
             // 
@@ -319,7 +319,7 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.TextBox txtNombres;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.ComboBox cmbPerfil;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label9;

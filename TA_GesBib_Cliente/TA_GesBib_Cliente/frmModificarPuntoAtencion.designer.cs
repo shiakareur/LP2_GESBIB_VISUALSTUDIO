@@ -29,45 +29,37 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmModificarPuntoAtencion));
-            this.btnCerrar = new System.Windows.Forms.Button();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.btnCancelar = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.lblNombre = new System.Windows.Forms.Label();
             this.gbCrearPuntoAtencion = new System.Windows.Forms.GroupBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.txtCantOpt = new System.Windows.Forms.TextBox();
+            this.txtCantMin = new System.Windows.Forms.TextBox();
+            this.cmbPerfil = new System.Windows.Forms.ComboBox();
+            this.txtPiso = new System.Windows.Forms.TextBox();
+            this.txtNombre = new System.Windows.Forms.TextBox();
+            this.btnModificar = new System.Windows.Forms.Button();
             this.gbCrearPuntoAtencion.SuspendLayout();
             this.SuspendLayout();
             // 
-            // btnCerrar
+            // btnCancelar
             // 
-            this.btnCerrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(175)))), ((int)(((byte)(169)))));
-            this.btnCerrar.FlatAppearance.BorderSize = 0;
-            this.btnCerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCerrar.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Bold);
-            this.btnCerrar.Location = new System.Drawing.Point(786, 12);
-            this.btnCerrar.Name = "btnCerrar";
-            this.btnCerrar.Size = new System.Drawing.Size(97, 33);
-            this.btnCerrar.TabIndex = 46;
-            this.btnCerrar.Text = "CANCELAR";
-            this.btnCerrar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnCerrar.UseVisualStyleBackColor = false;
-            this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
-            // 
-            // comboBox2
-            // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(215, 56);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(162, 27);
-            this.comboBox2.TabIndex = 21;
+            this.btnCancelar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(175)))), ((int)(((byte)(169)))));
+            this.btnCancelar.FlatAppearance.BorderSize = 0;
+            this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCancelar.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Bold);
+            this.btnCancelar.Location = new System.Drawing.Point(786, 12);
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Size = new System.Drawing.Size(97, 33);
+            this.btnCancelar.TabIndex = 46;
+            this.btnCancelar.Text = "CANCELAR";
+            this.btnCancelar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnCancelar.UseVisualStyleBackColor = false;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCerrar_Click);
             // 
             // label5
             // 
@@ -81,14 +73,6 @@
             this.label5.TabIndex = 25;
             this.label5.Text = "Perfil de Experiencia:";
             // 
-            // textBox4
-            // 
-            this.textBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.textBox4.Location = new System.Drawing.Point(215, 166);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(71, 26);
-            this.textBox4.TabIndex = 24;
-            // 
             // label4
             // 
             this.label4.AutoSize = true;
@@ -100,14 +84,6 @@
             this.label4.Size = new System.Drawing.Size(146, 23);
             this.label4.TabIndex = 23;
             this.label4.Text = "Cantidad Óptima";
-            // 
-            // textBox3
-            // 
-            this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.textBox3.Location = new System.Drawing.Point(215, 129);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(71, 26);
-            this.textBox3.TabIndex = 22;
             // 
             // label3
             // 
@@ -133,14 +109,6 @@
             this.label1.TabIndex = 19;
             this.label1.Text = "N° de Piso:";
             // 
-            // textBox2
-            // 
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.textBox2.Location = new System.Drawing.Point(215, 20);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(423, 26);
-            this.textBox2.TabIndex = 18;
-            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -165,16 +133,16 @@
             // 
             // gbCrearPuntoAtencion
             // 
-            this.gbCrearPuntoAtencion.Controls.Add(this.comboBox1);
-            this.gbCrearPuntoAtencion.Controls.Add(this.textBox2);
+            this.gbCrearPuntoAtencion.Controls.Add(this.txtCantOpt);
+            this.gbCrearPuntoAtencion.Controls.Add(this.txtCantMin);
+            this.gbCrearPuntoAtencion.Controls.Add(this.cmbPerfil);
+            this.gbCrearPuntoAtencion.Controls.Add(this.txtPiso);
+            this.gbCrearPuntoAtencion.Controls.Add(this.txtNombre);
             this.gbCrearPuntoAtencion.Controls.Add(this.label2);
             this.gbCrearPuntoAtencion.Controls.Add(this.label4);
             this.gbCrearPuntoAtencion.Controls.Add(this.label3);
             this.gbCrearPuntoAtencion.Controls.Add(this.label1);
-            this.gbCrearPuntoAtencion.Controls.Add(this.textBox4);
-            this.gbCrearPuntoAtencion.Controls.Add(this.comboBox2);
             this.gbCrearPuntoAtencion.Controls.Add(this.label5);
-            this.gbCrearPuntoAtencion.Controls.Add(this.textBox3);
             this.gbCrearPuntoAtencion.Font = new System.Drawing.Font("Bahnschrift Light", 12F);
             this.gbCrearPuntoAtencion.ForeColor = System.Drawing.Color.DarkRed;
             this.gbCrearPuntoAtencion.Location = new System.Drawing.Point(31, 48);
@@ -183,28 +151,61 @@
             this.gbCrearPuntoAtencion.TabIndex = 47;
             this.gbCrearPuntoAtencion.TabStop = false;
             // 
-            // comboBox1
+            // txtCantOpt
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(215, 93);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(331, 27);
-            this.comboBox1.TabIndex = 54;
+            this.txtCantOpt.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.txtCantOpt.Location = new System.Drawing.Point(261, 166);
+            this.txtCantOpt.Name = "txtCantOpt";
+            this.txtCantOpt.Size = new System.Drawing.Size(97, 26);
+            this.txtCantOpt.TabIndex = 65;
             // 
-            // button1
+            // txtCantMin
             // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(175)))), ((int)(((byte)(169)))));
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Bold);
-            this.button1.ForeColor = System.Drawing.Color.Black;
-            this.button1.Location = new System.Drawing.Point(681, 12);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(89, 33);
-            this.button1.TabIndex = 49;
-            this.button1.Text = "ACEPTAR";
-            this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button1.UseVisualStyleBackColor = false;
+            this.txtCantMin.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.txtCantMin.Location = new System.Drawing.Point(261, 129);
+            this.txtCantMin.Name = "txtCantMin";
+            this.txtCantMin.Size = new System.Drawing.Size(97, 26);
+            this.txtCantMin.TabIndex = 64;
+            // 
+            // cmbPerfil
+            // 
+            this.cmbPerfil.FormattingEnabled = true;
+            this.cmbPerfil.Location = new System.Drawing.Point(261, 94);
+            this.cmbPerfil.Name = "cmbPerfil";
+            this.cmbPerfil.Size = new System.Drawing.Size(331, 27);
+            this.cmbPerfil.TabIndex = 63;
+            // 
+            // txtPiso
+            // 
+            this.txtPiso.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.txtPiso.Location = new System.Drawing.Point(261, 59);
+            this.txtPiso.Name = "txtPiso";
+            this.txtPiso.Size = new System.Drawing.Size(97, 26);
+            this.txtPiso.TabIndex = 62;
+            // 
+            // txtNombre
+            // 
+            this.txtNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.txtNombre.Location = new System.Drawing.Point(261, 26);
+            this.txtNombre.Name = "txtNombre";
+            this.txtNombre.Size = new System.Drawing.Size(331, 26);
+            this.txtNombre.TabIndex = 61;
+            // 
+            // btnModificar
+            // 
+            this.btnModificar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(175)))), ((int)(((byte)(169)))));
+            this.btnModificar.FlatAppearance.BorderSize = 0;
+            this.btnModificar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnModificar.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Bold);
+            this.btnModificar.ForeColor = System.Drawing.Color.Black;
+            this.btnModificar.Location = new System.Drawing.Point(672, 12);
+            this.btnModificar.Name = "btnModificar";
+            this.btnModificar.Size = new System.Drawing.Size(98, 33);
+            this.btnModificar.TabIndex = 49;
+            this.btnModificar.Text = "MODIFICAR";
+            this.btnModificar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnModificar.UseVisualStyleBackColor = false;
+            this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
             // 
             // frmModificarPuntoAtencion
             // 
@@ -212,10 +213,10 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(242)))), ((int)(((byte)(241)))));
             this.ClientSize = new System.Drawing.Size(914, 311);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnModificar);
             this.Controls.Add(this.lblNombre);
             this.Controls.Add(this.gbCrearPuntoAtencion);
-            this.Controls.Add(this.btnCerrar);
+            this.Controls.Add(this.btnCancelar);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmModificarPuntoAtencion";
             this.gbCrearPuntoAtencion.ResumeLayout(false);
@@ -226,19 +227,19 @@
         }
 
         #endregion
-        private System.Windows.Forms.Button btnCerrar;
-        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label lblNombre;
         private System.Windows.Forms.GroupBox gbCrearPuntoAtencion;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Button btnModificar;
+        private System.Windows.Forms.TextBox txtCantOpt;
+        private System.Windows.Forms.TextBox txtCantMin;
+        private System.Windows.Forms.ComboBox cmbPerfil;
+        private System.Windows.Forms.TextBox txtPiso;
+        private System.Windows.Forms.TextBox txtNombre;
     }
 }

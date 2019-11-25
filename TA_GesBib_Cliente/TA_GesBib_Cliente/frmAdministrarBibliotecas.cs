@@ -13,6 +13,7 @@ namespace TA_GesBib_Cliente
     public partial class frmAdministrarBibliotecas : Form
     {
         private ServicioJava.biblioteca biblioteca;
+        private ServicioJava.puntosAtencion puntoAtSeleccionado;
         private ServicioJava.gestor gestor;
         private Estado estadoBiblioteca;
         private BindingList<ServicioJava.puntosAtencion> listaPAasignados;
@@ -72,6 +73,7 @@ namespace TA_GesBib_Cliente
                     btnEliminar.Enabled = false;
                     btnBuscarGestor.Enabled = true;
                     //Campos de Texto
+                    dgvPuntosAtencion.Enabled = true;
                     txtNombreBib.Enabled = true;
                     txtCodigo.Enabled = true;
                     txtNombreGestor.Enabled = true;
@@ -97,6 +99,7 @@ namespace TA_GesBib_Cliente
                     btnBuscar.Enabled = false;
                     //Campos de Texto
                     txtNombreBib.Enabled = true;
+                    dgvPuntosAtencion.Enabled = true;
                     break;
             }
         }
@@ -151,6 +154,8 @@ namespace TA_GesBib_Cliente
             limpiarComponentes();
             biblioteca = new ServicioJava.biblioteca();
             listaPAasignados = new BindingList<ServicioJava.puntosAtencion>();
+            //establecer los puntos de atencion
+            biblioteca.listaPuntosAtencion = listaPAasignados.ToArray();
             dgvPuntosAtencion.AutoGenerateColumns = false;
             dgvPuntosAtencion.DataSource = listaPAasignados;
             estadoBiblioteca = Estado.Nuevo;
@@ -191,20 +196,34 @@ namespace TA_GesBib_Cliente
         private void btnBuscarGestor_Click(object sender, EventArgs e)
         {
             frmBuscarGestores formBuscarGestores = new frmBuscarGestores();
-            formBuscarGestores.Show();
             formBuscarGestores.Location = new Point(0, 0);
+            if (formBuscarGestores.ShowDialog() == DialogResult.OK) {
+                gestor = (ServicioJava.gestor)formBuscarGestores.GestorSeleccionado;
+                txtNombreGestor.Text = gestor.nombre+" "+gestor.apellido;
+                txtCodigo.Text = gestor.codigo;
+
+            }
+            
         }
         private void btnAgregarPA_Click(object sender, EventArgs e)
         {
             frmCrearPuntoAtencion formCrearPA = new frmCrearPuntoAtencion();
-            formCrearPA.Show();
             formCrearPA.Location = new Point(0, 0);
+            if (formCrearPA.ShowDialog() == DialogResult.OK) {
+                puntoAtSeleccionado = (ServicioJava.puntosAtencion)formCrearPA.PuntoAtCreado;
+                listaPAasignados.Add(puntoAtSeleccionado);
+            }
+            
         }
         private void btnEditarPA_Click(object sender, EventArgs e)
         {
-            frmModificarPuntoAtencion formmodificarPA = new frmModificarPuntoAtencion();
-            formmodificarPA.Show();
+            puntoAtSeleccionado = (ServicioJava.puntosAtencion)dgvPuntosAtencion.CurrentRow.DataBoundItem;
+            frmModificarPuntoAtencion formmodificarPA = new frmModificarPuntoAtencion(puntoAtSeleccionado); 
             formmodificarPA.Location = new Point(0, 0);
+            if (formmodificarPA.ShowDialog() == DialogResult.OK) {
+
+
+            }
         }
 
         private void dgvPuntosAtencion_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
@@ -217,14 +236,19 @@ namespace TA_GesBib_Cliente
                 dgvPuntosAtencion.Rows[e.RowIndex].Cells[3].Value = objPA.cant_opt_pers;
                 dgvPuntosAtencion.Rows[e.RowIndex].Cells[4].Value = objPA.perfilExperiencia.nombrePerfil;
             }catch(Exception ex)
-                {
-
-                }
-}
+            {
+                System.Console.WriteLine("Error en formato");
+            }
+        }
 
         private void frmAdministrarBibliotecas_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnQuitarPA_Click(object sender, EventArgs e)
+        {
+            listaPAasignados.Remove((ServicioJava.puntosAtencion)dgvPuntosAtencion.CurrentRow.DataBoundItem);
         }
     }
 }

@@ -23,6 +23,11 @@ namespace TA_GesBib_Cliente
         {
             var_formPerfilGestor = formPerfilGestor;
             InitializeComponent();
+            cmbPerfil.DataSource = new BindingList<ServicioJava.perfilExperiencia>(Program.DBController.listarPerfilExperiencia());
+
+            //Indicamos la Propiedad que debería visualizarse
+            cmbPerfil.DisplayMember = "NombrePerfil";
+            cmbPerfil.ValueMember = "Id";
         }
 
         private void btnCerrar_Click(object sender, EventArgs e)
