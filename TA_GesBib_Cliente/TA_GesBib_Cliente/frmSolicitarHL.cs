@@ -35,8 +35,8 @@ namespace TA_GesBib_Cliente
             var_perfilPersonal = formPerfilPersonal;
             var_tipoPerfil = tipoPerfil;
             InitializeComponent();
-            limpiarComponentes();
             estadoComponentes(Estado.Inicial);
+            limpiarComponentes();
         }
 
              
@@ -61,49 +61,77 @@ namespace TA_GesBib_Cliente
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
-            ServicioJava.inasistencia inaHL = new ServicioJava.inasistencia();
-            
-            /*sacamos el id del personal y lo asignamos*/                        
-            inaHL.personal = new ServicioJava.personal();
-            inaHL.personal.id = var_usuario.id;
-            
-            //vamos a REGISTRAR una hora libre que es de tipo INASISTENCIA         
-            ServicioJava.tipoInasistencia _tipoIna = new ServicioJava.tipoInasistencia();
-            _tipoIna.id = 4;  //el ID de INASISTENCIA ES 4     
-            inaHL.tipoInasistencia = _tipoIna;
-            
-            //fecha
-            inaHL.fecha = dtpSoliHL.Value;
-            inaHL.fechaSpecified = true;
+                        
 
-            //hora inicio
-            inaHL.horaInicio = dtpHoraIni.Value.ToString();
-            inaHL.horaFin = dtpHoraFin.Value.ToString();
-            //inaHL.horaInicio = txtHIni_HL.Text;
-            //inaHL.horaFin = txtHFin_HL.Text;
-            
-            //motivo
-            inaHL.motivo = txtMotivo_HL.Text;
-
-            //llamamos al SERVICIO RESPECTIVO
-            if (estadoInasistencia == Estado.Nuevo)
+            //VERIFIFCAR Q TODOS LOS CAMPOS SEAN OBLIGATORIOS
+                     
+            if (dtpHoraFin.Value == dtpHoraIni.Value)
             {
-                servTA.insertarInasistencia(inaHL);
+                //hora fin menor o igual que la hora inicio
+                //mostramos mensaje de error
+                MessageBox.Show("ERROR , ¡Las horas deben ser diferentes!",
+                    "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
-            else if(estadoInasistencia == Estado.Modificar)
-            {                
-                //sacar el id de la inaistencia seleccionada
-                inaHL.id = inaSelec.id;
-                inaHL.justificado = -1;
-                //inaHL.activo = 1 //??????????????????????????????
-                servTA.actualizarInasistencia(inaHL);
+            else if (dtpHoraFin.Value < dtpHoraIni.Value)
+            {
+                //hora fin menor que la hora inicio
+                //mostramos mensaje de error
+                MessageBox.Show("ERROR , ¡La hora fin debe ser mayor que la hora inicio!",
+                    "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }else if(txtMotivo_HL.Text=="" | txtMotivo_HL.Text=="   "){
+                MessageBox.Show("ERROR , ¡Debe ingresar un motivo!",
+                    "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
+            else
+            {
+                ServicioJava.inasistencia inaHL = new ServicioJava.inasistencia();
+
+                /*sacamos el id del personal y lo asignamos*/
+                inaHL.personal = new ServicioJava.personal();
+                inaHL.personal.id = var_usuario.id;
+
+                //vamos a REGISTRAR una hora libre que es de tipo INASISTENCIA         
+                ServicioJava.tipoInasistencia _tipoIna = new ServicioJava.tipoInasistencia();
+                _tipoIna.id = 4;  //el ID de INASISTENCIA ES 4     
+                inaHL.tipoInasistencia = _tipoIna;
+
+                //fecha
+                inaHL.fecha = dtpSoliHL.Value;
+                inaHL.fechaSpecified = true;
+
+                //hora inicio
+                inaHL.horaInicio = dtpHoraIni.Value.ToString();
+                inaHL.horaFin = dtpHoraFin.Value.ToString();
+                //inaHL.horaInicio = txtHIni_HL.Text;
+                //inaHL.horaFin = txtHFin_HL.Text;
+
+                //motivo
+                inaHL.motivo = txtMotivo_HL.Text;
+
+                //llamamos al SERVICIO RESPECTIVO
+                if (estadoInasistencia == Estado.Nuevo)
+                {
+                    servTA.insertarInasistencia(inaHL);
+                }
+                else if (estadoInasistencia == Estado.Modificar)
+                {
+                    //sacar el id de la inaistencia seleccionada
+                    inaHL.id = inaSelec.id;
+                    inaHL.justificado = -1;
+                    //inaHL.activo = 1 //??????????????????????????????
+                    servTA.actualizarInasistencia(inaHL);
+                }
+
+
+                //mostramos mensaje de registro exitoso                    
+                this.muestraMensajeExitoso();
+
+                estadoComponentes(Estado.Inicial);
+            }
+
+
+
             
-
-            //mostramos mensaje de registro exitoso                    
-            this.muestraMensajeExitoso();
-
-            estadoComponentes(Estado.Inicial);
         }
 
         
@@ -113,20 +141,15 @@ namespace TA_GesBib_Cliente
         {
 
             //txtHIni_HL.Text = "";
-            //txtHFin_HL.Text = "";
-          
+            //txtHFin_HL.Text = "";        
 
             txtMotivo_HL.Text = "";
             dtpSoliHL.Value = DateTime.Today;
 
-            dtpHoraIni.ResetText();
-            dtpHoraFin.ResetText();
+            dtpHoraIni.Value = Convert.ToDateTime("01/01/1753 08:00");
+            dtpHoraFin.Value = Convert.ToDateTime("01/01/1753 23:00");
+            
 
-            //dtpHoraIni.Format = DateTimePickerFormat.Time;
-            //dtpHoraIni.CustomFormat = "00:00";
-
-            //dtpHoraFin.Format = DateTimePickerFormat.Time;
-            //dtpHoraFin.CustomFormat = "00:00";
         }
 
       
@@ -146,8 +169,8 @@ namespace TA_GesBib_Cliente
                 dtpSoliHL.Value = inaSelec.fecha;
                 //txtHIni_HL.Text = inaSelec.horaInicio;
                 //txtHFin_HL.Text = inaSelec.horaFin;
-                dtpHoraIni.Value = DateTime.Parse(inaSelec.horaInicio);
-                dtpHoraFin.Value = DateTime.Parse(inaSelec.horaFin);
+                dtpHoraIni.Value = Convert.ToDateTime(inaSelec.horaInicio);
+                dtpHoraFin.Value = Convert.ToDateTime(inaSelec.horaFin);
                 txtMotivo_HL.Text = inaSelec.motivo;
 
                 estadoComponentes(Estado.Buscar);
@@ -174,6 +197,7 @@ namespace TA_GesBib_Cliente
                 //mostramos mensaje de eliminacion exitosa
                 MessageBox.Show("Se elimino correctamente la solicitud de Hora Libre !",
                     "Mensajillo");
+                limpiarComponentes();
             }
             else if (result == DialogResult.No)
             {
@@ -193,7 +217,7 @@ namespace TA_GesBib_Cliente
             {
                 case Estado.Inicial:
                     //Etiquetas
-                    lblDescripcion.Enabled = false;
+                    lblMotivo.Enabled = false;
                     lblFecha.Enabled = false;
                     lblHIni.Enabled = false;
                     lblHFin.Enabled = false;
@@ -209,15 +233,13 @@ namespace TA_GesBib_Cliente
                     //Campos de Texto
 
                     txtMotivo_HL.Enabled = false;
-                    //txtHIni_HL.Enabled = false;
-                    //txtHFin_HL.Enabled = false;
                     dtpSoliHL.Enabled = false;
                     dtpHoraIni.Enabled = false;
                     dtpHoraFin.Enabled = false;
                     break;
                 case Estado.Nuevo:
                     //Etiquetas
-                    lblDescripcion.Enabled = true;
+                    lblMotivo.Enabled = true;
                     lblFecha.Enabled = true;
                     lblHIni.Enabled = true;
                     lblHFin.Enabled = true;
@@ -229,15 +251,13 @@ namespace TA_GesBib_Cliente
                     btnCancelar.Enabled = true;
                     //Campos de Texto
                     txtMotivo_HL.Enabled = true;
-                    //txtHIni_HL.Enabled = true;
-                    //txtHFin_HL.Enabled = true;
                     dtpSoliHL.Enabled = true;
                     dtpHoraIni.Enabled = true;
                     dtpHoraFin.Enabled = true;
                     break;
                 case Estado.Buscar:
                     //Etiquetas
-                    lblDescripcion.Enabled = false;
+                    lblMotivo.Enabled = false;
                     lblFecha.Enabled = false;
                     lblHIni.Enabled = false;
                     lblHFin.Enabled = false;
@@ -250,14 +270,14 @@ namespace TA_GesBib_Cliente
                     btnGuardar.Enabled = false;
                     btnCancelar.Enabled = true;
                     //Campos de Texto
-                    //txtHIni_HL.Enabled = false;
-                    //txtHFin_HL.Enabled = false;
+                    dtpHoraFin.Enabled = false;
+                    dtpHoraIni.Enabled = false;
                     dtpSoliHL.Enabled = false;
                     break;
 
                 case Estado.Modificar:
                     //Etiquetas
-                    lblDescripcion.Enabled = true;
+                    lblMotivo.Enabled = true;
                     lblFecha.Enabled = true;
                     lblHIni.Enabled = true;
                     lblHFin.Enabled = true;
@@ -270,8 +290,8 @@ namespace TA_GesBib_Cliente
                     btnCancelar.Enabled = true;
                     //Campos de Texto
                     txtMotivo_HL.Enabled = true;
-                    //txtHIni_HL.Enabled = true;
-                    //txtHFin_HL.Enabled = true;
+                    dtpHoraFin.Enabled = true;
+                    dtpHoraIni.Enabled = true;
                     dtpSoliHL.Enabled = true;
                     break;
 

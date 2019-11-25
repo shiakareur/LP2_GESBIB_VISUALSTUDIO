@@ -175,6 +175,12 @@
     <Compile Include="frmPerfilPracticante.designer.cs">
       <DependentUpon>frmPerfilPracticante.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmRespuestaCapacitaciones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRespuestaCapacitaciones.Designer.cs">
+      <DependentUpon>frmRespuestaCapacitaciones.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmRespuestaValidaciones.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -361,6 +367,9 @@
     <EmbeddedResource Include="frmRegInasistencias.resx">
       <DependentUpon>frmRegInasistencias.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmRespuestaCapacitaciones.resx">
+      <DependentUpon>frmRespuestaCapacitaciones.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmRespuestaValidaciones.resx">
       <DependentUpon>frmRespuestaValidaciones.cs</DependentUpon>
     </EmbeddedResource>
@@ -524,6 +533,9 @@
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\ServicioJava\TA_GesBib_Cliente.ServicioJava.listarBibliotecasResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServicioJava\TA_GesBib_Cliente.ServicioJava.listarCapacitacionesAceptadasResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\ServicioJava\TA_GesBib_Cliente.ServicioJava.listarCapacitacionesResponse.datasource">
