@@ -364,7 +364,7 @@ namespace TA_GesBib_Cliente
         {
             if (DialogResult.Yes == MessageBox.Show("¿Está seguro que desea eliminar este trabajador?", "", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation))
             {
-                Program.DBController.eliminarPersonalBiblioteca(personal.id);
+                //Program.DBController.eliminarPersonalBiblioteca(personal.id);
                 MessageBox.Show("El trabajador ha sido eliminado", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 estadoComponentes(Estado.Inicial);
             }

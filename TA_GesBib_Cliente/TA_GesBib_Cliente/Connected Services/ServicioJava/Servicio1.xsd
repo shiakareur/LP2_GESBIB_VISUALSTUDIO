@@ -43,6 +43,8 @@
   <xs:element name="eliminarHoraExtraResponse" type="tns:eliminarHoraExtraResponse" />
   <xs:element name="eliminarInasistencia" type="tns:eliminarInasistencia" />
   <xs:element name="eliminarInasistenciaResponse" type="tns:eliminarInasistenciaResponse" />
+  <xs:element name="eliminarPersonalBiblioteca" type="tns:eliminarPersonalBiblioteca" />
+  <xs:element name="eliminarPersonalBibliotecaResponse" type="tns:eliminarPersonalBibliotecaResponse" />
   <xs:element name="enviarToken" type="tns:enviarToken" />
   <xs:element name="enviarTokenResponse" type="tns:enviarTokenResponse" />
   <xs:element name="hallarTipoUsuario" type="tns:hallarTipoUsuario" />
@@ -103,6 +105,8 @@
   <xs:element name="listarInasistenciasResponse" type="tns:listarInasistenciasResponse" />
   <xs:element name="listarPerfilExperiencia" type="tns:listarPerfilExperiencia" />
   <xs:element name="listarPerfilExperienciaResponse" type="tns:listarPerfilExperienciaResponse" />
+  <xs:element name="listarPersonalBiblioteca" type="tns:listarPersonalBiblioteca" />
+  <xs:element name="listarPersonalBibliotecaResponse" type="tns:listarPersonalBibliotecaResponse" />
   <xs:element name="listarPracticantes" type="tns:listarPracticantes" />
   <xs:element name="listarPracticantesResponse" type="tns:listarPracticantesResponse" />
   <xs:element name="listarPuntosAtencion" type="tns:listarPuntosAtencion" />
@@ -391,22 +395,22 @@
   <xs:complexType name="elimDistribucionPersonalResponse">
     <xs:sequence />
   </xs:complexType>
-  <xs:complexType name="enviarToken">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="correo" type="xs:string" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="enviarTokenResponse">
-    <xs:sequence>
-      <xs:element name="return" type="xs:int" />
-    </xs:sequence>
-  </xs:complexType>
   <xs:complexType name="insertarGestor">
     <xs:sequence>
       <xs:element minOccurs="0" name="gestor" type="tns:gestor" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="insertarGestorResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="enviarToken">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="correo" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="enviarTokenResponse">
     <xs:sequence>
       <xs:element name="return" type="xs:int" />
     </xs:sequence>
@@ -545,6 +549,16 @@
   <xs:complexType name="insertarAvisoResponse">
     <xs:sequence />
   </xs:complexType>
+  <xs:complexType name="eliminarPersonalBiblioteca">
+    <xs:sequence>
+      <xs:element name="idPersonal" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="eliminarPersonalBibliotecaResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
   <xs:complexType name="listarInasistencias">
     <xs:sequence>
       <xs:element name="idPersonal" type="xs:int" />
@@ -658,6 +672,17 @@
       <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:biblioteca" />
     </xs:sequence>
   </xs:complexType>
+  <xs:complexType name="listarPersonalBiblioteca">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="nombre" type="xs:string" />
+      <xs:element minOccurs="0" name="apellido" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarPersonalBibliotecaResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:personalBiblioteca" />
+    </xs:sequence>
+  </xs:complexType>
   <xs:complexType name="actualizarPuntoAtencion">
     <xs:sequence>
       <xs:element minOccurs="0" name="PuntoAtencion" type="tns:puntosAtencion" />
@@ -709,17 +734,6 @@
       <xs:element name="return" type="xs:int" />
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="asignarPerfil">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="personalBiblioteca" type="tns:personalBiblioteca" />
-      <xs:element minOccurs="0" name="perfilExperiencia" type="tns:perfilExperiencia" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="asignarPerfilResponse">
-    <xs:sequence>
-      <xs:element name="return" type="xs:int" />
-    </xs:sequence>
-  </xs:complexType>
   <xs:complexType name="listarDistribucionPersonalPorFechaHora">
     <xs:sequence>
       <xs:element name="idPersonal" type="xs:int" />
@@ -734,6 +748,17 @@
       <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:puntosAtencion" />
     </xs:sequence>
   </xs:complexType>
+  <xs:complexType name="asignarPerfil">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="personalBiblioteca" type="tns:personalBiblioteca" />
+      <xs:element minOccurs="0" name="perfilExperiencia" type="tns:perfilExperiencia" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="asignarPerfilResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
   <xs:complexType name="listarTipoInasistencia">
     <xs:sequence />
   </xs:complexType>
@@ -744,7 +769,7 @@
   </xs:complexType>
   <xs:complexType name="listarPuntosAtencion">
     <xs:sequence>
-      <xs:element name="arg0" type="xs:int" />
+      <xs:element name="idBiblioteca" type="xs:int" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="listarPuntosAtencionResponse">
@@ -852,6 +877,17 @@
       <xs:element name="return" type="xs:int" />
     </xs:sequence>
   </xs:complexType>
+  <xs:complexType name="listarPracticantes">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="nombre" type="xs:string" />
+      <xs:element minOccurs="0" name="apellido" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarPracticantesResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:practicante" />
+    </xs:sequence>
+  </xs:complexType>
   <xs:complexType name="eliminarCapacitacion">
     <xs:sequence>
       <xs:element name="idCapacitacion" type="xs:int" />
@@ -869,16 +905,5 @@
   </xs:complexType>
   <xs:complexType name="eliminarInasistenciaResponse">
     <xs:sequence />
-  </xs:complexType>
-  <xs:complexType name="listarPracticantes">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="nombre" type="xs:string" />
-      <xs:element minOccurs="0" name="apellido" type="xs:string" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="listarPracticantesResponse">
-    <xs:sequence>
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:practicante" />
-    </xs:sequence>
   </xs:complexType>
 </xs:schema>
