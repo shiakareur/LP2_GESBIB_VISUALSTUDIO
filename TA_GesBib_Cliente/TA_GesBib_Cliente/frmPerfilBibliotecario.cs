@@ -453,8 +453,7 @@ namespace TA_GesBib_Cliente
                     var_frmRespuestasSolicitudes_Bibliotecario.Left = 0;
                     var_frmRespuestasSolicitudes_Bibliotecario.Top = 0;
                     //...
-
-
+                    
                     var_frmRespuestasSolicitudes_Bibliotecario.Show();
                 }
                 else
@@ -625,24 +624,47 @@ namespace TA_GesBib_Cliente
                 config.Left = 0;
                 config.Top = 0;
                 //...
-
-
-                config.Show();
-
-
-
-
-
-
-
+                
+                config.Show();                                                              
+                
                 //hoy agregeishion
-
                 //lblBienvenido.Visible = false;
                 panelAviso.Visible = false;
 
                 //escondemos el submenu
                 hideSubMenu();
             }
+        }
+
+        private void btnCapac_Click(object sender, EventArgs e)
+        {
+            panelBIPO.Visible = false;
+
+            frmRespuestaCapacitaciones  resCapas = new frmRespuestaCapacitaciones(this,
+                TipoPerfil.PerfilBibliotecario,var_usuario);
+            resCapas.MdiParent = this;
+
+            //...add
+            resCapas.StartPosition = FormStartPosition.Manual;
+            resCapas.Left = 0;
+            resCapas.Top = 0;
+            //...
+
+            resCapas.Show();
+            /*
+              var_frmRespuestasSolicitudes_Bibliotecario = new frmRespuestaValidaciones(this, TipoPerfil.PerfilBibliotecario,
+                        var_usuario);
+                    var_frmRespuestasSolicitudes_Bibliotecario.MdiParent = this;
+
+                    //...add
+                    var_frmRespuestasSolicitudes_Bibliotecario.StartPosition = FormStartPosition.Manual;
+                    var_frmRespuestasSolicitudes_Bibliotecario.Left = 0;
+                    var_frmRespuestasSolicitudes_Bibliotecario.Top = 0;
+                    //...
+                    
+                    var_frmRespuestasSolicitudes_Bibliotecario.Show();
+             */
+
         }
     }
 }
