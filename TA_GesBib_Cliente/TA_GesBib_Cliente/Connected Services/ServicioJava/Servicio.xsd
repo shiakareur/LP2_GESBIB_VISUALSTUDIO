@@ -80,8 +80,8 @@
   <xs:element name="listarBibliotecasPorNombreResponse" type="tns:listarBibliotecasPorNombreResponse" />
   <xs:element name="listarBibliotecasResponse" type="tns:listarBibliotecasResponse" />
   <xs:element name="listarCapacitaciones" type="tns:listarCapacitaciones" />
-  <xs:element name="listarCapacitacionesAceptadas" type="tns:listarCapacitacionesAceptadas" />
-  <xs:element name="listarCapacitacionesAceptadasResponse" type="tns:listarCapacitacionesAceptadasResponse" />
+  <xs:element name="listarCapacitacionesPersonalxEstado" type="tns:listarCapacitacionesPersonalxEstado" />
+  <xs:element name="listarCapacitacionesPersonalxEstadoResponse" type="tns:listarCapacitacionesPersonalxEstadoResponse" />
   <xs:element name="listarCapacitacionesResponse" type="tns:listarCapacitacionesResponse" />
   <xs:element name="listarDistribucionPersonalPorFechaHora" type="tns:listarDistribucionPersonalPorFechaHora" />
   <xs:element name="listarDistribucionPersonalPorFechaHoraResponse" type="tns:listarDistribucionPersonalPorFechaHoraResponse" />
@@ -420,22 +420,6 @@
       <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:bibliotecario" />
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="listarCapacitacionesAceptadas">
-    <xs:sequence />
-  </xs:complexType>
-  <xs:complexType name="listarCapacitacionesAceptadasResponse">
-    <xs:sequence>
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:capacitacion" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="actualizarAviso">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="aviso" type="tns:aviso" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="actualizarAvisoResponse">
-    <xs:sequence />
-  </xs:complexType>
   <xs:complexType name="actualizarHoraExtra">
     <xs:sequence>
       <xs:element minOccurs="0" name="horaExtra" type="tns:horaExtra" />
@@ -445,6 +429,14 @@
     <xs:sequence>
       <xs:element name="return" type="xs:int" />
     </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="actualizarAviso">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="aviso" type="tns:aviso" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="actualizarAvisoResponse">
+    <xs:sequence />
   </xs:complexType>
   <xs:complexType name="actualizarPracticante">
     <xs:sequence>
@@ -499,6 +491,17 @@
   <xs:complexType name="listarAuxiliaresResponse">
     <xs:sequence>
       <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:auxiliar" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarCapacitacionesPersonalxEstado">
+    <xs:sequence>
+      <xs:element name="idPersonal" type="xs:int" />
+      <xs:element name="estado" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarCapacitacionesPersonalxEstadoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:capacitacion" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="actualizarGestor">
@@ -693,17 +696,6 @@
       <xs:element name="return" type="xs:int" />
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="asignarPerfil">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="personalBiblioteca" type="tns:personalBiblioteca" />
-      <xs:element minOccurs="0" name="perfilExperiencia" type="tns:perfilExperiencia" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="asignarPerfilResponse">
-    <xs:sequence>
-      <xs:element name="return" type="xs:int" />
-    </xs:sequence>
-  </xs:complexType>
   <xs:complexType name="listarDistribucionPersonalPorFechaHora">
     <xs:sequence>
       <xs:element name="idPersonal" type="xs:int" />
@@ -716,6 +708,17 @@
   <xs:complexType name="listarDistribucionPersonalPorFechaHoraResponse">
     <xs:sequence>
       <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:puntosAtencion" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="asignarPerfil">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="personalBiblioteca" type="tns:personalBiblioteca" />
+      <xs:element minOccurs="0" name="perfilExperiencia" type="tns:perfilExperiencia" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="asignarPerfilResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="listarTipoInasistencia">
@@ -786,16 +789,6 @@
       <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:inasistencia" />
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="hello">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="name" type="xs:string" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="helloResponse">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="return" type="xs:string" />
-    </xs:sequence>
-  </xs:complexType>
   <xs:complexType name="eliminarDiaCapacitacion">
     <xs:sequence>
       <xs:element name="idCapacitacion" type="xs:int" />
@@ -814,6 +807,16 @@
   <xs:complexType name="actualizarBibliotecaResponse">
     <xs:sequence>
       <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="hello">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="name" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="helloResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="actualizarDiaCapacitacion">

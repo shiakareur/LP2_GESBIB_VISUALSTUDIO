@@ -535,7 +535,7 @@
     <None Include="Connected Services\ServicioJava\TA_GesBib_Cliente.ServicioJava.listarBibliotecasResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Connected Services\ServicioJava\TA_GesBib_Cliente.ServicioJava.listarCapacitacionesAceptadasResponse.datasource">
+    <None Include="Connected Services\ServicioJava\TA_GesBib_Cliente.ServicioJava.listarCapacitacionesPersonalxEstadoResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\ServicioJava\TA_GesBib_Cliente.ServicioJava.listarCapacitacionesResponse.datasource">
