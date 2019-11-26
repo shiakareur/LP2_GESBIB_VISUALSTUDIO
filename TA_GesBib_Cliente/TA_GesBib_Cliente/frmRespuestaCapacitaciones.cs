@@ -102,7 +102,25 @@ namespace TA_GesBib_Cliente
 
             //c debe recorrer todos los checkbox q este en true
             //.. e ir actualizando uno x uno
+            //dgvRespCapac.datas
 
+
+            /*
+             foreach (DataGridViewRow r in tuDataGridView.Rows)
+    {
+        CheckBox ck = (CheckBox) r.Cells[0].Value;
+        if (ck.Checked)
+        {
+            
+        }
+        else
+        {
+            
+        }
+
+
+    }
+             */
 
 
         }
