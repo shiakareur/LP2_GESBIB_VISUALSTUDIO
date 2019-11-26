@@ -20,6 +20,12 @@ namespace TA_GesBib_Cliente
             dgvGestores.AutoGenerateColumns = false;
             dgvGestores.DataSource = DBController.listarGestores(txtNombre.Text, txtApellido.Text);
         }
+        public frmBuscarGestores(string cad)
+        {
+            InitializeComponent();
+            dgvGestores.AutoGenerateColumns = false;
+            dgvGestores.DataSource = DBController.listarGestores(txtNombre.Text, txtApellido.Text);
+        }
         public ServicioJava.gestor GestorSeleccionado { get => gestorSeleccionado; set => gestorSeleccionado = value; }
         private void dgvGestores_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
         {

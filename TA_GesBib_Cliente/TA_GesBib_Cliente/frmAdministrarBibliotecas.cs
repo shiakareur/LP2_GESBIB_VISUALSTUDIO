@@ -109,6 +109,9 @@ namespace TA_GesBib_Cliente
             txtCodigo.Text = "";
             txtNombreGestor.Text = "";
             dgvPuntosAtencion.DataSource = null;
+            gestor = null;
+            listaPAasignados = null;
+
         }
 
         private void btnGuardar_Click(object sender, EventArgs e)
@@ -117,15 +120,8 @@ namespace TA_GesBib_Cliente
             ServicioJava.biblioteca bib = new ServicioJava.biblioteca();
 
             bib.nombre = txtNombreBib.Text;
-            try
-            {
-                bib.gestor.nombre = txtNombreGestor.Text;
-            }catch(Exception ex)
-            {
-                System.Console.WriteLine("Error en gestor");
-            }
-            
-            bib.gestor.codigo = txtCodigo.Text;
+            bib.gestor = gestor;
+            bib.listaPuntosAtencion = listaPAasignados.ToArray();
 
             if (estadoBiblioteca == Estado.Nuevo)
             {
@@ -195,7 +191,8 @@ namespace TA_GesBib_Cliente
         }
         private void btnBuscarGestor_Click(object sender, EventArgs e)
         {
-            frmBuscarGestores formBuscarGestores = new frmBuscarGestores();
+            string cad = "Disponible";
+            frmBuscarGestores formBuscarGestores = new frmBuscarGestores(cad);
             formBuscarGestores.Location = new Point(0, 0);
             if (formBuscarGestores.ShowDialog() == DialogResult.OK) {
                 gestor = (ServicioJava.gestor)formBuscarGestores.GestorSeleccionado;
@@ -218,9 +215,11 @@ namespace TA_GesBib_Cliente
         private void btnEditarPA_Click(object sender, EventArgs e)
         {
             puntoAtSeleccionado = (ServicioJava.puntosAtencion)dgvPuntosAtencion.CurrentRow.DataBoundItem;
+            int indice = dgvPuntosAtencion.CurrentRow.Index;
             frmModificarPuntoAtencion formmodificarPA = new frmModificarPuntoAtencion(puntoAtSeleccionado); 
             formmodificarPA.Location = new Point(0, 0);
             if (formmodificarPA.ShowDialog() == DialogResult.OK) {
+                listaPAasignados[indice] = formmodificarPA.PuntoAtMod;
 
 
             }
