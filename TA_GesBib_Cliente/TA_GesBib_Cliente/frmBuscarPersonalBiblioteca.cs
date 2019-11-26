@@ -22,7 +22,7 @@ namespace TA_GesBib_Cliente
         {
             InitializeComponent();
             dgvPersonal.AutoGenerateColumns = false;
-            //listaPersonal = new BindingList<ServicioJava.personalBiblioteca>(Program.DBController.listarPersonalBiblioteca("",""));
+            listaPersonal = new BindingList<ServicioJava.personalBiblioteca>(Program.DBController.listarPersonalBiblioteca("",""));
             dgvPersonal.DataSource = listaPersonal;
 
         }

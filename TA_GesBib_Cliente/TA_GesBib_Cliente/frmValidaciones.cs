@@ -59,7 +59,7 @@ namespace TA_GesBib_Cliente
                 listaHF[j].Text = i.horaFin;
 
                 j++;
-
+                if (j == 4) break;
             }
         }
 
