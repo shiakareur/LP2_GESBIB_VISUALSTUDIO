@@ -17,6 +17,9 @@ namespace TA_GesBib_Cliente
         private TipoPerfil var_tipoPerfil = TipoPerfil.PerfilBibliotecario;
         private ServicioJava.usuario var_usuario;
 
+        private BindingList<ServicioJava.capacitacion> _lstaCapaPend;
+        private BindingList<ServicioJava.capacitacion> _lstaCapaAcep;
+
         ServicioJava.ServicioClient servTA = new ServicioJava.ServicioClient();
 
         public frmRespuestaCapacitaciones()
@@ -41,13 +44,20 @@ namespace TA_GesBib_Cliente
             //Cargar data
             //dgvRespCapac.DataSource = Program.DBController.listarCapacitaciones();//lsita todas
 
-            //aca lista todas de este usuario q aun estan por confirmar
-            dgvRespCapac.DataSource =
-              Program.DBController.listarCapacitacionesPersonalxEstado(var_usuario.id, -1);
+            //pasamos a las variables de listas
 
+            _lstaCapaPend = new BindingList<ServicioJava.capacitacion>(
+                Program.DBController.listarCapacitacionesPersonalxEstado(var_usuario.id, -1));
+
+            _lstaCapaAcep = new BindingList<ServicioJava.capacitacion>(
+                Program.DBController.listarCapacitacionesPersonalxEstado(var_usuario.id, 1));
+                        
+            //aca lista todas de este usuario q aun estan por confirmar
+            dgvRespCapac.DataSource = _lstaCapaPend;
             //luego debe lsitar al listar capas aceptadas por este personal
-            dgvAceptadas.DataSource = 
-                Program.DBController.listarCapacitacionesPersonalxEstado(var_usuario.id,1);
+            dgvAceptadas.DataSource = _lstaCapaAcep;
+
+
         }
 
         private void btnCerrar_Click(object sender, EventArgs e)
@@ -102,25 +112,35 @@ namespace TA_GesBib_Cliente
 
             //c debe recorrer todos los checkbox q este en true
             //.. e ir actualizando uno x uno
-            //dgvRespCapac.datas
+
+            ServicioJava.capacitacion _capa = new ServicioJava.capacitacion();
+            int indice=0;
+            foreach(DataGridViewRow r in dgvRespCapac.Rows)
+            {
+                
+                Boolean var = Convert.ToBoolean(r.Cells[2].Value);
+                if (var)
+                {
+                    System.Console.WriteLine("indice = "+indice+ " confirmaaaa");
+                    //llamo al servicio
+                    //sacar el id de la capacitacion
+                    //ya tengo el personal
+                    //llamar al servicio con estos 2 datos
+
+                    _capa.id = this._lstaCapaPend[indice].id;
+                    System.Console.WriteLine("ID capa = " + _capa.id );
+
+                    Program.DBController.actualizarEstadoCapacitacionDePersonal(_capa.id, var_usuario.id, 1);
+
+                }
+                else
+                {
+                    System.Console.WriteLine("indice = " + indice + " NOOO confirmaaaa");
+                }
+                indice++;
+            }
 
 
-            /*
-             foreach (DataGridViewRow r in tuDataGridView.Rows)
-    {
-        CheckBox ck = (CheckBox) r.Cells[0].Value;
-        if (ck.Checked)
-        {
-            
-        }
-        else
-        {
-            
-        }
-
-
-    }
-             */
 
 
         }
