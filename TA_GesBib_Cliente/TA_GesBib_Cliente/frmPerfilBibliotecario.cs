@@ -24,6 +24,7 @@ namespace TA_GesBib_Cliente
     {
         //se agrego
         private ServicioJava.usuario var_usuario;
+        private ServicioJava.personal var_personal;
         private frmLogin var_formLogin;
         private frmRegHE var_frmRegistrarHE_Bibliotecario;
         private frmRegInasistencias var_frmRegistrarInasis_Bibliotecario;
@@ -616,7 +617,7 @@ namespace TA_GesBib_Cliente
             }
             else
             {
-                frmConfigurar config = new frmConfigurar(this, TipoPerfil.PerfilBibliotecario);
+                frmConfigurar config = new frmConfigurar(this, TipoPerfil.PerfilBibliotecario, var_usuario,var_personal);
                 config.MdiParent = this;
 
                 //...add

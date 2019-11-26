@@ -13,6 +13,8 @@ namespace TA_GesBib_Cliente
 
     public partial class frmConfigurar : Form
     {
+        private ServicioJava.usuario var_usuario;
+        //private ServicioJava.personal var_personal;
         private Form var_perfilPersonal;
         private TipoPerfil var_tipoPerfil = TipoPerfil.PerfilBibliotecario;
 
@@ -21,11 +23,19 @@ namespace TA_GesBib_Cliente
             InitializeComponent();
         }
 
-        public frmConfigurar(Form formPerfilPersonal, TipoPerfil tipoPerfil)
+        public frmConfigurar(Form formPerfilPersonal, TipoPerfil tipoPerfil, ServicioJava.usuario _user,ServicioJava.personal _personal)
         {
+            var_usuario = _user;
+            //var_personal = _personal;
             var_perfilPersonal = formPerfilPersonal;
             var_tipoPerfil = tipoPerfil;
+            //Para mostrar los datos
+
             InitializeComponent();
+            txtNombre.Text = var_usuario.nombre;
+            txtApellido.Text = var_usuario.apellido;
+            txtCorreo.Text = var_usuario.email;
+            //txtCodigo.Text = var_personal.codigo;
 
         }
 
@@ -54,8 +64,16 @@ namespace TA_GesBib_Cliente
                     ((frmPerfilPracticante)this.var_perfilPersonal).PanelAviso.Visible = true;
                     break;
                 default:
-                    break;
+                break;
             }
+
+
+
+        }
+
+        private void textBox4_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

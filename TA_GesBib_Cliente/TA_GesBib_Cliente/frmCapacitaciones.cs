@@ -39,5 +39,10 @@ namespace TA_GesBib_Cliente
             frmCrearDiaPA.Show();
             frmCrearDiaPA.Location = new Point(0, 0);
         }
+
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

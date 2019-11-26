@@ -65,7 +65,6 @@
             this.txttoken.Font = new System.Drawing.Font("Yu Gothic UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txttoken.Location = new System.Drawing.Point(131, 296);
             this.txttoken.Name = "txttoken";
-            this.txttoken.PasswordChar = '*';
             this.txttoken.Size = new System.Drawing.Size(139, 23);
             this.txttoken.TabIndex = 8;
             // 
@@ -86,7 +85,6 @@
             this.txtCorreo.Font = new System.Drawing.Font("Yu Gothic UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCorreo.Location = new System.Drawing.Point(131, 159);
             this.txtCorreo.Name = "txtCorreo";
-            this.txtCorreo.PasswordChar = '*';
             this.txtCorreo.Size = new System.Drawing.Size(139, 23);
             this.txtCorreo.TabIndex = 6;
             // 

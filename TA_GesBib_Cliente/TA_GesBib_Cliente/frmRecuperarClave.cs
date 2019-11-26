@@ -28,6 +28,7 @@ namespace TA_GesBib_Cliente
             }
             else
             {
+                MessageBox.Show("Por favor, ingrese el código");
                 frmCambiarClave formCC = new frmCambiarClave();
                 formCC.Show();
                 this.Visible = false;
