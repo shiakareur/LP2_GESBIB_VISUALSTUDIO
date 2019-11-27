@@ -5,17 +5,17 @@
       <xsd:import schemaLocation="http://localhost:8080/GesBibServices/Servicio?xsd=1" namespace="http://services.lp2soft.pucp.edu.pe/" />
     </xsd:schema>
   </types>
-  <message name="actualizarEstadoCapacitacionDePersonal">
-    <part name="parameters" element="tns:actualizarEstadoCapacitacionDePersonal" />
-  </message>
-  <message name="actualizarEstadoCapacitacionDePersonalResponse">
-    <part name="parameters" element="tns:actualizarEstadoCapacitacionDePersonalResponse" />
-  </message>
   <message name="listarCapacitacionesPersonalxEstado">
     <part name="parameters" element="tns:listarCapacitacionesPersonalxEstado" />
   </message>
   <message name="listarCapacitacionesPersonalxEstadoResponse">
     <part name="parameters" element="tns:listarCapacitacionesPersonalxEstadoResponse" />
+  </message>
+  <message name="actualizarEstadoCapacitacionDePersonal">
+    <part name="parameters" element="tns:actualizarEstadoCapacitacionDePersonal" />
+  </message>
+  <message name="actualizarEstadoCapacitacionDePersonalResponse">
+    <part name="parameters" element="tns:actualizarEstadoCapacitacionDePersonalResponse" />
   </message>
   <message name="listarDistribucionPersonalPorFechaHora">
     <part name="parameters" element="tns:listarDistribucionPersonalPorFechaHora" />
@@ -26,107 +26,53 @@
   <message name="ParseException">
     <part name="fault" element="tns:ParseException" />
   </message>
-  <message name="listarHorasExtra">
-    <part name="parameters" element="tns:listarHorasExtra" />
+  <message name="hallarTipoUsuario">
+    <part name="parameters" element="tns:hallarTipoUsuario" />
   </message>
-  <message name="listarHorasExtraResponse">
-    <part name="parameters" element="tns:listarHorasExtraResponse" />
+  <message name="hallarTipoUsuarioResponse">
+    <part name="parameters" element="tns:hallarTipoUsuarioResponse" />
   </message>
-  <message name="hello">
-    <part name="parameters" element="tns:hello" />
+  <message name="listarUsuariosLibres">
+    <part name="parameters" element="tns:listarUsuariosLibres" />
   </message>
-  <message name="helloResponse">
-    <part name="parameters" element="tns:helloResponse" />
+  <message name="listarUsuariosLibresResponse">
+    <part name="parameters" element="tns:listarUsuariosLibresResponse" />
   </message>
-  <message name="validarUsuario">
-    <part name="parameters" element="tns:validarUsuario" />
+  <message name="insertarPerfilExperiencia">
+    <part name="parameters" element="tns:insertarPerfilExperiencia" />
   </message>
-  <message name="validarUsuarioResponse">
-    <part name="parameters" element="tns:validarUsuarioResponse" />
+  <message name="insertarPerfilExperienciaResponse">
+    <part name="parameters" element="tns:insertarPerfilExperienciaResponse" />
   </message>
-  <message name="actualizarAviso">
-    <part name="parameters" element="tns:actualizarAviso" />
+  <message name="listarPerfilExperiencia">
+    <part name="parameters" element="tns:listarPerfilExperiencia" />
   </message>
-  <message name="actualizarAvisoResponse">
-    <part name="parameters" element="tns:actualizarAvisoResponse" />
+  <message name="listarPerfilExperienciaResponse">
+    <part name="parameters" element="tns:listarPerfilExperienciaResponse" />
   </message>
-  <message name="enviarToken">
-    <part name="parameters" element="tns:enviarToken" />
+  <message name="listarCapacitaciones">
+    <part name="parameters" element="tns:listarCapacitaciones" />
   </message>
-  <message name="enviarTokenResponse">
-    <part name="parameters" element="tns:enviarTokenResponse" />
+  <message name="listarCapacitacionesResponse">
+    <part name="parameters" element="tns:listarCapacitacionesResponse" />
   </message>
-  <message name="listarAvisos">
-    <part name="parameters" element="tns:listarAvisos" />
+  <message name="actualizarCapacitacion">
+    <part name="parameters" element="tns:actualizarCapacitacion" />
   </message>
-  <message name="listarAvisosResponse">
-    <part name="parameters" element="tns:listarAvisosResponse" />
+  <message name="actualizarCapacitacionResponse">
+    <part name="parameters" element="tns:actualizarCapacitacionResponse" />
   </message>
-  <message name="listarGestores">
-    <part name="parameters" element="tns:listarGestores" />
+  <message name="eliminarCapacitacion">
+    <part name="parameters" element="tns:eliminarCapacitacion" />
   </message>
-  <message name="listarGestoresResponse">
-    <part name="parameters" element="tns:listarGestoresResponse" />
+  <message name="eliminarCapacitacionResponse">
+    <part name="parameters" element="tns:eliminarCapacitacionResponse" />
   </message>
-  <message name="asignarPerfil">
-    <part name="parameters" element="tns:asignarPerfil" />
+  <message name="insertarCapacitacion">
+    <part name="parameters" element="tns:insertarCapacitacion" />
   </message>
-  <message name="asignarPerfilResponse">
-    <part name="parameters" element="tns:asignarPerfilResponse" />
-  </message>
-  <message name="actualizarGestor">
-    <part name="parameters" element="tns:actualizarGestor" />
-  </message>
-  <message name="actualizarGestorResponse">
-    <part name="parameters" element="tns:actualizarGestorResponse" />
-  </message>
-  <message name="listarHorasLibre">
-    <part name="parameters" element="tns:listarHorasLibre" />
-  </message>
-  <message name="listarHorasLibreResponse">
-    <part name="parameters" element="tns:listarHorasLibreResponse" />
-  </message>
-  <message name="insertarAviso">
-    <part name="parameters" element="tns:insertarAviso" />
-  </message>
-  <message name="insertarAvisoResponse">
-    <part name="parameters" element="tns:insertarAvisoResponse" />
-  </message>
-  <message name="listarAuxiliares">
-    <part name="parameters" element="tns:listarAuxiliares" />
-  </message>
-  <message name="listarAuxiliaresResponse">
-    <part name="parameters" element="tns:listarAuxiliaresResponse" />
-  </message>
-  <message name="eliminarGestor">
-    <part name="parameters" element="tns:eliminarGestor" />
-  </message>
-  <message name="eliminarGestorResponse">
-    <part name="parameters" element="tns:eliminarGestorResponse" />
-  </message>
-  <message name="insertarGestor">
-    <part name="parameters" element="tns:insertarGestor" />
-  </message>
-  <message name="insertarGestorResponse">
-    <part name="parameters" element="tns:insertarGestorResponse" />
-  </message>
-  <message name="elimAviso">
-    <part name="parameters" element="tns:elimAviso" />
-  </message>
-  <message name="elimAvisoResponse">
-    <part name="parameters" element="tns:elimAvisoResponse" />
-  </message>
-  <message name="cambiarContrasenaToken">
-    <part name="parameters" element="tns:cambiarContrasenaToken" />
-  </message>
-  <message name="cambiarContrasenaTokenResponse">
-    <part name="parameters" element="tns:cambiarContrasenaTokenResponse" />
-  </message>
-  <message name="insertarBibliotecario">
-    <part name="parameters" element="tns:insertarBibliotecario" />
-  </message>
-  <message name="insertarBibliotecarioResponse">
-    <part name="parameters" element="tns:insertarBibliotecarioResponse" />
+  <message name="insertarCapacitacionResponse">
+    <part name="parameters" element="tns:insertarCapacitacionResponse" />
   </message>
   <message name="eliminarDiaCapacitacion">
     <part name="parameters" element="tns:eliminarDiaCapacitacion" />
@@ -134,17 +80,11 @@
   <message name="eliminarDiaCapacitacionResponse">
     <part name="parameters" element="tns:eliminarDiaCapacitacionResponse" />
   </message>
-  <message name="eliminarBiblioteca">
-    <part name="parameters" element="tns:eliminarBiblioteca" />
+  <message name="actualizarDiaCapacitacion">
+    <part name="parameters" element="tns:actualizarDiaCapacitacion" />
   </message>
-  <message name="eliminarBibliotecaResponse">
-    <part name="parameters" element="tns:eliminarBibliotecaResponse" />
-  </message>
-  <message name="insertarCapacitacion">
-    <part name="parameters" element="tns:insertarCapacitacion" />
-  </message>
-  <message name="insertarCapacitacionResponse">
-    <part name="parameters" element="tns:insertarCapacitacionResponse" />
+  <message name="actualizarDiaCapacitacionResponse">
+    <part name="parameters" element="tns:actualizarDiaCapacitacionResponse" />
   </message>
   <message name="insertarBiblioteca">
     <part name="parameters" element="tns:insertarBiblioteca" />
@@ -158,11 +98,23 @@
   <message name="actualizarBibliotecaResponse">
     <part name="parameters" element="tns:actualizarBibliotecaResponse" />
   </message>
-  <message name="listarPerfilExperiencia">
-    <part name="parameters" element="tns:listarPerfilExperiencia" />
+  <message name="eliminarBiblioteca">
+    <part name="parameters" element="tns:eliminarBiblioteca" />
   </message>
-  <message name="listarPerfilExperienciaResponse">
-    <part name="parameters" element="tns:listarPerfilExperienciaResponse" />
+  <message name="eliminarBibliotecaResponse">
+    <part name="parameters" element="tns:eliminarBibliotecaResponse" />
+  </message>
+  <message name="listarBibliotecas">
+    <part name="parameters" element="tns:listarBibliotecas" />
+  </message>
+  <message name="listarBibliotecasResponse">
+    <part name="parameters" element="tns:listarBibliotecasResponse" />
+  </message>
+  <message name="listarBibliotecasPorNombre">
+    <part name="parameters" element="tns:listarBibliotecasPorNombre" />
+  </message>
+  <message name="listarBibliotecasPorNombreResponse">
+    <part name="parameters" element="tns:listarBibliotecasPorNombreResponse" />
   </message>
   <message name="insertarPuntoAtencion">
     <part name="parameters" element="tns:insertarPuntoAtencion" />
@@ -176,11 +128,35 @@
   <message name="actualizarPuntoAtencionResponse">
     <part name="parameters" element="tns:actualizarPuntoAtencionResponse" />
   </message>
-  <message name="listarBibliotecarios">
-    <part name="parameters" element="tns:listarBibliotecarios" />
+  <message name="listarPuntosAtencion">
+    <part name="parameters" element="tns:listarPuntosAtencion" />
   </message>
-  <message name="listarBibliotecariosResponse">
-    <part name="parameters" element="tns:listarBibliotecariosResponse" />
+  <message name="listarPuntosAtencionResponse">
+    <part name="parameters" element="tns:listarPuntosAtencionResponse" />
+  </message>
+  <message name="listarPersonalBiblioteca">
+    <part name="parameters" element="tns:listarPersonalBiblioteca" />
+  </message>
+  <message name="listarPersonalBibliotecaResponse">
+    <part name="parameters" element="tns:listarPersonalBibliotecaResponse" />
+  </message>
+  <message name="eliminarPersonalBiblioteca">
+    <part name="parameters" element="tns:eliminarPersonalBiblioteca" />
+  </message>
+  <message name="eliminarPersonalBibliotecaResponse">
+    <part name="parameters" element="tns:eliminarPersonalBibliotecaResponse" />
+  </message>
+  <message name="cambiarContrasenaToken">
+    <part name="parameters" element="tns:cambiarContrasenaToken" />
+  </message>
+  <message name="cambiarContrasenaTokenResponse">
+    <part name="parameters" element="tns:cambiarContrasenaTokenResponse" />
+  </message>
+  <message name="insertarBibliotecario">
+    <part name="parameters" element="tns:insertarBibliotecario" />
+  </message>
+  <message name="insertarBibliotecarioResponse">
+    <part name="parameters" element="tns:insertarBibliotecarioResponse" />
   </message>
   <message name="actualizarBibliotecario">
     <part name="parameters" element="tns:actualizarBibliotecario" />
@@ -188,29 +164,17 @@
   <message name="actualizarBibliotecarioResponse">
     <part name="parameters" element="tns:actualizarBibliotecarioResponse" />
   </message>
+  <message name="listarBibliotecarios">
+    <part name="parameters" element="tns:listarBibliotecarios" />
+  </message>
+  <message name="listarBibliotecariosResponse">
+    <part name="parameters" element="tns:listarBibliotecariosResponse" />
+  </message>
   <message name="insertarAuxiliarBiblioteca">
     <part name="parameters" element="tns:insertarAuxiliarBiblioteca" />
   </message>
   <message name="insertarAuxiliarBibliotecaResponse">
     <part name="parameters" element="tns:insertarAuxiliarBibliotecaResponse" />
-  </message>
-  <message name="hallarTipoUsuario">
-    <part name="parameters" element="tns:hallarTipoUsuario" />
-  </message>
-  <message name="hallarTipoUsuarioResponse">
-    <part name="parameters" element="tns:hallarTipoUsuarioResponse" />
-  </message>
-  <message name="actualizarCapacitacion">
-    <part name="parameters" element="tns:actualizarCapacitacion" />
-  </message>
-  <message name="actualizarCapacitacionResponse">
-    <part name="parameters" element="tns:actualizarCapacitacionResponse" />
-  </message>
-  <message name="listarPersonalBiblioteca">
-    <part name="parameters" element="tns:listarPersonalBiblioteca" />
-  </message>
-  <message name="listarPersonalBibliotecaResponse">
-    <part name="parameters" element="tns:listarPersonalBibliotecaResponse" />
   </message>
   <message name="actualizarAuxiliarBiblioteca">
     <part name="parameters" element="tns:actualizarAuxiliarBiblioteca" />
@@ -254,84 +218,6 @@
   <message name="listarHorasExtraPorFechaResponse">
     <part name="parameters" element="tns:listarHorasExtraPorFechaResponse" />
   </message>
-  <message name="eliminarCapacitacion">
-    <part name="parameters" element="tns:eliminarCapacitacion" />
-  </message>
-  <message name="eliminarCapacitacionResponse">
-    <part name="parameters" element="tns:eliminarCapacitacionResponse" />
-  </message>
-  <message name="listarBibliotecasPorNombre">
-    <part name="parameters" element="tns:listarBibliotecasPorNombre" />
-  </message>
-  <message name="listarBibliotecasPorNombreResponse">
-    <part name="parameters" element="tns:listarBibliotecasPorNombreResponse" />
-  </message>
-  <message name="listarUsuariosLibres">
-    <part name="parameters" element="tns:listarUsuariosLibres" />
-  </message>
-  <message name="listarUsuariosLibresResponse">
-    <part name="parameters" element="tns:listarUsuariosLibresResponse" />
-  </message>
-  <message name="listarCapacitaciones">
-    <part name="parameters" element="tns:listarCapacitaciones" />
-  </message>
-  <message name="listarCapacitacionesResponse">
-    <part name="parameters" element="tns:listarCapacitacionesResponse" />
-  </message>
-  <message name="listarPuntosAtencion">
-    <part name="parameters" element="tns:listarPuntosAtencion" />
-  </message>
-  <message name="listarPuntosAtencionResponse">
-    <part name="parameters" element="tns:listarPuntosAtencionResponse" />
-  </message>
-  <message name="eliminarPersonalBiblioteca">
-    <part name="parameters" element="tns:eliminarPersonalBiblioteca" />
-  </message>
-  <message name="eliminarPersonalBibliotecaResponse">
-    <part name="parameters" element="tns:eliminarPersonalBibliotecaResponse" />
-  </message>
-  <message name="actualizarDiaCapacitacion">
-    <part name="parameters" element="tns:actualizarDiaCapacitacion" />
-  </message>
-  <message name="actualizarDiaCapacitacionResponse">
-    <part name="parameters" element="tns:actualizarDiaCapacitacionResponse" />
-  </message>
-  <message name="insertarPerfilExperiencia">
-    <part name="parameters" element="tns:insertarPerfilExperiencia" />
-  </message>
-  <message name="insertarPerfilExperienciaResponse">
-    <part name="parameters" element="tns:insertarPerfilExperienciaResponse" />
-  </message>
-  <message name="listarBibliotecas">
-    <part name="parameters" element="tns:listarBibliotecas" />
-  </message>
-  <message name="listarBibliotecasResponse">
-    <part name="parameters" element="tns:listarBibliotecasResponse" />
-  </message>
-  <message name="listarTipoInasistencia">
-    <part name="parameters" element="tns:listarTipoInasistencia" />
-  </message>
-  <message name="listarTipoInasistenciaResponse">
-    <part name="parameters" element="tns:listarTipoInasistenciaResponse" />
-  </message>
-  <message name="listarInasistencias">
-    <part name="parameters" element="tns:listarInasistencias" />
-  </message>
-  <message name="listarInasistenciasResponse">
-    <part name="parameters" element="tns:listarInasistenciasResponse" />
-  </message>
-  <message name="eliminarInasistencia">
-    <part name="parameters" element="tns:eliminarInasistencia" />
-  </message>
-  <message name="eliminarInasistenciaResponse">
-    <part name="parameters" element="tns:eliminarInasistenciaResponse" />
-  </message>
-  <message name="listarTodasHorasLibre">
-    <part name="parameters" element="tns:listarTodasHorasLibre" />
-  </message>
-  <message name="listarTodasHorasLibreResponse">
-    <part name="parameters" element="tns:listarTodasHorasLibreResponse" />
-  </message>
   <message name="eliminarHoraExtra">
     <part name="parameters" element="tns:eliminarHoraExtra" />
   </message>
@@ -350,17 +236,29 @@
   <message name="actualizarInasistenciaResponse">
     <part name="parameters" element="tns:actualizarInasistenciaResponse" />
   </message>
+  <message name="listarTipoInasistencia">
+    <part name="parameters" element="tns:listarTipoInasistencia" />
+  </message>
+  <message name="listarTipoInasistenciaResponse">
+    <part name="parameters" element="tns:listarTipoInasistenciaResponse" />
+  </message>
+  <message name="listarInasistencias">
+    <part name="parameters" element="tns:listarInasistencias" />
+  </message>
+  <message name="listarInasistenciasResponse">
+    <part name="parameters" element="tns:listarInasistenciasResponse" />
+  </message>
   <message name="listarInasistenciasPorFecha">
     <part name="parameters" element="tns:listarInasistenciasPorFecha" />
   </message>
   <message name="listarInasistenciasPorFechaResponse">
     <part name="parameters" element="tns:listarInasistenciasPorFechaResponse" />
   </message>
-  <message name="elimDistribucionPersonal">
-    <part name="parameters" element="tns:elimDistribucionPersonal" />
+  <message name="listarTodasHorasLibre">
+    <part name="parameters" element="tns:listarTodasHorasLibre" />
   </message>
-  <message name="elimDistribucionPersonalResponse">
-    <part name="parameters" element="tns:elimDistribucionPersonalResponse" />
+  <message name="listarTodasHorasLibreResponse">
+    <part name="parameters" element="tns:listarTodasHorasLibreResponse" />
   </message>
   <message name="listarHorasLibrePorFecha">
     <part name="parameters" element="tns:listarHorasLibrePorFecha" />
@@ -368,105 +266,168 @@
   <message name="listarHorasLibrePorFechaResponse">
     <part name="parameters" element="tns:listarHorasLibrePorFechaResponse" />
   </message>
+  <message name="eliminarInasistencia">
+    <part name="parameters" element="tns:eliminarInasistencia" />
+  </message>
+  <message name="eliminarInasistenciaResponse">
+    <part name="parameters" element="tns:eliminarInasistenciaResponse" />
+  </message>
+  <message name="elimDistribucionPersonal">
+    <part name="parameters" element="tns:elimDistribucionPersonal" />
+  </message>
+  <message name="elimDistribucionPersonalResponse">
+    <part name="parameters" element="tns:elimDistribucionPersonalResponse" />
+  </message>
   <message name="insertarDistribucionPersonal">
     <part name="parameters" element="tns:insertarDistribucionPersonal" />
   </message>
   <message name="insertarDistribucionPersonalResponse">
     <part name="parameters" element="tns:insertarDistribucionPersonalResponse" />
   </message>
+  <message name="validarUsuario">
+    <part name="parameters" element="tns:validarUsuario" />
+  </message>
+  <message name="validarUsuarioResponse">
+    <part name="parameters" element="tns:validarUsuarioResponse" />
+  </message>
+  <message name="hello">
+    <part name="parameters" element="tns:hello" />
+  </message>
+  <message name="helloResponse">
+    <part name="parameters" element="tns:helloResponse" />
+  </message>
+  <message name="insertarAviso">
+    <part name="parameters" element="tns:insertarAviso" />
+  </message>
+  <message name="insertarAvisoResponse">
+    <part name="parameters" element="tns:insertarAvisoResponse" />
+  </message>
+  <message name="actualizarAviso">
+    <part name="parameters" element="tns:actualizarAviso" />
+  </message>
+  <message name="actualizarAvisoResponse">
+    <part name="parameters" element="tns:actualizarAvisoResponse" />
+  </message>
+  <message name="elimAviso">
+    <part name="parameters" element="tns:elimAviso" />
+  </message>
+  <message name="elimAvisoResponse">
+    <part name="parameters" element="tns:elimAvisoResponse" />
+  </message>
+  <message name="listarAvisos">
+    <part name="parameters" element="tns:listarAvisos" />
+  </message>
+  <message name="listarAvisosResponse">
+    <part name="parameters" element="tns:listarAvisosResponse" />
+  </message>
+  <message name="asignarPerfil">
+    <part name="parameters" element="tns:asignarPerfil" />
+  </message>
+  <message name="asignarPerfilResponse">
+    <part name="parameters" element="tns:asignarPerfilResponse" />
+  </message>
+  <message name="enviarToken">
+    <part name="parameters" element="tns:enviarToken" />
+  </message>
+  <message name="enviarTokenResponse">
+    <part name="parameters" element="tns:enviarTokenResponse" />
+  </message>
+  <message name="listarAuxiliares">
+    <part name="parameters" element="tns:listarAuxiliares" />
+  </message>
+  <message name="listarAuxiliaresResponse">
+    <part name="parameters" element="tns:listarAuxiliaresResponse" />
+  </message>
+  <message name="insertarGestor">
+    <part name="parameters" element="tns:insertarGestor" />
+  </message>
+  <message name="insertarGestorResponse">
+    <part name="parameters" element="tns:insertarGestorResponse" />
+  </message>
+  <message name="actualizarGestor">
+    <part name="parameters" element="tns:actualizarGestor" />
+  </message>
+  <message name="actualizarGestorResponse">
+    <part name="parameters" element="tns:actualizarGestorResponse" />
+  </message>
+  <message name="eliminarGestor">
+    <part name="parameters" element="tns:eliminarGestor" />
+  </message>
+  <message name="eliminarGestorResponse">
+    <part name="parameters" element="tns:eliminarGestorResponse" />
+  </message>
+  <message name="listarGestores">
+    <part name="parameters" element="tns:listarGestores" />
+  </message>
+  <message name="listarGestoresResponse">
+    <part name="parameters" element="tns:listarGestoresResponse" />
+  </message>
+  <message name="listarHorasExtra">
+    <part name="parameters" element="tns:listarHorasExtra" />
+  </message>
+  <message name="listarHorasExtraResponse">
+    <part name="parameters" element="tns:listarHorasExtraResponse" />
+  </message>
+  <message name="listarHorasLibre">
+    <part name="parameters" element="tns:listarHorasLibre" />
+  </message>
+  <message name="listarHorasLibreResponse">
+    <part name="parameters" element="tns:listarHorasLibreResponse" />
+  </message>
   <portType name="Servicio">
-    <operation name="actualizarEstadoCapacitacionDePersonal">
-      <input wsam:Action="http://services.lp2soft.pucp.edu.pe/Servicio/actualizarEstadoCapacitacionDePersonalRequest" message="tns:actualizarEstadoCapacitacionDePersonal" />
-      <output wsam:Action="http://services.lp2soft.pucp.edu.pe/Servicio/actualizarEstadoCapacitacionDePersonalResponse" message="tns:actualizarEstadoCapacitacionDePersonalResponse" />
-    </operation>
     <operation name="listarCapacitacionesPersonalxEstado">
       <input wsam:Action="http://services.lp2soft.pucp.edu.pe/Servicio/listarCapacitacionesPersonalxEstadoRequest" message="tns:listarCapacitacionesPersonalxEstado" />
       <output wsam:Action="http://services.lp2soft.pucp.edu.pe/Servicio/listarCapacitacionesPersonalxEstadoResponse" message="tns:listarCapacitacionesPersonalxEstadoResponse" />
+    </operation>
+    <operation name="actualizarEstadoCapacitacionDePersonal">
+      <input wsam:Action="http://services.lp2soft.pucp.edu.pe/Servicio/actualizarEstadoCapacitacionDePersonalRequest" message="tns:actualizarEstadoCapacitacionDePersonal" />
+      <output wsam:Action="http://services.lp2soft.pucp.edu.pe/Servicio/actualizarEstadoCapacitacionDePersonalResponse" message="tns:actualizarEstadoCapacitacionDePersonalResponse" />
     </operation>
     <operation name="listarDistribucionPersonalPorFechaHora">
       <input wsam:Action="http://services.lp2soft.pucp.edu.pe/Servicio/listarDistribucionPersonalPorFechaHoraRequest" message="tns:listarDistribucionPersonalPorFechaHora" />
       <output wsam:Action="http://services.lp2soft.pucp.edu.pe/Servicio/listarDistribucionPersonalPorFechaHoraResponse" message="tns:listarDistribucionPersonalPorFechaHoraResponse" />
       <fault wsam:Action="http://services.lp2soft.pucp.edu.pe/Servicio/listarDistribucionPersonalPorFechaHora/Fault/ParseException" name="ParseException" message="tns:ParseException" />
     </operation>
-    <operation name="listarHorasExtra">
-      <input wsam:Action="http://services.lp2soft.pucp.edu.pe/Servicio/listarHorasExtraRequest" message="tns:listarHorasExtra" />
-      <output wsam:Action="http://services.lp2soft.pucp.edu.pe/Servicio/listarHorasExtraResponse" message="tns:listarHorasExtraResponse" />
+    <operation name="hallarTipoUsuario">
+      <input wsam:Action="http://services.lp2soft.pucp.edu.pe/Servicio/hallarTipoUsuarioRequest" message="tns:hallarTipoUsuario" />
+      <output wsam:Action="http://services.lp2soft.pucp.edu.pe/Servicio/hallarTipoUsuarioResponse" message="tns:hallarTipoUsuarioResponse" />
     </operation>
-    <operation name="hello">
-      <input wsam:Action="http://services.lp2soft.pucp.edu.pe/Servicio/helloRequest" message="tns:hello" />
-      <output wsam:Action="http://services.lp2soft.pucp.edu.pe/Servicio/helloResponse" message="tns:helloResponse" />
+    <operation name="listarUsuariosLibres">
+      <input wsam:Action="http://services.lp2soft.pucp.edu.pe/Servicio/listarUsuariosLibresRequest" message="tns:listarUsuariosLibres" />
+      <output wsam:Action="http://services.lp2soft.pucp.edu.pe/Servicio/listarUsuariosLibresResponse" message="tns:listarUsuariosLibresResponse" />
+      <fault wsam:Action="http://services.lp2soft.pucp.edu.pe/Servicio/listarUsuariosLibres/Fault/ParseException" name="ParseException" message="tns:ParseException" />
     </operation>
-    <operation name="validarUsuario">
-      <input wsam:Action="http://services.lp2soft.pucp.edu.pe/Servicio/validarUsuarioRequest" message="tns:validarUsuario" />
-      <output wsam:Action="http://services.lp2soft.pucp.edu.pe/Servicio/validarUsuarioResponse" message="tns:validarUsuarioResponse" />
+    <operation name="insertarPerfilExperiencia">
+      <input wsam:Action="http://services.lp2soft.pucp.edu.pe/Servicio/insertarPerfilExperienciaRequest" message="tns:insertarPerfilExperiencia" />
+      <output wsam:Action="http://services.lp2soft.pucp.edu.pe/Servicio/insertarPerfilExperienciaResponse" message="tns:insertarPerfilExperienciaResponse" />
     </operation>
-    <operation name="actualizarAviso">
-      <input wsam:Action="http://services.lp2soft.pucp.edu.pe/Servicio/actualizarAvisoRequest" message="tns:actualizarAviso" />
-      <output wsam:Action="http://services.lp2soft.pucp.edu.pe/Servicio/actualizarAvisoResponse" message="tns:actualizarAvisoResponse" />
+    <operation name="listarPerfilExperiencia">
+      <input wsam:Action="http://services.lp2soft.pucp.edu.pe/Servicio/listarPerfilExperienciaRequest" message="tns:listarPerfilExperiencia" />
+      <output wsam:Action="http://services.lp2soft.pucp.edu.pe/Servicio/listarPerfilExperienciaResponse" message="tns:listarPerfilExperienciaResponse" />
     </operation>
-    <operation name="enviarToken">
-      <input wsam:Action="http://services.lp2soft.pucp.edu.pe/Servicio/enviarTokenRequest" message="tns:enviarToken" />
-      <output wsam:Action="http://services.lp2soft.pucp.edu.pe/Servicio/enviarTokenResponse" message="tns:enviarTokenResponse" />
+    <operation name="listarCapacitaciones">
+      <input wsam:Action="http://services.lp2soft.pucp.edu.pe/Servicio/listarCapacitacionesRequest" message="tns:listarCapacitaciones" />
+      <output wsam:Action="http://services.lp2soft.pucp.edu.pe/Servicio/listarCapacitacionesResponse" message="tns:listarCapacitacionesResponse" />
     </operation>
-    <operation name="listarAvisos">
-      <input wsam:Action="http://services.lp2soft.pucp.edu.pe/Servicio/listarAvisosRequest" message="tns:listarAvisos" />
-      <output wsam:Action="http://services.lp2soft.pucp.edu.pe/Servicio/listarAvisosResponse" message="tns:listarAvisosResponse" />
+    <operation name="actualizarCapacitacion">
+      <input wsam:Action="http://services.lp2soft.pucp.edu.pe/Servicio/actualizarCapacitacionRequest" message="tns:actualizarCapacitacion" />
+      <output wsam:Action="http://services.lp2soft.pucp.edu.pe/Servicio/actualizarCapacitacionResponse" message="tns:actualizarCapacitacionResponse" />
     </operation>
-    <operation name="listarGestores">
-      <input wsam:Action="http://services.lp2soft.pucp.edu.pe/Servicio/listarGestoresRequest" message="tns:listarGestores" />
-      <output wsam:Action="http://services.lp2soft.pucp.edu.pe/Servicio/listarGestoresResponse" message="tns:listarGestoresResponse" />
+    <operation name="eliminarCapacitacion">
+      <input wsam:Action="http://services.lp2soft.pucp.edu.pe/Servicio/eliminarCapacitacionRequest" message="tns:eliminarCapacitacion" />
+      <output wsam:Action="http://services.lp2soft.pucp.edu.pe/Servicio/eliminarCapacitacionResponse" message="tns:eliminarCapacitacionResponse" />
     </operation>
-    <operation name="asignarPerfil">
-      <input wsam:Action="http://services.lp2soft.pucp.edu.pe/Servicio/asignarPerfilRequest" message="tns:asignarPerfil" />
-      <output wsam:Action="http://services.lp2soft.pucp.edu.pe/Servicio/asignarPerfilResponse" message="tns:asignarPerfilResponse" />
-    </operation>
-    <operation name="actualizarGestor">
-      <input wsam:Action="http://services.lp2soft.pucp.edu.pe/Servicio/actualizarGestorRequest" message="tns:actualizarGestor" />
-      <output wsam:Action="http://services.lp2soft.pucp.edu.pe/Servicio/actualizarGestorResponse" message="tns:actualizarGestorResponse" />
-    </operation>
-    <operation name="listarHorasLibre">
-      <input wsam:Action="http://services.lp2soft.pucp.edu.pe/Servicio/listarHorasLibreRequest" message="tns:listarHorasLibre" />
-      <output wsam:Action="http://services.lp2soft.pucp.edu.pe/Servicio/listarHorasLibreResponse" message="tns:listarHorasLibreResponse" />
-    </operation>
-    <operation name="insertarAviso">
-      <input wsam:Action="http://services.lp2soft.pucp.edu.pe/Servicio/insertarAvisoRequest" message="tns:insertarAviso" />
-      <output wsam:Action="http://services.lp2soft.pucp.edu.pe/Servicio/insertarAvisoResponse" message="tns:insertarAvisoResponse" />
-    </operation>
-    <operation name="listarAuxiliares">
-      <input wsam:Action="http://services.lp2soft.pucp.edu.pe/Servicio/listarAuxiliaresRequest" message="tns:listarAuxiliares" />
-      <output wsam:Action="http://services.lp2soft.pucp.edu.pe/Servicio/listarAuxiliaresResponse" message="tns:listarAuxiliaresResponse" />
-    </operation>
-    <operation name="eliminarGestor">
-      <input wsam:Action="http://services.lp2soft.pucp.edu.pe/Servicio/eliminarGestorRequest" message="tns:eliminarGestor" />
-      <output wsam:Action="http://services.lp2soft.pucp.edu.pe/Servicio/eliminarGestorResponse" message="tns:eliminarGestorResponse" />
-    </operation>
-    <operation name="insertarGestor">
-      <input wsam:Action="http://services.lp2soft.pucp.edu.pe/Servicio/insertarGestorRequest" message="tns:insertarGestor" />
-      <output wsam:Action="http://services.lp2soft.pucp.edu.pe/Servicio/insertarGestorResponse" message="tns:insertarGestorResponse" />
-    </operation>
-    <operation name="elimAviso">
-      <input wsam:Action="http://services.lp2soft.pucp.edu.pe/Servicio/elimAvisoRequest" message="tns:elimAviso" />
-      <output wsam:Action="http://services.lp2soft.pucp.edu.pe/Servicio/elimAvisoResponse" message="tns:elimAvisoResponse" />
-    </operation>
-    <operation name="cambiarContrasenaToken">
-      <input wsam:Action="http://services.lp2soft.pucp.edu.pe/Servicio/cambiarContrasenaTokenRequest" message="tns:cambiarContrasenaToken" />
-      <output wsam:Action="http://services.lp2soft.pucp.edu.pe/Servicio/cambiarContrasenaTokenResponse" message="tns:cambiarContrasenaTokenResponse" />
-    </operation>
-    <operation name="insertarBibliotecario">
-      <input wsam:Action="http://services.lp2soft.pucp.edu.pe/Servicio/insertarBibliotecarioRequest" message="tns:insertarBibliotecario" />
-      <output wsam:Action="http://services.lp2soft.pucp.edu.pe/Servicio/insertarBibliotecarioResponse" message="tns:insertarBibliotecarioResponse" />
+    <operation name="insertarCapacitacion">
+      <input wsam:Action="http://services.lp2soft.pucp.edu.pe/Servicio/insertarCapacitacionRequest" message="tns:insertarCapacitacion" />
+      <output wsam:Action="http://services.lp2soft.pucp.edu.pe/Servicio/insertarCapacitacionResponse" message="tns:insertarCapacitacionResponse" />
     </operation>
     <operation name="eliminarDiaCapacitacion">
       <input wsam:Action="http://services.lp2soft.pucp.edu.pe/Servicio/eliminarDiaCapacitacionRequest" message="tns:eliminarDiaCapacitacion" />
       <output wsam:Action="http://services.lp2soft.pucp.edu.pe/Servicio/eliminarDiaCapacitacionResponse" message="tns:eliminarDiaCapacitacionResponse" />
     </operation>
-    <operation name="eliminarBiblioteca">
-      <input wsam:Action="http://services.lp2soft.pucp.edu.pe/Servicio/eliminarBibliotecaRequest" message="tns:eliminarBiblioteca" />
-      <output wsam:Action="http://services.lp2soft.pucp.edu.pe/Servicio/eliminarBibliotecaResponse" message="tns:eliminarBibliotecaResponse" />
-    </operation>
-    <operation name="insertarCapacitacion">
-      <input wsam:Action="http://services.lp2soft.pucp.edu.pe/Servicio/insertarCapacitacionRequest" message="tns:insertarCapacitacion" />
-      <output wsam:Action="http://services.lp2soft.pucp.edu.pe/Servicio/insertarCapacitacionResponse" message="tns:insertarCapacitacionResponse" />
+    <operation name="actualizarDiaCapacitacion">
+      <input wsam:Action="http://services.lp2soft.pucp.edu.pe/Servicio/actualizarDiaCapacitacionRequest" message="tns:actualizarDiaCapacitacion" />
+      <output wsam:Action="http://services.lp2soft.pucp.edu.pe/Servicio/actualizarDiaCapacitacionResponse" message="tns:actualizarDiaCapacitacionResponse" />
     </operation>
     <operation name="insertarBiblioteca">
       <input wsam:Action="http://services.lp2soft.pucp.edu.pe/Servicio/insertarBibliotecaRequest" message="tns:insertarBiblioteca" />
@@ -476,9 +437,17 @@
       <input wsam:Action="http://services.lp2soft.pucp.edu.pe/Servicio/actualizarBibliotecaRequest" message="tns:actualizarBiblioteca" />
       <output wsam:Action="http://services.lp2soft.pucp.edu.pe/Servicio/actualizarBibliotecaResponse" message="tns:actualizarBibliotecaResponse" />
     </operation>
-    <operation name="listarPerfilExperiencia">
-      <input wsam:Action="http://services.lp2soft.pucp.edu.pe/Servicio/listarPerfilExperienciaRequest" message="tns:listarPerfilExperiencia" />
-      <output wsam:Action="http://services.lp2soft.pucp.edu.pe/Servicio/listarPerfilExperienciaResponse" message="tns:listarPerfilExperienciaResponse" />
+    <operation name="eliminarBiblioteca">
+      <input wsam:Action="http://services.lp2soft.pucp.edu.pe/Servicio/eliminarBibliotecaRequest" message="tns:eliminarBiblioteca" />
+      <output wsam:Action="http://services.lp2soft.pucp.edu.pe/Servicio/eliminarBibliotecaResponse" message="tns:eliminarBibliotecaResponse" />
+    </operation>
+    <operation name="listarBibliotecas">
+      <input wsam:Action="http://services.lp2soft.pucp.edu.pe/Servicio/listarBibliotecasRequest" message="tns:listarBibliotecas" />
+      <output wsam:Action="http://services.lp2soft.pucp.edu.pe/Servicio/listarBibliotecasResponse" message="tns:listarBibliotecasResponse" />
+    </operation>
+    <operation name="listarBibliotecasPorNombre">
+      <input wsam:Action="http://services.lp2soft.pucp.edu.pe/Servicio/listarBibliotecasPorNombreRequest" message="tns:listarBibliotecasPorNombre" />
+      <output wsam:Action="http://services.lp2soft.pucp.edu.pe/Servicio/listarBibliotecasPorNombreResponse" message="tns:listarBibliotecasPorNombreResponse" />
     </operation>
     <operation name="insertarPuntoAtencion">
       <input wsam:Action="http://services.lp2soft.pucp.edu.pe/Servicio/insertarPuntoAtencionRequest" message="tns:insertarPuntoAtencion" />
@@ -488,29 +457,37 @@
       <input wsam:Action="http://services.lp2soft.pucp.edu.pe/Servicio/actualizarPuntoAtencionRequest" message="tns:actualizarPuntoAtencion" />
       <output wsam:Action="http://services.lp2soft.pucp.edu.pe/Servicio/actualizarPuntoAtencionResponse" message="tns:actualizarPuntoAtencionResponse" />
     </operation>
-    <operation name="listarBibliotecarios">
-      <input wsam:Action="http://services.lp2soft.pucp.edu.pe/Servicio/listarBibliotecariosRequest" message="tns:listarBibliotecarios" />
-      <output wsam:Action="http://services.lp2soft.pucp.edu.pe/Servicio/listarBibliotecariosResponse" message="tns:listarBibliotecariosResponse" />
+    <operation name="listarPuntosAtencion">
+      <input wsam:Action="http://services.lp2soft.pucp.edu.pe/Servicio/listarPuntosAtencionRequest" message="tns:listarPuntosAtencion" />
+      <output wsam:Action="http://services.lp2soft.pucp.edu.pe/Servicio/listarPuntosAtencionResponse" message="tns:listarPuntosAtencionResponse" />
+    </operation>
+    <operation name="listarPersonalBiblioteca">
+      <input wsam:Action="http://services.lp2soft.pucp.edu.pe/Servicio/listarPersonalBibliotecaRequest" message="tns:listarPersonalBiblioteca" />
+      <output wsam:Action="http://services.lp2soft.pucp.edu.pe/Servicio/listarPersonalBibliotecaResponse" message="tns:listarPersonalBibliotecaResponse" />
+    </operation>
+    <operation name="eliminarPersonalBiblioteca">
+      <input wsam:Action="http://services.lp2soft.pucp.edu.pe/Servicio/eliminarPersonalBibliotecaRequest" message="tns:eliminarPersonalBiblioteca" />
+      <output wsam:Action="http://services.lp2soft.pucp.edu.pe/Servicio/eliminarPersonalBibliotecaResponse" message="tns:eliminarPersonalBibliotecaResponse" />
+    </operation>
+    <operation name="cambiarContrasenaToken">
+      <input wsam:Action="http://services.lp2soft.pucp.edu.pe/Servicio/cambiarContrasenaTokenRequest" message="tns:cambiarContrasenaToken" />
+      <output wsam:Action="http://services.lp2soft.pucp.edu.pe/Servicio/cambiarContrasenaTokenResponse" message="tns:cambiarContrasenaTokenResponse" />
+    </operation>
+    <operation name="insertarBibliotecario">
+      <input wsam:Action="http://services.lp2soft.pucp.edu.pe/Servicio/insertarBibliotecarioRequest" message="tns:insertarBibliotecario" />
+      <output wsam:Action="http://services.lp2soft.pucp.edu.pe/Servicio/insertarBibliotecarioResponse" message="tns:insertarBibliotecarioResponse" />
     </operation>
     <operation name="actualizarBibliotecario">
       <input wsam:Action="http://services.lp2soft.pucp.edu.pe/Servicio/actualizarBibliotecarioRequest" message="tns:actualizarBibliotecario" />
       <output wsam:Action="http://services.lp2soft.pucp.edu.pe/Servicio/actualizarBibliotecarioResponse" message="tns:actualizarBibliotecarioResponse" />
     </operation>
+    <operation name="listarBibliotecarios">
+      <input wsam:Action="http://services.lp2soft.pucp.edu.pe/Servicio/listarBibliotecariosRequest" message="tns:listarBibliotecarios" />
+      <output wsam:Action="http://services.lp2soft.pucp.edu.pe/Servicio/listarBibliotecariosResponse" message="tns:listarBibliotecariosResponse" />
+    </operation>
     <operation name="insertarAuxiliarBiblioteca">
       <input wsam:Action="http://services.lp2soft.pucp.edu.pe/Servicio/insertarAuxiliarBibliotecaRequest" message="tns:insertarAuxiliarBiblioteca" />
       <output wsam:Action="http://services.lp2soft.pucp.edu.pe/Servicio/insertarAuxiliarBibliotecaResponse" message="tns:insertarAuxiliarBibliotecaResponse" />
-    </operation>
-    <operation name="hallarTipoUsuario">
-      <input wsam:Action="http://services.lp2soft.pucp.edu.pe/Servicio/hallarTipoUsuarioRequest" message="tns:hallarTipoUsuario" />
-      <output wsam:Action="http://services.lp2soft.pucp.edu.pe/Servicio/hallarTipoUsuarioResponse" message="tns:hallarTipoUsuarioResponse" />
-    </operation>
-    <operation name="actualizarCapacitacion">
-      <input wsam:Action="http://services.lp2soft.pucp.edu.pe/Servicio/actualizarCapacitacionRequest" message="tns:actualizarCapacitacion" />
-      <output wsam:Action="http://services.lp2soft.pucp.edu.pe/Servicio/actualizarCapacitacionResponse" message="tns:actualizarCapacitacionResponse" />
-    </operation>
-    <operation name="listarPersonalBiblioteca">
-      <input wsam:Action="http://services.lp2soft.pucp.edu.pe/Servicio/listarPersonalBibliotecaRequest" message="tns:listarPersonalBiblioteca" />
-      <output wsam:Action="http://services.lp2soft.pucp.edu.pe/Servicio/listarPersonalBibliotecaResponse" message="tns:listarPersonalBibliotecaResponse" />
     </operation>
     <operation name="actualizarAuxiliarBiblioteca">
       <input wsam:Action="http://services.lp2soft.pucp.edu.pe/Servicio/actualizarAuxiliarBibliotecaRequest" message="tns:actualizarAuxiliarBiblioteca" />
@@ -540,59 +517,6 @@
       <input wsam:Action="http://services.lp2soft.pucp.edu.pe/Servicio/listarHorasExtraPorFechaRequest" message="tns:listarHorasExtraPorFecha" />
       <output wsam:Action="http://services.lp2soft.pucp.edu.pe/Servicio/listarHorasExtraPorFechaResponse" message="tns:listarHorasExtraPorFechaResponse" />
     </operation>
-    <operation name="eliminarCapacitacion">
-      <input wsam:Action="http://services.lp2soft.pucp.edu.pe/Servicio/eliminarCapacitacionRequest" message="tns:eliminarCapacitacion" />
-      <output wsam:Action="http://services.lp2soft.pucp.edu.pe/Servicio/eliminarCapacitacionResponse" message="tns:eliminarCapacitacionResponse" />
-    </operation>
-    <operation name="listarBibliotecasPorNombre">
-      <input wsam:Action="http://services.lp2soft.pucp.edu.pe/Servicio/listarBibliotecasPorNombreRequest" message="tns:listarBibliotecasPorNombre" />
-      <output wsam:Action="http://services.lp2soft.pucp.edu.pe/Servicio/listarBibliotecasPorNombreResponse" message="tns:listarBibliotecasPorNombreResponse" />
-    </operation>
-    <operation name="listarUsuariosLibres">
-      <input wsam:Action="http://services.lp2soft.pucp.edu.pe/Servicio/listarUsuariosLibresRequest" message="tns:listarUsuariosLibres" />
-      <output wsam:Action="http://services.lp2soft.pucp.edu.pe/Servicio/listarUsuariosLibresResponse" message="tns:listarUsuariosLibresResponse" />
-      <fault wsam:Action="http://services.lp2soft.pucp.edu.pe/Servicio/listarUsuariosLibres/Fault/ParseException" name="ParseException" message="tns:ParseException" />
-    </operation>
-    <operation name="listarCapacitaciones">
-      <input wsam:Action="http://services.lp2soft.pucp.edu.pe/Servicio/listarCapacitacionesRequest" message="tns:listarCapacitaciones" />
-      <output wsam:Action="http://services.lp2soft.pucp.edu.pe/Servicio/listarCapacitacionesResponse" message="tns:listarCapacitacionesResponse" />
-    </operation>
-    <operation name="listarPuntosAtencion">
-      <input wsam:Action="http://services.lp2soft.pucp.edu.pe/Servicio/listarPuntosAtencionRequest" message="tns:listarPuntosAtencion" />
-      <output wsam:Action="http://services.lp2soft.pucp.edu.pe/Servicio/listarPuntosAtencionResponse" message="tns:listarPuntosAtencionResponse" />
-    </operation>
-    <operation name="eliminarPersonalBiblioteca">
-      <input wsam:Action="http://services.lp2soft.pucp.edu.pe/Servicio/eliminarPersonalBibliotecaRequest" message="tns:eliminarPersonalBiblioteca" />
-      <output wsam:Action="http://services.lp2soft.pucp.edu.pe/Servicio/eliminarPersonalBibliotecaResponse" message="tns:eliminarPersonalBibliotecaResponse" />
-    </operation>
-    <operation name="actualizarDiaCapacitacion">
-      <input wsam:Action="http://services.lp2soft.pucp.edu.pe/Servicio/actualizarDiaCapacitacionRequest" message="tns:actualizarDiaCapacitacion" />
-      <output wsam:Action="http://services.lp2soft.pucp.edu.pe/Servicio/actualizarDiaCapacitacionResponse" message="tns:actualizarDiaCapacitacionResponse" />
-    </operation>
-    <operation name="insertarPerfilExperiencia">
-      <input wsam:Action="http://services.lp2soft.pucp.edu.pe/Servicio/insertarPerfilExperienciaRequest" message="tns:insertarPerfilExperiencia" />
-      <output wsam:Action="http://services.lp2soft.pucp.edu.pe/Servicio/insertarPerfilExperienciaResponse" message="tns:insertarPerfilExperienciaResponse" />
-    </operation>
-    <operation name="listarBibliotecas">
-      <input wsam:Action="http://services.lp2soft.pucp.edu.pe/Servicio/listarBibliotecasRequest" message="tns:listarBibliotecas" />
-      <output wsam:Action="http://services.lp2soft.pucp.edu.pe/Servicio/listarBibliotecasResponse" message="tns:listarBibliotecasResponse" />
-    </operation>
-    <operation name="listarTipoInasistencia">
-      <input wsam:Action="http://services.lp2soft.pucp.edu.pe/Servicio/listarTipoInasistenciaRequest" message="tns:listarTipoInasistencia" />
-      <output wsam:Action="http://services.lp2soft.pucp.edu.pe/Servicio/listarTipoInasistenciaResponse" message="tns:listarTipoInasistenciaResponse" />
-    </operation>
-    <operation name="listarInasistencias">
-      <input wsam:Action="http://services.lp2soft.pucp.edu.pe/Servicio/listarInasistenciasRequest" message="tns:listarInasistencias" />
-      <output wsam:Action="http://services.lp2soft.pucp.edu.pe/Servicio/listarInasistenciasResponse" message="tns:listarInasistenciasResponse" />
-    </operation>
-    <operation name="eliminarInasistencia">
-      <input wsam:Action="http://services.lp2soft.pucp.edu.pe/Servicio/eliminarInasistenciaRequest" message="tns:eliminarInasistencia" />
-      <output wsam:Action="http://services.lp2soft.pucp.edu.pe/Servicio/eliminarInasistenciaResponse" message="tns:eliminarInasistenciaResponse" />
-    </operation>
-    <operation name="listarTodasHorasLibre">
-      <input wsam:Action="http://services.lp2soft.pucp.edu.pe/Servicio/listarTodasHorasLibreRequest" message="tns:listarTodasHorasLibre" />
-      <output wsam:Action="http://services.lp2soft.pucp.edu.pe/Servicio/listarTodasHorasLibreResponse" message="tns:listarTodasHorasLibreResponse" />
-    </operation>
     <operation name="eliminarHoraExtra">
       <input wsam:Action="http://services.lp2soft.pucp.edu.pe/Servicio/eliminarHoraExtraRequest" message="tns:eliminarHoraExtra" />
       <output wsam:Action="http://services.lp2soft.pucp.edu.pe/Servicio/eliminarHoraExtraResponse" message="tns:eliminarHoraExtraResponse" />
@@ -605,26 +529,102 @@
       <input wsam:Action="http://services.lp2soft.pucp.edu.pe/Servicio/actualizarInasistenciaRequest" message="tns:actualizarInasistencia" />
       <output wsam:Action="http://services.lp2soft.pucp.edu.pe/Servicio/actualizarInasistenciaResponse" message="tns:actualizarInasistenciaResponse" />
     </operation>
+    <operation name="listarTipoInasistencia">
+      <input wsam:Action="http://services.lp2soft.pucp.edu.pe/Servicio/listarTipoInasistenciaRequest" message="tns:listarTipoInasistencia" />
+      <output wsam:Action="http://services.lp2soft.pucp.edu.pe/Servicio/listarTipoInasistenciaResponse" message="tns:listarTipoInasistenciaResponse" />
+    </operation>
+    <operation name="listarInasistencias">
+      <input wsam:Action="http://services.lp2soft.pucp.edu.pe/Servicio/listarInasistenciasRequest" message="tns:listarInasistencias" />
+      <output wsam:Action="http://services.lp2soft.pucp.edu.pe/Servicio/listarInasistenciasResponse" message="tns:listarInasistenciasResponse" />
+    </operation>
     <operation name="listarInasistenciasPorFecha">
       <input wsam:Action="http://services.lp2soft.pucp.edu.pe/Servicio/listarInasistenciasPorFechaRequest" message="tns:listarInasistenciasPorFecha" />
       <output wsam:Action="http://services.lp2soft.pucp.edu.pe/Servicio/listarInasistenciasPorFechaResponse" message="tns:listarInasistenciasPorFechaResponse" />
     </operation>
-    <operation name="elimDistribucionPersonal">
-      <input wsam:Action="http://services.lp2soft.pucp.edu.pe/Servicio/elimDistribucionPersonalRequest" message="tns:elimDistribucionPersonal" />
-      <output wsam:Action="http://services.lp2soft.pucp.edu.pe/Servicio/elimDistribucionPersonalResponse" message="tns:elimDistribucionPersonalResponse" />
+    <operation name="listarTodasHorasLibre">
+      <input wsam:Action="http://services.lp2soft.pucp.edu.pe/Servicio/listarTodasHorasLibreRequest" message="tns:listarTodasHorasLibre" />
+      <output wsam:Action="http://services.lp2soft.pucp.edu.pe/Servicio/listarTodasHorasLibreResponse" message="tns:listarTodasHorasLibreResponse" />
     </operation>
     <operation name="listarHorasLibrePorFecha">
       <input wsam:Action="http://services.lp2soft.pucp.edu.pe/Servicio/listarHorasLibrePorFechaRequest" message="tns:listarHorasLibrePorFecha" />
       <output wsam:Action="http://services.lp2soft.pucp.edu.pe/Servicio/listarHorasLibrePorFechaResponse" message="tns:listarHorasLibrePorFechaResponse" />
     </operation>
+    <operation name="eliminarInasistencia">
+      <input wsam:Action="http://services.lp2soft.pucp.edu.pe/Servicio/eliminarInasistenciaRequest" message="tns:eliminarInasistencia" />
+      <output wsam:Action="http://services.lp2soft.pucp.edu.pe/Servicio/eliminarInasistenciaResponse" message="tns:eliminarInasistenciaResponse" />
+    </operation>
+    <operation name="elimDistribucionPersonal">
+      <input wsam:Action="http://services.lp2soft.pucp.edu.pe/Servicio/elimDistribucionPersonalRequest" message="tns:elimDistribucionPersonal" />
+      <output wsam:Action="http://services.lp2soft.pucp.edu.pe/Servicio/elimDistribucionPersonalResponse" message="tns:elimDistribucionPersonalResponse" />
+    </operation>
     <operation name="insertarDistribucionPersonal">
       <input wsam:Action="http://services.lp2soft.pucp.edu.pe/Servicio/insertarDistribucionPersonalRequest" message="tns:insertarDistribucionPersonal" />
       <output wsam:Action="http://services.lp2soft.pucp.edu.pe/Servicio/insertarDistribucionPersonalResponse" message="tns:insertarDistribucionPersonalResponse" />
     </operation>
+    <operation name="validarUsuario">
+      <input wsam:Action="http://services.lp2soft.pucp.edu.pe/Servicio/validarUsuarioRequest" message="tns:validarUsuario" />
+      <output wsam:Action="http://services.lp2soft.pucp.edu.pe/Servicio/validarUsuarioResponse" message="tns:validarUsuarioResponse" />
+    </operation>
+    <operation name="hello">
+      <input wsam:Action="http://services.lp2soft.pucp.edu.pe/Servicio/helloRequest" message="tns:hello" />
+      <output wsam:Action="http://services.lp2soft.pucp.edu.pe/Servicio/helloResponse" message="tns:helloResponse" />
+    </operation>
+    <operation name="insertarAviso">
+      <input wsam:Action="http://services.lp2soft.pucp.edu.pe/Servicio/insertarAvisoRequest" message="tns:insertarAviso" />
+      <output wsam:Action="http://services.lp2soft.pucp.edu.pe/Servicio/insertarAvisoResponse" message="tns:insertarAvisoResponse" />
+    </operation>
+    <operation name="actualizarAviso">
+      <input wsam:Action="http://services.lp2soft.pucp.edu.pe/Servicio/actualizarAvisoRequest" message="tns:actualizarAviso" />
+      <output wsam:Action="http://services.lp2soft.pucp.edu.pe/Servicio/actualizarAvisoResponse" message="tns:actualizarAvisoResponse" />
+    </operation>
+    <operation name="elimAviso">
+      <input wsam:Action="http://services.lp2soft.pucp.edu.pe/Servicio/elimAvisoRequest" message="tns:elimAviso" />
+      <output wsam:Action="http://services.lp2soft.pucp.edu.pe/Servicio/elimAvisoResponse" message="tns:elimAvisoResponse" />
+    </operation>
+    <operation name="listarAvisos">
+      <input wsam:Action="http://services.lp2soft.pucp.edu.pe/Servicio/listarAvisosRequest" message="tns:listarAvisos" />
+      <output wsam:Action="http://services.lp2soft.pucp.edu.pe/Servicio/listarAvisosResponse" message="tns:listarAvisosResponse" />
+    </operation>
+    <operation name="asignarPerfil">
+      <input wsam:Action="http://services.lp2soft.pucp.edu.pe/Servicio/asignarPerfilRequest" message="tns:asignarPerfil" />
+      <output wsam:Action="http://services.lp2soft.pucp.edu.pe/Servicio/asignarPerfilResponse" message="tns:asignarPerfilResponse" />
+    </operation>
+    <operation name="enviarToken">
+      <input wsam:Action="http://services.lp2soft.pucp.edu.pe/Servicio/enviarTokenRequest" message="tns:enviarToken" />
+      <output wsam:Action="http://services.lp2soft.pucp.edu.pe/Servicio/enviarTokenResponse" message="tns:enviarTokenResponse" />
+    </operation>
+    <operation name="listarAuxiliares">
+      <input wsam:Action="http://services.lp2soft.pucp.edu.pe/Servicio/listarAuxiliaresRequest" message="tns:listarAuxiliares" />
+      <output wsam:Action="http://services.lp2soft.pucp.edu.pe/Servicio/listarAuxiliaresResponse" message="tns:listarAuxiliaresResponse" />
+    </operation>
+    <operation name="insertarGestor">
+      <input wsam:Action="http://services.lp2soft.pucp.edu.pe/Servicio/insertarGestorRequest" message="tns:insertarGestor" />
+      <output wsam:Action="http://services.lp2soft.pucp.edu.pe/Servicio/insertarGestorResponse" message="tns:insertarGestorResponse" />
+    </operation>
+    <operation name="actualizarGestor">
+      <input wsam:Action="http://services.lp2soft.pucp.edu.pe/Servicio/actualizarGestorRequest" message="tns:actualizarGestor" />
+      <output wsam:Action="http://services.lp2soft.pucp.edu.pe/Servicio/actualizarGestorResponse" message="tns:actualizarGestorResponse" />
+    </operation>
+    <operation name="eliminarGestor">
+      <input wsam:Action="http://services.lp2soft.pucp.edu.pe/Servicio/eliminarGestorRequest" message="tns:eliminarGestor" />
+      <output wsam:Action="http://services.lp2soft.pucp.edu.pe/Servicio/eliminarGestorResponse" message="tns:eliminarGestorResponse" />
+    </operation>
+    <operation name="listarGestores">
+      <input wsam:Action="http://services.lp2soft.pucp.edu.pe/Servicio/listarGestoresRequest" message="tns:listarGestores" />
+      <output wsam:Action="http://services.lp2soft.pucp.edu.pe/Servicio/listarGestoresResponse" message="tns:listarGestoresResponse" />
+    </operation>
+    <operation name="listarHorasExtra">
+      <input wsam:Action="http://services.lp2soft.pucp.edu.pe/Servicio/listarHorasExtraRequest" message="tns:listarHorasExtra" />
+      <output wsam:Action="http://services.lp2soft.pucp.edu.pe/Servicio/listarHorasExtraResponse" message="tns:listarHorasExtraResponse" />
+    </operation>
+    <operation name="listarHorasLibre">
+      <input wsam:Action="http://services.lp2soft.pucp.edu.pe/Servicio/listarHorasLibreRequest" message="tns:listarHorasLibre" />
+      <output wsam:Action="http://services.lp2soft.pucp.edu.pe/Servicio/listarHorasLibreResponse" message="tns:listarHorasLibreResponse" />
+    </operation>
   </portType>
   <binding name="ServicioPortBinding" type="tns:Servicio">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
-    <operation name="actualizarEstadoCapacitacionDePersonal">
+    <operation name="listarCapacitacionesPersonalxEstado">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -633,7 +633,7 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="listarCapacitacionesPersonalxEstado">
+    <operation name="actualizarEstadoCapacitacionDePersonal">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -654,7 +654,7 @@
         <soap:fault use="literal" name="ParseException" namespace="" />
       </fault>
     </operation>
-    <operation name="listarHorasExtra">
+    <operation name="hallarTipoUsuario">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -663,7 +663,19 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="hello">
+    <operation name="listarUsuariosLibres">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="ParseException">
+        <soap:fault use="literal" name="ParseException" namespace="" />
+      </fault>
+    </operation>
+    <operation name="insertarPerfilExperiencia">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -672,7 +684,7 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="validarUsuario">
+    <operation name="listarPerfilExperiencia">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -681,7 +693,7 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="actualizarAviso">
+    <operation name="listarCapacitaciones">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -690,7 +702,7 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="enviarToken">
+    <operation name="actualizarCapacitacion">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -699,7 +711,7 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="listarAvisos">
+    <operation name="eliminarCapacitacion">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -708,97 +720,7 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="listarGestores">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="asignarPerfil">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="actualizarGestor">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="listarHorasLibre">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="insertarAviso">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="listarAuxiliares">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="eliminarGestor">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="insertarGestor">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="elimAviso">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="cambiarContrasenaToken">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="insertarBibliotecario">
+    <operation name="insertarCapacitacion">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -816,16 +738,7 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="eliminarBiblioteca">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="insertarCapacitacion">
+    <operation name="actualizarDiaCapacitacion">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -852,7 +765,25 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="listarPerfilExperiencia">
+    <operation name="eliminarBiblioteca">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarBibliotecas">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarBibliotecasPorNombre">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -879,7 +810,43 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="listarBibliotecarios">
+    <operation name="listarPuntosAtencion">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarPersonalBiblioteca">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="eliminarPersonalBiblioteca">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="cambiarContrasenaToken">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="insertarBibliotecario">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -897,34 +864,16 @@
         <soap:body use="literal" />
       </output>
     </operation>
+    <operation name="listarBibliotecarios">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
     <operation name="insertarAuxiliarBiblioteca">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="hallarTipoUsuario">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="actualizarCapacitacion">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="listarPersonalBiblioteca">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -996,126 +945,6 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="eliminarCapacitacion">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="listarBibliotecasPorNombre">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="listarUsuariosLibres">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-      <fault name="ParseException">
-        <soap:fault use="literal" name="ParseException" namespace="" />
-      </fault>
-    </operation>
-    <operation name="listarCapacitaciones">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="listarPuntosAtencion">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="eliminarPersonalBiblioteca">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="actualizarDiaCapacitacion">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="insertarPerfilExperiencia">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="listarBibliotecas">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="listarTipoInasistencia">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="listarInasistencias">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="eliminarInasistencia">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="listarTodasHorasLibre">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
     <operation name="eliminarHoraExtra">
       <soap:operation soapAction="" />
       <input>
@@ -1143,6 +972,24 @@
         <soap:body use="literal" />
       </output>
     </operation>
+    <operation name="listarTipoInasistencia">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarInasistencias">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
     <operation name="listarInasistenciasPorFecha">
       <soap:operation soapAction="" />
       <input>
@@ -1152,7 +999,7 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="elimDistribucionPersonal">
+    <operation name="listarTodasHorasLibre">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -1170,7 +1017,160 @@
         <soap:body use="literal" />
       </output>
     </operation>
+    <operation name="eliminarInasistencia">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="elimDistribucionPersonal">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
     <operation name="insertarDistribucionPersonal">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="validarUsuario">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="hello">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="insertarAviso">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="actualizarAviso">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="elimAviso">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarAvisos">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="asignarPerfil">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="enviarToken">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarAuxiliares">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="insertarGestor">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="actualizarGestor">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="eliminarGestor">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarGestores">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarHorasExtra">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarHorasLibre">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />

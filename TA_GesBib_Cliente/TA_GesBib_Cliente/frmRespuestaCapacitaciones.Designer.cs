@@ -59,9 +59,10 @@
             this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(37)))), ((int)(((byte)(42)))));
-            this.label6.Location = new System.Drawing.Point(83, 54);
+            this.label6.Location = new System.Drawing.Point(111, 66);
+            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(399, 13);
+            this.label6.Size = new System.Drawing.Size(512, 17);
             this.label6.TabIndex = 109;
             this.label6.Text = "________________________________________________________";
             // 
@@ -71,9 +72,10 @@
             this.label9.BackColor = System.Drawing.Color.Transparent;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(37)))), ((int)(((byte)(42)))));
-            this.label9.Location = new System.Drawing.Point(81, 20);
+            this.label9.Location = new System.Drawing.Point(108, 25);
+            this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(395, 33);
+            this.label9.Size = new System.Drawing.Size(505, 42);
             this.label9.TabIndex = 108;
             this.label9.Text = "Capacitaciones programadas";
             this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -84,14 +86,15 @@
             this.btnActualizarPen.FlatAppearance.BorderSize = 0;
             this.btnActualizarPen.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnActualizarPen.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.btnActualizarPen.Location = new System.Drawing.Point(253, 283);
-            this.btnActualizarPen.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnActualizarPen.Location = new System.Drawing.Point(389, 19);
+            this.btnActualizarPen.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnActualizarPen.Name = "btnActualizarPen";
-            this.btnActualizarPen.Size = new System.Drawing.Size(179, 34);
+            this.btnActualizarPen.Size = new System.Drawing.Size(239, 42);
             this.btnActualizarPen.TabIndex = 111;
             this.btnActualizarPen.Text = "Actualizar";
             this.btnActualizarPen.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnActualizarPen.UseVisualStyleBackColor = false;
+            this.btnActualizarPen.Click += new System.EventHandler(this.btnActualizarPen_Click);
             // 
             // btnCerrar
             // 
@@ -100,10 +103,10 @@
             this.btnCerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCerrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.btnCerrar.Image = global::TA_GesBib_Cliente.Properties.Resources.icono_regresar;
-            this.btnCerrar.Location = new System.Drawing.Point(18, 33);
-            this.btnCerrar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnCerrar.Location = new System.Drawing.Point(24, 41);
+            this.btnCerrar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnCerrar.Name = "btnCerrar";
-            this.btnCerrar.Size = new System.Drawing.Size(50, 36);
+            this.btnCerrar.Size = new System.Drawing.Size(67, 44);
             this.btnCerrar.TabIndex = 120;
             this.btnCerrar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnCerrar.UseVisualStyleBackColor = false;
@@ -117,9 +120,10 @@
             this.btnGuardarAcep.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGuardarAcep.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.btnGuardarAcep.Image = global::TA_GesBib_Cliente.Properties.Resources.icono_guardar;
-            this.btnGuardarAcep.Location = new System.Drawing.Point(548, 286);
+            this.btnGuardarAcep.Location = new System.Drawing.Point(416, 386);
+            this.btnGuardarAcep.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnGuardarAcep.Name = "btnGuardarAcep";
-            this.btnGuardarAcep.Size = new System.Drawing.Size(144, 32);
+            this.btnGuardarAcep.Size = new System.Drawing.Size(192, 39);
             this.btnGuardarAcep.TabIndex = 121;
             this.btnGuardarAcep.Text = "GUARDAR";
             this.btnGuardarAcep.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -136,12 +140,12 @@
             this.nombre,
             this.Descripcion,
             this.Validado});
-            this.dgvRespCapac.Location = new System.Drawing.Point(10, 15);
-            this.dgvRespCapac.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dgvRespCapac.Location = new System.Drawing.Point(50, 77);
+            this.dgvRespCapac.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dgvRespCapac.Name = "dgvRespCapac";
             this.dgvRespCapac.RowTemplate.Height = 24;
             this.dgvRespCapac.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvRespCapac.Size = new System.Drawing.Size(711, 249);
+            this.dgvRespCapac.Size = new System.Drawing.Size(948, 306);
             this.dgvRespCapac.TabIndex = 110;
             this.dgvRespCapac.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgvRespCapac_CellFormatting);
             // 
@@ -170,9 +174,10 @@
             this.tbpAceptadas.Controls.Add(this.dgvAceptadas);
             this.tbpAceptadas.Controls.Add(this.btnGuardarAcep);
             this.tbpAceptadas.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F);
-            this.tbpAceptadas.Location = new System.Drawing.Point(4, 25);
+            this.tbpAceptadas.Location = new System.Drawing.Point(4, 29);
+            this.tbpAceptadas.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tbpAceptadas.Name = "tbpAceptadas";
-            this.tbpAceptadas.Size = new System.Drawing.Size(716, 336);
+            this.tbpAceptadas.Size = new System.Drawing.Size(1033, 442);
             this.tbpAceptadas.TabIndex = 4;
             this.tbpAceptadas.Text = "Aceptadas";
             this.tbpAceptadas.UseVisualStyleBackColor = true;
@@ -183,10 +188,10 @@
             this.btnActAceptadas.FlatAppearance.BorderSize = 0;
             this.btnActAceptadas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnActAceptadas.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.btnActAceptadas.Location = new System.Drawing.Point(253, 284);
-            this.btnActAceptadas.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnActAceptadas.Location = new System.Drawing.Point(389, 19);
+            this.btnActAceptadas.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnActAceptadas.Name = "btnActAceptadas";
-            this.btnActAceptadas.Size = new System.Drawing.Size(179, 34);
+            this.btnActAceptadas.Size = new System.Drawing.Size(239, 42);
             this.btnActAceptadas.TabIndex = 122;
             this.btnActAceptadas.Text = "Actualizar";
             this.btnActAceptadas.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -203,12 +208,12 @@
             this.nombree,
             this.dataGridViewTextBoxColumn1,
             this.dataGridViewCheckBoxColumn1});
-            this.dgvAceptadas.Location = new System.Drawing.Point(10, 14);
-            this.dgvAceptadas.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dgvAceptadas.Location = new System.Drawing.Point(49, 65);
+            this.dgvAceptadas.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dgvAceptadas.Name = "dgvAceptadas";
             this.dgvAceptadas.RowTemplate.Height = 24;
             this.dgvAceptadas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvAceptadas.Size = new System.Drawing.Size(681, 252);
+            this.dgvAceptadas.Size = new System.Drawing.Size(908, 310);
             this.dgvAceptadas.TabIndex = 111;
             this.dgvAceptadas.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgvAceptadas_CellFormatting);
             // 
@@ -237,9 +242,10 @@
             this.tbpPendientes.Controls.Add(this.dgvRespCapac);
             this.tbpPendientes.Controls.Add(this.btnActualizarPen);
             this.tbpPendientes.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F);
-            this.tbpPendientes.Location = new System.Drawing.Point(4, 25);
+            this.tbpPendientes.Location = new System.Drawing.Point(4, 29);
+            this.tbpPendientes.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tbpPendientes.Name = "tbpPendientes";
-            this.tbpPendientes.Size = new System.Drawing.Size(773, 336);
+            this.tbpPendientes.Size = new System.Drawing.Size(1033, 442);
             this.tbpPendientes.TabIndex = 3;
             this.tbpPendientes.Text = "Pendientes de Confirmación";
             this.tbpPendientes.UseVisualStyleBackColor = true;
@@ -252,9 +258,10 @@
             this.btnGuardarPen.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGuardarPen.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.btnGuardarPen.Image = global::TA_GesBib_Cliente.Properties.Resources.icono_guardar;
-            this.btnGuardarPen.Location = new System.Drawing.Point(548, 283);
+            this.btnGuardarPen.Location = new System.Drawing.Point(424, 389);
+            this.btnGuardarPen.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnGuardarPen.Name = "btnGuardarPen";
-            this.btnGuardarPen.Size = new System.Drawing.Size(144, 32);
+            this.btnGuardarPen.Size = new System.Drawing.Size(192, 39);
             this.btnGuardarPen.TabIndex = 122;
             this.btnGuardarPen.Text = "GUARDAR";
             this.btnGuardarPen.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -266,23 +273,25 @@
             this.tabCtrlValidaciones.Controls.Add(this.tbpPendientes);
             this.tabCtrlValidaciones.Controls.Add(this.tbpAceptadas);
             this.tabCtrlValidaciones.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabCtrlValidaciones.Location = new System.Drawing.Point(32, 111);
+            this.tabCtrlValidaciones.Location = new System.Drawing.Point(43, 137);
+            this.tabCtrlValidaciones.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tabCtrlValidaciones.Name = "tabCtrlValidaciones";
             this.tabCtrlValidaciones.SelectedIndex = 0;
-            this.tabCtrlValidaciones.Size = new System.Drawing.Size(781, 365);
+            this.tabCtrlValidaciones.Size = new System.Drawing.Size(1041, 475);
             this.tabCtrlValidaciones.TabIndex = 138;
             // 
             // frmRespuestaCapacitaciones
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(242)))), ((int)(((byte)(241)))));
-            this.ClientSize = new System.Drawing.Size(851, 525);
+            this.ClientSize = new System.Drawing.Size(1135, 646);
             this.Controls.Add(this.tabCtrlValidaciones);
             this.Controls.Add(this.btnCerrar);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label9);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "frmRespuestaCapacitaciones";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmRespuestaValidaciones";
