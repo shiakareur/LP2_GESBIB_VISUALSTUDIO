@@ -14,21 +14,48 @@ namespace TA_GesBib_Cliente
     {
 
         System.Windows.Forms.BindingSource bindingSource1 = new System.Windows.Forms.BindingSource();
+        System.Windows.Forms.BindingSource bindingSource2 = new System.Windows.Forms.BindingSource();
         List<String> horas = new List<String> { "8:00", "9:00", "10:00", "11:00", "12:00", "13:00", "14:00", "15:00", "16:00", "17:00", "18:00", "19:00", "20:00", "21:00", "22:00"};
+        List<String> horas2 = new List<String> { "8:00", "9:00", "10:00", "11:00", "12:00", "13:00", "14:00", "15:00", "16:00", "17:00", "18:00", "19:00", "20:00", "21:00", "22:00"};
         ServicioJava.personal personal = new ServicioJava.personal();
 
         public frmAsignarPersonalPuntoAtencion()
         {
             InitializeComponent();
             bindingSource1.DataSource = horas;
+            bindingSource2.DataSource = horas2;
 
             cmbHoraIni.DataSource = bindingSource1.DataSource;
-            cmbHoraFin.DataSource = bindingSource1.DataSource;
+            cmbHoraFin.DataSource = bindingSource2.DataSource;
             dgvPersonal.AutoGenerateColumns = false;
 
             //comboBox1.DisplayMember = "Name";
             //comboBox1.ValueMember = "Name";
         }
+
+        public frmAsignarPersonalPuntoAtencion(ServicioJava.biblioteca bib, ServicioJava.puntosAtencion puntoA, DateTime fecha, int col)
+        {
+            InitializeComponent();
+            bindingSource1.DataSource = horas;
+            bindingSource2.DataSource = horas2;
+
+            cmbHoraIni.DataSource = bindingSource1.DataSource;
+            cmbHoraFin.DataSource = bindingSource2.DataSource;
+            dgvPersonal.AutoGenerateColumns = false;
+
+            txtBib.Text = bib.nombre;
+            txtPtoAtencion.Text = puntoA.nombre;
+            txtCantMin.Text = puntoA.cant_min_pers.ToString();
+            txtCantOpt.Text = puntoA.cant_opt_pers.ToString();
+            txtPerfil.Text = puntoA.perfilExperiencia.nombrePerfil;
+            dtpFecha.Value = fecha;
+            cmbHoraIni.SelectedIndex = col-1;
+            cmbHoraFin.SelectedIndex = col;
+
+
+        }
+        
+
 
         private void frmAsignarPersonalPuntoAtencion_Load(object sender, EventArgs e)
         {

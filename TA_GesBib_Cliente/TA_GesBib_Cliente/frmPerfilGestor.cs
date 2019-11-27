@@ -256,17 +256,16 @@ namespace TA_GesBib_Cliente
 
         private void btnSemana_Click(object sender, EventArgs e)
         {
-            /*frmDistribuirPersonalSemana formDistSemana = new frmDistribuirPersonalSemana(var_usuario);            
-            formDistSemana.MdiParent = this;
+            var_formDistSemana = new frmDistribuirPersonalSemana(var_formDistSemana,var_usuario);
+            var_formDistSemana.MdiParent = this;
             //formDistSemana.Location = new Point(0, 0);
             //formDistSemana.Size = new Size(934, 675);
-            formDistSemana.StartPosition = FormStartPosition.Manual;
-            formDistSemana.Left = 0;
-            formDistSemana.Top = 0;
-            formDistSemana.Show();
+            var_formDistSemana.StartPosition = FormStartPosition.Manual;
+            var_formDistSemana.Left = 0;
+            var_formDistSemana.Top = 0;
+            var_formDistSemana.Show();
             hideSubMenu();
-            */
-
+            
             panelBIPO.Visible = false;
             /*poner los demas forms no visibles (si existen)*/
             if (var_formAsignarTurnos != null) var_formAsignarTurnos.Visible = false;
