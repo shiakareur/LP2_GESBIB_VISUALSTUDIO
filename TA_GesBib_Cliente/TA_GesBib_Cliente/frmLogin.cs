@@ -27,6 +27,9 @@ namespace TA_GesBib_Cliente
             ServicioJava.personalBiblioteca datosUsuario = servTA.informacionPersonalBiblioteca(placeHolderUsuario.Text);
             if (userV.nombreTipo == "")
             {
+                MessageBox.Show("ERROR , ¡Su usuario o contraseña no coincidden!",
+                    "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+
             }
             else if (userV.nombreTipo == "ADMINISTRADOR")
             {

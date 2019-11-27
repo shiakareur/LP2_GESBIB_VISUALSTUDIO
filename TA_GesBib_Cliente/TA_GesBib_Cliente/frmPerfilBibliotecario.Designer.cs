@@ -54,8 +54,17 @@
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.panelAviso = new System.Windows.Forms.Panel();
             this.txtDescripcion = new System.Windows.Forms.TextBox();
-            this.lblTitulo = new System.Windows.Forms.Label();
+            this.lblTitulo1 = new System.Windows.Forms.Label();
             this.panelBIPO = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.txtDescripcion4 = new System.Windows.Forms.TextBox();
+            this.lblTitulo4 = new System.Windows.Forms.Label();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.txtDescripcion3 = new System.Windows.Forms.TextBox();
+            this.lblTitulo3 = new System.Windows.Forms.Label();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.txtDescripcion2 = new System.Windows.Forms.TextBox();
+            this.lblTitulo2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -65,6 +74,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.panelAviso.SuspendLayout();
             this.panelBIPO.SuspendLayout();
+            this.panel2.SuspendLayout();
+            this.panel5.SuspendLayout();
+            this.panel6.SuspendLayout();
             this.SuspendLayout();
             // 
             // label3
@@ -72,7 +84,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(67)))), ((int)(((byte)(232)))));
-            this.label3.Location = new System.Drawing.Point(34, 81);
+            this.label3.Location = new System.Drawing.Point(35, 81);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(251, 17);
@@ -97,7 +109,7 @@
             this.lblNombreUsuario.AutoSize = true;
             this.lblNombreUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNombreUsuario.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.lblNombreUsuario.Location = new System.Drawing.Point(141, 56);
+            this.lblNombreUsuario.Location = new System.Drawing.Point(141, 57);
             this.lblNombreUsuario.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblNombreUsuario.Name = "lblNombreUsuario";
             this.lblNombreUsuario.Size = new System.Drawing.Size(50, 25);
@@ -119,10 +131,11 @@
             this.btnDistribuir_Personal.Location = new System.Drawing.Point(0, 0);
             this.btnDistribuir_Personal.Margin = new System.Windows.Forms.Padding(4);
             this.btnDistribuir_Personal.Name = "btnDistribuir_Personal";
-            this.btnDistribuir_Personal.Padding = new System.Windows.Forms.Padding(13, 0, 7, 0);
+            this.btnDistribuir_Personal.Padding = new System.Windows.Forms.Padding(13, 0, 1, 0);
             this.btnDistribuir_Personal.Size = new System.Drawing.Size(337, 73);
             this.btnDistribuir_Personal.TabIndex = 10;
             this.btnDistribuir_Personal.Text = "Distribución Personal";
+            this.btnDistribuir_Personal.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnDistribuir_Personal.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnDistribuir_Personal.UseVisualStyleBackColor = false;
             this.btnDistribuir_Personal.Click += new System.EventHandler(this.btnDistribuir_Personal_Click);
@@ -141,10 +154,11 @@
             this.btnRegistrar.Location = new System.Drawing.Point(0, 133);
             this.btnRegistrar.Margin = new System.Windows.Forms.Padding(4);
             this.btnRegistrar.Name = "btnRegistrar";
-            this.btnRegistrar.Padding = new System.Windows.Forms.Padding(13, 0, 13, 0);
+            this.btnRegistrar.Padding = new System.Windows.Forms.Padding(13, 0, 1, 0);
             this.btnRegistrar.Size = new System.Drawing.Size(337, 49);
             this.btnRegistrar.TabIndex = 10;
-            this.btnRegistrar.Text = "Registrar ";
+            this.btnRegistrar.Text = "    Horas extras / Inasistencias";
+            this.btnRegistrar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnRegistrar.UseVisualStyleBackColor = false;
             this.btnRegistrar.Click += new System.EventHandler(this.btnRegistrar_Click);
             // 
@@ -165,7 +179,8 @@
             this.btnSolicitar.Padding = new System.Windows.Forms.Padding(13, 0, 0, 0);
             this.btnSolicitar.Size = new System.Drawing.Size(337, 49);
             this.btnSolicitar.TabIndex = 50;
-            this.btnSolicitar.Text = "Solicitar";
+            this.btnSolicitar.Text = "Horas libres / Cambio turno";
+            this.btnSolicitar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnSolicitar.UseVisualStyleBackColor = false;
             this.btnSolicitar.Click += new System.EventHandler(this.btnSolicitar_Click);
             // 
@@ -265,12 +280,12 @@
             this.btnCapac.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnCapac.FlatAppearance.BorderSize = 0;
             this.btnCapac.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCapac.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCapac.Image = global::TA_GesBib_Cliente.Properties.Resources.icono_cerrar_sesion;
-            this.btnCapac.Location = new System.Drawing.Point(13, 608);
+            this.btnCapac.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCapac.Image = global::TA_GesBib_Cliente.Properties.Resources.icons8_aula_50;
+            this.btnCapac.Location = new System.Drawing.Point(0, 104);
             this.btnCapac.Margin = new System.Windows.Forms.Padding(4);
             this.btnCapac.Name = "btnCapac";
-            this.btnCapac.Size = new System.Drawing.Size(287, 60);
+            this.btnCapac.Size = new System.Drawing.Size(318, 56);
             this.btnCapac.TabIndex = 60;
             this.btnCapac.Text = "Capacitaciones";
             this.btnCapac.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -296,7 +311,7 @@
             this.panel3.Controls.Add(this.btnRegistrar);
             this.panel3.Controls.Add(this.btnVisualizarHorarios);
             this.panel3.Controls.Add(this.btnDistribuir_Personal);
-            this.panel3.Location = new System.Drawing.Point(13, 102);
+            this.panel3.Location = new System.Drawing.Point(13, 166);
             this.panel3.Margin = new System.Windows.Forms.Padding(4);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(337, 492);
@@ -319,7 +334,8 @@
             this.btnNotificaciones.Padding = new System.Windows.Forms.Padding(7, 0, 0, 0);
             this.btnNotificaciones.Size = new System.Drawing.Size(337, 49);
             this.btnNotificaciones.TabIndex = 61;
-            this.btnNotificaciones.Text = "     Notificaciones";
+            this.btnNotificaciones.Text = "        Notificaciones";
+            this.btnNotificaciones.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnNotificaciones.UseVisualStyleBackColor = false;
             this.btnNotificaciones.Click += new System.EventHandler(this.btnNotificaciones_Click);
             // 
@@ -348,7 +364,7 @@
             this.btnSolicitar_CambioTurno.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
             this.btnSolicitar_CambioTurno.Size = new System.Drawing.Size(336, 49);
             this.btnSolicitar_CambioTurno.TabIndex = 62;
-            this.btnSolicitar_CambioTurno.Text = "> Cambio de Turno";
+            this.btnSolicitar_CambioTurno.Text = "> Solicitar Cambio de Turno";
             this.btnSolicitar_CambioTurno.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnSolicitar_CambioTurno.UseVisualStyleBackColor = false;
             this.btnSolicitar_CambioTurno.Click += new System.EventHandler(this.btnSolicitar_CambioTurno_Click);
@@ -367,7 +383,7 @@
             this.btnSolicitar_HLibres.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
             this.btnSolicitar_HLibres.Size = new System.Drawing.Size(336, 49);
             this.btnSolicitar_HLibres.TabIndex = 61;
-            this.btnSolicitar_HLibres.Text = "> Horas Libres";
+            this.btnSolicitar_HLibres.Text = "> Solicitar Horas Libres";
             this.btnSolicitar_HLibres.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnSolicitar_HLibres.UseVisualStyleBackColor = false;
             this.btnSolicitar_HLibres.Click += new System.EventHandler(this.btnSolicitar_HLibres_Click);
@@ -397,7 +413,7 @@
             this.btnReg_Inas.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
             this.btnReg_Inas.Size = new System.Drawing.Size(337, 49);
             this.btnReg_Inas.TabIndex = 62;
-            this.btnReg_Inas.Text = "> Inasistencias";
+            this.btnReg_Inas.Text = "> Registrar Inasistencias";
             this.btnReg_Inas.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnReg_Inas.UseVisualStyleBackColor = false;
             this.btnReg_Inas.Click += new System.EventHandler(this.btnReg_Inas_Click);
@@ -416,7 +432,7 @@
             this.btnReg_HE.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
             this.btnReg_HE.Size = new System.Drawing.Size(337, 49);
             this.btnReg_HE.TabIndex = 61;
-            this.btnReg_HE.Text = "> Horas Extras";
+            this.btnReg_HE.Text = "> Registrar Horas Extras";
             this.btnReg_HE.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnReg_HE.UseVisualStyleBackColor = false;
             this.btnReg_HE.Click += new System.EventHandler(this.btnReg_HE_Click);
@@ -459,47 +475,165 @@
             this.panelAviso.BackgroundImage = global::TA_GesBib_Cliente.Properties.Resources.posit;
             this.panelAviso.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.panelAviso.Controls.Add(this.txtDescripcion);
-            this.panelAviso.Controls.Add(this.lblTitulo);
+            this.panelAviso.Controls.Add(this.lblTitulo1);
             this.panelAviso.Location = new System.Drawing.Point(95, 102);
             this.panelAviso.Margin = new System.Windows.Forms.Padding(4);
             this.panelAviso.Name = "panelAviso";
-            this.panelAviso.Size = new System.Drawing.Size(625, 401);
+            this.panelAviso.Size = new System.Drawing.Size(441, 293);
             this.panelAviso.TabIndex = 60;
             // 
             // txtDescripcion
             // 
             this.txtDescripcion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.txtDescripcion.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtDescripcion.Location = new System.Drawing.Point(113, 172);
+            this.txtDescripcion.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDescripcion.Location = new System.Drawing.Point(83, 110);
             this.txtDescripcion.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtDescripcion.Multiline = true;
             this.txtDescripcion.Name = "txtDescripcion";
-            this.txtDescripcion.Size = new System.Drawing.Size(397, 151);
+            this.txtDescripcion.Size = new System.Drawing.Size(283, 94);
             this.txtDescripcion.TabIndex = 131;
             // 
-            // lblTitulo
+            // lblTitulo1
             // 
-            this.lblTitulo.AutoSize = true;
-            this.lblTitulo.BackColor = System.Drawing.Color.Transparent;
-            this.lblTitulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTitulo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(37)))), ((int)(((byte)(42)))));
-            this.lblTitulo.Location = new System.Drawing.Point(145, 95);
-            this.lblTitulo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblTitulo.Name = "lblTitulo";
-            this.lblTitulo.Size = new System.Drawing.Size(95, 36);
-            this.lblTitulo.TabIndex = 127;
-            this.lblTitulo.Text = "Título";
+            this.lblTitulo1.AutoSize = true;
+            this.lblTitulo1.BackColor = System.Drawing.Color.Transparent;
+            this.lblTitulo1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitulo1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(37)))), ((int)(((byte)(42)))));
+            this.lblTitulo1.Location = new System.Drawing.Point(64, 44);
+            this.lblTitulo1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblTitulo1.Name = "lblTitulo1";
+            this.lblTitulo1.Size = new System.Drawing.Size(95, 36);
+            this.lblTitulo1.TabIndex = 127;
+            this.lblTitulo1.Text = "Título";
             // 
             // panelBIPO
             // 
             this.panelBIPO.BackgroundImage = global::TA_GesBib_Cliente.Properties.Resources.biblio_ari_borroso;
             this.panelBIPO.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panelBIPO.Controls.Add(this.panel2);
+            this.panelBIPO.Controls.Add(this.panel5);
+            this.panelBIPO.Controls.Add(this.panel6);
             this.panelBIPO.Controls.Add(this.panelAviso);
             this.panelBIPO.Location = new System.Drawing.Point(373, 2);
             this.panelBIPO.Margin = new System.Windows.Forms.Padding(4);
             this.panelBIPO.Name = "panelBIPO";
             this.panelBIPO.Size = new System.Drawing.Size(1387, 944);
             this.panelBIPO.TabIndex = 64;
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.Transparent;
+            this.panel2.BackgroundImage = global::TA_GesBib_Cliente.Properties.Resources.posit;
+            this.panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel2.Controls.Add(this.txtDescripcion4);
+            this.panel2.Controls.Add(this.lblTitulo4);
+            this.panel2.Location = new System.Drawing.Point(583, 456);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(441, 293);
+            this.panel2.TabIndex = 132;
+            // 
+            // txtDescripcion4
+            // 
+            this.txtDescripcion4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.txtDescripcion4.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtDescripcion4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDescripcion4.Location = new System.Drawing.Point(83, 110);
+            this.txtDescripcion4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtDescripcion4.Multiline = true;
+            this.txtDescripcion4.Name = "txtDescripcion4";
+            this.txtDescripcion4.Size = new System.Drawing.Size(283, 94);
+            this.txtDescripcion4.TabIndex = 131;
+            // 
+            // lblTitulo4
+            // 
+            this.lblTitulo4.AutoSize = true;
+            this.lblTitulo4.BackColor = System.Drawing.Color.Transparent;
+            this.lblTitulo4.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitulo4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(37)))), ((int)(((byte)(42)))));
+            this.lblTitulo4.Location = new System.Drawing.Point(64, 44);
+            this.lblTitulo4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblTitulo4.Name = "lblTitulo4";
+            this.lblTitulo4.Size = new System.Drawing.Size(95, 36);
+            this.lblTitulo4.TabIndex = 127;
+            this.lblTitulo4.Text = "Título";
+            // 
+            // panel5
+            // 
+            this.panel5.BackColor = System.Drawing.Color.Transparent;
+            this.panel5.BackgroundImage = global::TA_GesBib_Cliente.Properties.Resources.posit;
+            this.panel5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel5.Controls.Add(this.txtDescripcion3);
+            this.panel5.Controls.Add(this.lblTitulo3);
+            this.panel5.Location = new System.Drawing.Point(95, 456);
+            this.panel5.Margin = new System.Windows.Forms.Padding(4);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(441, 293);
+            this.panel5.TabIndex = 132;
+            // 
+            // txtDescripcion3
+            // 
+            this.txtDescripcion3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.txtDescripcion3.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtDescripcion3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDescripcion3.Location = new System.Drawing.Point(83, 110);
+            this.txtDescripcion3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtDescripcion3.Multiline = true;
+            this.txtDescripcion3.Name = "txtDescripcion3";
+            this.txtDescripcion3.Size = new System.Drawing.Size(283, 94);
+            this.txtDescripcion3.TabIndex = 131;
+            // 
+            // lblTitulo3
+            // 
+            this.lblTitulo3.AutoSize = true;
+            this.lblTitulo3.BackColor = System.Drawing.Color.Transparent;
+            this.lblTitulo3.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitulo3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(37)))), ((int)(((byte)(42)))));
+            this.lblTitulo3.Location = new System.Drawing.Point(64, 44);
+            this.lblTitulo3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblTitulo3.Name = "lblTitulo3";
+            this.lblTitulo3.Size = new System.Drawing.Size(95, 36);
+            this.lblTitulo3.TabIndex = 127;
+            this.lblTitulo3.Text = "Título";
+            // 
+            // panel6
+            // 
+            this.panel6.BackColor = System.Drawing.Color.Transparent;
+            this.panel6.BackgroundImage = global::TA_GesBib_Cliente.Properties.Resources.posit;
+            this.panel6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel6.Controls.Add(this.txtDescripcion2);
+            this.panel6.Controls.Add(this.lblTitulo2);
+            this.panel6.Location = new System.Drawing.Point(583, 102);
+            this.panel6.Margin = new System.Windows.Forms.Padding(4);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(441, 293);
+            this.panel6.TabIndex = 132;
+            // 
+            // txtDescripcion2
+            // 
+            this.txtDescripcion2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.txtDescripcion2.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtDescripcion2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDescripcion2.Location = new System.Drawing.Point(83, 110);
+            this.txtDescripcion2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtDescripcion2.Multiline = true;
+            this.txtDescripcion2.Name = "txtDescripcion2";
+            this.txtDescripcion2.Size = new System.Drawing.Size(283, 94);
+            this.txtDescripcion2.TabIndex = 131;
+            // 
+            // lblTitulo2
+            // 
+            this.lblTitulo2.AutoSize = true;
+            this.lblTitulo2.BackColor = System.Drawing.Color.Transparent;
+            this.lblTitulo2.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitulo2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(37)))), ((int)(((byte)(42)))));
+            this.lblTitulo2.Location = new System.Drawing.Point(64, 44);
+            this.lblTitulo2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblTitulo2.Name = "lblTitulo2";
+            this.lblTitulo2.Size = new System.Drawing.Size(95, 36);
+            this.lblTitulo2.TabIndex = 127;
+            this.lblTitulo2.Text = "Título";
             // 
             // frmPerfilBibliotecario
             // 
@@ -531,6 +665,12 @@
             this.panelAviso.ResumeLayout(false);
             this.panelAviso.PerformLayout();
             this.panelBIPO.ResumeLayout(false);
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
+            this.panel5.ResumeLayout(false);
+            this.panel5.PerformLayout();
+            this.panel6.ResumeLayout(false);
+            this.panel6.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -562,7 +702,16 @@
         private System.Windows.Forms.Button btnNotificaciones;
         private System.Windows.Forms.Panel panelBIPO;
         private System.Windows.Forms.TextBox txtDescripcion;
-        private System.Windows.Forms.Label lblTitulo;
+        private System.Windows.Forms.Label lblTitulo1;
         private System.Windows.Forms.Button btnCapac;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.TextBox txtDescripcion4;
+        private System.Windows.Forms.Label lblTitulo4;
+        private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.TextBox txtDescripcion3;
+        private System.Windows.Forms.Label lblTitulo3;
+        private System.Windows.Forms.Panel panel6;
+        private System.Windows.Forms.TextBox txtDescripcion2;
+        private System.Windows.Forms.Label lblTitulo2;
     }
 }

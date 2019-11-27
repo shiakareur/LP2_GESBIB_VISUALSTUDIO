@@ -29,7 +29,7 @@ namespace TA_GesBib_Cliente
 
         private void btnSeleccionar_Click(object sender, EventArgs e)
         {
-            personal = (ServicioJava.personal)dgvPersonal.CurrentRow.DataBoundItem;
+            Personal = (ServicioJava.personal)dgvPersonal.CurrentRow.DataBoundItem;
             this.DialogResult = DialogResult.OK;
         }
 

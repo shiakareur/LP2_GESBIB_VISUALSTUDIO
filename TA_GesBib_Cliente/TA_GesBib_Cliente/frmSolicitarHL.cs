@@ -12,7 +12,6 @@ namespace TA_GesBib_Cliente
 {
     public partial class frmSolicitarHL : Form
     {
-
         Estado estadoInasistencia;
         ServicioJava.ServicioClient servTA = new ServicioJava.ServicioClient();
         private ServicioJava.inasistencia inaSelec;
@@ -20,14 +19,12 @@ namespace TA_GesBib_Cliente
         private Form var_perfilPersonal;
         private TipoPerfil var_tipoPerfil = TipoPerfil.PerfilBibliotecario;
 
-
         public frmSolicitarHL()
         {
             InitializeComponent();
             limpiarComponentes();
             estadoComponentes(Estado.Inicial);
         }
-
 
         public frmSolicitarHL(Form formPerfilPersonal, TipoPerfil tipoPerfil, ServicioJava.usuario _user)
         {
@@ -37,15 +34,12 @@ namespace TA_GesBib_Cliente
             InitializeComponent();
             estadoComponentes(Estado.Inicial);
             limpiarComponentes();
-        }
-
-             
+        }                    
 
         private void btnNuevo_Click(object sender, EventArgs e)
         {
 
             //this.var_perfilPersonal.pan
-
             //se pone los LABELS ENABLES
             limpiarComponentes();
             estadoComponentes(Estado.Nuevo);
@@ -60,11 +54,9 @@ namespace TA_GesBib_Cliente
         }
 
         private void btnGuardar_Click(object sender, EventArgs e)
-        {
-                        
+        {                        
 
-            //VERIFIFCAR Q TODOS LOS CAMPOS SEAN OBLIGATORIOS
-                     
+            //VERIFIFCAR Q TODOS LOS CAMPOS SEAN OBLIGATORIOS                     
             if (dtpHoraFin.Value == dtpHoraIni.Value)
             {
                 //hora fin menor o igual que la hora inicio
@@ -128,53 +120,25 @@ namespace TA_GesBib_Cliente
 
                 estadoComponentes(Estado.Inicial);
             }
-
-
-
-            
+                        
         }
-
-        
-
+               
 
         public void limpiarComponentes()
         {
-
             //txtHIni_HL.Text = "";
             //txtHFin_HL.Text = "";        
-
             txtMotivo_HL.Text = "";
             dtpSoliHL.Value = DateTime.Today;
-
             dtpHoraIni.Value = Convert.ToDateTime("01/01/1753 08:00");
-            dtpHoraFin.Value = Convert.ToDateTime("01/01/1753 23:00");
-            
-
+            dtpHoraFin.Value = Convert.ToDateTime("01/01/1753 23:00");         
         }
 
       
 
         private void btnBuscar_Click(object sender, EventArgs e)
         {
-            frmBuscarHL formBuscarHL = new frmBuscarHL(var_usuario);
-
-
-            if (formBuscarHL.ShowDialog() == DialogResult.OK)
-            {
-                //pasamos al form la solicitud de la inasistencia seleccionada
-                inaSelec = new ServicioJava.inasistencia();
-                inaSelec = formBuscarHL.Ina_HoraLibSelecc;
-
-
-                dtpSoliHL.Value = inaSelec.fecha;
-                //txtHIni_HL.Text = inaSelec.horaInicio;
-                //txtHFin_HL.Text = inaSelec.horaFin;
-                dtpHoraIni.Value = Convert.ToDateTime(inaSelec.horaInicio);
-                dtpHoraFin.Value = Convert.ToDateTime(inaSelec.horaFin);
-                txtMotivo_HL.Text = inaSelec.motivo;
-
-                estadoComponentes(Estado.Buscar);
-            }
+      
 
         }
 
@@ -205,9 +169,7 @@ namespace TA_GesBib_Cliente
             else if (result == DialogResult.Cancel)
             {
             }          
-
-
-
+                       
 
         }
 

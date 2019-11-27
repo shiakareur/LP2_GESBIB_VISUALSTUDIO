@@ -17,6 +17,8 @@ namespace TA_GesBib_Cliente
         private TipoPerfil var_tipoPerfil = TipoPerfil.PerfilBibliotecario;
 
 
+        private ServicioJava.personal var_perABuscar;
+
         public frmVisualizarHorarios()
         {
             InitializeComponent();
@@ -25,13 +27,21 @@ namespace TA_GesBib_Cliente
 
         public frmVisualizarHorarios(Form formPerfilPersonal, TipoPerfil tipoPerfil)
         {
+           
             var_perfilPersonal = formPerfilPersonal;
             var_tipoPerfil = tipoPerfil;
             InitializeComponent();
-            
+
+            this.dgvDistPersonal.AutoGenerateColumns = false;
+
+            this.txtCodigo.Enabled = false;
+            this.txtNombre.Enabled = false;
+            this.lblNombre.Enabled = false;
+            this.label1.Enabled = false;
+
         }
-        
-        
+
+
 
         private void btnCerrar_Click(object sender, EventArgs e)
         {
@@ -62,8 +72,64 @@ namespace TA_GesBib_Cliente
             }
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btnLupa_Click(object sender, EventArgs e)
         {
+
+            frmBuscarPersonalBiblioteca formBuscarPersonal = 
+                new frmBuscarPersonalBiblioteca();
+
+            var_perABuscar = new ServicioJava.personal();
+            var_perABuscar = formBuscarPersonal.Personal;
+
+            if(formBuscarPersonal.ShowDialog() == DialogResult.OK)
+            {
+                this.txtCodigo.Text = formBuscarPersonal.Personal.codigo;
+                this.txtNombre.Text = formBuscarPersonal.Personal.nombre;
+            }
+
+        }
+
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
+
+            //aca buscamos la DISTRIBUCION DE ESTE PERSONAL EN 
+            //... LA FECHA INDICADA
+
+            try
+            {
+                dgvDistPersonal.DataSource =
+                Program.DBController.listarDistribPersonalenFecha(32, dtpFechaHorarios.Value);
+            }
+            catch(Exception ex)
+            {
+
+            }
+            
+
+
+        }
+
+        private void dataGridView1_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+        {
+
+            ServicioJava.distribucionPersonal distPersonal = new ServicioJava.distribucionPersonal();
+
+            distPersonal = dgvDistPersonal.Rows[e.RowIndex].DataBoundItem
+                            as ServicioJava.distribucionPersonal;
+
+            try
+            {
+                dgvDistPersonal.Rows[e.RowIndex].Cells[0].Value = distPersonal.personal.nombre;
+                dgvDistPersonal.Rows[e.RowIndex].Cells[1].Value = distPersonal.personal.apellido;
+                dgvDistPersonal.Rows[e.RowIndex].Cells[2].Value = distPersonal.puntoAtencion.nombre;
+                dgvDistPersonal.Rows[e.RowIndex].Cells[3].Value = distPersonal.horaInicio;
+                dgvDistPersonal.Rows[e.RowIndex].Cells[4].Value = distPersonal.horaFin;
+            }
+            catch(Exception ex)
+            {
+
+            }
+            
 
         }
     }
