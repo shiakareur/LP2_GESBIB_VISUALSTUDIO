@@ -505,6 +505,12 @@
     <None Include="Connected Services\ServicioJava\TA_GesBib_Cliente.ServicioJava.enviarTokenResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
+    <None Include="Connected Services\ServicioJava\TA_GesBib_Cliente.ServicioJava.generarReporteHorasTrabajadasResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServicioJava\TA_GesBib_Cliente.ServicioJava.generarReporteInasistenciasResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Connected Services\ServicioJava\TA_GesBib_Cliente.ServicioJava.gestor.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>

@@ -58,6 +58,8 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.button4 = new System.Windows.Forms.Button();
             this.btnCerrar = new System.Windows.Forms.Button();
+            this.guardarReporteInasistencias = new System.Windows.Forms.SaveFileDialog();
+            this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -419,6 +421,7 @@
             this.button4.Text = "DESCARGAR";
             this.button4.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button4.UseVisualStyleBackColor = false;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // btnCerrar
             // 
@@ -434,6 +437,14 @@
             this.btnCerrar.TabIndex = 135;
             this.btnCerrar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnCerrar.UseVisualStyleBackColor = false;
+            // 
+            // guardarReporteInasistencias
+            // 
+            this.guardarReporteInasistencias.FileOk += new System.ComponentModel.CancelEventHandler(this.guardarReporteInasistencias_FileOk);
+            // 
+            // saveFileDialog1
+            // 
+            this.saveFileDialog1.FileOk += new System.ComponentModel.CancelEventHandler(this.saveFileDialog1_FileOk);
             // 
             // frmGenerarReportes
             // 
@@ -492,5 +503,7 @@
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.SaveFileDialog guardarReporteInasistencias;
+        private System.Windows.Forms.SaveFileDialog saveFileDialog1;
     }
 }
