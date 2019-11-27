@@ -48,13 +48,9 @@
             this.gbDatosGenerales = new System.Windows.Forms.GroupBox();
             this.gbPuntosAtencion = new System.Windows.Forms.GroupBox();
             this.btnEditarPA = new System.Windows.Forms.Button();
-            this.btnAgregarPA = new System.Windows.Forms.Button();
+            this.btnAgregarDC = new System.Windows.Forms.Button();
             this.btnQuitarPA = new System.Windows.Forms.Button();
             this.dgvDiaCapacitacion = new System.Windows.Forms.DataGridView();
-            this.idCapacitacion = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Fecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Hora_ini = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Hora_fin = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnCerrar = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnBuscar = new System.Windows.Forms.Button();
@@ -62,6 +58,9 @@
             this.btnGuardar = new System.Windows.Forms.Button();
             this.btnNuevo = new System.Windows.Forms.Button();
             this.btnPerInscrito = new System.Windows.Forms.Button();
+            this.Fecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Hora_ini = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Hora_fin = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1.SuspendLayout();
             this.gbDatosGenerales.SuspendLayout();
             this.gbPuntosAtencion.SuspendLayout();
@@ -271,7 +270,7 @@
             // gbPuntosAtencion
             // 
             this.gbPuntosAtencion.Controls.Add(this.btnEditarPA);
-            this.gbPuntosAtencion.Controls.Add(this.btnAgregarPA);
+            this.gbPuntosAtencion.Controls.Add(this.btnAgregarDC);
             this.gbPuntosAtencion.Controls.Add(this.btnQuitarPA);
             this.gbPuntosAtencion.Controls.Add(this.dgvDiaCapacitacion);
             this.gbPuntosAtencion.Font = new System.Drawing.Font("Bahnschrift Light", 12F);
@@ -297,21 +296,21 @@
             this.btnEditarPA.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnEditarPA.UseVisualStyleBackColor = false;
             // 
-            // btnAgregarPA
+            // btnAgregarDC
             // 
-            this.btnAgregarPA.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(175)))), ((int)(((byte)(169)))));
-            this.btnAgregarPA.FlatAppearance.BorderSize = 0;
-            this.btnAgregarPA.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAgregarPA.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAgregarPA.Image = global::TA_GesBib_Cliente.Properties.Resources.icons8_más_30;
-            this.btnAgregarPA.Location = new System.Drawing.Point(527, 25);
-            this.btnAgregarPA.Margin = new System.Windows.Forms.Padding(2);
-            this.btnAgregarPA.Name = "btnAgregarPA";
-            this.btnAgregarPA.Size = new System.Drawing.Size(35, 34);
-            this.btnAgregarPA.TabIndex = 148;
-            this.btnAgregarPA.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnAgregarPA.UseVisualStyleBackColor = false;
-            this.btnAgregarPA.Click += new System.EventHandler(this.btnAgregarPA_Click);
+            this.btnAgregarDC.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(175)))), ((int)(((byte)(169)))));
+            this.btnAgregarDC.FlatAppearance.BorderSize = 0;
+            this.btnAgregarDC.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAgregarDC.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAgregarDC.Image = global::TA_GesBib_Cliente.Properties.Resources.icons8_más_30;
+            this.btnAgregarDC.Location = new System.Drawing.Point(527, 25);
+            this.btnAgregarDC.Margin = new System.Windows.Forms.Padding(2);
+            this.btnAgregarDC.Name = "btnAgregarDC";
+            this.btnAgregarDC.Size = new System.Drawing.Size(35, 34);
+            this.btnAgregarDC.TabIndex = 148;
+            this.btnAgregarDC.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnAgregarDC.UseVisualStyleBackColor = false;
+            this.btnAgregarDC.Click += new System.EventHandler(this.btnAgregarDC_Click);
             // 
             // btnQuitarPA
             // 
@@ -335,7 +334,6 @@
             this.dgvDiaCapacitacion.AllowUserToDeleteRows = false;
             this.dgvDiaCapacitacion.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvDiaCapacitacion.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.idCapacitacion,
             this.Fecha,
             this.Hora_ini,
             this.Hora_fin});
@@ -343,33 +341,9 @@
             this.dgvDiaCapacitacion.Name = "dgvDiaCapacitacion";
             this.dgvDiaCapacitacion.ReadOnly = true;
             this.dgvDiaCapacitacion.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            this.dgvDiaCapacitacion.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.dgvDiaCapacitacion.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.dgvDiaCapacitacion.Size = new System.Drawing.Size(644, 144);
             this.dgvDiaCapacitacion.TabIndex = 52;
-            // 
-            // idCapacitacion
-            // 
-            this.idCapacitacion.HeaderText = "Nro";
-            this.idCapacitacion.Name = "idCapacitacion";
-            this.idCapacitacion.ReadOnly = true;
-            // 
-            // Fecha
-            // 
-            this.Fecha.HeaderText = "Fecha";
-            this.Fecha.Name = "Fecha";
-            this.Fecha.ReadOnly = true;
-            // 
-            // Hora_ini
-            // 
-            this.Hora_ini.HeaderText = "Hora Inicio";
-            this.Hora_ini.Name = "Hora_ini";
-            this.Hora_ini.ReadOnly = true;
-            // 
-            // Hora_fin
-            // 
-            this.Hora_fin.HeaderText = "Hora Fin";
-            this.Hora_fin.Name = "Hora_fin";
-            this.Hora_fin.ReadOnly = true;
             // 
             // btnCerrar
             // 
@@ -483,12 +457,33 @@
             this.btnPerInscrito.UseVisualStyleBackColor = false;
             this.btnPerInscrito.Click += new System.EventHandler(this.btnPerInscrito_Click);
             // 
+            // Fecha
+            // 
+            this.Fecha.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Fecha.HeaderText = "Fecha";
+            this.Fecha.Name = "Fecha";
+            this.Fecha.ReadOnly = true;
+            // 
+            // Hora_ini
+            // 
+            this.Hora_ini.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Hora_ini.HeaderText = "Hora Inicio";
+            this.Hora_ini.Name = "Hora_ini";
+            this.Hora_ini.ReadOnly = true;
+            // 
+            // Hora_fin
+            // 
+            this.Hora_fin.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Hora_fin.HeaderText = "Hora Fin";
+            this.Hora_fin.Name = "Hora_fin";
+            this.Hora_fin.ReadOnly = true;
+            // 
             // frmCapacitaciones
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(242)))), ((int)(((byte)(241)))));
-            this.ClientSize = new System.Drawing.Size(955, 790);
+            this.ClientSize = new System.Drawing.Size(955, 788);
             this.Controls.Add(this.btnPerInscrito);
             this.Controls.Add(this.gbPuntosAtencion);
             this.Controls.Add(this.label9);
@@ -544,13 +539,12 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.GroupBox gbPuntosAtencion;
         private System.Windows.Forms.DataGridView dgvDiaCapacitacion;
-        private System.Windows.Forms.DataGridViewTextBoxColumn idCapacitacion;
+        private System.Windows.Forms.Button btnEditarPA;
+        private System.Windows.Forms.Button btnAgregarDC;
+        private System.Windows.Forms.Button btnQuitarPA;
+        private System.Windows.Forms.Button btnPerInscrito;
         private System.Windows.Forms.DataGridViewTextBoxColumn Fecha;
         private System.Windows.Forms.DataGridViewTextBoxColumn Hora_ini;
         private System.Windows.Forms.DataGridViewTextBoxColumn Hora_fin;
-        private System.Windows.Forms.Button btnEditarPA;
-        private System.Windows.Forms.Button btnAgregarPA;
-        private System.Windows.Forms.Button btnQuitarPA;
-        private System.Windows.Forms.Button btnPerInscrito;
     }
 }

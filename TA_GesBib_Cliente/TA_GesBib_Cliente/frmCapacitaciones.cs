@@ -12,12 +12,12 @@ namespace TA_GesBib_Cliente
 {
     public partial class frmCapacitaciones : Form
     {
-        //Estado estadoCapacitaciones;
-
+        private int esModificar;
         private Form var_formGestor;
         private ServicioJava.capacitacion capacitacion;
         private BindingList<ServicioJava.diaCapacitacion> listaDiaCapacitacion;
-        private static int i = 0;
+        private ServicioJava.capacitacion capacitacionSeleccionada;
+        private int idCap;
         public frmCapacitaciones()
         {
             InitializeComponent();
@@ -118,21 +118,41 @@ namespace TA_GesBib_Cliente
         {
             estadoComponentes(Estado.Nuevo);
             //capacitacion = new ServicioJava.capacitacion();
-            //estadoCapacitaciones = Estado.Nuevo;            
+            esModificar = 0;            
         }
 
         private void btnModificar_Click(object sender, EventArgs e)
         {
             estadoComponentes(Estado.Modificar);
+            esModificar = 1;
         }
 
         private void btnBuscar_Click(object sender, EventArgs e)
         {
             estadoComponentes(Estado.Buscar);
-            frmBuscarCapacitacion frmBuscarGestor = new frmBuscarCapacitacion();
-            if (frmBuscarGestor.ShowDialog() == DialogResult.OK)
-            {
-
+            frmBuscarCapacitacion frmBuscarCap = new frmBuscarCapacitacion();
+            if (frmBuscarCap.ShowDialog() == DialogResult.OK)
+            {                
+                capacitacionSeleccionada = frmBuscarCap.CapacitacionSeleccionada;
+                idCap = capacitacionSeleccionada.id;
+                txtNombre.Text = capacitacionSeleccionada.nombre;
+                txtLugar.Text = capacitacionSeleccionada.lugar;
+                txtDescripcion.Text = capacitacionSeleccionada.descripcion;
+                dtpInicio.Value = capacitacionSeleccionada.fecha_ini;
+                dtpFin.Value = capacitacionSeleccionada.fecha_fin;
+                dtpInicioInscripcion.Value = capacitacionSeleccionada.inicio_inscripcion;
+                dtpFinInscripcion.Value = capacitacionSeleccionada.fin_inscripcion;                
+                for(int x = 0; x < capacitacionSeleccionada.listaDiasCapacitacion.Length; x++)
+                {
+                    String aux1 = capacitacionSeleccionada.listaDiasCapacitacion[x].fecha.ToString();
+                    String dato1 = aux1.Substring(0, 10);
+                    String aux2 = capacitacionSeleccionada.listaDiasCapacitacion[x].hora_ini;
+                    String dato2 = aux2.Substring(0, 5);
+                    String aux3 = capacitacionSeleccionada.listaDiasCapacitacion[x].hora_fin;
+                    String dato3 = aux3.Substring(0, 5);
+                    dgvDiaCapacitacion.Rows.Add(dato1, dato2, dato3);
+                }
+                estadoComponentes(Estado.Buscar);
             }
         }
 
@@ -162,31 +182,39 @@ namespace TA_GesBib_Cliente
             foreach (DataGridViewRow row in dgvDiaCapacitacion.Rows)
             {
                 ServicioJava.diaCapacitacion diaCapacitacion = new ServicioJava.diaCapacitacion();
-                String aux = row.Cells[1].Value.ToString();
+                String aux = row.Cells[0].Value.ToString();
                 diaCapacitacion.fecha = Convert.ToDateTime(aux);
                 diaCapacitacion.fechaSpecified = true;
-                diaCapacitacion.hora_ini = row.Cells[2].Value.ToString();
-                diaCapacitacion.hora_fin = row.Cells[3].Value.ToString();
+                diaCapacitacion.hora_ini = row.Cells[1].Value.ToString();
+                diaCapacitacion.hora_fin = row.Cells[2].Value.ToString();
                 listaDiaCapacitacion.Add(diaCapacitacion);
             }
             capacitacion.listaDiasCapacitacion = listaDiaCapacitacion.ToArray();
-
-            Program.DBController.insertarCapacitacion(capacitacion);
-            MessageBox.Show("Capacitacion registrada exitosamente", "Mensaje Confirmacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            if (esModificar == 0)
+            {
+                Program.DBController.insertarCapacitacion(capacitacion);
+                MessageBox.Show("Capacitacion registrada exitosamente", "Mensaje Confirmacón", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }else if (esModificar == 1)
+            {
+                capacitacion.id = idCap;                
+                Program.DBController.actualizarCapacitacion(capacitacion);
+                MessageBox.Show("Capacitacion modificada exitosamente", "Mensaje Confirmacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
         }
 
-        private void btnAgregarPA_Click(object sender, EventArgs e)
+        private void btnAgregarDC_Click(object sender, EventArgs e)
         {
             
             frmCrearDiaCapacitacion formCrearDC = new frmCrearDiaCapacitacion();
             if (formCrearDC.ShowDialog() == DialogResult.OK)
             {
-                i++;
-                String dato0 = i.ToString();
-                String dato1 = formCrearDC.DiaCapacitacionSeleccionada.fecha.ToString();
-                String dato2 = formCrearDC.DiaCapacitacionSeleccionada.hora_ini;
-                String dato3 = formCrearDC.DiaCapacitacionSeleccionada.hora_fin;
-                dgvDiaCapacitacion.Rows.Add(dato0, dato1, dato2, dato3);
+                String aux1 = formCrearDC.DiaCapacitacionSeleccionada.fecha.ToString();
+                String dato1 = aux1.Substring(0, 10);
+                String aux2 = formCrearDC.DiaCapacitacionSeleccionada.hora_ini;
+                String dato2 = aux2.Substring(11, 5);
+                String aux3 = formCrearDC.DiaCapacitacionSeleccionada.hora_fin;
+                String dato3 = aux3.Substring(11, 5);
+                dgvDiaCapacitacion.Rows.Add(dato1, dato2, dato3);
             }
         }
 
@@ -202,7 +230,6 @@ namespace TA_GesBib_Cliente
             txtLugar.Text = "";
             txtDescripcion.Text = "";
             dgvDiaCapacitacion.RowCount = 0;
-            i = 0;
         }
 
         private void btnQuitarPA_Click(object sender, EventArgs e)
