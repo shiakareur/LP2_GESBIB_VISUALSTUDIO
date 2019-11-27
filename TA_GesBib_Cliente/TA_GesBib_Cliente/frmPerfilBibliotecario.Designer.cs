@@ -54,17 +54,17 @@
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.panelAviso = new System.Windows.Forms.Panel();
             this.txtDescripcion = new System.Windows.Forms.TextBox();
-            this.lblTitulo = new System.Windows.Forms.Label();
+            this.lblTitulo1 = new System.Windows.Forms.Label();
             this.panelBIPO = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.txtDescripcion4 = new System.Windows.Forms.TextBox();
+            this.lblTitulo4 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
+            this.txtDescripcion3 = new System.Windows.Forms.TextBox();
+            this.lblTitulo3 = new System.Windows.Forms.Label();
             this.panel6 = new System.Windows.Forms.Panel();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
+            this.txtDescripcion2 = new System.Windows.Forms.TextBox();
+            this.lblTitulo2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -475,7 +475,7 @@
             this.panelAviso.BackgroundImage = global::TA_GesBib_Cliente.Properties.Resources.posit;
             this.panelAviso.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.panelAviso.Controls.Add(this.txtDescripcion);
-            this.panelAviso.Controls.Add(this.lblTitulo);
+            this.panelAviso.Controls.Add(this.lblTitulo1);
             this.panelAviso.Location = new System.Drawing.Point(95, 102);
             this.panelAviso.Margin = new System.Windows.Forms.Padding(4);
             this.panelAviso.Name = "panelAviso";
@@ -486,6 +486,7 @@
             // 
             this.txtDescripcion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.txtDescripcion.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtDescripcion.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDescripcion.Location = new System.Drawing.Point(83, 110);
             this.txtDescripcion.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtDescripcion.Multiline = true;
@@ -493,18 +494,18 @@
             this.txtDescripcion.Size = new System.Drawing.Size(283, 94);
             this.txtDescripcion.TabIndex = 131;
             // 
-            // lblTitulo
+            // lblTitulo1
             // 
-            this.lblTitulo.AutoSize = true;
-            this.lblTitulo.BackColor = System.Drawing.Color.Transparent;
-            this.lblTitulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTitulo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(37)))), ((int)(((byte)(42)))));
-            this.lblTitulo.Location = new System.Drawing.Point(64, 44);
-            this.lblTitulo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblTitulo.Name = "lblTitulo";
-            this.lblTitulo.Size = new System.Drawing.Size(95, 36);
-            this.lblTitulo.TabIndex = 127;
-            this.lblTitulo.Text = "Título";
+            this.lblTitulo1.AutoSize = true;
+            this.lblTitulo1.BackColor = System.Drawing.Color.Transparent;
+            this.lblTitulo1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitulo1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(37)))), ((int)(((byte)(42)))));
+            this.lblTitulo1.Location = new System.Drawing.Point(64, 44);
+            this.lblTitulo1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblTitulo1.Name = "lblTitulo1";
+            this.lblTitulo1.Size = new System.Drawing.Size(95, 36);
+            this.lblTitulo1.TabIndex = 127;
+            this.lblTitulo1.Text = "Título";
             // 
             // panelBIPO
             // 
@@ -525,111 +526,114 @@
             this.panel2.BackColor = System.Drawing.Color.Transparent;
             this.panel2.BackgroundImage = global::TA_GesBib_Cliente.Properties.Resources.posit;
             this.panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel2.Controls.Add(this.textBox1);
-            this.panel2.Controls.Add(this.label1);
+            this.panel2.Controls.Add(this.txtDescripcion4);
+            this.panel2.Controls.Add(this.lblTitulo4);
             this.panel2.Location = new System.Drawing.Point(583, 456);
             this.panel2.Margin = new System.Windows.Forms.Padding(4);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(441, 293);
             this.panel2.TabIndex = 132;
             // 
-            // textBox1
+            // txtDescripcion4
             // 
-            this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox1.Location = new System.Drawing.Point(83, 110);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(283, 94);
-            this.textBox1.TabIndex = 131;
+            this.txtDescripcion4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.txtDescripcion4.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtDescripcion4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDescripcion4.Location = new System.Drawing.Point(83, 110);
+            this.txtDescripcion4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtDescripcion4.Multiline = true;
+            this.txtDescripcion4.Name = "txtDescripcion4";
+            this.txtDescripcion4.Size = new System.Drawing.Size(283, 94);
+            this.txtDescripcion4.TabIndex = 131;
             // 
-            // label1
+            // lblTitulo4
             // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(37)))), ((int)(((byte)(42)))));
-            this.label1.Location = new System.Drawing.Point(64, 44);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(95, 36);
-            this.label1.TabIndex = 127;
-            this.label1.Text = "Título";
+            this.lblTitulo4.AutoSize = true;
+            this.lblTitulo4.BackColor = System.Drawing.Color.Transparent;
+            this.lblTitulo4.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitulo4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(37)))), ((int)(((byte)(42)))));
+            this.lblTitulo4.Location = new System.Drawing.Point(64, 44);
+            this.lblTitulo4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblTitulo4.Name = "lblTitulo4";
+            this.lblTitulo4.Size = new System.Drawing.Size(95, 36);
+            this.lblTitulo4.TabIndex = 127;
+            this.lblTitulo4.Text = "Título";
             // 
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.Color.Transparent;
             this.panel5.BackgroundImage = global::TA_GesBib_Cliente.Properties.Resources.posit;
             this.panel5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel5.Controls.Add(this.textBox2);
-            this.panel5.Controls.Add(this.label4);
+            this.panel5.Controls.Add(this.txtDescripcion3);
+            this.panel5.Controls.Add(this.lblTitulo3);
             this.panel5.Location = new System.Drawing.Point(95, 456);
             this.panel5.Margin = new System.Windows.Forms.Padding(4);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(441, 293);
             this.panel5.TabIndex = 132;
             // 
-            // textBox2
+            // txtDescripcion3
             // 
-            this.textBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox2.Location = new System.Drawing.Point(83, 110);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(283, 94);
-            this.textBox2.TabIndex = 131;
+            this.txtDescripcion3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.txtDescripcion3.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtDescripcion3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDescripcion3.Location = new System.Drawing.Point(83, 110);
+            this.txtDescripcion3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtDescripcion3.Multiline = true;
+            this.txtDescripcion3.Name = "txtDescripcion3";
+            this.txtDescripcion3.Size = new System.Drawing.Size(283, 94);
+            this.txtDescripcion3.TabIndex = 131;
             // 
-            // label4
+            // lblTitulo3
             // 
-            this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.Color.Transparent;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(37)))), ((int)(((byte)(42)))));
-            this.label4.Location = new System.Drawing.Point(64, 44);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(95, 36);
-            this.label4.TabIndex = 127;
-            this.label4.Text = "Título";
+            this.lblTitulo3.AutoSize = true;
+            this.lblTitulo3.BackColor = System.Drawing.Color.Transparent;
+            this.lblTitulo3.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitulo3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(37)))), ((int)(((byte)(42)))));
+            this.lblTitulo3.Location = new System.Drawing.Point(64, 44);
+            this.lblTitulo3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblTitulo3.Name = "lblTitulo3";
+            this.lblTitulo3.Size = new System.Drawing.Size(95, 36);
+            this.lblTitulo3.TabIndex = 127;
+            this.lblTitulo3.Text = "Título";
             // 
             // panel6
             // 
             this.panel6.BackColor = System.Drawing.Color.Transparent;
             this.panel6.BackgroundImage = global::TA_GesBib_Cliente.Properties.Resources.posit;
             this.panel6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel6.Controls.Add(this.textBox3);
-            this.panel6.Controls.Add(this.label5);
+            this.panel6.Controls.Add(this.txtDescripcion2);
+            this.panel6.Controls.Add(this.lblTitulo2);
             this.panel6.Location = new System.Drawing.Point(583, 102);
             this.panel6.Margin = new System.Windows.Forms.Padding(4);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(441, 293);
             this.panel6.TabIndex = 132;
             // 
-            // textBox3
+            // txtDescripcion2
             // 
-            this.textBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.textBox3.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox3.Location = new System.Drawing.Point(83, 110);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox3.Multiline = true;
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(283, 94);
-            this.textBox3.TabIndex = 131;
+            this.txtDescripcion2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.txtDescripcion2.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtDescripcion2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDescripcion2.Location = new System.Drawing.Point(83, 110);
+            this.txtDescripcion2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtDescripcion2.Multiline = true;
+            this.txtDescripcion2.Name = "txtDescripcion2";
+            this.txtDescripcion2.Size = new System.Drawing.Size(283, 94);
+            this.txtDescripcion2.TabIndex = 131;
             // 
-            // label5
+            // lblTitulo2
             // 
-            this.label5.AutoSize = true;
-            this.label5.BackColor = System.Drawing.Color.Transparent;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(37)))), ((int)(((byte)(42)))));
-            this.label5.Location = new System.Drawing.Point(64, 44);
-            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(95, 36);
-            this.label5.TabIndex = 127;
-            this.label5.Text = "Título";
+            this.lblTitulo2.AutoSize = true;
+            this.lblTitulo2.BackColor = System.Drawing.Color.Transparent;
+            this.lblTitulo2.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitulo2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(37)))), ((int)(((byte)(42)))));
+            this.lblTitulo2.Location = new System.Drawing.Point(64, 44);
+            this.lblTitulo2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblTitulo2.Name = "lblTitulo2";
+            this.lblTitulo2.Size = new System.Drawing.Size(95, 36);
+            this.lblTitulo2.TabIndex = 127;
+            this.lblTitulo2.Text = "Título";
             // 
             // frmPerfilBibliotecario
             // 
@@ -698,16 +702,16 @@
         private System.Windows.Forms.Button btnNotificaciones;
         private System.Windows.Forms.Panel panelBIPO;
         private System.Windows.Forms.TextBox txtDescripcion;
-        private System.Windows.Forms.Label lblTitulo;
+        private System.Windows.Forms.Label lblTitulo1;
         private System.Windows.Forms.Button btnCapac;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox txtDescripcion4;
+        private System.Windows.Forms.Label lblTitulo4;
         private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox txtDescripcion3;
+        private System.Windows.Forms.Label lblTitulo3;
         private System.Windows.Forms.Panel panel6;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TextBox txtDescripcion2;
+        private System.Windows.Forms.Label lblTitulo2;
     }
 }

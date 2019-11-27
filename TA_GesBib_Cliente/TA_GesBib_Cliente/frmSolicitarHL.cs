@@ -138,21 +138,7 @@ namespace TA_GesBib_Cliente
 
         private void btnBuscar_Click(object sender, EventArgs e)
         {
-            frmBuscarHL formBuscarHL = new frmBuscarHL(var_usuario);
-
-            if (formBuscarHL.ShowDialog() == DialogResult.OK)
-            {
-                //pasamos al form la solicitud de la inasistencia seleccionada
-                inaSelec = new ServicioJava.inasistencia();
-                inaSelec = formBuscarHL.Ina_HoraLibSelecc;
-                dtpSoliHL.Value = inaSelec.fecha;
-                //txtHIni_HL.Text = inaSelec.horaInicio;
-                //txtHFin_HL.Text = inaSelec.horaFin;
-                dtpHoraIni.Value = Convert.ToDateTime(inaSelec.horaInicio);
-                dtpHoraFin.Value = Convert.ToDateTime(inaSelec.horaFin);
-                txtMotivo_HL.Text = inaSelec.motivo;
-                estadoComponentes(Estado.Buscar);
-            }
+      
 
         }
 

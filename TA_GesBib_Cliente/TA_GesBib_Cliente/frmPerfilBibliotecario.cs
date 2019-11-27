@@ -9,16 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace TA_GesBib_Cliente
-{
-    //creo como atributos los formularios de mi menu d cada booton
-    //al aser click pregunto si es null(para ver si ya lo he creado y no hacer otro)
-    //if(form == null){
-    //    //aca pongo visible false a todos  los demas que EXISTEN (OTRO if X CADA UNO)
-    //    form = new frmTipoFrm();
-    //}else{
-    //    form.Visible = true; //es xq en algun momento lo he puesto false
-    //}
-      
+{     
             
     public partial class frmPerfilBibliotecario : Form
     {
@@ -31,15 +22,12 @@ namespace TA_GesBib_Cliente
         private frmSolicitarCambioTurno var_frmSolicitarCambioTurno_Bibliotecario;
         private frmRespuestaValidaciones var_frmRespuestasSolicitudes_Bibliotecario;
         private frmVisualizarHorarios var_frmVerHorarios_Bibliotecario;
-        BindingList<ServicioJava.aviso> listaAvisos ;
-        
+        BindingList<ServicioJava.aviso> listaAvisos ;        
 
         public Panel PanelBIPO { get => panelBIPO; set => panelBIPO = value; }
 
-
         public Panel PanelAviso { get => panelAviso; set => panelAviso = value; }
-        //public Label LblBienvenido { get => lblBienvenido; set => lblBienvenido = value; }                   
-
+        //public Label LblBienvenido { get => lblBienvenido; set => lblBienvenido = value; }                 
 
         public frmPerfilBibliotecario()
         {
@@ -47,7 +35,7 @@ namespace TA_GesBib_Cliente
             customizeDesign();
             listaAvisos= new BindingList<ServicioJava.aviso>(Program.DBController.listarAvisos());
             foreach (ServicioJava.aviso a in listaAvisos) {
-                lblTitulo.Text = a.titulo;
+                lblTitulo1.Text = a.titulo;
                 txtDescripcion.Text = a.descripcion;
                 //break;
             }
@@ -62,12 +50,20 @@ namespace TA_GesBib_Cliente
             InitializeComponent();
             this.lblNombreUsuario.Text = var_usuario.nombre;
             customizeDesign(); // <---- para los PANELES
+
+            List<Label> _lstaLabels = new List<Label> {lblTitulo1, lblTitulo2, lblTitulo3, lblTitulo4 };
+            List<TextBox> _lstaText_Box = 
+                new List<TextBox> {txtDescripcion, txtDescripcion2, txtDescripcion3, txtDescripcion4};
+            
+            int i=0;
+
             listaAvisos = new BindingList<ServicioJava.aviso>(Program.DBController.listarAvisos());
             foreach (ServicioJava.aviso a in listaAvisos)
             {
-                lblTitulo.Text = a.titulo;
-                txtDescripcion.Text = a.descripcion;
-                //break;
+                _lstaLabels[i].Text = a.titulo;
+                _lstaText_Box[i].Text = a.descripcion;
+                i++;
+                if(i==4)break;
             }
         }
 
