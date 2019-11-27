@@ -14,7 +14,7 @@ namespace TA_GesBib_Cliente
     {
         private frmPerfilGestor var_formPerfilGestor;
 
-        private BindingList<ServicioJava.personalBiblioteca> listaPAsignados;
+        private List<ServicioJava.personalBiblioteca> listaPAsignados = new List<ServicioJava.personalBiblioteca>();
 
         public frmAdminPerfilesExp()
         {
@@ -25,7 +25,7 @@ namespace TA_GesBib_Cliente
         {
             var_formPerfilGestor = formPerfilGestor;
             InitializeComponent();
-            cmbPerfil.DataSource = new BindingList<ServicioJava.perfilExperiencia>(Program.DBController.listarPerfilExperiencia());
+            cmbPerfil.DataSource = new List<ServicioJava.perfilExperiencia>(Program.DBController.listarPerfilExperiencia());
 
             //Indicamos la Propiedad que debería visualizarse
             cmbPerfil.DisplayMember = "NombrePerfil";
@@ -46,7 +46,7 @@ namespace TA_GesBib_Cliente
             var_mantenimientoPE.Visible = false;
             if (var_mantenimientoPE.ShowDialog() == DialogResult.OK)
             {
-                cmbPerfil.DataSource = new BindingList<ServicioJava.perfilExperiencia>(Program.DBController.listarPerfilExperiencia());
+                cmbPerfil.DataSource = new List<ServicioJava.perfilExperiencia>(Program.DBController.listarPerfilExperiencia());
 
                 //Indicamos la Propiedad que debería visualizarse
                 cmbPerfil.DisplayMember = "NombrePerfil";
@@ -58,8 +58,16 @@ namespace TA_GesBib_Cliente
 
         private void btnBuscar_Click(object sender, EventArgs e)
         {
-            //listaPAsignados = new BindingList<ServicioJava.personalBiblioteca>();
-            listaPAsignados = new BindingList<ServicioJava.personalBiblioteca>(Program.DBController.listarPersonalAsignadoAPerfilExperiencia((int)cmbPerfil.SelectedValue));
+            //listaPAsignados = new List<ServicioJava.personalBiblioteca>();
+            if(Program.DBController.listarPersonalAsignadoAPerfilExperiencia((int)cmbPerfil.SelectedValue) != null)
+            {
+                listaPAsignados = new List<ServicioJava.personalBiblioteca>(Program.DBController.listarPersonalAsignadoAPerfilExperiencia((int)cmbPerfil.SelectedValue));
+            }
+            else
+            {
+                listaPAsignados = new List<ServicioJava.personalBiblioteca>();
+            }
+            
             dgvPersonal.AutoGenerateColumns = false;
             dgvPersonal.DataSource = listaPAsignados;
 
@@ -67,12 +75,20 @@ namespace TA_GesBib_Cliente
 
         private void dgvPersonal_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
         {
-            
-            
+            try
+            {
+
                 ServicioJava.personalBiblioteca objPA = dgvPersonal.Rows[e.RowIndex].DataBoundItem as ServicioJava.personalBiblioteca;
                 dgvPersonal.Rows[e.RowIndex].Cells["codigo"].Value = objPA.codigo;
                 dgvPersonal.Rows[e.RowIndex].Cells["nombres"].Value = objPA.nombre;
                 dgvPersonal.Rows[e.RowIndex].Cells["apellidos"].Value = objPA.apellido;
+            }
+            catch (Exception ex)
+            {
+                System.Console.WriteLine(ex);
+            }
+
+            
 
         }
 
@@ -84,12 +100,25 @@ namespace TA_GesBib_Cliente
             {
                 ServicioJava.personalBiblioteca personalSeleccionado = (ServicioJava.personalBiblioteca)formBuscarPersonal.Personal;
                 listaPAsignados.Add(personalSeleccionado);
+                dgvPersonal.DataSource = null;
+                dgvPersonal.DataSource = listaPAsignados;
             }
         }
 
         private void btnQuitarPersonal_Click(object sender, EventArgs e)
         {
-            listaPAsignados.Remove((ServicioJava.personalBiblioteca)dgvPersonal.CurrentRow.DataBoundItem);
+            try
+            {
+
+                listaPAsignados.Remove((ServicioJava.personalBiblioteca)dgvPersonal.CurrentRow.DataBoundItem);
+                dgvPersonal.DataSource = null;
+                dgvPersonal.DataSource = listaPAsignados;
+            }
+            catch (Exception ex)
+            {
+                System.Console.WriteLine(ex);
+            }
+            
         }
 
         private void btnGuardar_Click(object sender, EventArgs e)
