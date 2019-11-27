@@ -16,6 +16,7 @@ namespace TA_GesBib_Cliente
     {
         //se agrego
         private ServicioJava.usuario var_usuario;
+        private ServicioJava.personalBiblioteca var_datosUsuario;
         private frmLogin var_formLogin;
         private frmRegHE var_frmRegistrarHE_Bibliotecario;
         private frmRegInasistencias var_frmRegistrarInasis_Bibliotecario;
