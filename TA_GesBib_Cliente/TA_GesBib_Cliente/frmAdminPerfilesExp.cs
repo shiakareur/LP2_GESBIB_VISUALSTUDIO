@@ -91,5 +91,10 @@ namespace TA_GesBib_Cliente
         {
             listaPAsignados.Remove((ServicioJava.personalBiblioteca)dgvPersonal.CurrentRow.DataBoundItem);
         }
+
+        private void btnGuardar_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Se han actualizado los datos", "Mensaje Confirmacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
     }
 }
