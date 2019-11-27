@@ -393,13 +393,23 @@ namespace TA_GesBib_Cliente.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_download_30 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-download-30", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_editar_2 {
             get {
                 object obj = ResourceManager.GetObject("icons8-editar-2", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-		
+        
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
@@ -410,16 +420,6 @@ namespace TA_GesBib_Cliente.Properties {
             }
         }
         
-        /// <summary>
-        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap icons8_notas_del_orador_50 {
-            get {
-                object obj = ResourceManager.GetObject("icons8-notas-del-orador-50", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-		
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
@@ -436,6 +436,16 @@ namespace TA_GesBib_Cliente.Properties {
         internal static System.Drawing.Bitmap icons8_menos_30 {
             get {
                 object obj = ResourceManager.GetObject("icons8-menos-30", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_notas_del_orador_50 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-notas-del-orador-50", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

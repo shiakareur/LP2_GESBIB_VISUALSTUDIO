@@ -164,6 +164,12 @@
     <Compile Include="frmMantenimientoPerfilExperiencia.Designer.cs">
       <DependentUpon>frmMantenimientoPerfilExperiencia.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmGenerarReportes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGenerarReportes.Designer.cs">
+      <DependentUpon>frmGenerarReportes.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmRecuperarClave.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -398,6 +404,9 @@
     <EmbeddedResource Include="frmMantenimientoPerfilExperiencia.resx">
       <DependentUpon>frmMantenimientoPerfilExperiencia.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmGenerarReportes.resx">
+      <DependentUpon>frmGenerarReportes.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmRecuperarClave.resx">
       <DependentUpon>frmRecuperarClave.cs</DependentUpon>
     </EmbeddedResource>
@@ -612,6 +621,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\icons8-lápiz-30.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-download-30.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
