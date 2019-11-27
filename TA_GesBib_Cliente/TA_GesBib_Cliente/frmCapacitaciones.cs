@@ -14,6 +14,7 @@ namespace TA_GesBib_Cliente
     {
         private int esModificar;
         private Form var_formGestor;
+        private BindingList<ServicioJava.personal> listaPersonal;
         private ServicioJava.capacitacion capacitacion;
         private BindingList<ServicioJava.diaCapacitacion> listaDiaCapacitacion;
         private ServicioJava.capacitacion capacitacionSeleccionada;
@@ -51,6 +52,10 @@ namespace TA_GesBib_Cliente
                     btnGuardar.Enabled = false;
                     btnCancelar.Enabled = false;
                     btnBuscar.Enabled = true;
+                    btnAgregarDC.Enabled = false;
+                    btnEditarDC.Enabled = false;
+                    btnQuitarDC.Enabled = false;
+                    btnPerInscrito.Enabled = false;
                     break;
 
                 case Estado.Nuevo:
@@ -69,6 +74,10 @@ namespace TA_GesBib_Cliente
                     btnModificar.Enabled = false;
                     btnCancelar.Enabled = true;
                     btnBuscar.Enabled = false;
+                    btnAgregarDC.Enabled = true;
+                    btnEditarDC.Enabled = true;
+                    btnQuitarDC.Enabled = true;
+                    btnPerInscrito.Enabled = false;
                     break;
 
                 case Estado.Modificar:
@@ -87,6 +96,10 @@ namespace TA_GesBib_Cliente
                     btnModificar.Enabled = false;
                     btnCancelar.Enabled = true;
                     btnBuscar.Enabled = false;
+                    btnAgregarDC.Enabled = true;
+                    btnEditarDC.Enabled = true; 
+                    btnQuitarDC.Enabled = true;
+                    btnPerInscrito.Enabled = true;
                     break;
 
                 case Estado.Buscar:
@@ -96,6 +109,10 @@ namespace TA_GesBib_Cliente
                     btnGuardar.Enabled = false;
                     btnCancelar.Enabled = true;
                     btnBuscar.Enabled = false;
+                    btnAgregarDC.Enabled = false;
+                    btnEditarDC.Enabled = false;
+                    btnQuitarDC.Enabled = false;
+                    btnPerInscrito.Enabled = false;
                     break;
             }
         }
@@ -135,6 +152,7 @@ namespace TA_GesBib_Cliente
             {                
                 capacitacionSeleccionada = frmBuscarCap.CapacitacionSeleccionada;
                 idCap = capacitacionSeleccionada.id;
+                listaPersonal = new BindingList<ServicioJava.personal>(capacitacionSeleccionada.listaPersonal);                
                 txtNombre.Text = capacitacionSeleccionada.nombre;
                 txtLugar.Text = capacitacionSeleccionada.lugar;
                 txtDescripcion.Text = capacitacionSeleccionada.descripcion;
@@ -158,7 +176,8 @@ namespace TA_GesBib_Cliente
 
         private void btnPerInscrito_Click(object sender, EventArgs e)
         {
-
+            frmPersonalInscrito formPersonal = new frmPersonalInscrito(listaPersonal);
+            formPersonal.Show();
         }
 
         private void btnGuardar_Click(object sender, EventArgs e)
@@ -200,6 +219,8 @@ namespace TA_GesBib_Cliente
                 Program.DBController.actualizarCapacitacion(capacitacion);
                 MessageBox.Show("Capacitacion modificada exitosamente", "Mensaje Confirmacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
+            limpiarComponentes();
+            estadoComponentes(Estado.Inicial);
         }
 
         private void btnAgregarDC_Click(object sender, EventArgs e)
@@ -235,6 +256,27 @@ namespace TA_GesBib_Cliente
         private void btnQuitarPA_Click(object sender, EventArgs e)
         {
             dgvDiaCapacitacion.Rows.Remove(dgvDiaCapacitacion.CurrentRow);
+        }
+
+        private void btnEditarDC_Click(object sender, EventArgs e)
+        {
+            String aux = dgvDiaCapacitacion.CurrentRow.Cells[0].Value.ToString();
+            DateTime dato1 = Convert.ToDateTime(aux);
+            String dato2 = dgvDiaCapacitacion.CurrentRow.Cells[1].Value.ToString();
+            String dato3 = dgvDiaCapacitacion.CurrentRow.Cells[2].Value.ToString();
+            int index = dgvDiaCapacitacion.CurrentRow.Index;
+            frmModificarDiaCapacitacion formModificar = new frmModificarDiaCapacitacion(dato1, dato2, dato3);
+            if (formModificar.ShowDialog() == DialogResult.OK)
+            {
+                String aux1 = formModificar.DiaCapacitacionSeleccionada.fecha.ToString();
+                String data1 = aux1.Substring(0, 10);
+                String aux2 = formModificar.DiaCapacitacionSeleccionada.hora_ini;
+                String data2 = aux2.Substring(11, 5);
+                String aux3 = formModificar.DiaCapacitacionSeleccionada.hora_fin;
+                String data3 = aux3.Substring(11, 5);
+                dgvDiaCapacitacion.Rows.RemoveAt(index);
+                dgvDiaCapacitacion.Rows.Insert(index, data1, data2, data3);
+            }
         }
     }
 }

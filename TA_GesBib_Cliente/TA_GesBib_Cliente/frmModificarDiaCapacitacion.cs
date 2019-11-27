@@ -11,22 +11,27 @@ using TA_GesBib_Cliente.ServicioJava;
 
 namespace TA_GesBib_Cliente
 {
-    public partial class frmCrearDiaCapacitacion : Form
+    public partial class frmModificarDiaCapacitacion : Form
     {
         ServicioJava.diaCapacitacion diaCapacitacionSeleccionada;
-        public frmCrearDiaCapacitacion()
+        public frmModificarDiaCapacitacion()
         {
             InitializeComponent();
         }
-
+        public frmModificarDiaCapacitacion(DateTime dato1, String dato2, String dato3)
+        {
+            InitializeComponent();
+            dtpFechaIng.Value = dato1;
+            dtpHoraIni.Value = Convert.ToDateTime(dato2);
+            dtpHoraFin.Value = Convert.ToDateTime(dato3);
+        }
         public diaCapacitacion DiaCapacitacionSeleccionada { get => diaCapacitacionSeleccionada; set => diaCapacitacionSeleccionada = value; }
-
         private void btnCerrar_Click(object sender, EventArgs e)
         {
             this.Dispose();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btnModificar_Click(object sender, EventArgs e)
         {
             diaCapacitacionSeleccionada = new ServicioJava.diaCapacitacion();
             diaCapacitacionSeleccionada.fecha = dtpFechaIng.Value;

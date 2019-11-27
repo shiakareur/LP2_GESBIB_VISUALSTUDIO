@@ -47,9 +47,9 @@
             this.label1 = new System.Windows.Forms.Label();
             this.gbDatosGenerales = new System.Windows.Forms.GroupBox();
             this.gbPuntosAtencion = new System.Windows.Forms.GroupBox();
-            this.btnEditarPA = new System.Windows.Forms.Button();
+            this.btnEditarDC = new System.Windows.Forms.Button();
             this.btnAgregarDC = new System.Windows.Forms.Button();
-            this.btnQuitarPA = new System.Windows.Forms.Button();
+            this.btnQuitarDC = new System.Windows.Forms.Button();
             this.dgvDiaCapacitacion = new System.Windows.Forms.DataGridView();
             this.btnCerrar = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
@@ -269,9 +269,9 @@
             // 
             // gbPuntosAtencion
             // 
-            this.gbPuntosAtencion.Controls.Add(this.btnEditarPA);
+            this.gbPuntosAtencion.Controls.Add(this.btnEditarDC);
             this.gbPuntosAtencion.Controls.Add(this.btnAgregarDC);
-            this.gbPuntosAtencion.Controls.Add(this.btnQuitarPA);
+            this.gbPuntosAtencion.Controls.Add(this.btnQuitarDC);
             this.gbPuntosAtencion.Controls.Add(this.dgvDiaCapacitacion);
             this.gbPuntosAtencion.Font = new System.Drawing.Font("Bahnschrift Light", 12F);
             this.gbPuntosAtencion.Location = new System.Drawing.Point(159, 534);
@@ -281,20 +281,21 @@
             this.gbPuntosAtencion.TabStop = false;
             this.gbPuntosAtencion.Text = "Dias Capacitación";
             // 
-            // btnEditarPA
+            // btnEditarDC
             // 
-            this.btnEditarPA.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(175)))), ((int)(((byte)(169)))));
-            this.btnEditarPA.FlatAppearance.BorderSize = 0;
-            this.btnEditarPA.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEditarPA.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEditarPA.Image = global::TA_GesBib_Cliente.Properties.Resources.icons8_lápiz_30;
-            this.btnEditarPA.Location = new System.Drawing.Point(619, 25);
-            this.btnEditarPA.Margin = new System.Windows.Forms.Padding(2);
-            this.btnEditarPA.Name = "btnEditarPA";
-            this.btnEditarPA.Size = new System.Drawing.Size(35, 34);
-            this.btnEditarPA.TabIndex = 149;
-            this.btnEditarPA.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnEditarPA.UseVisualStyleBackColor = false;
+            this.btnEditarDC.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(175)))), ((int)(((byte)(169)))));
+            this.btnEditarDC.FlatAppearance.BorderSize = 0;
+            this.btnEditarDC.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEditarDC.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEditarDC.Image = global::TA_GesBib_Cliente.Properties.Resources.icons8_lápiz_30;
+            this.btnEditarDC.Location = new System.Drawing.Point(619, 25);
+            this.btnEditarDC.Margin = new System.Windows.Forms.Padding(2);
+            this.btnEditarDC.Name = "btnEditarDC";
+            this.btnEditarDC.Size = new System.Drawing.Size(35, 34);
+            this.btnEditarDC.TabIndex = 149;
+            this.btnEditarDC.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnEditarDC.UseVisualStyleBackColor = false;
+            this.btnEditarDC.Click += new System.EventHandler(this.btnEditarDC_Click);
             // 
             // btnAgregarDC
             // 
@@ -312,21 +313,21 @@
             this.btnAgregarDC.UseVisualStyleBackColor = false;
             this.btnAgregarDC.Click += new System.EventHandler(this.btnAgregarDC_Click);
             // 
-            // btnQuitarPA
+            // btnQuitarDC
             // 
-            this.btnQuitarPA.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(175)))), ((int)(((byte)(169)))));
-            this.btnQuitarPA.FlatAppearance.BorderSize = 0;
-            this.btnQuitarPA.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnQuitarPA.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnQuitarPA.Image = global::TA_GesBib_Cliente.Properties.Resources.icons8_menos_30;
-            this.btnQuitarPA.Location = new System.Drawing.Point(573, 25);
-            this.btnQuitarPA.Margin = new System.Windows.Forms.Padding(2);
-            this.btnQuitarPA.Name = "btnQuitarPA";
-            this.btnQuitarPA.Size = new System.Drawing.Size(35, 34);
-            this.btnQuitarPA.TabIndex = 147;
-            this.btnQuitarPA.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnQuitarPA.UseVisualStyleBackColor = false;
-            this.btnQuitarPA.Click += new System.EventHandler(this.btnQuitarPA_Click);
+            this.btnQuitarDC.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(175)))), ((int)(((byte)(169)))));
+            this.btnQuitarDC.FlatAppearance.BorderSize = 0;
+            this.btnQuitarDC.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnQuitarDC.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnQuitarDC.Image = global::TA_GesBib_Cliente.Properties.Resources.icons8_menos_30;
+            this.btnQuitarDC.Location = new System.Drawing.Point(573, 25);
+            this.btnQuitarDC.Margin = new System.Windows.Forms.Padding(2);
+            this.btnQuitarDC.Name = "btnQuitarDC";
+            this.btnQuitarDC.Size = new System.Drawing.Size(35, 34);
+            this.btnQuitarDC.TabIndex = 147;
+            this.btnQuitarDC.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnQuitarDC.UseVisualStyleBackColor = false;
+            this.btnQuitarDC.Click += new System.EventHandler(this.btnQuitarPA_Click);
             // 
             // dgvDiaCapacitacion
             // 
@@ -539,9 +540,9 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.GroupBox gbPuntosAtencion;
         private System.Windows.Forms.DataGridView dgvDiaCapacitacion;
-        private System.Windows.Forms.Button btnEditarPA;
+        private System.Windows.Forms.Button btnEditarDC;
         private System.Windows.Forms.Button btnAgregarDC;
-        private System.Windows.Forms.Button btnQuitarPA;
+        private System.Windows.Forms.Button btnQuitarDC;
         private System.Windows.Forms.Button btnPerInscrito;
         private System.Windows.Forms.DataGridViewTextBoxColumn Fecha;
         private System.Windows.Forms.DataGridViewTextBoxColumn Hora_ini;

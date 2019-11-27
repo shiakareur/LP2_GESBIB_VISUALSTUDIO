@@ -1,6 +1,6 @@
 ﻿namespace TA_GesBib_Cliente
 {
-    partial class frmCrearDiaCapacitacion
+    partial class frmModificarDiaCapacitacion
     {
         /// <summary>
         /// Required designer variable.
@@ -28,11 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCrearDiaCapacitacion));
-            this.btnCerrar = new System.Windows.Forms.Button();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.lblNombre = new System.Windows.Forms.Label();
             this.gbCrearPuntoAtencion = new System.Windows.Forms.GroupBox();
             this.dtpHoraIni = new System.Windows.Forms.DateTimePicker();
             this.dtpHoraFin = new System.Windows.Forms.DateTimePicker();
@@ -40,58 +35,13 @@
             this.lblHMS_ini = new System.Windows.Forms.Label();
             this.dtpFechaIng = new System.Windows.Forms.DateTimePicker();
             this.lblFechaIng = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.btnModificar = new System.Windows.Forms.Button();
+            this.btnCerrar = new System.Windows.Forms.Button();
+            this.lblNombre = new System.Windows.Forms.Label();
             this.gbCrearPuntoAtencion.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // btnCerrar
-            // 
-            this.btnCerrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(175)))), ((int)(((byte)(169)))));
-            this.btnCerrar.FlatAppearance.BorderSize = 0;
-            this.btnCerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCerrar.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Bold);
-            this.btnCerrar.Location = new System.Drawing.Point(733, 12);
-            this.btnCerrar.Name = "btnCerrar";
-            this.btnCerrar.Size = new System.Drawing.Size(89, 33);
-            this.btnCerrar.TabIndex = 49;
-            this.btnCerrar.Text = "CERRAR";
-            this.btnCerrar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnCerrar.UseVisualStyleBackColor = false;
-            this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.Color.Transparent;
-            this.label4.Font = new System.Drawing.Font("Bahnschrift", 14.25F, System.Drawing.FontStyle.Bold);
-            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(37)))), ((int)(((byte)(42)))));
-            this.label4.Location = new System.Drawing.Point(15, 141);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(85, 23);
-            this.label4.TabIndex = 23;
-            this.label4.Text = "Hora Fin:";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Font = new System.Drawing.Font("Bahnschrift", 14.25F, System.Drawing.FontStyle.Bold);
-            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(37)))), ((int)(((byte)(42)))));
-            this.label3.Location = new System.Drawing.Point(15, 94);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(103, 23);
-            this.label3.TabIndex = 21;
-            this.label3.Text = "Hora Inicio:";
-            // 
-            // lblNombre
-            // 
-            this.lblNombre.AutoSize = true;
-            this.lblNombre.Font = new System.Drawing.Font("Bahnschrift", 14.25F, System.Drawing.FontStyle.Bold);
-            this.lblNombre.Location = new System.Drawing.Point(26, 9);
-            this.lblNombre.Name = "lblNombre";
-            this.lblNombre.Size = new System.Drawing.Size(257, 23);
-            this.lblNombre.TabIndex = 51;
-            this.lblNombre.Text = "CREAR DIA DE CAPACITACIÓN";
             // 
             // gbCrearPuntoAtencion
             // 
@@ -105,10 +55,10 @@
             this.gbCrearPuntoAtencion.Controls.Add(this.label3);
             this.gbCrearPuntoAtencion.Font = new System.Drawing.Font("Bahnschrift Light", 12F);
             this.gbCrearPuntoAtencion.ForeColor = System.Drawing.Color.DarkRed;
-            this.gbCrearPuntoAtencion.Location = new System.Drawing.Point(30, 48);
+            this.gbCrearPuntoAtencion.Location = new System.Drawing.Point(31, 49);
             this.gbCrearPuntoAtencion.Name = "gbCrearPuntoAtencion";
             this.gbCrearPuntoAtencion.Size = new System.Drawing.Size(852, 213);
-            this.gbCrearPuntoAtencion.TabIndex = 50;
+            this.gbCrearPuntoAtencion.TabIndex = 51;
             this.gbCrearPuntoAtencion.TabStop = false;
             // 
             // dtpHoraIni
@@ -182,35 +132,83 @@
             this.lblFechaIng.TabIndex = 50;
             this.lblFechaIng.Text = "Fecha:";
             // 
-            // button1
+            // label4
             // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(175)))), ((int)(((byte)(169)))));
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Bold);
-            this.button1.ForeColor = System.Drawing.Color.Black;
-            this.button1.Location = new System.Drawing.Point(638, 12);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(89, 33);
-            this.button1.TabIndex = 49;
-            this.button1.Text = "CREAR";
-            this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.Transparent;
+            this.label4.Font = new System.Drawing.Font("Bahnschrift", 14.25F, System.Drawing.FontStyle.Bold);
+            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(37)))), ((int)(((byte)(42)))));
+            this.label4.Location = new System.Drawing.Point(15, 141);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(85, 23);
+            this.label4.TabIndex = 23;
+            this.label4.Text = "Hora Fin:";
             // 
-            // frmCrearDiaCapacitacion
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.Font = new System.Drawing.Font("Bahnschrift", 14.25F, System.Drawing.FontStyle.Bold);
+            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(37)))), ((int)(((byte)(42)))));
+            this.label3.Location = new System.Drawing.Point(15, 94);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(103, 23);
+            this.label3.TabIndex = 21;
+            this.label3.Text = "Hora Inicio:";
+            // 
+            // btnModificar
+            // 
+            this.btnModificar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(175)))), ((int)(((byte)(169)))));
+            this.btnModificar.FlatAppearance.BorderSize = 0;
+            this.btnModificar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnModificar.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Bold);
+            this.btnModificar.ForeColor = System.Drawing.Color.Black;
+            this.btnModificar.Location = new System.Drawing.Point(682, 12);
+            this.btnModificar.Name = "btnModificar";
+            this.btnModificar.Size = new System.Drawing.Size(106, 33);
+            this.btnModificar.TabIndex = 52;
+            this.btnModificar.Text = "MODIFICAR";
+            this.btnModificar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnModificar.UseVisualStyleBackColor = false;
+            this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
+            // 
+            // btnCerrar
+            // 
+            this.btnCerrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(175)))), ((int)(((byte)(169)))));
+            this.btnCerrar.FlatAppearance.BorderSize = 0;
+            this.btnCerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCerrar.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Bold);
+            this.btnCerrar.Location = new System.Drawing.Point(794, 12);
+            this.btnCerrar.Name = "btnCerrar";
+            this.btnCerrar.Size = new System.Drawing.Size(89, 33);
+            this.btnCerrar.TabIndex = 133;
+            this.btnCerrar.Text = "CERRAR";
+            this.btnCerrar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnCerrar.UseVisualStyleBackColor = false;
+            this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
+            // 
+            // lblNombre
+            // 
+            this.lblNombre.AutoSize = true;
+            this.lblNombre.Font = new System.Drawing.Font("Bahnschrift", 14.25F, System.Drawing.FontStyle.Bold);
+            this.lblNombre.Location = new System.Drawing.Point(27, 16);
+            this.lblNombre.Name = "lblNombre";
+            this.lblNombre.Size = new System.Drawing.Size(294, 23);
+            this.lblNombre.TabIndex = 134;
+            this.lblNombre.Text = "MODIFICAR DÍA DE CAPACITACIÓN";
+            // 
+            // frmModificarDiaCapacitacion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(242)))), ((int)(((byte)(241)))));
             this.ClientSize = new System.Drawing.Size(914, 311);
-            this.Controls.Add(this.btnCerrar);
             this.Controls.Add(this.lblNombre);
+            this.Controls.Add(this.btnCerrar);
+            this.Controls.Add(this.btnModificar);
             this.Controls.Add(this.gbCrearPuntoAtencion);
-            this.Controls.Add(this.button1);
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "frmCrearDiaCapacitacion";
-            this.Text = "Crear Día Capacitacion";
+            this.Name = "frmModificarDiaCapacitacion";
+            this.Text = "frmModificarDiaCapacitacion";
             this.gbCrearPuntoAtencion.ResumeLayout(false);
             this.gbCrearPuntoAtencion.PerformLayout();
             this.ResumeLayout(false);
@@ -220,17 +218,17 @@
 
         #endregion
 
-        private System.Windows.Forms.Button btnCerrar;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label lblNombre;
         private System.Windows.Forms.GroupBox gbCrearPuntoAtencion;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.DateTimePicker dtpFechaIng;
-        private System.Windows.Forms.Label lblFechaIng;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label lblHMS_ini;
         private System.Windows.Forms.DateTimePicker dtpHoraIni;
         private System.Windows.Forms.DateTimePicker dtpHoraFin;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label lblHMS_ini;
+        private System.Windows.Forms.DateTimePicker dtpFechaIng;
+        private System.Windows.Forms.Label lblFechaIng;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Button btnModificar;
+        private System.Windows.Forms.Button btnCerrar;
+        private System.Windows.Forms.Label lblNombre;
     }
 }
