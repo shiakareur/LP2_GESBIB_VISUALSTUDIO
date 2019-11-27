@@ -32,15 +32,15 @@
             this.btnCerrar = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
             this.lblNombre = new System.Windows.Forms.Label();
             this.gbCrearPuntoAtencion = new System.Windows.Forms.GroupBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.dtpFechaIng = new System.Windows.Forms.DateTimePicker();
-            this.lblFechaIng = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.lblHMS_ini = new System.Windows.Forms.Label();
+            this.dtpFechaIng = new System.Windows.Forms.DateTimePicker();
+            this.lblFechaIng = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
+            this.dtpHoraIni = new System.Windows.Forms.DateTimePicker();
+            this.dtpHoraFin = new System.Windows.Forms.DateTimePicker();
             this.gbCrearPuntoAtencion.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -57,6 +57,7 @@
             this.btnCerrar.Text = "CERRAR";
             this.btnCerrar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnCerrar.UseVisualStyleBackColor = false;
+            this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
             // 
             // label4
             // 
@@ -82,22 +83,6 @@
             this.label3.TabIndex = 21;
             this.label3.Text = "Hora Inicio:";
             // 
-            // textBox4
-            // 
-            this.textBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.textBox4.Location = new System.Drawing.Point(200, 141);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(71, 26);
-            this.textBox4.TabIndex = 24;
-            // 
-            // textBox3
-            // 
-            this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.textBox3.Location = new System.Drawing.Point(200, 94);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(71, 26);
-            this.textBox3.TabIndex = 22;
-            // 
             // lblNombre
             // 
             this.lblNombre.AutoSize = true;
@@ -110,6 +95,8 @@
             // 
             // gbCrearPuntoAtencion
             // 
+            this.gbCrearPuntoAtencion.Controls.Add(this.dtpHoraIni);
+            this.gbCrearPuntoAtencion.Controls.Add(this.dtpHoraFin);
             this.gbCrearPuntoAtencion.Controls.Add(this.label10);
             this.gbCrearPuntoAtencion.Controls.Add(this.lblHMS_ini);
             this.gbCrearPuntoAtencion.Controls.Add(this.dtpFechaIng);
@@ -117,8 +104,6 @@
             this.gbCrearPuntoAtencion.Controls.Add(this.button1);
             this.gbCrearPuntoAtencion.Controls.Add(this.label4);
             this.gbCrearPuntoAtencion.Controls.Add(this.label3);
-            this.gbCrearPuntoAtencion.Controls.Add(this.textBox4);
-            this.gbCrearPuntoAtencion.Controls.Add(this.textBox3);
             this.gbCrearPuntoAtencion.Font = new System.Drawing.Font("Bahnschrift Light", 12F);
             this.gbCrearPuntoAtencion.ForeColor = System.Drawing.Color.DarkRed;
             this.gbCrearPuntoAtencion.Location = new System.Drawing.Point(30, 48);
@@ -127,20 +112,31 @@
             this.gbCrearPuntoAtencion.TabIndex = 50;
             this.gbCrearPuntoAtencion.TabStop = false;
             // 
-            // button1
+            // label10
             // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(175)))), ((int)(((byte)(169)))));
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Bold);
-            this.button1.ForeColor = System.Drawing.Color.Black;
-            this.button1.Location = new System.Drawing.Point(437, 131);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(89, 33);
-            this.button1.TabIndex = 49;
-            this.button1.Text = "CREAR";
-            this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button1.UseVisualStyleBackColor = false;
+            this.label10.AutoSize = true;
+            this.label10.BackColor = System.Drawing.Color.Transparent;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(37)))), ((int)(((byte)(42)))));
+            this.label10.Location = new System.Drawing.Point(334, 141);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(71, 20);
+            this.label10.TabIndex = 108;
+            this.label10.Text = "(hh:mm) ";
+            this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // lblHMS_ini
+            // 
+            this.lblHMS_ini.AutoSize = true;
+            this.lblHMS_ini.BackColor = System.Drawing.Color.Transparent;
+            this.lblHMS_ini.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblHMS_ini.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(37)))), ((int)(((byte)(42)))));
+            this.lblHMS_ini.Location = new System.Drawing.Point(334, 97);
+            this.lblHMS_ini.Name = "lblHMS_ini";
+            this.lblHMS_ini.Size = new System.Drawing.Size(71, 20);
+            this.lblHMS_ini.TabIndex = 107;
+            this.lblHMS_ini.Text = "(hh:mm) ";
+            this.lblHMS_ini.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // dtpFechaIng
             // 
@@ -162,31 +158,46 @@
             this.lblFechaIng.TabIndex = 50;
             this.lblFechaIng.Text = "Fecha:";
             // 
-            // label10
+            // button1
             // 
-            this.label10.AutoSize = true;
-            this.label10.BackColor = System.Drawing.Color.Transparent;
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(37)))), ((int)(((byte)(42)))));
-            this.label10.Location = new System.Drawing.Point(292, 141);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(71, 20);
-            this.label10.TabIndex = 108;
-            this.label10.Text = "(hh:mm) ";
-            this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(175)))), ((int)(((byte)(169)))));
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Bold);
+            this.button1.ForeColor = System.Drawing.Color.Black;
+            this.button1.Location = new System.Drawing.Point(437, 131);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(89, 33);
+            this.button1.TabIndex = 49;
+            this.button1.Text = "CREAR";
+            this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // lblHMS_ini
+            // dtpHoraIni
             // 
-            this.lblHMS_ini.AutoSize = true;
-            this.lblHMS_ini.BackColor = System.Drawing.Color.Transparent;
-            this.lblHMS_ini.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblHMS_ini.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(37)))), ((int)(((byte)(42)))));
-            this.lblHMS_ini.Location = new System.Drawing.Point(292, 97);
-            this.lblHMS_ini.Name = "lblHMS_ini";
-            this.lblHMS_ini.Size = new System.Drawing.Size(71, 20);
-            this.lblHMS_ini.TabIndex = 107;
-            this.lblHMS_ini.Text = "(hh:mm) ";
-            this.lblHMS_ini.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.dtpHoraIni.CustomFormat = "HH:mm";
+            this.dtpHoraIni.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtpHoraIni.Location = new System.Drawing.Point(200, 90);
+            this.dtpHoraIni.Margin = new System.Windows.Forms.Padding(2);
+            this.dtpHoraIni.MinDate = new System.DateTime(1753, 1, 1, 8, 0, 0, 0);
+            this.dtpHoraIni.Name = "dtpHoraIni";
+            this.dtpHoraIni.ShowUpDown = true;
+            this.dtpHoraIni.Size = new System.Drawing.Size(112, 27);
+            this.dtpHoraIni.TabIndex = 132;
+            this.dtpHoraIni.Value = new System.DateTime(2019, 11, 24, 0, 0, 0, 0);
+            // 
+            // dtpHoraFin
+            // 
+            this.dtpHoraFin.CustomFormat = "HH:mm";
+            this.dtpHoraFin.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtpHoraFin.Location = new System.Drawing.Point(200, 136);
+            this.dtpHoraFin.MinDate = new System.DateTime(1753, 1, 1, 8, 0, 0, 0);
+            this.dtpHoraFin.Name = "dtpHoraFin";
+            this.dtpHoraFin.ShowUpDown = true;
+            this.dtpHoraFin.Size = new System.Drawing.Size(112, 27);
+            this.dtpHoraFin.TabIndex = 131;
+            this.dtpHoraFin.Value = new System.DateTime(2019, 11, 23, 0, 0, 0, 0);
             // 
             // frmCrearDiaCapacitacion
             // 
@@ -212,8 +223,6 @@
         private System.Windows.Forms.Button btnCerrar;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.Label lblNombre;
         private System.Windows.Forms.GroupBox gbCrearPuntoAtencion;
         private System.Windows.Forms.Button button1;
@@ -221,5 +230,7 @@
         private System.Windows.Forms.Label lblFechaIng;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label lblHMS_ini;
+        private System.Windows.Forms.DateTimePicker dtpHoraIni;
+        private System.Windows.Forms.DateTimePicker dtpHoraFin;
     }
 }
