@@ -36,6 +36,12 @@
             this.btnEditarPA = new System.Windows.Forms.Button();
             this.btnAgregarPA = new System.Windows.Forms.Button();
             this.btnQuitarPA = new System.Windows.Forms.Button();
+            this.dgvPuntosAtencion = new System.Windows.Forms.DataGridView();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Piso = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CantMin = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CantOpt = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Perfil = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.txtCodigo = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -52,16 +58,10 @@
             this.btnModificar = new System.Windows.Forms.Button();
             this.btnGuardar = new System.Windows.Forms.Button();
             this.btnNuevo = new System.Windows.Forms.Button();
-            this.Perfil = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.CantOpt = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.CantMin = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Piso = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgvPuntosAtencion = new System.Windows.Forms.DataGridView();
             this.gbDatosGenerales.SuspendLayout();
             this.gbPuntosAtencion.SuspendLayout();
-            this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPuntosAtencion)).BeginInit();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // gbDatosGenerales
@@ -169,6 +169,63 @@
             this.btnQuitarPA.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnQuitarPA.UseVisualStyleBackColor = false;
             this.btnQuitarPA.Click += new System.EventHandler(this.btnQuitarPA_Click);
+            // 
+            // dgvPuntosAtencion
+            // 
+            this.dgvPuntosAtencion.AllowUserToAddRows = false;
+            this.dgvPuntosAtencion.AllowUserToDeleteRows = false;
+            this.dgvPuntosAtencion.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvPuntosAtencion.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column1,
+            this.Piso,
+            this.CantMin,
+            this.CantOpt,
+            this.Perfil});
+            this.dgvPuntosAtencion.Location = new System.Drawing.Point(58, 62);
+            this.dgvPuntosAtencion.Name = "dgvPuntosAtencion";
+            this.dgvPuntosAtencion.ReadOnly = true;
+            this.dgvPuntosAtencion.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.dgvPuntosAtencion.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvPuntosAtencion.Size = new System.Drawing.Size(659, 189);
+            this.dgvPuntosAtencion.TabIndex = 52;
+            this.dgvPuntosAtencion.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgvPuntosAtencion_CellFormatting);
+            // 
+            // Column1
+            // 
+            this.Column1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.Column1.HeaderText = "Puntos de Atención";
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            this.Column1.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.Column1.Width = 158;
+            // 
+            // Piso
+            // 
+            this.Piso.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.Piso.HeaderText = "Piso";
+            this.Piso.Name = "Piso";
+            this.Piso.ReadOnly = true;
+            this.Piso.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Piso.Width = 60;
+            // 
+            // CantMin
+            // 
+            this.CantMin.HeaderText = "Cantidad Mínima";
+            this.CantMin.Name = "CantMin";
+            this.CantMin.ReadOnly = true;
+            // 
+            // CantOpt
+            // 
+            this.CantOpt.HeaderText = "Cantidad Óptima";
+            this.CantOpt.Name = "CantOpt";
+            this.CantOpt.ReadOnly = true;
+            // 
+            // Perfil
+            // 
+            this.Perfil.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Perfil.HeaderText = "Perfil Requerido";
+            this.Perfil.Name = "Perfil";
+            this.Perfil.ReadOnly = true;
             // 
             // txtCodigo
             // 
@@ -292,6 +349,7 @@
             this.btnEliminar.Text = "ELIMINAR";
             this.btnEliminar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnEliminar.UseVisualStyleBackColor = false;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // btnCerrar
             // 
@@ -353,6 +411,7 @@
             this.btnModificar.Text = "MODIFICAR";
             this.btnModificar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnModificar.UseVisualStyleBackColor = false;
+            this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
             // 
             // btnGuardar
             // 
@@ -387,63 +446,6 @@
             this.btnNuevo.UseVisualStyleBackColor = false;
             this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click);
             // 
-            // Perfil
-            // 
-            this.Perfil.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Perfil.HeaderText = "Perfil Requerido";
-            this.Perfil.Name = "Perfil";
-            this.Perfil.ReadOnly = true;
-            // 
-            // CantOpt
-            // 
-            this.CantOpt.HeaderText = "Cantidad Óptima";
-            this.CantOpt.Name = "CantOpt";
-            this.CantOpt.ReadOnly = true;
-            // 
-            // CantMin
-            // 
-            this.CantMin.HeaderText = "Cantidad Mínima";
-            this.CantMin.Name = "CantMin";
-            this.CantMin.ReadOnly = true;
-            // 
-            // Piso
-            // 
-            this.Piso.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.Piso.HeaderText = "Piso";
-            this.Piso.Name = "Piso";
-            this.Piso.ReadOnly = true;
-            this.Piso.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.Piso.Width = 60;
-            // 
-            // Column1
-            // 
-            this.Column1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.Column1.HeaderText = "Puntos de Atención";
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            this.Column1.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.Column1.Width = 158;
-            // 
-            // dgvPuntosAtencion
-            // 
-            this.dgvPuntosAtencion.AllowUserToAddRows = false;
-            this.dgvPuntosAtencion.AllowUserToDeleteRows = false;
-            this.dgvPuntosAtencion.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvPuntosAtencion.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column1,
-            this.Piso,
-            this.CantMin,
-            this.CantOpt,
-            this.Perfil});
-            this.dgvPuntosAtencion.Location = new System.Drawing.Point(58, 62);
-            this.dgvPuntosAtencion.Name = "dgvPuntosAtencion";
-            this.dgvPuntosAtencion.ReadOnly = true;
-            this.dgvPuntosAtencion.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.dgvPuntosAtencion.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvPuntosAtencion.Size = new System.Drawing.Size(659, 189);
-            this.dgvPuntosAtencion.TabIndex = 52;
-            this.dgvPuntosAtencion.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgvPuntosAtencion_CellFormatting);
-            // 
             // frmAdministrarBibliotecas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 13F);
@@ -469,9 +471,9 @@
             this.gbDatosGenerales.ResumeLayout(false);
             this.gbDatosGenerales.PerformLayout();
             this.gbPuntosAtencion.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvPuntosAtencion)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvPuntosAtencion)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
