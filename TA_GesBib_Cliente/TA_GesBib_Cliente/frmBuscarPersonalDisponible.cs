@@ -19,11 +19,12 @@ namespace TA_GesBib_Cliente
             InitializeComponent();
 
         }
-        public frmBuscarPersonalDisponible(DateTime fecha, string horaIni, string horaFin, string perfil)
+        public frmBuscarPersonalDisponible(ServicioJava.biblioteca bibio, DateTime fecha, string horaIni, string horaFin, string perfil)
         {
             InitializeComponent();
             try
             {
+                dgvPersonal.AutoGenerateColumns = false;
                 dgvPersonal.DataSource = Program.DBController.listarUsuariosLibres(fecha, horaIni, horaFin, perfil);
 
             }

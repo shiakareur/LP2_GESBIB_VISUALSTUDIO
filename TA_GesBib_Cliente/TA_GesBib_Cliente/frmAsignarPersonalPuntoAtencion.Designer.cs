@@ -50,19 +50,16 @@
             this.txtBib = new System.Windows.Forms.TextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.btnBuscarPersonal = new System.Windows.Forms.Button();
-            this.txtPerfilPersonal = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.btnRemove = new System.Windows.Forms.Button();
             this.btnAdd = new System.Windows.Forms.Button();
             this.dgvPersonal = new System.Windows.Forms.DataGridView();
-            this.Codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.PerfilExperiencia = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.txtCod = new System.Windows.Forms.TextBox();
             this.lblNombreCompleto = new System.Windows.Forms.Label();
             this.lblCodigo = new System.Windows.Forms.Label();
             this.btnGuardar = new System.Windows.Forms.Button();
+            this.Codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPersonal)).BeginInit();
@@ -141,7 +138,7 @@
             // txtPerfil
             // 
             this.txtPerfil.Location = new System.Drawing.Point(247, 98);
-            this.txtPerfil.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtPerfil.Margin = new System.Windows.Forms.Padding(4);
             this.txtPerfil.Name = "txtPerfil";
             this.txtPerfil.Size = new System.Drawing.Size(452, 26);
             this.txtPerfil.TabIndex = 142;
@@ -180,7 +177,7 @@
             // 
             this.cmbHoraIni.FormattingEnabled = true;
             this.cmbHoraIni.Location = new System.Drawing.Point(247, 242);
-            this.cmbHoraIni.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cmbHoraIni.Margin = new System.Windows.Forms.Padding(4);
             this.cmbHoraIni.Name = "cmbHoraIni";
             this.cmbHoraIni.Size = new System.Drawing.Size(191, 28);
             this.cmbHoraIni.TabIndex = 147;
@@ -190,7 +187,7 @@
             // 
             this.cmbHoraFin.FormattingEnabled = true;
             this.cmbHoraFin.Location = new System.Drawing.Point(247, 279);
-            this.cmbHoraFin.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cmbHoraFin.Margin = new System.Windows.Forms.Padding(4);
             this.cmbHoraFin.Name = "cmbHoraFin";
             this.cmbHoraFin.Size = new System.Drawing.Size(191, 28);
             this.cmbHoraFin.TabIndex = 148;
@@ -216,9 +213,9 @@
             this.groupBox1.Controls.Add(this.lblPerfilRequerido);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.groupBox1.Location = new System.Drawing.Point(36, 69);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox1.Size = new System.Drawing.Size(721, 324);
             this.groupBox1.TabIndex = 149;
             this.groupBox1.TabStop = false;
@@ -229,7 +226,7 @@
             this.dtpFecha.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.dtpFecha.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtpFecha.Location = new System.Drawing.Point(247, 204);
-            this.dtpFecha.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dtpFecha.Margin = new System.Windows.Forms.Padding(4);
             this.dtpFecha.Name = "dtpFecha";
             this.dtpFecha.Size = new System.Drawing.Size(191, 26);
             this.dtpFecha.TabIndex = 162;
@@ -251,7 +248,7 @@
             // txtCantOpt
             // 
             this.txtCantOpt.Location = new System.Drawing.Point(247, 170);
-            this.txtCantOpt.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtCantOpt.Margin = new System.Windows.Forms.Padding(4);
             this.txtCantOpt.Name = "txtCantOpt";
             this.txtCantOpt.Size = new System.Drawing.Size(191, 26);
             this.txtCantOpt.TabIndex = 155;
@@ -273,7 +270,7 @@
             // txtCantMin
             // 
             this.txtCantMin.Location = new System.Drawing.Point(247, 134);
-            this.txtCantMin.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtCantMin.Margin = new System.Windows.Forms.Padding(4);
             this.txtCantMin.Name = "txtCantMin";
             this.txtCantMin.Size = new System.Drawing.Size(191, 26);
             this.txtCantMin.TabIndex = 153;
@@ -295,7 +292,7 @@
             // txtPtoAtencion
             // 
             this.txtPtoAtencion.Location = new System.Drawing.Point(247, 63);
-            this.txtPtoAtencion.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtPtoAtencion.Margin = new System.Windows.Forms.Padding(4);
             this.txtPtoAtencion.Name = "txtPtoAtencion";
             this.txtPtoAtencion.Size = new System.Drawing.Size(452, 26);
             this.txtPtoAtencion.TabIndex = 151;
@@ -304,7 +301,7 @@
             // txtBib
             // 
             this.txtBib.Location = new System.Drawing.Point(247, 27);
-            this.txtBib.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtBib.Margin = new System.Windows.Forms.Padding(4);
             this.txtBib.Name = "txtBib";
             this.txtBib.Size = new System.Drawing.Size(452, 26);
             this.txtBib.TabIndex = 150;
@@ -312,8 +309,6 @@
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.btnBuscarPersonal);
-            this.groupBox2.Controls.Add(this.txtPerfilPersonal);
-            this.groupBox2.Controls.Add(this.label1);
             this.groupBox2.Controls.Add(this.btnRemove);
             this.groupBox2.Controls.Add(this.btnAdd);
             this.groupBox2.Controls.Add(this.dgvPersonal);
@@ -323,9 +318,9 @@
             this.groupBox2.Controls.Add(this.lblCodigo);
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.groupBox2.Location = new System.Drawing.Point(36, 400);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox2.Size = new System.Drawing.Size(721, 299);
             this.groupBox2.TabIndex = 150;
             this.groupBox2.TabStop = false;
@@ -347,83 +342,45 @@
             this.btnBuscarPersonal.UseVisualStyleBackColor = false;
             this.btnBuscarPersonal.Click += new System.EventHandler(this.btnBuscarPersonal_Click);
             // 
-            // txtPerfilPersonal
-            // 
-            this.txtPerfilPersonal.Location = new System.Drawing.Point(247, 98);
-            this.txtPerfilPersonal.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.txtPerfilPersonal.Name = "txtPerfilPersonal";
-            this.txtPerfilPersonal.Size = new System.Drawing.Size(349, 26);
-            this.txtPerfilPersonal.TabIndex = 152;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(37)))), ((int)(((byte)(42)))));
-            this.label1.Location = new System.Drawing.Point(24, 98);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(68, 26);
-            this.label1.TabIndex = 151;
-            this.label1.Text = "Perfil:";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.label1.Click += new System.EventHandler(this.label1_Click);
-            // 
             // btnRemove
             // 
             this.btnRemove.Location = new System.Drawing.Point(655, 97);
-            this.btnRemove.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnRemove.Margin = new System.Windows.Forms.Padding(4);
             this.btnRemove.Name = "btnRemove";
             this.btnRemove.Size = new System.Drawing.Size(45, 32);
             this.btnRemove.TabIndex = 150;
             this.btnRemove.Text = "-";
             this.btnRemove.UseVisualStyleBackColor = true;
+            this.btnRemove.Click += new System.EventHandler(this.btnRemove_Click);
             // 
             // btnAdd
             // 
             this.btnAdd.Location = new System.Drawing.Point(605, 97);
-            this.btnAdd.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnAdd.Margin = new System.Windows.Forms.Padding(4);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(45, 32);
             this.btnAdd.TabIndex = 149;
             this.btnAdd.Text = "+";
             this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // dgvPersonal
             // 
             this.dgvPersonal.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvPersonal.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Codigo,
-            this.Nombre,
-            this.PerfilExperiencia});
+            this.Nombre});
             this.dgvPersonal.Location = new System.Drawing.Point(29, 137);
-            this.dgvPersonal.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dgvPersonal.Margin = new System.Windows.Forms.Padding(4);
             this.dgvPersonal.Name = "dgvPersonal";
             this.dgvPersonal.Size = new System.Drawing.Size(671, 142);
             this.dgvPersonal.TabIndex = 149;
             this.dgvPersonal.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
-            // Codigo
-            // 
-            this.Codigo.HeaderText = "Código";
-            this.Codigo.Name = "Codigo";
-            // 
-            // Nombre
-            // 
-            this.Nombre.HeaderText = "Nombre";
-            this.Nombre.Name = "Nombre";
-            // 
-            // PerfilExperiencia
-            // 
-            this.PerfilExperiencia.HeaderText = "Perfil Experiencia";
-            this.PerfilExperiencia.Name = "PerfilExperiencia";
-            this.PerfilExperiencia.Width = 197;
-            // 
             // txtNombre
             // 
             this.txtNombre.Location = new System.Drawing.Point(247, 63);
-            this.txtNombre.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtNombre.Margin = new System.Windows.Forms.Padding(4);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(452, 26);
             this.txtNombre.TabIndex = 148;
@@ -431,7 +388,7 @@
             // txtCod
             // 
             this.txtCod.Location = new System.Drawing.Point(247, 27);
-            this.txtCod.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtCod.Margin = new System.Windows.Forms.Padding(4);
             this.txtCod.Name = "txtCod";
             this.txtCod.Size = new System.Drawing.Size(136, 26);
             this.txtCod.TabIndex = 142;
@@ -473,13 +430,25 @@
             this.btnGuardar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.btnGuardar.Image = global::TA_GesBib_Cliente.Properties.Resources.icono_guardar;
             this.btnGuardar.Location = new System.Drawing.Point(564, 706);
-            this.btnGuardar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnGuardar.Margin = new System.Windows.Forms.Padding(4);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(193, 49);
             this.btnGuardar.TabIndex = 151;
             this.btnGuardar.Text = "GUARDAR";
             this.btnGuardar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnGuardar.UseVisualStyleBackColor = false;
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
+            // 
+            // Codigo
+            // 
+            this.Codigo.HeaderText = "Código";
+            this.Codigo.Name = "Codigo";
+            // 
+            // Nombre
+            // 
+            this.Nombre.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Nombre.HeaderText = "Nombre";
+            this.Nombre.Name = "Nombre";
             // 
             // frmAsignarPersonalPuntoAtencion
             // 
@@ -493,7 +462,7 @@
             this.Controls.Add(this.btnGuardar);
             this.Controls.Add(this.label6);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmAsignarPersonalPuntoAtencion";
             this.Text = "Asignar Personal";
             this.Load += new System.EventHandler(this.frmAsignarPersonalPuntoAtencion_Load);
@@ -528,11 +497,6 @@
         private System.Windows.Forms.Button btnRemove;
         private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.DataGridView dgvPersonal;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Codigo;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Nombre;
-        private System.Windows.Forms.DataGridViewTextBoxColumn PerfilExperiencia;
-        private System.Windows.Forms.TextBox txtPerfilPersonal;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnBuscarPersonal;
         private System.Windows.Forms.Button btnGuardar;
         private System.Windows.Forms.TextBox txtCantOpt;
@@ -543,5 +507,7 @@
         private System.Windows.Forms.TextBox txtBib;
         private System.Windows.Forms.DateTimePicker dtpFecha;
         private System.Windows.Forms.Label lblFecha;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Codigo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Nombre;
     }
 }

@@ -18,6 +18,16 @@ namespace TA_GesBib_Cliente
         List<String> horas = new List<String> { "8:00", "9:00", "10:00", "11:00", "12:00", "13:00", "14:00", "15:00", "16:00", "17:00", "18:00", "19:00", "20:00", "21:00", "22:00"};
         List<String> horas2 = new List<String> { "8:00", "9:00", "10:00", "11:00", "12:00", "13:00", "14:00", "15:00", "16:00", "17:00", "18:00", "19:00", "20:00", "21:00", "22:00"};
         ServicioJava.personal personal = new ServicioJava.personal();
+        BindingList<ServicioJava.distribucionPersonal> listaDistPAForm;
+        BindingList<ServicioJava.distribucionPersonal> listaNuevos=new BindingList<ServicioJava.distribucionPersonal>();
+
+
+        ServicioJava.biblioteca bibForm;
+        DateTime fechaForm;
+        string horaIniForm, horaFinForm;
+        ServicioJava.puntosAtencion puntoAtForm;
+        ServicioJava.perfilExperiencia perfilForm;
+        int cant = 0;
 
         public frmAsignarPersonalPuntoAtencion()
         {
@@ -33,7 +43,7 @@ namespace TA_GesBib_Cliente
             //comboBox1.ValueMember = "Name";
         }
 
-        public frmAsignarPersonalPuntoAtencion(ServicioJava.biblioteca bib, ServicioJava.puntosAtencion puntoA, DateTime fecha, int col)
+        public frmAsignarPersonalPuntoAtencion(ServicioJava.biblioteca bib, ServicioJava.puntosAtencion puntoA, BindingList<ServicioJava.distribucionPersonal> listaDistPA, DateTime fecha, int col)
         {
             InitializeComponent();
             bindingSource1.DataSource = horas;
@@ -42,6 +52,13 @@ namespace TA_GesBib_Cliente
             cmbHoraIni.DataSource = bindingSource1.DataSource;
             cmbHoraFin.DataSource = bindingSource2.DataSource;
             dgvPersonal.AutoGenerateColumns = false;
+
+            bibForm = bib;
+            fechaForm = fecha;
+            listaDistPAForm = listaDistPA;
+            puntoAtForm = puntoA;
+
+
 
             txtBib.Text = bib.nombre;
             txtPtoAtencion.Text = puntoA.nombre;
@@ -52,6 +69,20 @@ namespace TA_GesBib_Cliente
             cmbHoraIni.SelectedIndex = col-1;
             cmbHoraFin.SelectedIndex = col;
 
+
+            //llenar el dgv
+            
+            foreach (ServicioJava.distribucionPersonal d in listaDistPAForm) {
+                dgvPersonal.Rows.Add(d.personal.codigo, d.personal.nombre + " " + d.personal.apellido);
+                //dgvPersonal.Rows[cant].Cells[0].Value = d.personal.codigo;
+                //dgvPersonal.Rows[cant].Cells[1].Value = d.personal.nombre + " " + d.personal.apellido;
+                cant++;
+
+            }
+
+            horaFinForm = horas2[col]+":00";
+            horaIniForm = horas[col-1]+":00";
+            perfilForm = puntoA.perfilExperiencia;
 
         }
         
@@ -102,11 +133,43 @@ namespace TA_GesBib_Cliente
 
         }
 
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+            ServicioJava.distribucionPersonal d = new ServicioJava.distribucionPersonal();
+            d.fecha = dtpFecha.Value;
+            d.fechaSpecified = true;
+            d.horaInicio = horaIniForm;
+            d.horaFin = horaFinForm;
+            d.personal = personal;
+            d.puntoAtencion = puntoAtForm;
+
+            listaNuevos.Add(d);
+
+
+            dgvPersonal.Rows.Add(personal.codigo, personal.nombre+" "+personal.apellido);
+        }
+
+        private void btnRemove_Click(object sender, EventArgs e)
+        {
+            //listaNuevos.Remove();
+            dgvPersonal.Rows.Remove(dgvPersonal.CurrentRow);
+        }
+
+        private void btnGuardar_Click(object sender, EventArgs e)
+        {
+            foreach (ServicioJava.distribucionPersonal d in listaNuevos) {
+                Program.DBController.insertarDistribucionPersonal(d);
+            }
+        }
+
         private void btnBuscarPersonal_Click(object sender, EventArgs e)
         {
-            frmBuscarPersonalDisponible formBuscar = new frmBuscarPersonalDisponible();
+            frmBuscarPersonalDisponible formBuscar = new frmBuscarPersonalDisponible(bibForm,fechaForm, horaIniForm, horaFinForm,perfilForm.nombrePerfil );
             if (formBuscar.ShowDialog() == DialogResult.OK) {
-                //personal=
+                personal = formBuscar.PersonalSeleccionado;
+                txtCod.Text = personal.codigo;
+                txtNombre.Text = personal.nombre + " "+personal.apellido;
+                //txtPerfil.Text = perfilForm.nombrePerfil;
             }
             //dtpFecha.Value, (string)cmbHoraFin.SelectedItem, (string)cmbHoraFin.SelectedValue, txtPerfil.Text
 

@@ -17,6 +17,7 @@ namespace TA_GesBib_Cliente
         private Form var_formPerfil; //byTyS
         private ServicioJava.personal personal = new ServicioJava.personal();
         private BindingList<ServicioJava.distribucionPersonal> listaDist;
+        private BindingList<BindingList<ServicioJava.distribucionPersonal>> matrizDist=new BindingList<BindingList<distribucionPersonal>>();
         private ServicioJava.distribucionPersonal distrib = new ServicioJava.distribucionPersonal();
         ServicioJava.ServicioClient DBController = new ServicioJava.ServicioClient();
         BindingList<ServicioJava.puntosAtencion> puntoA;
@@ -100,7 +101,7 @@ namespace TA_GesBib_Cliente
                     int fil = dgvDitribucion.CurrentCell.RowIndex;
                     int col = dgvDitribucion.CurrentCell.ColumnIndex;
 
-                    frmAsignarPersonalPuntoAtencion formAsignarPersonal = new frmAsignarPersonalPuntoAtencion(bib,puntoA[fil],dtpSemana.Value,col);
+                    frmAsignarPersonalPuntoAtencion formAsignarPersonal = new frmAsignarPersonalPuntoAtencion(bib,puntoA[fil], matrizDist[fil],dtpSemana.Value,col);
                     formAsignarPersonal.ShowDialog();
                 }
             }
@@ -119,6 +120,7 @@ namespace TA_GesBib_Cliente
 
         private void btnBuscarDistribucion_Click(object sender, EventArgs e)
         {
+            //dgvDitribucion.RowCount = 0;
             int fila = 0;
             foreach (ServicioJava.puntosAtencion pa in puntoA)
             {
@@ -127,7 +129,7 @@ namespace TA_GesBib_Cliente
                 try
                 {
                     listaDist = new BindingList<distribucionPersonal>(Program.DBController.listarDistribucionPersonalPorFecha(personal.id, pa.id, dtpSemana.Value, dtpSemana.Value));
-
+                    matrizDist.Add(listaDist);
                     foreach (ServicioJava.distribucionPersonal distAux in listaDist)
                     {
                         int col1 = Convert.ToInt32(distAux.horaInicio.Substring(0, 2)) - 7;
