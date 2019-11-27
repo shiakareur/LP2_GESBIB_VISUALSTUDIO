@@ -37,7 +37,7 @@ namespace TA_GesBib_Cliente
             personal.id = usuario.id;
             
             dgvDitribucion.AutoGenerateColumns = false;
-            //dgvDitribucion.DataSource = DBController.listarPuntosAtencion();
+            //dgvDitribucion.DataSource = DBController.listarDistribucionPersonalPorFechaHora();
 
             dgvDitribucion.Rows[0].Cells[1].Style.BackColor = Color.PowderBlue;
 
