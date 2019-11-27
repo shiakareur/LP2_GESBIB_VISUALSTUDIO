@@ -35,5 +35,10 @@ namespace TA_GesBib_Cliente
             this.Visible = false;
             var_formPerfilGestor.PanelBIPO.Visible = true;
         }
+
+        private void btnAdministrarPerfiles_Click(object sender, EventArgs e)
+        {
+            frmMantenimientoPerfilExperiencia var_mantenimientoPE = new frmMantenimientoPerfilExperiencia();
+        }
     }
 }
