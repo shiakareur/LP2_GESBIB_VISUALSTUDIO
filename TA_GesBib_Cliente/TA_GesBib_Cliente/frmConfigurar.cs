@@ -216,7 +216,7 @@ namespace TA_GesBib_Cliente
         {
             estadoUsuario = Estado.Modificar;
             estadoComponentes(Estado.Modificar);
-
+            ruta = "";
 
         }
 
@@ -232,6 +232,18 @@ namespace TA_GesBib_Cliente
             {
                 if (ofdPortada.ShowDialog() == DialogResult.OK)
                 {
+                    string imagen = ofdPortada.FileName;
+                    pbPortada.Image = Image.FromFile(imagen);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("El archivo seleccionado no es un tipo de imagen válido");
+            }
+            /*try
+            {
+                if (ofdPortada.ShowDialog() == DialogResult.OK)
+                {
                     ruta = ofdPortada.FileName;
                     pbPortada.Image = Image.FromFile(ruta);
                 }
@@ -240,11 +252,12 @@ namespace TA_GesBib_Cliente
             catch (Exception ex)
             {
                 MessageBox.Show("El archivo seleccionado no es un tipo de imagen válido");
-            }
+            }*/
         }
 
         private void btnBuscar_Click(object sender, EventArgs e)
         {
+            ruta = "";
             frmBuscarPersonalConTodo frmBPCT = new frmBuscarPersonalConTodo();
             if (frmBPCT.ShowDialog() == DialogResult.OK)
             {
@@ -263,10 +276,12 @@ namespace TA_GesBib_Cliente
                     pbPortada.Visible = true;
                     MemoryStream ms1 = new MemoryStream(personal.foto);
                     pbPortada.Image = new Bitmap(ms1);
+                    MessageBox.Show("Si hay foto encontrada");
                 }
                 else
                 {
                     pbPortada.Visible = false;
+                    MessageBox.Show("No hay foto encontrada");
                 }
                         
                 estadoComponentes(Estado.Buscar);
