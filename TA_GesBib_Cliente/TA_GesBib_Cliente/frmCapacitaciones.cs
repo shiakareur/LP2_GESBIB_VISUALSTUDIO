@@ -167,6 +167,7 @@ namespace TA_GesBib_Cliente
             capacitacion.listaDiasCapacitacion = listaDiaCapacitacion.ToArray();
 
             Program.DBController.insertarCapacitacion(capacitacion);
+            MessageBox.Show("Capacitacion registrada exitosamente", "Mensaje Confirmacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         private void btnAgregarPA_Click(object sender, EventArgs e)
@@ -184,5 +185,24 @@ namespace TA_GesBib_Cliente
             }
         }
 
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            limpiarComponentes();
+            estadoComponentes(Estado.Inicial);
+        }
+
+        private void limpiarComponentes()
+        {
+            txtNombre.Text = "";
+            txtLugar.Text = "";
+            txtDescripcion.Text = "";
+            dgvDiaCapacitacion.RowCount = 0;
+            i = 0;
+        }
+
+        private void btnQuitarPA_Click(object sender, EventArgs e)
+        {
+            dgvDiaCapacitacion.Rows.Remove(dgvDiaCapacitacion.CurrentRow);
+        }
     }
 }

@@ -327,6 +327,7 @@
             this.btnQuitarPA.TabIndex = 147;
             this.btnQuitarPA.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnQuitarPA.UseVisualStyleBackColor = false;
+            this.btnQuitarPA.Click += new System.EventHandler(this.btnQuitarPA_Click);
             // 
             // dgvDiaCapacitacion
             // 
@@ -399,6 +400,7 @@
             this.btnCancelar.Text = "CANCELAR";
             this.btnCancelar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnCancelar.UseVisualStyleBackColor = false;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // btnBuscar
             // 

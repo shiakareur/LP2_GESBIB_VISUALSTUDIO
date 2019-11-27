@@ -34,13 +34,13 @@
             this.label3 = new System.Windows.Forms.Label();
             this.lblNombre = new System.Windows.Forms.Label();
             this.gbCrearPuntoAtencion = new System.Windows.Forms.GroupBox();
+            this.dtpHoraIni = new System.Windows.Forms.DateTimePicker();
+            this.dtpHoraFin = new System.Windows.Forms.DateTimePicker();
             this.label10 = new System.Windows.Forms.Label();
             this.lblHMS_ini = new System.Windows.Forms.Label();
             this.dtpFechaIng = new System.Windows.Forms.DateTimePicker();
             this.lblFechaIng = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
-            this.dtpHoraIni = new System.Windows.Forms.DateTimePicker();
-            this.dtpHoraFin = new System.Windows.Forms.DateTimePicker();
             this.gbCrearPuntoAtencion.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -112,6 +112,31 @@
             this.gbCrearPuntoAtencion.TabIndex = 50;
             this.gbCrearPuntoAtencion.TabStop = false;
             // 
+            // dtpHoraIni
+            // 
+            this.dtpHoraIni.CustomFormat = "HH:mm";
+            this.dtpHoraIni.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtpHoraIni.Location = new System.Drawing.Point(200, 90);
+            this.dtpHoraIni.Margin = new System.Windows.Forms.Padding(2);
+            this.dtpHoraIni.MinDate = new System.DateTime(1753, 1, 1, 8, 0, 0, 0);
+            this.dtpHoraIni.Name = "dtpHoraIni";
+            this.dtpHoraIni.ShowUpDown = true;
+            this.dtpHoraIni.Size = new System.Drawing.Size(112, 27);
+            this.dtpHoraIni.TabIndex = 132;
+            this.dtpHoraIni.Value = new System.DateTime(2019, 11, 23, 0, 0, 0, 0);
+            // 
+            // dtpHoraFin
+            // 
+            this.dtpHoraFin.CustomFormat = "HH:mm";
+            this.dtpHoraFin.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtpHoraFin.Location = new System.Drawing.Point(200, 136);
+            this.dtpHoraFin.MinDate = new System.DateTime(1753, 1, 1, 8, 0, 0, 0);
+            this.dtpHoraFin.Name = "dtpHoraFin";
+            this.dtpHoraFin.ShowUpDown = true;
+            this.dtpHoraFin.Size = new System.Drawing.Size(112, 27);
+            this.dtpHoraFin.TabIndex = 131;
+            this.dtpHoraFin.Value = new System.DateTime(2019, 11, 23, 0, 0, 0, 0);
+            // 
             // label10
             // 
             this.label10.AutoSize = true;
@@ -173,31 +198,6 @@
             this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // dtpHoraIni
-            // 
-            this.dtpHoraIni.CustomFormat = "HH:mm";
-            this.dtpHoraIni.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpHoraIni.Location = new System.Drawing.Point(200, 90);
-            this.dtpHoraIni.Margin = new System.Windows.Forms.Padding(2);
-            this.dtpHoraIni.MinDate = new System.DateTime(1753, 1, 1, 8, 0, 0, 0);
-            this.dtpHoraIni.Name = "dtpHoraIni";
-            this.dtpHoraIni.ShowUpDown = true;
-            this.dtpHoraIni.Size = new System.Drawing.Size(112, 27);
-            this.dtpHoraIni.TabIndex = 132;
-            this.dtpHoraIni.Value = new System.DateTime(2019, 11, 24, 0, 0, 0, 0);
-            // 
-            // dtpHoraFin
-            // 
-            this.dtpHoraFin.CustomFormat = "HH:mm";
-            this.dtpHoraFin.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpHoraFin.Location = new System.Drawing.Point(200, 136);
-            this.dtpHoraFin.MinDate = new System.DateTime(1753, 1, 1, 8, 0, 0, 0);
-            this.dtpHoraFin.Name = "dtpHoraFin";
-            this.dtpHoraFin.ShowUpDown = true;
-            this.dtpHoraFin.Size = new System.Drawing.Size(112, 27);
-            this.dtpHoraFin.TabIndex = 131;
-            this.dtpHoraFin.Value = new System.DateTime(2019, 11, 23, 0, 0, 0, 0);
             // 
             // frmCrearDiaCapacitacion
             // 
