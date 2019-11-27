@@ -60,6 +60,7 @@ namespace TA_GesBib_Cliente
         {
             //listaPAsignados = new BindingList<ServicioJava.personalBiblioteca>();
             listaPAsignados = new BindingList<ServicioJava.personalBiblioteca>(Program.DBController.listarPersonalAsignadoAPerfilExperiencia((int)cmbPerfil.SelectedValue));
+            dgvPersonal.AutoGenerateColumns = false;
             dgvPersonal.DataSource = listaPAsignados;
 
         }
