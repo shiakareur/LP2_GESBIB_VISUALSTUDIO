@@ -53,7 +53,7 @@ namespace TA_GesBib_Cliente
                     servTA.insertarPerfilExperiencia(perfil_experiencia);
                 else if (estadoForm == Estado.Modificar)
                 {
-                    //servTA.actualizarPerfilExperiencia(perfil_experiencia);
+                    servTA.actualizarPerfilExperiencia(var_perfil_experiencia_seleccionada);
                 }
             }
             catch (Exception ex)
@@ -94,7 +94,7 @@ namespace TA_GesBib_Cliente
             try
             {
 
-                //servTA.eliminarPerfilExperiencia(var_perfil_experiencia_seleccionada.id);
+                servTA.eliminarPerfilExperiencia(var_perfil_experiencia_seleccionada.id);
                 limpiarComponentes();
             }
             catch (Exception ex)
@@ -109,8 +109,18 @@ namespace TA_GesBib_Cliente
             this.muestraMensajeExitoso();
         }
 
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            //poner limpiar los labels
+            limpiarComponentes();
+
+            estadoForm = Estado.Inicial;
+            estadoComponentes(estadoForm);
+        }
+
         private void btnCerrar_Click(object sender, EventArgs e)
         {
+            this.DialogResult = DialogResult.OK;
             this.Dispose();
         }
 

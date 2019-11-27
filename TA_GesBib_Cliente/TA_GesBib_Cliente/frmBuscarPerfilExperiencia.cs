@@ -29,6 +29,12 @@ namespace TA_GesBib_Cliente
             this.DialogResult = DialogResult.OK;
         }
 
+        private void dgvGestores_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+        {
+
+            ServicioJava.perfilExperiencia perfilFila = (ServicioJava.perfilExperiencia)dgvPerfiles.Rows[e.RowIndex].DataBoundItem;
+            dgvPerfiles.Rows[e.RowIndex].Cells["Nombre"].Value = perfilFila.nombrePerfil;
+        }
 
     }
 }

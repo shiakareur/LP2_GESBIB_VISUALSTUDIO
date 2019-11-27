@@ -457,6 +457,9 @@
     <None Include="Connected Services\ServicioJava\TA_GesBib_Cliente.ServicioJava.actualizarInasistenciaResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
+    <None Include="Connected Services\ServicioJava\TA_GesBib_Cliente.ServicioJava.actualizarPerfilExperienciaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Connected Services\ServicioJava\TA_GesBib_Cliente.ServicioJava.actualizarPracticanteResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
@@ -506,6 +509,9 @@
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\ServicioJava\TA_GesBib_Cliente.ServicioJava.eliminarInasistenciaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServicioJava\TA_GesBib_Cliente.ServicioJava.eliminarPerfilExperienciaResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\ServicioJava\TA_GesBib_Cliente.ServicioJava.eliminarPersonalBibliotecaResponse.datasource">
@@ -611,6 +617,9 @@
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\ServicioJava\TA_GesBib_Cliente.ServicioJava.listarPerfilExperienciaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServicioJava\TA_GesBib_Cliente.ServicioJava.listarPersonalAsignadoAPerfilExperienciaResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\ServicioJava\TA_GesBib_Cliente.ServicioJava.listarPersonalBibliotecaResponse.datasource">
