@@ -104,6 +104,12 @@
     <Compile Include="frmBuscarInasistencia.Designer.cs">
       <DependentUpon>frmBuscarInasistencia.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmBuscarPerfilExperiencia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBuscarPerfilExperiencia.Designer.cs">
+      <DependentUpon>frmBuscarPerfilExperiencia.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmBuscarPersonalDisponible.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -151,6 +157,12 @@
     </Compile>
     <Compile Include="frmCambiarClaveConfig.designer.cs">
       <DependentUpon>frmCambiarClaveConfig.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMantenimientoPerfilExperiencia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMantenimientoPerfilExperiencia.Designer.cs">
+      <DependentUpon>frmMantenimientoPerfilExperiencia.cs</DependentUpon>
     </Compile>
     <Compile Include="frmRecuperarClave.cs">
       <SubType>Form</SubType>
@@ -353,6 +365,9 @@
     <EmbeddedResource Include="frmBuscarInasistencia.resx">
       <DependentUpon>frmBuscarInasistencia.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmBuscarPerfilExperiencia.resx">
+      <DependentUpon>frmBuscarPerfilExperiencia.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmBuscarPersonalDisponible.resx">
       <DependentUpon>frmBuscarPersonalDisponible.cs</DependentUpon>
     </EmbeddedResource>
@@ -379,6 +394,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmPersonalInscrito.resx">
       <DependentUpon>frmPersonalInscrito.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMantenimientoPerfilExperiencia.resx">
+      <DependentUpon>frmMantenimientoPerfilExperiencia.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmRecuperarClave.resx">
       <DependentUpon>frmRecuperarClave.cs</DependentUpon>
