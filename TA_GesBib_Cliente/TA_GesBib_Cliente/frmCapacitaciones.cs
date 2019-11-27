@@ -129,6 +129,11 @@ namespace TA_GesBib_Cliente
         private void btnBuscar_Click(object sender, EventArgs e)
         {
             estadoComponentes(Estado.Buscar);
+            frmBuscarCapacitacion frmBuscarGestor = new frmBuscarCapacitacion();
+            if (frmBuscarGestor.ShowDialog() == DialogResult.OK)
+            {
+
+            }
         }
 
         private void btnPerInscrito_Click(object sender, EventArgs e)
