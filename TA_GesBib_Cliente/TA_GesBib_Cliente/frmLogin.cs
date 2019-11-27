@@ -24,6 +24,7 @@ namespace TA_GesBib_Cliente
 
             //KeyValuePair<String, ServicioJava.usuario> a = new KeyValuePair<>(servTA.validarUsuario("bbenrique@gmail.com", "987654"));
             ServicioJava.pairStringUsuario userV = servTA.validarUsuario(placeHolderUsuario.Text, txtcontraseña.Text);
+            ServicioJava.personalBiblioteca datosUsuario = servTA.informacionPersonalBiblioteca(placeHolderUsuario.Text);
             if (userV.nombreTipo == "")
             {
             }
@@ -46,9 +47,10 @@ namespace TA_GesBib_Cliente
                     frmPerfilAuxiliar.Visible = true;
                     this.Visible = false;
                 }
+                
                 else if (tipoP == "BIBLIOTECARIO")
                 {
-                    frmPerfilBibliotecario formBibliotecario = new frmPerfilBibliotecario(this, userV.user);
+                    frmPerfilBibliotecario formBibliotecario = new frmPerfilBibliotecario(this, userV.user,datosUsuario);
                     formBibliotecario.Visible = true;
                     this.Visible = false;
                 }

@@ -127,6 +127,12 @@
     <Compile Include="frmCambiarClave.Designer.cs">
       <DependentUpon>frmCambiarClave.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmCambiarClaveConfig.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCambiarClaveConfig.designer.cs">
+      <DependentUpon>frmCambiarClaveConfig.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmRecuperarClave.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -334,6 +340,9 @@
     <EmbeddedResource Include="frmCrearDiaCapacitacion.resx">
       <DependentUpon>frmCrearDiaCapacitacion.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmCambiarClaveConfig.resx">
+      <DependentUpon>frmCambiarClaveConfig.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmDistribucionSemestre.resx">
       <DependentUpon>frmDistribucionSemestre.cs</DependentUpon>
     </EmbeddedResource>
@@ -431,6 +440,9 @@
     <None Include="Connected Services\ServicioJava\TA_GesBib_Cliente.ServicioJava.actualizarCapacitacionResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
+    <None Include="Connected Services\ServicioJava\TA_GesBib_Cliente.ServicioJava.actualizarDatosUsuarioResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Connected Services\ServicioJava\TA_GesBib_Cliente.ServicioJava.actualizarDiaCapacitacionResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
@@ -462,6 +474,9 @@
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\ServicioJava\TA_GesBib_Cliente.ServicioJava.bibliotecario.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServicioJava\TA_GesBib_Cliente.ServicioJava.cambiarContrasenaConfigResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\ServicioJava\TA_GesBib_Cliente.ServicioJava.cambiarContrasenaTokenResponse.datasource">
@@ -513,6 +528,9 @@
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\ServicioJava\TA_GesBib_Cliente.ServicioJava.inasistencia.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServicioJava\TA_GesBib_Cliente.ServicioJava.informacionPersonalBibliotecaResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\ServicioJava\TA_GesBib_Cliente.ServicioJava.insertarAuxiliarBibliotecaResponse.datasource">
