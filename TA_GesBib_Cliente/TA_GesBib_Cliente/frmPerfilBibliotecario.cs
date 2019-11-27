@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -48,6 +49,10 @@ namespace TA_GesBib_Cliente
             var_usuario = _usuario;
             var_formLogin = formLogin;
             InitializeComponent();
+            //
+            MemoryStream ms1 = new MemoryStream(var_datosUsuario.foto);
+            pbMinifoto.Image = new Bitmap(ms1);
+            //
             this.lblNombreUsuario.Text = var_usuario.nombre;
             customizeDesign(); // <---- para los PANELES
 
