@@ -11,12 +11,12 @@ using System.Windows.Forms;
 
 namespace TA_GesBib_Cliente
 {
-
     public partial class frmConfigurar : Form
     {
         Estado estadoUsuario;
         private ServicioJava.usuario var_usuario;
         private ServicioJava.personalBiblioteca var_datosUsuario;
+        private ServicioJava.personalBiblioteca personal;
         private ServicioJava.bibliotecario bibliotecario;
         private ServicioJava.bibliotecario gestor;
         private Form var_perfilPersonal;
@@ -27,6 +27,7 @@ namespace TA_GesBib_Cliente
         public frmConfigurar()
         {
             InitializeComponent();
+
         }
 
         //Estados
@@ -96,6 +97,8 @@ namespace TA_GesBib_Cliente
             txtCorreo.Text = var_usuario.email;
             txtCodigo.Text = var_datosUsuario.codigo;
             dtpFecha.Value = var_datosUsuario.fecha_ingreso;
+            MemoryStream ms1 = new MemoryStream(var_datosUsuario.foto);
+            pbPortada.Image = new Bitmap(ms1);
             switch (var_tipoPerfil)
             {
                 case TipoPerfil.PerfilBibliotecario:
@@ -242,7 +245,32 @@ namespace TA_GesBib_Cliente
 
         private void btnBuscar_Click(object sender, EventArgs e)
         {
+            frmBuscarPersonalConTodo frmBPCT = new frmBuscarPersonalConTodo();
+            if (frmBPCT.ShowDialog() == DialogResult.OK)
+            {
+                personal = frmBPCT.PersonalSeleccionado;
 
+                txtNombre.Text = personal.nombre;
+                txtApellido.Text = personal.apellido;
+                txtCorreo.Text = personal.email;
+                txtCodigo.Text = personal.codigo;
+                
+                dtpFecha.Value = personal.fecha_ingreso;
+                txtCantidadHE.Text = personal.totalHorasExtra.ToString();
+                txtBiblioteca.Text = personal.biblioteca.nombre;
+                if (personal.foto != null)
+                {
+                    pbPortada.Visible = true;
+                    MemoryStream ms1 = new MemoryStream(personal.foto);
+                    pbPortada.Image = new Bitmap(ms1);
+                }
+                else
+                {
+                    pbPortada.Visible = false;
+                }
+                        
+                estadoComponentes(Estado.Buscar);
+            }
         }
     }
 }

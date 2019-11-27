@@ -40,6 +40,7 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.pbPortada = new System.Windows.Forms.PictureBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.dtpFecha = new System.Windows.Forms.DateTimePicker();
             this.txtBiblioteca = new System.Windows.Forms.TextBox();
@@ -54,14 +55,13 @@
             this.btnCambiarClave = new System.Windows.Forms.Button();
             this.btnGuardar = new System.Windows.Forms.Button();
             this.btnBuscar = new System.Windows.Forms.Button();
-            this.pbPortada = new System.Windows.Forms.PictureBox();
             this.btnCerrar = new System.Windows.Forms.Button();
             this.btnSubirImagen = new System.Windows.Forms.Button();
             this.ofdPortada = new System.Windows.Forms.OpenFileDialog();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
-            this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbPortada)).BeginInit();
+            this.groupBox3.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -209,6 +209,15 @@
             this.groupBox2.TabIndex = 137;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Fotografía";
+            // 
+            // pbPortada
+            // 
+            this.pbPortada.Location = new System.Drawing.Point(16, 22);
+            this.pbPortada.Margin = new System.Windows.Forms.Padding(1);
+            this.pbPortada.Name = "pbPortada";
+            this.pbPortada.Size = new System.Drawing.Size(142, 193);
+            this.pbPortada.TabIndex = 0;
+            this.pbPortada.TabStop = false;
             // 
             // groupBox3
             // 
@@ -404,15 +413,6 @@
             this.btnBuscar.UseVisualStyleBackColor = false;
             this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
-            // pbPortada
-            // 
-            this.pbPortada.Location = new System.Drawing.Point(16, 22);
-            this.pbPortada.Margin = new System.Windows.Forms.Padding(1);
-            this.pbPortada.Name = "pbPortada";
-            this.pbPortada.Size = new System.Drawing.Size(142, 193);
-            this.pbPortada.TabIndex = 0;
-            this.pbPortada.TabStop = false;
-            // 
             // btnCerrar
             // 
             this.btnCerrar.FlatAppearance.BorderSize = 0;
@@ -473,9 +473,9 @@
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pbPortada)).EndInit();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbPortada)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

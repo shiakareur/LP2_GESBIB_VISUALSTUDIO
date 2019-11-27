@@ -79,6 +79,12 @@
     <Compile Include="frmAvisos.Designer.cs">
       <DependentUpon>frmAvisos.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmBuscarPersonalConTodo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBuscarPersonalConTodo.Designer.cs">
+      <DependentUpon>frmBuscarPersonalConTodo.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmBuscarHL.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -315,6 +321,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmAvisos.resx">
       <DependentUpon>frmAvisos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmBuscarPersonalConTodo.resx">
+      <DependentUpon>frmBuscarPersonalConTodo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmBuscarGestores.resx">
       <DependentUpon>frmBuscarGestores.cs</DependentUpon>
@@ -630,6 +639,9 @@
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\ServicioJava\TA_GesBib_Cliente.ServicioJava.listarTodasHorasLibreResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServicioJava\TA_GesBib_Cliente.ServicioJava.listartodosobrepersonalResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\ServicioJava\TA_GesBib_Cliente.ServicioJava.listarUsuariosLibresResponse.datasource">
