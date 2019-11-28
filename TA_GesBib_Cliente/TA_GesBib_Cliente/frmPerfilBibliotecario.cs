@@ -52,8 +52,11 @@ namespace TA_GesBib_Cliente
             var_datosUsuario = _datosUsuario;
             InitializeComponent();
             //
-            MemoryStream ms1 = new MemoryStream(var_datosUsuario.foto);
-            pbMinifoto.Image = new Bitmap(ms1);
+            if(var_datosUsuario.foto != null)
+            {
+                MemoryStream ms1 = new MemoryStream(var_datosUsuario.foto);
+                pbMinifoto.Image = new Bitmap(ms1);
+            }
             //
             this.lblNombreUsuario.Text = var_usuario.nombre;
             customizeDesign(); // <---- para los PANELES
@@ -668,6 +671,21 @@ namespace TA_GesBib_Cliente
                     var_frmRespuestasSolicitudes_Bibliotecario.Show();
              */
 
+        }
+
+        private void buttonVerOtrosPerfiles_Click(object sender, EventArgs e)
+        {
+            panelBIPO.Visible = false;
+            frmBuscarOtrosPerfiles frmBuscarOtros = new frmBuscarOtrosPerfiles(this, TipoPerfil.PerfilBibliotecario);
+            frmBuscarOtros.MdiParent = this;
+
+            //...add
+            frmBuscarOtros.StartPosition = FormStartPosition.Manual;
+            frmBuscarOtros.Left = 0;
+            frmBuscarOtros.Top = 0;
+            //...
+
+            frmBuscarOtros.Show();
         }
     }
 }

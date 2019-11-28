@@ -47,15 +47,14 @@
             this.btnValidaciones = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label6 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lblBienvenido = new System.Windows.Forms.Label();
             this.panelAviso = new System.Windows.Forms.Panel();
             this.panelBIPO = new System.Windows.Forms.Panel();
+            this.buttonVerOtrosPerfiles = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panelDistribucion.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panelBIPO.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -89,7 +88,7 @@
             this.btnCerrarSesion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCerrarSesion.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCerrarSesion.Image = global::TA_GesBib_Cliente.Properties.Resources.icono_cerrar_sesion_pequeño;
-            this.btnCerrarSesion.Location = new System.Drawing.Point(44, 622);
+            this.btnCerrarSesion.Location = new System.Drawing.Point(43, 681);
             this.btnCerrarSesion.Margin = new System.Windows.Forms.Padding(4);
             this.btnCerrarSesion.Name = "btnCerrarSesion";
             this.btnCerrarSesion.Size = new System.Drawing.Size(173, 50);
@@ -107,7 +106,7 @@
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.Image = global::TA_GesBib_Cliente.Properties.Resources.icono_configuracion_pequeño;
-            this.button3.Location = new System.Drawing.Point(46, 582);
+            this.button3.Location = new System.Drawing.Point(45, 641);
             this.button3.Margin = new System.Windows.Forms.Padding(4);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(173, 50);
@@ -177,6 +176,7 @@
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(175)))), ((int)(((byte)(169)))));
             this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel1.Controls.Add(this.buttonVerOtrosPerfiles);
             this.panel1.Controls.Add(this.panel3);
             this.panel1.Controls.Add(this.btnCerrarSesion);
             this.panel1.Controls.Add(this.button3);
@@ -184,7 +184,6 @@
             this.panel1.Controls.Add(this.label6);
             this.panel1.Controls.Add(this.pictureBox4);
             this.panel1.Controls.Add(this.lblTipoPerfil);
-            this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.lblNombreUsuario);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
@@ -350,17 +349,6 @@
             this.label6.TabIndex = 14;
             this.label6.Text = "___________________________";
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::TA_GesBib_Cliente.Properties.Resources.logoMediano;
-            this.pictureBox1.Location = new System.Drawing.Point(85, 694);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(95, 60);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 4;
-            this.pictureBox1.TabStop = false;
-            // 
             // lblBienvenido
             // 
             this.lblBienvenido.AutoSize = true;
@@ -395,6 +383,25 @@
             this.panelBIPO.Size = new System.Drawing.Size(1086, 803);
             this.panelBIPO.TabIndex = 63;
             // 
+            // buttonVerOtrosPerfiles
+            // 
+            this.buttonVerOtrosPerfiles.AutoSize = true;
+            this.buttonVerOtrosPerfiles.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(175)))), ((int)(((byte)(169)))));
+            this.buttonVerOtrosPerfiles.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.buttonVerOtrosPerfiles.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonVerOtrosPerfiles.FlatAppearance.BorderSize = 0;
+            this.buttonVerOtrosPerfiles.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonVerOtrosPerfiles.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonVerOtrosPerfiles.Image = global::TA_GesBib_Cliente.Properties.Resources.icono_buscar;
+            this.buttonVerOtrosPerfiles.Location = new System.Drawing.Point(27, 589);
+            this.buttonVerOtrosPerfiles.Name = "buttonVerOtrosPerfiles";
+            this.buttonVerOtrosPerfiles.Size = new System.Drawing.Size(238, 56);
+            this.buttonVerOtrosPerfiles.TabIndex = 67;
+            this.buttonVerOtrosPerfiles.Text = "Ver otros perfiles";
+            this.buttonVerOtrosPerfiles.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.buttonVerOtrosPerfiles.UseVisualStyleBackColor = false;
+            this.buttonVerOtrosPerfiles.Click += new System.EventHandler(this.buttonVerOtrosPerfiles_Click);
+            // 
             // frmPerfilGestor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -415,7 +422,6 @@
             this.panel1.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.panelDistribucion.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panelBIPO.ResumeLayout(false);
             this.panelBIPO.PerformLayout();
             this.ResumeLayout(false);
@@ -433,7 +439,6 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button btnValidaciones;
         private System.Windows.Forms.Button btnCapacitacion;
         private System.Windows.Forms.Button btnDistribucionPersonal;
@@ -445,5 +450,6 @@
         private System.Windows.Forms.Label lblBienvenido;
         private System.Windows.Forms.Panel panelAviso;
         private System.Windows.Forms.Panel panelBIPO;
+        private System.Windows.Forms.Button buttonVerOtrosPerfiles;
     }
 }

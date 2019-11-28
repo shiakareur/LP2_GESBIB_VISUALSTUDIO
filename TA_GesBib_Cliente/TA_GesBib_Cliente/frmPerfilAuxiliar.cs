@@ -31,6 +31,7 @@ namespace TA_GesBib_Cliente
         private frmSolicitarCambioTurno var_frmSolicitarCambioTurno_Auxiliar;
         private frmRespuestaValidaciones var_frmRespuestasSolicitudes_Auxiliar;
         private frmVisualizarHorarios var_frmVerHorarios_Auxiliar;
+        private ServicioJava.personalBiblioteca var_datosUsuario;
 
         public Panel PanelAviso { get => panelAviso; set => panelAviso = value; }
         public Label LblBienvenido { get => lblBienvenido; set => lblBienvenido = value; }
@@ -43,7 +44,7 @@ namespace TA_GesBib_Cliente
         }
 
 
-        public frmPerfilAuxiliar(frmLogin formLogin, ServicioJava.usuario _usuario) //con paramtero this 
+        public frmPerfilAuxiliar(frmLogin formLogin, ServicioJava.usuario _usuario, ServicioJava.personalBiblioteca var_datosUsuario) //con paramtero this 
         {
             var_usuario = _usuario;
             var_formLogin = formLogin;
@@ -572,6 +573,21 @@ namespace TA_GesBib_Cliente
                 //escondemos el submenu
                 hideSubMenu();
             }
+        }
+
+        private void buttonVerOtrosPerfiles_Click(object sender, EventArgs e)
+        {
+            panelBIPO.Visible = false;
+            frmBuscarOtrosPerfiles frmBuscarOtros = new frmBuscarOtrosPerfiles(this, TipoPerfil.PerfilAuxiliar);
+            frmBuscarOtros.MdiParent = this;
+
+            //...add
+            frmBuscarOtros.StartPosition = FormStartPosition.Manual;
+            frmBuscarOtros.Left = 0;
+            frmBuscarOtros.Top = 0;
+            //...
+
+            frmBuscarOtros.Show();
         }
     }
 }

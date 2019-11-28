@@ -122,6 +122,12 @@
     <Compile Include="frmCapacitaciones.Designer.cs">
       <DependentUpon>frmCapacitaciones.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmBuscarOtrosPerfiles.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBuscarOtrosPerfiles.Designer.cs">
+      <DependentUpon>frmBuscarOtrosPerfiles.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmConfigurar.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -379,6 +385,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmCapacitaciones.resx">
       <DependentUpon>frmCapacitaciones.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmBuscarOtrosPerfiles.resx">
+      <DependentUpon>frmBuscarOtrosPerfiles.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmConfigurar.resx">
       <DependentUpon>frmConfigurar.cs</DependentUpon>

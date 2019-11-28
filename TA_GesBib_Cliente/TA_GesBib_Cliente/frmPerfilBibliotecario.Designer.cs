@@ -38,10 +38,11 @@
             this.label2 = new System.Windows.Forms.Label();
             this.btnCerrarSesion = new System.Windows.Forms.Button();
             this.btnConfiguracion = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.buttonVerOtrosPerfiles = new System.Windows.Forms.Button();
             this.btnCapac = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.btnNotificaciones = new System.Windows.Forms.Button();
             this.panelBtn_Solicitar = new System.Windows.Forms.Panel();
@@ -65,7 +66,6 @@
             this.panel6 = new System.Windows.Forms.Panel();
             this.txtDescripcion2 = new System.Windows.Forms.TextBox();
             this.lblTitulo2 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -231,20 +231,11 @@
             this.btnConfiguracion.UseVisualStyleBackColor = false;
             this.btnConfiguracion.Click += new System.EventHandler(this.btnConfiguracion_Click);
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::TA_GesBib_Cliente.Properties.Resources.logoMediano;
-            this.pictureBox1.Location = new System.Drawing.Point(84, 673);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(114, 56);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 4;
-            this.pictureBox1.TabStop = false;
-            // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(175)))), ((int)(((byte)(169)))));
             this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.panel1.Controls.Add(this.buttonVerOtrosPerfiles);
             this.panel1.Controls.Add(this.btnCapac);
             this.panel1.Controls.Add(this.panel4);
             this.panel1.Controls.Add(this.panel3);
@@ -252,7 +243,6 @@
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.pbMinifoto);
             this.panel1.Controls.Add(this.lblTipoPerfil);
-            this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.lblNombreUsuario);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
@@ -260,6 +250,25 @@
             this.panel1.Size = new System.Drawing.Size(319, 767);
             this.panel1.TabIndex = 55;
             this.panel1.TabStop = true;
+            // 
+            // buttonVerOtrosPerfiles
+            // 
+            this.buttonVerOtrosPerfiles.AutoSize = true;
+            this.buttonVerOtrosPerfiles.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(175)))), ((int)(((byte)(169)))));
+            this.buttonVerOtrosPerfiles.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.buttonVerOtrosPerfiles.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonVerOtrosPerfiles.FlatAppearance.BorderSize = 0;
+            this.buttonVerOtrosPerfiles.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonVerOtrosPerfiles.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonVerOtrosPerfiles.Image = global::TA_GesBib_Cliente.Properties.Resources.icono_buscar;
+            this.buttonVerOtrosPerfiles.Location = new System.Drawing.Point(19, 554);
+            this.buttonVerOtrosPerfiles.Name = "buttonVerOtrosPerfiles";
+            this.buttonVerOtrosPerfiles.Size = new System.Drawing.Size(238, 56);
+            this.buttonVerOtrosPerfiles.TabIndex = 61;
+            this.buttonVerOtrosPerfiles.Text = "Ver otros perfiles";
+            this.buttonVerOtrosPerfiles.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.buttonVerOtrosPerfiles.UseVisualStyleBackColor = false;
+            this.buttonVerOtrosPerfiles.Click += new System.EventHandler(this.buttonVerOtrosPerfiles_Click);
             // 
             // btnCapac
             // 
@@ -282,12 +291,33 @@
             // 
             // panel4
             // 
+            this.panel4.Controls.Add(this.button1);
             this.panel4.Controls.Add(this.btnCerrarSesion);
             this.panel4.Controls.Add(this.btnConfiguracion);
-            this.panel4.Location = new System.Drawing.Point(17, 555);
+            this.panel4.Location = new System.Drawing.Point(16, 607);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(211, 86);
             this.panel4.TabIndex = 17;
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(175)))), ((int)(((byte)(169)))));
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.button1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.button1.Image = global::TA_GesBib_Cliente.Properties.Resources.icono_configuracion_pequeño;
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.Location = new System.Drawing.Point(0, 80);
+            this.button1.Name = "button1";
+            this.button1.Padding = new System.Windows.Forms.Padding(15, 0, 15, 0);
+            this.button1.Size = new System.Drawing.Size(211, 40);
+            this.button1.TabIndex = 12;
+            this.button1.Text = "Configuración";
+            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button1.UseVisualStyleBackColor = false;
             // 
             // panel3
             // 
@@ -622,7 +652,6 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Bibliotecario";
             this.Load += new System.EventHandler(this.frmPerfilBibliotecario_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel4.ResumeLayout(false);
@@ -654,7 +683,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btnCerrarSesion;
         private System.Windows.Forms.Button btnConfiguracion;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Panel panel3;
@@ -681,5 +709,7 @@
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.TextBox txtDescripcion2;
         private System.Windows.Forms.Label lblTitulo2;
+        private System.Windows.Forms.Button buttonVerOtrosPerfiles;
+        private System.Windows.Forms.Button button1;
     }
 }

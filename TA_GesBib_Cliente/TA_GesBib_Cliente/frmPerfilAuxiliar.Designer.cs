@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmPerfilBibliotecario));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmPerfilAuxiliar));
             this.label3 = new System.Windows.Forms.Label();
             this.lblTipoPerfil = new System.Windows.Forms.Label();
             this.lblNombreUsuario = new System.Windows.Forms.Label();
@@ -37,7 +37,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.btnCerrarSesion = new System.Windows.Forms.Button();
             this.btnConfiguracion = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lblBienvenido = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
@@ -53,7 +52,7 @@
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.panelAviso = new System.Windows.Forms.Panel();
             this.panelBIPO = new System.Windows.Forms.Panel();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.buttonVerOtrosPerfiles = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -81,7 +80,8 @@
             this.lblTipoPerfil.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.lblTipoPerfil.Location = new System.Drawing.Point(109, 29);
             this.lblTipoPerfil.Name = "lblTipoPerfil";
-            this.lblTipoPerfil.Size = new System.Drawing.Size(146, 20);
+            this.lblTipoPerfil.Size = new System.Drawing.Size(93, 20);
+            this.lblTipoPerfil.TabIndex = 18;
             this.lblTipoPerfil.Text = "AUXILIAR";
             this.lblTipoPerfil.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
@@ -108,7 +108,7 @@
             this.btnRegistrar.ForeColor = System.Drawing.SystemColors.ControlText;
             this.btnRegistrar.Image = global::TA_GesBib_Cliente.Properties.Resources.icono_modificar;
             this.btnRegistrar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnRegistrar.Location = new System.Drawing.Point(0, 80);
+            this.btnRegistrar.Location = new System.Drawing.Point(0, 40);
             this.btnRegistrar.Name = "btnRegistrar";
             this.btnRegistrar.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
             this.btnRegistrar.Size = new System.Drawing.Size(234, 40);
@@ -128,7 +128,7 @@
             this.btnSolicitar.ForeColor = System.Drawing.SystemColors.ControlText;
             this.btnSolicitar.Image = global::TA_GesBib_Cliente.Properties.Resources.icono_crear_nuevo;
             this.btnSolicitar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSolicitar.Location = new System.Drawing.Point(0, 209);
+            this.btnSolicitar.Location = new System.Drawing.Point(0, 169);
             this.btnSolicitar.Name = "btnSolicitar";
             this.btnSolicitar.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.btnSolicitar.Size = new System.Drawing.Size(234, 40);
@@ -189,15 +189,6 @@
             this.btnConfiguracion.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnConfiguracion.UseVisualStyleBackColor = false;
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::TA_GesBib_Cliente.Properties.Resources.logoMediano;
-            this.pictureBox1.Location = new System.Drawing.Point(84, 673);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(114, 56);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 4;
-            this.pictureBox1.TabStop = false;
             // lblBienvenido
             // 
             this.lblBienvenido.AutoSize = true;
@@ -215,13 +206,13 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(175)))), ((int)(((byte)(169)))));
             this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.panel1.Controls.Add(this.buttonVerOtrosPerfiles);
             this.panel1.Controls.Add(this.panel4);
             this.panel1.Controls.Add(this.panel3);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.pictureBox4);
             this.panel1.Controls.Add(this.lblTipoPerfil);
-            this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.lblNombreUsuario);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
@@ -234,7 +225,7 @@
             // 
             this.panel4.Controls.Add(this.btnCerrarSesion);
             this.panel4.Controls.Add(this.btnConfiguracion);
-            this.panel4.Location = new System.Drawing.Point(28, 543);
+            this.panel4.Location = new System.Drawing.Point(28, 602);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(211, 86);
             this.panel4.TabIndex = 17;
@@ -263,7 +254,7 @@
             this.btnNotificaciones.ForeColor = System.Drawing.SystemColors.ControlText;
             this.btnNotificaciones.Image = global::TA_GesBib_Cliente.Properties.Resources.tinker_45;
             this.btnNotificaciones.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnNotificaciones.Location = new System.Drawing.Point(0, 337);
+            this.btnNotificaciones.Location = new System.Drawing.Point(0, 297);
             this.btnNotificaciones.Name = "btnNotificaciones";
             this.btnNotificaciones.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
             this.btnNotificaciones.Size = new System.Drawing.Size(234, 40);
@@ -277,7 +268,7 @@
             this.panelBtn_Solicitar.Controls.Add(this.btnSolicitar_CambioTurno);
             this.panelBtn_Solicitar.Controls.Add(this.btnSolicitar_HLibres);
             this.panelBtn_Solicitar.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelBtn_Solicitar.Location = new System.Drawing.Point(0, 249);
+            this.panelBtn_Solicitar.Location = new System.Drawing.Point(0, 209);
             this.panelBtn_Solicitar.Name = "panelBtn_Solicitar";
             this.panelBtn_Solicitar.Size = new System.Drawing.Size(234, 88);
             this.panelBtn_Solicitar.TabIndex = 60;
@@ -323,7 +314,7 @@
             this.panelBtn_Registrar.Controls.Add(this.btnReg_Inas);
             this.panelBtn_Registrar.Controls.Add(this.btnReg_HE);
             this.panelBtn_Registrar.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelBtn_Registrar.Location = new System.Drawing.Point(0, 120);
+            this.panelBtn_Registrar.Location = new System.Drawing.Point(0, 80);
             this.panelBtn_Registrar.Name = "panelBtn_Registrar";
             this.panelBtn_Registrar.Size = new System.Drawing.Size(234, 89);
             this.panelBtn_Registrar.TabIndex = 59;
@@ -375,7 +366,7 @@
             this.btnVisualizarHorarios.ForeColor = System.Drawing.SystemColors.ControlText;
             this.btnVisualizarHorarios.Image = global::TA_GesBib_Cliente.Properties.Resources.icono_ver_grande;
             this.btnVisualizarHorarios.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnVisualizarHorarios.Location = new System.Drawing.Point(0, 40);
+            this.btnVisualizarHorarios.Location = new System.Drawing.Point(0, 0);
             this.btnVisualizarHorarios.Name = "btnVisualizarHorarios";
             this.btnVisualizarHorarios.Padding = new System.Windows.Forms.Padding(3, 0, 0, 0);
             this.btnVisualizarHorarios.Size = new System.Drawing.Size(234, 40);
@@ -415,6 +406,25 @@
             this.panelBIPO.Size = new System.Drawing.Size(1112, 773);
             this.panelBIPO.TabIndex = 64;
             // 
+            // buttonVerOtrosPerfiles
+            // 
+            this.buttonVerOtrosPerfiles.AutoSize = true;
+            this.buttonVerOtrosPerfiles.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(175)))), ((int)(((byte)(169)))));
+            this.buttonVerOtrosPerfiles.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.buttonVerOtrosPerfiles.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonVerOtrosPerfiles.FlatAppearance.BorderSize = 0;
+            this.buttonVerOtrosPerfiles.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonVerOtrosPerfiles.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonVerOtrosPerfiles.Image = global::TA_GesBib_Cliente.Properties.Resources.icono_buscar;
+            this.buttonVerOtrosPerfiles.Location = new System.Drawing.Point(21, 542);
+            this.buttonVerOtrosPerfiles.Name = "buttonVerOtrosPerfiles";
+            this.buttonVerOtrosPerfiles.Size = new System.Drawing.Size(238, 56);
+            this.buttonVerOtrosPerfiles.TabIndex = 62;
+            this.buttonVerOtrosPerfiles.Text = "Ver otros perfiles";
+            this.buttonVerOtrosPerfiles.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.buttonVerOtrosPerfiles.UseVisualStyleBackColor = false;
+            this.buttonVerOtrosPerfiles.Click += new System.EventHandler(this.buttonVerOtrosPerfiles_Click);
+            // 
             // frmPerfilAuxiliar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -433,7 +443,6 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Auxiliar";
             this.Load += new System.EventHandler(this.frmPerfilAuxiliar_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel4.ResumeLayout(false);
@@ -458,7 +467,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btnCerrarSesion;
         private System.Windows.Forms.Button btnConfiguracion;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label lblBienvenido;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel4;
@@ -474,5 +482,6 @@
         private System.Windows.Forms.Panel panelAviso;
         private System.Windows.Forms.Panel panelBIPO;
         private System.Windows.Forms.Button btnNotificaciones;
+        private System.Windows.Forms.Button buttonVerOtrosPerfiles;
     }
 }

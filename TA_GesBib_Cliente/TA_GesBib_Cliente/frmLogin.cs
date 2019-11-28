@@ -41,12 +41,12 @@ namespace TA_GesBib_Cliente
             {
                 string tipoP = servTA.hallarTipoUsuario(userV.user.id);
                 if (tipoP == "PRACTICANTE") {
-                    frmPerfilPracticante frmPerfilPracticante = new frmPerfilPracticante(this, userV.user);
+                    frmPerfilPracticante frmPerfilPracticante = new frmPerfilPracticante(this, userV.user, datosUsuario);
                     frmPerfilPracticante.Visible = true;
                     this.Visible = false;
                 }
                 else if (tipoP == "AUXILIAR") {
-                    frmPerfilAuxiliar frmPerfilAuxiliar = new frmPerfilAuxiliar(this, userV.user);
+                    frmPerfilAuxiliar frmPerfilAuxiliar = new frmPerfilAuxiliar(this, userV.user, datosUsuario);
                     frmPerfilAuxiliar.Visible = true;
                     this.Visible = false;
                 }
@@ -58,7 +58,7 @@ namespace TA_GesBib_Cliente
                     this.Visible = false;
                 }
                 else if (tipoP == "GESTOR") {
-                    frmPerfilGestor formGestor = new frmPerfilGestor(this, userV.user);
+                    frmPerfilGestor formGestor = new frmPerfilGestor(this, userV.user, datosUsuario);
                     formGestor.Visible = true;
                     this.Visible = false;
                 }

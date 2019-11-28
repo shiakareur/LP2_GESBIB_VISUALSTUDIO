@@ -30,7 +30,7 @@ namespace TA_GesBib_Cliente
 
         private frmRegHE var_frmRegistrarHE_Practicante;
         private frmRegInasistencias var_frmRegistrarInasis_Practicante;
-
+        private ServicioJava.personalBiblioteca var_datosUsuario;
         private frmSolicitarHL var_frmSolicitarHL_Practicante;
         private frmSolicitarCambioTurno var_frmSolicitarCambioTurno_Practicante;
 
@@ -48,8 +48,9 @@ namespace TA_GesBib_Cliente
         }
 
 
-        public frmPerfilPracticante(frmLogin formLogin, ServicioJava.usuario _usuario) //con paramtero this 
+        public frmPerfilPracticante(frmLogin formLogin, ServicioJava.usuario _usuario, ServicioJava.personalBiblioteca _datosUsuario) //con paramtero this 
         {
+            var_datosUsuario = _datosUsuario;
             var_usuario = _usuario;
             var_formLogin = formLogin;
             InitializeComponent();
@@ -574,6 +575,21 @@ namespace TA_GesBib_Cliente
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void buttonVerOtrosPerfiles_Click(object sender, EventArgs e)
+        {
+            panelBIPO.Visible = false;
+            frmBuscarOtrosPerfiles frmBuscarOtros = new frmBuscarOtrosPerfiles(this, TipoPerfil.PerfilGestor);
+            frmBuscarOtros.MdiParent = this;
+
+            //...add
+            frmBuscarOtros.StartPosition = FormStartPosition.Manual;
+            frmBuscarOtros.Left = 0;
+            frmBuscarOtros.Top = 0;
+            //...
+
+            frmBuscarOtros.Show();
         }
     }
 }

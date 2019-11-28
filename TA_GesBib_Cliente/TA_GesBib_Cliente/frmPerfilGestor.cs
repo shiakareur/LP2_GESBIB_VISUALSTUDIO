@@ -22,6 +22,7 @@ namespace TA_GesBib_Cliente
         private frmCapacitaciones var_formCapa;
         private frmValidaciones formValidaciones;
         private frmAvisos formAvisos;
+        private ServicioJava.personalBiblioteca var_datosUsuario;
 
 
         public Panel PanelBIPO { get => panelBIPO; set => panelBIPO = value; }
@@ -41,7 +42,7 @@ namespace TA_GesBib_Cliente
             InitializeComponent();
         }
 
-        public frmPerfilGestor(frmLogin formLogin, ServicioJava.usuario _user) //con paramtero this 
+        public frmPerfilGestor(frmLogin formLogin, ServicioJava.usuario _user, ServicioJava.personalBiblioteca var_datosUsuario) //con paramtero this 
         {
             var_formLogin = formLogin;
             var_usuario = _user;
@@ -387,6 +388,21 @@ namespace TA_GesBib_Cliente
         private void btnAsignarTurnos_BackColorChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void buttonVerOtrosPerfiles_Click(object sender, EventArgs e)
+        {
+            panelBIPO.Visible = false;
+            frmBuscarOtrosPerfiles frmBuscarOtros = new frmBuscarOtrosPerfiles(this, TipoPerfil.PerfilGestor);
+            frmBuscarOtros.MdiParent = this;
+
+            //...add
+            frmBuscarOtros.StartPosition = FormStartPosition.Manual;
+            frmBuscarOtros.Left = 0;
+            frmBuscarOtros.Top = 0;
+            //...
+
+            frmBuscarOtros.Show();
         }
     }
 }

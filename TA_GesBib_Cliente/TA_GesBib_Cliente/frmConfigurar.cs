@@ -97,8 +97,11 @@ namespace TA_GesBib_Cliente
             txtCorreo.Text = var_usuario.email;
             txtCodigo.Text = var_datosUsuario.codigo;
             dtpFecha.Value = var_datosUsuario.fecha_ingreso;
-            MemoryStream ms1 = new MemoryStream(var_datosUsuario.foto);
-            pbPortada.Image = new Bitmap(ms1);
+            if (var_datosUsuario.foto != null)
+            {
+                MemoryStream ms1 = new MemoryStream(var_datosUsuario.foto);
+                pbPortada.Image = new Bitmap(ms1);
+            }
             switch (var_tipoPerfil)
             {
                 case TipoPerfil.PerfilBibliotecario:
@@ -125,28 +128,31 @@ namespace TA_GesBib_Cliente
         {
             switch (var_tipoPerfil)
             {
+                /*case TipoPerfil.PerfilBibliotecario:
+                    this.Visible = false;
+                    this.var_perfilBibliotecario.LblBienvenido.Visible = true;
+                    this.var_perfilBibliotecario.PanelAviso.Visible = true;
+                    break;*/
                 case TipoPerfil.PerfilBibliotecario:
                     this.Visible = false;
                     //((frmPerfilBibliotecario)this.var_perfilPersonal).LblBienvenido.Visible = true;
                     ((frmPerfilBibliotecario)this.var_perfilPersonal).PanelAviso.Visible = true;
+                    ((frmPerfilBibliotecario)this.var_perfilPersonal).PanelBIPO.Visible = true;
                     break;
                 case TipoPerfil.PerfilAuxiliar:
                     this.Visible = false;
                     //((frmPerfilAuxiliar)this.var_perfilPersonal).LblBienvenido.Visible = true;
                     ((frmPerfilAuxiliar)this.var_perfilPersonal).PanelAviso.Visible = true;
+                    //((frmPerfilAuxiliar)this.var_perfilPersonal).PanelBIPO.Visible = true;
                     break;
                 case TipoPerfil.PerfilPracticante:
                     this.Visible = false;
                     //((frmPerfilPracticante)this.var_perfilPersonal).LblBienvenido.Visible = true;
                     ((frmPerfilPracticante)this.var_perfilPersonal).PanelAviso.Visible = true;
-                    break;
-                case TipoPerfil.PerfilGestor:
-                    this.Visible = false;
-                    //((frmPerfilPracticante)this.var_perfilPersonal).LblBienvenido.Visible = true;
-                    //((frmPerfilGestor)this.var_perfilPersonal).PanelAviso.Visible = true;
+                    //((frmPerfilPracticante)this.var_perfilPersonal).PanelBIPO.Visible = true;
                     break;
                 default:
-                break;
+                    break;
             }
         }
 
@@ -216,7 +222,7 @@ namespace TA_GesBib_Cliente
         {
             estadoUsuario = Estado.Modificar;
             estadoComponentes(Estado.Modificar);
-            ruta = "";
+            //ruta = "";
 
         }
 
@@ -232,8 +238,8 @@ namespace TA_GesBib_Cliente
             {
                 if (ofdPortada.ShowDialog() == DialogResult.OK)
                 {
-                    string imagen = ofdPortada.FileName;
-                    pbPortada.Image = Image.FromFile(imagen);
+                    ruta = ofdPortada.FileName;
+                    pbPortada.Image = Image.FromFile(ruta);
                 }
             }
             catch (Exception ex)
@@ -257,12 +263,13 @@ namespace TA_GesBib_Cliente
 
         private void btnBuscar_Click(object sender, EventArgs e)
         {
-            ruta = "";
+            //ruta = "";
             frmBuscarPersonalConTodo frmBPCT = new frmBuscarPersonalConTodo();
             if (frmBPCT.ShowDialog() == DialogResult.OK)
             {
                 personal = frmBPCT.PersonalSeleccionado;
 
+                
                 txtNombre.Text = personal.nombre;
                 txtApellido.Text = personal.apellido;
                 txtCorreo.Text = personal.email;
@@ -271,6 +278,7 @@ namespace TA_GesBib_Cliente
                 dtpFecha.Value = personal.fecha_ingreso;
                 txtCantidadHE.Text = personal.totalHorasExtra.ToString();
                 txtBiblioteca.Text = personal.biblioteca.nombre;
+                //var_tipoPerfil=Program.DBController.Perfil
                 if (personal.foto != null)
                 {
                     pbPortada.Visible = true;
@@ -283,7 +291,7 @@ namespace TA_GesBib_Cliente
                     pbPortada.Visible = false;
                     MessageBox.Show("No hay foto encontrada");
                 }
-                        
+                pbPortada.Visible = true;
                 estadoComponentes(Estado.Buscar);
             }
         }
