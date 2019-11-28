@@ -63,7 +63,18 @@ namespace TA_GesBib_Cliente
             puntoAtForm = puntoA;
 
 
+            //BLOQUEAR
+            txtBib.Enabled = false;
+            txtCantMin.Enabled = false;
+            txtCantOpt.Enabled = false;
+            txtCod.Enabled = false;
+            txtPtoAtencion.Enabled = false;
+            txtPerfil.Enabled = false;
+            dtpFecha.Enabled = false;
+            txtNombre.Enabled = false;
 
+
+            //
             txtBib.Text = bib.nombre;
             txtPtoAtencion.Text = puntoA.nombre;
             txtCantMin.Text = puntoA.cant_min_pers.ToString();
@@ -139,7 +150,16 @@ namespace TA_GesBib_Cliente
 
         private void cmbHoraFin_SelectedIndexChanged(object sender, EventArgs e)
         {
+            
 
+            int iniAsig = Convert.ToInt32(cmbHoraIni.SelectedItem.ToString().Substring(0,2));
+            int finAsig = Convert.ToInt32(cmbHoraFin.SelectedItem.ToString().Substring(0, 2));
+
+            if (finAsig < iniAsig) {
+                MessageBox.Show("La hora fin debe ser mayor a la hora inicio", "Mensaje de error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                cmbHoraFin.SelectedIndex = iniAsig - 7;
+                return;
+            }
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -154,6 +174,12 @@ namespace TA_GesBib_Cliente
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
+            if (txtNombre.Text == "" || txtCod.Text == "") {
+                MessageBox.Show("No se ha seleccionado un personal de biblioteca", "Mensaje de información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+
+
             ServicioJava.distribucionPersonal d = new ServicioJava.distribucionPersonal();
             d.fecha = dtpFecha.Value;
             d.fechaSpecified = true;
@@ -165,17 +191,26 @@ namespace TA_GesBib_Cliente
             ListaNuevos.Add(d);
 
 
-            dgvPersonal.Rows.Add(personal.codigo, personal.nombre+" "+personal.apellido, d.horaInicio, d.horaFin);
+            dgvPersonal.Rows.Add(personal.codigo, personal.nombre + " " + personal.apellido, d.horaInicio, d.horaFin);
+
+            txtNombre.Text = "";
+            txtCod.Text = "";
+
         }
 
         private void btnRemove_Click(object sender, EventArgs e)
         {
-            //listaNuevos.Remove()
+            listaNuevos.RemoveAt(dgvPersonal.CurrentRow.Index);
             dgvPersonal.Rows.Remove(dgvPersonal.CurrentRow);
         }
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
+            if (Convert.ToInt32(txtCantMin.Text) > dgvPersonal.RowCount)
+            {
+                MessageBox.Show("El personal asignado es menor que la cantidad mínima necesaria", "Mensaje de información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
             foreach (ServicioJava.distribucionPersonal d in ListaNuevos) {
                 ServicioJava.distribucionPersonal nuevo = new ServicioJava.distribucionPersonal();
                 //nuevo.fecha = d.fecha;
