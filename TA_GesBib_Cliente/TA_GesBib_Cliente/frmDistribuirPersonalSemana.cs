@@ -44,34 +44,11 @@ namespace TA_GesBib_Cliente
             personal.id = usuario.id;
             
             dgvDitribucion.AutoGenerateColumns = false;
-            //dgvDitribucion.DataSource = DBController.listarDistribucionPersonalPorFechaHora();
-
-            dgvDitribucion.Rows[0].Cells[1].Style.BackColor = Color.PowderBlue;
 
             bib = Program.DBController.getBibliotecaGestor(personal.id);
 
             puntoA = new BindingList<puntosAtencion>(Program.DBController.listarPuntosAtencion(bib.id));
-            //int fila = 0;
-            //foreach (ServicioJava.puntosAtencion pa in puntoA)
-            //{
 
-            //    dgvDitribucion.Rows.Add(pa.nombre);
-            //    try
-            //    {
-            //        listaDist = new BindingList<distribucionPersonal>(Program.DBController.listarDistribucionPersonalPorFecha(personal.id, pa.id, dtpSemana.Value, dtpSemana.Value));
-
-            //        foreach (ServicioJava.distribucionPersonal distAux in listaDist)
-            //        {
-            //            int col = Convert.ToInt32(distAux.horaInicio) - 7;
-            //            dgvDitribucion.Rows[fila].Cells[col].Style.BackColor = Color.PowderBlue;
-            //        }
-            //    }
-            //    catch (Exception ex)
-            //    {
-            //        System.Console.Write("Lista vacía");
-            //    }
-            //    fila++;
-            //}
 
         }
 
@@ -102,7 +79,14 @@ namespace TA_GesBib_Cliente
                     int col = dgvDitribucion.CurrentCell.ColumnIndex;
 
                     frmAsignarPersonalPuntoAtencion formAsignarPersonal = new frmAsignarPersonalPuntoAtencion(bib,puntoA[fil], matrizDist[fil],dtpSemana.Value,col);
-                    formAsignarPersonal.ShowDialog();
+                    if (formAsignarPersonal.ShowDialog() == DialogResult.OK) {
+                        //BindingList<ServicioJava.distribucionPersonal> auxDist = formAsignarPersonal.ListaNuevos;
+                        //foreach (ServicioJava.distribucionPersonal dp in auxDist)
+                        //{
+                        //    matrizDist[fil].Add(dp);
+                        //}                        
+
+                    }
                 }
             }
             catch (Exception)
@@ -120,7 +104,8 @@ namespace TA_GesBib_Cliente
 
         private void btnBuscarDistribucion_Click(object sender, EventArgs e)
         {
-            //dgvDitribucion.RowCount = 0;
+            matrizDist = new BindingList<BindingList<distribucionPersonal>>();
+            if(dgvDitribucion!=null)dgvDitribucion.RowCount = 0;
             int fila = 0;
             foreach (ServicioJava.puntosAtencion pa in puntoA)
             {
@@ -141,6 +126,7 @@ namespace TA_GesBib_Cliente
                 }
                 catch (Exception ex)
                 {
+                    matrizDist.Add(new BindingList<distribucionPersonal>());
                     System.Console.Write("Lista vacía");
                 }
                 fila++;

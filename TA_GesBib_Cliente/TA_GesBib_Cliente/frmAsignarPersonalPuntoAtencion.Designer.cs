@@ -60,6 +60,8 @@
             this.btnGuardar = new System.Windows.Forms.Button();
             this.Codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.HoraInicio = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.HoraFin = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPersonal)).BeginInit();
@@ -369,7 +371,9 @@
             this.dgvPersonal.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvPersonal.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Codigo,
-            this.Nombre});
+            this.Nombre,
+            this.HoraInicio,
+            this.HoraFin});
             this.dgvPersonal.Location = new System.Drawing.Point(29, 137);
             this.dgvPersonal.Margin = new System.Windows.Forms.Padding(4);
             this.dgvPersonal.Name = "dgvPersonal";
@@ -450,6 +454,16 @@
             this.Nombre.HeaderText = "Nombre";
             this.Nombre.Name = "Nombre";
             // 
+            // HoraInicio
+            // 
+            this.HoraInicio.HeaderText = "Hora Inicio";
+            this.HoraInicio.Name = "HoraInicio";
+            // 
+            // HoraFin
+            // 
+            this.HoraFin.HeaderText = "Hora Fin";
+            this.HoraFin.Name = "HoraFin";
+            // 
             // frmAsignarPersonalPuntoAtencion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -509,5 +523,7 @@
         private System.Windows.Forms.Label lblFecha;
         private System.Windows.Forms.DataGridViewTextBoxColumn Codigo;
         private System.Windows.Forms.DataGridViewTextBoxColumn Nombre;
+        private System.Windows.Forms.DataGridViewTextBoxColumn HoraInicio;
+        private System.Windows.Forms.DataGridViewTextBoxColumn HoraFin;
     }
 }
