@@ -29,6 +29,7 @@ namespace TA_GesBib_Cliente
         {
             var_formGestor = _formPerfilGestor;
             InitializeComponent();
+            estadoComponentes(Estado.Inicial);
         }
 
         // Estados
@@ -182,6 +183,41 @@ namespace TA_GesBib_Cliente
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
+            // Validaciones
+            if (txtNombre.Text == "")
+            {
+                MessageBox.Show("Debe ingresar nombre de la capacitación","Mensaje");
+                return;
+            }else if (txtLugar.Text == "")
+            {
+                MessageBox.Show("Debe ingresar lugar de la capacitación","Mensaje");
+                return;
+            }else if (txtDescripcion.Text == "")
+            {
+                MessageBox.Show("Debe ingresar descripción de la capacitación", "Mensaje");
+                return;
+            }
+            DateTime temp1, temp2, temp3, temp4;
+            DateTime.TryParse(dtpInicio.Text, out temp1);
+            DateTime.TryParse(dtpFin.Text, out temp2);
+            DateTime.TryParse(dtpInicioInscripcion.Text, out temp3);
+            DateTime.TryParse(dtpFinInscripcion.Text, out temp4);
+            if (temp1 > temp2)
+            {
+                MessageBox.Show("La Fecha Inicio debe ser menor a la Fecha Fin", "Mensaje");
+                return;
+            }
+            if (temp3 > temp4)
+            {
+                MessageBox.Show("La Fecha Inicio de Inscripción debe ser menor a la Fecha Fin Inscripción","Mensaje");
+                return;
+            }
+            if (temp1 < temp4)
+            {
+                MessageBox.Show("La Fecha Inicio debe ser mayor a la Fecha Fin de Inscripción0", "Mensaje");
+                return;
+            }
+            
             // creamos el objeto capacitacion
             capacitacion = new ServicioJava.capacitacion();
             capacitacion.nombre = txtNombre.Text;

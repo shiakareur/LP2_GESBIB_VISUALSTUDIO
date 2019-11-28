@@ -51,6 +51,9 @@
             this.btnAgregarDC = new System.Windows.Forms.Button();
             this.btnQuitarDC = new System.Windows.Forms.Button();
             this.dgvDiaCapacitacion = new System.Windows.Forms.DataGridView();
+            this.Fecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Hora_ini = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Hora_fin = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnCerrar = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnBuscar = new System.Windows.Forms.Button();
@@ -58,9 +61,6 @@
             this.btnGuardar = new System.Windows.Forms.Button();
             this.btnNuevo = new System.Windows.Forms.Button();
             this.btnPerInscrito = new System.Windows.Forms.Button();
-            this.Fecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Hora_ini = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Hora_fin = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1.SuspendLayout();
             this.gbDatosGenerales.SuspendLayout();
             this.gbPuntosAtencion.SuspendLayout();
@@ -346,6 +346,27 @@
             this.dgvDiaCapacitacion.Size = new System.Drawing.Size(644, 144);
             this.dgvDiaCapacitacion.TabIndex = 52;
             // 
+            // Fecha
+            // 
+            this.Fecha.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Fecha.HeaderText = "Fecha";
+            this.Fecha.Name = "Fecha";
+            this.Fecha.ReadOnly = true;
+            // 
+            // Hora_ini
+            // 
+            this.Hora_ini.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Hora_ini.HeaderText = "Hora Inicio";
+            this.Hora_ini.Name = "Hora_ini";
+            this.Hora_ini.ReadOnly = true;
+            // 
+            // Hora_fin
+            // 
+            this.Hora_fin.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Hora_fin.HeaderText = "Hora Fin";
+            this.Hora_fin.Name = "Hora_fin";
+            this.Hora_fin.ReadOnly = true;
+            // 
             // btnCerrar
             // 
             this.btnCerrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(242)))), ((int)(((byte)(241)))));
@@ -457,27 +478,6 @@
             this.btnPerInscrito.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnPerInscrito.UseVisualStyleBackColor = false;
             this.btnPerInscrito.Click += new System.EventHandler(this.btnPerInscrito_Click);
-            // 
-            // Fecha
-            // 
-            this.Fecha.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Fecha.HeaderText = "Fecha";
-            this.Fecha.Name = "Fecha";
-            this.Fecha.ReadOnly = true;
-            // 
-            // Hora_ini
-            // 
-            this.Hora_ini.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Hora_ini.HeaderText = "Hora Inicio";
-            this.Hora_ini.Name = "Hora_ini";
-            this.Hora_ini.ReadOnly = true;
-            // 
-            // Hora_fin
-            // 
-            this.Hora_fin.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Hora_fin.HeaderText = "Hora Fin";
-            this.Hora_fin.Name = "Hora_fin";
-            this.Hora_fin.ReadOnly = true;
             // 
             // frmCapacitaciones
             // 
