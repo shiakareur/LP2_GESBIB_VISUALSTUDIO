@@ -30,13 +30,13 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmLogin));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.placeHolderUsuario = new TA_GesBib_Cliente.PlaceHolderTextBox();
             this.lblOlvideCredenciales = new System.Windows.Forms.Label();
             this.logogrande = new System.Windows.Forms.PictureBox();
             this.btnAcceder = new System.Windows.Forms.Button();
             this.txtcontraseña = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.placeHolderUsuario = new TA_GesBib_Cliente.PlaceHolderTextBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.logogrande)).BeginInit();
             this.SuspendLayout();
@@ -57,18 +57,6 @@
             this.panel1.Size = new System.Drawing.Size(407, 400);
             this.panel1.TabIndex = 1;
             this.panel1.TabStop = true;
-            // 
-            // placeHolderUsuario
-            // 
-            this.placeHolderUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.placeHolderUsuario.ForeColor = System.Drawing.Color.Gray;
-            this.placeHolderUsuario.Location = new System.Drawing.Point(130, 174);
-            this.placeHolderUsuario.Name = "placeHolderUsuario";
-            this.placeHolderUsuario.PlaceHolderText = null;
-            this.placeHolderUsuario.Size = new System.Drawing.Size(138, 20);
-            this.placeHolderUsuario.TabIndex = 6;
-            this.placeHolderUsuario.Text = "username@example.com";
-            this.placeHolderUsuario.TextChanged += new System.EventHandler(this.placeHolderUsuario_TextChanged);
             // 
             // lblOlvideCredenciales
             // 
@@ -96,6 +84,7 @@
             // 
             this.btnAcceder.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(132)))), ((int)(((byte)(255)))));
             this.btnAcceder.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnAcceder.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAcceder.Font = new System.Drawing.Font("Yu Gothic UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAcceder.ForeColor = System.Drawing.Color.White;
             this.btnAcceder.Location = new System.Drawing.Point(129, 292);
@@ -114,6 +103,7 @@
             this.txtcontraseña.PasswordChar = '*';
             this.txtcontraseña.Size = new System.Drawing.Size(139, 23);
             this.txtcontraseña.TabIndex = 3;
+            this.txtcontraseña.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtcontraseña_KeyPress);
             // 
             // label2
             // 
@@ -138,6 +128,18 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Usuario";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // placeHolderUsuario
+            // 
+            this.placeHolderUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.placeHolderUsuario.ForeColor = System.Drawing.Color.Gray;
+            this.placeHolderUsuario.Location = new System.Drawing.Point(130, 174);
+            this.placeHolderUsuario.Name = "placeHolderUsuario";
+            this.placeHolderUsuario.PlaceHolderText = null;
+            this.placeHolderUsuario.Size = new System.Drawing.Size(138, 20);
+            this.placeHolderUsuario.TabIndex = 6;
+            this.placeHolderUsuario.Text = "username@example.com";
+            this.placeHolderUsuario.TextChanged += new System.EventHandler(this.placeHolderUsuario_TextChanged);
             // 
             // frmLogin
             // 

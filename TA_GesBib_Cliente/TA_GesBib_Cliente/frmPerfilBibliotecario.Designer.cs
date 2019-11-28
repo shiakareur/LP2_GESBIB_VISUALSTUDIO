@@ -247,7 +247,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(319, 767);
+            this.panel1.Size = new System.Drawing.Size(319, 790);
             this.panel1.TabIndex = 55;
             this.panel1.TabStop = true;
             // 
@@ -377,7 +377,7 @@
             this.btnSolicitar_CambioTurno.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
             this.btnSolicitar_CambioTurno.Size = new System.Drawing.Size(252, 40);
             this.btnSolicitar_CambioTurno.TabIndex = 62;
-            this.btnSolicitar_CambioTurno.Text = "> Solicitar Cambio de Turno";
+            this.btnSolicitar_CambioTurno.Text = "> Pedir Cambio de Turno";
             this.btnSolicitar_CambioTurno.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnSolicitar_CambioTurno.UseVisualStyleBackColor = false;
             this.btnSolicitar_CambioTurno.Click += new System.EventHandler(this.btnSolicitar_CambioTurno_Click);
@@ -395,7 +395,7 @@
             this.btnSolicitar_HLibres.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
             this.btnSolicitar_HLibres.Size = new System.Drawing.Size(252, 40);
             this.btnSolicitar_HLibres.TabIndex = 61;
-            this.btnSolicitar_HLibres.Text = "> Solicitar Horas Libres";
+            this.btnSolicitar_HLibres.Text = "> Pedir Horas Libres";
             this.btnSolicitar_HLibres.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnSolicitar_HLibres.UseVisualStyleBackColor = false;
             this.btnSolicitar_HLibres.Click += new System.EventHandler(this.btnSolicitar_HLibres_Click);
@@ -462,7 +462,7 @@
             this.btnVisualizarHorarios.Padding = new System.Windows.Forms.Padding(3, 0, 0, 0);
             this.btnVisualizarHorarios.Size = new System.Drawing.Size(292, 49);
             this.btnVisualizarHorarios.TabIndex = 11;
-            this.btnVisualizarHorarios.Text = "Horarios";
+            this.btnVisualizarHorarios.Text = "Visualizar Horarios";
             this.btnVisualizarHorarios.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnVisualizarHorarios.UseVisualStyleBackColor = false;
             this.btnVisualizarHorarios.Click += new System.EventHandler(this.btnVisualizarHorarios_Click);
@@ -484,9 +484,9 @@
             this.panelAviso.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.panelAviso.Controls.Add(this.txtDescripcion);
             this.panelAviso.Controls.Add(this.lblTitulo1);
-            this.panelAviso.Location = new System.Drawing.Point(71, 83);
+            this.panelAviso.Location = new System.Drawing.Point(134, 132);
             this.panelAviso.Name = "panelAviso";
-            this.panelAviso.Size = new System.Drawing.Size(331, 238);
+            this.panelAviso.Size = new System.Drawing.Size(363, 238);
             this.panelAviso.TabIndex = 60;
             // 
             // txtDescripcion
@@ -521,9 +521,9 @@
             this.panelBIPO.Controls.Add(this.panel5);
             this.panelBIPO.Controls.Add(this.panel6);
             this.panelBIPO.Controls.Add(this.panelAviso);
-            this.panelBIPO.Location = new System.Drawing.Point(308, 2);
+            this.panelBIPO.Location = new System.Drawing.Point(320, 2);
             this.panelBIPO.Name = "panelBIPO";
-            this.panelBIPO.Size = new System.Drawing.Size(870, 767);
+            this.panelBIPO.Size = new System.Drawing.Size(1051, 788);
             this.panelBIPO.TabIndex = 64;
             // 
             // panel2
@@ -533,9 +533,9 @@
             this.panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.panel2.Controls.Add(this.txtDescripcion4);
             this.panel2.Controls.Add(this.lblTitulo4);
-            this.panel2.Location = new System.Drawing.Point(437, 370);
+            this.panel2.Location = new System.Drawing.Point(532, 419);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(331, 238);
+            this.panel2.Size = new System.Drawing.Size(370, 238);
             this.panel2.TabIndex = 132;
             // 
             // txtDescripcion4
@@ -569,9 +569,9 @@
             this.panel5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.panel5.Controls.Add(this.txtDescripcion3);
             this.panel5.Controls.Add(this.lblTitulo3);
-            this.panel5.Location = new System.Drawing.Point(71, 370);
+            this.panel5.Location = new System.Drawing.Point(134, 419);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(331, 238);
+            this.panel5.Size = new System.Drawing.Size(363, 238);
             this.panel5.TabIndex = 132;
             // 
             // txtDescripcion3
@@ -605,9 +605,9 @@
             this.panel6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.panel6.Controls.Add(this.txtDescripcion2);
             this.panel6.Controls.Add(this.lblTitulo2);
-            this.panel6.Location = new System.Drawing.Point(437, 83);
+            this.panel6.Location = new System.Drawing.Point(532, 132);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(331, 238);
+            this.panel6.Size = new System.Drawing.Size(370, 238);
             this.panel6.TabIndex = 132;
             // 
             // txtDescripcion2
@@ -640,7 +640,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::TA_GesBib_Cliente.Properties.Resources.biblio_ari_borroso;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1179, 767);
+            this.ClientSize = new System.Drawing.Size(1370, 790);
             this.Controls.Add(this.panelBIPO);
             this.Controls.Add(this.panel1);
             this.DoubleBuffered = true;
