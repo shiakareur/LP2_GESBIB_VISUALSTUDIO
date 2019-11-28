@@ -82,7 +82,7 @@
             this.txtNombre.Location = new System.Drawing.Point(135, 37);
             this.txtNombre.Margin = new System.Windows.Forms.Padding(2);
             this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(306, 26);
+            this.txtNombre.Size = new System.Drawing.Size(367, 26);
             this.txtNombre.TabIndex = 135;
             this.txtNombre.Tag = "";
             // 
@@ -110,9 +110,9 @@
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.groupBox1.Location = new System.Drawing.Point(361, 94);
+            this.groupBox1.Location = new System.Drawing.Point(321, 94);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(481, 199);
+            this.groupBox1.Size = new System.Drawing.Size(521, 199);
             this.groupBox1.TabIndex = 136;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Datos personales";
@@ -123,7 +123,7 @@
             this.txtCodigo.Location = new System.Drawing.Point(135, 153);
             this.txtCodigo.Margin = new System.Windows.Forms.Padding(2);
             this.txtCodigo.Name = "txtCodigo";
-            this.txtCodigo.Size = new System.Drawing.Size(306, 26);
+            this.txtCodigo.Size = new System.Drawing.Size(367, 26);
             this.txtCodigo.TabIndex = 137;
             this.txtCodigo.Tag = "";
             // 
@@ -146,7 +146,7 @@
             this.txtCorreo.Location = new System.Drawing.Point(135, 111);
             this.txtCorreo.Margin = new System.Windows.Forms.Padding(2);
             this.txtCorreo.Name = "txtCorreo";
-            this.txtCorreo.Size = new System.Drawing.Size(306, 26);
+            this.txtCorreo.Size = new System.Drawing.Size(367, 26);
             this.txtCorreo.TabIndex = 135;
             this.txtCorreo.Tag = "";
             // 
@@ -156,7 +156,7 @@
             this.txtApellido.Location = new System.Drawing.Point(135, 73);
             this.txtApellido.Margin = new System.Windows.Forms.Padding(2);
             this.txtApellido.Name = "txtApellido";
-            this.txtApellido.Size = new System.Drawing.Size(306, 26);
+            this.txtApellido.Size = new System.Drawing.Size(367, 26);
             this.txtApellido.TabIndex = 135;
             this.txtApellido.Tag = "";
             // 
@@ -219,9 +219,9 @@
             this.groupBox3.Controls.Add(this.label9);
             this.groupBox3.Controls.Add(this.label8);
             this.groupBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.groupBox3.Location = new System.Drawing.Point(361, 310);
+            this.groupBox3.Location = new System.Drawing.Point(321, 310);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(481, 229);
+            this.groupBox3.Size = new System.Drawing.Size(521, 229);
             this.groupBox3.TabIndex = 141;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Datos Biblioteca";
@@ -231,17 +231,17 @@
             this.dtpFecha.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.dtpFecha.Location = new System.Drawing.Point(170, 41);
             this.dtpFecha.Name = "dtpFecha";
-            this.dtpFecha.Size = new System.Drawing.Size(292, 26);
+            this.dtpFecha.Size = new System.Drawing.Size(332, 26);
             this.dtpFecha.TabIndex = 143;
             // 
             // txtBiblioteca
             // 
             this.txtBiblioteca.Enabled = false;
             this.txtBiblioteca.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.txtBiblioteca.Location = new System.Drawing.Point(247, 174);
+            this.txtBiblioteca.Location = new System.Drawing.Point(225, 174);
             this.txtBiblioteca.Margin = new System.Windows.Forms.Padding(2);
             this.txtBiblioteca.Name = "txtBiblioteca";
-            this.txtBiblioteca.Size = new System.Drawing.Size(215, 26);
+            this.txtBiblioteca.Size = new System.Drawing.Size(277, 26);
             this.txtBiblioteca.TabIndex = 142;
             this.txtBiblioteca.Tag = "";
             // 
@@ -249,10 +249,10 @@
             // 
             this.txtPuesto.Enabled = false;
             this.txtPuesto.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.txtPuesto.Location = new System.Drawing.Point(204, 84);
+            this.txtPuesto.Location = new System.Drawing.Point(170, 84);
             this.txtPuesto.Margin = new System.Windows.Forms.Padding(2);
             this.txtPuesto.Name = "txtPuesto";
-            this.txtPuesto.Size = new System.Drawing.Size(258, 26);
+            this.txtPuesto.Size = new System.Drawing.Size(332, 26);
             this.txtPuesto.TabIndex = 141;
             this.txtPuesto.Tag = "";
             // 
@@ -260,10 +260,10 @@
             // 
             this.txtCantidadHE.Enabled = false;
             this.txtCantidadHE.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.txtCantidadHE.Location = new System.Drawing.Point(274, 132);
+            this.txtCantidadHE.Location = new System.Drawing.Point(225, 133);
             this.txtCantidadHE.Margin = new System.Windows.Forms.Padding(2);
             this.txtCantidadHE.Name = "txtCantidadHE";
-            this.txtCantidadHE.Size = new System.Drawing.Size(188, 26);
+            this.txtCantidadHE.Size = new System.Drawing.Size(277, 26);
             this.txtCantidadHE.TabIndex = 135;
             this.txtCantidadHE.Tag = "";
             // 
