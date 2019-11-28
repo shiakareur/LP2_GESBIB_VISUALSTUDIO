@@ -37,7 +37,10 @@ namespace TA_GesBib_Cliente
         {
             ServicioJava.biblioteca objBiblio = dgvBibliotecas.Rows[e.RowIndex].DataBoundItem as ServicioJava.biblioteca;
             dgvBibliotecas.Rows[e.RowIndex].Cells[0].Value = objBiblio.nombre;
-            dgvBibliotecas.Rows[e.RowIndex].Cells[1].Value = objBiblio.gestor.nombre + " " + objBiblio.gestor.apellido;
+            if (objBiblio.gestor.id != -1)
+                dgvBibliotecas.Rows[e.RowIndex].Cells[1].Value = objBiblio.gestor.nombre + " " + objBiblio.gestor.apellido;
+            else
+                dgvBibliotecas.Rows[e.RowIndex].Cells[1].Value = "-";
         }
     }
 }

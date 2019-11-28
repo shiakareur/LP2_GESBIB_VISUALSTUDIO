@@ -49,11 +49,11 @@
             this.hora21 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.hora22 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtNombre = new System.Windows.Forms.TextBox();
             this.lblSemestre = new System.Windows.Forms.Label();
             this.btnBuscarDistribucion = new System.Windows.Forms.Button();
-            this.txtNombre = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.btnGuardar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDitribucion)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -66,9 +66,10 @@
             this.btnCerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCerrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.btnCerrar.Image = global::TA_GesBib_Cliente.Properties.Resources.icono_regresar;
-            this.btnCerrar.Location = new System.Drawing.Point(28, 23);
+            this.btnCerrar.Location = new System.Drawing.Point(37, 28);
+            this.btnCerrar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnCerrar.Name = "btnCerrar";
-            this.btnCerrar.Size = new System.Drawing.Size(65, 40);
+            this.btnCerrar.Size = new System.Drawing.Size(87, 49);
             this.btnCerrar.TabIndex = 147;
             this.btnCerrar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnCerrar.UseVisualStyleBackColor = false;
@@ -80,9 +81,10 @@
             this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(37)))), ((int)(((byte)(42)))));
-            this.label6.Location = new System.Drawing.Point(95, 57);
+            this.label6.Location = new System.Drawing.Point(127, 70);
+            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(364, 13);
+            this.label6.Size = new System.Drawing.Size(467, 17);
             this.label6.TabIndex = 146;
             this.label6.Text = "___________________________________________________";
             // 
@@ -92,9 +94,10 @@
             this.label9.BackColor = System.Drawing.Color.Transparent;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(37)))), ((int)(((byte)(42)))));
-            this.label9.Location = new System.Drawing.Point(99, 24);
+            this.label9.Location = new System.Drawing.Point(132, 30);
+            this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(349, 33);
+            this.label9.Size = new System.Drawing.Size(442, 42);
             this.label9.TabIndex = 145;
             this.label9.Text = "Distribución del Semestre";
             this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -120,13 +123,14 @@
             this.hora20,
             this.hora21,
             this.hora22});
-            this.dgvDitribucion.Location = new System.Drawing.Point(28, 190);
-            this.dgvDitribucion.Margin = new System.Windows.Forms.Padding(2);
+            this.dgvDitribucion.Location = new System.Drawing.Point(37, 234);
+            this.dgvDitribucion.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dgvDitribucion.Name = "dgvDitribucion";
             this.dgvDitribucion.RowTemplate.Height = 24;
             this.dgvDitribucion.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
-            this.dgvDitribucion.Size = new System.Drawing.Size(968, 360);
+            this.dgvDitribucion.Size = new System.Drawing.Size(1291, 443);
             this.dgvDitribucion.TabIndex = 148;
+//            this.dgvDitribucion.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.dgvDitribucion_MouseDoubleClick);
             // 
             // PuntoAtencion
             // 
@@ -231,19 +235,50 @@
             this.groupBox1.Controls.Add(this.lblSemestre);
             this.groupBox1.Controls.Add(this.btnBuscarDistribucion);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.groupBox1.Location = new System.Drawing.Point(28, 96);
+            this.groupBox1.Location = new System.Drawing.Point(37, 118);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(968, 78);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Size = new System.Drawing.Size(1291, 96);
             this.groupBox1.TabIndex = 149;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Datos de la Distribución";
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(288, 44);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(15, 20);
+            this.label1.TabIndex = 148;
+            this.label1.Text = "-";
+            // 
+            // textBox1
+            // 
+            this.textBox1.Font = new System.Drawing.Font("Bahnschrift Light", 12F);
+            this.textBox1.Location = new System.Drawing.Point(311, 38);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(40, 32);
+            this.textBox1.TabIndex = 147;
+            // 
+            // txtNombre
+            // 
+            this.txtNombre.Font = new System.Drawing.Font("Bahnschrift Light", 12F);
+            this.txtNombre.Location = new System.Drawing.Point(147, 38);
+            this.txtNombre.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtNombre.Name = "txtNombre";
+            this.txtNombre.Size = new System.Drawing.Size(132, 32);
+            this.txtNombre.TabIndex = 146;
+            // 
             // lblSemestre
             // 
             this.lblSemestre.AutoSize = true;
-            this.lblSemestre.Location = new System.Drawing.Point(18, 37);
+            this.lblSemestre.Location = new System.Drawing.Point(24, 46);
+            this.lblSemestre.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblSemestre.Name = "lblSemestre";
-            this.lblSemestre.Size = new System.Drawing.Size(72, 17);
+            this.lblSemestre.Size = new System.Drawing.Size(86, 20);
             this.lblSemestre.TabIndex = 145;
             this.lblSemestre.Text = "Semestre:";
             // 
@@ -254,38 +289,14 @@
             this.btnBuscarDistribucion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBuscarDistribucion.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.btnBuscarDistribucion.Image = global::TA_GesBib_Cliente.Properties.Resources.icono_buscar;
-            this.btnBuscarDistribucion.Location = new System.Drawing.Point(688, 22);
+            this.btnBuscarDistribucion.Location = new System.Drawing.Point(917, 27);
+            this.btnBuscarDistribucion.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnBuscarDistribucion.Name = "btnBuscarDistribucion";
-            this.btnBuscarDistribucion.Size = new System.Drawing.Size(261, 37);
+            this.btnBuscarDistribucion.Size = new System.Drawing.Size(348, 46);
             this.btnBuscarDistribucion.TabIndex = 142;
             this.btnBuscarDistribucion.Text = "BUSCAR DISTRIBUCION";
             this.btnBuscarDistribucion.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnBuscarDistribucion.UseVisualStyleBackColor = false;
-            // 
-            // txtNombre
-            // 
-            this.txtNombre.Font = new System.Drawing.Font("Bahnschrift Light", 12F);
-            this.txtNombre.Location = new System.Drawing.Point(110, 31);
-            this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(100, 27);
-            this.txtNombre.TabIndex = 146;
-            // 
-            // textBox1
-            // 
-            this.textBox1.Font = new System.Drawing.Font("Bahnschrift Light", 12F);
-            this.textBox1.Location = new System.Drawing.Point(233, 31);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(31, 27);
-            this.textBox1.TabIndex = 147;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(216, 36);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(13, 17);
-            this.label1.TabIndex = 148;
-            this.label1.Text = "-";
             // 
             // btnGuardar
             // 
@@ -295,9 +306,10 @@
             this.btnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGuardar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.btnGuardar.Image = global::TA_GesBib_Cliente.Properties.Resources.icono_guardar;
-            this.btnGuardar.Location = new System.Drawing.Point(716, 585);
+            this.btnGuardar.Location = new System.Drawing.Point(955, 720);
+            this.btnGuardar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnGuardar.Name = "btnGuardar";
-            this.btnGuardar.Size = new System.Drawing.Size(280, 42);
+            this.btnGuardar.Size = new System.Drawing.Size(373, 52);
             this.btnGuardar.TabIndex = 150;
             this.btnGuardar.Text = "GUARDAR DISTRIBUCIÓN";
             this.btnGuardar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -305,10 +317,10 @@
             // 
             // frmDistribucionSemestre
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(242)))), ((int)(((byte)(241)))));
-            this.ClientSize = new System.Drawing.Size(1027, 664);
+            this.ClientSize = new System.Drawing.Size(1369, 817);
             this.Controls.Add(this.btnGuardar);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.dgvDitribucion);
@@ -316,6 +328,7 @@
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label9);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "frmDistribucionSemestre";
             this.Text = "frmDistribucionSemestre";
             ((System.ComponentModel.ISupportInitialize)(this.dgvDitribucion)).EndInit();

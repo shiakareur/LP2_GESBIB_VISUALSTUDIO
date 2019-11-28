@@ -51,7 +51,7 @@ namespace TA_GesBib_Cliente
                     btnEliminar.Enabled = false;
                     btnBuscarGestor.Enabled = false;
                     //DGV
-                    dgvPuntosAtencion.Enabled = false;
+                    //dgvPuntosAtencion.Enabled = false;
                     //Campos de Texto
                     txtNombreBib.Enabled = false;
                     txtCodigo.Enabled = false;
@@ -85,6 +85,7 @@ namespace TA_GesBib_Cliente
                     btnGuardar.Enabled = false;
                     btnCancelar.Enabled = true;
                     btnBuscar.Enabled = false;
+                    btnEliminar.Enabled = true;
                     break;
                 case Estado.Modificar:
                     //Etiquetas
@@ -97,8 +98,12 @@ namespace TA_GesBib_Cliente
                     btnModificar.Enabled = false;
                     btnCancelar.Enabled = true;
                     btnBuscar.Enabled = false;
+                    btnBuscarGestor.Enabled = true;
+                    btnAgregarPA.Enabled = true;
+                    btnQuitarPA.Enabled = true;
                     //Campos de Texto
                     txtNombreBib.Enabled = true;
+                    txtNombreGestor.Enabled = true;
                     dgvPuntosAtencion.Enabled = true;
                     break;
             }
@@ -109,6 +114,9 @@ namespace TA_GesBib_Cliente
             txtCodigo.Text = "";
             txtNombreGestor.Text = "";
             dgvPuntosAtencion.DataSource = null;
+            gestor = null;
+            listaPAasignados = null;
+
         }
 
         private void btnGuardar_Click(object sender, EventArgs e)
@@ -117,15 +125,8 @@ namespace TA_GesBib_Cliente
             ServicioJava.biblioteca bib = new ServicioJava.biblioteca();
 
             bib.nombre = txtNombreBib.Text;
-            try
-            {
-                bib.gestor.nombre = txtNombreGestor.Text;
-            }catch(Exception ex)
-            {
-                System.Console.WriteLine("Error en gestor");
-            }
-            
-            bib.gestor.codigo = txtCodigo.Text;
+            bib.gestor = gestor;
+            bib.listaPuntosAtencion = listaPAasignados.ToArray();
 
             if (estadoBiblioteca == Estado.Nuevo)
             {
@@ -155,7 +156,6 @@ namespace TA_GesBib_Cliente
             biblioteca = new ServicioJava.biblioteca();
             listaPAasignados = new BindingList<ServicioJava.puntosAtencion>();
             //establecer los puntos de atencion
-            biblioteca.listaPuntosAtencion = listaPAasignados.ToArray();
             dgvPuntosAtencion.AutoGenerateColumns = false;
             dgvPuntosAtencion.DataSource = listaPAasignados;
             estadoBiblioteca = Estado.Nuevo;
@@ -172,14 +172,16 @@ namespace TA_GesBib_Cliente
                     txtNombreGestor.Text = biblioteca.gestor.nombre + " " + biblioteca.gestor.apellido;
                     txtCodigo.Text = biblioteca.gestor.id.ToString();
 
+                    gestor = biblioteca.gestor;
                     listaPAasignados = new BindingList<ServicioJava.puntosAtencion>(biblioteca.listaPuntosAtencion);
+                    
                     dgvPuntosAtencion.AutoGenerateColumns = false;
                     dgvPuntosAtencion.DataSource = listaPAasignados;
-                    estadoComponentes(Estado.Buscar);
                 }
                 catch (Exception ex){
                     System.Console.WriteLine("Error");
-                }   
+                }
+                estadoComponentes(Estado.Buscar);
             }
         }
 
@@ -195,7 +197,8 @@ namespace TA_GesBib_Cliente
         }
         private void btnBuscarGestor_Click(object sender, EventArgs e)
         {
-            frmBuscarGestores formBuscarGestores = new frmBuscarGestores();
+            string cad = "Disponible";
+            frmBuscarGestores formBuscarGestores = new frmBuscarGestores(cad);
             formBuscarGestores.Location = new Point(0, 0);
             if (formBuscarGestores.ShowDialog() == DialogResult.OK) {
                 gestor = (ServicioJava.gestor)formBuscarGestores.GestorSeleccionado;
@@ -218,9 +221,11 @@ namespace TA_GesBib_Cliente
         private void btnEditarPA_Click(object sender, EventArgs e)
         {
             puntoAtSeleccionado = (ServicioJava.puntosAtencion)dgvPuntosAtencion.CurrentRow.DataBoundItem;
+            int indice = dgvPuntosAtencion.CurrentRow.Index;
             frmModificarPuntoAtencion formmodificarPA = new frmModificarPuntoAtencion(puntoAtSeleccionado); 
             formmodificarPA.Location = new Point(0, 0);
             if (formmodificarPA.ShowDialog() == DialogResult.OK) {
+                listaPAasignados[indice] = formmodificarPA.PuntoAtMod;
 
 
             }
@@ -248,7 +253,25 @@ namespace TA_GesBib_Cliente
 
         private void btnQuitarPA_Click(object sender, EventArgs e)
         {
+            
             listaPAasignados.Remove((ServicioJava.puntosAtencion)dgvPuntosAtencion.CurrentRow.DataBoundItem);
+            //listaPAasignados.Remove(listaPAasignados[dgvPuntosAtencion.CurrentRow.Index]);
+        }
+
+        private void btnModificar_Click(object sender, EventArgs e)
+        {
+            estadoBiblioteca = Estado.Modificar;
+            estadoComponentes(Estado.Modificar);
+        }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            if (DialogResult.Yes == MessageBox.Show("¿Está seguro que desea eliminar esta biblioteca?", "", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation))
+            {
+                Program.DBController.eliminarBiblioteca(biblioteca.id);
+                MessageBox.Show("La biblioteca ha sido eliminada", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                estadoComponentes(Estado.Inicial);
+            }
         }
     }
 }

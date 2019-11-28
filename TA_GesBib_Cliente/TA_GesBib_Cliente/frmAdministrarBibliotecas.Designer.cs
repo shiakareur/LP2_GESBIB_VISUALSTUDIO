@@ -96,7 +96,7 @@
             this.lblNomBib.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(37)))), ((int)(((byte)(42)))));
             this.lblNomBib.Location = new System.Drawing.Point(53, 37);
             this.lblNomBib.Name = "lblNomBib";
-            this.lblNomBib.Size = new System.Drawing.Size(75, 29);
+            this.lblNomBib.Size = new System.Drawing.Size(91, 36);
             this.lblNomBib.TabIndex = 51;
             this.lblNomBib.Text = "Nombre";
             // 
@@ -105,7 +105,7 @@
             this.txtNombreBib.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.txtNombreBib.Location = new System.Drawing.Point(203, 42);
             this.txtNombreBib.Name = "txtNombreBib";
-            this.txtNombreBib.Size = new System.Drawing.Size(514, 26);
+            this.txtNombreBib.Size = new System.Drawing.Size(514, 30);
             this.txtNombreBib.TabIndex = 18;
             // 
             // gbPuntosAtencion
@@ -232,7 +232,7 @@
             this.txtCodigo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.txtCodigo.Location = new System.Drawing.Point(203, 35);
             this.txtCodigo.Name = "txtCodigo";
-            this.txtCodigo.Size = new System.Drawing.Size(97, 26);
+            this.txtCodigo.Size = new System.Drawing.Size(97, 30);
             this.txtCodigo.TabIndex = 20;
             // 
             // groupBox1
@@ -271,7 +271,7 @@
             this.lblNomGes.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(37)))), ((int)(((byte)(42)))));
             this.lblNomGes.Location = new System.Drawing.Point(53, 70);
             this.lblNomGes.Name = "lblNomGes";
-            this.lblNomGes.Size = new System.Drawing.Size(75, 29);
+            this.lblNomGes.Size = new System.Drawing.Size(91, 36);
             this.lblNomGes.TabIndex = 132;
             this.lblNomGes.Text = "Nombre";
             // 
@@ -291,7 +291,7 @@
             this.txtNombreGestor.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.txtNombreGestor.Location = new System.Drawing.Point(203, 72);
             this.txtNombreGestor.Name = "txtNombreGestor";
-            this.txtNombreGestor.Size = new System.Drawing.Size(514, 26);
+            this.txtNombreGestor.Size = new System.Drawing.Size(514, 30);
             this.txtNombreGestor.TabIndex = 131;
             // 
             // lblCodGestor
@@ -302,7 +302,7 @@
             this.lblCodGestor.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(37)))), ((int)(((byte)(42)))));
             this.lblCodGestor.Location = new System.Drawing.Point(53, 33);
             this.lblCodGestor.Name = "lblCodGestor";
-            this.lblCodGestor.Size = new System.Drawing.Size(66, 29);
+            this.lblCodGestor.Size = new System.Drawing.Size(80, 36);
             this.lblCodGestor.TabIndex = 53;
             this.lblCodGestor.Text = "Código";
             // 
@@ -330,7 +330,7 @@
             this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(37)))), ((int)(((byte)(42)))));
             this.label9.Location = new System.Drawing.Point(118, 21);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(497, 39);
+            this.label9.Size = new System.Drawing.Size(617, 52);
             this.label9.TabIndex = 134;
             this.label9.Text = "Administración de bibliotecas";
             this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -349,6 +349,7 @@
             this.btnEliminar.Text = "ELIMINAR";
             this.btnEliminar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnEliminar.UseVisualStyleBackColor = false;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // btnCerrar
             // 
@@ -410,6 +411,7 @@
             this.btnModificar.Text = "MODIFICAR";
             this.btnModificar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnModificar.UseVisualStyleBackColor = false;
+            this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
             // 
             // btnGuardar
             // 
@@ -446,7 +448,7 @@
             // 
             // frmAdministrarBibliotecas
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(242)))), ((int)(((byte)(241)))));
             this.ClientSize = new System.Drawing.Size(930, 657);

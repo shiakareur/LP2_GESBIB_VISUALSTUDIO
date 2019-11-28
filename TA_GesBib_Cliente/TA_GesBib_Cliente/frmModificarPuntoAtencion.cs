@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using TA_GesBib_Cliente.ServicioJava;
 
 namespace TA_GesBib_Cliente
 {
@@ -25,7 +26,7 @@ namespace TA_GesBib_Cliente
         public frmModificarPuntoAtencion(ServicioJava.puntosAtencion puntoAtencion)
         {
             InitializeComponent();
-            puntoAtMod = puntoAtencion;
+            PuntoAtMod = puntoAtencion;
             cmbPerfil.DataSource = new BindingList<ServicioJava.perfilExperiencia>(Program.DBController.listarPerfilExperiencia());
 
             //Indicamos la Propiedad que debería visualizarse
@@ -38,7 +39,9 @@ namespace TA_GesBib_Cliente
             txtCantOpt.Text = puntoAtencion.cant_opt_pers.ToString();
             cmbPerfil.SelectedValue = puntoAtencion.perfilExperiencia.id;
         }
-        
+
+        public puntosAtencion PuntoAtMod { get => puntoAtMod; set => puntoAtMod = value; }
+
         private void btnCerrar_Click(object sender, EventArgs e)
         {
             this.Dispose();
@@ -46,11 +49,11 @@ namespace TA_GesBib_Cliente
 
         private void btnModificar_Click(object sender, EventArgs e)
         {
-            puntoAtMod.nombre = txtNombre.Text;
-            puntoAtMod.piso = Convert.ToInt32(txtPiso.Text);
-            puntoAtMod.cant_min_pers = Convert.ToInt32(txtCantMin.Text);
-            puntoAtMod.perfilExperiencia = (ServicioJava.perfilExperiencia)cmbPerfil.SelectedItem;
-            puntoAtMod.cant_opt_pers = Convert.ToInt32(txtCantOpt.Text);
+            PuntoAtMod.nombre = txtNombre.Text;
+            PuntoAtMod.piso = Convert.ToInt32(txtPiso.Text);
+            PuntoAtMod.cant_min_pers = Convert.ToInt32(txtCantMin.Text);
+            PuntoAtMod.perfilExperiencia = (ServicioJava.perfilExperiencia)cmbPerfil.SelectedItem;
+            PuntoAtMod.cant_opt_pers = Convert.ToInt32(txtCantOpt.Text);
             this.DialogResult = DialogResult.OK;
         }
     }

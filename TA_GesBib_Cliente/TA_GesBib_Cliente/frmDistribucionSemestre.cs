@@ -30,5 +30,7 @@ namespace TA_GesBib_Cliente
             this.Visible = false;
             ((frmPerfilGestor)this.var_perfil).PanelBIPO.Visible = true;
         }
+
+
     }
 }
