@@ -25,7 +25,7 @@ namespace TA_GesBib_Cliente
 
         private void button4_Click(object sender, EventArgs e)
         {
-            if (saveFileDialog1.ShowDialog() == DialogResult.OK)
+            if (guardarReporteInasistencias.ShowDialog() == DialogResult.OK)
             {
                 byte[] arreglo = Program.DBController.generarReporteInasistencias(Convert.ToInt32(textBox1.Text),
                                     Convert.ToDateTime(dateTimePicker5.Value), Convert.ToDateTime(dateTimePicker2.Value));
@@ -51,6 +51,35 @@ namespace TA_GesBib_Cliente
                 //mensaje final
                 MessageBox.Show("Se descargo correctamente", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            // saveFileDialog2
+            if (saveFileDialog2.ShowDialog() == DialogResult.OK)
+            {
+                byte[] arreglo = Program.DBController.generarReporteDistribucion(Convert.ToInt32(textBox2.Text),
+                                    Convert.ToDateTime(dtpFecha.Value), Convert.ToDateTime(dateTimePicker3.Value));
+
+                File.WriteAllBytes(saveFileDialog2.FileName + ".pdf", arreglo);
+                //mensaje final
+                MessageBox.Show("Se descargo correctamente", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnBuscarPersonal_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

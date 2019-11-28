@@ -41,7 +41,6 @@
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
             this.dateTimePicker3 = new System.Windows.Forms.DateTimePicker();
             this.dtpFecha = new System.Windows.Forms.DateTimePicker();
@@ -60,6 +59,9 @@
             this.btnCerrar = new System.Windows.Forms.Button();
             this.guardarReporteInasistencias = new System.Windows.Forms.SaveFileDialog();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
+            this.saveFileDialog2 = new System.Windows.Forms.SaveFileDialog();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.button5 = new System.Windows.Forms.Button();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -168,6 +170,7 @@
             this.btnBuscarPersonal.TabIndex = 169;
             this.btnBuscarPersonal.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnBuscarPersonal.UseVisualStyleBackColor = false;
+            this.btnBuscarPersonal.Click += new System.EventHandler(this.btnBuscarPersonal_Click);
             // 
             // label4
             // 
@@ -177,10 +180,11 @@
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(37)))), ((int)(((byte)(42)))));
             this.label4.Location = new System.Drawing.Point(34, 118);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(177, 22);
+            this.label4.Size = new System.Drawing.Size(105, 22);
             this.label4.TabIndex = 168;
-            this.label4.Text = "Nombre de personal:";
+            this.label4.Text = "Id Personal:";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // textBox3
             // 
@@ -208,7 +212,8 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.comboBox2);
+            this.groupBox1.Controls.Add(this.button5);
+            this.groupBox1.Controls.Add(this.textBox2);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.dateTimePicker3);
             this.groupBox1.Controls.Add(this.dtpFecha);
@@ -225,16 +230,6 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Distribución de puntos de atención";
             // 
-            // comboBox2
-            // 
-            this.comboBox2.Enabled = false;
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(221, 120);
-            this.comboBox2.Margin = new System.Windows.Forms.Padding(1);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(392, 28);
-            this.comboBox2.TabIndex = 166;
-            // 
             // label3
             // 
             this.label3.AutoSize = true;
@@ -243,9 +238,9 @@
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(37)))), ((int)(((byte)(42)))));
             this.label3.Location = new System.Drawing.Point(33, 122);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(160, 22);
+            this.label3.Size = new System.Drawing.Size(182, 22);
             this.label3.TabIndex = 165;
-            this.label3.Text = "Punto de atención:\r\n";
+            this.label3.Text = "ID Punto de atención:\r\n";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // dateTimePicker3
@@ -307,6 +302,7 @@
             this.button2.Text = "DESCARGAR";
             this.button2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // groupBox3
             // 
@@ -395,9 +391,9 @@
             this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(37)))), ((int)(((byte)(42)))));
             this.label10.Location = new System.Drawing.Point(33, 116);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(177, 22);
+            this.label10.Size = new System.Drawing.Size(106, 22);
             this.label10.TabIndex = 176;
-            this.label10.Text = "Nombre de personal:";
+            this.label10.Text = "ID personal:";
             this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // textBox1
@@ -447,6 +443,29 @@
             // 
             this.saveFileDialog1.FileOk += new System.ComponentModel.CancelEventHandler(this.saveFileDialog1_FileOk);
             // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(221, 120);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(358, 26);
+            this.textBox2.TabIndex = 174;
+            // 
+            // button5
+            // 
+            this.button5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(175)))), ((int)(((byte)(169)))));
+            this.button5.FlatAppearance.BorderSize = 0;
+            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
+            this.button5.Image = ((System.Drawing.Image)(resources.GetObject("button5.Image")));
+            this.button5.Location = new System.Drawing.Point(578, 117);
+            this.button5.Margin = new System.Windows.Forms.Padding(2);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(35, 34);
+            this.button5.TabIndex = 174;
+            this.button5.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button5.UseVisualStyleBackColor = false;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
+            // 
             // frmGenerarReportes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -486,7 +505,6 @@
         private System.Windows.Forms.DateTimePicker dtpFecha;
         private System.Windows.Forms.Label lblFecha;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.ComboBox comboBox2;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.Button btnBuscarPersonal;
@@ -506,5 +524,8 @@
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.SaveFileDialog guardarReporteInasistencias;
         private System.Windows.Forms.SaveFileDialog saveFileDialog1;
+        private System.Windows.Forms.SaveFileDialog saveFileDialog2;
+        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.TextBox textBox2;
     }
 }
