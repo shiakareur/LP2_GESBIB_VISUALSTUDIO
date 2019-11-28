@@ -153,7 +153,13 @@ namespace TA_GesBib_Cliente
             {                
                 capacitacionSeleccionada = frmBuscarCap.CapacitacionSeleccionada;
                 idCap = capacitacionSeleccionada.id;
-                listaPersonal = new BindingList<ServicioJava.personal>(capacitacionSeleccionada.listaPersonal);                
+                try
+                {
+                    listaPersonal = new BindingList<ServicioJava.personal>(capacitacionSeleccionada.listaPersonal);
+                }catch (Exception ex)
+                {
+                    System.Console.WriteLine(ex.Message);
+                }
                 txtNombre.Text = capacitacionSeleccionada.nombre;
                 txtLugar.Text = capacitacionSeleccionada.lugar;
                 txtDescripcion.Text = capacitacionSeleccionada.descripcion;
@@ -186,15 +192,20 @@ namespace TA_GesBib_Cliente
             // Validaciones
             if (txtNombre.Text == "")
             {
-                MessageBox.Show("Debe ingresar nombre de la capacitación","Mensaje");
+                MessageBox.Show("Debe ingresar nombre de la capacitación","Mensaje de Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }else if (txtLugar.Text == "")
             {
-                MessageBox.Show("Debe ingresar lugar de la capacitación","Mensaje");
+                MessageBox.Show("Debe ingresar lugar de la capacitación","Mensaje de Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }else if (txtDescripcion.Text == "")
             {
-                MessageBox.Show("Debe ingresar descripción de la capacitación", "Mensaje");
+                MessageBox.Show("Debe ingresar descripción de la capacitación", "Mensaje de Información",MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+            if (dgvDiaCapacitacion.RowCount == 0)
+            {
+                MessageBox.Show("Debe haber por lo menos un día de capacitación", "Mensaje de Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
             DateTime temp1, temp2, temp3, temp4;
@@ -204,17 +215,17 @@ namespace TA_GesBib_Cliente
             DateTime.TryParse(dtpFinInscripcion.Text, out temp4);
             if (temp1 > temp2)
             {
-                MessageBox.Show("La Fecha Inicio debe ser menor a la Fecha Fin", "Mensaje");
+                MessageBox.Show("La Fecha Inicio debe ser menor a la Fecha Fin", "Mensaje de Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
             if (temp3 > temp4)
             {
-                MessageBox.Show("La Fecha Inicio de Inscripción debe ser menor a la Fecha Fin Inscripción","Mensaje");
+                MessageBox.Show("La Fecha Inicio de Inscripción debe ser menor a la Fecha Fin Inscripción","Mensaje de Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
             if (temp1 < temp4)
             {
-                MessageBox.Show("La Fecha Inicio debe ser mayor a la Fecha Fin de Inscripción0", "Mensaje");
+                MessageBox.Show("La Fecha Inicio debe ser mayor a la Fecha Fin de Inscripción0", "Mensaje de Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
             
@@ -248,12 +259,12 @@ namespace TA_GesBib_Cliente
             if (esModificar == 0)
             {
                 Program.DBController.insertarCapacitacion(capacitacion);
-                MessageBox.Show("Capacitacion registrada exitosamente", "Mensaje Confirmacón", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Capacitacion registrada exitosamente", "Mensaje de Confirmacón", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }else if (esModificar == 1)
             {
                 capacitacion.id = idCap;                
                 Program.DBController.actualizarCapacitacion(capacitacion);
-                MessageBox.Show("Capacitacion modificada exitosamente", "Mensaje Confirmacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Capacitacion modificada exitosamente", "Mensaje de Confirmacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             limpiarComponentes();
             estadoComponentes(Estado.Inicial);
@@ -291,11 +302,21 @@ namespace TA_GesBib_Cliente
 
         private void btnQuitarPA_Click(object sender, EventArgs e)
         {
+            if(dgvDiaCapacitacion.RowCount == 0)
+            {
+                MessageBox.Show("No hay filas para eliminar","Mensaje de Información",MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
             dgvDiaCapacitacion.Rows.Remove(dgvDiaCapacitacion.CurrentRow);
         }
 
         private void btnEditarDC_Click(object sender, EventArgs e)
         {
+            if (dgvDiaCapacitacion.CurrentRow == null)
+            {
+                MessageBox.Show("No se ha seleccionado una fila", "Mensaje de Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
             String aux = dgvDiaCapacitacion.CurrentRow.Cells[0].Value.ToString();
             DateTime dato1 = Convert.ToDateTime(aux);
             String dato2 = dgvDiaCapacitacion.CurrentRow.Cells[1].Value.ToString();

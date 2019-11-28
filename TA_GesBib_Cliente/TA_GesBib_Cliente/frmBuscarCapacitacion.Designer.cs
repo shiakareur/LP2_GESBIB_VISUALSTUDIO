@@ -150,7 +150,7 @@
             this.Controls.Add(this.lblNombre);
             this.Controls.Add(this.dgvCapacitacion);
             this.Name = "frmBuscarCapacitacion";
-            this.Text = "frmBuscarCapacitacion";
+            this.Text = "     ";
             ((System.ComponentModel.ISupportInitialize)(this.dgvCapacitacion)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
