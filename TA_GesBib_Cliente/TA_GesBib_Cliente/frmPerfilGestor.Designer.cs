@@ -190,7 +190,7 @@
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(296, 749);
+            this.panel1.Size = new System.Drawing.Size(296, 790);
             this.panel1.TabIndex = 3;
             this.panel1.TabStop = true;
             // 
@@ -401,7 +401,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::TA_GesBib_Cliente.Properties.Resources.biblio_ari_borroso;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1370, 749);
+            this.ClientSize = new System.Drawing.Size(1370, 790);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panelBIPO);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));

@@ -38,6 +38,7 @@
             this.txtcontraseña = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.btnregresar = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.logogrande)).BeginInit();
             this.SuspendLayout();
@@ -46,6 +47,7 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
             this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.panel1.Controls.Add(this.btnregresar);
             this.panel1.Controls.Add(this.txttoken);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.txtCorreo);
@@ -65,7 +67,7 @@
             this.txttoken.Font = new System.Drawing.Font("Yu Gothic UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txttoken.Location = new System.Drawing.Point(131, 296);
             this.txttoken.Name = "txttoken";
-            this.txttoken.Size = new System.Drawing.Size(139, 23);
+            this.txttoken.Size = new System.Drawing.Size(159, 23);
             this.txttoken.TabIndex = 8;
             // 
             // label3
@@ -82,10 +84,11 @@
             // 
             // txtCorreo
             // 
+            this.txtCorreo.Enabled = false;
             this.txtCorreo.Font = new System.Drawing.Font("Yu Gothic UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCorreo.Location = new System.Drawing.Point(131, 159);
             this.txtCorreo.Name = "txtCorreo";
-            this.txtCorreo.Size = new System.Drawing.Size(139, 23);
+            this.txtCorreo.Size = new System.Drawing.Size(159, 23);
             this.txtCorreo.TabIndex = 6;
             // 
             // logogrande
@@ -117,7 +120,7 @@
             this.txtcontraseña.Location = new System.Drawing.Point(131, 230);
             this.txtcontraseña.Name = "txtcontraseña";
             this.txtcontraseña.PasswordChar = '*';
-            this.txtcontraseña.Size = new System.Drawing.Size(139, 23);
+            this.txtcontraseña.Size = new System.Drawing.Size(159, 23);
             this.txtcontraseña.TabIndex = 3;
             // 
             // label2
@@ -144,6 +147,22 @@
             this.label1.Text = "Correo";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
+            // btnregresar
+            // 
+            this.btnregresar.BackColor = System.Drawing.Color.White;
+            this.btnregresar.FlatAppearance.BorderSize = 0;
+            this.btnregresar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnregresar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.btnregresar.Image = global::TA_GesBib_Cliente.Properties.Resources.icono_regresar;
+            this.btnregresar.Location = new System.Drawing.Point(24, 23);
+            this.btnregresar.Margin = new System.Windows.Forms.Padding(2);
+            this.btnregresar.Name = "btnregresar";
+            this.btnregresar.Size = new System.Drawing.Size(63, 27);
+            this.btnregresar.TabIndex = 123;
+            this.btnregresar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnregresar.UseVisualStyleBackColor = false;
+            this.btnregresar.Click += new System.EventHandler(this.btnregresar_Click);
+            // 
             // frmCambiarClave
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -158,7 +177,7 @@
             this.MaximizeBox = false;
             this.Name = "frmCambiarClave";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Login";
+            this.Text = "Cambiar Contraseña";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.logogrande)).EndInit();
@@ -177,5 +196,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtCorreo;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button btnregresar;
     }
 }

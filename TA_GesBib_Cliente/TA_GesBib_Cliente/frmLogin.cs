@@ -21,6 +21,7 @@ namespace TA_GesBib_Cliente
 
         private void btnAcceder_Click(object sender, EventArgs e)
         {
+            
 
             //KeyValuePair<String, ServicioJava.usuario> a = new KeyValuePair<>(servTA.validarUsuario("bbenrique@gmail.com", "987654"));
             ServicioJava.pairStringUsuario userV = servTA.validarUsuario(placeHolderUsuario.Text, txtcontraseña.Text);
@@ -63,47 +64,9 @@ namespace TA_GesBib_Cliente
                     this.Visible = false;
                 }
             }
-
-            //------------------
-
-            /*
-                //abrir diferentes usuarios
-                if (placeHolderUsuario.Text=="ariana")
-            {
-                frmPerfilAdministrador formPAdmin = new frmPerfilAdministrador(this);
-                formPAdmin.Visible = true;
-                this.Visible = true;
-            }
-
-            //KeyValuePair<String, ServicioJava.usuario> a = new KeyValuePair<>(servTA.validarUsuario("bbenrique@gmail.com", "987654"));
-
-            else if (placeHolderUsuario.Text == "practicante")
-            {
-                frmPerfilPracticante frmPracticante = new frmPerfilPracticante(this);
-                frmPracticante.Visible = true;
-                this.Visible = true;
-            }
-            else if (placeHolderUsuario.Text == "auxiliar")
-            {
-                frmPerfilAuxiliar frmAuxiliar = new frmPerfilAuxiliar(this);
-                frmAuxiliar.Visible = true;
-                this.Visible = true;
-            }
-            else if (placeHolderUsuario.Text == "gaston")
-            {
-                frmPerfilGestor frmGestor = new frmPerfilGestor(this);
-                frmGestor.Visible = true;
-                this.Visible = true;
-            }
-            else
-            {
-                //BIBLIOTECARIO
-                frmPerfilBibliotecario formBibliotecario = new frmPerfilBibliotecario(this);
-                formBibliotecario.Visible = true;
-                this.Visible = false;
-            }*/
-
-
+            this.placeHolderUsuario.Text="";
+            this.placeHolderUsuario.PlaceHolderText = "username@example.com";
+            this.txtcontraseña.Text = "";
         }
 
         private void placeHolderUsuario_TextChanged(object sender, EventArgs e)
@@ -113,9 +76,17 @@ namespace TA_GesBib_Cliente
 
         private void lblOlvideCredenciales_Click(object sender, EventArgs e)
         {
-            frmRecuperarClave formRC = new frmRecuperarClave();
+            frmRecuperarClave formRC = new frmRecuperarClave(this);
             this.Visible = false;
             formRC.Show();
+        }
+
+        private void txtcontraseña_KeyPress(object sender, KeyPressEventArgs e)
+        {
+
+            if (e.KeyChar ==(char)13)          
+                this.btnAcceder_Click(sender, e);
+            
         }
     }
 }

@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmRecuperarClave));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnregresar = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.txtcorreoREC = new System.Windows.Forms.TextBox();
             this.logogrande = new System.Windows.Forms.PictureBox();
@@ -43,6 +44,7 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
             this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.panel1.Controls.Add(this.btnregresar);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.txtcorreoREC);
             this.panel1.Controls.Add(this.logogrande);
@@ -53,6 +55,22 @@
             this.panel1.Size = new System.Drawing.Size(407, 400);
             this.panel1.TabIndex = 1;
             this.panel1.TabStop = true;
+            // 
+            // btnregresar
+            // 
+            this.btnregresar.BackColor = System.Drawing.Color.White;
+            this.btnregresar.FlatAppearance.BorderSize = 0;
+            this.btnregresar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnregresar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.btnregresar.Image = global::TA_GesBib_Cliente.Properties.Resources.icono_regresar;
+            this.btnregresar.Location = new System.Drawing.Point(27, 23);
+            this.btnregresar.Margin = new System.Windows.Forms.Padding(2);
+            this.btnregresar.Name = "btnregresar";
+            this.btnregresar.Size = new System.Drawing.Size(63, 27);
+            this.btnregresar.TabIndex = 124;
+            this.btnregresar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnregresar.UseVisualStyleBackColor = false;
+            this.btnregresar.Click += new System.EventHandler(this.btnregresar_Click);
             // 
             // label2
             // 
@@ -122,7 +140,7 @@
             this.MaximizeBox = false;
             this.Name = "frmRecuperarClave";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Login";
+            this.Text = "Recuperar Clave";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.logogrande)).EndInit();
@@ -138,5 +156,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtcorreoREC;
+        private System.Windows.Forms.Button btnregresar;
     }
 }

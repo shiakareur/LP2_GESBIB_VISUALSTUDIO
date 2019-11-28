@@ -12,11 +12,20 @@ namespace TA_GesBib_Cliente
 {
     public partial class frmCambiarClave : Form
     {
-        ServicioJava.ServicioClient servTA = new ServicioJava.ServicioClient();       
+        ServicioJava.ServicioClient servTA = new ServicioJava.ServicioClient();
+        private frmRecuperarClave var_recu;
                 
         public frmCambiarClave()
         {
             InitializeComponent();
+        }
+
+        public frmCambiarClave(frmRecuperarClave perfRecu)
+        {
+            var_recu = perfRecu;           
+            InitializeComponent();
+            this.txtCorreo.Text = var_recu.TxtcorreoREC.Text;
+
         }
 
         private void btnRestablecer_Click(object sender, EventArgs e)
@@ -24,18 +33,24 @@ namespace TA_GesBib_Cliente
             int res = Program.DBController.cambiarContrasenaToken(txtCorreo.Text,txtcontraseña.Text,txttoken.Text);
             if (res == 0)
             {
-                MessageBox.Show("No c logró :'v");
+                MessageBox.Show("No se logró restablecer la contraseña");
                 frmLogin formIni = new frmLogin();
                 formIni.Show();
                 this.Visible = false;
             }
             else
             {
-                MessageBox.Show("C logró :'3");
+                MessageBox.Show("Contraseña restablecida");
                 frmLogin formIni = new frmLogin();
                 formIni.Show();
                 this.Visible = false;
             }
+        }
+
+        private void btnregresar_Click(object sender, EventArgs e)
+        {
+            this.Dispose();
+            this.var_recu.Visible = true;
         }
     }
 }
