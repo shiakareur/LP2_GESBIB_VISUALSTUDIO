@@ -500,7 +500,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\usuario.png" />
@@ -561,9 +563,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\biblio_ari_borroso.jpeg" />
-  </ItemGroup>
-  <ItemGroup>
-    <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\icono-eliminar.png" />
@@ -633,6 +632,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\icons8-download-30.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
